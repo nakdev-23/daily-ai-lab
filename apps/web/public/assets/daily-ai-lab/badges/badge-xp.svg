@@ -1,0 +1,7 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#F97316" flood-opacity=".22"/></filter></defs>
+  <path d="M90 10l23 15 27 1 13 24 22 16-7 27 7 27-22 16-13 24-27 1-23 15-23-15-27-1-13-24-22-16 7-27-7-27 22-16 13-24 27-1z" fill="#F97316" filter="url(#s)"/>
+  <path d="M90 25l18 12 22 1 10 20 18 13-6 22 6 22-18 13-10 20-22 1-18 12-18-12-22-1-10-20-18-13 6-22-6-22 18-13 10-20 22-1z" fill="white" opacity=".14"/>
+  <text x="90" y="82" text-anchor="middle" font-size="34">⭐</text>
+  <text x="90" y="120" text-anchor="middle" font-family="Inter, Arial" font-size="24" font-weight="900" fill="white">XP</text>
+</svg>

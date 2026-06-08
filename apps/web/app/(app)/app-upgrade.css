@@ -1,0 +1,78 @@
+/* Daily AI Lab — Upgrade / Pro plan (redesign). Scoped .dlab-app */
+.dlab-app .up-hero { position: relative; text-align: center; padding: 30px 8px 26px; }
+.dlab-app .up-hero::before { content: ""; position: absolute; z-index: 0; left: 14%; right: 14%; top: -16%; bottom: 10%; pointer-events: none;
+  background: radial-gradient(52% 70% at 50% 30%, rgba(135,94,246,.22), rgba(135,94,246,0) 70%); filter: blur(8px); }
+.dlab-app .up-hero .up-mascot { position: relative; z-index: 1; width: 120px; height: auto; margin: 0 auto 6px; filter: drop-shadow(0 14px 20px rgba(72,31,184,.3)); }
+.dlab-app .up-hero h1 { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 800; font-size: clamp(28px,4vw,40px); letter-spacing: -.02em; color: var(--text-strong); margin: 4px 0 10px; }
+.dlab-app .up-hero h1 .grad-text { background: var(--g-violet); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.dlab-app .up-hero p { position: relative; z-index: 1; font-size: 17px; color: var(--text-muted); max-width: 520px; margin: 0 auto; line-height: 1.55; }
+
+.dlab-app .bill-toggle { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 5px; margin: 22px auto 0; padding: 5px; background: var(--cloud-100); border-radius: 999px; }
+.dlab-app .bill-toggle button { height: 40px; padding: 0 20px; border: 0; background: none; border-radius: 999px; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-muted); transition: all .18s; white-space: nowrap; display: inline-flex; align-items: center; }
+.dlab-app .bill-toggle button.on { background: var(--cloud-0, #fff); color: var(--hero-600); box-shadow: var(--shadow-sm); }
+.dlab-app .bill-toggle .save-tag { font-family: var(--font-sans); font-size: 10.5px; font-weight: 800; color: var(--mint-600); background: var(--mint-100); padding: 2px 7px; border-radius: 999px; margin-left: 6px; }
+
+.dlab-app .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 840px; margin: 30px auto 0; align-items: stretch; }
+.dlab-app .plan2 { position: relative; border-radius: 26px; padding: 30px; display: flex; flex-direction: column; transition: transform .2s var(--ease-out), box-shadow .2s; }
+.dlab-app .plan2.free { background: var(--cloud-0, #fff); border: 1px solid var(--border-subtle); box-shadow: 0 14px 30px -18px rgba(39,16,96,.3); }
+.dlab-app .plan2.free:hover { transform: translateY(-4px); box-shadow: 0 26px 46px -20px rgba(39,16,96,.34); }
+.dlab-app .plan2.pro { overflow: hidden; color: #fff; background: linear-gradient(160deg, #7E55F7 0%, #5A2FE3 60%, #4A1FBE 100%); box-shadow: 0 30px 60px -20px rgba(72,31,184,.7); }
+.dlab-app .plan2.pro:hover { transform: translateY(-4px); box-shadow: 0 38px 72px -22px rgba(72,31,184,.8); }
+.dlab-app .plan2.pro::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(380px 200px at 12% -20%, rgba(255,255,255,.2), transparent 60%), radial-gradient(420px 240px at 100% 120%, rgba(255,212,58,.26), transparent 60%); }
+.dlab-app .plan2 .pp-pop { position: absolute; top: 22px; right: 26px; z-index: 2; display: inline-flex; align-items: center; gap: 4px; font-family: var(--font-display); font-weight: 800; font-size: 11.5px;
+  color: var(--hero-700); background: linear-gradient(180deg,#FFE27A,var(--sun-400)); padding: 5px 13px; border-radius: 999px; transform: rotate(4deg); box-shadow: 0 8px 16px rgba(224,150,0,.5), inset 0 1px 0 rgba(255,255,255,.5); }
+.dlab-app .plan2 .pp-name { position: relative; font-family: var(--font-display); font-weight: 800; font-size: 22px; }
+.dlab-app .plan2.free .pp-name { color: var(--text-strong); }
+.dlab-app .plan2 .pp-desc { position: relative; font-size: 13.5px; margin-top: 3px; }
+.dlab-app .plan2.free .pp-desc { color: var(--text-muted); }
+.dlab-app .plan2.pro .pp-desc { color: var(--hero-100); }
+.dlab-app .plan2 .pp-cost { position: relative; font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1; margin: 18px 0 4px; }
+.dlab-app .plan2.free .pp-cost { color: var(--text-strong); }
+.dlab-app .plan2 .pp-cost small { font-size: 16px; font-weight: 700; }
+.dlab-app .plan2 .pp-sub { position: relative; font-size: 12.5px; font-weight: 700; min-height: 18px; }
+.dlab-app .plan2.free .pp-sub { color: var(--text-muted); }
+.dlab-app .plan2.pro .pp-sub { color: var(--hero-100); }
+.dlab-app .plan2 .pp-list { position: relative; list-style: none; margin: 20px 0 24px; padding: 0; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.dlab-app .plan2 .pp-list li { display: flex; align-items: flex-start; gap: 11px; font-size: 14.5px; font-weight: 700; line-height: 1.4; }
+.dlab-app .plan2.free .pp-list li { color: var(--text-body); }
+.dlab-app .plan2 .ck { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; flex: none; margin-top: 1px; }
+.dlab-app .plan2.free .ck.yes { background: var(--mint-100); color: var(--mint-600); }
+.dlab-app .plan2.free .ck.no { background: var(--cloud-100); color: var(--cloud-400); }
+.dlab-app .plan2.free .pp-list li.off { color: var(--text-muted); }
+.dlab-app .plan2.pro .ck.yes { background: rgba(255,255,255,.2); color: var(--sun-300); }
+
+.dlab-app .cmp-wrap { max-width: 840px; margin: 40px auto 0; }
+.dlab-app .cmp-title { text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--text-strong); margin: 0 0 20px; }
+.dlab-app .cmp { width: 100%; border-collapse: collapse; background: var(--cloud-0, #fff); border-radius: 20px; overflow: hidden; box-shadow: 0 14px 32px -18px rgba(39,16,96,.3); }
+.dlab-app .cmp th, .dlab-app .cmp td { padding: 15px 18px; text-align: left; border-bottom: 1px solid var(--border-subtle); }
+.dlab-app .cmp thead th { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-strong); background: var(--cloud-50); }
+.dlab-app .cmp thead th.col { text-align: center; width: 120px; }
+.dlab-app .cmp thead th.pro { color: var(--hero-600); }
+.dlab-app .cmp td.feat { font-weight: 700; font-size: 14px; color: var(--text-body); }
+.dlab-app .cmp td.val { text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 14px; }
+.dlab-app .cmp td.val .yes { color: var(--mint-600); }
+.dlab-app .cmp td.val .no { color: var(--cloud-400); }
+.dlab-app .cmp tbody tr:last-child td { border-bottom: 0; }
+.dlab-app .cmp tbody tr:hover { background: var(--cloud-50); }
+.dlab-app .cmp .grp td { background: var(--hero-50); font-family: var(--font-display); font-weight: 800; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--hero-600); padding: 9px 18px; }
+
+.dlab-app .faq-wrap { max-width: 720px; margin: 44px auto 0; }
+.dlab-app .faq-q { border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); background: var(--cloud-0, #fff); margin-bottom: 12px; overflow: hidden; transition: box-shadow .2s, border-color .2s; }
+.dlab-app .faq-q[open] { border-color: var(--hero-200); box-shadow: 0 14px 30px -18px rgba(72,31,184,.4); }
+.dlab-app .faq-q summary { list-style: none; cursor: pointer; padding: 18px 20px; display: flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 800; font-size: 15.5px; color: var(--text-strong); }
+.dlab-app .faq-q summary::-webkit-details-marker { display: none; }
+.dlab-app .faq-q summary .qm { margin-left: auto; width: 28px; height: 28px; border-radius: 50%; background: var(--hero-50); color: var(--hero-500); display: grid; place-items: center; font-size: 16px; flex: none; transition: transform .25s var(--ease-out), background .2s; }
+.dlab-app .faq-q[open] summary .qm { transform: rotate(45deg); background: var(--hero-500); color: #fff; }
+.dlab-app .faq-q .faq-a { padding: 0 20px 20px 56px; font-size: 14.5px; line-height: 1.65; color: var(--text-body); }
+.dlab-app .faq-q summary .qic { width: 28px; height: 28px; border-radius: 9px; background: var(--hero-100); color: var(--hero-600); display: grid; place-items: center; flex: none; }
+
+.dlab-app .up-cta { max-width: 720px; margin: 40px auto 10px; text-align: center; position: relative; overflow: hidden; border-radius: 26px; padding: 38px 30px;
+  background: linear-gradient(150deg, #FFF4CE 0%, #EFE4FF 55%, #FCE0EE 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 22px 44px -22px rgba(72,31,184,.4); }
+.dlab-app .up-cta h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; color: var(--text-strong); margin: 0 0 8px; }
+.dlab-app .up-cta p { font-size: 15px; color: var(--text-body); margin: 0 0 20px; }
+
+@media (max-width: 720px) {
+  .dlab-app .plan-grid { grid-template-columns: 1fr; }
+  .dlab-app .cmp thead th.col { width: 84px; }
+}

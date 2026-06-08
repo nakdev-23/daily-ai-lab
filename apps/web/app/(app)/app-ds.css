@@ -1,0 +1,183 @@
+/* ===================================================================
+   Daily AI Lab — app shell + dashboard (ported from the DS handoff)
+   Scoped under .dlab-app. Emojis replaced by lucide-react in markup.
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --sun-50:#FFFBEB; --sun-100:#FFF3C4; --sun-200:#FFE885; --sun-300:#FFDE52; --sun-400:#FFD43A; --sun-500:#FBC400; --sun-600:#E0A800; --sun-700:#B07F00;
+  --hero-50:#F2ECFE; --hero-100:#E3D8FD; --hero-200:#C8B2FB; --hero-300:#A887F8; --hero-400:#875EF6; --hero-500:#6C3CF5; --hero-600:#5728E0; --hero-700:#481FB8;
+  --punch-300:#FFC27A; --punch-400:#FF9A3D; --punch-500:#FD7302; --punch-600:#E25E00;
+  --cloud-0:#FFFFFF; --cloud-50:#F7F5FC; --cloud-100:#EFEBF7; --cloud-200:#E0DAEF; --cloud-300:#C9C2DF; --cloud-400:#A69EC1; --cloud-500:#7F779A; --cloud-600:#5F5677; --cloud-700:#463F58; --cloud-900:#1B1729;
+  --mint-100:#D6F5E6; --mint-500:#14A871; --mint-600:#0E8459;
+  --berry-100:#FCDFDE; --berry-500:#EE5A52; --berry-600:#D23A33;
+  --amber-100:#FFEDC2; --amber-500:#F4A100; --sky-100:#D8ECFD; --sky-500:#2A8CF0;
+  --surface-page:var(--cloud-50); --text-strong:var(--cloud-900); --text-body:var(--cloud-700); --text-muted:var(--cloud-500);
+  --border-subtle:var(--cloud-200); --edge:rgba(255,255,255,.72);
+  --font-display:"Baloo 2","Anuphan",system-ui,sans-serif; --font-sans:"Anuphan",system-ui,-apple-system,sans-serif; --font-mono:"JetBrains Mono",ui-monospace,monospace;
+  --radius-xs:6px; --radius-sm:10px; --radius-md:14px; --radius-lg:20px; --radius-xl:28px; --radius-2xl:40px; --radius-pill:999px;
+  --shadow-xs:0 1px 2px rgba(39,16,96,.06); --shadow-sm:0 2px 6px rgba(39,16,96,.08); --shadow-md:0 6px 18px rgba(39,16,96,.10); --shadow-lg:0 14px 34px rgba(39,16,96,.14); --shadow-xl:0 28px 60px rgba(39,16,96,.18);
+  --ease-out:cubic-bezier(0.22,1,0.36,1); --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+  --g-violet:linear-gradient(135deg,#9D7BFB 0%,#6C3CF5 52%,#5728E0 100%);
+  --pink-100:#FFE2EE; --pink-400:#FF7FB0; --pink-500:#F45C97;
+}
+
+.dlab-app { font-family: var(--font-sans); color: var(--text-body); background: var(--cloud-0); min-height: 100vh; }
+.dlab-app *, .dlab-app *::before, .dlab-app *::after { box-sizing: border-box; }
+.dlab-app img { display: block; max-width: 100%; }
+.dlab-app a { text-decoration: none; color: inherit; }
+.dlab-app .display { font-family: var(--font-display); font-weight: 800; letter-spacing: -.025em; line-height: 1.05; color: var(--text-strong); }
+
+/* shared button (3D key) */
+.dlab-app .btn { position: relative; border: 0; cursor: pointer; font-family: var(--font-display); font-weight: 800; border-radius: var(--radius-pill);
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; white-space: nowrap; text-decoration: none;
+  transition: transform .12s var(--ease-bounce), box-shadow .12s var(--ease-out), filter .2s; }
+.dlab-app .btn.lg { height: 56px; padding: 0 28px; font-size: 16px; }
+.dlab-app .btn.sm { height: 44px; padding: 0 20px; font-size: 15px; }
+.dlab-app .btn--violet { background: linear-gradient(180deg,#9173FA,#6C3CF5); color: #fff; box-shadow: 0 5px 0 #481FB8, 0 14px 22px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35); }
+.dlab-app .btn--violet:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.dlab-app .btn--violet:active { transform: translateY(3px); box-shadow: 0 2px 0 #481FB8, 0 6px 12px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35); }
+.dlab-app .btn--sun { background: linear-gradient(180deg,#FFE066,#FFD138); color: var(--hero-700); box-shadow: 0 5px 0 #E0A800, 0 14px 22px rgba(224,168,0,.4), inset 0 2px 0 rgba(255,255,255,.6); }
+.dlab-app .btn--sun:hover { transform: translateY(-2px); }
+.dlab-app .btn--sun:active { transform: translateY(3px); box-shadow: 0 2px 0 #E0A800, 0 6px 12px rgba(224,168,0,.4), inset 0 2px 0 rgba(255,255,255,.6); }
+
+.dlab-app .glass { background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.8)); backdrop-filter: blur(14px);
+  border: 1px solid var(--edge); border-radius: var(--radius-xl); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 22px 46px -16px rgba(72,31,184,.26), 0 4px 14px rgba(39,16,96,.05); }
+
+.dlab-app .brand-badge { width: 44px; height: 44px; border-radius: 14px; flex: none; overflow: hidden; display: grid; place-items: center;
+  background: linear-gradient(180deg,#FFE27A,var(--sun-400)); transform: rotate(-6deg); box-shadow: 0 8px 16px rgba(224,150,0,.42), inset 0 2px 0 rgba(255,255,255,.5); }
+.dlab-app .brand-badge img { width: 78px; height: 78px; object-fit: cover; object-position: 50% 26%; transform: rotate(6deg); }
+.dlab-app .brand-name { font-family: var(--font-display); font-weight: 800; color: var(--hero-600); line-height: 1; }
+.dlab-app .brand-sub { font-family: var(--font-sans); font-weight: 700; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-top: 4px; }
+
+/* ===== APP SHELL ===== */
+.dlab-app .app { display: grid; grid-template-columns: 256px 1fr; min-height: 100vh; }
+.dlab-app .sidebar { position: sticky; top: 0; align-self: start; height: 100vh; display: flex; flex-direction: column; gap: 6px; padding: 22px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(247,245,252,.86)); backdrop-filter: blur(12px); border-right: 1px solid rgba(108,60,245,.1); z-index: 300; }
+.dlab-app .side-brand { display: flex; align-items: center; gap: 11px; padding: 6px 8px 18px; }
+.dlab-app .side-nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.dlab-app .side-label { font-family: var(--font-sans); font-weight: 800; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px; }
+.dlab-app .side-link { display: flex; align-items: center; gap: 12px; padding: 9px 12px; border-radius: var(--radius-md); font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--text-body); cursor: pointer; transition: background .15s, color .15s, transform .12s; }
+.dlab-app .side-link .si { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; flex: none; background: var(--cloud-100); transition: background .15s; }
+.dlab-app .side-link:hover { background: var(--hero-50); color: var(--hero-600); transform: translateX(2px); }
+.dlab-app .side-link:hover .si { background: var(--hero-100); }
+.dlab-app .side-link.active { background: var(--g-violet); color: #fff; box-shadow: 0 12px 22px -8px rgba(72,31,184,.55); }
+.dlab-app .side-link.active .si { background: rgba(255,255,255,.22); }
+.dlab-app .side-pro { margin-top: 14px; padding: 16px; border-radius: var(--radius-lg); position: relative; overflow: hidden; background: linear-gradient(160deg,#FFF1C9,#F4E6FF); border: 1px solid var(--edge); }
+.dlab-app .side-pro h4 { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--hero-700); margin: 0 0 4px; display: flex; align-items: center; gap: 7px; }
+.dlab-app .side-pro p { font-size: 12.5px; color: var(--text-muted); margin: 0 0 12px; line-height: 1.4; }
+
+.dlab-app .app-main { min-width: 0; display: flex; flex-direction: column; }
+.dlab-app .topbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 16px; padding: 14px 32px; background: rgba(255,255,255,.78); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid rgba(108,60,245,.09); }
+.dlab-app .tb-title { font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--text-strong); }
+.dlab-app .tb-stats { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.dlab-app .stat-chip { display: inline-flex; align-items: center; gap: 7px; height: 40px; padding: 0 14px; border-radius: var(--radius-pill); background: #fff; border: 1px solid var(--edge); font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--text-strong); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 6px 14px -6px rgba(72,31,184,.2); }
+.dlab-app .stat-chip.streak { background: #FFEAD6; border-color: #FFD2A6; color: var(--punch-600); }
+.dlab-app .stat-chip.xp { background: var(--sun-100); border-color: #FFE08A; color: var(--sun-700); }
+.dlab-app .stat-chip.heart { background: var(--berry-100); border-color: #F6B6B2; color: var(--berry-500); }
+.dlab-app .tb-avatar { width: 42px; height: 42px; border: 0; border-radius: 50%; display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 16px; background: var(--g-violet); box-shadow: var(--shadow-sm); cursor: pointer; transition: transform .12s var(--ease-out); overflow: hidden; }
+.dlab-app .tb-avatar:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.dlab-app .tb-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.dlab-app .tb-menu-av { overflow: hidden; }
+.dlab-app .tb-menu-av img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.dlab-app .tb-user { position: relative; flex: none; }
+.dlab-app .tb-menu-overlay { position: fixed; inset: 0; z-index: 80; }
+.dlab-app .tb-menu { position: absolute; top: calc(100% + 10px); right: 0; z-index: 90; width: 230px; background: #fff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); box-shadow: 0 18px 40px -12px rgba(39,16,96,.4); padding: 8px; animation: tbMenuIn .16s var(--ease-out); }
+@keyframes tbMenuIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.dlab-app .tb-menu-head { display: flex; align-items: center; gap: 11px; padding: 8px 10px 11px; border-bottom: 1px solid var(--border-subtle); margin-bottom: 6px; }
+.dlab-app .tb-menu-av { width: 40px; height: 40px; border-radius: 50%; flex: none; background: var(--g-violet); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; }
+.dlab-app .tb-menu-head b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dlab-app .tb-menu-head small { font-size: 12px; color: var(--text-muted); font-weight: 700; }
+.dlab-app .tb-menu a, .dlab-app .tb-menu button { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 12px; border: 0; background: none; cursor: pointer; border-radius: var(--radius-md); font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-body); text-align: left; transition: background .14s, color .14s; }
+.dlab-app .tb-menu a:hover, .dlab-app .tb-menu button:hover { background: var(--hero-50); color: var(--hero-600); }
+.dlab-app .tb-menu button.danger { color: var(--berry-500); }
+.dlab-app .tb-menu button.danger:hover { background: var(--berry-100); color: var(--berry-600); }
+.dlab-app .tb-burger { display: none; width: 44px; height: 44px; border: 0; cursor: pointer; flex: none; background: var(--cloud-100); border-radius: 12px; align-items: center; justify-content: center; color: var(--hero-600); }
+.dlab-app .app-overlay { position: fixed; inset: 0; background: rgba(27,23,41,.42); z-index: 290; opacity: 0; visibility: hidden; transition: opacity .25s var(--ease-out), visibility .25s; }
+.dlab-app .app-overlay.show { opacity: 1; visibility: visible; }
+.dlab-app .app-body { padding: 32px; max-width: 1080px; width: 100%; margin: 0 auto; }
+
+/* ===== DASHBOARD ===== */
+.dlab-app .dash-hero { display: flex; align-items: center; gap: 22px; padding: 26px 30px; margin-bottom: 26px; }
+.dlab-app .dash-hero img { width: 116px; flex: none; filter: drop-shadow(0 14px 18px rgba(39,16,96,.22)); }
+.dlab-app .dash-hero h1 { font-size: 30px; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dlab-app .dash-hero p { margin: 0; color: var(--text-muted); font-size: 16px; }
+.dlab-app .dash-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; align-items: start; }
+.dlab-app .card-h { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.dlab-app .card-h h3 { font-size: 19px; margin: 0; }
+.dlab-app .card-h .more { margin-left: auto; font-size: 13px; font-weight: 800; color: var(--hero-500); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.dlab-app .tile { border-radius: 15px; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; color: #fff; box-shadow: inset 0 -5px 9px rgba(0,0,0,.22), inset 0 3px 5px rgba(255,255,255,.45), 0 10px 18px -6px rgba(0,0,0,.25); }
+.dlab-app .cont { display: flex; align-items: center; gap: 16px; padding: 18px; margin-bottom: 14px; cursor: pointer; transition: transform .16s var(--ease-out), box-shadow .2s; }
+.dlab-app .cont:hover { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 24px 44px -16px rgba(72,31,184,.34); }
+.dlab-app .cont .tile { width: 52px; height: 52px; font-size: 22px; }
+.dlab-app .cont .ci { flex: 1; min-width: 0; }
+.dlab-app .cont .ci b { font-family: var(--font-display); font-weight: 800; font-size: 16px; color: var(--text-strong); display: block; }
+.dlab-app .pbar { height: 9px; border-radius: 999px; background: var(--cloud-200); overflow: hidden; margin-top: 8px; }
+.dlab-app .pbar > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--mint-500), #0E8F5E); }
+.dlab-app .cont .cn { font-size: 12.5px; font-weight: 800; color: var(--text-muted); white-space: nowrap; }
+
+.dlab-app .pathmap { padding: 30px 20px; position: relative; }
+.dlab-app .pathmap .unit-tag { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: var(--g-violet); color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 13px; margin: 0 auto 18px; box-shadow: 0 10px 20px -6px rgba(72,31,184,.5); }
+.dlab-app .nodes { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.dlab-app .node { width: 78px; height: 78px; border-radius: 50%; display: grid; place-items: center; position: relative; cursor: pointer; transition: transform .15s var(--ease-bounce); color: #fff; }
+.dlab-app .node:hover { transform: translateY(-3px) scale(1.04); }
+.dlab-app .node.done { background: linear-gradient(180deg,#2FD68F,#14A871); box-shadow: inset 0 -5px 9px rgba(0,0,0,.15), inset 0 3px 5px rgba(255,255,255,.4), 0 12px 22px -8px rgba(14,143,94,.6); }
+.dlab-app .node.current { background: linear-gradient(180deg,#FFE066,var(--sun-400)); color: var(--hero-700); box-shadow: inset 0 -5px 9px rgba(0,0,0,.12), inset 0 3px 5px rgba(255,255,255,.5), 0 14px 26px -8px rgba(224,168,0,.6); animation: bounceN 1.8s ease-in-out infinite; }
+@keyframes bounceN { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+.dlab-app .node.locked { background: var(--cloud-200); color: var(--cloud-400); box-shadow: inset 0 -4px 7px rgba(0,0,0,.06), inset 0 2px 3px rgba(255,255,255,.6); cursor: not-allowed; }
+.dlab-app .node.locked { cursor: default; }
+.dlab-app .node.locked:hover { transform: none; }
+/* horizontal offset via `left` (not transform) so hover/bounce don't fight the layout */
+.dlab-app .node.o1 { left: -70px; } .dlab-app .node.o2 { left: -110px; }
+.dlab-app .node.o3 { left: -70px; } .dlab-app .node.o4 { left: 0; }
+.dlab-app .node.o5 { left: 70px; } .dlab-app .node.o6 { left: 110px; }
+.dlab-app .node-mascot { width: 80px; position: absolute; right: 30px; top: 120px; animation: bobMascot 6s ease-in-out infinite; filter: drop-shadow(0 12px 16px rgba(39,16,96,.22)); }
+@keyframes bobMascot { 0%,100%{transform:translateY(0) rotate(-1.2deg)} 50%{transform:translateY(-14px) rotate(1.2deg)} }
+
+.dlab-app .quest { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-subtle); }
+.dlab-app .quest:last-child { border-bottom: 0; }
+.dlab-app .quest .qic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; flex: none; box-shadow: inset 0 -3px 6px rgba(0,0,0,.07), inset 0 2px 3px rgba(255,255,255,.6); }
+.dlab-app .quest .qb { flex: 1; min-width: 0; }
+.dlab-app .quest .qb b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; }
+.dlab-app .quest .qb .pbar > i { background: linear-gradient(90deg, var(--sun-300), var(--sun-500)); }
+.dlab-app .quest .qx { font-size: 12px; font-weight: 800; color: var(--sun-700); white-space: nowrap; }
+.dlab-app .streak-week { display: flex; justify-content: space-between; gap: 8px; margin-top: 4px; }
+.dlab-app .sday { flex: 1; text-align: center; }
+.dlab-app .sday .dot { width: 38px; height: 38px; border-radius: 50%; margin: 0 auto 6px; display: grid; place-items: center; background: var(--cloud-100); color: var(--cloud-400); }
+.dlab-app .sday.on .dot { background: linear-gradient(180deg,#FFB36B,var(--punch-500)); color: #fff; box-shadow: 0 6px 12px -4px rgba(253,115,2,.6); }
+.dlab-app .sday.today .dot { outline: 3px solid var(--sun-300); outline-offset: 2px; }
+.dlab-app .sday small { font-size: 11px; font-weight: 800; color: var(--text-muted); }
+
+/* focus */
+.dlab-app a:focus-visible, .dlab-app button:focus-visible { outline: 3px solid var(--hero-500); outline-offset: 3px; border-radius: var(--radius-md); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 920px) {
+  .dlab-app .app { grid-template-columns: 1fr; }
+  .dlab-app .sidebar { position: fixed; left: 0; top: 0; height: 100vh; width: 268px; transform: translateX(-100%); transition: transform .3s var(--ease-out); box-shadow: var(--shadow-xl); }
+  .dlab-app .sidebar.open { transform: none; }
+  .dlab-app .tb-burger { display: flex; }
+  .dlab-app .dash-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .dlab-app .app-body { padding: 18px; }
+  .dlab-app .topbar { padding: 12px 16px; gap: 10px; }
+  .dlab-app .tb-title { font-size: 17px; }
+  .dlab-app .stat-chip.xp { display: none; }
+  .dlab-app .dash-hero { flex-direction: column; text-align: center; padding: 22px; }
+  .dlab-app .dash-hero .btn { margin: 0 !important; width: 100%; }
+  .dlab-app .node-mascot { display: none; }
+  .dlab-app .node.o2 { left: -86px; } .dlab-app .node.o6 { left: 86px; }
+}
+@media (max-width: 430px) {
+  .dlab-app .topbar { padding: 10px 12px; gap: 8px; }
+  .dlab-app .tb-title { display: none; }
+  .dlab-app .tb-stats { gap: 6px; min-width: 0; }
+  .dlab-app .stat-chip { height: 38px; padding: 0 11px; gap: 5px; }
+  .dlab-app .tb-avatar { width: 40px; height: 40px; flex: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dlab-app .node.current, .dlab-app .node-mascot { animation: none; }
+  .dlab-app .btn, .dlab-app .cont, .dlab-app .side-link { transition: none; }
+}

@@ -1,0 +1,32 @@
+/* Daily AI Lab — collapsible sidebar (desktop only). Scoped .dlab-app */
+.dlab-app .side-collapse { display: none; }
+.dlab-app .side-pro-ic { display: none; }
+
+@media (min-width: 921px) {
+  .dlab-app .side-collapse { display: grid; place-items: center; width: 30px; height: 30px; margin: 0 0 6px auto; border: 1px solid var(--border-subtle); background: #fff; border-radius: 9px; color: var(--text-muted); cursor: pointer; transition: all .15s; }
+  .dlab-app .side-collapse:hover { color: var(--hero-600); border-color: var(--hero-300); transform: translateY(-1px); }
+
+  .dlab-app .app.is-collapsed { grid-template-columns: 84px 1fr; }
+  .dlab-app .sidebar.collapsed { padding: 22px 12px; }
+  .dlab-app .sidebar.collapsed .brand-text,
+  .dlab-app .sidebar.collapsed .side-label,
+  .dlab-app .sidebar.collapsed .side-txt,
+  .dlab-app .sidebar.collapsed .side-pro p { display: none; }
+  .dlab-app .sidebar.collapsed .side-brand { justify-content: center; padding: 6px 0 12px; }
+  .dlab-app .sidebar.collapsed .side-collapse { margin: 0 auto 8px; }
+  .dlab-app .sidebar.collapsed .side-link { justify-content: center; padding: 9px; gap: 0; position: relative; }
+  .dlab-app .sidebar.collapsed .side-pro { padding: 10px; }
+  .dlab-app .sidebar.collapsed .side-pro h4 { justify-content: center; margin: 0 0 8px; }
+  .dlab-app .sidebar.collapsed .side-pro .btn { padding: 0; width: 100% !important; height: 38px; }
+  .dlab-app .sidebar.collapsed .side-pro-ic { display: inline-block; }
+
+  /* hover tooltip when collapsed */
+  .dlab-app .sidebar.collapsed .side-link::after {
+    content: attr(data-label); position: absolute; left: calc(100% + 12px); top: 50%; transform: translateY(-50%);
+    background: var(--cloud-900); color: #fff; padding: 6px 11px; border-radius: 8px;
+    font-family: var(--font-display); font-weight: 700; font-size: 12.5px; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 60;
+    box-shadow: 0 8px 18px -6px rgba(39,16,96,.5);
+  }
+  .dlab-app .sidebar.collapsed .side-link:hover::after { opacity: 1; }
+}

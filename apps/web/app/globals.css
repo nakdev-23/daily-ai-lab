@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #f0efff;
+  --bg-card: #ffffff;
+  --bg-sidebar: #ffffff;
+  --primary: #6B4EFF;
+  --primary-dark: #5535e8;
+  --primary-light: #ede9ff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6b7280;
+  --border: #e8e6ff;
+  --streak: #f97316;
+  --hearts: #ef4444;
+  --card-shadow: 0 2px 8px rgba(107, 78, 255, 0.08);
+  --card-shadow-hover: 0 4px 16px rgba(107, 78, 255, 0.14);
+}
+
+@theme inline {
+  --font-sans: var(--font-prompt);
+  --font-mono: var(--font-prompt);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-prompt), "Prompt", "Sarabun", "Noto Sans Thai", Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Card base utility */
+.card {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(107, 78, 255, 0.06);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Mascot animations — GPU/compositor driven (cheap, smooth under load) */
+@keyframes mascot-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(-1.5deg); }
+}
+.mascot-float {
+  animation: mascot-float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* float + occasional blink-squash, in a single compositor animation */
+@keyframes mascot-idle {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  25%      { transform: translateY(-9px) scaleY(1); }
+  50%      { transform: translateY(0) scaleY(1); }
+  86%      { transform: translateY(0) scaleY(1); }
+  90%      { transform: translateY(0) scaleY(0.9); }
+  94%      { transform: translateY(0) scaleY(1); }
+}
+.mascot-idle {
+  animation: mascot-idle 4s ease-in-out infinite;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-float, .mascot-idle { animation: none; }
+}
+
+/* Rendered Markdown (Docs) */
+.prose-doc {
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.prose-doc > :first-child { margin-top: 0; }
+.prose-doc h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 1.8em 0 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #ede9ff;
+}
+.prose-doc h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 1.4em 0 0.5em;
+}
+.prose-doc p { margin: 0.9em 0; }
+.prose-doc a { color: #6B4EFF; font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+.prose-doc strong { color: #1a1a2e; font-weight: 700; }
+.prose-doc ul, .prose-doc ol { margin: 0.9em 0; padding-left: 1.4em; }
+.prose-doc ul { list-style: disc; }
+.prose-doc ol { list-style: decimal; }
+.prose-doc li { margin: 0.4em 0; }
+.prose-doc li::marker { color: #9B7CFF; }
+.prose-doc blockquote {
+  margin: 1.2em 0;
+  padding: 0.8em 1.1em;
+  background: #f5f3ff;
+  border-radius: 0.9rem;
+  color: #4b4368;
+  font-size: 14px;
+}
+.prose-doc blockquote p { margin: 0; }
+.prose-doc code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.88em;
+  background: #f1eefc;
+  color: #6B4EFF;
+  padding: 0.15em 0.4em;
+  border-radius: 0.4rem;
+}
+.prose-doc pre {
+  margin: 1.2em 0;
+  padding: 1.1em 1.3em;
+  background: #1e1b2e;
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+.prose-doc pre code {
+  background: transparent;
+  color: #e7e3ff;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.prose-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 14px;
+}
+.prose-doc th, .prose-doc td {
+  border: 1px solid #ede9ff;
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+.prose-doc th { background: #f5f3ff; color: #1a1a2e; font-weight: 600; }
+.prose-doc tr:nth-child(even) td { background: #faf9ff; }
+.prose-doc hr { border: 0; border-top: 1px solid #ede9ff; margin: 2em 0; }
+.prose-doc img { border-radius: 0.9rem; margin: 1.2em 0; max-width: 100%; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }

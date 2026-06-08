@@ -1,0 +1,58 @@
+/* Daily AI Lab — docs reader (tool page: left TOC by level + content). Scoped .dlab-app */
+.dlab-app .docs-reader { max-width: 1000px; margin: 0 auto; }
+.dlab-app .docs-back { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-body); margin: 4px 0 18px; }
+.dlab-app .docs-back:hover { color: var(--hero-600); }
+.dlab-app .docs-body { display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 40px; align-items: start; }
+
+.dlab-app .docs-toc { position: sticky; top: 86px; align-self: start; max-height: calc(100vh - 110px); overflow-y: auto; padding-right: 4px; }
+.dlab-app .toc-group { margin-bottom: 14px; }
+.dlab-app .toc-eyebrow { display: flex; align-items: center; gap: 8px; width: 100%; border: 0; background: none; cursor: pointer; font-family: var(--font-sans); font-weight: 800; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 8px; padding: 7px 12px 7px 14px; border-radius: var(--radius-md); transition: background .15s, color .15s; }
+.dlab-app .toc-eyebrow:hover { background: var(--hero-50); color: var(--hero-600); }
+.dlab-app .toc-eyebrow .lv-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.dlab-app .toc-eyebrow .toc-eyebrow-label { flex: 1; text-align: left; }
+.dlab-app .toc-eyebrow .toc-count { font-size: 10px; background: var(--cloud-100); color: var(--text-muted); border-radius: 999px; padding: 1px 7px; letter-spacing: 0; }
+.dlab-app .toc-eyebrow .toc-chev { flex: none; transition: transform .2s var(--ease-out); transform: rotate(-90deg); }
+.dlab-app .toc-group.open .toc-eyebrow .toc-chev { transform: rotate(0deg); }
+.dlab-app .toc-link { display: block; width: 100%; text-align: left; border: 0; background: none; cursor: pointer; padding: 9px 14px; border-radius: var(--radius-md); font-family: var(--font-sans); font-size: 14px; font-weight: 700; color: var(--text-body); border-left: 2px solid transparent; transition: all .15s; }
+.dlab-app .toc-link:hover { background: var(--hero-50); color: var(--hero-600); }
+.dlab-app .toc-link.active { color: var(--hero-600); background: var(--hero-50); border-left-color: var(--hero-500); }
+
+.dlab-app .docs-main { min-width: 0; padding-bottom: 80px; }
+.dlab-app .lv-banner { display: flex; align-items: center; gap: 20px; padding: 24px 26px; margin-bottom: 30px; border-radius: var(--radius-xl); }
+.dlab-app .lv-banner img { width: 92px; flex: none; filter: drop-shadow(0 10px 14px rgba(39,16,96,.2)); }
+.dlab-app .lv-banner.beginner { background: linear-gradient(150deg, #DEF7EC, #EAFBF3); }
+.dlab-app .lv-banner.intermediate { background: linear-gradient(150deg, #FFF0CE, #FFF7E4); }
+.dlab-app .lv-banner.pro { background: linear-gradient(150deg, #ECE3FF, #F4EEFF); }
+.dlab-app .lv-banner .lv-pill { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-family: var(--font-display); font-weight: 800; font-size: 12px; padding: 5px 12px; border-radius: 999px; color: #fff; margin-bottom: 8px; }
+.dlab-app .lv-banner.beginner .lv-pill { background: var(--mint-500); }
+.dlab-app .lv-banner.intermediate .lv-pill { background: var(--amber-500); }
+.dlab-app .lv-banner.pro .lv-pill { background: var(--hero-500); }
+.dlab-app .lv-banner h2 { font-size: 26px; line-height: 1.3; margin: 0 0 6px; }
+.dlab-app .lv-banner p { margin: 0; font-size: 14.5px; color: var(--text-body); line-height: 1.5; }
+.dlab-app .pg-meta { font-family: var(--font-sans); font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-500); margin-bottom: 12px; }
+
+.dlab-app .doc-pager { display: flex; gap: 12px; margin-top: 36px; border-top: 1px solid var(--border-subtle); padding-top: 22px; }
+.dlab-app .doc-pager button { flex: 1; text-align: left; background: #fff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 13px 16px; cursor: pointer; transition: all .15s; }
+.dlab-app .doc-pager button:hover:not(:disabled) { border-color: var(--hero-300); transform: translateY(-2px); }
+.dlab-app .doc-pager button:disabled { opacity: .4; cursor: default; }
+.dlab-app .doc-pager button.next { text-align: right; }
+.dlab-app .doc-pager .pg-dir { font-size: 11.5px; font-weight: 800; color: var(--text-muted); }
+.dlab-app .doc-pager .pg-ttl { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--hero-600); }
+
+/* mobile/tablet: topic menu becomes a toggle + dropdown panel (no horizontal scroll) */
+.dlab-app .docs-toc-toggle { display: none; }
+@media (max-width: 900px) {
+  .dlab-app .docs-toc-toggle {
+    display: flex; align-items: center; gap: 10px; width: 100%; margin: 0 0 16px;
+    padding: 13px 16px; border: 1px solid var(--border-subtle); background: #fff; border-radius: var(--radius-md);
+    cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-strong);
+    box-shadow: var(--shadow-xs);
+  }
+  .dlab-app .docs-toc-toggle .ttt-label { flex: 1; min-width: 0; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dlab-app .docs-toc-toggle .ttt-chev { flex: none; color: var(--text-muted); transition: transform .2s var(--ease-out); }
+  .dlab-app .docs-toc-toggle .ttt-chev.open { transform: rotate(180deg); }
+
+  .dlab-app .docs-body { grid-template-columns: 1fr; }
+  .dlab-app .docs-toc { position: static; max-height: none; display: none; margin: 0 0 18px; padding: 8px; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-md); }
+  .dlab-app .docs-toc.open { display: block; }
+}

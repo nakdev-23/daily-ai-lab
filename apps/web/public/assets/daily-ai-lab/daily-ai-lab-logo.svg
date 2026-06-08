@@ -1,0 +1,11 @@
+<svg width="260" height="64" viewBox="0 0 260 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="260" height="64" rx="18" fill="white"/>
+  <g transform="translate(14 10)">
+    <path d="M21 5v14L9 38c-2 4 1 8 6 8h24c5 0 8-4 6-8L33 19V5" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+    <path d="M18 5h18" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="22" cy="34" r="3" fill="#FACC15"/>
+    <circle cx="31" cy="29" r="4" fill="#2563EB"/>
+    <path d="M13 39h28" stroke="#EA580C" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="70" y="40" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#2B1B12">Daily AI Lab</text>
+</svg>

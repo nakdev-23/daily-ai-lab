@@ -1,0 +1,29 @@
+/* Daily AI Lab — page-hero + career paths (scoped .dlab-app) */
+.dlab-app .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+.dlab-app .block { padding: 40px 0; position: relative; }
+.dlab-app .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-weight: 800; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--hero-600); }
+.dlab-app .grad-text { background: var(--g-violet); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.dlab-app .page-hero { padding: 28px 0 30px; text-align: center; }
+.dlab-app .page-hero h1 { font-size: clamp(34px, 5vw, 52px); margin: 14px 0 14px; }
+.dlab-app .page-hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.55; }
+.dlab-app .btn.md { height: 50px; padding: 0 24px; font-size: 16px; }
+
+.dlab-app .paths-big { display: flex; flex-direction: column; gap: 24px; max-width: 920px; margin: 0 auto; }
+.dlab-app .path-big { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 30px; align-items: center; }
+.dlab-app .path-big .pleft { text-align: center; }
+.dlab-app .path-big .pic { width: 80px; height: 80px; border-radius: 24px; display: grid; place-items: center; margin: 0 auto 14px; color: var(--hero-700); box-shadow: inset 0 -4px 8px rgba(0,0,0,.08), inset 0 2px 3px rgba(255,255,255,.6); transform: rotate(-5deg); }
+.dlab-app .path-big .lvl-tag { display: inline-block; font-size: 12px; font-weight: 800; color: var(--hero-600); background: var(--hero-50); padding: 5px 12px; border-radius: 999px; }
+.dlab-app .path-big h3 { font-size: 24px; margin: 0 0 8px; }
+.dlab-app .path-big .pd { font-size: 15.5px; color: var(--text-muted); line-height: 1.55; margin: 0 0 16px; }
+.dlab-app .path-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.dlab-app .ptool { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px; background: #fff; border: 1px solid var(--edge); font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--cloud-700); }
+.dlab-app .ptool .sw { width: 18px; height: 18px; border-radius: 6px; color: #fff; display: grid; place-items: center; font-size: 10px; font-weight: 800; }
+.dlab-app .path-foot { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.dlab-app .path-foot .pm { font-size: 13px; font-weight: 800; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; }
+.dlab-app .path-big:nth-child(even) .pic { transform: rotate(5deg); }
+
+@media (max-width: 920px) {
+  .dlab-app .path-big { grid-template-columns: 1fr; text-align: center; }
+  .dlab-app .path-tools, .dlab-app .path-foot { justify-content: center; }
+  .dlab-app .path-foot .btn { margin-left: 0 !important; }
+}

@@ -1,0 +1,36 @@
+/* Daily AI Lab — Daily Learn topic cards (lrn-*) + lively panels. Scoped .dlab-app */
+.dlab-app .lrn-head { display: flex; align-items: baseline; gap: 12px; margin: 6px 2px 18px; flex-wrap: wrap; }
+.dlab-app .lrn-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 23px; color: var(--text-strong); margin: 0; }
+.dlab-app .lrn-head span { font-size: 14px; color: var(--text-muted); font-weight: 700; }
+
+.dlab-app .lrn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 30px; }
+.dlab-app .lrn-card { position: relative; overflow: hidden; border-radius: 24px; padding: 22px; text-decoration: none; color: inherit; display: block;
+  background: linear-gradient(160deg, var(--c-soft, #F3EEFE), var(--cloud-0, #fff) 62%);
+  border: 1px solid rgba(255,255,255,.8);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 14px 30px -16px var(--c-sh, rgba(72,31,184,.4));
+  transition: transform .2s var(--ease-out), box-shadow .2s; }
+.dlab-app .lrn-card:hover { transform: translateY(-6px); box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 28px 48px -18px var(--c-sh, rgba(72,31,184,.5)); }
+.dlab-app .lrn-card .blob { position: absolute; right: -30px; top: -30px; width: 120px; height: 120px; border-radius: 50%; background: var(--c-blob, rgba(108,60,245,.16)); filter: blur(6px); pointer-events: none; }
+.dlab-app .lrn-card .lc-top { position: relative; display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.dlab-app .lrn-card .lc-tile { width: 56px; height: 56px; border-radius: 17px; flex: none; display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 23px; color: #fff;
+  box-shadow: inset 0 -5px 9px rgba(0,0,0,.2), inset 0 3px 5px rgba(255,255,255,.42), 0 8px 16px -5px rgba(0,0,0,.25);
+  transition: transform .25s var(--ease-bounce); }
+.dlab-app .lrn-card:hover .lc-tile { transform: rotate(-8deg) scale(1.06); }
+.dlab-app .lrn-card .lc-tt { min-width: 0; }
+.dlab-app .lrn-card h3 { font-family: var(--font-display); font-weight: 800; font-size: 17.5px; line-height: 1.25; color: var(--text-strong); margin: 0; }
+.dlab-app .lrn-card .lc-lvl { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; color: var(--text-muted); margin-top: 4px; }
+.dlab-app .lrn-card .lc-lvl .d { width: 8px; height: 8px; border-radius: 50%; }
+.dlab-app .lrn-card .lc-desc { position: relative; font-size: 14px; color: var(--text-body); line-height: 1.5; margin: 0 0 18px; min-height: 42px; }
+.dlab-app .lrn-card .lc-foot { position: relative; display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.dlab-app .lrn-card .lc-time { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; color: var(--hero-600); background: rgba(255,255,255,.7); padding: 5px 11px; border-radius: 999px; box-shadow: var(--shadow-xs); }
+.dlab-app .lrn-card .lc-prog { font-family: var(--font-display); font-weight: 800; font-size: 12.5px; color: var(--text-muted); }
+.dlab-app .lrn-card .lrn-bar { position: relative; height: 9px; border-radius: 999px; background: rgba(39,16,96,.1); overflow: hidden; }
+.dlab-app .lrn-card .lrn-bar > i { display: block; height: 100%; border-radius: 999px; background: var(--c-bar, var(--g-violet)); }
+.dlab-app .lrn-card .go-arrow { position: absolute; right: 18px; top: 18px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.66); color: var(--c-bar2, var(--hero-500)); font-weight: 800; opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s; }
+.dlab-app .lrn-card:hover .go-arrow { opacity: 1; transform: none; }
+
+.dlab-app .lrn-panel { position: relative; overflow: hidden; border-radius: 24px; padding: 22px; background: linear-gradient(165deg, #FBFAFE, var(--cloud-0, #fff)); border: 1px solid rgba(255,255,255,.8); box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 14px 30px -18px rgba(72,31,184,.3); }
+
+@media (max-width: 960px) { .dlab-app .lrn-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .dlab-app .lrn-grid { grid-template-columns: 1fr; } }

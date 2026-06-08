@@ -1,0 +1,195 @@
+/* Daily AI Lab — Admin panel. Reuses .dlab-app tokens + shell from app-ds.css. */
+
+/* buttons not in app-ds.css base */
+.dlab-app .btn.md { height: 50px; padding: 0 24px; font-size: 16px; }
+.dlab-app .btn--ghost { background: #fff; color: var(--hero-600); border: 1.5px solid var(--cloud-200); box-shadow: 0 4px 0 var(--cloud-200); }
+.dlab-app .btn--ghost:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--cloud-200); }
+.dlab-app .btn--ghost:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--cloud-200); }
+
+.dlab-app .admin-badge { font-family: var(--font-sans); font-weight: 800; font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: var(--g-violet); padding: 3px 8px; border-radius: 6px; display: inline-block; }
+.dlab-app .side-link.admin.active { background: linear-gradient(135deg, #2D2840, #1B1729); }
+.dlab-app .tb-avatar.adm { background: linear-gradient(160deg,#2D2840,#1B1729); }
+.dlab-app .admin-search { display: flex; align-items: center; gap: 9px; height: 40px; padding: 0 14px; border-radius: var(--radius-pill);
+  background: var(--cloud-50); border: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 13.5px; font-weight: 600; min-width: 240px; }
+.dlab-app .app-body { padding: 26px 32px 40px; }
+
+/* KPI cards */
+.dlab-app .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 22px; }
+.dlab-app .kpi { padding: 20px; position: relative; }
+.dlab-app .kpi .k-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.dlab-app .kpi .k-ic { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+  box-shadow: inset 0 -3px 6px rgba(0,0,0,.07), inset 0 2px 3px rgba(255,255,255,.6); }
+.dlab-app .kpi .trend { display: inline-flex; align-items: center; gap: 4px; font-family: var(--font-display); font-weight: 800; font-size: 12.5px; padding: 4px 9px; border-radius: 999px; }
+.dlab-app .kpi .trend.up { color: var(--mint-600); background: var(--mint-100); }
+.dlab-app .kpi .trend.down { color: var(--berry-600); background: var(--berry-100); }
+.dlab-app .kpi .k-val { font-family: var(--font-display); font-weight: 800; font-size: 30px; color: var(--text-strong); line-height: 1; }
+.dlab-app .kpi .k-lbl { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-top: 5px; }
+
+/* chart + breakdown */
+.dlab-app .admin-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; margin-bottom: 22px; align-items: start; }
+.dlab-app .panel { padding: 22px; }
+.dlab-app .panel .p-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.dlab-app .panel .p-head h3 { font-size: 18px; margin: 0; }
+.dlab-app .panel .p-head .more { font-size: 13px; font-weight: 800; color: var(--hero-500); cursor: pointer; }
+.dlab-app .chart-bars { display: flex; align-items: flex-end; gap: 12px; height: 180px; padding-top: 8px; }
+.dlab-app .cbar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: flex-end; }
+.dlab-app .cbar { width: 100%; max-width: 38px; border-radius: 8px 8px 4px 4px; background: linear-gradient(180deg, var(--hero-300), var(--hero-500));
+  box-shadow: inset 0 2px 3px rgba(255,255,255,.3); position: relative; }
+.dlab-app .cbar.peak { background: linear-gradient(180deg, var(--sun-300, #FFE066), var(--sun-500, #F4A100)); }
+.dlab-app .cbar-wrap small { font-size: 11.5px; font-weight: 800; color: var(--text-muted); }
+.dlab-app .cbar .cv { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: var(--font-display); font-weight: 800; font-size: 11px; color: var(--text-body); white-space: nowrap; }
+.dlab-app .brk { display: flex; flex-direction: column; gap: 13px; }
+.dlab-app .brk-row { display: flex; align-items: center; gap: 11px; }
+.dlab-app .brk-row .dot { width: 11px; height: 11px; border-radius: 4px; flex: none; }
+.dlab-app .brk-row .bl { flex: 1; font-weight: 700; font-size: 14px; color: var(--text-body); }
+.dlab-app .brk-row .bv { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-strong); }
+.dlab-app .brk-bar { height: 8px; border-radius: 999px; background: var(--cloud-200); overflow: hidden; margin-top: 8px; }
+.dlab-app .brk-bar > i { display: block; height: 100%; border-radius: 999px; }
+
+/* tables (inline panel + full) */
+.dlab-app .atable { width: 100%; }
+.dlab-app .atable .at-row { display: grid; align-items: center; gap: 12px; padding: 12px 6px; border-bottom: 1px solid var(--border-subtle); }
+.dlab-app .atable .at-row:last-child { border-bottom: 0; }
+.dlab-app .atable .at-head { font-size: 11.5px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--text-muted); border-bottom: 2px solid var(--border-subtle); }
+.dlab-app .uc { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.dlab-app .uc .av { width: 38px; height: 38px; border-radius: 50%; flex: none; display: grid; place-items: center; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 14px; }
+.dlab-app .uc b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; line-height: 1.2; }
+.dlab-app .uc small { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.dlab-app .cell { font-size: 14px; font-weight: 700; color: var(--text-body); }
+.dlab-app .cell.num { font-family: var(--font-display); font-weight: 800; color: var(--text-strong); }
+
+.dlab-app .spill { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.dlab-app .spill.ok { color: var(--mint-600); background: var(--mint-100); }
+.dlab-app .spill.warn { color: #9A6B00; background: var(--amber-100); }
+.dlab-app .spill.mut { color: var(--text-muted); background: var(--cloud-100); }
+.dlab-app .row-act { display: flex; gap: 6px; justify-content: flex-end; }
+.dlab-app .iconbtn { width: 32px; height: 32px; border-radius: 9px; border: 1px solid var(--border-subtle); background: var(--cloud-0, #fff); cursor: pointer;
+  display: grid; place-items: center; color: var(--text-muted); transition: all .15s; }
+.dlab-app .iconbtn:hover { border-color: var(--hero-300); color: var(--hero-600); transform: translateY(-1px); }
+.dlab-app .iconbtn.danger:hover { border-color: var(--berry-500); color: var(--berry-600); }
+
+/* sub-page toolbar + tables */
+.dlab-app .adm-bar { display: flex; align-items: center; gap: 14px; margin: 0 2px 20px; flex-wrap: wrap; }
+.dlab-app .adm-bar h1 { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--text-strong); margin: 0; }
+.dlab-app .adm-bar .sub { color: var(--text-muted); font-size: 13.5px; font-weight: 600; margin-top: 3px; }
+.dlab-app .adm-bar .spacer { flex: 1; }
+.dlab-app .adm-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dlab-app .tbl-search { display: flex; align-items: center; gap: 9px; height: 44px; padding: 0 15px; border-radius: var(--radius-md); background: var(--cloud-0, #fff); border: 2px solid var(--cloud-200); min-width: 220px; color: var(--text-muted); }
+.dlab-app .tbl-search input { border: 0; background: none; outline: none; font-family: var(--font-sans); font-size: 14px; color: var(--text-strong); width: 100%; }
+.dlab-app .chip-tabs { display: flex; gap: 7px; flex-wrap: wrap; margin: 0 2px 16px; }
+.dlab-app .chip-tab { height: 38px; padding: 0 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--cloud-200); background: var(--cloud-0, #fff);
+  cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: all .15s; white-space: nowrap; }
+.dlab-app .chip-tab:hover { border-color: var(--hero-300); }
+.dlab-app .chip-tab.on { background: var(--g-violet); color: #fff; border-color: transparent; box-shadow: 0 8px 18px -6px rgba(72,31,184,.5); }
+.dlab-app .chip-tab .ct-n { opacity: .7; margin-left: 4px; }
+
+.dlab-app .tablewrap { padding: 8px 16px; overflow-x: auto; }
+.dlab-app .dtable { width: 100%; border-collapse: collapse; min-width: 560px; }
+.dlab-app .dtable th { text-align: left; font-family: var(--font-sans); font-weight: 800; font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-muted); padding: 10px 12px; border-bottom: 2px solid var(--border-subtle); white-space: nowrap; }
+.dlab-app .dtable td { padding: 12px 12px; border-bottom: 1px solid var(--border-subtle); font-size: 14px; color: var(--text-body); vertical-align: middle; }
+.dlab-app .dtable tr:last-child td { border-bottom: 0; }
+.dlab-app .dtable tbody tr { transition: background .12s; }
+.dlab-app .dtable tbody tr:hover { background: var(--cloud-50); }
+.dlab-app .dtable .num { font-family: var(--font-display); font-weight: 800; color: var(--text-strong); }
+
+/* modal */
+.dlab-app .modal-ovl { position: fixed; inset: 0; z-index: 400; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(27,23,41,.46); backdrop-filter: blur(3px); }
+.dlab-app .modal { width: 100%; max-width: 480px; max-height: calc(100vh - 48px); overflow-y: auto; border-radius: var(--radius-xl); background: var(--cloud-0, #fff); box-shadow: 0 40px 80px -20px rgba(27,23,41,.5); animation: admModalIn .24s var(--ease-bounce); }
+@keyframes admModalIn { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.dlab-app .modal.lg { max-width: 620px; }
+.dlab-app .modal-head { display: flex; align-items: flex-start; gap: 14px; padding: 22px 24px 16px; }
+.dlab-app .modal-head .mh-ic { width: 46px; height: 46px; border-radius: 14px; flex: none; display: grid; place-items: center; box-shadow: inset 0 -3px 6px rgba(0,0,0,.07), inset 0 2px 3px rgba(255,255,255,.6); }
+.dlab-app .modal-head .mh-tx { flex: 1; min-width: 0; }
+.dlab-app .modal-head h3 { font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--text-strong); margin: 2px 0 3px; }
+.dlab-app .modal-head p { margin: 0; font-size: 13.5px; color: var(--text-muted); line-height: 1.45; }
+.dlab-app .modal-x { width: 34px; height: 34px; border-radius: 10px; border: 0; background: var(--cloud-100); cursor: pointer; flex: none; display: grid; place-items: center; color: var(--text-muted); transition: background .15s, color .15s; }
+.dlab-app .modal-x:hover { background: var(--cloud-200); color: var(--text-strong); }
+.dlab-app .modal-body { padding: 4px 24px 8px; }
+.dlab-app .modal-foot { display: flex; gap: 10px; justify-content: flex-end; padding: 16px 24px 22px; }
+.dlab-app .modal-foot.spread { justify-content: space-between; }
+
+/* form fields */
+.dlab-app .fld { margin-bottom: 16px; }
+.dlab-app .fld:last-child { margin-bottom: 6px; }
+.dlab-app .fld label { display: block; font-family: var(--font-sans); font-weight: 800; font-size: 12.5px; color: var(--text-strong); margin-bottom: 7px; }
+.dlab-app .fld .hint { font-weight: 600; color: var(--text-muted); margin-left: 6px; }
+.dlab-app .fin { width: 100%; height: 48px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: var(--cloud-0, #fff); padding: 0 14px; font-family: var(--font-sans); font-size: 14.5px; color: var(--text-strong); transition: border-color .15s, box-shadow .15s; }
+.dlab-app textarea.fin { height: auto; min-height: 160px; padding: 12px 14px; resize: vertical; line-height: 1.5; font-family: var(--font-mono); font-size: 13px; }
+.dlab-app select.fin { cursor: pointer; }
+.dlab-app .fin::placeholder { color: var(--cloud-400); }
+.dlab-app .fin:focus { outline: none; border-color: var(--hero-400); box-shadow: 0 0 0 4px rgba(108,60,245,.18); }
+.dlab-app .fld-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* AI icon picker (admin docs) */
+.dlab-app .icon-picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 8px; max-height: 188px; overflow-y: auto; padding: 4px; border: 1.5px solid var(--cloud-200); border-radius: var(--radius-md); background: var(--cloud-50); }
+.dlab-app .ic-opt { display: grid; place-items: center; aspect-ratio: 1; border: 2px solid transparent; border-radius: 12px; background: #fff; cursor: pointer; transition: transform .12s var(--ease-bounce), border-color .15s, box-shadow .15s; }
+.dlab-app .ic-opt:hover { transform: translateY(-2px); border-color: var(--hero-200); box-shadow: var(--shadow-sm); }
+.dlab-app .ic-opt.sel { border-color: var(--hero-500); box-shadow: 0 0 0 3px rgba(108,60,245,.16); }
+
+/* admin mobile burger reuse */
+.dlab-app .adm-msg { padding: 12px 16px; border-radius: var(--radius-md); font-weight: 700; font-size: 14px; margin-bottom: 16px; }
+.dlab-app .adm-msg.ok { background: var(--mint-100); color: var(--mint-600); }
+.dlab-app .adm-msg.err { background: var(--berry-100); color: var(--berry-600); }
+.dlab-app .adm-toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 500; display: inline-flex; align-items: center; gap: 8px;
+  background: var(--text-strong); color: #fff; padding: 13px 22px; border-radius: 999px; font-family: var(--font-display); font-weight: 800; font-size: 14.5px;
+  box-shadow: 0 16px 34px -10px rgba(0,0,0,.4); animation: admToastIn .25s var(--ease-bounce); }
+@keyframes admToastIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+/* system settings form */
+.dlab-app .formpage { max-width: 720px; }
+.dlab-app .form-sec { padding: 22px; margin-bottom: 18px; }
+.dlab-app .form-sec h3 { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--text-strong); margin: 0 0 3px; display: flex; align-items: center; gap: 9px; }
+.dlab-app .form-sec .sec-sub { font-size: 13px; color: var(--text-muted); margin: 0 0 16px; }
+.dlab-app .form-sticky { display: flex; align-items: center; position: sticky; bottom: 0; padding: 14px 0; }
+.dlab-app .form-sticky .spacer { flex: 1; }
+.dlab-app .srow { display: flex; align-items: center; gap: 14px; padding: 11px 0; border-top: 1px solid var(--border-subtle); }
+.dlab-app .srow:first-of-type { border-top: 0; }
+.dlab-app .srow .si-info { flex: 1; }
+.dlab-app .srow .si-info b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; }
+.dlab-app .srow .si-info span { font-size: 12.5px; color: var(--text-muted); }
+.dlab-app .switch { position: relative; width: 50px; height: 29px; flex: none; cursor: pointer; display: inline-block; }
+.dlab-app .switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.dlab-app .switch .track { position: absolute; inset: 0; background: var(--cloud-300, #cfc8df); border-radius: 999px; transition: background .2s; }
+.dlab-app .switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 23px; height: 23px; border-radius: 50%; background: #fff; box-shadow: var(--shadow-sm); transition: transform .2s; }
+.dlab-app .switch input:checked + .track { background: var(--hero-500); }
+.dlab-app .switch input:checked + .track::after { transform: translateX(21px); }
+
+/* course editor (units + lessons) */
+.dlab-app .seg-pick { display: flex; gap: 8px; flex-wrap: wrap; }
+.dlab-app .seg-pick button { height: 40px; padding: 0 16px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: var(--cloud-0, #fff); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: all .15s; }
+.dlab-app .seg-pick button.on { border-color: var(--hero-400); background: var(--hero-50); color: var(--hero-600); }
+.dlab-app .edit-list { display: flex; flex-direction: column; gap: 10px; }
+.dlab-app .edit-item { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: var(--radius-md); border: 1.5px solid var(--cloud-200); background: var(--cloud-0, #fff); }
+.dlab-app .edit-item .grip { color: var(--cloud-400); cursor: grab; flex: none; display: grid; place-items: center; }
+.dlab-app .edit-item .ei-ic { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; flex: none; }
+.dlab-app .edit-item .ei-tx { flex: 1; min-width: 0; }
+.dlab-app .edit-item .ei-tx b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; }
+.dlab-app .edit-item .ei-tx small { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+.dlab-app .edit-add { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; border-radius: var(--radius-md); border: 2px dashed var(--cloud-300, #cfc8df); background: none; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--hero-500); transition: all .15s; width: 100%; margin-top: 4px; }
+.dlab-app .edit-add:hover { border-color: var(--hero-400); background: var(--hero-50); }
+.dlab-app .sec-head-row { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
+.dlab-app .sec-head-row h3 { margin: 0; flex: 1; }
+
+/* leagues badge grid */
+.dlab-app .adm-badges { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.dlab-app .adm-badge { padding: 20px; text-align: center; }
+.dlab-app .adm-badge img { width: 64px; height: 64px; margin: 0 auto 10px; object-fit: contain; }
+.dlab-app .adm-badge b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; }
+.dlab-app .adm-badge span { font-size: 12px; color: var(--text-muted); font-weight: 700; }
+@media (max-width: 700px) { .dlab-app .adm-badges { grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 920px) {
+  .dlab-app .kpis { grid-template-columns: repeat(2, 1fr); }
+  .dlab-app .admin-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .dlab-app .app { grid-template-columns: 1fr; }
+  .dlab-app .sidebar { display: none; }
+  .dlab-app .sidebar[data-open] { display: flex; position: fixed; top: 0; left: 0; bottom: 0; width: 274px; z-index: 300; box-shadow: var(--shadow-xl); }
+  .dlab-app .app-body { padding: 18px 16px 32px; }
+  .dlab-app .admin-search { display: none; }
+}
+@media (max-width: 560px) {
+  .dlab-app .kpis { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-07T00:00:00.000Z",
+  "title": "Design System: Daily AI Lab",
+  "extensions": {
+    "colorMeta": {
+      "sun": { "role": "primary", "displayName": "Sun Yellow", "canonical": "#FFD43A", "tonalRamp": ["#4D3700", "#7A5800", "#B07F00", "#E0A800", "#FBC400", "#FFD43A", "#FFDE52", "#FFE885", "#FFF3C4", "#FFFBEB"] },
+      "hero": { "role": "primary", "displayName": "Hero Violet", "canonical": "#6C3CF5", "tonalRamp": ["#271060", "#381A8F", "#481FB8", "#5728E0", "#6C3CF5", "#875EF6", "#A887F8", "#C8B2FB", "#E3D8FD", "#F2ECFE"] },
+      "punch": { "role": "secondary", "displayName": "Punch Orange", "canonical": "#FD7302", "tonalRamp": ["#B84A00", "#E25E00", "#FD7302", "#FF9A3D", "#FFC27A"] },
+      "ink": { "role": "neutral", "displayName": "Cloud Ink", "canonical": "#1B1729", "tonalRamp": ["#1B1729", "#2D2840", "#463F58", "#5F5677", "#7F779A", "#A69EC1", "#C9C2DF", "#E0DAEF", "#EFEBF7", "#F7F5FC"] },
+      "mint": { "role": "tertiary", "displayName": "Mint", "canonical": "#14A871", "tonalRamp": ["#0E8459", "#14A871", "#D6F5E6"] },
+      "berry": { "role": "tertiary", "displayName": "Berry", "canonical": "#EE5A52", "tonalRamp": ["#D23A33", "#EE5A52", "#FCDFDE"] },
+      "sky": { "role": "tertiary", "displayName": "Sky", "canonical": "#2A8CF0", "tonalRamp": ["#2A8CF0", "#D8ECFD"] },
+      "pink": { "role": "tertiary", "displayName": "Pink", "canonical": "#F45C97", "tonalRamp": ["#F45C97", "#FF7FB0", "#FFA9CC", "#FFE2EE"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. Baloo 2 800, balanced wrap." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Card titles, plan names, the wordmark." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs; lead steps up to 19px." },
+      "label": { "displayName": "Eyebrow / Label", "purpose": "Tiny tracked uppercase eyebrows only." },
+      "mono": { "displayName": "Mono", "purpose": "Code, prompts, quiz answer-key letters." }
+    },
+    "shadows": [
+      { "name": "soft-sm", "value": "0 2px 6px rgba(39,16,96,0.08)", "purpose": "Ambient lift on chips and small floating UI." },
+      { "name": "soft-md", "value": "0 6px 18px rgba(39,16,96,0.10)", "purpose": "Default card/marquee lift." },
+      { "name": "soft-xl", "value": "0 28px 60px rgba(39,16,96,0.18)", "purpose": "Deep hero-panel lift." },
+      { "name": "glass-lift", "value": "inset 0 1px 0 rgba(255,255,255,0.9), 0 22px 46px -16px rgba(72,31,184,0.26), 0 4px 14px rgba(39,16,96,0.05)", "purpose": "The pillowy .glass card." },
+      { "name": "key-violet", "value": "0 6px 0 #481FB8, 0 16px 26px rgba(72,31,184,0.42), inset 0 2px 0 rgba(255,255,255,0.35)", "purpose": "Tactile key under the primary button." },
+      { "name": "key-sun", "value": "0 6px 0 #E0A800, 0 16px 26px rgba(224,168,0,0.4), inset 0 2px 0 rgba(255,255,255,0.6)", "purpose": "Tactile key under the sunny button." },
+      { "name": "glow-hero", "value": "0 0 0 4px rgba(108,60,245,0.22)", "purpose": "Violet focus ring." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for reveals and most transitions." },
+      { "name": "ease-bounce", "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "purpose": "Signature playful overshoot on button press and pops. Intentional for this toy-like brand; always paired with a prefers-reduced-motion fallback." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "980px" },
+      { "name": "mobile", "value": "560px" },
+      { "name": "container", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Violet)",
+      "kind": "button",
+      "refersTo": "button-violet",
+      "description": "The main call to action. Tactile violet key that depresses on press.",
+      "html": "<button class=\"ds-btn-violet\">Start learning free</button>",
+      "css": ".ds-btn-violet { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 18px; height: 62px; padding: 0 34px; border: 0; border-radius: 999px; color: #fff; cursor: pointer; background: linear-gradient(180deg,#9173FA,#6C3CF5); box-shadow: 0 6px 0 #481FB8, 0 16px 26px rgba(72,31,184,.42), inset 0 2px 0 rgba(255,255,255,.35); transition: transform .12s cubic-bezier(0.34,1.56,0.64,1), box-shadow .12s, filter .2s; } .ds-btn-violet:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 8px 0 #481FB8, 0 22px 34px rgba(72,31,184,.5), inset 0 2px 0 rgba(255,255,255,.35); } .ds-btn-violet:active { transform: translateY(4px); box-shadow: 0 2px 0 #481FB8, 0 8px 14px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35); }"
+    },
+    {
+      "name": "Sunny Button",
+      "kind": "button",
+      "refersTo": "button-sun",
+      "description": "The upgrade / Go Pro action. Yellow surface, violet-ink text.",
+      "html": "<button class=\"ds-btn-sun\">👑 Go Pro</button>",
+      "css": ".ds-btn-sun { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 18px; height: 62px; padding: 0 34px; border: 0; border-radius: 999px; color: #481FB8; cursor: pointer; background: linear-gradient(180deg,#FFE066,#FFD138); box-shadow: 0 6px 0 #E0A800, 0 16px 26px rgba(224,168,0,.4), inset 0 2px 0 rgba(255,255,255,.6); transition: transform .12s cubic-bezier(0.34,1.56,0.64,1), box-shadow .12s, filter .2s; } .ds-btn-sun:hover { transform: translateY(-2px); filter: brightness(1.04); } .ds-btn-sun:active { transform: translateY(4px); box-shadow: 0 2px 0 #E0A800, 0 8px 14px rgba(224,168,0,.4), inset 0 2px 0 rgba(255,255,255,.6); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet secondary action. White fill, hero-deep text.",
+      "html": "<button class=\"ds-btn-ghost\">▶ Try a quick lab</button>",
+      "css": ".ds-btn-ghost { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 18px; height: 62px; padding: 0 34px; border: 1.5px solid #E0DAEF; border-radius: 999px; color: #5728E0; cursor: pointer; background: #fff; box-shadow: 0 5px 0 #E0DAEF, 0 12px 22px rgba(39,16,96,.08); transition: transform .12s cubic-bezier(0.34,1.56,0.64,1), box-shadow .12s; } .ds-btn-ghost:hover { transform: translateY(-2px); border-color: #C8B2FB; } .ds-btn-ghost:active { transform: translateY(3px); box-shadow: 0 2px 0 #E0DAEF, 0 6px 12px rgba(39,16,96,.08); }"
+    },
+    {
+      "name": "Pill / Eyebrow Chip",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Hero eyebrow and tool tags. White pill with hero-ink text.",
+      "html": "<span class=\"ds-pill\">🔥 15 minutes a day</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 8px 18px; border-radius: 999px; font-family: 'Anuphan', sans-serif; font-weight: 800; font-size: 13.5px; color: #481FB8; background: #fff; border: 1px solid rgba(255,255,255,.72); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 8px 18px -6px rgba(72,31,184,.22); }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "The pillowy surface for panels and feature cards.",
+      "html": "<div class=\"ds-card\"><h3>Every lab levels you up</h3><p>Riri turns 15 focused minutes into real momentum.</p></div>",
+      "css": ".ds-card { padding: 24px; border-radius: 28px; background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.8)); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.72); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 22px 46px -16px rgba(72,31,184,.26), 0 4px 14px rgba(39,16,96,.05); color: #463F58; } .ds-card h3 { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 18px; color: #1B1729; margin: 0 0 6px; } .ds-card p { margin: 0; font-size: 14.5px; color: #7F779A; line-height: 1.5; }"
+    },
+    {
+      "name": "Quiz Option",
+      "kind": "custom",
+      "refersTo": "quiz-option",
+      "description": "The teaching primitive. Lettered choice with mint/berry answer states.",
+      "html": "<button class=\"ds-opt\"><span class=\"ds-opt-k\">B</span> Act as a marketing expert. Write 3 ad headlines.</button>",
+      "css": ".ds-opt { display: flex; align-items: center; gap: 13px; width: 100%; text-align: left; padding: 15px 16px; border-radius: 14px; border: 2px solid #E0DAEF; background: #fff; font-family: 'Anuphan', sans-serif; font-weight: 700; font-size: 15px; color: #463F58; cursor: pointer; box-shadow: 0 3px 0 #E0DAEF; transition: transform .12s cubic-bezier(0.22,1,0.36,1), border-color .15s, box-shadow .12s; } .ds-opt:hover { transform: translateY(-2px); border-color: #A887F8; box-shadow: 0 5px 0 #E0DAEF; } .ds-opt-k { width: 28px; height: 28px; border-radius: 9px; background: #EFEBF7; display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; color: #7F779A; flex: none; }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky translucent bar with Riri brand badge and wipe-underline links.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-brand\">Daily AI Lab</span><a class=\"ds-navlink\" href=\"#\">How it works</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 28px; height: 78px; padding: 0 28px; background: rgba(255,255,255,.72); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid rgba(108,60,245,.09); } .ds-brand { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 22px; color: #5728E0; } .ds-navlink { font-family: 'Anuphan', sans-serif; font-weight: 700; font-size: 15px; color: #463F58; text-decoration: none; position: relative; } .ds-navlink::after { content: ''; position: absolute; left: 0; bottom: -7px; height: 3px; width: 0; border-radius: 3px; background: linear-gradient(135deg,#9D7BFB,#5728E0); transition: width .24s cubic-bezier(0.22,1,0.36,1); } .ds-navlink:hover { color: #5728E0; } .ds-navlink:hover::after { width: 100%; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Riri's Sticker Lab",
+    "overview": "Daily AI Lab turns learning AI tools into a daily, game-like habit, anchored on Riri, a round yellow cockatiel in a violet superhero cape. The UI is a soft, pillowy sticker book: everything rounded and lifted, high-energy sun/hero color on calm violet-tinted neutrals. It is Thai-first and rejects corporate SaaS minimalism, bluish gradients, cold grays, pure black, and decorative glassmorphism.",
+    "keyCharacteristics": [
+      "Pillowy and rounded: pills for buttons/chips, 20-28px on cards, nothing boxy.",
+      "Tactile 3D controls with a solid colored key that depresses on press.",
+      "Mascot-led: Riri's emotional poses are the illustration system.",
+      "Bright accents on a near-white lavender page (#F7F5FC).",
+      "Playful bouncy motion with prefers-reduced-motion fallbacks."
+    ],
+    "rules": [
+      { "name": "The Violet-Ink-on-Yellow Rule", "body": "Yellow is a surface, not a typeface. Violet ink reads on yellow; white reads on violet. Never yellow text on white.", "section": "colors" },
+      { "name": "The No-Pure-Black Rule", "body": "The darkest value is Ink #1B1729. Pure #000 is forbidden, including in shadows.", "section": "colors" },
+      { "name": "The Sentence-Case Rule", "body": "Sentence case everywhere including buttons and headings; uppercase only for tiny tracked eyebrows.", "section": "typography" },
+      { "name": "The Tactile-Key Rule", "body": "Primary and sunny buttons carry a solid colored offset shadow that grows on hover and shrinks on press. A keyless button is wrong.", "section": "elevation" },
+      { "name": "The Tinted-Shadow Rule", "body": "Every shadow is violet-tinted (rgba(39,16,96,...)). Neutral or black shadows read as dated.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do make every button and chip a full pill and give primary/sunny buttons a colored key that depresses on press.",
+      "Do keep yellow as a surface and write on it in violet ink; white text on violet.",
+      "Do tint every shadow violet and keep the darkest value at Ink #1B1729.",
+      "Do lead emotional, empty, success, and error moments with a matched Riri pose.",
+      "Do use Baloo 2 for headlines and celebratory numbers, Anuphan for body, JetBrains Mono for code.",
+      "Do write sentence case, Thai-first, keeping English tech terms in English.",
+      "Do keep bounce easing on playful transitions with a prefers-reduced-motion fallback."
+    ],
+    "donts": [
+      "Don't use pure black #000 anywhere, including shadows; neutrals are violet-tinted, not gray.",
+      "Don't put yellow text on white, or use Punch orange as a primary button.",
+      "Don't ship boxy or sharp corners.",
+      "Don't pair a 1px border with a heavy drop shadow on the same element.",
+      "Don't lean on bluish gradients, noisy textures, or decorative glassmorphism.",
+      "Don't ALL-CAPS sentences or set body copy in uppercase.",
+      "Don't replace Riri with stock illustration or recolor/distort the mascot."
+    ]
+  }
+}

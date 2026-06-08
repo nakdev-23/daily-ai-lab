@@ -1,0 +1,13 @@
+/* Daily AI Lab — achievement badges (real cropped images). Scoped .dlab-app */
+.dlab-app .ach-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px 14px; }
+.dlab-app .ach { text-align: center; }
+.dlab-app .ach-img { width: 76px; height: 76px; object-fit: contain; margin: 0 auto 10px; display: block;
+  filter: drop-shadow(0 8px 12px rgba(72,31,184,.32)); transition: transform .15s var(--ease-bounce); }
+.dlab-app .ach:hover .ach-img { transform: translateY(-3px) scale(1.05); }
+.dlab-app .ach b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-strong); }
+.dlab-app .ach span { display: block; font-size: 11.5px; color: var(--text-muted); font-weight: 700; margin-top: 1px; line-height: 1.35; }
+.dlab-app .ach.locked .ach-img { filter: grayscale(1) opacity(.42); }
+.dlab-app .ach.locked b, .dlab-app .ach.locked span { opacity: .55; }
+
+@media (max-width: 720px) { .dlab-app .ach-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 460px) { .dlab-app .ach-grid { grid-template-columns: repeat(2, 1fr); } }

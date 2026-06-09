@@ -164,7 +164,7 @@ html { scroll-behavior: smooth; }
     linear-gradient(174deg, #EADCFF 0%, #F0E9FF 18%, #F7F3FF 46%, #FDFBFF 76%, #FFFFFF 100%); }
 .dlab-home .hero::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: radial-gradient(ellipse 56% 38% at 74% -8%, rgba(208,172,255,.56), transparent 48%); }
-.dlab-home .hero .wrap { position: relative; z-index: 1; }
+.dlab-home .hero .wrap { position: relative; z-index: 1; max-width: 100%; padding: 0 clamp(24px, 6vw, 80px); }
 .dlab-home .hero-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 24px; align-items: center; }
 .dlab-home .hero h1 { font-size: clamp(48px, 6.4vw, 88px); margin: 22px 0 24px; line-height: 1.0; }
 .dlab-home .hero .lead { max-width: 530px; font-size: 18px; line-height: 1.65; }

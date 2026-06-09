@@ -27,20 +27,27 @@ export const th: Record<string, string> = {
   "Dashboard": "หน้าเรียน",
 
   // ── home hero ──
-  "15 minutes a day · learn daily": "วันละ 15 นาที · เก่งขึ้นทีละนิด",
-  "Master AI tools,": "ค่อย ๆ เก่ง AI",
-  "one lab a day.": "วันละบทสั้น ๆ",
-  "Learn ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, quizzes and streaks. Built like your favourite game — ":
-    "เรียน ChatGPT, Claude, Gemini, Midjourney, Suno และ Runway ผ่านบทเรียนสั้น ๆ แบบฝึกหัด และแต้มสะสม เรียนเพลินเหมือนเล่นเกม ",
-  "fun, easy, real AI skills": "สนุก ง่าย ได้ทักษะ AI จริง",
+  "15 minutes a day · learn daily": "เรียนวันละนิด เก่งขึ้นทุกวัน! 🔥",
+  "Learn AI": "เรียน AI ให้สนุก",
+  "fun and easy,": "ง่าย",
+  "every single day!": "แค่วันละนิด!",
+  "Master ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, XP, streaks & adorable rewards — ":
+    "เรียนรู้ ChatGPT, Claude, Gemini, Midjourney, Suno และ Runway ผ่านบทเรียนสั้น ๆ พร้อมแบบฝึกหัด, XP, สตรีค และรางวัลสุดน่ารัก ",
+  "turn AI into a daily habit": "เปลี่ยนการเรียน AI ให้เป็นเรื่องสนุกที่คุณอยากทำทุกวัน!",
   "Start learning free": "เริ่มเรียนฟรี",
+  "Try a lesson": "ดูตัวอย่างบทเรียน",
   "learners worldwide": "ผู้เรียนทั่วโลก",
-  "average rating": "คะแนนเฉลี่ย",
-  "12-day streak": "เรียนต่อเนื่อง 12 วัน",
-  "keep it alive!": "อย่าให้หลุดนะ!",
-  "lesson done": "เรียนจบบท",
-  "badge unlocked": "ได้เหรียญใหม่",
+  "from 12,540 reviews": "จาก 12,540 รีวิว",
+  "Streak": "สตรีคต่อเนื่อง",
+  "days": "วัน",
+  "keep it alive!": "สุดยอดไปเลย!",
+  "lesson done": "เรียนจบบทเรียน",
   "Today's lab": "บทเรียนวันนี้",
+  "Hearts": "พลังงาน",
+  "Mission complete!": "ทำภารกิจสำเร็จ!",
+  "ChatGPT first steps": "มือใหม่หัดใช้ ChatGPT",
+  "Badge earned": "ได้รับเหรียญตรา",
+  "badge unlocked": "ได้เหรียญใหม่",
 
   // ── home play / features ──
   "Learn by playing": "เรียนรู้ผ่านการเล่น",

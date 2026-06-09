@@ -49,10 +49,16 @@ export default async function HomePage() {
         <div className="wrap hero-grid">
           <div className="reveal">
             <span className="pill"><Flame size={14} style={iconStyle} /> {t("15 minutes a day · learn daily")}</span>
-            <h1 className="display">{t("Master AI tools,")}<br /><span className="grad-text">{t("one lab a day.")}</span></h1>
-            <p className="lead">{t("Learn ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, quizzes and streaks. Built like your favourite game — ")}<strong style={{ color: "var(--text-strong)" }}>{t("fun, easy, real AI skills")}</strong></p>
+            <h1 className="display">{t("Learn AI")}<br />{t("fun and easy,")}<br /><span className="grad-text">{t("every single day!")}</span></h1>
+            <p className="lead">{t("Master ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, XP, streaks & adorable rewards — ")}<strong style={{ color: "var(--text-strong)" }}>{t("turn AI into a daily habit")}</strong></p>
             <div className="hero-cta">
               <Link className="btn btn--violet lg" href="/login">{t("Start learning free")}</Link>
+              <Link className="btn-play" href="/learn/chatgpt/beginner/intro-to-chatgpt">
+                <span className="play-icon">
+                  <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" /></svg>
+                </span>
+                {t("Try a lesson")}
+              </Link>
             </div>
             <div className="trust">
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
@@ -61,39 +67,77 @@ export default async function HomePage() {
                   <span className="face" style={{ background: "var(--punch-500)" }}>N</span>
                   <span className="face" style={{ background: "var(--mint-500)" }}>พ</span>
                   <span className="face" style={{ background: "var(--pink-400)" }}>J</span>
+                  <span className="face" style={{ background: "var(--sun-500)" }}>A</span>
                 </span>
                 <span className="trust-txt"><b data-count="120" data-suffix="K+">120K+</b><br />{t("learners worldwide")}</span>
               </div>
-              <span className="trust-txt"><span className="stars">★★★★★</span><br /><b data-count="4.9">4.9</b> {t("average rating")}</span>
+              <span className="trust-txt"><span className="stars">★★★★★</span><br /><b data-count="4.9">4.9</b> {t("from 12,540 reviews")}</span>
             </div>
           </div>
 
-          {/* mascot stage */}
+          {/* mascot stage — 6 floating cards */}
           <div className="stage reveal">
-            <div className="spot" data-depth="-14" />
-            <span className="dot-star a" data-depth="26">✦</span>
-            <span className="dot-star b" data-depth="20">✦</span>
-            <span className="dot-star c" data-depth="34">✦</span>
+            <div className="spot" />
+            <span className="dot-star a">✦</span>
+            <span className="dot-star b">✦</span>
+            <span className="dot-star c">✦</span>
 
-            <div className="fcard streak" data-depth="40">
-              <span className="ic" style={{ background: "var(--pink-100)" }}><Flame size={20} className="text-pink-500" /></span>
-              <span className="tt"><b>{t("12-day streak")}</b><span>{t("keep it alive!")}</span></span>
+            {/* streak — top left */}
+            <div className="fcard streak">
+              <span className="ic" style={{ background: "var(--pink-100)" }}><Flame size={22} className="text-pink-500" /></span>
+              <span className="tt"><span>{t("Streak")}</span><b>12 {t("days")}</b><span>{t("keep it alive!")} 🔥</span></span>
             </div>
-            <div className="fcard xp" data-depth="50">
-              <span className="ic" style={{ background: "var(--sun-100)" }}><Zap size={20} className="text-amber-500" /></span>
-              <span className="tt"><b>+15 แต้ม</b><span>{t("lesson done")}</span></span>
-            </div>
-            <div className="fcard badge" data-depth="44">
-              <span className="ic" style={{ background: "var(--sky-100)" }}><Award size={20} className="text-sky-500" /></span>
-              <span className="tt"><b>สั่ง AI เก่งขึ้น</b><span>{t("badge unlocked")}</span></span>
-            </div>
-            <div className="fcard lab" data-depth="34" style={{ width: 172 }}>
-              <div className="row"><span className="tt"><b style={{ fontSize: 13 }}>{t("Today's lab")}</b></span><span className="tt"><span style={{ fontWeight: 800, color: "var(--hero-600)" }}>3 / 5</span></span></div>
+
+            {/* xp — top right, vertical with bar */}
+            <div className="fcard xp">
+              <div className="xp-row">
+                <span className="ic" style={{ background: "var(--sun-100)", width: 44, height: 44 }}><Zap size={22} className="text-amber-500" /></span>
+                <div>
+                  <div className="xp-val">+250 XP</div>
+                  <div className="xp-sub">{t("lesson done")}</div>
+                </div>
+              </div>
               <div className="bar"><i /></div>
             </div>
 
+            {/* lab — left middle, vertical with bar */}
+            <div className="fcard lab">
+              <div className="row">
+                <span className="tt"><b style={{ fontSize: 13 }}>{t("Today's lab")}</b></span>
+                <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15, color: "var(--hero-600)" }}>3 / 5</span>
+              </div>
+              <div className="bar"><i /></div>
+            </div>
+
+            {/* hearts — right middle */}
+            <div className="fcard hearts">
+              <span className="ic" style={{ background: "#FFE5EC" }}><Heart size={22} className="text-rose-500" /></span>
+              <div>
+                <div className="tt"><b>{t("Hearts")}</b></div>
+                <div className="hrow">
+                  <span className="h">❤️</span><span className="h">❤️</span><span className="h">❤️</span><span className="h">❤️</span><span className="h empty">🤍</span>
+                </div>
+              </div>
+            </div>
+
+            {/* mission — bottom left */}
+            <div className="fcard mission">
+              <div className="mis-head">
+                <span className="ic" style={{ background: "var(--mint-100)", width: 38, height: 38, borderRadius: 12 }}><CheckCircle2 size={20} className="text-emerald-500" /></span>
+                <b>{t("Mission complete!")}</b>
+              </div>
+              <span className="mis-sub">{t("ChatGPT first steps")}</span>
+              <span className="mis-chip"><Zap size={12} /> +100 XP</span>
+            </div>
+
+            {/* badge — bottom right */}
+            <div className="fcard badge">
+              <span className="ic" style={{ background: "var(--sky-100)" }}><Award size={22} className="text-sky-500" /></span>
+              <span className="tt"><span>{t("Badge earned")}</span><b>AI Explorer</b></span>
+            </div>
+
             <div className="podium" />
-            <Image className="mascot" data-depth="-22" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={430} height={430} priority />
+            <Image className="mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={500} height={500} priority />
           </div>
         </div>
       </section>

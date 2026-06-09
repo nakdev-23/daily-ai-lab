@@ -27,13 +27,6 @@ export default function AuthScreen({ mode, lang = "th" }: { mode: "login" | "sig
     const redirect = new URLSearchParams(window.location.search).get("redirect")
     const next = redirect && redirect.startsWith("/") ? redirect : "/daily-learn"
 
-    // TEMP: login bypass for testing (NEXT_PUBLIC_AUTH_BYPASS=1) — skip Google OAuth
-    // and go straight in. Remove the env flag to restore the real flow below.
-    if (process.env.NEXT_PUBLIC_AUTH_BYPASS === "1") {
-      window.location.href = next
-      return
-    }
-
     const supabase = createClient()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",

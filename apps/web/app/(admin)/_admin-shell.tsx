@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
@@ -41,7 +42,7 @@ export default function AdminShell({ children, initial }: { children: React.Reac
         {open && <div className="tb-menu-overlay" style={{ zIndex: 290 }} onClick={() => setOpen(false)} />}
         <aside className="sidebar" data-open={open || undefined}>
           <Link className="side-brand" href="/daily-learn">
-            <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
+            <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
             <div>
               <div className="brand-name" style={{ fontSize: 18 }}>Daily AI Lab</div>
               <div className="brand-sub"><span className="admin-badge">Admin</span></div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { createClient } from "@/lib/supabase/client"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import ToolLogo from "@/components/tool-logo"
@@ -23,9 +24,17 @@ export default function AuthScreen({ mode, lang = "th" }: { mode: "login" | "sig
   async function handleGoogle() {
     setError("")
     setLoading(true)
-    const supabase = createClient()
     const redirect = new URLSearchParams(window.location.search).get("redirect")
     const next = redirect && redirect.startsWith("/") ? redirect : "/daily-learn"
+
+    // TEMP: login bypass for testing (NEXT_PUBLIC_AUTH_BYPASS=1) — skip Google OAuth
+    // and go straight in. Remove the env flag to restore the real flow below.
+    if (process.env.NEXT_PUBLIC_AUTH_BYPASS === "1") {
+      window.location.href = next
+      return
+    }
+
+    const supabase = createClient()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: { redirectTo: `${location.origin}/auth/callback?next=${encodeURIComponent(next)}` },
@@ -43,14 +52,14 @@ export default function AuthScreen({ mode, lang = "th" }: { mode: "login" | "sig
         {/* brand panel */}
         <div className="auth-brand">
           <Link className="ab-top" href="/">
-            <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
+            <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
             <div>
               <div className="brand-name" style={{ color: "#fff" }}>Daily AI Lab</div>
               <div className="brand-sub" style={{ color: "var(--sun-300)" }}>{t("AI, every day")}</div>
             </div>
           </Link>
           <div className="ab-mid">
-            <img className={`ab-mascot${isSignup ? "" : " ab-mascot--lap"}`} src={`${M}/${isSignup ? "mascot-read" : "mascot-laptop"}.png`} alt="Riri" width={240} height={240} />
+            <Image className={`ab-mascot${isSignup ? "" : " ab-mascot--lap"}`} src={`${M}/${isSignup ? "mascot-read" : "mascot-laptop"}.png`} alt="Riri" width={240} height={240} />
             <h1 className="display">{t("Learn AI the")}<br />{t("fun way.")} <Sparkles size={32} className="text-amber-300" /></h1>
             <p>{t("Join 120,000+ learners mastering ChatGPT, Claude, Midjourney & more — 15 minutes a day, one lab at a time.")}</p>
             <div className="auth-marquee">
@@ -67,7 +76,7 @@ export default function AuthScreen({ mode, lang = "th" }: { mode: "login" | "sig
         <div className="auth-form-wrap">
           <div className="auth-form">
             <Link className="af-brand" href="/">
-              <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
+              <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
               <div className="brand-name">Daily AI Lab</div>
             </Link>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
@@ -70,7 +71,7 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
           {/* connected Google account */}
           <div className="set-google">
             {currentAvatar
-              ? <img className="sg-av" src={currentAvatar} alt={displayName} width={48} height={48} />
+              ? <Image className="sg-av" src={currentAvatar} alt={displayName} width={48} height={48} unoptimized />
               : <span className="sg-av sg-av-fallback">{displayName.charAt(0)}</span>}
             <div className="sg-info">
               <b>{displayName}</b>
@@ -85,7 +86,7 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
             <div className="avatar-picker">
               {AVATARS.map((k) => (
                 <button key={k} type="button" className={`av-opt${avatarSel === k ? " sel" : ""}`} onClick={() => pickAvatar(k)} aria-pressed={avatarSel === k} title={k}>
-                  <img src={`${AV}/avatar-${k}.png`} alt={k} width={64} height={64} />
+                  <Image src={`${AV}/avatar-${k}.png`} alt={k} width={64} height={64} />
                   {avatarSel === k && <span className="av-check"><Check size={14} /></span>}
                 </button>
               ))}
@@ -139,7 +140,7 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
 
         {/* Subscription */}
         <section className="set-card glass set-pro" id="subscription">
-          <img src="/assets/daily-ai-lab/mascot-ds/cockatiel-superhero.png" alt="Riri" width={70} height={70} />
+          <Image src="/assets/daily-ai-lab/mascot-ds/cockatiel-superhero.png" alt="Riri" width={70} height={70} />
           <div style={{ flex: 1 }}>
             <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("Upgrade to Pro")}</h3>
             <p>{t("Unlimited lessons, all career paths and unlimited hearts · ฿199/mo")}</p>

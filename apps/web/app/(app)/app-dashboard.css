@@ -52,10 +52,11 @@
     gap: 14px 16px;
     padding: 18px 0 24px;
     margin-bottom: 24px;
+    overflow: clip;
   }
 
   .dlab-app .goal-hero::before {
-    inset: -22% -18% -20% -34%;
+    inset: -20% 0 -18% 0;
   }
 
   .dlab-app .goal-hero .gc-mascot {
@@ -92,6 +93,13 @@
     flex-direction: row;
     justify-content: center;
     gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dlab-app .goal-card .gc-mascot,
+  .dlab-app .goal-card .gh-spark {
+    animation: none;
   }
 }
 

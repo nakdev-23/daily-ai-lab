@@ -15,6 +15,7 @@ import "./app-sidebar.css"
 import "./app-leaderboard.css"
 import "./app-dashboard.css"
 import "./app-learn-cards.css"
+import "./app-questmap.css"
 import "./app-badges.css"
 import "./app-profile.css"
 import "./app-upgrade.css"
@@ -26,7 +27,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   let xp = 0, hearts = 5, streak = 0
   let role: Role = "user"
 
-  if (isDevMock()) {
+  // TEMP: login bypass for testing (NEXT_PUBLIC_AUTH_BYPASS=1) — falls back to the
+  // mock profile so the app is usable without signing in. Remove the env flag to
+  // restore the real Supabase auth path below (which is left fully intact).
+  const authBypass = process.env.NEXT_PUBLIC_AUTH_BYPASS === "1"
+
+  if (isDevMock() || authBypass) {
     displayName = MOCK_PROFILE.display_name ?? "นักเรียน"
     role = MOCK_PROFILE.role
     xp = MOCK_GAME_STATE.xp

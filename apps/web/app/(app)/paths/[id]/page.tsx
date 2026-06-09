@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { getLang, makeT } from "@/lib/i18n"
 import { requirePro } from "@/lib/auth"
 import ToolLogo from "@/components/tool-logo"
@@ -113,7 +114,7 @@ export default async function PathRoadmapPage() {
         </div>
 
         <div className="cert-card glass">
-          <img src="/assets/daily-ai-lab/mascot-ds/mascot-celebrate.png" alt="Riri" width={84} height={84} />
+          <Image src="/assets/daily-ai-lab/mascot-ds/mascot-celebrate.png" alt="Riri" width={84} height={84} />
           <div>
             <h3 className="display">{t("Finish to earn a certificate")}</h3>
             <p>{t("Complete every module to earn a Prompt Engineer certificate for your portfolio or LinkedIn.")}</p>

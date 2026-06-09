@@ -10,11 +10,11 @@
   --font-display:"Baloo 2","Anuphan",system-ui,sans-serif; --font-sans:"Anuphan",system-ui,sans-serif;
   --radius-md:14px; --radius-pill:999px;
   --shadow-sm:0 2px 6px rgba(39,16,96,.08);
-  --glow-hero:0 0 0 4px rgba(108,60,245,.22); --ease-out:cubic-bezier(0.22,1,0.36,1); --ease-bounce:cubic-bezier(0.34,1.56,0.64,1);
+  --glow-hero:0 0 0 4px rgba(108,60,245,.22); --ease-out:cubic-bezier(0.22,1,0.36,1); --ease-bounce:cubic-bezier(0.22,1,0.36,1);
   --g-violet:linear-gradient(135deg,#9D7BFB 0%,#6C3CF5 52%,#5728E0 100%);
 }
 
-.dlab-auth { font-family: var(--font-sans); color: var(--text-body); }
+.dlab-auth { font-family: var(--font-sans); color: var(--text-body); min-height: 100dvh; overflow: hidden; }
 .dlab-auth *, .dlab-auth *::before, .dlab-auth *::after { box-sizing: border-box; }
 .dlab-auth img { display: block; max-width: 100%; }
 .dlab-auth a { text-decoration: none; color: var(--hero-600); }
@@ -31,15 +31,16 @@
 .dlab-auth .btn--violet:active { transform: translateY(3px); box-shadow: 0 2px 0 #481FB8, 0 6px 12px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35); }
 .dlab-auth .btn:disabled { opacity: .6; cursor: default; }
 
-.dlab-auth .auth { min-height: 100vh; display: grid; grid-template-columns: 1.05fr 1fr; }
-.dlab-auth .auth-brand { position: relative; overflow: hidden; padding: 56px; display: flex; flex-direction: column; background: var(--g-violet); color: #fff; }
+.auth-lang { position: fixed; top: max(16px, env(safe-area-inset-top)); left: 50%; z-index: 50; transform: translateX(-50%); }
+.dlab-auth .auth { min-height: 100dvh; display: grid; grid-template-columns: 1.05fr 1fr; overflow: hidden; }
+.dlab-auth .auth-brand { position: relative; overflow: hidden; padding: 40px 48px; display: flex; flex-direction: column; align-items: center; background: var(--g-violet); color: #fff; text-align: center; }
 .dlab-auth .auth-brand::before { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 360px at 20% 0%, rgba(255,255,255,.18), transparent 60%), radial-gradient(520px 320px at 100% 100%, rgba(255,212,58,.26), transparent 60%); }
 .dlab-auth .ab-top { position: relative; z-index: 1; display: flex; align-items: center; gap: 12px; }
-.dlab-auth .ab-mid { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: center; margin-top: 28px; }
-.dlab-auth .auth-brand h1 { color: #fff; font-size: 42px; line-height: 1.08; margin: 0 0 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.dlab-auth .auth-brand p { color: var(--hero-100); font-size: 17px; line-height: 1.6; max-width: 380px; margin: 0 0 28px; }
-.dlab-auth .ab-mascot { width: min(360px, 78%); margin: 0 0 22px -10px; animation: bobMascot 6s ease-in-out infinite; filter: drop-shadow(0 24px 30px rgba(0,0,0,.32)); }
-.dlab-auth .ab-mascot--lap { width: min(440px, 94%); margin: 0 0 14px -16px; }
+.dlab-auth .ab-mid { position: relative; z-index: 1; flex: 1; width: min(100%, 440px); display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 28px; }
+.dlab-auth .auth-brand h1 { color: #fff; font-size: 36px; line-height: 1.08; margin: 0 0 12px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.dlab-auth .auth-brand p { color: var(--hero-100); font-size: 15px; line-height: 1.55; max-width: 380px; margin: 0 0 18px; }
+.dlab-auth .ab-mascot { width: min(280px, 62%); margin: 0 auto 16px; animation: bobMascot 6s ease-in-out infinite; filter: drop-shadow(0 24px 30px rgba(0,0,0,.32)); }
+.dlab-auth .ab-mascot--lap { width: min(340px, 78%); margin: 0 auto 10px; }
 @keyframes bobMascot { 0%,100%{transform:translateY(0) rotate(-1.2deg)} 50%{transform:translateY(-14px) rotate(1.2deg)} }
 .dlab-auth .auth-stats { position: relative; z-index: 1; display: flex; gap: 28px; margin-top: 20px; }
 .dlab-auth .auth-stats .as b { font-family: var(--font-display); font-weight: 800; font-size: 26px; display: block; }
@@ -51,18 +52,24 @@
 .dlab-auth .am-tool { display: inline-flex; align-items: center; gap: 9px; padding: 9px 16px; border-radius: var(--radius-pill); background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.2); font-family: var(--font-display); font-weight: 800; font-size: 14px; color: #fff; white-space: nowrap; }
 .dlab-auth .am-tool .sw { width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; color: #fff; flex: none; box-shadow: inset 0 -2px 4px rgba(0,0,0,.2); }
 @media (prefers-reduced-motion: reduce) { .dlab-auth .auth-marquee-track { animation: none; } }
-.dlab-auth .auth-form-wrap { display: flex; align-items: center; justify-content: center; padding: 40px 32px; background: #fff; }
-.dlab-auth .auth-form { width: 100%; max-width: 400px; }
-.dlab-auth .af-brand { display: none; align-items: center; gap: 11px; margin-bottom: 24px; }
+.dlab-auth .auth-form-wrap { display: flex; align-items: center; justify-content: center; padding: 32px; background: #fff; overflow-y: auto; text-align: center; }
+.dlab-auth .auth-form { width: 100%; max-width: 400px; margin: auto; }
+.dlab-auth .auth-form { animation: authPanelIn .46s var(--ease-out) both; }
+.dlab-auth .af-brand { display: none; align-items: center; justify-content: center; gap: 11px; margin-bottom: 24px; }
 .dlab-auth .tabs { display: flex; gap: 6px; background: var(--cloud-100); border-radius: var(--radius-pill); padding: 5px; margin-bottom: 26px; }
 .dlab-auth .tab { flex: 1; height: 44px; border: 0; background: none; border-radius: var(--radius-pill); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--text-muted); transition: all .18s; text-decoration: none; display: grid; place-items: center; }
 .dlab-auth .tab.active { background: #fff; color: var(--hero-600); box-shadow: var(--shadow-sm); }
-.dlab-auth .btn-google { display: flex; align-items: center; justify-content: center; gap: 11px; width: 100%; height: 56px; margin-top: 8px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 16px; color: var(--text-strong); transition: transform .12s var(--ease-bounce), box-shadow .15s, border-color .15s; box-shadow: 0 4px 0 var(--cloud-200); }
+.dlab-auth .btn-google { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 11px; width: 100%; height: 56px; margin-top: 8px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 16px; color: var(--text-strong); transition: transform .12s var(--ease-bounce), box-shadow .15s, border-color .15s; box-shadow: 0 4px 0 var(--cloud-200); }
+.dlab-auth .btn-google::after { content: ""; position: absolute; inset: -40% auto -40% -48%; width: 42%; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(108,60,245,.13), transparent);
+  transform: translateX(0) skewX(-18deg); opacity: 0; transition: transform .46s var(--ease-out), opacity .18s var(--ease-out); }
 .dlab-auth .btn-google:hover { transform: translateY(-2px); border-color: var(--hero-300); box-shadow: 0 6px 0 var(--cloud-200); }
+.dlab-auth .btn-google:hover::after { transform: translateX(380%) skewX(-18deg); opacity: 1; }
 .dlab-auth .btn-google:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--cloud-200); }
 .dlab-auth .btn-google:disabled { opacity: .6; cursor: default; transform: none; }
-.dlab-auth .auth-perks { display: flex; justify-content: center; gap: 22px; margin-top: 18px; }
-.dlab-auth .auth-perks span { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--text-muted); }
+.dlab-auth .auth-perks { display: flex; justify-content: center; gap: 22px; margin-top: 18px; flex-wrap: wrap; }
+.dlab-auth .auth-perks span { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--text-muted); transition: color .16s var(--ease-out), transform .16s var(--ease-out); }
+.dlab-auth .auth-perks span:hover { color: var(--hero-600); transform: translateY(-1px); }
 .dlab-auth .auth-switch { text-align: center; font-size: 14px; color: var(--text-muted); font-weight: 600; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-subtle); }
 .dlab-auth .auth-switch a { font-family: var(--font-display); font-weight: 800; color: var(--hero-600); }
 .dlab-auth .auth-form h2 { font-size: 26px; margin: 0 0 6px; }
@@ -72,6 +79,7 @@
 .dlab-auth .field input { width: 100%; height: 52px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: #fff; padding: 0 16px; font-family: var(--font-sans); font-size: 15px; color: var(--text-strong); transition: border-color .15s, box-shadow .15s; }
 .dlab-auth .field input::placeholder { color: var(--cloud-400); }
 .dlab-auth .field input:focus { outline: none; border-color: var(--hero-400); box-shadow: var(--glow-hero); }
+.dlab-auth .field:focus-within label { color: var(--hero-600); }
 .dlab-auth .auth-meta { display: flex; align-items: center; justify-content: space-between; margin: 4px 0 20px; font-size: 13.5px; }
 .dlab-auth .auth-meta a { font-weight: 700; }
 .dlab-auth .auth-err { background: var(--berry-100); color: var(--berry-500); border-radius: var(--radius-md); padding: 11px 14px; font-size: 13.5px; font-weight: 600; margin-bottom: 16px; }
@@ -81,10 +89,22 @@
 .dlab-auth .divider { display: flex; align-items: center; gap: 14px; margin: 22px 0 4px; color: var(--text-muted); font-size: 12.5px; font-weight: 700; }
 .dlab-auth .divider::before, .dlab-auth .divider::after { content: ""; flex: 1; height: 1px; background: var(--border-subtle); }
 .dlab-auth a:focus-visible, .dlab-auth button:focus-visible { outline: 3px solid var(--hero-500); outline-offset: 3px; }
+@keyframes authPanelIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
 @media (max-width: 920px) {
   .dlab-auth .auth { grid-template-columns: 1fr; }
   .dlab-auth .auth-brand { display: none; }
   .dlab-auth .af-brand { display: flex; }
+  .dlab-auth .auth-form-wrap { align-items: center; min-height: 100dvh; padding-top: max(env(safe-area-inset-top, 20px), 82px); }
 }
-@media (prefers-reduced-motion: reduce) { .dlab-auth .ab-mascot { animation: none; } .dlab-auth .btn { transition: none; } }
+@media (max-width: 430px) {
+  .auth-lang { top: max(14px, env(safe-area-inset-top)); }
+  .dlab-auth .auth-form-wrap { padding: max(82px, calc(env(safe-area-inset-top) + 72px)) 24px max(32px, env(safe-area-inset-bottom)); }
+}
+@media (max-height: 430px) and (orientation: landscape) {
+  .dlab-auth .auth-form-wrap { align-items: flex-start; padding-top: max(74px, calc(env(safe-area-inset-top) + 62px)); padding-bottom: 24px; }
+  .dlab-auth .auth-form h2 { font-size: 24px; }
+  .dlab-auth .auth-form .sub { margin-bottom: 16px; }
+  .dlab-auth .auth-perks { margin-top: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .dlab-auth .ab-mascot, .dlab-auth .auth-form { animation: none; } .dlab-auth .btn, .dlab-auth .btn-google, .dlab-auth .auth-perks span { transition: none; } }

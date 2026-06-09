@@ -39,6 +39,10 @@ export async function updateSession(request: NextRequest) {
   // app is browsable without real Supabase credentials.
   if (isDevMockEnv()) return NextResponse.next({ request })
 
+  // TEMP: bypass the login wall for testing (NEXT_PUBLIC_AUTH_BYPASS=1).
+  // Additive only — remove the env flag to restore real auth guarding below.
+  if (process.env.NEXT_PUBLIC_AUTH_BYPASS === "1") return NextResponse.next({ request })
+
   let response = NextResponse.next({ request })
 
   const supabase = createServerClient(

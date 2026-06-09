@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight } from "lucide-react"
@@ -116,7 +117,7 @@ export default function LessonPlayer({ lang }: { lang: Lang }) {
               <div className="qtag"><BookOpen size={13} /> {t(cur.tag[1])}</div>
               <h2 className="display">{t(cur.title[1])}</h2>
               <div className="theory glass">
-                <img src={`${M}/${cur.mascot}.png`} alt="Riri" width={120} height={120} />
+                <Image src={`${M}/${cur.mascot}.png`} alt="Riri" width={120} height={120} />
                 <div className="tx">{cur.body(t)}<div className="ex"><CheckCircle2 size={15} style={{ display: "inline", verticalAlign: "-2px", marginRight: 7, color: "var(--mint-600)" }} />{t(cur.ex[1])}</div></div>
               </div>
             </div>
@@ -145,7 +146,7 @@ export default function LessonPlayer({ lang }: { lang: Lang }) {
 
           {cur.type === "done" && (
             <div className="complete">
-              <img src={`${M}/mascot-celebrate.png`} alt="Riri" width={220} height={220} />
+              <Image src={`${M}/mascot-celebrate.png`} alt="Riri" width={220} height={220} />
               <h2 className="display">{t("Lesson complete!")}</h2>
               <p>{t("Great job — your streak is safe and Riri is proud of you.")}</p>
               <div className="reward-row">

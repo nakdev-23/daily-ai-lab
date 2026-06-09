@@ -1,12 +1,14 @@
 import Link from "next/link"
+import Image from "next/image"
 import "./home.css"
 import HomeFx from "@/components/home-fx"
+import CareerPathsCarousel from "@/components/career-paths-carousel"
 import LangToggle from "@/components/lang-toggle"
 import ToolLogo from "@/components/tool-logo"
 import { getLang, makeT } from "@/lib/i18n"
 import {
   Flame, Zap, Award, Sparkles, Boxes, Target, Rocket, Heart,
-  BookOpen, CheckCircle2, Brain, Megaphone, Briefcase, Crown, Clock, RotateCcw,
+  BookOpen, CheckCircle2, Crown, RotateCcw,
 } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -29,7 +31,7 @@ export default async function HomePage() {
       <header className="nav">
         <div className="wrap nav-in">
           <Link href="/" className="brand">
-            <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" /></div>
+            <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={50} height={50} /></div>
             <div>
               <div className="brand-name">Daily AI Lab</div>
               <div className="brand-sub">{t("AI, every day")}</div>
@@ -91,7 +93,7 @@ export default async function HomePage() {
             </div>
 
             <div className="podium" />
-            <img className="mascot" data-depth="-22" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={430} height={430} fetchPriority="high" decoding="async" />
+            <Image className="mascot" data-depth="-22" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={430} height={430} priority />
           </div>
         </div>
       </section>
@@ -138,7 +140,7 @@ export default async function HomePage() {
                   <button className="quiz-reset"><RotateCcw size={13} style={iconStyle} /> {t("Try again")}</button>
                 </div>
               </div>
-              <img className="quiz-riri" src={`${M}/mascot-thumbsup.png`} alt="Riri" width={130} height={130} loading="lazy" decoding="async" />
+              <Image className="quiz-riri" src={`${M}/mascot-thumbsup.png`} alt="Riri" width={130} height={130} />
             </div>
 
             {/* gamification features */}
@@ -198,9 +200,9 @@ export default async function HomePage() {
       </section>
 
       {/* ======================= HOW IT WORKS ======================= */}
-      <section className="block tinted" id="how">
+      <section className="block how-showcase" id="how">
         <div className="wrap">
-          <div className="head reveal">
+          <div className="head how-head reveal">
             <span className="eyebrow"><Target size={14} style={iconStyle} /> {t("How it works")}</span>
             <h2 className="display">{t("Three steps. Every single day.")}</h2>
             <p>{t("The game-like loop that turns 15 minutes into a real AI skill.")}</p>
@@ -226,44 +228,17 @@ export default async function HomePage() {
       </section>
 
       {/* ======================= CAREER PATHS ======================= */}
-      <section className="block" id="paths">
+      <section className="block paths-showcase" id="paths">
         <div className="wrap">
-          <div className="head reveal">
+          <div className="head paths-head reveal">
             <span className="eyebrow"><Rocket size={14} style={iconStyle} /> {t("Career paths")}</span>
             <h2 className="display">{t("Go from curious to career-ready")}</h2>
             <p>{t("Guided multi-tool journeys that stack real, job-ready AI skills.")}</p>
           </div>
-          <div className="paths-grid">
-            {[
-              { bg: "var(--hero-100)", icon: Sparkles, color: "text-violet-600", title: t("AI Content Creator"), desc: t("Write, design & produce with ChatGPT, Midjourney & Suno."), meta: t("6 weeks · 84 lessons") },
-              { bg: "var(--sun-100)", icon: Brain, color: "text-amber-600", title: t("Prompt Engineer"), desc: t("Master prompting across every major model, beginner to pro."), meta: t("5 weeks · 72 lessons") },
-              { bg: "var(--pink-100)", icon: Megaphone, color: "text-pink-500", title: t("AI for Marketing"), desc: t("Campaigns, copy & visuals that ship faster with AI."), meta: t("4 weeks · 60 lessons") },
-              { bg: "var(--sky-100)", icon: Briefcase, color: "text-sky-600", title: t("AI for Business"), desc: t("Automate work and make smarter calls with AI tools."), meta: t("4 weeks · 56 lessons") },
-            ].map((p, i) => (
-              <Link href="/paths" className="path glass reveal" key={i}>
-                <div className="pic" style={{ background: p.bg }}><p.icon size={26} className={p.color} /></div>
-                <h3 className="display">{p.title}</h3>
-                <p>{p.desc}</p>
-                <div className="meta"><Clock size={13} style={iconStyle} /> {p.meta}</div>
-              </Link>
-            ))}
-          </div>
+          <CareerPathsCarousel lang={lang} />
         </div>
       </section>
 
-      {/* ======================== STATS BAND ======================== */}
-      <section className="block" style={{ padding: "30px 0" }}>
-        <div className="wrap reveal">
-          <div className="band">
-            <div className="band-grid">
-              <div className="s"><b><span data-count="120" data-suffix="K+">120K+</span></b><span>{t("Daily learners")}</span></div>
-              <div className="s"><b><span data-count="7">7</span></b><span>{t("AI tools covered")}</span></div>
-              <div className="s"><b><span data-count="400" data-suffix="+">400+</span></b><span>{t("Bite-size lessons")}</span></div>
-              <div className="s"><b><span data-count="4.9">4.9</span>★</b><span>{t("Average rating")}</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ========================= PRICING ========================== */}
       <section className="block" id="pricing">
@@ -306,17 +281,15 @@ export default async function HomePage() {
       </section>
 
       {/* ======================== FINAL CTA ========================= */}
-      <section className="block" style={{ padding: "40px 0 84px" }}>
-        <div className="wrap reveal">
-          <div className="final-card">
+      <section className="block final-cta-section">
+        <div className="final-card reveal">
             <div>
               <span className="eyebrow">{t("Ready when you are")}</span>
               <h2 className="display" style={{ marginTop: 12 }}>{t("Start learning AI today")}</h2>
               <p>{t("Join 120,000+ learners. Your first lab takes 15 minutes — Riri will guide you the whole way.")}</p>
               <Link className="btn btn--violet lg" href="/login" data-confetti>{t("Create your free account")} <Rocket size={18} /></Link>
             </div>
-            <img className="final-mascot" src={`${M}/mascot-fly.png`} alt="Riri" width={280} height={280} loading="lazy" decoding="async" />
-          </div>
+            <Image className="final-mascot" src={`${M}/mascot-fly.png`} alt="Riri" width={280} height={280} />
         </div>
       </section>
 
@@ -326,7 +299,7 @@ export default async function HomePage() {
           <div className="foot-grid">
             <div>
               <div className="brand" style={{ cursor: "default" }}>
-                <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={50} height={50} loading="lazy" decoding="async" /></div>
+                <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={50} height={50} /></div>
                 <div><div className="brand-name" style={{ color: "#fff" }}>Daily AI Lab</div>
                   <div className="brand-sub" style={{ color: "var(--sun-300)" }}>{t("AI, every day")}</div></div>
               </div>

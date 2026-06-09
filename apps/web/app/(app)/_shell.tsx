@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 import LangToggle from "@/components/lang-toggle"
 import { makeT, type Lang } from "@/lib/i18n-core"
@@ -99,7 +100,7 @@ export default function AppShell({ children, displayName, role, xp, hearts, stre
         {/* Sidebar */}
         <aside className={`sidebar${open ? " open" : ""}${collapsed ? " collapsed" : ""}`}>
           <Link className="side-brand" href="/">
-            <div className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
+            <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
             <div className="brand-text">
               <div className="brand-name" style={{ fontSize: 18 }}>Daily AI Lab</div>
               <div className="brand-sub">{t("AI, every day")}</div>
@@ -146,14 +147,14 @@ export default function AppShell({ children, displayName, role, xp, hearts, stre
               <span className="stat-chip heart"><Heart size={17} /> {hearts}</span>
               <div className="tb-user">
                 <button className="tb-avatar" onClick={() => setUserMenu((o) => !o)} aria-haspopup="menu" aria-expanded={userMenu}>
-                  {avatarSrc ? <img src={avatarSrc} alt={displayName} /> : displayName.charAt(0)}
+                  {avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} unoptimized /> : displayName.charAt(0)}
                 </button>
                 {userMenu && (
                   <>
                     <div className="tb-menu-overlay" onClick={() => setUserMenu(false)} />
                     <div className="tb-menu" role="menu">
                       <div className="tb-menu-head">
-                        <span className="tb-menu-av">{avatarSrc ? <img src={avatarSrc} alt={displayName} /> : displayName.charAt(0)}</span>
+                        <span className="tb-menu-av">{avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} unoptimized /> : displayName.charAt(0)}</span>
                         <div style={{ minWidth: 0 }}>
                           <b>{displayName}</b>
                           <small>{role === "admin" ? t("Admin") : t("Profile")}</small>

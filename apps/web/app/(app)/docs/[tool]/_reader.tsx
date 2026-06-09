@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import type { DocLevel, DocMeta } from "@/lib/docs"
@@ -88,7 +89,7 @@ export default function DocsReader({ tool, sections, lang }: { tool: string; sec
         {/* content */}
         <main className="docs-main">
           <div className={`lv-banner ${cur.meta.level}`}>
-            <img src={`${M}/${lv.mascot}.png`} alt="Riri" width={92} height={92} />
+            <Image src={`${M}/${lv.mascot}.png`} alt="Riri" width={92} height={92} />
             <div>
               <span className="lv-pill"><span className="lv-dot" style={{ background: "rgba(255,255,255,.5)", width: 8, height: 8, borderRadius: 999, display: "inline-block" }} /> {t(lv.en)}</span>
               <h2 className="display">{cur.meta.title}</h2>
@@ -100,7 +101,7 @@ export default function DocsReader({ tool, sections, lang }: { tool: string; sec
 
           {cur.meta.locked ? (
             <div className="glass" style={{ padding: 36, textAlign: "center", background: "linear-gradient(150deg,#FFF3CE,#F1E7FF)" }}>
-              <img src={`${M}/mascot-sad.png`} alt="Riri" width={110} height={110} style={{ margin: "0 auto 12px" }} />
+              <Image src={`${M}/mascot-sad.png`} alt="Riri" width={110} height={110} style={{ margin: "0 auto 12px" }} />
               <h3 className="display" style={{ fontSize: 21, marginBottom: 8 }}><Crown size={19} className="text-amber-500" style={{ verticalAlign: "-3px" }} /> {t("This content is for Pro members")}</h3>
               <p style={{ color: "var(--text-muted)", marginBottom: 20 }}>{t("Upgrade to read the full content and all advanced docs.")}</p>
               <Link className="btn btn--violet lg" href="/upgrade"><Crown size={18} /> {t("Upgrade to Pro")}</Link>

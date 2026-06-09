@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import "../home.css"
 import "./about.css"
 import LangToggle from "@/components/lang-toggle"
@@ -27,7 +28,7 @@ export default async function AboutPage() {
       <header className="nav">
         <div className="wrap nav-in">
           <Link className="brand" href="/">
-            <span className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></span>
+            <span className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></span>
             <div><div className="brand-name">Daily AI Lab</div><div className="brand-sub">{t("AI, every day")}</div></div>
           </Link>
           <nav className="nav-links">
@@ -56,7 +57,7 @@ export default async function AboutPage() {
         </div>
         <div className="stage">
           <div className="spot" />
-          <img className="mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={320} height={320} />
+          <Image className="mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri" width={320} height={320} />
         </div>
       </section>
 
@@ -94,7 +95,7 @@ export default async function AboutPage() {
 
       <section className="block">
         <div className="wrap meet">
-          <img className="mascot" src={`${M}/mascot-thumbsup.png`} alt="Riri" width={280} height={280} />
+          <Image className="mascot" src={`${M}/mascot-thumbsup.png`} alt="Riri" width={280} height={280} />
           <div>
             <span className="eyebrow">{t("Meet our mascot")}</span>
             <h2 className="display" style={{ margin: "12px 0 14px" }}>{t("Say hi to \"Riri\"")}</h2>

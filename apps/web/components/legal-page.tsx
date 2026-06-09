@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import LangToggle from "@/components/lang-toggle"
 import { makeT, type Lang } from "@/lib/i18n"
 import { FileText, Shield } from "lucide-react"
@@ -93,7 +94,7 @@ export default function LegalPage({ kind, lang }: { kind: "terms" | "privacy"; l
       <header className="nav">
         <div className="wrap nav-in">
           <Link className="brand" href="/">
-            <span className="brand-badge"><img src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></span>
+            <span className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></span>
             <div><div className="brand-name">Daily AI Lab</div><div className="brand-sub">{t("AI, every day")}</div></div>
           </Link>
           <nav className="nav-links">

@@ -16,7 +16,8 @@
 
 /* KPI cards */
 .dlab-app .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 22px; }
-.dlab-app .kpi { padding: 20px; position: relative; }
+.dlab-app .kpi { padding: 20px; position: relative; transition: transform .16s var(--ease-out), box-shadow .16s var(--ease-out); }
+.dlab-app .kpi:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 18px 34px -18px rgba(72,31,184,.34); }
 .dlab-app .kpi .k-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .dlab-app .kpi .k-ic { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
   box-shadow: inset 0 -3px 6px rgba(0,0,0,.07), inset 0 2px 3px rgba(255,255,255,.6); }
@@ -35,7 +36,8 @@
 .dlab-app .chart-bars { display: flex; align-items: flex-end; gap: 12px; height: 180px; padding-top: 8px; }
 .dlab-app .cbar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: flex-end; }
 .dlab-app .cbar { width: 100%; max-width: 38px; border-radius: 8px 8px 4px 4px; background: linear-gradient(180deg, var(--hero-300), var(--hero-500));
-  box-shadow: inset 0 2px 3px rgba(255,255,255,.3); position: relative; }
+  box-shadow: inset 0 2px 3px rgba(255,255,255,.3); position: relative; transition: filter .16s var(--ease-out), transform .16s var(--ease-out); }
+.dlab-app .cbar:hover { filter: brightness(1.06); transform: translateY(-2px); }
 .dlab-app .cbar.peak { background: linear-gradient(180deg, var(--sun-300, #FFE066), var(--sun-500, #F4A100)); }
 .dlab-app .cbar-wrap small { font-size: 11.5px; font-weight: 800; color: var(--text-muted); }
 .dlab-app .cbar .cv { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: var(--font-display); font-weight: 800; font-size: 11px; color: var(--text-body); white-space: nowrap; }
@@ -90,7 +92,7 @@
 .dlab-app .dtable td { padding: 12px 12px; border-bottom: 1px solid var(--border-subtle); font-size: 14px; color: var(--text-body); vertical-align: middle; }
 .dlab-app .dtable tr:last-child td { border-bottom: 0; }
 .dlab-app .dtable tbody tr { transition: background .12s; }
-.dlab-app .dtable tbody tr:hover { background: var(--cloud-50); }
+.dlab-app .dtable tbody tr:hover { background: linear-gradient(90deg, var(--hero-50), var(--cloud-50) 34%, var(--cloud-50)); }
 .dlab-app .dtable .num { font-family: var(--font-display); font-weight: 800; color: var(--text-strong); }
 
 /* modal */
@@ -192,4 +194,7 @@
 }
 @media (max-width: 560px) {
   .dlab-app .kpis { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dlab-app .kpi, .dlab-app .cbar, .dlab-app .dtable tbody tr { transition: none; }
 }

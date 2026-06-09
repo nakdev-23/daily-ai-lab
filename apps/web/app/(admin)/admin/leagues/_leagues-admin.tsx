@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useActionState } from "react"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { Pencil, Medal, Gem, Trophy, Award, X, Trash2 } from "lucide-react"
 import type { League, Badge } from "@/lib/leagues"
@@ -47,7 +48,7 @@ export default function LeaguesAdmin({ leagues, badges }: { leagues: League[]; b
       <div className="adm-badges">
         {badges.map((b) => (
           <div key={b.id} className="adm-badge glass">
-            <img src={`${B}/badge-${b.img}.png`} alt={b.name} width={64} height={64} />
+            <Image src={`${B}/badge-${b.img}.png`} alt={b.name} width={64} height={64} />
             <b>{b.name}</b><span>{b.condition}</span>
             <div style={{ marginTop: 12 }}><button className="iconbtn" style={{ margin: "0 auto" }} title="แก้ไข" onClick={() => setBadge(b)}><Pencil size={14} /></button></div>
           </div>
@@ -126,7 +127,7 @@ function BadgeModal({ badge, onClose }: { badge: Badge | null; onClose: () => vo
             <div className="icon-picker">
               {BADGE_IMAGES.map((k) => (
                 <button key={k} type="button" className={`ic-opt${img === k ? " sel" : ""}`} onClick={() => setImg(k)} title={k}>
-                  <img src={`${B}/badge-${k}.png`} alt={k} width={28} height={28} />
+                  <Image src={`${B}/badge-${k}.png`} alt={k} width={28} height={28} />
                 </button>
               ))}
             </div>

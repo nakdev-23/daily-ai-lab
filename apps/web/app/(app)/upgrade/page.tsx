@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 import { Check, X, Crown, CreditCard, RefreshCw, BookOpen, GraduationCap, Wallet, Sparkles } from "lucide-react"
 
@@ -49,7 +50,7 @@ export default function UpgradePage() {
   return (
     <>
       <div className="up-hero">
-        <img className="up-mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri Pro" width={120} height={120} />
+        <Image className="up-mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri Pro" width={120} height={120} />
         <h1>ปลดล็อกศักยภาพเต็มที่ด้วย <span className="grad-text">Pro</span></h1>
         <p>เรียนได้ไม่จำกัด ทุกเส้นทางอาชีพ หัวใจไม่จำกัด และฟีเจอร์พิเศษอีกเพียบ</p>
         <div className="bill-toggle">

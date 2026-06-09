@@ -27,9 +27,9 @@ export default function HomeFx() {
       if (el.classList.contains("in")) return
       const sibs = Array.from(el.parentElement?.querySelectorAll<HTMLElement>(":scope > .reveal") ?? [])
       const idx = Math.max(0, sibs.indexOf(el))
-      el.style.animationDelay = (idx % 6) * 70 + "ms"
+      el.style.animationDelay = (idx % 6) * 48 + "ms"
       el.classList.add("in")
-      setTimeout(() => el.classList.add("shown"), 780 + (idx % 6) * 70)
+      setTimeout(() => el.classList.add("shown"), 560 + (idx % 6) * 48)
     }
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver((es) => {
@@ -167,12 +167,10 @@ export default function HomeFx() {
         mascot.animate(
           [
             { transform: "scale(1) rotate(0deg)" },
-            { transform: "scale(1.1) rotate(-5deg)" },
-            { transform: "scale(0.95) rotate(4deg)" },
-            { transform: "scale(1.03) rotate(-2deg)" },
+            { transform: "scale(1.06) rotate(-4deg)" },
             { transform: "scale(1) rotate(0deg)" },
           ],
-          { duration: 620, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+          { duration: 360, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
         )
       }
       mascot.addEventListener("click", onPop)

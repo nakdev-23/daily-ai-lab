@@ -1,26 +1,40 @@
-import { Flame, Crown, Gem, Trophy, ArrowUp, Medal } from "lucide-react"
+import { createClient } from "@/lib/supabase/server"
+import { isDevMock, MOCK_PROFILE } from "@/lib/mock-user"
 import { getLang, makeT } from "@/lib/i18n"
+import { Flame, Crown, Gem, Trophy, ArrowUp, Medal } from "lucide-react"
 
 type T = (en: string, vars?: Record<string, string | number>) => string
 
-const PODIUM = [
-  { cls: "silver", bg: "linear-gradient(160deg,#7E8BFF,#4731D8)", a: "ก", name: "กานต์", xp: "3,120 แต้ม", rk: 2 },
-  { cls: "gold", bg: "linear-gradient(160deg,#FFD45A,#E0A000)", a: "พ", name: "พิมพ์", xp: "4,860 แต้ม", rk: 1, crown: true },
-  { cls: "bronze", bg: "linear-gradient(160deg,#FF93BE,#F45C97)", a: "J", name: "Jenny", xp: "2,940 แต้ม", rk: 3 },
-]
+type LeaderRow = {
+  user_id: string
+  display_name: string | null
+  avatar_url: string | null
+  xp: number
+  level: number
+  streak_current: number
+  rank: number
+}
 
-const ROWS = [
-  { rk: 4, up: true, bg: "#14A871", a: "M", name: "Mike", streak: 22, xp: "2,610 แต้ม" },
-  { rk: 5, up: true, bg: "#FD7302", a: "อ", name: "อรุณ", streak: 15, xp: "2,540 แต้ม" },
-  { rk: 6, me: true, bg: "var(--hero-500)", a: "N", name: "Nin", streak: 12, xp: "2,480 แต้ม" },
-  { rk: 7, bg: "#2A8CF0", a: "S", name: "Somchai", streak: 9, xp: "2,310 แต้ม" },
-  { rk: 8, bg: "#B06CFF", a: "ม", name: "มาลี", streak: 7, xp: "2,180 แต้ม" },
-  { rk: 9, bg: "#14A871", a: "T", name: "Tom", streak: 5, xp: "2,050 แต้ม" },
-  { rk: 10, bg: "#FD7302", a: "ป", name: "ปกรณ์", streak: 4, xp: "1,990 แต้ม" },
-]
-const BELOW = [
-  { rk: 11, bg: "#F45C97", a: "B", name: "Bee", streak: 3, xp: "1,840 แต้ม" },
-  { rk: 12, bg: "#2A8CF0", a: "ว", name: "วิชัย", streak: 2, xp: "1,720 แต้ม" },
+const BG_POOL = ["#6C3CF5", "#14A871", "#F45C97", "#2A8CF0", "#FD7302", "#B06CFF", "#E2611C", "#0EA5E9", "#23D08A", "#BC83FF"]
+function bgFor(name: string | null, idx: number) {
+  if (!name) return BG_POOL[idx % BG_POOL.length]
+  const sum = [...name].reduce((s, c) => s + c.charCodeAt(0), 0)
+  return BG_POOL[sum % BG_POOL.length]
+}
+
+const MOCK_BOARD: LeaderRow[] = [
+  { user_id: "u1", display_name: "พิมพ์", avatar_url: null, xp: 4860, level: 8, streak_current: 28, rank: 1 },
+  { user_id: "u2", display_name: "กานต์", avatar_url: null, xp: 3120, level: 6, streak_current: 20, rank: 2 },
+  { user_id: "u3", display_name: "Jenny", avatar_url: null, xp: 2940, level: 5, streak_current: 18, rank: 3 },
+  { user_id: "u4", display_name: "Mike", avatar_url: null, xp: 2610, level: 4, streak_current: 22, rank: 4 },
+  { user_id: "u5", display_name: "อรุณ", avatar_url: null, xp: 2540, level: 4, streak_current: 15, rank: 5 },
+  { user_id: "mock-user-id", display_name: "Nin", avatar_url: null, xp: 2480, level: 4, streak_current: 12, rank: 6 },
+  { user_id: "u6", display_name: "Somchai", avatar_url: null, xp: 2310, level: 3, streak_current: 9, rank: 7 },
+  { user_id: "u7", display_name: "มาลี", avatar_url: null, xp: 2180, level: 3, streak_current: 7, rank: 8 },
+  { user_id: "u8", display_name: "Tom", avatar_url: null, xp: 2050, level: 3, streak_current: 5, rank: 9 },
+  { user_id: "u9", display_name: "ปกรณ์", avatar_url: null, xp: 1990, level: 3, streak_current: 4, rank: 10 },
+  { user_id: "u10", display_name: "Bee", avatar_url: null, xp: 1840, level: 2, streak_current: 3, rank: 11 },
+  { user_id: "u11", display_name: "วิชัย", avatar_url: null, xp: 1720, level: 2, streak_current: 2, rank: 12 },
 ]
 
 const PIPS = [
@@ -32,20 +46,47 @@ const PIPS = [
   { icon: Gem, color: "text-violet-600", cur: true },
 ]
 
-function Row({ r, t }: { r: typeof ROWS[number]; t: T }) {
+function Row({ r, me, t, idx }: { r: LeaderRow; me: boolean; t: T; idx: number }) {
   return (
-    <div className={`lbx-row${r.up ? " up" : ""}${r.me ? " me" : ""}`}>
-      {r.me && <span className="youtag">{t("you")}</span>}
-      <span className="rk">{r.rk}</span>
-      <span className="av" style={{ background: r.bg }}>{r.a}</span>
-      <span className="nm"><b>{r.name}</b><small><Flame size={12} className="text-orange-500" /> {t("{n}-day streak", { n: r.streak })}</small></span>
-      <span className="xp">{r.xp}</span>
+    <div className={`lbx-row${me ? " me" : ""}`}>
+      {me && <span className="youtag">{t("you")}</span>}
+      <span className="rk">{r.rank}</span>
+      <span className="av" style={{ background: bgFor(r.display_name, idx) }}>
+        {(r.display_name ?? "?").charAt(0)}
+      </span>
+      <span className="nm">
+        <b>{r.display_name ?? "—"}</b>
+        <small><Flame size={12} className="text-orange-500" /> {t("{n}-day streak", { n: r.streak_current })}</small>
+      </span>
+      <span className="xp">{r.xp.toLocaleString()} XP</span>
     </div>
   )
 }
 
 export default async function LeaderboardPage() {
   const t = makeT(await getLang())
+  let rows: LeaderRow[] = []
+  let currentUserId: string | null = null
+
+  if (isDevMock()) {
+    rows = MOCK_BOARD
+    currentUserId = MOCK_PROFILE.id
+  } else {
+    const supabase = await createClient()
+    const [{ data: { user } }, { data: lb }] = await Promise.all([
+      supabase.auth.getUser(),
+      supabase.rpc("get_leaderboard"),
+    ])
+    currentUserId = user?.id ?? null
+    rows = ((lb as LeaderRow[]) ?? []).sort((a, b) => a.rank - b.rank)
+  }
+
+  // Podium: display order is silver (2nd), gold (1st), bronze (3rd)
+  const top3 = rows.slice(0, 3)
+  const podiumDisplay = [top3[1], top3[0], top3[2]].filter(Boolean) as LeaderRow[]
+  const podiumClasses: Record<number, string> = { 0: "silver", 1: "gold", 2: "bronze" }
+  const listRows = rows.slice(3)
+
   return (
     <>
       <div className="lbx-hero">
@@ -53,7 +94,7 @@ export default async function LeaderboardPage() {
         <div className="lbx-mid">
           <span className="eyebrow"><Trophy size={15} /> {t("Season 7 · live")}</span>
           <h2 className="display">{t("Diamond Division")}</h2>
-          <p>{t("Reach the Top 10 in XP to rank up · 30 players")}</p>
+          <p>{t("Reach the Top 10 in XP to rank up · {n} players", { n: rows.length || 30 })}</p>
           <div className="lbx-leagues">
             {PIPS.map((p, i) => (
               <span key={i} className={`lbx-pip ${p.cur ? "cur" : "done"}`}><p.icon size={15} className={p.color} /></span>
@@ -65,20 +106,31 @@ export default async function LeaderboardPage() {
 
       <div className="lbx">
         <div className="lbx-podium">
-          {PODIUM.map((p) => (
-            <div key={p.name} className={`lbx-pod ${p.cls}`}>
-              {p.crown && <span className="crown"><Crown size={26} /></span>}
-              <span className="pav" style={{ background: p.bg }}>{p.a}</span>
-              <div className="pnm">{p.name}</div><div className="pxp">{p.xp}</div>
-              <div className="lbx-base"><span className="rkn">{p.rk}</span></div>
+          {podiumDisplay.map((p, di) => (
+            <div key={p.user_id} className={`lbx-pod ${podiumClasses[di]}`}>
+              {di === 1 && <span className="crown"><Crown size={26} /></span>}
+              <span className="pav" style={{ background: bgFor(p.display_name, p.rank - 1) }}>
+                {(p.display_name ?? "?").charAt(0)}
+              </span>
+              <div className="pnm">{p.display_name ?? "—"}</div>
+              <div className="pxp">{p.xp.toLocaleString()} XP</div>
+              <div className="lbx-base"><span className="rkn">{p.rank}</span></div>
             </div>
           ))}
         </div>
 
         <div className="lbx-list glass">
-          {ROWS.map((r) => <Row key={r.rk} r={r} t={t} />)}
-          <div className="lbx-zone up"><ArrowUp size={13} /> {t("Promotion zone")}</div>
-          {BELOW.map((r) => <Row key={r.rk} r={r} t={t} />)}
+          {listRows.map((r, i) => (
+            <Row key={r.user_id} r={r} me={r.user_id === currentUserId} t={t} idx={i + 3} />
+          ))}
+          {listRows.length > 0 && (
+            <div className="lbx-zone up"><ArrowUp size={13} /> {t("Promotion zone")}</div>
+          )}
+          {rows.length === 0 && (
+            <p style={{ textAlign: "center", color: "var(--text-muted)", padding: "40px 0", margin: 0 }}>
+              {t("No players yet. Be the first!")}
+            </p>
+          )}
         </div>
       </div>
     </>

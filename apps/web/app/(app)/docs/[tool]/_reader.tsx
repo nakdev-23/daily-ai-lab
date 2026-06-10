@@ -6,6 +6,8 @@ import Link from "next/link"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import type { DocLevel, DocMeta } from "@/lib/docs"
 import { ArrowLeft, Clock, ChevronLeft, ChevronRight, ChevronDown, Crown, List } from "lucide-react"
+import ToolLogo from "@/components/tool-logo"
+import { getToolColors } from "@/lib/tool-colors"
 
 type Section = { meta: DocMeta; html: string }
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -19,6 +21,7 @@ const ORDER: DocLevel[] = ["beginner", "intermediate", "pro"]
 
 export default function DocsReader({ tool, sections, lang }: { tool: string; sections: Section[]; lang: Lang }) {
   const t = makeT(lang)
+  const colors = getToolColors(tool)
   const [active, setActive] = useState(0)
   const [openGroups, setOpenGroups] = useState<DocLevel[]>(["beginner", "intermediate", "pro"])
   const [tocOpen, setTocOpen] = useState(false)
@@ -88,6 +91,18 @@ export default function DocsReader({ tool, sections, lang }: { tool: string; sec
 
         {/* content */}
         <main className="docs-main">
+          {/* Tool header — stays fixed as user navigates topics */}
+          <div className="docs-tool-head">
+            <div className="dth-tile" style={{ background: colors.bg }}>
+              <ToolLogo name={tool} fallback={colors.fallback} size={28} />
+            </div>
+            <div className="dth-info">
+              <h1 className="dth-name">{tool}</h1>
+              <span className="dth-sub">{t("Official guide")}</span>
+            </div>
+            <span className="dth-count">{sections.length} {t("docs")}</span>
+          </div>
+
           <div className={`lv-banner ${cur.meta.level}`}>
             <Image src={`${M}/${lv.mascot}.png`} alt="Riri" width={92} height={92} />
             <div>

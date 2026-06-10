@@ -12,7 +12,7 @@
 .dlab-app .bill-toggle button.on { background: var(--cloud-0, #fff); color: var(--hero-600); box-shadow: var(--shadow-sm); }
 .dlab-app .bill-toggle .save-tag { font-family: var(--font-sans); font-size: 10.5px; font-weight: 800; color: var(--mint-600); background: var(--mint-100); padding: 2px 7px; border-radius: 999px; margin-left: 6px; }
 
-.dlab-app .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 840px; margin: 30px auto 0; align-items: stretch; }
+.dlab-app .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 920px; margin: 30px auto 0; align-items: stretch; }
 .dlab-app .plan2 { position: relative; border-radius: 26px; padding: 30px; display: flex; flex-direction: column; transition: transform .2s var(--ease-out), box-shadow .2s; }
 .dlab-app .plan2.free { background: var(--cloud-0, #fff); border: 1px solid var(--border-subtle); box-shadow: 0 14px 30px -18px rgba(39,16,96,.3); }
 .dlab-app .plan2.free:hover { transform: translateY(-4px); box-shadow: 0 26px 46px -20px rgba(39,16,96,.34); }
@@ -42,7 +42,7 @@
 .dlab-app .plan2.free .pp-list li.off { color: var(--text-muted); }
 .dlab-app .plan2.pro .ck.yes { background: rgba(255,255,255,.2); color: var(--sun-300); }
 
-.dlab-app .cmp-wrap { max-width: 840px; margin: 40px auto 0; }
+.dlab-app .cmp-wrap { width: 100%; margin: 40px 0 0; }
 .dlab-app .cmp-title { text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--text-strong); margin: 0 0 20px; }
 .dlab-app .cmp { width: 100%; border-collapse: collapse; background: var(--cloud-0, #fff); border-radius: 20px; overflow: hidden; box-shadow: 0 14px 32px -18px rgba(39,16,96,.3); }
 .dlab-app .cmp th, .dlab-app .cmp td { padding: 15px 18px; text-align: left; border-bottom: 1px solid var(--border-subtle); }
@@ -57,7 +57,7 @@
 .dlab-app .cmp tbody tr:hover { background: var(--cloud-50); }
 .dlab-app .cmp .grp td { background: var(--hero-50); font-family: var(--font-display); font-weight: 800; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--hero-600); padding: 9px 18px; }
 
-.dlab-app .faq-wrap { max-width: 720px; margin: 44px auto 0; }
+.dlab-app .faq-wrap { width: 100%; margin: 44px 0 0; }
 .dlab-app .faq-q { border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); background: var(--cloud-0, #fff); margin-bottom: 12px; overflow: hidden; transition: box-shadow .2s, border-color .2s; }
 .dlab-app .faq-q[open] { border-color: var(--hero-200); box-shadow: 0 14px 30px -18px rgba(72,31,184,.4); }
 .dlab-app .faq-q summary { list-style: none; cursor: pointer; padding: 18px 20px; display: flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 800; font-size: 15.5px; color: var(--text-strong); }
@@ -67,7 +67,7 @@
 .dlab-app .faq-q .faq-a { padding: 0 20px 20px 56px; font-size: 14.5px; line-height: 1.65; color: var(--text-body); }
 .dlab-app .faq-q summary .qic { width: 28px; height: 28px; border-radius: 9px; background: var(--hero-100); color: var(--hero-600); display: grid; place-items: center; flex: none; }
 
-.dlab-app .up-cta { max-width: 720px; margin: 40px auto 10px; text-align: center; position: relative; overflow: hidden; border-radius: 26px; padding: 38px 30px;
+.dlab-app .up-cta { width: 100%; margin: 40px 0 10px; text-align: center; position: relative; overflow: hidden; border-radius: 26px; padding: 38px 30px;
   background: linear-gradient(150deg, #FFF4CE 0%, #EFE4FF 55%, #FCE0EE 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 22px 44px -22px rgba(72,31,184,.4); }
 .dlab-app .up-cta h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; color: var(--text-strong); margin: 0 0 8px; }
 .dlab-app .up-cta p { font-size: 15px; color: var(--text-body); margin: 0 0 20px; }

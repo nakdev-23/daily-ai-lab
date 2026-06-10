@@ -26,5 +26,20 @@
 .dlab-app .lvl-pill.lvl-beginner { background: var(--mint-100); color: var(--mint-600); }
 .dlab-app .lvl-pill.lvl-intermediate { background: var(--amber-100); color: #9A6B00; }
 .dlab-app .lvl-pill.lvl-pro { background: var(--hero-50); color: var(--hero-600); }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes toolBigIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes toolGleam { 0%,45%{transform:translateX(-120%) skewX(-16deg)} 82%,100%{transform:translateX(240%) skewX(-16deg)} }
+  .dlab-app .tool-big { animation: toolBigIn .4s var(--ease-out) both; }
+  .dlab-app .tool-big:nth-child(2) { animation-delay: .05s; }
+  .dlab-app .tool-big:nth-child(3) { animation-delay: .10s; }
+  .dlab-app .tool-big:nth-child(4) { animation-delay: .14s; }
+  .dlab-app .tool-big:nth-child(5) { animation-delay: .18s; }
+  .dlab-app .tool-big:nth-child(6) { animation-delay: .21s; }
+  .dlab-app .tool-big:nth-child(7) { animation-delay: .24s; }
+  .dlab-app .tool-big:nth-child(8) { animation-delay: .27s; }
+  .dlab-app .tool-big .pbar > i::after { animation: toolGleam 2.8s var(--ease-out) infinite; }
+}
 .dlab-app .tool-big .pbar { height: 8px; border-radius: 999px; background: var(--cloud-200); overflow: hidden; }
-.dlab-app .tool-big .pbar > i { display: block; height: 100%; border-radius: 999px; background: var(--g-violet); }
+.dlab-app .tool-big .pbar > i { position: relative; display: block; height: 100%; border-radius: 999px; overflow: hidden; background: var(--g-violet); }
+.dlab-app .tool-big .pbar > i::after { content: ""; position: absolute; inset: 0; width: 44%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent); transform: translateX(-120%) skewX(-16deg); }

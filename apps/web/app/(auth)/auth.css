@@ -31,7 +31,7 @@
 .dlab-auth .btn--violet:active { transform: translateY(3px); box-shadow: 0 2px 0 #481FB8, 0 6px 12px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35); }
 .dlab-auth .btn:disabled { opacity: .6; cursor: default; }
 
-.auth-lang { position: fixed; top: max(16px, env(safe-area-inset-top)); left: 50%; z-index: 50; transform: translateX(-50%); }
+.auth-lang { position: fixed; top: max(16px, env(safe-area-inset-top)); right: 24px; z-index: 50; }
 .dlab-auth .auth { min-height: 100dvh; display: grid; grid-template-columns: 1.05fr 1fr; overflow: hidden; }
 .dlab-auth .auth-brand { position: relative; overflow: hidden; padding: 40px 48px; display: flex; flex-direction: column; align-items: center; background: var(--g-violet); color: #fff; text-align: center; }
 .dlab-auth .auth-brand::before { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 360px at 20% 0%, rgba(255,255,255,.18), transparent 60%), radial-gradient(520px 320px at 100% 100%, rgba(255,212,58,.26), transparent 60%); }

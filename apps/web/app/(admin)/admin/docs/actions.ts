@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache"
 import { requireAdmin } from "@/lib/auth"
 import { recordAudit } from "@/lib/audit"
-import { saveDoc, deleteDoc, slugify, type DocLevel } from "@/lib/docs"
+import { saveDoc, deleteDoc, slugify, getToolConfig, saveToolConfig, type DocLevel } from "@/lib/docs"
 
 const LEVELS: DocLevel[] = ["beginner", "intermediate", "pro"]
 
@@ -35,6 +35,16 @@ export async function saveDocAction(_prev: ActionResult | null, formData: FormDa
   revalidatePath("/admin")
   revalidatePath("/admin/docs")
   return { ok: true, message: `บันทึก "${title}" แล้ว`, slug }
+}
+
+export async function setToolVisibilityAction(tool: string, visible: boolean): Promise<void> {
+  await requireAdmin()
+  const config = await getToolConfig()
+  config[tool] = visible
+  await saveToolConfig(config)
+  await recordAudit("tool.visibility", { tool, visible })
+  revalidatePath("/docs")
+  revalidatePath("/admin/docs")
 }
 
 export async function deleteDocAction(_prev: ActionResult | null, formData: FormData): Promise<ActionResult> {

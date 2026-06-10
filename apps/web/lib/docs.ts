@@ -2,6 +2,7 @@ import fs from "fs/promises"
 import path from "path"
 import matter from "gray-matter"
 import { marked } from "marked"
+import { unstable_cache } from "next/cache"
 
 marked.setOptions({ gfm: true, breaks: true })
 
@@ -55,16 +56,32 @@ async function readDoc(file: string) {
   return { meta, content }
 }
 
-export async function getAllDocs(): Promise<DocMeta[]> {
-  let files: string[] = []
-  try {
-    files = (await fs.readdir(DOCS_DIR)).filter((f) => f.endsWith(".md"))
-  } catch {
-    return []
+async function collectMdFiles(base = ""): Promise<string[]> {
+  let result: string[] = []
+  const dir = base ? path.join(DOCS_DIR, base) : DOCS_DIR
+  let entries: string[] = []
+  try { entries = await fs.readdir(dir) } catch { return result }
+  for (const entry of entries) {
+    const rel = base ? `${base}/${entry}` : entry
+    const full = path.join(DOCS_DIR, rel)
+    const stat = await fs.stat(full).catch(() => null)
+    if (!stat) continue
+    if (stat.isDirectory()) result = result.concat(await collectMdFiles(rel))
+    else if (entry.endsWith(".md")) result.push(rel)
   }
+  return result
+}
+
+const ttl = process.env.NODE_ENV === "production" ? 3600 : 30
+
+async function _getAllDocs(): Promise<DocMeta[]> {
+  let files: string[] = []
+  try { files = await collectMdFiles() } catch { return [] }
   const docs = await Promise.all(files.map(async (f) => (await readDoc(f)).meta))
   return docs.sort((a, b) => a.order - b.order)
 }
+
+export const getAllDocs = unstable_cache(_getAllDocs, ["dlab-docs-all"], { revalidate: ttl })
 
 export async function getDocsByLevel(): Promise<Record<DocLevel, DocMeta[]>> {
   const all = await getAllDocs()
@@ -84,11 +101,27 @@ export type ToolGroup = {
 
 const LEVEL_ORDER: Record<DocLevel, number> = { beginner: 0, intermediate: 1, pro: 2 }
 
+const TOOLS_CONFIG = path.join(process.cwd(), "content", "docs", "_tools.json")
+
+export async function getToolConfig(): Promise<Record<string, boolean>> {
+  try {
+    const raw = await fs.readFile(TOOLS_CONFIG, "utf8")
+    return JSON.parse(raw) as Record<string, boolean>
+  } catch {
+    return {}
+  }
+}
+
+export async function saveToolConfig(config: Record<string, boolean>): Promise<void> {
+  await fs.writeFile(TOOLS_CONFIG, JSON.stringify(config, null, 2), "utf8")
+}
+
 /** One entry per tool, aggregated from all docs — powers the /docs tool grid. */
 export async function getToolGroups(): Promise<ToolGroup[]> {
-  const all = await getAllDocs()
+  const [all, config] = await Promise.all([getAllDocs(), getToolConfig()])
   const map = new Map<string, ToolGroup>()
   for (const d of all) {
+    if (config[d.tool] === false) continue
     const g = map.get(d.toolSlug)
     if (g) {
       g.count++
@@ -107,7 +140,7 @@ export async function getToolGroups(): Promise<ToolGroup[]> {
 }
 
 /** All docs for one tool (by toolSlug), each with rendered html, grouped-ready (sorted by level then order). */
-export async function getDocsForTool(toolSlug: string): Promise<{ tool: string; sections: { meta: DocMeta; html: string }[] }> {
+async function _getDocsForTool(toolSlug: string): Promise<{ tool: string; sections: { meta: DocMeta; html: string }[] }> {
   const all = await getAllDocs()
   const matching = all.filter((d) => d.toolSlug === toolSlug)
     .sort((a, b) => (LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]) || (a.order - b.order))
@@ -117,6 +150,8 @@ export async function getDocsForTool(toolSlug: string): Promise<{ tool: string; 
   }))
   return { tool: matching[0]?.tool ?? toolSlug, sections }
 }
+
+export const getDocsForTool = unstable_cache(_getDocsForTool, ["dlab-docs-tool"], { revalidate: ttl })
 
 export async function getDoc(slug: string): Promise<{ meta: DocMeta; html: string } | null> {
   try {

@@ -1,5 +1,5 @@
 /* Daily AI Lab — page-hero + career paths (scoped .dlab-app) */
-.dlab-app .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+.dlab-app .wrap { width: 100%; margin: 0 auto; }
 .dlab-app .block { padding: 40px 0; position: relative; }
 .dlab-app .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-weight: 800; font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--hero-600); }
 .dlab-app .grad-text { background: var(--g-violet); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -8,7 +8,7 @@
 .dlab-app .page-hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.55; }
 .dlab-app .btn.md { height: 50px; padding: 0 24px; font-size: 16px; }
 
-.dlab-app .paths-big { display: flex; flex-direction: column; gap: 24px; max-width: 920px; margin: 0 auto; }
+.dlab-app .paths-big { display: flex; flex-direction: column; gap: 24px; width: 100%; }
 .dlab-app .path-big { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 30px; align-items: center; }
 .dlab-app .path-big .pleft { text-align: center; }
 .dlab-app .path-big .pic { width: 80px; height: 80px; border-radius: 24px; display: grid; place-items: center; margin: 0 auto 14px; color: var(--hero-700); box-shadow: inset 0 -4px 8px rgba(0,0,0,.08), inset 0 2px 3px rgba(255,255,255,.6); transform: rotate(-5deg); }
@@ -26,4 +26,12 @@
   .dlab-app .path-big { grid-template-columns: 1fr; text-align: center; }
   .dlab-app .path-tools, .dlab-app .path-foot { justify-content: center; }
   .dlab-app .path-foot .btn { margin-left: 0 !important; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes pathBigIn { from { opacity: 0; transform: translateX(-22px); } to { opacity: 1; transform: none; } }
+  .dlab-app .path-big { animation: pathBigIn .46s var(--ease-out) both; }
+  .dlab-app .path-big:nth-child(2) { animation-delay: .08s; }
+  .dlab-app .path-big:nth-child(3) { animation-delay: .16s; }
+  .dlab-app .path-big:nth-child(4) { animation-delay: .22s; }
 }

@@ -26,7 +26,8 @@
 .dlab-app .lrn-card .lc-time { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; color: var(--hero-600); background: rgba(255,255,255,.7); padding: 5px 11px; border-radius: 999px; box-shadow: var(--shadow-xs); }
 .dlab-app .lrn-card .lc-prog { font-family: var(--font-display); font-weight: 800; font-size: 12.5px; color: var(--text-muted); }
 .dlab-app .lrn-card .lrn-bar { position: relative; height: 9px; border-radius: 999px; background: rgba(39,16,96,.1); overflow: hidden; }
-.dlab-app .lrn-card .lrn-bar > i { display: block; height: 100%; border-radius: 999px; background: var(--c-bar, var(--g-violet)); }
+.dlab-app .lrn-card .lrn-bar > i { position: relative; display: block; height: 100%; border-radius: 999px; overflow: hidden; background: var(--c-bar, var(--g-violet)); }
+.dlab-app .lrn-card .lrn-bar > i::after { content: ""; position: absolute; inset: 0; width: 44%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent); transform: translateX(-120%) skewX(-16deg); }
 .dlab-app .lrn-card .go-arrow { position: absolute; right: 18px; top: 18px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.66); color: var(--c-bar2, var(--hero-500)); font-weight: 800; opacity: 0; transform: translateX(-4px); transition: opacity .2s, transform .2s; }
 .dlab-app .lrn-card:hover .go-arrow { opacity: 1; transform: none; }
 
@@ -34,3 +35,15 @@
 
 @media (max-width: 960px) { .dlab-app .lrn-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .dlab-app .lrn-grid { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes lrnCardIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes lrnGleam { 0%,45%{transform:translateX(-120%) skewX(-16deg)} 82%,100%{transform:translateX(240%) skewX(-16deg)} }
+  .dlab-app .lrn-card { animation: lrnCardIn .42s var(--ease-out) both; }
+  .dlab-app .lrn-card:nth-child(2) { animation-delay: .06s; }
+  .dlab-app .lrn-card:nth-child(3) { animation-delay: .12s; }
+  .dlab-app .lrn-card:nth-child(4) { animation-delay: .18s; }
+  .dlab-app .lrn-card:nth-child(5) { animation-delay: .22s; }
+  .dlab-app .lrn-card:nth-child(6) { animation-delay: .26s; }
+  .dlab-app .lrn-card .lrn-bar > i::after { animation: lrnGleam 2.8s var(--ease-out) infinite; }
+}

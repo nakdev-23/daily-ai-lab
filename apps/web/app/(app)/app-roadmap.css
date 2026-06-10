@@ -6,7 +6,7 @@
 .dlab-app .callout.note { background: var(--sky-100); border-color: #A9D5FB; color: #1E6FC0; }
 .dlab-app .callout.tip { background: var(--mint-100); border-color: #9FE6C6; color: var(--mint-600); }
 
-.dlab-app .course-head { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 28px 32px; margin: 4px auto 24px; max-width: 860px; }
+.dlab-app .course-head { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 28px 32px; margin: 4px 0 24px; }
 .dlab-app .course-head .ch-tile { width: 76px; height: 76px; border-radius: 22px; display: grid; place-items: center; flex: none; color: var(--hero-700); box-shadow: inset 0 -5px 10px rgba(0,0,0,.08), inset 0 3px 5px rgba(255,255,255,.6); transform: rotate(-5deg); }
 .dlab-app .course-head h1 { font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 8px; }
 .dlab-app .course-head .ch-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
@@ -17,7 +17,7 @@
 .dlab-app .course-head .ch-cta { text-align: center; }
 .dlab-app .course-head .ch-cta .xp { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--text-muted); font-weight: 800; margin-top: 8px; }
 
-.dlab-app .roadmap { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+.dlab-app .roadmap { width: 100%; display: flex; flex-direction: column; gap: 22px; }
 .dlab-app .module { padding: 0; overflow: hidden; }
 .dlab-app .module.locked { opacity: .82; }
 .dlab-app .mod-head { display: flex; align-items: center; gap: 15px; padding: 20px 24px; }
@@ -49,7 +49,7 @@
 .dlab-app .lrow:not(.lock) { cursor: pointer; }
 .dlab-app .lrow:not(.lock):hover .li b { color: var(--hero-600); }
 .dlab-app .lrow .lpill { font-size: 10.5px; font-weight: 800; padding: 3px 9px; border-radius: 999px; background: var(--hero-600); color: #fff; margin-left: 8px; }
-.dlab-app .cert-card { display: flex; align-items: center; gap: 20px; padding: 26px 30px; max-width: 800px; margin: 22px auto 0; background: linear-gradient(150deg,#FFF3CE,#F1E7FF); border-radius: var(--radius-xl); }
+.dlab-app .cert-card { display: flex; align-items: center; gap: 20px; padding: 26px 30px; margin: 22px 0 0; background: linear-gradient(150deg,#FFF3CE,#F1E7FF); border-radius: var(--radius-xl); }
 .dlab-app .cert-card img { width: 84px; flex: none; }
 .dlab-app .cert-card h3 { font-size: 20px; margin: 0 0 5px; }
 .dlab-app .cert-card p { margin: 0; font-size: 14.5px; color: var(--text-muted); }

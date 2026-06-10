@@ -463,7 +463,6 @@ export const th: Record<string, string> = {
   "Lesson complete!": "เรียนจบบทแล้ว!",
   "Great job — your streak is safe and Riri is proud of you.": "เก่งมาก วันนี้ยังเรียนต่อเนื่องอยู่ และ Riri ภูมิใจในตัวคุณสุด ๆ",
   "XP earned": "แต้มที่ได้",
-  "Streak": "เรียนต่อเนื่อง",
   "Accuracy": "ตอบถูก",
   "Back to dashboard": "กลับหน้าเรียน",
   "Correct! Nice work": "ถูกต้อง! ทำได้ดีมาก",

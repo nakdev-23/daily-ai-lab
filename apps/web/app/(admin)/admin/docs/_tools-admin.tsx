@@ -1,0 +1,94 @@
+"use client"
+
+import { useState, useTransition } from "react"
+import { Eye, EyeOff } from "lucide-react"
+import ToolLogo from "@/components/tool-logo"
+import { TOOLS, getTool } from "@/lib/tool-registry"
+import { setToolVisibilityAction } from "./actions"
+
+const DOCS_TOOLS = TOOLS.filter((t) => t.hasDocs)
+
+export default function ToolsAdmin({
+  visibility,
+  counts,
+}: {
+  visibility: Record<string, boolean>
+  counts: Record<string, number>
+}) {
+  const [state, setState] = useState<Record<string, boolean>>(() =>
+    Object.fromEntries(DOCS_TOOLS.map((t) => [t.name, visibility[t.name] !== false])),
+  )
+  const [pending, startTransition] = useTransition()
+
+  function toggle(name: string) {
+    const next = !state[name]
+    setState((prev) => ({ ...prev, [name]: next }))
+    startTransition(async () => {
+      await setToolVisibilityAction(name, next)
+    })
+  }
+
+  const visibleCount = DOCS_TOOLS.filter((t) => state[t.name]).length
+
+  return (
+    <div className="glass form-sec" style={{ marginBottom: 28 }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+        <h3 style={{ margin: 0 }}>การแสดงผลเครื่องมือ</h3>
+        <span className="spill ok" style={{ fontSize: 12 }}>
+          <Eye size={12} /> {visibleCount} / {DOCS_TOOLS.length} เครื่องมือ
+        </span>
+      </div>
+      <p className="sec-sub" style={{ marginBottom: 18 }}>เลือกเครื่องมือที่ต้องการแสดงในหน้า /docs</p>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        {DOCS_TOOLS.map((t) => {
+          const visible = state[t.name]
+          return (
+            <div
+              key={t.name}
+              className="srow"
+              style={{ opacity: pending ? 0.7 : 1, transition: "opacity .15s" }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div
+                  style={{
+                    width: 38, height: 38, borderRadius: 12, flexShrink: 0,
+                    background: visible ? t.bg : "var(--cloud-200)",
+                    display: "grid", placeItems: "center", color: "#fff",
+                    transition: "background .2s",
+                  }}
+                >
+                  <ToolLogo name={t.name} size={19} />
+                </div>
+                <div className="si-info">
+                  <b style={{ color: visible ? "var(--text-strong)" : "var(--text-muted)" }}>{t.name}</b>
+                  <span>{counts[t.name] ?? 0} เอกสาร</span>
+                </div>
+              </div>
+              <label className="switch" title={visible ? "ซ่อน" : "แสดง"}>
+                <input
+                  type="checkbox"
+                  checked={visible}
+                  onChange={() => toggle(t.name)}
+                  disabled={pending}
+                />
+                <span className="track" />
+              </label>
+            </div>
+          )
+        })}
+      </div>
+
+      {visibleCount === 0 && (
+        <div style={{
+          display: "flex", alignItems: "center", gap: 8,
+          padding: "12px 14px", borderRadius: 10, marginTop: 12,
+          background: "var(--berry-50)", color: "var(--berry-600)",
+          fontSize: 13, fontWeight: 700,
+        }}>
+          <EyeOff size={15} /> ซ่อนทุกเครื่องมือแล้ว — หน้า /docs จะว่างเปล่า
+        </div>
+      )}
+    </div>
+  )
+}

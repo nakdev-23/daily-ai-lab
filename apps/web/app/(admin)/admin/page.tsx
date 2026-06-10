@@ -3,6 +3,8 @@ import { requireAdmin } from "@/lib/auth"
 import { recordAudit } from "@/lib/audit"
 import { getUsers } from "@/lib/users"
 import { getAllDocs } from "@/lib/docs"
+import { getCourses } from "@/lib/courses"
+import { getToolColors } from "@/lib/tool-colors"
 import { Users, Activity, CheckCircle2, Wallet, ArrowUp, ArrowDown, Pencil } from "lucide-react"
 
 const CHART = [
@@ -13,13 +15,10 @@ const POPULAR = [
   { c: "#19C37D", l: "ChatGPT พื้นฐาน", p: 38 }, { c: "#6C3CF5", l: "เขียน Prompt", p: 24 },
   { c: "#E2611C", l: "Claude เอกสาร", p: 18 }, { c: "#F45C97", l: "Midjourney", p: 12 }, { c: "#A69EC1", l: "อื่น ๆ", p: 8 },
 ]
-const COURSES = [
-  { bg: "linear-gradient(160deg,#23D08A,#0E8F5E)", a: "G", n: "ChatGPT พื้นฐาน", s: "20 บท · 64 บทเรียน", st: "เผยแพร่", spill: "ok" },
-  { bg: "linear-gradient(160deg,#BC83FF,#6C3CF5)", a: "P", n: "เขียน Prompt ระดับโปร", s: "18 บท · 52 บทเรียน", st: "เผยแพร่", spill: "ok" },
-  { bg: "linear-gradient(160deg,#5B8CFF,#2A6FF0)", a: "G", n: "Gemini & การค้นคว้า", s: "14 บท · ร่าง", st: "ร่าง", spill: "warn" },
-  { bg: "linear-gradient(160deg,#5C5675,#1B1729)", a: "R", n: "Runway วิดีโอ", s: "กำลังเตรียม", st: "รอคิว", spill: "mut" },
-]
 const AV_BG = ["#6C3CF5", "#14A871", "#F45C97", "#2A8CF0", "#FD7302", "#B06CFF"]
+
+const STATUS_TH: Record<string, string> = { published: "เผยแพร่", draft: "ร่าง", queued: "รอคิว" }
+const STATUS_SPILL: Record<string, string> = { published: "ok", draft: "warn", queued: "mut" }
 
 function timeAgo(iso: string) {
   const m = Math.floor((Date.now() - new Date(iso).getTime()) / 60000)
@@ -32,8 +31,7 @@ function timeAgo(iso: string) {
 export default async function AdminOverview() {
   await requireAdmin()
   await recordAudit("admin.view_dashboard")
-  const users = await getUsers()
-  const docs = await getAllDocs()
+  const [users, docs, courses] = await Promise.all([getUsers(), getAllDocs(), getCourses()])
   const recent = users.slice(0, 4)
 
   const KPIS = [
@@ -109,13 +107,17 @@ export default async function AdminOverview() {
           <div className="p-head"><h3 className="display">จัดการคอร์ส</h3><Link className="more" href="/admin/courses">+ เพิ่ม</Link></div>
           <div className="atable">
             <div className="at-row at-head" style={{ gridTemplateColumns: "1fr auto auto" }}><span>คอร์ส</span><span>สถานะ</span><span /></div>
-            {COURSES.map((c) => (
-              <div key={c.n} className="at-row" style={{ gridTemplateColumns: "1fr auto auto" }}>
-                <span className="uc"><span className="av" style={{ background: c.bg }}>{c.a}</span><span><b>{c.n}</b><small>{c.s}</small></span></span>
-                <span><span className={`spill ${c.spill}`}>{c.st}</span></span>
-                <span className="row-act"><Link className="iconbtn" href="/admin/courses"><Pencil size={14} /></Link></span>
-              </div>
-            ))}
+            {courses.map((c) => {
+              const colors = getToolColors(c.tool)
+              const subtitle = c.units > 0 ? `${c.units} บท · ${c.lessons} บทเรียน` : c.lessons > 0 ? `${c.lessons} บทเรียน` : "กำลังเตรียม"
+              return (
+                <div key={c.id} className="at-row" style={{ gridTemplateColumns: "1fr auto auto" }}>
+                  <span className="uc"><span className="av" style={{ background: colors.bg }}>{colors.fallback}</span><span><b>{c.title}</b><small>{subtitle}</small></span></span>
+                  <span><span className={`spill ${STATUS_SPILL[c.status] ?? "mut"}`}>{STATUS_TH[c.status] ?? c.status}</span></span>
+                  <span className="row-act"><Link className="iconbtn" href="/admin/courses"><Pencil size={14} /></Link></span>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

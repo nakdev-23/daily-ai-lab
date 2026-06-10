@@ -1,10 +1,16 @@
 import { requireAdmin } from "@/lib/auth"
-import { getAllDocs, getDocSource, type DocMeta } from "@/lib/docs"
+import { getAllDocs, getToolConfig, getDocSource, type DocMeta } from "@/lib/docs"
 import DocsAdmin, { type DocRow } from "./_docs-admin"
+import ToolsAdmin from "./_tools-admin"
 
 export default async function AdminDocsPage() {
   await requireAdmin()
-  const metas: DocMeta[] = await getAllDocs()
+
+  const [metas, visibility] = await Promise.all([getAllDocs(), getToolConfig()])
+
+  const counts: Record<string, number> = {}
+  for (const m of metas) counts[m.tool] = (counts[m.tool] ?? 0) + 1
+
   const rows: DocRow[] = await Promise.all(
     metas.map(async (m) => {
       const src = await getDocSource(m.slug)
@@ -20,6 +26,8 @@ export default async function AdminDocsPage() {
           <div className="sub">เอกสารเครื่องมือ AI แปลไทย แบ่งตามระดับ · ทั้งหมด {rows.length} ชุด</div>
         </div>
       </div>
+
+      <ToolsAdmin visibility={visibility} counts={counts} />
       <DocsAdmin rows={rows} />
     </>
   )

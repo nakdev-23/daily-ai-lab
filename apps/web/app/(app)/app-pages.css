@@ -1,7 +1,7 @@
 /* Daily AI Lab — leaderboard / profile / settings (scoped .dlab-app; tokens from app-ds.css) */
 
 /* ===== LEADERBOARD ===== */
-.dlab-app .lb-wrap { max-width: 760px; margin: 0 auto; }
+.dlab-app .lb-wrap { width: 100%; }
 .dlab-app .lb-league { display: flex; align-items: center; gap: 18px; padding: 22px 26px; margin-bottom: 20px; }
 .dlab-app .lb-league .lg-badge { width: 66px; height: 66px; border-radius: 20px; display: grid; place-items: center; flex: none; background: linear-gradient(160deg,#B6ECFF,#4FB6F5); color:#fff; box-shadow: inset 0 -4px 8px rgba(0,0,0,.1), inset 0 2px 3px rgba(255,255,255,.6); transform: rotate(-5deg); }
 .dlab-app .lb-league h2 { font-size: 22px; margin: 0 0 4px; }
@@ -63,7 +63,7 @@
 .dlab-app .badge-item.locked .bic { background: var(--cloud-200) !important; filter: grayscale(1); }
 
 /* ===== SETTINGS ===== */
-.dlab-app .settings-wrap { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 196px 1fr; gap: 28px; align-items: start; }
+.dlab-app .settings-wrap { width: 100%; max-width: 900px; display: grid; grid-template-columns: 196px 1fr; gap: 28px; align-items: start; }
 .dlab-app .set-nav { position: sticky; top: 86px; display: flex; flex-direction: column; gap: 3px; }
 .dlab-app .set-nav a { display: flex; align-items: center; gap: 11px; padding: 11px 14px; border-radius: var(--radius-md); font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-body); border-left: 2px solid transparent; transition: background .15s, color .15s; }
 .dlab-app .set-nav a:hover { background: var(--hero-50); color: var(--hero-600); }

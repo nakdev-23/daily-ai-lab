@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useActionState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -12,6 +12,7 @@ import {
 } from "lucide-react"
 import { FcGoogle } from "react-icons/fc"
 import Switch from "@/components/switch"
+import { updateDisplayName, type SettingsResult } from "./actions"
 
 const AV = "/assets/daily-ai-lab/avatars"
 const AVATARS = ["heart", "celebrate", "thumbsup", "graduate", "wave", "cool", "read", "think", "yawn", "sad", "sleep"]
@@ -23,6 +24,9 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
   const t = makeT(lang)
   const [goal, setGoal] = useState(1)
   const [theme, setTheme] = useState(0)
+  const [nameState, saveName, savingName] = useActionState<SettingsResult, FormData>(updateDisplayName, null)
+  // Hide the "saved" hint as soon as the user edits again (cleared on submit).
+  const [nameEdited, setNameEdited] = useState(false)
   // Chosen Riri avatar (persisted in localStorage). null = use Google photo / initial.
   const [avatarSel, setAvatarSel] = useState<string | null>(() => {
     if (typeof window === "undefined") return null
@@ -90,7 +94,15 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
             </div>
           </div>
 
-          <div className="set-row"><div className="sr-info"><b>{t("Display name")}</b><span>{t("What friends and the leaderboard see")}</span></div><div className="sr-ctrl"><input className="set-input" type="text" defaultValue={displayName} /></div></div>
+          <form className="set-row" action={saveName} onSubmit={() => setNameEdited(false)}>
+            <div className="sr-info"><b>{t("Display name")}</b><span>{t("What friends and the leaderboard see")}</span></div>
+            <div className="sr-ctrl" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+              <input className="set-input" type="text" name="display_name" defaultValue={displayName} maxLength={40} required onChange={() => setNameEdited(true)} />
+              <button type="submit" className="btn btn--violet sm" disabled={savingName}>{savingName ? t("Saving…") : t("Save")}</button>
+              {nameState?.ok && !nameEdited && <span style={{ color: "var(--mint-600)", fontSize: 13, display: "inline-flex", alignItems: "center", gap: 4 }}><Check size={14} /> {nameState.message}</span>}
+              {nameState && !nameState.ok && <span style={{ color: "var(--berry-600)", fontSize: 13 }}>{nameState.message}</span>}
+            </div>
+          </form>
           <div className="set-row"><div className="sr-info"><b>{t("Email")}</b><span>{t("From your Google account — can't be changed here")}</span></div><div className="sr-ctrl"><input className="set-input" type="email" value={email} readOnly style={{ background: "var(--cloud-50)", color: "var(--text-muted)" }} /></div></div>
         </section>
 

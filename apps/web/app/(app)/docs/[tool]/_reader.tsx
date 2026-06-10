@@ -19,7 +19,7 @@ const LV: Record<DocLevel, { dot: string; th: string; en: string; mascot: string
 }
 const ORDER: DocLevel[] = ["beginner", "intermediate", "pro"]
 
-export default function DocsReader({ tool, sections, lang }: { tool: string; sections: Section[]; lang: Lang }) {
+export default function DocsReader({ tool, sections, lang, isPro = false }: { tool: string; sections: Section[]; lang: Lang; isPro?: boolean }) {
   const t = makeT(lang)
   const colors = getToolColors(tool)
   const [active, setActive] = useState(0)
@@ -114,7 +114,7 @@ export default function DocsReader({ tool, sections, lang }: { tool: string; sec
 
           <div className="pg-meta">{t("Page")} {posInLevel} / {inLevel.length}</div>
 
-          {cur.meta.locked ? (
+          {cur.meta.locked && !isPro ? (
             <div className="glass" style={{ padding: 36, textAlign: "center", background: "linear-gradient(150deg,#FFF3CE,#F1E7FF)" }}>
               <Image src={`${M}/mascot-sad.png`} alt="Riri" width={110} height={110} style={{ margin: "0 auto 12px" }} />
               <h3 className="display" style={{ fontSize: 21, marginBottom: 8 }}><Crown size={19} className="text-amber-500" style={{ verticalAlign: "-3px" }} /> {t("This content is for Pro members")}</h3>

@@ -1,22 +1,56 @@
 import Link from "next/link"
 import Image from "next/image"
+import { createClient } from "@/lib/supabase/server"
+import { getCourses } from "@/lib/courses"
 import { BookOpen, Target, FileText, Flame, Star, Check, Clock, ChevronRight } from "lucide-react"
 
-const MISSIONS = [
-  { icon: BookOpen, title: "เรียนจบบทเรียน 1 บท", xp: 20, current: 1, total: 1, done: true },
-  { icon: Target, title: "ทำแบบฝึกหัดให้ได้ 80% ขึ้นไป", xp: 20, current: 0, total: 1, done: false },
-  { icon: FileText, title: "อ่านเอกสาร 1 หน้า", xp: 10, current: 0, total: 1, done: false },
-  { icon: Flame, title: "เรียนต่อเนื่องให้ครบ 7 วัน", xp: 50, current: 5, total: 7, done: false },
-  { icon: Star, title: "เก็บแต้มรวม 300 แต้มวันนี้", xp: 30, current: 120, total: 300, done: false },
-]
+export default async function MissionsPage() {
+  const supabase = await createClient()
+  const today = new Date().toISOString().split("T")[0]
 
-export default function MissionsPage() {
+  const { data: { user } } = await supabase.auth.getUser()
+  let lessonsToday = 0
+  let streak = 0
+  let continueHref = "/daily-learn"
+  const doneByCourse: Record<string, number> = {}
+
+  if (user) {
+    const [{ data: g }, { data: progress }, courses] = await Promise.all([
+      supabase.from("game_state").select("lessons_today, lessons_today_date, streak_current").eq("user_id", user.id).maybeSingle(),
+      supabase.from("course_progress").select("course_id, lessons_done, updated_at").eq("user_id", user.id).order("updated_at", { ascending: false }),
+      getCourses(),
+    ])
+    lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
+    streak = g?.streak_current ?? 0
+    for (const row of (progress ?? []) as Array<{ course_id: string; lessons_done: number }>) {
+      doneByCourse[row.course_id] = row.lessons_done
+    }
+    // Continue link: first published course in progress, else first published course.
+    const published = courses.filter((c) => c.status === "published")
+    const inProgress = published.find((c) => {
+      const d = doneByCourse[c.slug || c.id] ?? 0
+      return d > 0 && d < c.lessons
+    })
+    const target = inProgress ?? published[0]
+    if (target) {
+      continueHref = `/daily-learn/${target.slug || target.id}/${Math.min((doneByCourse[target.slug || target.id] ?? 0) + 1, target.lessons)}`
+    }
+  }
+
+  const MISSIONS = [
+    { icon: BookOpen, title: "เรียนจบบทเรียน 1 บท", xp: 20, current: Math.min(lessonsToday, 1), total: 1 },
+    { icon: Star, title: "เรียนให้ได้ 3 บทวันนี้", xp: 30, current: Math.min(lessonsToday, 3), total: 3 },
+    { icon: Flame, title: "เรียนต่อเนื่องให้ครบ 7 วัน", xp: 50, current: Math.min(streak, 7), total: 7 },
+    { icon: Target, title: "ทำแบบฝึกหัดให้ได้ 80% ขึ้นไป", xp: 20, current: 0, total: 1 },
+    { icon: FileText, title: "อ่านเอกสาร 1 หน้า", xp: 10, current: 0, total: 1 },
+  ].map((m) => ({ ...m, done: m.current >= m.total }))
+
   return (
     <div className="max-w-[700px] mx-auto px-8 py-8">
       <div className="flex items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">เป้าหมายวันนี้ <Target size={22} className="text-[#6B4EFF]" /></h1>
-          <p className="text-sm text-gray-400 flex items-center gap-1.5"><Clock size={14} /> เริ่มนับใหม่อีก 18 ชม. 12 นาที</p>
+          <p className="text-sm text-gray-400 flex items-center gap-1.5"><Clock size={14} /> สตรีคปัจจุบัน {streak} วัน · เรียนวันนี้ {lessonsToday} บท</p>
         </div>
         <Image src="/assets/daily-ai-lab/mascot/cockatiel-avatar.png" alt="Mascot" width={64} height={64} className="ml-auto drop-shadow-md" />
       </div>
@@ -47,10 +81,10 @@ export default function MissionsPage() {
       </div>
 
       <div className="mt-6 flex gap-3">
-        <Link href="/daily-learn/chatgpt-basics/2-2" className="flex-1 bg-[#6B4EFF] text-white text-sm font-bold py-3 rounded-xl text-center hover:bg-[#5535e8] transition-colors">
+        <Link href={continueHref} className="flex-1 bg-[#6B4EFF] text-white text-sm font-bold py-3 rounded-xl text-center hover:bg-[#5535e8] transition-colors">
           <span className="inline-flex items-center justify-center gap-1">เริ่มเรียนเลย <ChevronRight size={16} /></span>
         </Link>
-        <Link href="/dashboard" className="flex-1 bg-white border border-[#ede9ff] text-gray-600 text-sm font-medium py-3 rounded-xl text-center hover:bg-[#f5f3ff] transition-colors">
+        <Link href="/daily-learn" className="flex-1 bg-white border border-[#ede9ff] text-gray-600 text-sm font-medium py-3 rounded-xl text-center hover:bg-[#f5f3ff] transition-colors">
           กลับหน้าเรียน
         </Link>
       </div>

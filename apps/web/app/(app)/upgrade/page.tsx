@@ -29,7 +29,7 @@ const CMP: ({ grp: string } | { feat: string; free: string | boolean; pro: strin
 ]
 const FAQ = [
   { ic: CreditCard, q: "จ่ายเงินยังไง ยกเลิกได้ไหม?", a: "รับบัตรเครดิต/เดบิต และพร้อมเพย์ คุณยกเลิกได้ทุกเมื่อจากหน้าตั้งค่า — เมื่อยกเลิกจะใช้ Pro ได้จนจบรอบที่จ่ายไว้ ไม่มีค่าปรับ" },
-  { ic: RefreshCw, q: "เปลี่ยนระหว่างรายเดือน/รายปีได้ไหม?", a: "ได้ครับ เปลี่ยนได้ทุกเมื่อ ระบบจะคิดส่วนต่างให้อัตโนมัติ การจ่ายรายปีจะประหยัดกว่าประมาณ 10%" },
+  { ic: RefreshCw, q: "เปลี่ยนระหว่างรายเดือน/รายปีได้ไหม?", a: "ได้ครับ เปลี่ยนได้ทุกเมื่อ ระบบจะคิดส่วนต่างให้อัตโนมัติ การจ่ายรายปีจะประหยัดกว่าประมาณ 17%" },
   { ic: BookOpen, q: "ถ้าอัปเกรด ความคืบหน้าเดิมหายไหม?", a: "ไม่หายเลย XP สตรีค แบดจ์ และบทเรียนที่เรียนไปทั้งหมดยังอยู่ครบ — แค่ปลดล็อกเนื้อหาและฟีเจอร์เพิ่มทันที" },
   { ic: GraduationCap, q: "มีส่วนลดสำหรับนักเรียน/นักศึกษาไหม?", a: "มีครับ นักเรียน-นักศึกษารับส่วนลด 50% เพียงยืนยันสถานะด้วยอีเมลสถาบัน ติดต่อทีมงานได้จากหน้าตั้งค่า" },
   { ic: Wallet, q: "มีการรับประกันคืนเงินไหม?", a: "รับประกันคืนเงินภายใน 7 วัน หากไม่พอใจ แจ้งทีมงานได้เลย เราคืนเต็มจำนวนโดยไม่ถามเหตุผล" },
@@ -39,8 +39,8 @@ export default function UpgradePage() {
   const [bill, setBill] = useState<"month" | "year">("month")
   const [toast, setToast] = useState(false)
 
-  const price = bill === "month" ? "฿299" : "฿269"
-  const sub = bill === "month" ? "เรียกเก็บรายเดือน · ยกเลิกได้ทุกเมื่อ" : "เรียกเก็บ ฿3,229/ปี · ประหยัด 10%"
+  const price = bill === "month" ? "฿199" : "฿166"
+  const sub = bill === "month" ? "เรียกเก็บรายเดือน · ยกเลิกได้ทุกเมื่อ" : "เรียกเก็บ ฿1,990/ปี · ประหยัด ~17%"
 
   function upgrade() {
     setToast(true)
@@ -55,7 +55,7 @@ export default function UpgradePage() {
         <p>เรียนได้ไม่จำกัด ทุกเส้นทางอาชีพ หัวใจไม่จำกัด และฟีเจอร์พิเศษอีกเพียบ</p>
         <div className="bill-toggle">
           <button className={bill === "month" ? "on" : ""} onClick={() => setBill("month")}>รายเดือน</button>
-          <button className={bill === "year" ? "on" : ""} onClick={() => setBill("year")}>รายปี <span className="save-tag">ประหยัด 10%</span></button>
+          <button className={bill === "year" ? "on" : ""} onClick={() => setBill("year")}>รายปี <span className="save-tag">ประหยัด ~17%</span></button>
         </div>
       </div>
 

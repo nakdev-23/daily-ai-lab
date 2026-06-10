@@ -59,7 +59,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
       const globalIdx = lessonIdx++
       const status = globalIdx < doneCount ? "done" : globalIdx === doneCount ? "cur" : "lock"
       const xLabel = status === "done" ? `+${l.xp} XP` : status === "cur" ? t("Continue") : t("Locked")
-      return { s: status, t: l.title, x: xLabel }
+      return { s: status, t: l.title, x: xLabel, n: globalIdx + 1 }
     })
     const doneLessons = rows.filter((r) => r.s === "done").length
     const meta = doneLessons === rows.length ? `${rows.length} ${t("lessons")} · ${t("done")}` : `${rows.length} ${t("lessons")}`
@@ -130,13 +130,19 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
             {UNITS.map((u) => (
               <div key={u.id} className="unit glass">
                 <div className="unit-head"><span className="un">{u.n}</span><h3 className="display">{u.title}</h3><span className="meta">{u.meta}</span></div>
-                {u.rows.map((r, i) => (
-                  <Link key={i} className="lrow" href={startHref}>
-                    <span className={`lic ${r.s}`}>{r.s === "done" ? <Check size={16} /> : r.s === "cur" ? <Zap size={16} /> : <Lock size={15} />}</span>
-                    <span className="lt">{r.t}</span>
-                    <span className="lx">{r.x === t("Continue") ? <>{r.x} <ChevronRight size={12} style={{ display: "inline", verticalAlign: "-1px" }} /></> : r.x}</span>
-                  </Link>
-                ))}
+                {u.rows.map((r, i) => {
+                  const inner = (
+                    <>
+                      <span className={`lic ${r.s}`}>{r.s === "done" ? <Check size={16} /> : r.s === "cur" ? <Zap size={16} /> : <Lock size={15} />}</span>
+                      <span className="lt">{r.t}</span>
+                      <span className="lx">{r.x === t("Continue") ? <>{r.x} <ChevronRight size={12} style={{ display: "inline", verticalAlign: "-1px" }} /></> : r.x}</span>
+                    </>
+                  )
+                  // Locked lessons aren't navigable (sequential progress enforced server-side).
+                  return r.s === "lock"
+                    ? <span key={i} className="lrow" style={{ cursor: "not-allowed", opacity: .72 }}>{inner}</span>
+                    : <Link key={i} className="lrow" href={`/daily-learn/${progressKey}/${r.n}`}>{inner}</Link>
+                })}
               </div>
             ))}
           </div>

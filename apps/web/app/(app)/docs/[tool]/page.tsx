@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { getDocsForTool, getToolGroups } from "@/lib/docs"
 import { getLang } from "@/lib/i18n"
+import { getProfile, isPro } from "@/lib/auth"
 import DocsReader from "./_reader"
 
 export async function generateStaticParams() {
@@ -16,11 +17,17 @@ export async function generateMetadata({ params }: { params: Promise<{ tool: str
 
 export default async function ToolDocsPage({ params }: { params: Promise<{ tool: string }> }) {
   const { tool } = await params
-  const [{ tool: name, sections }, lang] = await Promise.all([getDocsForTool(tool), getLang()])
+  const [{ tool: name, sections }, lang, profile] = await Promise.all([getDocsForTool(tool), getLang(), getProfile()])
   if (sections.length === 0) {
     // still render the empty-state reader if it's a known tool slug, else 404
     const groups = await getToolGroups()
     if (!groups.some((g) => g.toolSlug === tool)) notFound()
   }
-  return <DocsReader tool={name} sections={sections} lang={lang} />
+  // Paywall: never ship locked HTML to non-Pro clients. Strip it server-side so
+  // it can't be recovered from the page payload; the reader shows an upgrade card.
+  const pro = isPro(profile)
+  const safeSections = sections.map((s) =>
+    s.meta.locked && !pro ? { ...s, html: "" } : s
+  )
+  return <DocsReader tool={name} sections={safeSections} lang={lang} isPro={pro} />
 }

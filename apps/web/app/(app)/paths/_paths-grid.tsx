@@ -20,7 +20,7 @@ const TONE_META: Record<string, { bg: string; cls: string; Icon: React.ElementTy
 const TOOL_HEX: Record<string, string> = {
   ChatGPT: "#19C37D", Claude: "#FF9A52", Gemini: "#2A6FF0",
   Midjourney: "#6C3CF5", Suno: "#F45C97", Runway: "#1B1729",
-  Perplexity: "#14A871",
+  Perplexity: "#14A871", Codex: "#10A37F",
 }
 
 function defaultMeta(tone: string) {

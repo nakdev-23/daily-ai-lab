@@ -2,49 +2,43 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import ToolLogo from "@/components/tool-logo"
 import { makeT, type Lang } from "@/lib/i18n-core"
-import { Rocket, Clock, BookOpen, Award, ChevronRight, Sparkles, Brain, Megaphone, Briefcase, Search } from "lucide-react"
+import type { CareerPath } from "@/lib/career-paths"
+import {
+  Rocket, Clock, BookOpen, Award, ChevronRight,
+  Brain, Megaphone, Briefcase, Zap, Search, Lock,
+} from "lucide-react"
 
-export default function PathsGrid({ lang }: { lang: Lang }) {
+const TONE_META: Record<string, { bg: string; cls: string; Icon: React.ElementType }> = {
+  violet: { bg: "var(--hero-100)",  cls: "text-violet-600",  Icon: Brain },
+  mint:   { bg: "var(--mint-100)",  cls: "text-emerald-600", Icon: BookOpen },
+  pink:   { bg: "var(--pink-100)",  cls: "text-pink-500",    Icon: Megaphone },
+  sky:    { bg: "var(--sky-100)",   cls: "text-sky-600",     Icon: Briefcase },
+  sun:    { bg: "var(--sun-100)",   cls: "text-amber-600",   Icon: Zap },
+}
+
+const TOOL_HEX: Record<string, string> = {
+  ChatGPT: "#19C37D", Claude: "#FF9A52", Gemini: "#2A6FF0",
+  Midjourney: "#6C3CF5", Suno: "#F45C97", Runway: "#1B1729",
+  Perplexity: "#14A871",
+}
+
+function defaultMeta(tone: string) {
+  return TONE_META[tone] ?? { bg: "var(--hero-100)", cls: "text-violet-600", Icon: Rocket }
+}
+
+export default function PathsGrid({ lang, paths }: { lang: Lang; paths: CareerPath[] }) {
   const t = makeT(lang)
   const [query, setQuery] = useState("")
 
-  const PATHS = [
-    {
-      icon: Sparkles, iconColor: "text-violet-600", bg: "var(--hero-100)", tag: t("Beginner friendly"),
-      title: t("AI Content Creator"),
-      desc: t("Write, design and produce content end-to-end. Go from idea to finished post, image and soundtrack — all with AI."),
-      tools: [["#19C37D", "ChatGPT"], ["#6C3CF5", "Midjourney"], ["#F45C97", "Suno"]],
-      weeks: t("6 weeks"), lessons: t("84 lessons"),
-    },
-    {
-      icon: Brain, iconColor: "text-amber-600", bg: "var(--sun-100)", tag: t("Most popular"),
-      title: "Prompt Engineer",
-      desc: t("Master the art and science of prompting across every major model. The skill behind every great AI result."),
-      tools: [["#19C37D", "ChatGPT"], ["#FF9A52", "Claude"], ["#2A6FF0", "Gemini"]],
-      weeks: t("5 weeks"), lessons: t("72 lessons"),
-    },
-    {
-      icon: Megaphone, iconColor: "text-pink-500", bg: "var(--pink-100)", tag: t("For marketers"),
-      title: t("AI for Marketing"),
-      desc: t("Ship campaigns, copy and visuals faster than ever. Turn AI into your always-on creative teammate."),
-      tools: [["#19C37D", "ChatGPT"], ["#6C3CF5", "Midjourney"], ["#2A6FF0", "Gemini"]],
-      weeks: t("4 weeks"), lessons: t("60 lessons"),
-    },
-    {
-      icon: Briefcase, iconColor: "text-sky-600", bg: "var(--sky-100)", tag: t("For professionals"),
-      title: t("AI for Business"),
-      desc: t("Automate busywork and make smarter decisions. Bring AI into meetings, docs, data and daily workflows."),
-      tools: [["#FF9A52", "Claude"], ["#19C37D", "ChatGPT"], ["#14A871", "Perplexity"]],
-      weeks: t("4 weeks"), lessons: t("56 lessons"),
-    },
-  ]
-
   const q = query.trim().toLowerCase()
   const shown = q
-    ? PATHS.filter((p) => `${p.title} ${p.desc} ${p.tag} ${p.tools.map((x) => x[1]).join(" ")}`.toLowerCase().includes(q))
-    : PATHS
+    ? paths.filter((p) =>
+        `${p.title} ${p.description} ${p.tag} ${p.tools.join(" ")}`.toLowerCase().includes(q)
+      )
+    : paths
+
+  const totalLessons = (p: CareerPath) => p.modules.flatMap((m) => m.steps).length
 
   return (
     <>
@@ -60,33 +54,55 @@ export default function PathsGrid({ lang }: { lang: Lang }) {
 
       <section className="block" style={{ paddingTop: 28 }}>
         <div className="wrap">
-          {shown.length === 0 ? (
-            <p style={{ textAlign: "center", color: "var(--text-muted)", padding: "40px 0" }}>{t("No matching paths.")}</p>
+          {paths.length === 0 ? (
+            <p style={{ textAlign: "center", color: "var(--text-muted)", padding: "60px 0" }}>
+              {t("No career paths yet.")}
+            </p>
+          ) : shown.length === 0 ? (
+            <p style={{ textAlign: "center", color: "var(--text-muted)", padding: "40px 0" }}>
+              {t("No matching paths.")}
+            </p>
           ) : (
             <div className="paths-big">
-              {shown.map((p) => (
-                <div key={p.title} className="path-big glass">
-                  <div className="pleft">
-                    <div className="pic" style={{ background: p.bg }}><p.icon size={36} className={p.iconColor} /></div>
-                    <span className="lvl-tag">{p.tag}</span>
-                  </div>
-                  <div>
-                    <h3 className="display">{p.title}</h3>
-                    <p className="pd">{p.desc}</p>
-                    <div className="path-tools">
-                      {p.tools.map(([bg, name]) => (
-                        <span className="ptool" key={name}><span className="sw" style={{ background: bg }}><ToolLogo name={name} size={12} /></span> {name}</span>
-                      ))}
+              {shown.map((p) => {
+                const { bg, cls, Icon } = defaultMeta(p.tone)
+                const lessons = totalLessons(p)
+                return (
+                  <div key={p.id} className="path-big glass">
+                    <div className="pleft">
+                      <div className="pic" style={{ background: bg }}><Icon size={36} className={cls} /></div>
+                      <span className="lvl-tag">{t(p.tag)}</span>
+                      {p.isPro && <span className="lvl-tag" style={{ background: "var(--sun-100)", color: "var(--sun-700)" }}>Pro</span>}
                     </div>
-                    <div className="path-foot">
-                      <span className="pm"><Clock size={14} /> {p.weeks}</span>
-                      <span className="pm"><BookOpen size={14} /> {p.lessons}</span>
-                      <span className="pm"><Award size={14} /> {t("Certificate")}</span>
-                      <Link className="btn btn--violet md" style={{ marginLeft: "auto" }} href="/paths/prompt-engineer"><span>{t("Start path")}</span> <ChevronRight size={16} /></Link>
+                    <div>
+                      <h3 className="display">{p.title}</h3>
+                      <p className="pd">{p.description}</p>
+                      <div className="path-tools">
+                        {p.tools.map((name) => (
+                          <span className="ptool" key={name}>
+                            <span className="sw" style={{ background: TOOL_HEX[name] ?? "#888" }} />
+                            {name}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="path-foot">
+                        <span className="pm"><Clock size={14} /> {p.weeks} {t("weeks")}</span>
+                        <span className="pm"><BookOpen size={14} /> {lessons || p.modules.length} {t("lessons")}</span>
+                        <span className="pm"><Award size={14} /> {t("Certificate")}</span>
+                        {p.isPro ? (
+                          <Link className="btn btn--ghost md" style={{ marginLeft: "auto" }} href="/upgrade">
+                            <Lock size={14} /> Pro
+                          </Link>
+                        ) : (
+                          <Link className="btn btn--violet md" style={{ marginLeft: "auto" }} href={`/paths/${p.slug}`}>
+                            {t("Start path")} <ChevronRight size={16} />
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
         </div>

@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex พื้นฐาน · บทที่ 10 · ตอนที่ 1",
+    "title": "Parallel Tasks",
+    "body": [
+      { "text": "พลังที่แท้จริงของ Codex คือ " },
+      { "text": "รันหลาย task พร้อมกันได้", "bold": true },
+      { "text": " — แต่ละ task มี environment ของตัวเอง สั่งงาน 3-4 อย่างตอนเช้า แล้วกลับมารีวิวผลตอนบ่ายได้เลย" }
+    ],
+    "example": "\"เช้า: สั่ง 'แก้ bug หน้า login' + 'เพิ่มเทสต์ checkout' + 'อัปเดต README' → บ่าย: รีวิว 3 PRs\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex พื้นฐาน · บทที่ 10 · ตอนที่ 2",
+    "title": "แบ่งงานให้ขนานกันได้ดี",
+    "body": [
+      { "text": "Tasks ที่ขนานกันดีต้อง " },
+      { "text": "ไม่แตะไฟล์เดียวกัน", "bold": true },
+      { "text": " — ถ้าสองงานแก้ไฟล์เดียวกันจะเกิด conflict ตอน merge ให้จัดกลุ่มงานตามโซนของโค้ดแทน" }
+    ],
+    "example": "\"ขนานได้: แก้หน้า login + เขียนเทสต์ API + อัปเดต docs / ขนานไม่ดี: สอง tasks ที่แก้ utils.ts ทั้งคู่\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Parallel tasks คืออะไร?",
+    "options": [
+      { "text": "รันหลาย task พร้อมกัน แต่ละอันมี environment แยก", "correct": true },
+      { "text": "task เดียวที่ใหญ่มาก" },
+      { "text": "การรันเทสต์ซ้ำๆ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Tasks แบบไหนขนานกันได้ดี?",
+    "options": [
+      { "text": "งานที่ไม่แตะไฟล์เดียวกัน", "correct": true },
+      { "text": "งานที่แก้ไฟล์เดียวกันทั้งคู่" },
+      { "text": "งานที่ต้องรอกันเป็นทอดๆ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "ถ้าสอง tasks แก้ไฟล์เดียวกัน จะเกิดอะไร?",
+    "options": [
+      { "text": "ไม่มีปัญหา ระบบรวมให้เอง" },
+      { "text": "อาจเกิด merge conflict ต้องแก้เอง", "correct": true },
+      { "text": "task ที่สองถูกลบอัตโนมัติ" }
+    ]
+  },
+  { "type": "done" }
+]

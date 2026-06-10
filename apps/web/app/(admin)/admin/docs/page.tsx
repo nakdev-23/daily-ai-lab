@@ -1,5 +1,5 @@
-import { requireAdmin } from "@/lib/auth"
-import { getAllDocs, getToolConfig, getDocSource, type DocMeta } from "@/lib/docs"
+﻿import { requireAdmin } from "@/lib/auth"
+import { getAllDocs, getToolConfig, getDocSource } from "@/lib/docs"
 import DocsAdmin, { type DocRow } from "./_docs-admin"
 import ToolsAdmin from "./_tools-admin"
 
@@ -22,8 +22,8 @@ export default async function AdminDocsPage() {
     <>
       <div className="adm-bar">
         <div>
-          <h1>เอกสาร</h1>
-          <div className="sub">เอกสารเครื่องมือ AI แปลไทย แบ่งตามระดับ · ทั้งหมด {rows.length} ชุด</div>
+          <h1>เน€เธญเธเธชเธฒเธฃ</h1>
+          <div className="sub">เน€เธญเธเธชเธฒเธฃเน€เธเธฃเธทเนเธญเธเธกเธทเธญ AI เนเธเธฅเนเธ—เธข เนเธเนเธเธ•เธฒเธกเธฃเธฐเธ”เธฑเธ ยท เธ—เธฑเนเธเธซเธกเธ” {rows.length} เธเธธเธ”</div>
         </div>
       </div>
 

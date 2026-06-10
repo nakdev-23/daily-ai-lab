@@ -1,0 +1,61 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 4 · ตอนที่ 5",
+    "title": "Preview & Share Artifacts",
+    "body": [
+      { "text": "สำหรับ Artifacts ที่เป็น HTML หรือ React Claude จะมีปุ่ม Preview ให้คลิกดูผลลัพธ์จริงในหน้าต่าง Preview ได้เลย นอกจากนี้ยังสามารถ " },
+      { "text": "แชร์ Artifact ให้ผู้อื่นได้ผ่าน Share Link", "bold": true },
+      { "text": " โดยไม่ต้องให้ผู้รับมีบัญชี Claude.ai ก็เปิดดูได้ ฟีเจอร์นี้มีประโยชน์มากสำหรับการแชร์ " },
+      { "text": "งาน Prototype หรือ Report ให้ทีมงานหรือลูกค้า", "bold": true },
+      { "text": " ได้อย่างรวดเร็ว" }
+    ],
+    "example": "\"ช่วยสร้าง Interactive Dashboard แสดงข้อมูลยอดขายรายเดือนด้วย Chart แล้ว Preview ให้ดูด้วยนะ\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 4 · ตอนที่ 6",
+    "title": "Export และนำ Artifacts ไปใช้",
+    "body": [
+      { "text": "นอกจากการ Share Link แล้ว คุณสามารถ " },
+      { "text": "Download Artifacts", "bold": true },
+      { "text": " เป็นไฟล์ได้โดยตรง เช่น Code เป็น .html หรือ .py หรือเอกสารเป็น .md Artifacts ที่สร้างด้วย Claude ถือเป็น " },
+      { "text": "Starting Point ที่ดีสำหรับงานจริง", "bold": true },
+      { "text": " ไม่ใช่ผลลัพธ์สุดท้ายเสมอไป แนวทางที่ดีคือรับ Artifact จาก Claude แล้วนำไปปรับแต่งใน Editor หรือ IDE ต่อ เพื่อให้ได้ผลงานที่ตรงความต้องการมากที่สุด" }
+    ],
+    "example": "\"Artifact HTML ที่สร้างไว้ ช่วย Export เป็นไฟล์ที่พร้อม Deploy บน Netlify หน่อย พร้อมอธิบายขั้นตอนการ Deploy ด้วย\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "ปุ่ม Preview ใน Claude Artifacts ใช้สำหรับอะไร?",
+    "options": [
+      { "text": "ดูผลลัพธ์จริงของ HTML หรือ React Artifacts ในหน้าต่าง Preview", "correct": true },
+      { "text": "ดู Preview ของบทสนทนาถัดไป" },
+      { "text": "แสดงตัวอย่างสำหรับ Share ทาง Social Media" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "ผู้รับ Share Link ของ Artifact ต้องมีบัญชี Claude.ai หรือไม่?",
+    "options": [
+      { "text": "ต้องมีบัญชี Claude.ai แผน Pro เท่านั้น" },
+      { "text": "ไม่จำเป็น ผู้รับเปิดดู Artifact ได้โดยไม่ต้องมีบัญชี", "correct": true },
+      { "text": "ต้องมีบัญชี Claude.ai ทุกแผน" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "แนวทางที่ดีสุดในการใช้ Code Artifact จาก Claude คืออะไร?",
+    "options": [
+      { "text": "นำไป Deploy Production ทันทีโดยไม่ต้องแก้ไข" },
+      { "text": "ใช้เป็น Starting Point แล้วปรับแต่งต่อใน IDE ตามความต้องการ", "correct": true },
+      { "text": "ทิ้งไว้ใน Claude เท่านั้น ไม่ต้อง Export" }
+    ]
+  },
+  { "type": "done" }
+]

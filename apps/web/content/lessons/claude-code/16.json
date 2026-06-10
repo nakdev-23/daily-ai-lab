@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 16 · ตอนที่ 1",
+    "title": "Multi-agent Workflows",
+    "body": [
+      { "text": "งานใหญ่แตกให้ " },
+      { "text": "subagents ทำขนานกันได้", "bold": true },
+      { "text": " — agent หลักวางแผนแล้วส่งงานย่อยให้ agent ลูก เช่น ตัวหนึ่งค้นโค้ด อีกตัวเขียนเทสต์ แล้วรวมผลกลับมา" }
+    ],
+    "example": "\"'รีวิวความปลอดภัยทั้งโปรเจกต์' → แตกเป็น 3 agents: ตรวจ auth, ตรวจ API, ตรวจ dependencies — เสร็จไวกว่าทำทีละอย่าง\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 16 · ตอนที่ 2",
+    "title": "เมื่อไหร่ควรแตก agent",
+    "body": [
+      { "text": "เหมาะเมื่อ " },
+      { "text": "งานย่อยอิสระจากกันและกินบริบทเยอะ", "bold": true },
+      { "text": " — เช่น ค้นหาข้ามไฟล์จำนวนมาก แต่ละ agent มี context แยก จึงไม่เบียดพื้นที่ความจำของงานหลัก" }
+    ],
+    "example": "\"งานเดี่ยวต่อเนื่อง เช่น แก้ bug ตัวเดียว → ไม่ต้องแตก agent ทำตรงๆ เร็วกว่า\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Subagents คืออะไร?",
+    "options": [
+      { "text": "agent ลูกที่รับงานย่อยไปทำขนานกัน", "correct": true },
+      { "text": "ผู้ช่วยมนุษย์" },
+      { "text": "โมเดลรุ่นเล็กเสมอ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "งานแบบไหนเหมาะกับ multi-agent?",
+    "options": [
+      { "text": "งานย่อยที่อิสระจากกัน เช่น ตรวจหลายโซนพร้อมกัน", "correct": true },
+      { "text": "แก้ bug บรรทัดเดียว" },
+      { "text": "ทุกงานเสมอ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "ข้อดีด้าน context ของ subagent คืออะไร?",
+    "options": [
+      { "text": "แต่ละตัวมี context แยก ไม่เบียดงานหลัก", "correct": true },
+      { "text": "ใช้ context ร่วมกันหมด" },
+      { "text": "ไม่มี context เลย" }
+    ]
+  },
+  { "type": "done" }
+]

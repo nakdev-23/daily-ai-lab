@@ -39,6 +39,7 @@ export default function ToolLogo({
 
   if (icon?.type === "svg") {
     return (
+      // eslint-disable-next-line @next/next/no-img-element -- tiny local SVG icons; next/image adds no value here
       <img
         src={`/assets/daily-ai-lab/icons/${icon.file}.svg`}
         alt={name}

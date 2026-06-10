@@ -1,4 +1,4 @@
-import { isDevMock, MOCK_PROFILE, MOCK_GAME_STATE, type Role } from "@/lib/mock-user"
+import type { Role } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
@@ -23,30 +23,18 @@ import "./app-upgrade.css"
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const lang = await getLang()
   const initialCollapsed = (await cookies()).get("dlab-sidebar")?.value === "1"
-  let displayName = "นักเรียน"
-  let xp = 0, hearts = 5, streak = 0
-  let role: Role = "user"
-
-  if (isDevMock()) {
-    displayName = MOCK_PROFILE.display_name ?? "นักเรียน"
-    role = MOCK_PROFILE.role
-    xp = MOCK_GAME_STATE.xp
-    hearts = MOCK_GAME_STATE.hearts
-    streak = MOCK_GAME_STATE.streak_current
-  } else {
-    const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) redirect("/login")
-    const [{ data: p }, { data: g }] = await Promise.all([
-      supabase.from("profiles").select("display_name,role").eq("id", user.id).single(),
-      supabase.from("game_state").select("xp,hearts,streak_current").eq("user_id", user.id).single(),
-    ])
-    displayName = p?.display_name ?? "นักเรียน"
-    role = (p?.role as Role) ?? "user"
-    xp = g?.xp ?? 0
-    hearts = g?.hearts ?? 5
-    streak = g?.streak_current ?? 0
-  }
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) redirect("/login")
+  const [{ data: p }, { data: g }] = await Promise.all([
+    supabase.from("profiles").select("display_name,role").eq("id", user.id).single(),
+    supabase.from("game_state").select("xp,hearts,streak_current").eq("user_id", user.id).single(),
+  ])
+  const displayName = p?.display_name ?? "นักเรียน"
+  const role: Role = (p?.role as Role) ?? "user"
+  const xp = g?.xp ?? 0
+  const hearts = g?.hearts ?? 5
+  const streak = g?.streak_current ?? 0
 
   return (
     <AppShell displayName={displayName} role={role} xp={xp} hearts={hearts} streak={streak} lang={lang} initialCollapsed={initialCollapsed}>

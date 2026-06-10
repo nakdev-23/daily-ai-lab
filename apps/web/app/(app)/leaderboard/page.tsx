@@ -1,5 +1,4 @@
 import { createClient } from "@/lib/supabase/server"
-import { isDevMock, MOCK_PROFILE } from "@/lib/mock-user"
 import { getLang, makeT } from "@/lib/i18n"
 import { Flame, Crown, Gem, Trophy, ArrowUp, Medal } from "lucide-react"
 
@@ -21,21 +20,6 @@ function bgFor(name: string | null, idx: number) {
   const sum = [...name].reduce((s, c) => s + c.charCodeAt(0), 0)
   return BG_POOL[sum % BG_POOL.length]
 }
-
-const MOCK_BOARD: LeaderRow[] = [
-  { user_id: "u1", display_name: "พิมพ์", avatar_url: null, xp: 4860, level: 8, streak_current: 28, rank: 1 },
-  { user_id: "u2", display_name: "กานต์", avatar_url: null, xp: 3120, level: 6, streak_current: 20, rank: 2 },
-  { user_id: "u3", display_name: "Jenny", avatar_url: null, xp: 2940, level: 5, streak_current: 18, rank: 3 },
-  { user_id: "u4", display_name: "Mike", avatar_url: null, xp: 2610, level: 4, streak_current: 22, rank: 4 },
-  { user_id: "u5", display_name: "อรุณ", avatar_url: null, xp: 2540, level: 4, streak_current: 15, rank: 5 },
-  { user_id: "mock-user-id", display_name: "Nin", avatar_url: null, xp: 2480, level: 4, streak_current: 12, rank: 6 },
-  { user_id: "u6", display_name: "Somchai", avatar_url: null, xp: 2310, level: 3, streak_current: 9, rank: 7 },
-  { user_id: "u7", display_name: "มาลี", avatar_url: null, xp: 2180, level: 3, streak_current: 7, rank: 8 },
-  { user_id: "u8", display_name: "Tom", avatar_url: null, xp: 2050, level: 3, streak_current: 5, rank: 9 },
-  { user_id: "u9", display_name: "ปกรณ์", avatar_url: null, xp: 1990, level: 3, streak_current: 4, rank: 10 },
-  { user_id: "u10", display_name: "Bee", avatar_url: null, xp: 1840, level: 2, streak_current: 3, rank: 11 },
-  { user_id: "u11", display_name: "วิชัย", avatar_url: null, xp: 1720, level: 2, streak_current: 2, rank: 12 },
-]
 
 const PIPS = [
   { icon: Medal, color: "text-orange-700" },
@@ -65,21 +49,13 @@ function Row({ r, me, t, idx }: { r: LeaderRow; me: boolean; t: T; idx: number }
 
 export default async function LeaderboardPage() {
   const t = makeT(await getLang())
-  let rows: LeaderRow[] = []
-  let currentUserId: string | null = null
-
-  if (isDevMock()) {
-    rows = MOCK_BOARD
-    currentUserId = MOCK_PROFILE.id
-  } else {
-    const supabase = await createClient()
-    const [{ data: { user } }, { data: lb }] = await Promise.all([
-      supabase.auth.getUser(),
-      supabase.rpc("get_leaderboard"),
-    ])
-    currentUserId = user?.id ?? null
-    rows = ((lb as LeaderRow[]) ?? []).sort((a, b) => a.rank - b.rank)
-  }
+  const supabase = await createClient()
+  const [{ data: { user } }, { data: lb }] = await Promise.all([
+    supabase.auth.getUser(),
+    supabase.rpc("get_leaderboard"),
+  ])
+  const currentUserId: string | null = user?.id ?? null
+  const rows: LeaderRow[] = ((lb as LeaderRow[]) ?? []).sort((a, b) => a.rank - b.rank)
 
   // Podium: display order is silver (2nd), gold (1st), bronze (3rd)
   const top3 = rows.slice(0, 3)

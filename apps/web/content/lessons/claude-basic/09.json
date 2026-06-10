@@ -1,0 +1,60 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 3 · ตอนที่ 5",
+    "title": "ใช้ Projects สำหรับงาน",
+    "body": [
+      { "text": "Projects เหมาะอย่างยิ่งสำหรับงานที่ทำซ้ำๆ หรือต้องการความสอดคล้องกัน ตัวอย่างการใช้งานจริง เช่น " },
+      { "text": "Project เขียน Content สำหรับ Blog หรือ Social Media", "bold": true },
+      { "text": " โดยใส่ Brand Voice และ Style Guide ไว้ใน Knowledge หรือ Project ด้าน Customer Support ที่ Claude ตอบคำถามลูกค้าตาม FAQ และนโยบายบริษัทที่กำหนดไว้ ช่วยให้ " },
+      { "text": "ทีมงานทุกคนได้รับ Output ที่มีมาตรฐานเดียวกัน", "bold": true }
+    ],
+    "example": "\"ใน Project นี้มีข้อมูลสินค้าทั้งหมดแล้ว ช่วยร่างคำตอบสำหรับลูกค้าที่ถามเรื่องนโยบายคืนสินค้า ให้สุภาพและกระชับ\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 3 · ตอนที่ 6",
+    "title": "ตัวอย่าง Projects ที่ใช้งานได้จริง",
+    "body": [
+      { "text": "นอกจากงาน Content และ Support แล้ว Projects ยังเหมาะกับ " },
+      { "text": "งานวิจัย การเรียน และการพัฒนาส่วนตัว", "bold": true },
+      { "text": " เช่น Project เรียนภาษาที่ Claude รู้ว่าคุณอยู่ระดับไหนและฝึกซ้อมต่อจากจุดที่หยุดไว้ หรือ Project บริหารโปรเจกต์ที่ใส่ข้อมูลทีมและ Timeline เข้าไป การมีหลาย Project แยกกันทำให้ " },
+      { "text": "ไม่ต้องผสมบริบทของงานต่างประเภทกัน", "bold": true },
+      { "text": " ทำให้ Claude โฟกัสและตอบได้แม่นยำขึ้น" }
+    ],
+    "example": "\"Project เรียนภาษาญี่ปุ่นของฉัน: ฉันเรียนมา 3 เดือนแล้ว รู้ Hiragana และ Katakana ครบแล้ว วันนี้อยากฝึก Kanji พื้นฐาน 10 ตัว\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "การแยก Projects ตามประเภทงานมีประโยชน์อย่างไร?",
+    "options": [
+      { "text": "ช่วยประหยัด Token ได้มากขึ้น" },
+      { "text": "ป้องกันการผสมบริบทของงาน ทำให้ Claude โฟกัสและตอบได้แม่นยำขึ้น", "correct": true },
+      { "text": "ทำให้ Claude ตอบเร็วขึ้น 50%" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Project ประเภทใดต่อไปนี้เหมาะสมกับการใช้งาน Claude Projects มากที่สุด?",
+    "options": [
+      { "text": "Project ถามคำถามครั้งเดียวแล้วไม่ใช้อีก" },
+      { "text": "Project เขียน Blog ที่ต้องการสไตล์และ Brand Voice สม่ำเสมอ", "correct": true },
+      { "text": "Project คำนวณตัวเลขธรรมดา" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "ถ้าต้องการให้ Claude ช่วยบริหารทีมงาน ควรใส่ข้อมูลอะไรใน Project Knowledge?",
+    "options": [
+      { "text": "ข้อมูลทีมงาน Timeline และกฎการทำงาน", "correct": true },
+      { "text": "ประวัติส่วนตัวของ Claude" },
+      { "text": "รหัสผ่านของระบบต่างๆ" }
+    ]
+  },
+  { "type": "done" }
+]

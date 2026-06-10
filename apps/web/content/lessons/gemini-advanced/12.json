@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 12 · ตอนที่ 1",
+    "title": "Vertex AI",
+    "body": [
+      { "text": "Vertex AI คือ " },
+      { "text": "แพลตฟอร์ม AI ระดับองค์กรบน Google Cloud", "bold": true },
+      { "text": " — ใช้ Gemini พร้อม enterprise features: ความปลอดภัยระดับองค์กร, MLOps, grounding กับข้อมูลบริษัท และ SLA" }
+    ],
+    "example": "\"ธนาคารรัน Gemini ผ่าน Vertex AI เพราะต้องการ data residency, audit logs และ SLA ที่ AI Studio ไม่มี\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 12 · ตอนที่ 2",
+    "title": "AI Studio vs Vertex AI",
+    "body": [
+      { "text": "เส้นแบ่งง่ายๆ: " },
+      { "text": "เริ่มต้น/prototype → AI Studio · ระบบ production ขององค์กร → Vertex AI", "bold": true },
+      { "text": " — โค้ดย้ายข้ามได้ไม่ยาก เริ่มจาก Studio แล้วโตไป Vertex เมื่อระบบจริงจังขึ้นคือเส้นทางปกติ" }
+    ],
+    "example": "\"Startup ทำ MVP บน AI Studio ฟรี → ได้ลูกค้าองค์กร → ย้ายไป Vertex AI เพื่อ compliance\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Vertex AI คืออะไร?",
+    "options": [
+      { "text": "แพลตฟอร์ม AI ระดับองค์กรบน Google Cloud", "correct": true },
+      { "text": "เกมออนไลน์" },
+      { "text": "โมเดลรุ่นเล็ก" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "ฟีเจอร์ไหนเป็นจุดเด่นของ Vertex AI?",
+    "options": [
+      { "text": "ความปลอดภัยองค์กร MLOps และ SLA", "correct": true },
+      { "text": "ใช้ฟรีไม่จำกัด" },
+      { "text": "มีสติกเกอร์" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "เมื่อไหร่ควรย้ายจาก AI Studio ไป Vertex AI?",
+    "options": [
+      { "text": "เมื่อระบบเข้าสู่ production ระดับองค์กร", "correct": true },
+      { "text": "ตั้งแต่วันแรกเสมอ" },
+      { "text": "ไม่ต้องย้ายเลย" }
+    ]
+  },
+  { "type": "done" }
+]

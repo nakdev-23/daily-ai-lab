@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
-import { isDevMock } from "@/lib/mock-user"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import {
   User, Target, Bell, Palette, Crown, AlertTriangle,
@@ -48,10 +47,8 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
   ]
 
   async function logout() {
-    if (!isDevMock()) {
-      const supabase = createClient()
-      await supabase.auth.signOut()
-    }
+    const supabase = createClient()
+    await supabase.auth.signOut()
     router.push("/login")
   }
 

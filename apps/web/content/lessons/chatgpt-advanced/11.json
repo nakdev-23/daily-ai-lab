@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advance · บทที่ 11 · ตอนที่ 1",
+    "title": "Actions & API Integration",
+    "body": [
+      { "text": "Actions ทำให้ Custom GPT " },
+      { "text": "เรียกใช้ API ภายนอกได้", "bold": true },
+      { "text": " — เช็คสต็อกจริง จองคิว ดึงข้อมูลจากระบบบริษัท โดยกำหนดผ่าน OpenAPI schema ว่า GPT เรียกอะไรได้บ้าง" }
+    ],
+    "example": "\"GPT ร้านอาหารที่เช็คโต๊ะว่างจากระบบจองจริงผ่าน API แล้วจองให้ลูกค้าได้เลยในแชท\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advance · บทที่ 11 · ตอนที่ 2",
+    "title": "ความปลอดภัยของ Actions",
+    "body": [
+      { "text": "เปิดเฉพาะ endpoint ที่จำเป็น ใช้ " },
+      { "text": "API key / OAuth และตั้งให้ขอยืนยันก่อนทำรายการสำคัญ", "bold": true },
+      { "text": " — อย่าให้ GPT ลบหรือแก้ข้อมูลได้โดยไม่มีการยืนยันจากผู้ใช้" }
+    ],
+    "example": "\"ตั้งค่า: อ่านข้อมูลได้อัตโนมัติ แต่การจอง/ยกเลิกต้องให้ผู้ใช้กดยืนยันทุกครั้ง\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Actions ใน Custom GPT ทำอะไรได้?",
+    "options": [
+      { "text": "เรียก API ภายนอกเพื่อดึงหรือส่งข้อมูลจริง", "correct": true },
+      { "text": "เปลี่ยนสีตัวอักษรในแชท" },
+      { "text": "ทำให้ตอบเร็วขึ้นเท่านั้น" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Actions กำหนดรูปแบบการเรียก API ด้วยอะไร?",
+    "options": [
+      { "text": "ไฟล์ Word ธรรมดา" },
+      { "text": "OpenAPI schema", "correct": true },
+      { "text": "ไม่ต้องกำหนด GPT เดาเอง" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "ข้อไหนคือแนวปฏิบัติด้านความปลอดภัยที่ถูกต้อง?",
+    "options": [
+      { "text": "เปิดทุก endpoint ให้ GPT ใช้อิสระ" },
+      { "text": "รายการสำคัญต้องให้ผู้ใช้กดยืนยันก่อนเสมอ", "correct": true },
+      { "text": "ฝัง API key ไว้ใน Instructions ให้ทุกคนเห็น" }
+    ]
+  },
+  { "type": "done" }
+]

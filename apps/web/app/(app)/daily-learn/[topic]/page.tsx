@@ -2,7 +2,7 @@ import { redirect } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
-import { isDevMock, MOCK_GAME_STATE } from "@/lib/mock-user"
+import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourse } from "@/lib/courses"
 import { getCourseContent, type CLesson } from "@/lib/course-content"
@@ -35,34 +35,36 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   const course = await getCourse(topic)
   if (!course) redirect("/daily-learn")
 
-  const units = await getCourseContent(topic)
+  // course_units are keyed by the course uuid, not the URL slug
+  const units = await getCourseContent(course.id)
   const flatLessons = units.flatMap((u) => u.lessons)
 
   const totalLessons = flatLessons.length || course.lessons || 10
   const xpGoal = flatLessons.reduce((s, l) => s + (l.xp || 120), 0) || totalLessons * 120
 
-  let done = 0
-  let xpEarned = 0
+  // Must match the key the lesson player saves under (slug, with id fallback)
+  const progressKey = course.slug || course.id
+  const today = new Date().toISOString().split("T")[0]
 
-  if (isDevMock()) {
-    done = Math.min(3, totalLessons)
-    xpEarned = MOCK_GAME_STATE.xp
-  } else {
-    const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-    if (user) {
-      const [{ count }, { data: g }] = await Promise.all([
-        supabase.from("user_progress")
-          .select("lesson_id", { count: "exact", head: true })
-          .eq("user_id", user.id)
-          .eq("completed", true)
-          .ilike("lesson_id", `${course.tool.toLowerCase()}%`),
-        supabase.from("game_state").select("xp").eq("user_id", user.id).single(),
-      ])
-      done = count ?? 0
-      xpEarned = g?.xp ?? 0
-    }
+  let done = 0
+  let lessonsToday = 0
+  let streak = 0
+
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (user) {
+    const [lessonsDone, { data: g }] = await Promise.all([
+      getLessonsDone(progressKey),
+      supabase.from("game_state").select("lessons_today, lessons_today_date, streak_current").eq("user_id", user.id).maybeSingle(),
+    ])
+    done = lessonsDone
+    lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
+    streak = g?.streak_current ?? 0
   }
+
+  // XP earned within this course = sum of XP for the lessons already done
+  const xpEarned = flatLessons.slice(0, done).reduce((s, l) => s + (l.xp || 120), 0)
+  const hoursLeft = Math.max(1, 24 - new Date().getHours())
 
   const colors = getToolColors(course.tool)
   const levelKey = course.level === "beginner" ? t("Beginner") : course.level === "intermediate" ? t("Intermediate") : t("Advanced")
@@ -111,21 +113,21 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
 
         <aside className="lmap-aside">
           <div className="rail-card">
-            <p className="rc-h"><CalendarDays size={17} className="text-violet-500" /> {t("Daily quests")} <span className="rc-meta"><Clock size={12} /> 11:45</span></p>
+            <p className="rc-h"><CalendarDays size={17} className="text-violet-500" /> {t("Daily quests")} <span className="rc-meta"><Clock size={12} /> {t("{n}h left", { n: hoursLeft })}</span></p>
             <div className="quest">
               <span className="qic" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}><CheckCircle2 size={20} /></span>
-              <div className="qb"><b>{t("Finish 1 lesson")}</b><div className="pbar"><i style={{ width: "100%" }} /></div></div>
-              <span className="qx">+30 XP</span>
+              <div className="qb"><b>{t("Finish 1 lesson")}</b><div className="pbar"><i style={{ width: `${Math.min(lessonsToday, 1) * 100}%` }} /></div></div>
+              <span className="qx">{Math.min(lessonsToday, 1)}/1</span>
             </div>
             <div className="quest">
               <span className="qic" style={{ background: "var(--sun-100)", color: "var(--sun-700)" }}><Zap size={20} /></span>
-              <div className="qb"><b>{t("Use {tool} 3 times", { tool: course.tool })}</b><div className="pbar"><i style={{ width: "33%" }} /></div></div>
-              <span className="qx">1/3</span>
+              <div className="qb"><b>{t("Finish {n} lessons", { n: 3 })}</b><div className="pbar"><i style={{ width: `${Math.min(100, Math.round((lessonsToday / 3) * 100))}%` }} /></div></div>
+              <span className="qx">{Math.min(lessonsToday, 3)}/3</span>
             </div>
             <div className="quest">
               <span className="qic" style={{ background: "var(--sky-100)", color: "var(--sky-500)" }}><StickyNote size={20} /></span>
-              <div className="qb"><b>{t("Save 1 note")}</b><div className="pbar"><i style={{ width: "0%" }} /></div></div>
-              <span className="qx">+20 XP</span>
+              <div className="qb"><b>{t("Keep a {n}-day streak", { n: 7 })}</b><div className="pbar"><i style={{ width: `${Math.min(100, Math.round((streak / 7) * 100))}%` }} /></div></div>
+              <span className="qx">{Math.min(streak, 7)}/7</span>
             </div>
           </div>
 

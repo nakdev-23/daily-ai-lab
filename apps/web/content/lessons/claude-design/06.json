@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · บทที่ 6 · ตอนที่ 1",
+    "title": "Onboarding Copy",
+    "body": [
+      { "text": "Onboarding ที่ดีพาผู้ใช้ถึง " },
+      { "text": "aha moment — จุดที่เห็นคุณค่าของ product ครั้งแรก — ให้เร็วที่สุด", "bold": true },
+      { "text": " ทุกหน้าจอที่ขวางทางคือโอกาสที่ผู้ใช้จะหายไป copy จึงต้องพาไปข้างหน้า ไม่ใช่อธิบายทุกฟีเจอร์" }
+    ],
+    "example": "\"แอปจดโน้ต: แทนที่จะทัวร์ 5 หน้าจอ → เปิดมาเจอ 'เขียนโน้ตแรกของคุณเลย' พร้อมช่องพิมพ์ทันที\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · บทที่ 6 · ตอนที่ 2",
+    "title": "เขียน onboarding กับ Claude",
+    "body": [
+      { "text": "บอก Claude ว่า " },
+      { "text": "aha moment ของ product คืออะไร แล้วให้ออกแบบเส้นทางสั้นที่สุดไปถึงจุดนั้น", "bold": true },
+      { "text": " — พร้อม copy แต่ละ step ที่กระตุ้นการลงมือ ไม่ใช่อธิบายเฉยๆ" }
+    ],
+    "example": "\"Product: แอปแชร์ค่าใช้จ่ายกลุ่ม / aha: เห็นยอดที่เพื่อนต้องโอนคืนอัตโนมัติ → ออกแบบ onboarding 3 steps พร้อม copy\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Aha moment คืออะไร?",
+    "options": [
+      { "text": "จุดที่ผู้ใช้เห็นคุณค่าของ product ครั้งแรก", "correct": true },
+      { "text": "หน้า loading" },
+      { "text": "ตอนจ่ายเงิน" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Onboarding ที่ดีควรเป็นอย่างไร?",
+    "options": [
+      { "text": "พาถึง aha moment ให้เร็วที่สุด", "correct": true },
+      { "text": "ทัวร์อธิบายครบทุกฟีเจอร์ก่อน" },
+      { "text": "บังคับกรอกข้อมูล 20 ช่อง" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "Copy ใน onboarding ควรมีลักษณะไหน?",
+    "options": [
+      { "text": "กระตุ้นการลงมือทำ ไม่ใช่อธิบายเฉยๆ", "correct": true },
+      { "text": "ยาวและละเอียดที่สุด" },
+      { "text": "ใช้ศัพท์เทคนิคเยอะๆ" }
+    ]
+  },
+  { "type": "done" }
+]

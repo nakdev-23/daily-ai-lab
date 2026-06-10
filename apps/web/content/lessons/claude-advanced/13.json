@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 13 · ตอนที่ 1",
+    "title": "Claude for Teams",
+    "body": [
+      { "text": "แผน Team ให้ " },
+      { "text": "workspace ร่วม: แชร์ Projects, จัดการสมาชิก และข้อมูลไม่ถูกใช้เทรนโมเดล", "bold": true },
+      { "text": " — ทีมเดียวกันใช้ Project Knowledge ชุดเดียวกัน ทุกคนได้คำตอบบนบริบทเดียวกัน" }
+    ],
+    "example": "\"ทีม content สร้าง Project 'Brand Guidelines' ใส่ tone of voice ทุกคนเขียนงานสไตล์เดียวกันอัตโนมัติ\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 13 · ตอนที่ 2",
+    "title": "จัด workspace ให้ทีมใช้จริง",
+    "body": [
+      { "text": "แนวทางที่ได้ผล: " },
+      { "text": "สร้าง Project ต่องานหลัก ไม่ใช่ต่อคน + อัปเดต Knowledge เป็นประจำ + ตั้งเจ้าของแต่ละ Project", "bold": true },
+      { "text": " — Project ที่ไม่มีเจ้าของจะกลายเป็นข้อมูลเก่าที่ทำให้ AI ตอบผิด" }
+    ],
+    "example": "\"Projects ของทีม: 'Support FAQ' (เจ้าของ: หัวหน้า CS) / 'Sales Playbook' (เจ้าของ: ผจก.ขาย)\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "แผน Team ให้อะไรที่แผนเดี่ยวไม่มี?",
+    "options": [
+      { "text": "workspace ร่วมและการแชร์ Projects ในทีม", "correct": true },
+      { "text": "โมเดลที่ฉลาดกว่าแบบลับ" },
+      { "text": "ใช้ฟรีตลอดชีพ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "ควรสร้าง Project อย่างไร?",
+    "options": [
+      { "text": "ต่องานหลัก พร้อมตั้งเจ้าของดูแล", "correct": true },
+      { "text": "คนละ Project แยกกันหมด" },
+      { "text": "Project เดียวใส่ทุกอย่าง" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "Project ที่ไม่มีคนดูแลจะเกิดปัญหาอะไร?",
+    "options": [
+      { "text": "Knowledge เก่าทำให้ AI ตอบข้อมูลผิด", "correct": true },
+      { "text": "ถูกลบอัตโนมัติ" },
+      { "text": "ไม่มีปัญหา" }
+    ]
+  },
+  { "type": "done" }
+]

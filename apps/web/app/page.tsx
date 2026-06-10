@@ -53,25 +53,6 @@ export default async function HomePage() {
             <p className="lead">{t("Master ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, XP, streaks & adorable rewards — ")}<strong style={{ color: "var(--text-strong)" }}>{t("turn AI into a daily habit")}</strong></p>
             <div className="hero-cta">
               <Link className="btn btn--violet lg" href="/login">{t("Start learning free")}</Link>
-              <Link className="btn-play" href="/learn/chatgpt/beginner/intro-to-chatgpt">
-                <span className="play-icon">
-                  <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" /></svg>
-                </span>
-                {t("Try a lesson")}
-              </Link>
-            </div>
-            <div className="trust">
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span className="faces">
-                  <span className="face" style={{ background: "var(--hero-500)" }}>ก</span>
-                  <span className="face" style={{ background: "var(--punch-500)" }}>N</span>
-                  <span className="face" style={{ background: "var(--mint-500)" }}>พ</span>
-                  <span className="face" style={{ background: "var(--pink-400)" }}>J</span>
-                  <span className="face" style={{ background: "var(--sun-500)" }}>A</span>
-                </span>
-                <span className="trust-txt"><b data-count="120" data-suffix="K+">120K+</b><br />{t("learners worldwide")}</span>
-              </div>
-              <span className="trust-txt"><span className="stars">★★★★★</span><br /><b data-count="4.9">4.9</b> {t("from 12,540 reviews")}</span>
             </div>
           </div>
 
@@ -339,32 +320,15 @@ export default async function HomePage() {
 
       {/* ========================== FOOTER ========================== */}
       <footer className="foot">
-        <div className="wrap">
-          <div className="foot-grid">
-            <div>
-              <div className="brand" style={{ cursor: "default" }}>
-                <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={50} height={50} /></div>
-                <div><div className="brand-name" style={{ color: "#fff" }}>Daily AI Lab</div>
-                  <div className="brand-sub" style={{ color: "var(--sun-300)" }}>{t("AI, every day")}</div></div>
-              </div>
-              <p className="blurb">{t("The fun, friendly way to learn AI tools — 15 minutes a day, one lab at a time.")}</p>
-            </div>
-            <div>
-              <h5>{t("Learn")}</h5>
-              <Link href="/docs">{t("All tools")}</Link><Link href="/paths">{t("Career paths")}</Link><a href="#how">{t("How it works")}</a><Link href="/docs">{t("Courses")}</Link>
-            </div>
-            <div>
-              <h5>{t("Company")}</h5>
-              <Link href="/about">{t("About")}</Link><a href="#">{t("Careers")}</a><a href="#">{t("Blog")}</a><a href="#">{t("Contact")}</a>
-            </div>
-            <div>
-              <h5>{t("Get started")}</h5>
-              <a href="#pricing">{t("Pricing")}</a><Link href="/login">{t("Log in")}</Link><Link href="/login">{t("Sign up free")}</Link><Link href="/dashboard">{t("Dashboard")}</Link>
-            </div>
+        <div className="wrap foot-bar">
+          <div className="brand" style={{ cursor: "default" }}>
+            <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={40} height={40} /></div>
+            <div className="brand-name" style={{ color: "#fff", fontSize: 15 }}>Daily AI Lab</div>
           </div>
-          <div className="foot-bottom">
-            <span>© 2026 Daily AI Lab · {t("Learn AI every day")}</span>
-            <span style={{ display: "flex", gap: 20 }}><Link href="/privacy" style={{ margin: 0 }}>{t("Privacy")}</Link><Link href="/terms" style={{ margin: 0 }}>{t("Terms")}</Link></span>
+          <span className="foot-copy">© 2026 Daily AI Lab</span>
+          <div className="foot-legal">
+            <Link href="/privacy">{t("Privacy")}</Link>
+            <Link href="/terms">{t("Terms")}</Link>
           </div>
         </div>
       </footer>

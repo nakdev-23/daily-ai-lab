@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
-import { isDevMock, MOCK_PROFILE, MOCK_GAME_STATE } from "@/lib/mock-user"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourses } from "@/lib/courses"
 import { getToolColors } from "@/lib/tool-colors"
@@ -15,47 +14,38 @@ export default async function DailyLearnPage() {
   const lang = await getLang()
   const t = makeT(lang)
   let name = "Nin", streak = 0, lessonsToday = 0
-  let completedByTool: Record<string, number> = {}
+  const doneByCourse: Record<string, number> = {}
+  const today = new Date().toISOString().split("T")[0]
 
-  if (isDevMock()) {
-    name = MOCK_PROFILE.display_name ?? "Nin"
-    streak = MOCK_GAME_STATE.streak_current
-    lessonsToday = MOCK_GAME_STATE.lessons_today
-  } else {
-    const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-    if (user) {
-      const [{ data: p }, { data: g }, { data: progress }] = await Promise.all([
-        supabase.from("profiles").select("display_name").eq("id", user.id).single(),
-        supabase.from("game_state").select("streak_current, lessons_today").eq("user_id", user.id).single(),
-        supabase.from("user_progress")
-          .select("lesson_id, lessons!inner(tool)")
-          .eq("user_id", user.id)
-          .eq("completed", true),
-      ])
-      name = p?.display_name ?? "Nin"
-      streak = g?.streak_current ?? 0
-      lessonsToday = g?.lessons_today ?? 0
-      for (const row of (progress ?? []) as unknown as Array<{ lesson_id: string; lessons: { tool: string } }>) {
-        const tool = row.lessons?.tool?.toLowerCase()
-        if (tool) completedByTool[tool] = (completedByTool[tool] ?? 0) + 1
-      }
+  const courses = await getCourses()
+  const published = courses.filter((c) => c.status === "published")
+
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (user) {
+    const [{ data: p }, { data: g }, { data: progress }] = await Promise.all([
+      supabase.from("profiles").select("display_name").eq("id", user.id).single(),
+      supabase.from("game_state").select("streak_current, lessons_today, lessons_today_date").eq("user_id", user.id).maybeSingle(),
+      supabase.from("course_progress").select("course_id, lessons_done").eq("user_id", user.id),
+    ])
+    name = p?.display_name ?? "Nin"
+    streak = g?.streak_current ?? 0
+    lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
+    for (const row of (progress ?? []) as Array<{ course_id: string; lessons_done: number }>) {
+      doneByCourse[row.course_id] = row.lessons_done
     }
   }
 
   const goalPct = Math.min(100, Math.round((lessonsToday / GOAL_LESSONS) * 100))
 
-  const courses = await getCourses()
-  const published = courses.filter((c) => c.status === "published")
-
   const TOPICS = published.map((c) => {
     const colors = getToolColors(c.tool)
-    const done = completedByTool[c.tool.toLowerCase()] ?? 0
+    const done = Math.min(doneByCourse[c.slug || c.id] ?? 0, c.lessons)
     const total = c.lessons
     const pct = total > 0 ? Math.round((done / total) * 100) : 0
     const levelKey = c.level === "beginner" ? "Beginner" : c.level === "intermediate" ? "Intermediate" : "Advanced"
     return {
-      id: c.id, tool: c.tool, fallback: colors.fallback, bg: colors.bg, title: c.title,
+      id: c.slug || c.id, tool: c.tool, fallback: colors.fallback, bg: colors.bg, title: c.title,
       dot: colors.dot, level: t(levelKey), desc: c.description,
       n: `${done} / ${total} ${t("lessons")}`, pct,
       soft: colors.soft, sh: colors.sh, blob: colors.blob, bar: colors.bar, bar2: colors.bar2,

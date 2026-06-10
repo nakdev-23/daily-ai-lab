@@ -1,0 +1,61 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 5 · ตอนที่ 3",
+    "title": "Claude Mobile App",
+    "body": [
+      { "text": "Anthropic มีแอปพลิเคชัน Claude สำหรับ " },
+      { "text": "iOS และ Android", "bold": true },
+      { "text": " ที่ให้ประสบการณ์เต็มรูปแบบบนมือถือ คุณสามารถเริ่มสนทนาใหม่ เข้าถึง Projects ที่สร้างไว้บน Desktop ได้ รวมถึงอัปโหลดรูปภาพจาก Camera หรือ Gallery ได้โดยตรง ฟีเจอร์ " },
+      { "text": "Voice Input", "bold": true },
+      { "text": " บน Mobile ช่วยให้พูดคุยกับ Claude ได้สะดวกในขณะเดินทาง โดยไม่ต้องพิมพ์" }
+    ],
+    "example": "\"[ถ่ายรูปเมนูอาหารญี่ปุ่น] ช่วยแปลเมนูนี้เป็นภาษาไทยและแนะนำจานที่ควรลองสำหรับมือใหม่หน่อย\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 5 · ตอนที่ 4",
+    "title": "ใช้ Claude Mobile ให้เป็นประโยชน์",
+    "body": [
+      { "text": "Claude Mobile เหมาะมากสำหรับ Use Case ที่ต้องการ " },
+      { "text": "ความสะดวกและรวดเร็วระหว่างวัน", "bold": true },
+      { "text": " เช่น ถ่ายรูปเอกสารแล้วให้ Claude สรุป ถามคำถามด้วยเสียงขณะขับรถ หรือ Copy-Paste ข้อความจากแอปอื่นมาให้ Claude ช่วยแก้ไข บทสนทนาทุกอย่างจะ " },
+      { "text": "Sync ข้ามอุปกรณ์อัตโนมัติ", "bold": true },
+      { "text": " ระหว่าง Mobile และ Desktop ทำให้ทำงานต่อเนื่องได้อย่างไร้รอยต่อ" }
+    ],
+    "example": "\"[ถ่ายรูปสัญญาภาษาอังกฤษ] ช่วยอธิบายเงื่อนไขหลักของสัญญาฉบับนี้เป็นภาษาไทยแบบเข้าใจง่ายๆ\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Claude Mobile App มีให้ใช้งานบนระบบปฏิบัติการใดบ้าง?",
+    "options": [
+      { "text": "iOS เท่านั้น" },
+      { "text": "iOS และ Android", "correct": true },
+      { "text": "Android และ Windows Phone" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "ฟีเจอร์ Voice Input ใน Claude Mobile มีประโยชน์อย่างไร?",
+    "options": [
+      { "text": "ให้ Claude ออกเสียงคำตอบ" },
+      { "text": "ช่วยให้พูดคุยกับ Claude โดยไม่ต้องพิมพ์ เหมาะสำหรับระหว่างเดินทาง", "correct": true },
+      { "text": "แปลงเสียงเป็นไฟล์ MP3" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "บทสนทนาที่เริ่มใน Claude Mobile จะปรากฏบน Claude Desktop หรือไม่?",
+    "options": [
+      { "text": "ไม่ Mobile และ Desktop แยกกันโดยสิ้นเชิง" },
+      { "text": "ใช่ บทสนทนา Sync ข้ามอุปกรณ์อัตโนมัติ", "correct": true },
+      { "text": "ได้เฉพาะแผน Pro ขึ้นไปเท่านั้น" }
+    ]
+  },
+  { "type": "done" }
+]

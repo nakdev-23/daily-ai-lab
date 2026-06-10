@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/server"
-import { isDevMock } from "@/lib/mock-user"
+import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourses } from "@/lib/courses"
 import { getCourseContent } from "@/lib/course-content"
@@ -32,25 +31,15 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   const colors = getToolColors(course.tool)
   const units = await getCourseContent(course.id)
 
-  let doneCount = 0
-  if (!isDevMock()) {
-    const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-    if (user) {
-      const { count } = await supabase.from("user_progress")
-        .select("lesson_id", { count: "exact", head: true })
-        .eq("user_id", user.id)
-        .eq("completed", true)
-        .ilike("lesson_id", `${course.tool.toLowerCase()}%`)
-      doneCount = count ?? 0
-    }
-  }
+  // Progress is keyed by slug (course_progress.course_id)
+  const progressKey = course.slug || course.id
+  const doneCount = await getLessonsDone(progressKey)
 
   const firstUnit = units[0]
   const firstLesson = firstUnit?.lessons[0]
   const startHref = firstLesson
-    ? `/daily-learn/${course.id}/1`
-    : `/daily-learn/${course.id}`
+    ? `/daily-learn/${progressKey}/1`
+    : `/daily-learn/${progressKey}`
 
   const levelKey = course.level === "beginner" ? t("Beginner") : course.level === "intermediate" ? t("Intermediate") : t("Advanced")
   const hoursStr = `~${Math.ceil((course.lessons || units.flatMap(u => u.lessons).length) * 12 / 60)}${t("h")}`

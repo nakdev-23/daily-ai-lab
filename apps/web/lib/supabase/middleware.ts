@@ -7,14 +7,6 @@ const PROTECTED = ["/daily-learn", "/dashboard", "/learn", "/docs", "/paths", "/
 // Auth pages — bounce signed-in users away from these.
 const AUTH_PAGES = ["/login", "/register"]
 
-function isDevMockEnv() {
-  return (
-    process.env.NODE_ENV === "development" &&
-    (!process.env.NEXT_PUBLIC_SUPABASE_URL ||
-      process.env.NEXT_PUBLIC_SUPABASE_URL.includes("your-project"))
-  )
-}
-
 const matches = (path: string, list: string[]) =>
   list.some((p) => path === p || path.startsWith(p + "/"))
 
@@ -34,10 +26,6 @@ export async function updateSession(request: NextRequest) {
       headers: { "Retry-After": String(Math.max(1, Math.ceil((reset - Date.now()) / 1000))) },
     })
   }
-
-  // Dev mock mode: a mock user is always "signed in" — skip auth guarding so the
-  // app is browsable without real Supabase credentials.
-  if (isDevMockEnv()) return NextResponse.next({ request })
 
   let response = NextResponse.next({ request })
 

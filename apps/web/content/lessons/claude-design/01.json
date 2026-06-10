@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · บทที่ 1 · ตอนที่ 1",
+    "title": "AI ในกระบวนการออกแบบ",
+    "body": [
+      { "text": "Claude ไม่ได้แทนที่ designer แต่ " },
+      { "text": "เร่งขั้นตอนที่ใช้เวลานานที่สุด", "bold": true },
+      { "text": " — เช่น เขียน brief, ระดมไอเดีย, เขียน copy และสร้าง documentation ให้เร็วขึ้นหลายเท่า" }
+    ],
+    "example": "\"ช่วยเขียน creative brief สำหรับ rebrand แอปสุขภาพ กลุ่มเป้าหมายอายุ 25-40 ปี\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · บทที่ 1 · ตอนที่ 2",
+    "title": "Design Brief ด้วย AI",
+    "body": [
+      { "text": "Brief ที่ดีต้องระบุ " },
+      { "text": "ปัญหา กลุ่มเป้าหมาย เป้าหมาย และข้อจำกัด", "bold": true },
+      { "text": " — บอก Claude ถึงสิ่งเหล่านี้ แล้วให้ช่วยเขียน brief ที่สมบูรณ์และชัดเจน" }
+    ],
+    "example": "\"เขียน design brief สำหรับหน้า landing page ขายคอร์สออนไลน์ กลุ่มเป้าหมาย freelancer ไทย อายุ 22-35\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Claude ช่วย designer ได้ดีที่สุดในด้านใด?",
+    "options": [
+      { "text": "สร้างภาพ mockup แทน Figma" },
+      { "text": "เร่งขั้นตอน brief, copy, ระดมไอเดีย และ documentation", "correct": true },
+      { "text": "เลือก font ให้อัตโนมัติ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Design Brief ควรมีองค์ประกอบอะไรบ้าง?",
+    "options": [
+      { "text": "ชื่อ designer และ deadline เท่านั้น" },
+      { "text": "ปัญหา กลุ่มเป้าหมาย เป้าหมาย และข้อจำกัด", "correct": true },
+      { "text": "ราคาและงบประมาณ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "Claude แทนที่ designer ได้หรือไม่?",
+    "options": [
+      { "text": "ได้ ในทุกด้าน" },
+      { "text": "ไม่ได้ Claude ช่วยเร่งงาน แต่ judgment และ creativity ยังต้องการ designer", "correct": true },
+      { "text": "ได้ สำหรับงาน logo เท่านั้น" }
+    ]
+  },
+  { "type": "done" }
+]

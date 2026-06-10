@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT พื้นฐาน · บทที่ 4 · ตอนที่ 1",
+    "title": "Memory ใน ChatGPT คืออะไร?",
+    "body": [
+      { "text": "ฟีเจอร์ " },
+      { "text": "Memory", "bold": true },
+      { "text": " ช่วยให้ ChatGPT จดจำข้อมูลสำคัญเกี่ยวกับเราข้ามบทสนทนา เช่น ชื่อ อาชีพ ความชอบ หรือเป้าหมาย ทำให้ไม่ต้องแนะนำตัวซ้ำทุกครั้งที่เริ่มแชทใหม่" }
+    ],
+    "example": "\"จำไว้ว่าฉันเป็นครูสอนภาษาอังกฤษระดับมัธยม และชอบใช้ตัวอย่างจากชีวิตประจำวัน\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT พื้นฐาน · บทที่ 4 · ตอนที่ 2",
+    "title": "จัดการ Memory ของ ChatGPT",
+    "body": [
+      { "text": "เราสามารถ " },
+      { "text": "ดู แก้ไข หรือลบ Memory", "bold": true },
+      { "text": " ได้ที่เมนู Settings > Personalization > Memory ChatGPT จะแสดงรายการสิ่งที่จดจำไว้ทั้งหมด และเราควบคุมได้ว่าต้องการให้จำหรือลืมอะไร" }
+    ],
+    "example": "\"ลืมข้อมูลเกี่ยวกับโปรเจกต์เก่าของฉันได้เลย และจำไว้ว่าตอนนี้ฉันทำงานในอุตสาหกรรม fintech\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "ฟีเจอร์ Memory ใน ChatGPT ช่วยอะไร?",
+    "options": [
+      { "text": "ช่วยให้ ChatGPT ตอบเร็วขึ้น" },
+      { "text": "ช่วยให้ ChatGPT จดจำข้อมูลเราข้ามบทสนทนา ไม่ต้องแนะนำตัวซ้ำ", "correct": true },
+      { "text": "ช่วยให้ ChatGPT ค้นหาข้อมูลจากอินเทอร์เน็ตได้" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "จะจัดการ Memory ของ ChatGPT ได้ที่ไหน?",
+    "options": [
+      { "text": "Settings > Personalization > Memory", "correct": true },
+      { "text": "Settings > Account > Privacy" },
+      { "text": "Settings > Model > Preferences" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "ตัวอย่างข้อมูลที่ควรให้ ChatGPT จดจำคืออะไร?",
+    "options": [
+      { "text": "รหัสผ่านและข้อมูลส่วนตัวที่สำคัญ" },
+      { "text": "อาชีพ ความชอบ และเป้าหมายที่เกี่ยวข้องกับงาน", "correct": true },
+      { "text": "ข้อมูลบัตรเครดิต" }
+    ]
+  },
+  { "type": "done" }
+]

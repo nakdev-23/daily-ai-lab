@@ -1,0 +1,57 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 14 · ตอนที่ 1",
+    "title": "Smart Features",
+    "body": [
+      { "text": "ฟีเจอร์อัจฉริยะที่ทำงานเงียบๆ: " },
+      { "text": "Smart Reply/Compose ใน Gmail, Smart Fill ใน Sheets, สรุปอัตโนมัติใน Docs", "bold": true },
+      { "text": " — ของเล็กๆ ที่รวมกันแล้วประหยัดเวลาหลายชั่วโมงต่อสัปดาห์" }
+    ],
+    "example": "\"Smart Fill: พิมพ์แยกชื่อ-นามสกุล 2 แถวแรก Sheets เห็น pattern แล้วเติมที่เหลือให้ทั้งคอลัมน์\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 14 · ตอนที่ 2",
+    "title": "ตั้งค่าให้เหมาะกับเรา",
+    "body": [
+      { "text": "Smart features ปรับแต่งได้: " },
+      { "text": "เปิด/ปิดรายฟีเจอร์ใน Settings ทั้ง Gmail และ Workspace", "bold": true },
+      { "text": " — บางคนชอบให้ช่วยเต็มที่ บางงาน (เช่น อีเมลละเอียดอ่อน) ควรปิดเพื่อพิมพ์เองทุกคำ เลือกให้เหมาะกับบริบท" }
+    ],
+    "example": "\"ทีมขายเปิด Smart Compose เต็มที่ / ทีมกฎหมายปิดในอีเมลสัญญา เพื่อความแม่นยำของถ้อยคำ\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 3",
+    "question": "Smart Fill ใน Sheets ทำอะไร?",
+    "options": [
+      { "text": "เห็น pattern จากตัวอย่างแล้วเติมข้อมูลที่เหลือให้", "correct": true },
+      { "text": "เติมสีตาราง" },
+      { "text": "ลบข้อมูลซ้ำ" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 3",
+    "question": "Smart features ปิดได้ไหม?",
+    "options": [
+      { "text": "ได้ ปรับรายฟีเจอร์ใน Settings", "correct": true },
+      { "text": "ปิดไม่ได้เลย" },
+      { "text": "ต้องลบบัญชีถึงจะปิด" }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 3",
+    "question": "งานแบบไหนอาจควรปิด Smart Compose?",
+    "options": [
+      { "text": "อีเมลละเอียดอ่อนที่ทุกคำต้องแม่นยำ", "correct": true },
+      { "text": "อีเมลนัดกินข้าว" },
+      { "text": "ไม่มีงานไหนควรปิด" }
+    ]
+  },
+  { "type": "done" }
+]

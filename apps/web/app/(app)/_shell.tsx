@@ -7,7 +7,6 @@ import { usePathname, useRouter } from "next/navigation"
 import LangToggle from "@/components/lang-toggle"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import { createClient } from "@/lib/supabase/client"
-import { isDevMock } from "@/lib/mock-user"
 import {
   GraduationCap, Rocket, BookOpen, Trophy, User, Settings, Shield,
   Crown, Flame, Zap, Heart, Menu, PanelLeftClose, PanelLeftOpen, LogOut,
@@ -81,10 +80,8 @@ export default function AppShell({ children, displayName, role, xp, hearts, stre
 
   async function logout() {
     setUserMenu(false)
-    if (!isDevMock()) {
-      const supabase = createClient()
-      await supabase.auth.signOut()
-    }
+    const supabase = createClient()
+    await supabase.auth.signOut()
     router.push("/login")
   }
 

@@ -108,6 +108,7 @@ create policy "users can insert own game state" on game_state for insert with ch
 -- ─────────────────────────────────────────────
 create table courses (
   id          uuid primary key default uuid_generate_v4(),
+  slug        text unique,  -- human-readable ID used in URLs and content files (e.g. "chatgpt-basic")
   title       text not null,
   description text default '',
   tool        text not null default 'ChatGPT',
@@ -193,6 +194,29 @@ create table user_progress (
 
 alter table user_progress enable row level security;
 create policy "users can manage own progress" on user_progress for all using (auth.uid() = user_id);
+
+-- ─────────────────────────────────────────────
+-- COURSE PROGRESS (file-based lesson system)
+-- Tracks how many lessons a user has completed per course, keyed by slug.
+-- No FK to lessons table — avoids constraint issues with file-based content.
+-- ─────────────────────────────────────────────
+create table course_progress (
+  user_id      uuid not null references auth.users(id) on delete cascade,
+  course_id    text not null,  -- matches courses.slug, e.g. "chatgpt-basic"
+  lessons_done int  not null default 0,
+  updated_at   timestamptz default now(),
+  primary key  (user_id, course_id)
+);
+
+alter table course_progress enable row level security;
+create policy "users can read own course progress"   on course_progress for select using (auth.uid() = user_id);
+create policy "users can upsert own course progress" on course_progress for insert with check (auth.uid() = user_id);
+create policy "users can update own course progress" on course_progress for update using (auth.uid() = user_id);
+
+-- Atomic lesson completion: marks progress and awards XP / streak / daily
+-- counter in one transaction. See migrations/003_complete_lesson.sql for the
+-- canonical definition (kept in sync here for reference).
+-- complete_lesson(p_course_id text, p_lesson_num int, p_xp int) returns boolean
 
 -- ─────────────────────────────────────────────
 -- BADGES

@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation"
-import { isDevMock, MOCK_PROFILE, type Role, type Plan } from "./mock-user"
 import { createClient } from "./supabase/server"
 
-export type { Role, Plan }
+export type Role = "user" | "admin"
+export type Plan = "free" | "pro"
 
 export type SessionProfile = {
   id: string
@@ -12,17 +12,8 @@ export type SessionProfile = {
   plan: Plan
 }
 
-/** Current signed-in profile (mock-aware). Returns null if not signed in. */
+/** Current signed-in profile. Returns null if not signed in. */
 export async function getProfile(): Promise<SessionProfile | null> {
-  if (isDevMock()) {
-    return {
-      id: MOCK_PROFILE.id,
-      displayName: MOCK_PROFILE.display_name ?? "นักเรียน",
-      avatarUrl: MOCK_PROFILE.avatar_url,
-      role: MOCK_PROFILE.role,
-      plan: MOCK_PROFILE.plan,
-    }
-  }
   const supabase = await createClient()
   const {
     data: { user },

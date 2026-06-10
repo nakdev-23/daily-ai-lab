@@ -156,7 +156,7 @@ html { scroll-behavior: smooth; }
 .dlab-home .link-btn { background: none; border: 0; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--text-strong); }
 
 /* ===================== HERO ===================== */
-.dlab-home .hero { position: relative; padding: 76px 0 72px;
+.dlab-home .hero { position: relative; padding: 76px 0 20px;
   background:
     radial-gradient(ellipse 130% 72% at 74% -6%, rgba(178,136,255,.54), transparent 50%),
     radial-gradient(ellipse 80% 70% at 110% 56%, rgba(255,178,210,.3), transparent 50%),
@@ -266,7 +266,7 @@ html.js .dlab-home .stage .fcard.badge { animation-delay: .46s, -0.8s; }
 @keyframes homeCardIn { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: none; } }
 
 /* ===================== MARQUEE ===================== */
-.dlab-home .marquee { overflow: hidden; padding: 26px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.dlab-home .marquee { overflow: hidden; padding: 0 0 26px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .dlab-home .marquee-track { display: flex; gap: 18px; width: max-content; animation: slide 26s linear infinite; }
 .dlab-home .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes slide { to { transform: translateX(-50%); } }
@@ -622,12 +622,13 @@ html.js .dlab-home .stage .fcard.badge { animation-delay: .46s, -0.8s; }
 
 /* ===================== FOOTER ===================== */
 .dlab-home footer.foot { background: var(--cloud-900); color: var(--cloud-300); margin-top: 0; position: relative; }
-.dlab-home .foot-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 36px; padding: 60px 0 38px; }
-.dlab-home .foot h5 { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: #fff; margin: 0 0 16px; letter-spacing: .03em; }
-.dlab-home .foot a { min-height: 36px; display: flex; align-items: center; color: var(--cloud-400); font-size: 14px; margin-bottom: 2px; }
-.dlab-home .foot a:hover { color: var(--sun-300); }
-.dlab-home .foot .blurb { font-size: 14px; line-height: 1.6; color: var(--cloud-400); max-width: 290px; margin: 16px 0 0; }
-.dlab-home .foot-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 22px 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--cloud-500); flex-wrap: wrap; gap: 12px; }
+.dlab-home .foot-bar { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+.dlab-home .foot-bar .brand { gap: 10px; cursor: default; }
+.dlab-home .foot-bar .brand-badge { width: 36px; height: 36px; }
+.dlab-home .foot-copy { position: absolute; left: 50%; transform: translateX(-50%); font-size: 13px; color: var(--cloud-500); white-space: nowrap; }
+.dlab-home .foot-legal { display: flex; align-items: center; gap: 20px; font-size: 13px; }
+.dlab-home .foot-legal a { color: var(--cloud-400); text-decoration: none; transition: color .15s; }
+.dlab-home .foot-legal a:hover { color: var(--sun-300); }
 
 /* ===================== REVEAL ===================== */
 .dlab-home .reveal { opacity: 1; transform: none; }
@@ -759,8 +760,7 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .path-slide { min-height: 238px; padding: 22px; }
   .dlab-home .paths-proof { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 12px; }
   .dlab-home .paths-proof span { justify-content: center; }
-  .dlab-home .foot-grid { grid-template-columns: 1fr 1fr; }
-  .dlab-home .foot a { min-height: 40px; }
+  .dlab-home .foot-bar { flex-wrap: wrap; gap: 12px; padding: 16px 0; }
   .dlab-home .fcard.badge, .dlab-home .fcard.streak, .dlab-home .fcard.mission { display: none; }
   .dlab-home .fcard.xp { right: 0; top: 16px; width: 168px; }
   .dlab-home .fcard.hearts { right: 0; transform: translateY(-50%); }

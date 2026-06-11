@@ -6,6 +6,7 @@ import CareerPathsCarousel from "@/components/career-paths-carousel"
 import LangToggle from "@/components/lang-toggle"
 import ToolLogo from "@/components/tool-logo"
 import { getLang, makeT } from "@/lib/i18n"
+import { getSystemSettings } from "@/lib/system-settings"
 import {
   Flame, Zap, Award, Sparkles, Boxes, Target, Rocket, Heart,
   BookOpen, CheckCircle2, Crown, RotateCcw,
@@ -15,8 +16,14 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 const iconStyle = { display: "inline-block", verticalAlign: "-2px" } as const
 
 export default async function HomePage() {
-  const lang = await getLang()
+  const [lang, settings] = await Promise.all([getLang(), getSystemSettings()])
   const t = makeT(lang)
+
+  // Pricing is whatever the admin set in Admin › System (single source of truth).
+  const priceMonth = settings.proPriceMonth
+  const priceYear = settings.proPriceYear
+  const yearlyPerMonth = Math.round(priceYear / 12)
+  const savePct = priceMonth > 0 ? Math.round((1 - priceYear / (priceMonth * 12)) * 100) : 0
 
   return (
     <div className="dlab-home">
@@ -273,33 +280,71 @@ export default async function HomePage() {
             <h2 className="display">{t("Start free. Go Pro when you're ready.")}</h2>
             <p>{t("No credit card to begin. Cancel anytime.")}</p>
           </div>
-          <div className="price-grid">
-            <div className="plan free glass reveal">
-              <div className="pname" style={{ color: "var(--text-strong)" }}>{t("Free")}</div>
-              <div className="pdesc" style={{ color: "var(--text-muted)" }}>{t("For getting started")}</div>
-              <div className="pcost" style={{ color: "var(--text-strong)" }}>฿0</div>
-              <ul className="plist">
-                <li><span className="ck" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}>✓</span> {t("3 lessons per day")}</li>
-                <li><span className="ck" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}>✓</span> {t("XP, streaks & leaderboard")}</li>
-                <li><span className="ck" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}>✓</span> {t("Beginner docs library")}</li>
-                <li><span className="ck" style={{ background: "var(--cloud-100)", color: "var(--cloud-400)" }}>✕</span> <span style={{ color: "var(--text-muted)" }}>{t("Career paths")}</span></li>
-                <li><span className="ck" style={{ background: "var(--cloud-100)", color: "var(--cloud-400)" }}>✕</span> <span style={{ color: "var(--text-muted)" }}>{t("Unlimited hearts")}</span></li>
-              </ul>
-              <Link className="btn btn--ghost lg" style={{ width: "100%" }} href="/login">{t("Start free")}</Link>
+          <div className="pricing-stage reveal">
+            <input className="billing-toggle" id="billing-yearly" type="checkbox" aria-label="Use yearly billing" />
+            <div className="billing-row">
+              <label className="bill-label bill-month" htmlFor="billing-yearly">{t("Monthly")}</label>
+              <label className="bill-switch" htmlFor="billing-yearly">
+                <span className="bill-thumb" />
+                <span className="bill-sparks" />
+              </label>
+              <label className="bill-label bill-year" htmlFor="billing-yearly">
+                {t("Yearly")} <span>{t("Save 20%")}</span>
+              </label>
             </div>
-            <div className="plan pro reveal">
-              <span className="badge-pop">★ {t("Most popular")}</span>
-              <div className="pname">Pro</div>
-              <div className="pdesc" style={{ color: "var(--hero-100)" }}>{t("For serious learners")}</div>
-              <div className="pcost">฿199<small style={{ color: "var(--hero-100)" }}> /{t("mo")}</small></div>
-              <ul className="plist">
-                <li><span className="ck" style={{ background: "rgba(255,255,255,.2)", color: "var(--sun-300)" }}>✓</span> {t("Unlimited lessons")}</li>
-                <li><span className="ck" style={{ background: "rgba(255,255,255,.2)", color: "var(--sun-300)" }}>✓</span> {t("All career paths")}</li>
-                <li><span className="ck" style={{ background: "rgba(255,255,255,.2)", color: "var(--sun-300)" }}>✓</span> {t("Full documentation library")}</li>
-                <li><span className="ck" style={{ background: "rgba(255,255,255,.2)", color: "var(--sun-300)" }}>✓</span> {t("Unlimited hearts")}</li>
-                <li><span className="ck" style={{ background: "rgba(255,255,255,.2)", color: "var(--sun-300)" }}>✓</span> {t("Streak freeze & Pro badges")}</li>
-              </ul>
-              <Link className="btn btn--sun lg" style={{ width: "100%" }} href="/login"><Crown size={18} /> {t("Go Pro")}</Link>
+
+            <div className="price-grid">
+              <div className="plan free glass">
+                <div className="plan-orbit" aria-hidden />
+                <div className="p-top">
+                  <div>
+                    <div className="pname" style={{ color: "var(--text-strong)" }}>{t("Free")}</div>
+                    <div className="pdesc" style={{ color: "var(--text-muted)" }}>{t("For getting started")}</div>
+                  </div>
+                  <span className="plan-chip">{t("Ready instantly")}</span>
+                </div>
+                <div className="pcost" style={{ color: "var(--text-strong)" }}>
+                  <span className="price-current">฿0</span>
+                </div>
+                <p className="pbill">{t("Free forever for daily practice")}</p>
+                <ul className="plist">
+                  <li><span className="ck ok">✓</span> {t("3 lessons per day")}</li>
+                  <li><span className="ck ok">✓</span> {t("XP, streaks & leaderboard")}</li>
+                  <li><span className="ck ok">✓</span> {t("Beginner docs library")}</li>
+                  <li className="muted"><span className="ck no">×</span> <span>{t("Career paths")}</span></li>
+                  <li className="muted"><span className="ck no">×</span> <span>{t("Unlimited hearts")}</span></li>
+                </ul>
+                <Link className="btn btn--ghost lg" style={{ width: "100%" }} href="/login">{t("Start free")}</Link>
+              </div>
+
+              <div className="plan pro">
+                <span className="badge-pop">★ {t("Most popular")}</span>
+                <div className="plan-glow" aria-hidden />
+                <div className="p-top">
+                  <div>
+                    <div className="pname">Pro</div>
+                    <div className="pdesc">{t("For serious learners")}</div>
+                  </div>
+                  <span className="plan-chip pro-chip">{t("Every path unlocked")}</span>
+                </div>
+                <div className="pcost pro-cost">
+                  <span className="price-month">฿{priceMonth.toLocaleString()}</span>
+                  <span className="price-year">฿{yearlyPerMonth.toLocaleString()}</span>
+                  <small> /{t("mo")}</small>
+                </div>
+                <p className="pbill">
+                  <span className="bill-copy month-copy">{t("Pay monthly, cancel anytime")}</span>
+                  <span className="bill-copy year-copy">{t("Pay yearly ฿{year}, save {pct}%", { year: priceYear.toLocaleString(), pct: savePct })}</span>
+                </p>
+                <ul className="plist">
+                  <li><span className="ck ok">✓</span> {t("Unlimited lessons")}</li>
+                  <li><span className="ck ok">✓</span> {t("All career paths")}</li>
+                  <li><span className="ck ok">✓</span> {t("Full documentation library")}</li>
+                  <li><span className="ck ok">✓</span> {t("Unlimited hearts")}</li>
+                  <li><span className="ck ok">✓</span> {t("Streak freeze & Pro badges")}</li>
+                </ul>
+                <Link className="btn btn--sun lg" style={{ width: "100%" }} href="/login"><Crown size={18} /> {t("Go Pro")}</Link>
+              </div>
             </div>
           </div>
         </div>

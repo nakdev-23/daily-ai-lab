@@ -8,8 +8,8 @@ create table if not exists system_settings (
   hearts_per_round    int     not null default 5,
   xp_per_lesson       int     not null default 10,
   xp_perfect_quiz     int     not null default 15,
-  pro_price_month     int     not null default 199,
-  pro_price_year      int     not null default 1990,
+  pro_price_month     int     not null default 299,
+  pro_price_year      int     not null default 2870,
   notify_streak       boolean not null default true,
   notify_weekly       boolean not null default true,
   maintenance_mode    boolean not null default false,
@@ -19,6 +19,13 @@ create table if not exists system_settings (
 
 -- Seed the single row.
 insert into system_settings (id) values (1) on conflict (id) do nothing;
+
+-- If this migration was first run with the earlier 199/1990 defaults, bump the
+-- seeded row to the launch price (299/2870). Only touches an untouched row, so
+-- a custom admin-set price is never overwritten.
+update system_settings
+set pro_price_month = 299, pro_price_year = 2870
+where id = 1 and pro_price_month = 199 and pro_price_year = 1990;
 
 alter table system_settings enable row level security;
 

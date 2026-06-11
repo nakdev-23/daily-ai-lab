@@ -58,9 +58,9 @@
 ### 🟡 P2 — Medium (ความไม่สอดคล้อง / เสียย่อย)
 
 - [x] **BUG-07 · ราคาขัดกันทั้งเว็บ**
-  upgrade page = ฿299/mo · settings/course = ฿199/mo · admin system default = ฿199/1990 → ผู้ใช้สับสน
-  **แก้:** ตั้งมาตรฐาน **฿199/เดือน · ฿1,990/ปี** ทุกที่ (แก้ upgrade page ให้ตรง)
-  ไฟล์: `app/(app)/upgrade/page.tsx`
+  เดิม upgrade=฿299 · settings/course=฿199 · home=฿299 → สับสน
+  **แก้:** ราคา Pro มี **แหล่งเดียว = `system_settings` (admin ตั้งได้)** default **฿299/เดือน · ฿2,870/ปี** ทุกหน้าดึงจากค่านี้: landing (`/`), `/upgrade`, `/settings`, `/course/[tool]` — แก้ราคาในแอดมินที่เดียว เปลี่ยนทั้งระบบ (ราคารายปีแสดง effective/เดือน + % ประหยัด คำนวณอัตโนมัติ)
+  ไฟล์: `app/page.tsx`, `app/(app)/upgrade/*`, `app/(app)/settings/*`, `app/(app)/course/[tool]/page.tsx`, `lib/system-settings.ts`
 
 - [x] **BUG-08 · Curriculum ทุกบทลิงก์ไปบท 1**
   `course/[tool]/page.tsx` ทุกแถวบทเรียนชี้ `startHref` (บท 1/ต่อ) แทนที่จะไปบทของตัวเอง

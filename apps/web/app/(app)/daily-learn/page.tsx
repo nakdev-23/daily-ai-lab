@@ -7,7 +7,7 @@ import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourses } from "@/lib/courses"
 import { getToolColors } from "@/lib/tool-colors"
-import ToolLogo from "@/components/tool-logo"
+import TopicsGrid from "./_topics-grid"
 import { Flame, Zap, CheckCircle2, Target, ChevronRight, Clock } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -119,42 +119,8 @@ export default async function DailyLearnPage() {
         <h2>{t("Pick a topic to learn")}</h2>
         <span>{t("Each lesson is short — finish in 15 minutes")}</span>
       </div>
-      <div className="lrn-grid">
-        {TOPICS.length === 0 && (
-          <p style={{ gridColumn: "1/-1", textAlign: "center", color: "var(--text-muted)", padding: "40px 0" }}>
-            {t("No courses available yet.")}
-          </p>
-        )}
-        {TOPICS.map((tp) => (
-          <Link
-            key={tp.id}
-            className="lrn-card"
-            href={`/daily-learn/${tp.id}`}
-            style={{
-              ["--c-soft" as string]: tp.soft, ["--c-sh" as string]: tp.sh,
-              ["--c-blob" as string]: tp.blob, ["--c-bar" as string]: tp.bar, ["--c-bar2" as string]: tp.bar2,
-            }}
-          >
-            <span className="blob" />
-            <span className="go-arrow"><ChevronRight size={18} /></span>
-            <div className="lc-top">
-              <div className="lc-tile" style={{ background: tp.bg }}>
-                <ToolLogo name={tp.tool} fallback={tp.fallback} size={24} />
-              </div>
-              <div className="lc-tt">
-                <h3>{tp.title}</h3>
-                <div className="lc-lvl"><span className="d" style={{ background: tp.dot }} />{tp.level}</div>
-              </div>
-            </div>
-            <p className="lc-desc">{tp.desc}</p>
-            <div className="lc-foot">
-              <span className="lc-time"><Clock size={13} /> {t("15 min/day")}</span>
-              <span className="lc-prog">{tp.n}</span>
-            </div>
-            <div className="lrn-bar"><i style={{ width: `${tp.pct}%` }} /></div>
-          </Link>
-        ))}
-      </div>
+      {/* 2 rows per page; pagination handled client-side in TopicsGrid */}
+      <TopicsGrid topics={TOPICS} lang={lang} />
 
       {/* quests + streak */}
       <div className="dash-grid">

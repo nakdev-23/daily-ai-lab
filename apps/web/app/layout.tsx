@@ -41,8 +41,10 @@ export const viewport: Viewport = {
   themeColor: "#6c47ff",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  // Let safe-area env() values reach fixed bars on notched phones.
+  viewportFit: "cover",
+  // Pinch zoom stays available — disabling it fails WCAG 1.4.4 for low-vision users.
+  maximumScale: 5,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

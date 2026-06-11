@@ -25,7 +25,7 @@ export default function LangToggle({ current = "th", className = "", variant = "
     border: isDark ? "1px solid rgba(255,255,255,.18)" : "1px solid var(--border-subtle, #E0DAEF)",
   }
   const btn = (active: boolean): React.CSSProperties => ({
-    border: 0, cursor: "pointer", height: 34, minWidth: 38, padding: "0 10px", borderRadius: 999,
+    border: 0, cursor: "pointer", height: 38, minWidth: 48, padding: "0 12px", borderRadius: 999,
     fontFamily: "var(--font-display, inherit)", fontWeight: 800, fontSize: 12.5, lineHeight: 1,
     transition: "all .15s",
     background: active ? "#fff" : "transparent",

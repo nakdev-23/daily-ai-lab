@@ -12,7 +12,7 @@ import {
 } from "lucide-react"
 import { FcGoogle } from "react-icons/fc"
 import Switch from "@/components/switch"
-import { updateDisplayName, type SettingsResult } from "./actions"
+import { updateDisplayName, cancelSubscription, type SettingsResult } from "./actions"
 
 const AV = "/assets/daily-ai-lab/avatars"
 const AVATARS = ["heart", "celebrate", "thumbsup", "graduate", "wave", "cool", "read", "think", "yawn", "sad", "sleep"]
@@ -27,6 +27,9 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
   const [nameState, saveName, savingName] = useActionState<SettingsResult, FormData>(updateDisplayName, null)
   // Hide the "saved" hint as soon as the user edits again (cleared on submit).
   const [nameEdited, setNameEdited] = useState(false)
+  // Cancel-subscription flow: confirm step + server action result.
+  const [confirmCancel, setConfirmCancel] = useState(false)
+  const [cancelState, cancelSub, cancelling] = useActionState<SettingsResult, FormData>(cancelSubscription, null)
   // Chosen Riri avatar (persisted in localStorage). null = use Google photo / initial.
   const [avatarSel, setAvatarSel] = useState<string | null>(() => {
     if (typeof window === "undefined") return null
@@ -49,6 +52,10 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
     { href: "#subscription", label: t("Plan"), icon: Crown },
     { href: "#danger", label: t("Security"), icon: AlertTriangle },
   ]
+  // Sections temporarily hidden from the UI (Learning, Notifications, Theme).
+  // Code is kept intact — empty this list to bring them back.
+  const HIDDEN = ["#learning", "#notif", "#appearance"]
+  const visibleNav = NAV.filter((n) => !HIDDEN.includes(n.href))
 
   async function logout() {
     const supabase = createClient()
@@ -59,7 +66,7 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
   return (
     <div className="settings-wrap">
       <nav className="set-nav">
-        {NAV.map((n, i) => (
+        {visibleNav.map((n, i) => (
           <a key={n.href} href={n.href} className={i === 0 ? "active" : ""}><n.icon size={17} /> {n.label}</a>
         ))}
       </nav>
@@ -107,6 +114,7 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
         </section>
 
         {/* Learning */}
+        {!HIDDEN.includes("#learning") && (
         <section className="set-card glass" id="learning">
           <div className="sc-head"><h3 className="display"><Target size={20} /> {t("Learning")}</h3><p>{t("Set your goal and learning language")}</p></div>
           <div className="set-row">
@@ -121,8 +129,10 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
           <div className="set-row"><div className="sr-info"><b>{t("Sound effects")}</b><span>{t("Sounds for right/wrong answers and XP")}</span></div><div className="sr-ctrl"><Switch defaultChecked /></div></div>
           <div className="set-row"><div className="sr-info"><b>{t("Practice mode")}</b><span>{t("Review old lessons without losing hearts")}</span></div><div className="sr-ctrl"><Switch defaultChecked /></div></div>
         </section>
+        )}
 
         {/* Notifications */}
+        {!HIDDEN.includes("#notif") && (
         <section className="set-card glass" id="notif">
           <div className="sc-head"><h3 className="display"><Bell size={20} /> {t("Notifications")}</h3><p>{t("Reminders to learn and keep your streak")}</p></div>
           <div className="set-row"><div className="sr-info"><b>{t("Streak reminder")}</b><span>{t("Notify if you haven't learned today")}</span></div><div className="sr-ctrl"><Switch defaultChecked /></div></div>
@@ -130,8 +140,10 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
           <div className="set-row"><div className="sr-info"><b>{t("Leaderboard updates")}</b><span>{t("When your rank changes")}</span></div><div className="sr-ctrl"><Switch defaultChecked /></div></div>
           <div className="set-row"><div className="sr-info"><b>{t("Newsletter")}</b><span>{t("New tools, features and promos")}</span></div><div className="sr-ctrl"><Switch /></div></div>
         </section>
+        )}
 
         {/* Appearance */}
+        {!HIDDEN.includes("#appearance") && (
         <section className="set-card glass" id="appearance">
           <div className="sc-head"><h3 className="display"><Palette size={20} /> {t("Theme & display")}</h3><p>{t("Make it look the way you like")}</p></div>
           <div className="set-row">
@@ -146,6 +158,7 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
           </div>
           <div className="set-row"><div className="sr-info"><b>{t("Reduce motion")}</b><span>{t("Turn off animations for a calmer feel")}</span></div><div className="sr-ctrl"><Switch /></div></div>
         </section>
+        )}
 
         {/* Subscription */}
         <section className="set-card glass set-pro" id="subscription">
@@ -155,8 +168,32 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
               <div style={{ flex: 1 }}>
                 <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("You're on Pro")}</h3>
                 <p>{t("Unlimited lessons, all career paths and unlimited hearts.")}</p>
+                {cancelState && (
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 4, marginTop: 8, fontSize: 13, color: cancelState.ok ? "var(--mint-600)" : "var(--berry-600)" }}>
+                    {cancelState.ok && <Check size={14} />}{cancelState.message}
+                  </span>
+                )}
               </div>
-              <span className="sg-badge"><Crown size={14} className="text-amber-500" /> Pro</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
+                <span className="sg-badge"><Crown size={14} className="text-amber-500" /> Pro</span>
+                {!confirmCancel ? (
+                  <button
+                    type="button"
+                    onClick={() => setConfirmCancel(true)}
+                    style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 12.5, fontWeight: 700, color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 3 }}
+                  >
+                    {t("Cancel subscription")}
+                  </button>
+                ) : (
+                  <form action={cancelSub} style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
+                    <span style={{ fontSize: 12.5, color: "var(--text-muted)" }}>{t("Switch back to the Free plan?")}</span>
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <button type="button" className="btn btn--ghost sm" onClick={() => setConfirmCancel(false)}>{t("Keep Pro")}</button>
+                      <button type="submit" className="btn btn--danger sm" disabled={cancelling}>{cancelling ? t("Cancelling…") : t("Confirm cancel")}</button>
+                    </div>
+                  </form>
+                )}
+              </div>
             </>
           ) : (
             <>

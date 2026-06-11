@@ -89,7 +89,7 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   return (
     <>
       <div style={{ fontSize: 13.5, fontWeight: 700, color: "var(--text-muted)", marginBottom: 12 }}>
-        <Link href="/daily-learn" style={{ color: "var(--hero-600)" }}>{t("Daily Learn")}</Link>{" "}
+        <Link href="/daily-learn" style={{ color: "var(--hero-600)", display: "inline-block", padding: "6px 2px", margin: "-6px -2px" }}>{t("Daily Learn")}</Link>{" "}
         <span style={{ opacity: .5 }}>›</span>{" "}
         <span style={{ color: "var(--text-strong)" }}>{course.title}</span>
       </div>

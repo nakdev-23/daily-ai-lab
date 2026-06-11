@@ -756,6 +756,20 @@ export const th: Record<string, string> = {
   "Couldn't save — try again": "บันทึกไม่สำเร็จ ลองอีกครั้ง",
   "Name saved": "บันทึกชื่อแล้ว",
 
+  // ── cancel subscription ──
+  "Cancel subscription": "ยกเลิกการสมัครสมาชิก",
+  "Switch back to the Free plan?": "เปลี่ยนกลับไปใช้แพ็กเกจ Free?",
+  "Keep Pro": "ใช้ Pro ต่อ",
+  "Confirm cancel": "ยืนยันยกเลิก",
+  "Cancelling…": "กำลังยกเลิก…",
+  "Your subscription was cancelled": "ยกเลิกการสมัครสมาชิกแล้ว กลับไปใช้แพ็กเกจ Free",
+  "Couldn't cancel — try again": "ยกเลิกไม่สำเร็จ ลองอีกครั้ง",
+
   // ── tools showcase real-data labels ──
   "Coming soon": "เร็ว ๆ นี้",
+
+  // ── topic pagination ──
+  "Topic pages": "หน้าหัวข้อบทเรียน",
+  "Previous page": "หน้าก่อนหน้า",
+  "Next page": "หน้าถัดไป",
 }

@@ -22,3 +22,21 @@ export async function updateDisplayName(_prev: SettingsResult, formData: FormDat
   revalidatePath("/profile")
   return { ok: true, message: t("Name saved") }
 }
+
+/**
+ * Cancel the current Pro subscription and switch the user back to the Free plan.
+ * Goes through the cancel_subscription() RPC (security-definer) because users
+ * have no direct UPDATE on subscriptions — the RPC only ever downgrades to Free.
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- useActionState requires the (prevState, formData) shape
+export async function cancelSubscription(_prev: SettingsResult, _formData: FormData): Promise<SettingsResult> {
+  const [, lang] = await Promise.all([requireUser(), getLang()])
+  const t = makeT(lang)
+  const supabase = await createClient()
+  const { error } = await supabase.rpc("cancel_subscription")
+  if (error) return { ok: false, message: t("Couldn't cancel — try again") }
+  revalidatePath("/settings")
+  revalidatePath("/profile")
+  revalidatePath("/", "layout")
+  return { ok: true, message: t("Your subscription was cancelled") }
+}

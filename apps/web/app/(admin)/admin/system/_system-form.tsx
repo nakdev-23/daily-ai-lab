@@ -1,30 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useActionState } from "react"
 import { Target, Gem, Bell, Check } from "lucide-react"
 import Switch from "@/components/switch"
+import type { SystemSettings } from "@/lib/system-settings"
+import { saveSystemAction, type SystemResult } from "./actions"
 
-export default function SystemForm() {
-  const [saved, setSaved] = useState(false)
-
-  function save(e: React.FormEvent) {
-    e.preventDefault()
-    setSaved(true)
-    setTimeout(() => setSaved(false), 2400)
-  }
+export default function SystemForm({ settings }: { settings: SystemSettings }) {
+  const [state, formAction, pending] = useActionState<SystemResult, FormData>(saveSystemAction, null)
 
   return (
-    <form className="formpage" onSubmit={save}>
+    <form className="formpage" action={formAction}>
       <div className="form-sec glass">
         <h3><Target size={19} className="text-violet-500" /> เกมมิฟิเคชัน</h3>
         <p className="sec-sub">ค่าเริ่มต้นของระบบเกม</p>
         <div className="fld-row">
-          <div className="fld"><label>เป้าหมายรายวัน (นาที)</label><input className="fin" type="number" defaultValue={15} /></div>
-          <div className="fld"><label>หัวใจต่อรอบ</label><input className="fin" type="number" defaultValue={5} /></div>
+          <div className="fld"><label>เป้าหมายรายวัน (นาที)</label><input className="fin" name="daily_goal_minutes" type="number" min={1} defaultValue={settings.dailyGoalMinutes} /></div>
+          <div className="fld"><label>หัวใจต่อรอบ</label><input className="fin" name="hearts_per_round" type="number" min={1} defaultValue={settings.heartsPerRound} /></div>
         </div>
         <div className="fld-row">
-          <div className="fld"><label>XP ต่อบทเรียน</label><input className="fin" type="number" defaultValue={10} /></div>
-          <div className="fld"><label>XP ควิซเพอร์เฟกต์</label><input className="fin" type="number" defaultValue={15} /></div>
+          <div className="fld"><label>XP ต่อบทเรียน</label><input className="fin" name="xp_per_lesson" type="number" min={0} defaultValue={settings.xpPerLesson} /></div>
+          <div className="fld"><label>XP ควิซเพอร์เฟกต์</label><input className="fin" name="xp_perfect_quiz" type="number" min={0} defaultValue={settings.xpPerfectQuiz} /></div>
         </div>
       </div>
 
@@ -32,23 +28,24 @@ export default function SystemForm() {
         <h3><Gem size={19} className="text-sky-500" /> แพ็กเกจ & ราคา</h3>
         <p className="sec-sub">ราคาแพ็กเกจ Pro</p>
         <div className="fld-row">
-          <div className="fld"><label>ราคา/เดือน (฿)</label><input className="fin" type="number" defaultValue={199} /></div>
-          <div className="fld"><label>ราคา/ปี (฿)</label><input className="fin" type="number" defaultValue={1990} /></div>
+          <div className="fld"><label>ราคา/เดือน (฿)</label><input className="fin" name="pro_price_month" type="number" min={0} defaultValue={settings.proPriceMonth} /></div>
+          <div className="fld"><label>ราคา/ปี (฿)</label><input className="fin" name="pro_price_year" type="number" min={0} defaultValue={settings.proPriceYear} /></div>
         </div>
       </div>
 
       <div className="form-sec glass">
         <h3><Bell size={19} className="text-amber-500" /> การแจ้งเตือน</h3>
         <p className="sec-sub">เปิด/ปิดการแจ้งเตือนระบบ</p>
-        <div className="srow"><div className="si-info"><b>เตือนสตรีคทุกเย็น</b><span>ส่งเตือนผู้ใช้ที่ยังไม่เรียนวันนี้</span></div><Switch defaultChecked /></div>
-        <div className="srow"><div className="si-info"><b>อีเมลสรุปรายสัปดาห์</b><span>ส่งสรุปความคืบหน้าทุกวันจันทร์</span></div><Switch defaultChecked /></div>
-        <div className="srow"><div className="si-info"><b>โหมดปิดปรับปรุง</b><span>ปิดเว็บชั่วคราวเพื่อบำรุงรักษา</span></div><Switch /></div>
+        <div className="srow"><div className="si-info"><b>เตือนสตรีคทุกเย็น</b><span>ส่งเตือนผู้ใช้ที่ยังไม่เรียนวันนี้</span></div><Switch name="notify_streak" defaultChecked={settings.notifyStreak} /></div>
+        <div className="srow"><div className="si-info"><b>อีเมลสรุปรายสัปดาห์</b><span>ส่งสรุปความคืบหน้าทุกวันจันทร์</span></div><Switch name="notify_weekly" defaultChecked={settings.notifyWeekly} /></div>
+        <div className="srow"><div className="si-info"><b>โหมดปิดปรับปรุง</b><span>ปิดเว็บชั่วคราวเพื่อบำรุงรักษา</span></div><Switch name="maintenance_mode" defaultChecked={settings.maintenanceMode} /></div>
       </div>
 
       <div className="form-sticky">
-        {saved && <span className="adm-msg ok" style={{ margin: 0, display: "inline-flex", alignItems: "center", gap: 6 }}><Check size={15} /> บันทึกการตั้งค่าแล้ว</span>}
+        {state?.ok && <span className="adm-msg ok" style={{ margin: 0, display: "inline-flex", alignItems: "center", gap: 6 }}><Check size={15} /> {state.message}</span>}
+        {state && !state.ok && <span className="adm-msg err" style={{ margin: 0 }}>{state.message}</span>}
         <span className="spacer" />
-        <button type="submit" className="btn btn--violet md">บันทึกการตั้งค่า</button>
+        <button type="submit" className="btn btn--violet md" disabled={pending}>{pending ? "กำลังบันทึก…" : "บันทึกการตั้งค่า"}</button>
       </div>
     </form>
   )

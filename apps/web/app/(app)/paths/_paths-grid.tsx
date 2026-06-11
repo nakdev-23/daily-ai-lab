@@ -27,7 +27,7 @@ function defaultMeta(tone: string) {
   return TONE_META[tone] ?? { bg: "var(--hero-100)", cls: "text-violet-600", Icon: Rocket }
 }
 
-export default function PathsGrid({ lang, paths }: { lang: Lang; paths: CareerPath[] }) {
+export default function PathsGrid({ lang, paths, isPro = false }: { lang: Lang; paths: CareerPath[]; isPro?: boolean }) {
   const t = makeT(lang)
   const [query, setQuery] = useState("")
 
@@ -89,7 +89,7 @@ export default function PathsGrid({ lang, paths }: { lang: Lang; paths: CareerPa
                         <span className="pm"><Clock size={14} /> {p.weeks} {t("weeks")}</span>
                         <span className="pm"><BookOpen size={14} /> {lessons || p.modules.length} {t("lessons")}</span>
                         <span className="pm"><Award size={14} /> {t("Certificate")}</span>
-                        {p.isPro ? (
+                        {p.isPro && !isPro ? (
                           <Link className="btn btn--ghost md" style={{ marginLeft: "auto" }} href="/upgrade">
                             <Lock size={14} /> Pro
                           </Link>

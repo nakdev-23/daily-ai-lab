@@ -28,13 +28,16 @@ export async function getProfile(): Promise<SessionProfile | null> {
 
   // A subscription only counts as "pro" while it hasn't expired.
   const active = sub?.plan === "pro" && (!sub.expires_at || new Date(sub.expires_at).getTime() > Date.now())
+  const role: Role = (p?.role as Role) ?? "user"
+  // Admins always get the Pro package (no subscription needed).
+  const plan: Plan = active || role === "admin" ? "pro" : "free"
 
   return {
     id: user.id,
     displayName: p?.display_name ?? "นักเรียน",
     avatarUrl: p?.avatar_url ?? null,
-    role: (p?.role as Role) ?? "user",
-    plan: active ? "pro" : "free",
+    role,
+    plan,
   }
 }
 

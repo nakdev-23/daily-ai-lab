@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import { getLang, makeT } from "@/lib/i18n"
-import { requireUser } from "@/lib/auth"
+import { requireUser, isPro } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
 import { getCareerPath, pathCourseSlugs, totalSteps, totalXp } from "@/lib/career-paths"
 import type { PathStep } from "@/lib/career-paths"
@@ -38,6 +38,9 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
   ])
 
   if (!path) notFound()
+
+  // Paywall: Pro career paths require a Pro plan (admins always pass via isPro).
+  if (path.isPro && !isPro(profile)) redirect("/upgrade")
 
   // Fetch course progress for all courses referenced in this path
   const supabase = await createClient()

@@ -11,9 +11,9 @@
 | ระดับ | จำนวน | สถานะ |
 |---|---|---|
 | 🔴 P0 Critical | 2 | ✅ แก้แล้ว |
-| 🟠 P1 High | 4 | ✅ แก้ 3 / ⏸️ เลื่อน 1 (รอระบบจ่ายเงิน) |
+| 🟠 P1 High | 4 | ✅ แก้ครบ (รวม Pro paywall + admin = pro) |
 | 🟡 P2 Medium | 3 | ✅ แก้ 2 / 📝 บันทึก 1 |
-| ⚪ P3 Low | 4 | 📝 บันทึก (ไม่กระทบการใช้งาน) |
+| ⚪ P3 Low | 4 | ✅ แก้ 1 (admin system จริง) / 📝 บันทึก 3 |
 
 **ภาพรวม:** โครงสร้างหลัก (auth, RLS, lesson engine, leaderboard, admin CRUD) แข็งแรงและปลอดภัย — secrets ไม่หลุดเข้า git, server actions ทุกตัว `requireAdmin()` ครบ, path traversal กันไว้แล้ว จุดอ่อนหลักคือ **paywall ไม่ได้บังคับจริง** และ **บางหน้าเป็น mock data** (Profile, Missions) ซึ่งแก้แล้วในรอบนี้
 
@@ -50,11 +50,10 @@
   **แก้:** เพิ่ม server action `updateProfile` บันทึก `display_name` จริง + ปุ่มบันทึก (goal/theme/notif ทำเป็น cosmetic — บันทึกใน reminder ภายหลัง)
   ไฟล์: `app/(app)/settings/actions.ts` (ใหม่), `_settings-client.tsx`
 
-- [ ] **BUG-06 · Pro paywall ไม่ถูกบังคับฝั่ง server** ⏸️ **เลื่อน (รอระบบจ่ายเงิน)**
-  `requirePro()` ถูกนิยามแต่ไม่ถูกเรียกที่ไหนเลย — หน้า `paths/[id]` ใช้ `requireUser()` และบทเรียนไม่มี Pro gate ⇒ Free เข้าถึงเส้นทาง Pro/บทเรียน Pro ได้หมด
-  **เหตุผลที่เลื่อน:** ปุ่มอัปเกรดยังเป็น demo (ไม่มีระบบจ่ายเงินจริง) ถ้าบังคับ gate ตอนนี้จะล็อกผู้ใช้ทุกคนออกจาก 3/5 เส้นทาง (ไม่มีใครจ่ายเพื่อปลดได้) — ควรเปิดใช้พร้อมระบบชำระเงิน
-  **พร้อมใช้:** helper `requirePro()` มีอยู่แล้ว แค่เปลี่ยน `requireUser()` → `requirePro()` ใน `paths/[id]/page.tsx` (และ wrap lesson page ของเส้นทาง Pro) เมื่อพร้อม
-  ดู BUG-01 เป็นตัวอย่าง pattern การ gate ที่ถูกต้อง (ใช้ `isPro()`)
+- [x] **BUG-06 · Pro paywall ไม่ถูกบังคับฝั่ง server** ✅ **บังคับแล้ว**
+  เดิม `requirePro()` ถูกนิยามแต่ไม่ถูกเรียก — Free เข้าถึงเส้นทาง Pro ได้หมด
+  **แก้:** หน้า `paths/[id]` เช็ค `if (path.isPro && !isPro(profile)) redirect("/upgrade")` ฝั่ง server · grid ส่ง `isPro` เข้าไป (Pro/admin เห็นปุ่ม "เริ่มเส้นทาง", Free เห็น "Lock Pro" → /upgrade) · **admin ได้ plan `pro` อัตโนมัติ** (`getProfile` → `role === "admin"` ⇒ plan pro) จึงผ่าน gate ทุกที่
+  ไฟล์: `lib/auth.ts`, `app/(app)/paths/[id]/page.tsx`, `app/(app)/paths/page.tsx`, `app/(app)/paths/_paths-grid.tsx`
 
 ### 🟡 P2 — Medium (ความไม่สอดคล้อง / เสียย่อย)
 
@@ -75,7 +74,7 @@
 ### ⚪ P3 — Low (cosmetic / ไม่กระทบการใช้งาน)
 
 - [ ] **BUG-10 · Missions ใช้ Tailwind utility ปนกับ design-system CSS** 📝 — สไตล์ไม่เข้าชุดกับหน้าอื่น (mascot คนละ path) แต่ทำงานได้
-- [ ] **BUG-11 · Admin System & Leagues form เป็น mock** 📝 — กดบันทึกขึ้น toast แต่ไม่ persist (เข้าใจว่าตั้งใจ ทำทีหลัง)
+- [x] **BUG-11 · Admin System form เป็น mock** ✅ **ใช้ข้อมูลจริงแล้ว** — สร้างตาราง `system_settings` (migration 008) + `lib/system-settings.ts` + server action `saveSystemAction` (requireAdmin + clamp ค่า) · form โหลด/บันทึกค่าจริงจาก Supabase (RLS: ใครก็อ่านได้, เฉพาะ admin แก้ได้) · *Leagues form ยัง mock — ทำภายหลัง*
 - [ ] **BUG-12 · Landing/career carousel จำนวนบทแต่งขึ้น** 📝 — "84 บท/72 บท" เป็น marketing copy ไม่ตรง DB
 - [ ] **BUG-13 · route `/course/[tool]` orphaned** 📝 — ไม่มีลิงก์ในเมนู (ยังเข้าถึงได้ตรง URL) + ปุ่ม "Save for later" ชี้ `/login` ทั้งที่ login อยู่
 
@@ -117,7 +116,8 @@
 |---|---|---|---|
 | T30 | `/paths` 🔒 | grid 5 เส้นทาง, ค้นหา, tag Pro/Free | ✅ |
 | T31 | `/paths/[id]` | modules/steps, progress จาก course_progress, continue link | ✅ |
-| T32 | Free เปิดเส้นทาง Pro 💎 | เข้าได้ทั้งหมด (ไม่ gate) | ⚠️ BUG-06 ⏸️ |
+| T32 | Free เปิดเส้นทาง Pro 💎 | redirect → `/upgrade` (gate ฝั่ง server) | ⚠️ BUG-06 → ✅ แก้ |
+| T33 | admin/Pro เปิดเส้นทาง Pro 💎 | เข้าได้ (admin = plan pro อัตโนมัติ) | ✅ |
 
 ### 3.5 Docs
 | # | หน้า | Test case | ผล |
@@ -147,7 +147,8 @@
 | T63 | `/admin/courses` `/courses/[id]` | CRUD คอร์ส/บท | ✅ |
 | T64 | `/admin/paths` `/paths/[id]` | CRUD เส้นทาง/module/step, publish toggle | ✅ |
 | T65 | `/admin/docs` | CRUD เอกสาร (เขียนไฟล์ .md) | ✅ |
-| T66 | `/admin/leagues` `/admin/system` | form บันทึก | ⚠️ BUG-11 (mock) |
+| T66 | `/admin/system` | โหลด/บันทึกค่าจริงจาก `system_settings` | ⚠️ BUG-11 → ✅ แก้ |
+| T67 | `/admin/leagues` | form บันทึก | ⚠️ BUG-11 (leagues ยัง mock) |
 
 ---
 
@@ -162,7 +163,7 @@
 | RLS | ✅ course_progress / game_state / profiles มี policy `auth.uid()`, admin ผ่าน `is_admin()` security-definer |
 | `complete_lesson` คุม input | ✅ clamp XP 0–50, เช็ค bounds, lock row — แต่ลำดับด่านไม่คุม → BUG-02 |
 | RPC `security definer` + `search_path` | ✅ ตั้ง `set search_path = public` (กัน hijack) |
-| **Paywall บังคับจริง** | ⚠️ ไม่บังคับ → BUG-01 (แก้) / BUG-06 (เลื่อน) |
+| **Paywall บังคับจริง** | ✅ บังคับแล้ว — docs (BUG-01) + เส้นทาง Pro (BUG-06) gate ฝั่ง server, admin ได้ plan pro |
 | XSS ใน docs (`dangerouslySetInnerHTML`) | ⚠️ ต่ำ — เนื้อหามาจากไฟล์ .md ของ admin เท่านั้น (ไม่ใช่ user input) ยอมรับได้ |
 
 ---
@@ -178,11 +179,12 @@
 
 ## 6. สิ่งที่ต้องทำต่อ (Action items สำหรับเจ้าของโปรเจค)
 
-1. ⚠️ **รัน `supabase/migrations/007_sequential_lessons.sql` ใน Supabase SQL Editor** (BUG-02)
-2. เปิด Pro gating เมื่อมีระบบจ่ายเงิน (BUG-06) — เปลี่ยน `requireUser()` → `requirePro()` ใน `paths/[id]`
+1. ⚠️ **รัน `supabase/migrations/007_sequential_lessons.sql`** ใน Supabase SQL Editor (BUG-02)
+2. ⚠️ **รัน `supabase/migrations/008_system_settings.sql`** ใน Supabase SQL Editor (BUG-11 — ก่อนรันหน้า Admin › ตั้งค่าระบบ จะบันทึกไม่ได้)
 3. (ภายหลัง) track `xp_today` + quiz score ใน game_state (BUG-09)
-4. (ภายหลัง) persist admin system/leagues settings (BUG-11)
+4. (ภายหลัง) persist admin **Leagues** settings (System ทำแล้ว) (BUG-11)
 5. (ภายหลัง) จัด Missions ให้ใช้ design-system CSS (BUG-10)
+6. (ภายหลัง) ต่อราคา Pro บนหน้า /upgrade ให้อ่านจาก `system_settings` (ตอนนี้ admin แก้ได้แล้วแต่หน้า upgrade ยัง hardcode ฿199)
 
 ---
 *รายงานนี้อัปเดตอัตโนมัติพร้อมการแก้ไข — checkbox `[x]` = แก้/ยืนยันแล้ว, `[ ]` = บันทึก/เลื่อน*

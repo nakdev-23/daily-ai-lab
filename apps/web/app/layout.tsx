@@ -1,12 +1,27 @@
 import type { Metadata, Viewport } from "next"
-import { Prompt } from "next/font/google"
+import { Baloo_2, Anuphan, JetBrains_Mono } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 
-const prompt = Prompt({
-  variable: "--font-prompt",
+// All brand fonts are self-hosted via next/font (no render-blocking
+// fonts.googleapis.com @import in CSS). All three are variable fonts —
+// one file per subset covers every weight, so first paint preloads only
+// a handful of woff2 files instead of 14.
+const baloo = Baloo_2({
+  variable: "--font-baloo",
+  subsets: ["latin"],
+  display: "swap",
+})
+
+const anuphan = Anuphan({
+  variable: "--font-anuphan",
   subsets: ["thai", "latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+})
+
+const jbMono = JetBrains_Mono({
+  variable: "--font-jbmono",
+  subsets: ["latin"],
   display: "swap",
 })
 
@@ -31,7 +46,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" className={`${prompt.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="th" className={`${baloo.variable} ${anuphan.variable} ${jbMono.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
       </head>

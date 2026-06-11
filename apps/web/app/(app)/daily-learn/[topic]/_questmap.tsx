@@ -119,7 +119,7 @@ export default function QuestMap({ levels, topic, mascot }: { levels: Level[]; t
         })}
       </div>
 
-      <Image className="qriri" src={mascot} alt="Riri" width={92} height={92} unoptimized />
+      <Image className="qriri" src={mascot} alt="Riri" width={92} height={92} />
     </div>
   )
 }

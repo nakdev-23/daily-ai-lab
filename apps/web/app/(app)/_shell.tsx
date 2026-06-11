@@ -10,6 +10,7 @@ import { createClient } from "@/lib/supabase/client"
 import {
   GraduationCap, Rocket, BookOpen, Trophy, User, Settings, Shield,
   Crown, Flame, Zap, Heart, Menu, PanelLeftClose, PanelLeftOpen, LogOut,
+  Infinity as InfinityIcon,
 } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -41,12 +42,13 @@ type Props = {
   role: "user" | "admin"
   xp: number
   hearts: number
+  unlimitedHearts?: boolean
   streak: number
   lang: Lang
   initialCollapsed: boolean
 }
 
-export default function AppShell({ children, displayName, role, xp, hearts, streak, lang, initialCollapsed }: Props) {
+export default function AppShell({ children, displayName, role, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -141,17 +143,17 @@ export default function AppShell({ children, displayName, role, xp, hearts, stre
               <LangToggle current={lang} />
               <span className="stat-chip streak"><Flame size={17} /> {streak}</span>
               <span className="stat-chip xp"><Zap size={17} /> {xp.toLocaleString()}</span>
-              <span className="stat-chip heart"><Heart size={17} /> {hearts}</span>
+              <span className={`stat-chip heart${unlimitedHearts ? " unlimited" : ""}`}><Heart size={17} /> {unlimitedHearts ? <InfinityIcon size={15} strokeWidth={3} /> : hearts}</span>
               <div className="tb-user">
                 <button className="tb-avatar" onClick={() => setUserMenu((o) => !o)} aria-haspopup="menu" aria-expanded={userMenu}>
-                  {avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} unoptimized /> : displayName.charAt(0)}
+                  {avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} /> : displayName.charAt(0)}
                 </button>
                 {userMenu && (
                   <>
                     <div className="tb-menu-overlay" onClick={() => setUserMenu(false)} />
                     <div className="tb-menu" role="menu">
                       <div className="tb-menu-head">
-                        <span className="tb-menu-av">{avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} unoptimized /> : displayName.charAt(0)}</span>
+                        <span className="tb-menu-av">{avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} /> : displayName.charAt(0)}</span>
                         <div style={{ minWidth: 0 }}>
                           <b>{displayName}</b>
                           <small>{role === "admin" ? t("Admin") : t("Profile")}</small>

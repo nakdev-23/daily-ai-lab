@@ -22,14 +22,30 @@ export default function SystemForm({ settings }: { settings: SystemSettings }) {
           <div className="fld"><label>XP ต่อบทเรียน</label><input className="fin" name="xp_per_lesson" type="number" min={0} defaultValue={settings.xpPerLesson} /></div>
           <div className="fld"><label>XP ควิซเพอร์เฟกต์</label><input className="fin" name="xp_perfect_quiz" type="number" min={0} defaultValue={settings.xpPerfectQuiz} /></div>
         </div>
+        <div className="fld-row">
+          <div className="fld">
+            <label>เวลารีเซ็ตหัวใจ (ชั่วโมง เวลาไทย)</label>
+            <input className="fin" name="hearts_reset_hour" type="number" min={0} max={23} defaultValue={settings.heartsResetHour} />
+            <span style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>0 = เที่ยงคืน · หัวใจจะเต็มใหม่ทุกวันเวลานี้ (Asia/Bangkok)</span>
+          </div>
+          <div className="fld" />
+        </div>
       </div>
 
       <div className="form-sec glass">
         <h3><Gem size={19} className="text-sky-500" /> แพ็กเกจ & ราคา</h3>
-        <p className="sec-sub">ราคาแพ็กเกจ Pro</p>
+        <p className="sec-sub">ราคาแพ็กเกจ Pro และขีดจำกัดของแพ็กเกจ Free</p>
         <div className="fld-row">
           <div className="fld"><label>ราคา/เดือน (฿)</label><input className="fin" name="pro_price_month" type="number" min={0} defaultValue={settings.proPriceMonth} /></div>
           <div className="fld"><label>ราคา/ปี (฿)</label><input className="fin" name="pro_price_year" type="number" min={0} defaultValue={settings.proPriceYear} /></div>
+        </div>
+        <div className="fld-row">
+          <div className="fld">
+            <label>บทเรียนย่อย/วัน (แพ็กเกจ Free)</label>
+            <input className="fin" name="free_lessons_per_day" type="number" min={0} max={99} defaultValue={settings.freeLessonsPerDay} />
+            <span style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>ผู้ใช้ Free เรียนบทใหม่ได้วันละเท่านี้ · Pro ไม่จำกัด · ทบทวนบทที่จบแล้วไม่นับ</span>
+          </div>
+          <div className="fld" />
         </div>
       </div>
 

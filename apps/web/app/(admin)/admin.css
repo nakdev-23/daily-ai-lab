@@ -67,7 +67,7 @@
 .dlab-app .spill.mut { color: var(--text-muted); background: var(--cloud-100); }
 .dlab-app .row-act { display: flex; gap: 6px; justify-content: flex-end; }
 .dlab-app .iconbtn { width: 32px; height: 32px; border-radius: 9px; border: 1px solid var(--border-subtle); background: var(--cloud-0, #fff); cursor: pointer;
-  display: grid; place-items: center; color: var(--text-muted); transition: all .15s; }
+  display: grid; place-items: center; color: var(--text-muted); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; }
 .dlab-app .iconbtn:hover { border-color: var(--hero-300); color: var(--hero-600); transform: translateY(-1px); }
 .dlab-app .iconbtn.danger:hover { border-color: var(--berry-500); color: var(--berry-600); }
 
@@ -81,7 +81,7 @@
 .dlab-app .tbl-search input { border: 0; background: none; outline: none; font-family: var(--font-sans); font-size: 14px; color: var(--text-strong); width: 100%; }
 .dlab-app .chip-tabs { display: flex; gap: 7px; flex-wrap: wrap; margin: 0 2px 16px; }
 .dlab-app .chip-tab { height: 38px; padding: 0 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--cloud-200); background: var(--cloud-0, #fff);
-  cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: all .15s; white-space: nowrap; }
+  cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; white-space: nowrap; }
 .dlab-app .chip-tab:hover { border-color: var(--hero-300); }
 .dlab-app .chip-tab.on { background: var(--g-violet); color: #fff; border-color: transparent; box-shadow: 0 8px 18px -6px rgba(72,31,184,.5); }
 .dlab-app .chip-tab .ct-n { opacity: .7; margin-left: 4px; }
@@ -159,7 +159,7 @@
 
 /* course editor (units + lessons) */
 .dlab-app .seg-pick { display: flex; gap: 8px; flex-wrap: wrap; }
-.dlab-app .seg-pick button { height: 40px; padding: 0 16px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: var(--cloud-0, #fff); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: all .15s; }
+.dlab-app .seg-pick button { height: 40px; padding: 0 16px; border-radius: var(--radius-md); border: 2px solid var(--cloud-200); background: var(--cloud-0, #fff); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; }
 .dlab-app .seg-pick button.on { border-color: var(--hero-400); background: var(--hero-50); color: var(--hero-600); }
 .dlab-app .edit-list { display: flex; flex-direction: column; gap: 10px; }
 .dlab-app .edit-item { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border-radius: var(--radius-md); border: 1.5px solid var(--cloud-200); background: var(--cloud-0, #fff); }
@@ -168,7 +168,7 @@
 .dlab-app .edit-item .ei-tx { flex: 1; min-width: 0; }
 .dlab-app .edit-item .ei-tx b { font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--text-strong); display: block; }
 .dlab-app .edit-item .ei-tx small { font-size: 12px; color: var(--text-muted); font-weight: 600; }
-.dlab-app .edit-add { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; border-radius: var(--radius-md); border: 2px dashed var(--cloud-300, #cfc8df); background: none; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--hero-500); transition: all .15s; width: 100%; margin-top: 4px; }
+.dlab-app .edit-add { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; border-radius: var(--radius-md); border: 2px dashed var(--cloud-300, #cfc8df); background: none; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--hero-500); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; width: 100%; margin-top: 4px; }
 .dlab-app .edit-add:hover { border-color: var(--hero-400); background: var(--hero-50); }
 .dlab-app .sec-head-row { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; }
 .dlab-app .sec-head-row h3 { margin: 0; flex: 1; }

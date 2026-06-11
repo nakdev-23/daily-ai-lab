@@ -4,9 +4,16 @@
     "tag": "Claude Advance · บทที่ 7 · ตอนที่ 1",
     "title": "XML Tags ใน Prompt",
     "body": [
-      { "text": "Claude ถูกฝึกให้เข้าใจ " },
-      { "text": "XML tags สำหรับแบ่งส่วนของ prompt", "bold": true },
-      { "text": " — ใช้ <document>, <example>, <instructions> แยกข้อมูลออกจากคำสั่ง ลดความสับสนเมื่อ prompt ยาวและซับซ้อน" }
+      {
+        "text": "Claude ถูกฝึกให้เข้าใจ "
+      },
+      {
+        "text": "XML tags สำหรับแบ่งส่วนของ prompt",
+        "bold": true
+      },
+      {
+        "text": " — ใช้ <document>, <example>, <instructions> แยกข้อมูลออกจากคำสั่ง ลดความสับสนเมื่อ prompt ยาวและซับซ้อน"
+      }
     ],
     "example": "\"<instructions>สรุปเป็น 3 ข้อ</instructions> <document>...เนื้อหายาว 10 หน้า...</document>\"",
     "mascot": "mascot-read"
@@ -16,42 +23,106 @@
     "tag": "Claude Advance · บทที่ 7 · ตอนที่ 2",
     "title": "Pattern ที่ใช้บ่อย",
     "body": [
-      { "text": "ที่นิยม: " },
-      { "text": "<context> ข้อมูลพื้นหลัง · <example> ตัวอย่าง · <thinking> ให้คิดในแท็กนี้ · <answer> คำตอบสุดท้าย", "bold": true },
-      { "text": " — สั่งให้ตอบในแท็กที่กำหนดทำให้ดึงผลลัพธ์ไปใช้ต่อในโค้ดได้ง่าย" }
+      {
+        "text": "ที่นิยม: "
+      },
+      {
+        "text": "<context> ข้อมูลพื้นหลัง · <example> ตัวอย่าง · <thinking> ให้คิดในแท็กนี้ · <answer> คำตอบสุดท้าย",
+        "bold": true
+      },
+      {
+        "text": " — สั่งให้ตอบในแท็กที่กำหนดทำให้ดึงผลลัพธ์ไปใช้ต่อในโค้ดได้ง่าย"
+      }
     ],
     "example": "\"วิเคราะห์ใน <thinking> แล้วสรุปคำตอบสุดท้ายใน <answer> เท่านั้น เพื่อให้ระบบดึงเฉพาะ answer ไปแสดง\"",
     "mascot": "mascot-laptop"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "XML tags ใน prompt ช่วยอะไร?",
     "options": [
-      { "text": "แยกข้อมูลออกจากคำสั่ง ลดความสับสน", "correct": true },
-      { "text": "ทำให้ตัวหนังสือเป็นสี" },
-      { "text": "ไม่มีผลอะไร" }
+      {
+        "text": "แยกข้อมูลออกจากคำสั่ง ลดความสับสน",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ตัวหนังสือเป็นสี"
+      },
+      {
+        "text": "ไม่มีผลอะไร"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "อยากแยกเอกสารยาวออกจากคำสั่ง ใช้แท็กแบบไหน?",
     "options": [
-      { "text": "<document>...</document> ครอบเนื้อหา", "correct": true },
-      { "text": "เขียนติดกันไปเลย" },
-      { "text": "ใช้อิโมจิคั่น" }
+      {
+        "text": "<document>...</document> ครอบเนื้อหา",
+        "correct": true
+      },
+      {
+        "text": "เขียนติดกันไปเลย"
+      },
+      {
+        "text": "ใช้อิโมจิคั่น"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "ทำไมสั่งให้ตอบใน <answer> จึงมีประโยชน์กับนักพัฒนา?",
     "options": [
-      { "text": "ดึงเฉพาะคำตอบไปใช้ต่อในโค้ดได้ง่าย", "correct": true },
-      { "text": "ทำให้คำตอบถูกเสมอ" },
-      { "text": "ประหยัด token" }
+      {
+        "text": "ดึงเฉพาะคำตอบไปใช้ต่อในโค้ดได้ง่าย",
+        "correct": true
+      },
+      {
+        "text": "ทำให้คำตอบถูกเสมอ"
+      },
+      {
+        "text": "ประหยัด token"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้ Claude แยกส่วนของคำสั่งให้ชัด (เช่น บริบท vs คำถาม) ควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "ครอบด้วย XML tags เช่น <context> <question>",
+        "correct": true
+      },
+      {
+        "text": "เขียนติดกันทั้งหมด"
+      },
+      {
+        "text": "พิมพ์ตัวใหญ่"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ประโยชน์ของ XML Tags ใน prompt คือ?",
+    "options": [
+      {
+        "text": "ช่วยให้ Claude เข้าใจโครงสร้างคำสั่งแม่นขึ้น",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ตอบช้าลง"
+      },
+      {
+        "text": "ไม่มีผล"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

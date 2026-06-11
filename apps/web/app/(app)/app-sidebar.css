@@ -3,7 +3,7 @@
 .dlab-app .side-pro-ic { display: none; }
 
 @media (min-width: 921px) {
-  .dlab-app .side-collapse { display: grid; place-items: center; width: 30px; height: 30px; margin: 0 0 6px auto; border: 1px solid var(--border-subtle); background: #fff; border-radius: 9px; color: var(--text-muted); cursor: pointer; transition: all .15s; }
+  .dlab-app .side-collapse { display: grid; place-items: center; width: 30px; height: 30px; margin: 0 0 6px auto; border: 1px solid var(--border-subtle); background: #fff; border-radius: 9px; color: var(--text-muted); cursor: pointer; transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; }
   .dlab-app .side-collapse:hover { color: var(--hero-600); border-color: var(--hero-300); transform: translateY(-1px); }
 
   .dlab-app .app.is-collapsed { grid-template-columns: 84px 1fr; }

@@ -4,9 +4,16 @@
     "tag": "Gemini Advance · บทที่ 11 · ตอนที่ 1",
     "title": "Google AI Studio",
     "body": [
-      { "text": "AI Studio คือ " },
-      { "text": "playground ฟรีสำหรับทดลอง prompt และตั้งค่าโมเดลก่อนเขียนโค้ดจริง", "bold": true },
-      { "text": " — ปรับ system instructions, temperature, ทดสอบกับไฟล์จริง แล้วกด 'Get code' ได้โค้ดพร้อมใช้" }
+      {
+        "text": "AI Studio คือ "
+      },
+      {
+        "text": "playground ฟรีสำหรับทดลอง prompt และตั้งค่าโมเดลก่อนเขียนโค้ดจริง",
+        "bold": true
+      },
+      {
+        "text": " — ปรับ system instructions, temperature, ทดสอบกับไฟล์จริง แล้วกด 'Get code' ได้โค้ดพร้อมใช้"
+      }
     ],
     "example": "\"ทดลอง prompt สกัดข้อมูลใบเสร็จใน AI Studio จนแม่น แล้วค่อย export โค้ด Python ไปใส่แอป\"",
     "mascot": "mascot-laptop"
@@ -16,42 +23,106 @@
     "tag": "Gemini Advance · บทที่ 11 · ตอนที่ 2",
     "title": "Prototype ให้ไวด้วย AI Studio",
     "body": [
-      { "text": "เวิร์กโฟลว์ที่ประหยัดเวลา: " },
-      { "text": "ทดลองใน Studio (ไม่ต้องเขียนโค้ด) → ได้ผลดีแล้ว export → เขียนโค้ดรอบเดียวจบ", "bold": true },
-      { "text": " — ดีกว่าแก้โค้ดวนไปมาทุกครั้งที่อยากเปลี่ยน prompt" }
+      {
+        "text": "เวิร์กโฟลว์ที่ประหยัดเวลา: "
+      },
+      {
+        "text": "ทดลองใน Studio (ไม่ต้องเขียนโค้ด) → ได้ผลดีแล้ว export → เขียนโค้ดรอบเดียวจบ",
+        "bold": true
+      },
+      {
+        "text": " — ดีกว่าแก้โค้ดวนไปมาทุกครั้งที่อยากเปลี่ยน prompt"
+      }
     ],
     "example": "\"ลอง 5 เวอร์ชัน system prompt ใน Studio ใช้เวลา 10 นาที เทียบกับแก้โค้ด+รันใหม่ 5 รอบที่กินเป็นชั่วโมง\"",
     "mascot": "mascot-point"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "Google AI Studio คืออะไร?",
     "options": [
-      { "text": "playground ทดลอง prompt และโมเดลก่อนเขียนโค้ด", "correct": true },
-      { "text": "โปรแกรมตัดต่อวิดีโอ" },
-      { "text": "สตูดิโอถ่ายรูป" }
+      {
+        "text": "playground ทดลอง prompt และโมเดลก่อนเขียนโค้ด",
+        "correct": true
+      },
+      {
+        "text": "โปรแกรมตัดต่อวิดีโอ"
+      },
+      {
+        "text": "สตูดิโอถ่ายรูป"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "ปุ่ม 'Get code' ใน AI Studio ทำอะไร?",
     "options": [
-      { "text": "แปลงการตั้งค่าที่ทดลองเป็นโค้ดพร้อมใช้", "correct": true },
-      { "text": "ดาวน์โหลดโมเดล" },
-      { "text": "ซื้อ credits" }
+      {
+        "text": "แปลงการตั้งค่าที่ทดลองเป็นโค้ดพร้อมใช้",
+        "correct": true
+      },
+      {
+        "text": "ดาวน์โหลดโมเดล"
+      },
+      {
+        "text": "ซื้อ credits"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "ทำไมควรทดลอง prompt ใน Studio ก่อนเขียนโค้ด?",
     "options": [
-      { "text": "ปรับ prompt ไวกว่าแก้โค้ดวนหลายรอบ", "correct": true },
-      { "text": "เพราะเขียนโค้ดไม่ได้เลย" },
-      { "text": "ไม่มีเหตุผล" }
+      {
+        "text": "ปรับ prompt ไวกว่าแก้โค้ดวนหลายรอบ",
+        "correct": true
+      },
+      {
+        "text": "เพราะเขียนโค้ดไม่ได้เลย"
+      },
+      {
+        "text": "ไม่มีเหตุผล"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยาก prototype prompt และทดสอบโมเดลเร็ว ๆ ควรใช้อะไร?",
+    "options": [
+      {
+        "text": "Google AI Studio",
+        "correct": true
+      },
+      {
+        "text": "Excel"
+      },
+      {
+        "text": "Gmail"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "AI Studio ช่วยอะไร?",
+    "options": [
+      {
+        "text": "ทดลอง prompt/พารามิเตอร์ก่อนนำไปต่อ API",
+        "correct": true
+      },
+      {
+        "text": "ตัดต่อวิดีโอ"
+      },
+      {
+        "text": "เล่นเกม"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

@@ -1,7 +1,9 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { createClient } from "@/lib/supabase/server"
+import { createClient, getAuthUser } from "@/lib/supabase/server"
+import { getSystemSettings } from "@/lib/system-settings"
+import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourse } from "@/lib/courses"
@@ -44,14 +46,17 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
 
   // Must match the key the lesson player saves under (slug, with id fallback)
   const progressKey = course.slug || course.id
-  const today = new Date().toISOString().split("T")[0]
+  // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
+  const today = bangkokTodayISO()
+  const settings = await getSystemSettings() // request-memoized (layout already fetched it)
+  const goalLessons = Math.max(1, settings.freeLessonsPerDay)
 
   let done = 0
   let lessonsToday = 0
   let streak = 0
 
   const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser()
   if (user) {
     const [lessonsDone, { data: g }] = await Promise.all([
       getLessonsDone(progressKey),
@@ -64,7 +69,7 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
 
   // XP earned within this course = sum of XP for the lessons already done
   const xpEarned = flatLessons.slice(0, done).reduce((s, l) => s + (l.xp || 120), 0)
-  const hoursLeft = Math.max(1, 24 - new Date().getHours())
+  const hoursLeft = bangkokHoursLeftToday()
 
   const colors = getToolColors(course.tool)
   const levelKey = course.level === "beginner" ? t("Beginner") : course.level === "intermediate" ? t("Intermediate") : t("Advanced")
@@ -121,8 +126,8 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
             </div>
             <div className="quest">
               <span className="qic" style={{ background: "var(--sun-100)", color: "var(--sun-700)" }}><Zap size={20} /></span>
-              <div className="qb"><b>{t("Finish {n} lessons", { n: 3 })}</b><div className="pbar"><i style={{ width: `${Math.min(100, Math.round((lessonsToday / 3) * 100))}%` }} /></div></div>
-              <span className="qx">{Math.min(lessonsToday, 3)}/3</span>
+              <div className="qb"><b>{t("Finish {n} lessons", { n: goalLessons })}</b><div className="pbar"><i style={{ width: `${Math.min(100, Math.round((lessonsToday / goalLessons) * 100))}%` }} /></div></div>
+              <span className="qx">{Math.min(lessonsToday, goalLessons)}/{goalLessons}</span>
             </div>
             <div className="quest">
               <span className="qic" style={{ background: "var(--sky-100)", color: "var(--sky-500)" }}><StickyNote size={20} /></span>
@@ -146,7 +151,7 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
           </div>
 
           <div className="rail-mascot">
-            <Image src={`${M}/mascot-thumbsup.png`} alt="Riri" width={66} height={66} unoptimized />
+            <Image src={`${M}/mascot-thumbsup.png`} alt="Riri" width={66} height={66} />
             <div><b>{t("Learn together, level up daily!")}</b><span>{t("Riri is here to cheer you through every lesson.")}</span></div>
           </div>
         </aside>
@@ -161,7 +166,7 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
       </div>
 
       <div className="cert-card glass" style={{ maxWidth: "none" }}>
-        <Image src={`${M}/mascot-celebrate.png`} alt="Riri" width={84} height={84} unoptimized />
+        <Image src={`${M}/mascot-celebrate.png`} alt="Riri" width={84} height={84} />
         <div style={{ flex: 1 }}>
           <h3 className="display"><Trophy size={20} className="text-amber-500" style={{ verticalAlign: "-3px" }} /> {t("Finish to earn the {tool} Master badge", { tool: course.tool })}</h3>
           <p>{t("Complete every lesson to earn a profile badge and unlock the next topic.")}</p>

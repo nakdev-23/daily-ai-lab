@@ -1,6 +1,6 @@
 /* Daily AI Lab — docs tool grid + filter chips (scoped .dlab-app) */
 .dlab-app .chips { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 18px; }
-.dlab-app .chip-f { padding: 8px 15px; border-radius: 999px; border: 1.5px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--text-body); transition: all .15s; display: inline-flex; align-items: center; gap: 6px; }
+.dlab-app .chip-f { padding: 8px 15px; border-radius: 999px; border: 1.5px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--text-body); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; display: inline-flex; align-items: center; gap: 6px; }
 .dlab-app .chip-f:hover { border-color: var(--hero-300); }
 .dlab-app .chip-f.active { background: var(--g-violet); color: #fff; border-color: transparent; box-shadow: 0 6px 14px -6px rgba(72,31,184,.5); }
 

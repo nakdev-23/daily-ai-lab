@@ -3,6 +3,12 @@
 import { getCourse } from "@/lib/courses"
 import { getCourseContent } from "@/lib/course-content"
 import { markLessonDone } from "@/lib/progress"
+import { loseHeart, type HeartState } from "@/lib/hearts"
+
+/** Deduct one heart for a wrong answer; returns the synced heart state. */
+export async function loseHeartAction(): Promise<HeartState> {
+  return loseHeart()
+}
 
 export async function completeLessonAction(courseId: string, lessonNum: number): Promise<void> {
   // Server actions are public endpoints — never trust client-sent values.

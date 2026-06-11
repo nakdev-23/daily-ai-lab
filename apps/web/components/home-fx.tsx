@@ -83,40 +83,70 @@ export default function HomeFx() {
       cleanups.push(() => cio.disconnect())
     } else counters.forEach(countUp)
 
-    /* ---------- hero parallax ---------- */
+    /* ---------- hero parallax (rAF-throttled: one layout read + write per frame) ---------- */
     if (!reduce) {
       const stage = root.querySelector<HTMLElement>(".stage")
       if (stage) {
-        const layers = Array.from(stage.querySelectorAll<HTMLElement>("[data-depth]"))
-        const onMove = (e: PointerEvent) => {
+        const layers = Array.from(stage.querySelectorAll<HTMLElement>("[data-depth]")).map((el) => ({
+          el,
+          depth: parseFloat(el.getAttribute("data-depth") || "0"),
+        }))
+        let raf = 0
+        let lastX = 0, lastY = 0
+        const apply = () => {
+          raf = 0
           const r = stage.getBoundingClientRect()
-          const nx = (e.clientX - r.left) / r.width - 0.5
-          const ny = (e.clientY - r.top) / r.height - 0.5
-          layers.forEach((l) => {
-            const d = parseFloat(l.getAttribute("data-depth") || "0")
-            l.style.transform = `translate(${nx * d}px,${ny * d}px)`
+          const nx = (lastX - r.left) / r.width - 0.5
+          const ny = (lastY - r.top) / r.height - 0.5
+          layers.forEach(({ el, depth }) => {
+            el.style.transform = `translate(${nx * depth}px,${ny * depth}px)`
           })
         }
-        const onLeave = () => layers.forEach((l) => { l.style.transform = "" })
+        const onMove = (e: PointerEvent) => {
+          lastX = e.clientX; lastY = e.clientY
+          if (!raf) raf = requestAnimationFrame(apply)
+        }
+        const onLeave = () => {
+          if (raf) { cancelAnimationFrame(raf); raf = 0 }
+          layers.forEach(({ el }) => { el.style.transform = "" })
+        }
         stage.addEventListener("pointermove", onMove)
         stage.addEventListener("pointerleave", onLeave)
-        cleanups.push(() => { stage.removeEventListener("pointermove", onMove); stage.removeEventListener("pointerleave", onLeave) })
+        cleanups.push(() => {
+          if (raf) cancelAnimationFrame(raf)
+          stage.removeEventListener("pointermove", onMove)
+          stage.removeEventListener("pointerleave", onLeave)
+        })
       }
     }
 
-    /* ---------- 3D tilt cards ---------- */
+    /* ---------- 3D tilt cards (rAF-throttled) ---------- */
     if (!reduce) {
       Array.from(root.querySelectorAll<HTMLElement>(".tilt")).forEach((card) => {
-        const onMove = (e: PointerEvent) => {
+        let raf = 0
+        let lastX = 0, lastY = 0
+        const apply = () => {
+          raf = 0
           const r = card.getBoundingClientRect()
-          const px = (e.clientX - r.left) / r.width - 0.5
-          const py = (e.clientY - r.top) / r.height - 0.5
+          const px = (lastX - r.left) / r.width - 0.5
+          const py = (lastY - r.top) / r.height - 0.5
           card.style.transform = `perspective(760px) rotateY(${px * 9}deg) rotateX(${-py * 9}deg) translateY(-5px)`
         }
-        const onLeave = () => { card.style.transform = "" }
+        const onMove = (e: PointerEvent) => {
+          lastX = e.clientX; lastY = e.clientY
+          if (!raf) raf = requestAnimationFrame(apply)
+        }
+        const onLeave = () => {
+          if (raf) { cancelAnimationFrame(raf); raf = 0 }
+          card.style.transform = ""
+        }
         card.addEventListener("pointermove", onMove)
         card.addEventListener("pointerleave", onLeave)
-        cleanups.push(() => { card.removeEventListener("pointermove", onMove); card.removeEventListener("pointerleave", onLeave) })
+        cleanups.push(() => {
+          if (raf) cancelAnimationFrame(raf)
+          card.removeEventListener("pointermove", onMove)
+          card.removeEventListener("pointerleave", onLeave)
+        })
       })
     }
 

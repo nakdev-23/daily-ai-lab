@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server"
+import { createClient, getAuthUser } from "@/lib/supabase/server"
 import { getLang, makeT } from "@/lib/i18n"
 import { Flame, Crown, Gem, Trophy, ArrowUp, Medal } from "lucide-react"
 
@@ -50,8 +50,8 @@ function Row({ r, me, t, idx }: { r: LeaderRow; me: boolean; t: T; idx: number }
 export default async function LeaderboardPage() {
   const t = makeT(await getLang())
   const supabase = await createClient()
-  const [{ data: { user } }, { data: lb }] = await Promise.all([
-    supabase.auth.getUser(),
+  const [user, { data: lb }] = await Promise.all([
+    getAuthUser(),
     supabase.rpc("get_leaderboard"),
   ])
   const currentUserId: string | null = user?.id ?? null
@@ -61,7 +61,9 @@ export default async function LeaderboardPage() {
   const top3 = rows.slice(0, 3)
   const podiumDisplay = [top3[1], top3[0], top3[2]].filter(Boolean) as LeaderRow[]
   const podiumClasses: Record<number, string> = { 0: "silver", 1: "gold", 2: "bronze" }
-  const listRows = rows.slice(3)
+  // With more than 3 players the list continues below the podium; with 3 or
+  // fewer, repeat them in the list so it never renders as an empty box.
+  const listRows = rows.length > 3 ? rows.slice(3) : rows
 
   return (
     <>

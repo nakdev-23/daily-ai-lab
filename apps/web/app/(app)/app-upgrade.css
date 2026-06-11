@@ -8,7 +8,7 @@
 .dlab-app .up-hero p { position: relative; z-index: 1; font-size: 17px; color: var(--text-muted); max-width: 520px; margin: 0 auto; line-height: 1.55; }
 
 .dlab-app .bill-toggle { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 5px; margin: 22px auto 0; padding: 5px; background: var(--cloud-100); border-radius: 999px; }
-.dlab-app .bill-toggle button { height: 40px; padding: 0 20px; border: 0; background: none; border-radius: 999px; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-muted); transition: all .18s; white-space: nowrap; display: inline-flex; align-items: center; }
+.dlab-app .bill-toggle button { height: 40px; padding: 0 20px; border: 0; background: none; border-radius: 999px; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-muted); transition: background .18s, color .18s, border-color .18s, box-shadow .18s, transform .18s; white-space: nowrap; display: inline-flex; align-items: center; }
 .dlab-app .bill-toggle button.on { background: var(--cloud-0, #fff); color: var(--hero-600); box-shadow: var(--shadow-sm); }
 .dlab-app .bill-toggle .save-tag { font-family: var(--font-sans); font-size: 10.5px; font-weight: 800; color: var(--mint-600); background: var(--mint-100); padding: 2px 7px; border-radius: 999px; margin-left: 6px; }
 

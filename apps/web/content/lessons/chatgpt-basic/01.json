@@ -4,9 +4,16 @@
     "tag": "ChatGPT พื้นฐาน · บทที่ 1 · ตอนที่ 1",
     "title": "ChatGPT คืออะไร?",
     "body": [
-      { "text": "ChatGPT คือ " },
-      { "text": "AI สนทนา (Conversational AI)", "bold": true },
-      { "text": " ที่พัฒนาโดย OpenAI สามารถตอบคำถาม เขียนเนื้อหา และช่วยแก้ปัญหาได้ด้วยภาษาธรรมชาติ ต่างจาก Search Engine ที่แค่หาลิงก์ให้ ChatGPT \"คุย\" กับเราได้เลย" }
+      {
+        "text": "ChatGPT คือ "
+      },
+      {
+        "text": "AI สนทนา (Conversational AI)",
+        "bold": true
+      },
+      {
+        "text": " ที่พัฒนาโดย OpenAI สามารถตอบคำถาม เขียนเนื้อหา และช่วยแก้ปัญหาได้ด้วยภาษาธรรมชาติ ต่างจาก Search Engine ที่แค่หาลิงก์ให้ ChatGPT \"คุย\" กับเราได้เลย"
+      }
     ],
     "example": "\"ChatGPT ต่างจาก Google ยังไง? อธิบายให้เข้าใจง่ายๆ หน่อย\"",
     "mascot": "mascot-read"
@@ -16,42 +23,106 @@
     "tag": "ChatGPT พื้นฐาน · บทที่ 1 · ตอนที่ 2",
     "title": "ChatGPT ทำงานยังไง?",
     "body": [
-      { "text": "ChatGPT ถูกฝึกมาจากข้อมูลข้อความมหาศาล โดยใช้เทคนิคที่เรียกว่า " },
-      { "text": "Large Language Model (LLM)", "bold": true },
-      { "text": " ทำให้มันเข้าใจบริบทของบทสนทนา และสามารถตอบกลับได้อย่างเป็นธรรมชาติ เหมือนคุยกับคนจริงๆ" }
+      {
+        "text": "ChatGPT ถูกฝึกมาจากข้อมูลข้อความมหาศาล โดยใช้เทคนิคที่เรียกว่า "
+      },
+      {
+        "text": "Large Language Model (LLM)",
+        "bold": true
+      },
+      {
+        "text": " ทำให้มันเข้าใจบริบทของบทสนทนา และสามารถตอบกลับได้อย่างเป็นธรรมชาติ เหมือนคุยกับคนจริงๆ"
+      }
     ],
     "example": "\"ช่วยอธิบายว่า Large Language Model คืออะไร ในแบบที่เด็ก 10 ขวบเข้าใจได้\"",
     "mascot": "mascot-think"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "ChatGPT ต่างจาก Search Engine อย่าง Google อย่างไร?",
     "options": [
-      { "text": "ChatGPT เร็วกว่า Google มาก" },
-      { "text": "ChatGPT โต้ตอบด้วยภาษาธรรมชาติและสร้างคำตอบได้เอง", "correct": true },
-      { "text": "ChatGPT ค้นหาข้อมูลจากเว็บได้มากกว่า Google" }
+      {
+        "text": "ChatGPT เร็วกว่า Google มาก"
+      },
+      {
+        "text": "ChatGPT โต้ตอบด้วยภาษาธรรมชาติและสร้างคำตอบได้เอง",
+        "correct": true
+      },
+      {
+        "text": "ChatGPT ค้นหาข้อมูลจากเว็บได้มากกว่า Google"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "ChatGPT พัฒนาโดยบริษัทใด?",
     "options": [
-      { "text": "Google" },
-      { "text": "Microsoft" },
-      { "text": "OpenAI", "correct": true }
+      {
+        "text": "Google"
+      },
+      {
+        "text": "Microsoft"
+      },
+      {
+        "text": "OpenAI",
+        "correct": true
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "เทคโนโลยีพื้นฐานที่ ChatGPT ใช้คืออะไร?",
     "options": [
-      { "text": "Large Language Model (LLM)", "correct": true },
-      { "text": "Computer Vision" },
-      { "text": "Robotic Process Automation" }
+      {
+        "text": "Large Language Model (LLM)",
+        "correct": true
+      },
+      {
+        "text": "Computer Vision"
+      },
+      {
+        "text": "Robotic Process Automation"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้ ChatGPT ช่วยร่างอีเมลลางาน ควรเริ่มอย่างไรให้ได้ผลดีที่สุด?",
+    "options": [
+      {
+        "text": "พิมพ์แค่คำว่า \"อีเมล\""
+      },
+      {
+        "text": "บอกบริบทให้ครบ เช่น ลากี่วัน เหตุผล ส่งถึงใคร และโทนที่ต้องการ",
+        "correct": true
+      },
+      {
+        "text": "ถาม ChatGPT ว่าวันนี้อากาศเป็นอย่างไร"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ข้อใด \"ไม่ใช่\" สิ่งที่ ChatGPT ทำได้?",
+    "options": [
+      {
+        "text": "ตอบคำถามและช่วยเขียนเนื้อหา"
+      },
+      {
+        "text": "เข้าถึงไฟล์ในคอมพิวเตอร์ของคุณเองโดยอัตโนมัติ",
+        "correct": true
+      },
+      {
+        "text": "ช่วยระดมไอเดีย"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

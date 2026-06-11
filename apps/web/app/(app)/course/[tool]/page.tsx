@@ -30,11 +30,13 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   }
 
   const colors = getToolColors(course.tool)
-  const units = await getCourseContent(course.id)
 
   // Progress is keyed by slug (course_progress.course_id)
   const progressKey = course.slug || course.id
-  const doneCount = await getLessonsDone(progressKey)
+  const [units, doneCount] = await Promise.all([
+    getCourseContent(course.id),
+    getLessonsDone(progressKey),
+  ])
 
   const firstUnit = units[0]
   const firstLesson = firstUnit?.lessons[0]

@@ -104,10 +104,10 @@
 .dlab-app .switch input:checked + .track { background: var(--hero-500); }
 .dlab-app .switch input:checked + .track::before { transform: translateX(22px); }
 .dlab-app .seg { display: inline-flex; gap: 4px; background: var(--cloud-100); border-radius: var(--radius-pill); padding: 4px; }
-.dlab-app .seg button { height: 36px; padding: 0 16px; border: 0; background: none; border-radius: var(--radius-pill); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-muted); transition: all .16s; }
+.dlab-app .seg button { height: 36px; padding: 0 16px; border: 0; background: none; border-radius: var(--radius-pill); cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-muted); transition: background .16s, color .16s, border-color .16s, box-shadow .16s, transform .16s; }
 .dlab-app .seg button.active { background: #fff; color: var(--hero-600); box-shadow: var(--shadow-sm); }
 .dlab-app .goalseg { display: flex; gap: 8px; flex-wrap: wrap; }
-.dlab-app .goalseg button { padding: 9px 15px; border-radius: var(--radius-pill); border: 2px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: all .15s; }
+.dlab-app .goalseg button { padding: 9px 15px; border-radius: var(--radius-pill); border: 2px solid var(--cloud-200); background: #fff; cursor: pointer; font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--text-body); transition: background .15s, color .15s, border-color .15s, box-shadow .15s, transform .15s; }
 .dlab-app .goalseg button.active { background: var(--g-violet); color: #fff; border-color: transparent; box-shadow: 0 8px 16px -6px rgba(72,31,184,.5); }
 .dlab-app .set-pro { display: flex; align-items: center; gap: 18px; padding: 22px 24px; background: linear-gradient(150deg,#FFF3CE,#F1E7FF); }
 .dlab-app .set-pro img { width: 70px; flex: none; }

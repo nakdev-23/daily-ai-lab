@@ -1,14 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
-import { createClient } from "@/lib/supabase/server"
+import { createClient, getAuthUser } from "@/lib/supabase/server"
 import { getCourses } from "@/lib/courses"
+import { getSystemSettings } from "@/lib/system-settings"
+import { bangkokTodayISO } from "@/lib/hearts"
 import { BookOpen, Target, FileText, Flame, Star, Check, Clock, ChevronRight } from "lucide-react"
 
 export default async function MissionsPage() {
   const supabase = await createClient()
-  const today = new Date().toISOString().split("T")[0]
+  // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
+  const today = bangkokTodayISO()
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const [user, settings] = await Promise.all([getAuthUser(), getSystemSettings()])
+  // Daily lesson goal follows the admin-configured Free quota (no hardcoded 3).
+  const goalLessons = Math.max(1, settings.freeLessonsPerDay)
   let lessonsToday = 0
   let streak = 0
   let continueHref = "/daily-learn"
@@ -39,7 +44,7 @@ export default async function MissionsPage() {
 
   const MISSIONS = [
     { icon: BookOpen, title: "เรียนจบบทเรียน 1 บท", xp: 20, current: Math.min(lessonsToday, 1), total: 1 },
-    { icon: Star, title: "เรียนให้ได้ 3 บทวันนี้", xp: 30, current: Math.min(lessonsToday, 3), total: 3 },
+    { icon: Star, title: `เรียนให้ได้ ${goalLessons} บทวันนี้`, xp: 30, current: Math.min(lessonsToday, goalLessons), total: goalLessons },
     { icon: Flame, title: "เรียนต่อเนื่องให้ครบ 7 วัน", xp: 50, current: Math.min(streak, 7), total: 7 },
     { icon: Target, title: "ทำแบบฝึกหัดให้ได้ 80% ขึ้นไป", xp: 20, current: 0, total: 1 },
     { icon: FileText, title: "อ่านเอกสาร 1 หน้า", xp: 10, current: 0, total: 1 },

@@ -1,18 +1,16 @@
 import { getLang } from "@/lib/i18n"
-import { createClient } from "@/lib/supabase/server"
+import { getAuthUser } from "@/lib/supabase/server"
 import { getSystemSettings } from "@/lib/system-settings"
 import { getProfile } from "@/lib/auth"
 import SettingsClient from "./_settings-client"
 
 export default async function SettingsPage() {
-  const [lang, settings, profile] = await Promise.all([getLang(), getSystemSettings(), getProfile()])
+  const [lang, settings, profile, user] = await Promise.all([getLang(), getSystemSettings(), getProfile(), getAuthUser()])
 
   let displayName = "นักเรียน"
   let email = ""
   let avatar: string | null = null
 
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
   if (user) {
     const meta = user.user_metadata ?? {}
     email = user.email ?? email

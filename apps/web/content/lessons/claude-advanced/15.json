@@ -4,9 +4,16 @@
     "tag": "Claude Advance · บทที่ 15 · ตอนที่ 1",
     "title": "Enterprise Integrations",
     "body": [
-      { "text": "ระดับองค์กร Claude เชื่อมเข้า ecosystem ได้หลายทาง: " },
-      { "text": "API ตรง, Amazon Bedrock, Google Vertex AI และ MCP เชื่อมเครื่องมือภายใน", "bold": true },
-      { "text": " — เลือกตามโครงสร้างที่องค์กรมีอยู่ เช่น ทีมที่อยู่บน AWS อยู่แล้วใช้ Bedrock จะผ่าน compliance ง่ายกว่า" }
+      {
+        "text": "ระดับองค์กร Claude เชื่อมเข้า ecosystem ได้หลายทาง: "
+      },
+      {
+        "text": "API ตรง, Amazon Bedrock, Google Vertex AI และ MCP เชื่อมเครื่องมือภายใน",
+        "bold": true
+      },
+      {
+        "text": " — เลือกตามโครงสร้างที่องค์กรมีอยู่ เช่น ทีมที่อยู่บน AWS อยู่แล้วใช้ Bedrock จะผ่าน compliance ง่ายกว่า"
+      }
     ],
     "example": "\"ธนาคารใช้ Claude ผ่าน Bedrock เพราะข้อมูลอยู่ใน AWS VPC เดิม ไม่ต้องออกนอกระบบที่ audit ไว้แล้ว\"",
     "mascot": "mascot-laptop"
@@ -16,42 +23,106 @@
     "tag": "Claude Advance · บทที่ 15 · ตอนที่ 2",
     "title": "จบคอร์ส Claude Advance",
     "body": [
-      { "text": "ครบทั้งเส้นทาง: " },
-      { "text": "Extended Thinking, API, Tool Use, Prompting ขั้นสูง, Computer Use, Batch, Streaming และ Enterprise", "bold": true },
-      { "text": " — ความรู้เหล่านี้คือรากฐานของการสร้างระบบ AI ที่ใช้งานได้จริงในองค์กร" }
+      {
+        "text": "ครบทั้งเส้นทาง: "
+      },
+      {
+        "text": "Extended Thinking, API, Tool Use, Prompting ขั้นสูง, Computer Use, Batch, Streaming และ Enterprise",
+        "bold": true
+      },
+      {
+        "text": " — ความรู้เหล่านี้คือรากฐานของการสร้างระบบ AI ที่ใช้งานได้จริงในองค์กร"
+      }
     ],
     "example": "\"โจทย์ปิดคอร์ส: ออกแบบระบบ AI ตอบคำถามภายในบริษัท เลือกโมเดล วิธี integrate และมาตรการความปลอดภัยให้ครบ\"",
     "mascot": "mascot-celebrate"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "องค์กรเรียกใช้ Claude ผ่านช่องทางไหนได้บ้าง?",
     "options": [
-      { "text": "API ตรง, Amazon Bedrock, Google Vertex AI", "correct": true },
-      { "text": "แผ่น CD เท่านั้น" },
-      { "text": "ดาวน์โหลดฟรีจากเว็บไหนก็ได้" }
+      {
+        "text": "API ตรง, Amazon Bedrock, Google Vertex AI",
+        "correct": true
+      },
+      {
+        "text": "แผ่น CD เท่านั้น"
+      },
+      {
+        "text": "ดาวน์โหลดฟรีจากเว็บไหนก็ได้"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "ทำไมองค์กรที่อยู่บน AWS มักเลือก Bedrock?",
     "options": [
-      { "text": "ข้อมูลอยู่ในระบบเดิมที่ audit แล้ว ผ่าน compliance ง่าย", "correct": true },
-      { "text": "เพราะฟรี" },
-      { "text": "เพราะโมเดลฉลาดกว่าเวอร์ชันอื่น" }
+      {
+        "text": "ข้อมูลอยู่ในระบบเดิมที่ audit แล้ว ผ่าน compliance ง่าย",
+        "correct": true
+      },
+      {
+        "text": "เพราะฟรี"
+      },
+      {
+        "text": "เพราะโมเดลฉลาดกว่าเวอร์ชันอื่น"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "MCP มีบทบาทอะไรในองค์กร?",
     "options": [
-      { "text": "เชื่อม Claude เข้ากับเครื่องมือและข้อมูลภายใน", "correct": true },
-      { "text": "เป็นโมเดลรุ่นใหม่" },
-      { "text": "ระบบอีเมล" }
+      {
+        "text": "เชื่อม Claude เข้ากับเครื่องมือและข้อมูลภายใน",
+        "correct": true
+      },
+      {
+        "text": "เป็นโมเดลรุ่นใหม่"
+      },
+      {
+        "text": "ระบบอีเมล"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "ใช้ Claude ขั้นสูงให้คุ้มควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "เลือก API/Tool Use/Thinking ให้ตรงงานและคุมความปลอดภัย",
+        "correct": true
+      },
+      {
+        "text": "ใช้ค่าเริ่มต้นกับทุกงาน"
+      },
+      {
+        "text": "ไม่ตรวจสอบผลลัพธ์"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "การ integrate Claude ระดับองค์กรควรคำนึงถึงอะไร?",
+    "options": [
+      {
+        "text": "ความปลอดภัยข้อมูล สิทธิ์ และการตรวจสอบ",
+        "correct": true
+      },
+      {
+        "text": "ความเร็วอย่างเดียว"
+      },
+      {
+        "text": "ไม่มีอะไรต้องคำนึง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

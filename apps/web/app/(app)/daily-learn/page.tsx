@@ -1,6 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
+import { getProfile } from "@/lib/auth"
+import { getSystemSettings } from "@/lib/system-settings"
+import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourses } from "@/lib/courses"
 import { getToolColors } from "@/lib/tool-colors"
@@ -8,27 +11,27 @@ import ToolLogo from "@/components/tool-logo"
 import { Flame, Zap, CheckCircle2, Target, ChevronRight, Clock } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
-const GOAL_LESSONS = 3
 
 export default async function DailyLearnPage() {
   const lang = await getLang()
   const t = makeT(lang)
   let name = "Nin", streak = 0, lessonsToday = 0
   const doneByCourse: Record<string, number> = {}
-  const today = new Date().toISOString().split("T")[0]
+  // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
+  const today = bangkokTodayISO()
 
-  const courses = await getCourses()
+  // getCourses/getProfile/getSystemSettings are request-memoized — shared with the layout's fetches.
+  const [courses, profile, supabase, settings] = await Promise.all([getCourses(), getProfile(), createClient(), getSystemSettings()])
   const published = courses.filter((c) => c.status === "published")
+  // Daily lesson goal follows the admin-configured Free quota (no hardcoded 3).
+  const goalLessons = Math.max(1, settings.freeLessonsPerDay)
 
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (user) {
-    const [{ data: p }, { data: g }, { data: progress }] = await Promise.all([
-      supabase.from("profiles").select("display_name").eq("id", user.id).single(),
-      supabase.from("game_state").select("streak_current, lessons_today, lessons_today_date").eq("user_id", user.id).maybeSingle(),
-      supabase.from("course_progress").select("course_id, lessons_done").eq("user_id", user.id),
+  if (profile) {
+    const [{ data: g }, { data: progress }] = await Promise.all([
+      supabase.from("game_state").select("streak_current, lessons_today, lessons_today_date").eq("user_id", profile.id).maybeSingle(),
+      supabase.from("course_progress").select("course_id, lessons_done").eq("user_id", profile.id),
     ])
-    name = p?.display_name ?? "Nin"
+    name = profile.displayName
     streak = g?.streak_current ?? 0
     lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
     for (const row of (progress ?? []) as Array<{ course_id: string; lessons_done: number }>) {
@@ -36,7 +39,8 @@ export default async function DailyLearnPage() {
     }
   }
 
-  const goalPct = Math.min(100, Math.round((lessonsToday / GOAL_LESSONS) * 100))
+  const goalPct = Math.min(100, Math.round((lessonsToday / goalLessons) * 100))
+  const hoursLeft = bangkokHoursLeftToday()
 
   const TOPICS = published.map((c) => {
     const colors = getToolColors(c.tool)
@@ -79,7 +83,7 @@ export default async function DailyLearnPage() {
         </div>
         <div className="gc-cta">
           <div className="goal-ring" style={{ ["--p" as string]: goalPct }}>
-            <span className="gr-in"><b>{lessonsToday}</b><span>/ {GOAL_LESSONS} {t("lessons")}</span></span>
+            <span className="gr-in"><b>{Math.min(lessonsToday, goalLessons)}</b><span>/ {goalLessons} {t("lessons")}</span></span>
           </div>
           {firstTopic && (
             <Link className="btn btn--violet md" href={`/daily-learn/${firstTopic.id}`}>
@@ -136,7 +140,7 @@ export default async function DailyLearnPage() {
         <div className="lrn-panel">
           <div className="card-h">
             <h3 className="display">{t("Daily quests")}</h3>
-            <span className="more" style={{ cursor: "default" }}><Clock size={14} /> {t("14h left")}</span>
+            <span className="more" style={{ cursor: "default" }}><Clock size={14} /> {t("{n}h left", { n: hoursLeft })}</span>
           </div>
           <div className="quest">
             <span className="qic" style={{ background: "var(--sun-100)", color: "var(--sun-700)" }}><Zap size={21} /></span>
@@ -146,10 +150,10 @@ export default async function DailyLearnPage() {
           <div className="quest">
             <span className="qic" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}><CheckCircle2 size={21} /></span>
             <div className="qb">
-              <b>{t("Finish {n} lessons", { n: GOAL_LESSONS })}</b>
+              <b>{t("Finish {n} lessons", { n: goalLessons })}</b>
               <div className="pbar"><i style={{ width: `${goalPct}%` }} /></div>
             </div>
-            <span className="qx">{lessonsToday}/{GOAL_LESSONS}</span>
+            <span className="qx">{Math.min(lessonsToday, goalLessons)}/{goalLessons}</span>
           </div>
           <div className="quest">
             <span className="qic" style={{ background: "var(--pink-100)", color: "var(--pink-500)" }}><Target size={21} /></span>

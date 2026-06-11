@@ -4,9 +4,16 @@
     "tag": "Gemini Advance · บทที่ 15 · ตอนที่ 1",
     "title": "Gemini Enterprise",
     "body": [
-      { "text": "ระดับองค์กร Google เสนอ " },
-      { "text": "Gemini for Workspace แบบ enterprise: ข้อมูลไม่ใช้เทรนโมเดล, การควบคุมแอดมิน, audit และ compliance", "bold": true },
-      { "text": " — รวมถึง grounding กับข้อมูลภายในองค์กรเพื่อคำตอบที่อิงบริบทบริษัทจริง" }
+      {
+        "text": "ระดับองค์กร Google เสนอ "
+      },
+      {
+        "text": "Gemini for Workspace แบบ enterprise: ข้อมูลไม่ใช้เทรนโมเดล, การควบคุมแอดมิน, audit และ compliance",
+        "bold": true
+      },
+      {
+        "text": " — รวมถึง grounding กับข้อมูลภายในองค์กรเพื่อคำตอบที่อิงบริบทบริษัทจริง"
+      }
     ],
     "example": "\"พนักงานถาม 'นโยบาย WFH ของเราคืออะไร' — Gemini ตอบจากเอกสาร HR ภายใน ไม่ใช่ความรู้ทั่วไป\"",
     "mascot": "mascot-laptop"
@@ -16,42 +23,106 @@
     "tag": "Gemini Advance · บทที่ 15 · ตอนที่ 2",
     "title": "จบคอร์ส Gemini Advance",
     "body": [
-      { "text": "ครบทั้ง ecosystem: " },
-      { "text": "Deep Research, NotebookLM, Thinking, ครีเอทีฟ (Imagen/Veo), API, AI Studio, Vertex และ Workspace", "bold": true },
-      { "text": " — จุดแข็งของ Gemini คือการผสานกับเครื่องมือ Google ที่ใช้อยู่แล้ว เริ่มจากตรงนั้นจะเห็นผลเร็วที่สุด" }
+      {
+        "text": "ครบทั้ง ecosystem: "
+      },
+      {
+        "text": "Deep Research, NotebookLM, Thinking, ครีเอทีฟ (Imagen/Veo), API, AI Studio, Vertex และ Workspace",
+        "bold": true
+      },
+      {
+        "text": " — จุดแข็งของ Gemini คือการผสานกับเครื่องมือ Google ที่ใช้อยู่แล้ว เริ่มจากตรงนั้นจะเห็นผลเร็วที่สุด"
+      }
     ],
     "example": "\"ภารกิจปิดคอร์ส: เลือกงานใน Gmail/Docs/Sheets ที่ทำประจำ 1 อย่าง แล้วใช้ Gemini ทำให้เสร็จเร็วขึ้นในสัปดาห์นี้\"",
     "mascot": "mascot-celebrate"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "Gemini Enterprise จัดการข้อมูลองค์กรอย่างไร?",
     "options": [
-      { "text": "ไม่ใช้เทรนโมเดล พร้อมการควบคุมและ audit", "correct": true },
-      { "text": "แชร์ข้อมูลสาธารณะ" },
-      { "text": "ขายข้อมูลให้คู่แข่ง" }
+      {
+        "text": "ไม่ใช้เทรนโมเดล พร้อมการควบคุมและ audit",
+        "correct": true
+      },
+      {
+        "text": "แชร์ข้อมูลสาธารณะ"
+      },
+      {
+        "text": "ขายข้อมูลให้คู่แข่ง"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "Grounding กับข้อมูลภายในหมายถึงอะไร?",
     "options": [
-      { "text": "ตอบโดยอิงเอกสารจริงขององค์กร", "correct": true },
-      { "text": "ตอบจากข่าวลือ" },
-      { "text": "ไม่ตอบอะไรเลย" }
+      {
+        "text": "ตอบโดยอิงเอกสารจริงขององค์กร",
+        "correct": true
+      },
+      {
+        "text": "ตอบจากข่าวลือ"
+      },
+      {
+        "text": "ไม่ตอบอะไรเลย"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "จุดแข็งหลักของ Gemini เทียบกับ AI อื่นคืออะไร?",
     "options": [
-      { "text": "ผสานกับเครื่องมือ Google ที่คนใช้อยู่แล้ว", "correct": true },
-      { "text": "เป็น AI ตัวเดียวในโลก" },
-      { "text": "ไม่มีจุดแข็ง" }
+      {
+        "text": "ผสานกับเครื่องมือ Google ที่คนใช้อยู่แล้ว",
+        "correct": true
+      },
+      {
+        "text": "เป็น AI ตัวเดียวในโลก"
+      },
+      {
+        "text": "ไม่มีจุดแข็ง"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "ใช้ Gemini ขั้นสูงให้คุ้มควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "เลือกเครื่องมือ (Deep Research/NotebookLM/API) ให้ตรงกับงาน",
+        "correct": true
+      },
+      {
+        "text": "ใช้เครื่องมือเดียวกับทุกงาน"
+      },
+      {
+        "text": "ไม่ตรวจสอบผลลัพธ์"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "สิ่งที่ควรทำเสมอเมื่อใช้ AI วิจัยข้อมูลคือ?",
+    "options": [
+      {
+        "text": "ตรวจสอบแหล่งอ้างอิงก่อนนำไปใช้",
+        "correct": true
+      },
+      {
+        "text": "เชื่อทุกอย่างทันที"
+      },
+      {
+        "text": "ไม่ต้องอ้างอิง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

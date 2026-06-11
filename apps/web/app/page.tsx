@@ -8,8 +8,10 @@ import ToolLogo from "@/components/tool-logo"
 import { getLang, makeT } from "@/lib/i18n"
 import { getSystemSettings } from "@/lib/system-settings"
 import {
-  Flame, Zap, Award, Sparkles, Boxes, Target, Rocket, Heart,
+  Flame, Zap, Award, Sparkles, Target, Rocket, Heart,
   BookOpen, CheckCircle2, Crown, RotateCcw,
+  MessageSquareText,
+  ChevronRight, Trophy, Star, Plus,
 } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -205,13 +207,95 @@ export default async function HomePage() {
       </section>
 
       {/* ========================== TOOLS =========================== */}
-      <section className="block" id="tools">
-        <div className="wrap">
-          <div className="head reveal">
-            <span className="eyebrow"><Boxes size={14} style={iconStyle} /> {t("AI tools")}</span>
-            <h2 className="display">{t("A track for every tool that matters")}</h2>
-            <p>{t("Structured, beginner-to-pro labs for each major AI tool. Pick one, or follow a path.")}</p>
-          </div>
+      <section className="tools-showcase" id="tools">
+        <div className="wrap tools-wrap">
+          <div className="tools-lab reveal">
+            <span className="tools-gem gem-left" aria-hidden />
+            <span className="tools-gem gem-right" aria-hidden />
+            <span className="tools-spark s1" aria-hidden>✦</span>
+            <span className="tools-spark s2" aria-hidden>✦</span>
+            <span className="tools-spark s3" aria-hidden>✦</span>
+
+            <div className="tools-hero-head">
+              <span className="tools-kicker"><Sparkles size={18} /> เครื่องมือ AI</span>
+              <h2 className="display">อยากเก่งเครื่องมือไหน เริ่มตรงนี้ได้เลย</h2>
+              <p>มีบทเรียนให้เลือกง่าย ๆ ในเครื่องมือที่อยากใช้ หรือเริ่มจากเส้นทางแนะนำที่เราเตรียมไว้ให้คุณ</p>
+            </div>
+
+            <div className="tools-board">
+              <Link href="/daily-learn/chatgpt-basic" className="tool-feature">
+                <span className="feature-ribbon"><Star size={14} fill="currentColor" /> แนะนำสำหรับคุณ</span>
+                <span className="feature-crown"><Crown size={20} fill="currentColor" /></span>
+                <Image className="feature-riri" src={`${M}/mascot-point.png`} alt="Riri" width={230} height={230} />
+                <div className="feature-copy">
+                  <div className="feature-head">
+                    <span className="feature-logo"><ToolLogo name="ChatGPT" size={40} /></span>
+                    <div className="feature-id">
+                      <h3>ChatGPT</h3>
+                      <span className="feature-cat"><MessageSquareText size={13} /> แชท &amp; เขียน</span>
+                    </div>
+                  </div>
+                  <p>ผู้ช่วยอัจฉริยะด้านการแชท การเขียน วิเคราะห์ และช่วยคิดไอเดียได้ทุกเรื่อง</p>
+                  <div className="feature-stats">
+                    <span><BookOpen size={15} /> 64 บทเรียน</span>
+                    <span><Zap size={15} /> ระดับเริ่มต้น</span>
+                  </div>
+                  <span className="feature-button">เริ่มเรียนเลย <ChevronRight size={19} /></span>
+                  <div className="feature-proof">
+                    <span><Flame size={15} fill="currentColor" /> ยอดนิยมอันดับ 1</span>
+                    <span className="avatar-stack" aria-label="ผู้เรียนกว่า 12,000 คน">
+                      <i /><i /><i /><i />
+                      <b>+12K เรียนแล้ว</b>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+
+              <div className="tool-mini-grid">
+                {[
+                  ["Claude", "52 บทเรียน", "แชท & เขียน", "linear-gradient(160deg,#FFAE72,#E2611C)"],
+                  ["Gemini", "48 บทเรียน", "แชท & เขียน", "linear-gradient(160deg,#70A6FF,#2A6FF0)"],
+                  ["Midjourney", "40 บทเรียน", "รูปภาพ", "linear-gradient(160deg,#BC83FF,#6C3CF5)"],
+                  ["Suno", "32 บทเรียน", "เพลง", "linear-gradient(160deg,#FF8CBE,#F03C89)"],
+                  ["Runway", "36 บทเรียน", "วิดีโอ", "linear-gradient(160deg,#161022,#050408)"],
+                ].map(([name, lessons, tag, bg]) => (
+                  <Link className="tool-mini" href="/docs" key={name}>
+                    <span className="tool-mini-icon" style={{ background: bg }}><ToolLogo name={name} size={30} /></span>
+                    <span className="tool-mini-copy">
+                      <b>{name}</b>
+                      <small>{lessons}</small>
+                      <em>{tag}</em>
+                    </span>
+                    <ChevronRight className="tool-mini-arrow" size={20} />
+                  </Link>
+                ))}
+                <Link className="tool-mini tool-all" href="/docs">
+                  <span className="tool-all-plus"><Plus size={25} /></span>
+                  <b>ดูเครื่องมือทั้งหมด</b>
+                  <small>50+ เครื่องมือ</small>
+                </Link>
+              </div>
+            </div>
+
+            <div className="tools-bottom-cta">
+              <div className="tools-choice">
+                <span><Trophy size={26} /></span>
+                <div>
+                  <b>อยากเก่งเร็ว เลือกเริ่มจากเส้นทางแนะนำ</b>
+                  <small>เรียนตามลำดับที่เราออกแบบไว้ เพื่อพาคุณเก่งจริง</small>
+                </div>
+                <Link href="#paths">ดูเส้นทางแนะนำ <ChevronRight size={18} /></Link>
+              </div>
+              <div className="tools-choice">
+                <span><Sparkles size={26} fill="currentColor" /></span>
+                <div>
+                  <b>หรือเลือกดูเครื่องมือทั้งหมด</b>
+                  <small>ค้นหาและเลือกเรียนในเครื่องมือที่คุณสนใจได้เลย</small>
+                </div>
+                <Link className="primary" href="/docs">ดูเครื่องมือทั้งหมด <ChevronRight size={18} /></Link>
+              </div>
+            </div>
+
           <div className="tools-grid">
             {[
               ["linear-gradient(160deg,#23D08A,#0E8F5E)", "G", "ChatGPT", t("Chat & writing · 64 lessons")],
@@ -227,6 +311,7 @@ export default async function HomePage() {
                 <div className="go">→</div>
               </Link>
             ))}
+          </div>
           </div>
         </div>
       </section>
@@ -317,33 +402,35 @@ export default async function HomePage() {
                 <Link className="btn btn--ghost lg" style={{ width: "100%" }} href="/login">{t("Start free")}</Link>
               </div>
 
-              <div className="plan pro">
+              <div className="pro-wrap">
                 <span className="badge-pop">★ {t("Most popular")}</span>
-                <div className="plan-glow" aria-hidden />
-                <div className="p-top">
-                  <div>
-                    <div className="pname">Pro</div>
-                    <div className="pdesc">{t("For serious learners")}</div>
+                <div className="plan pro">
+                  <div className="plan-glow" aria-hidden />
+                  <div className="p-top">
+                    <div>
+                      <div className="pname">Pro</div>
+                      <div className="pdesc">{t("For serious learners")}</div>
+                    </div>
+                    <span className="plan-chip pro-chip">{t("Every path unlocked")}</span>
                   </div>
-                  <span className="plan-chip pro-chip">{t("Every path unlocked")}</span>
+                  <div className="pcost pro-cost">
+                    <span className="price-month">฿{priceMonth.toLocaleString()}</span>
+                    <span className="price-year">฿{yearlyPerMonth.toLocaleString()}</span>
+                    <small> /{t("mo")}</small>
+                  </div>
+                  <p className="pbill">
+                    <span className="bill-copy month-copy">{t("Pay monthly, cancel anytime")}</span>
+                    <span className="bill-copy year-copy">{t("Pay yearly ฿{year}, save {pct}%", { year: priceYear.toLocaleString(), pct: savePct })}</span>
+                  </p>
+                  <ul className="plist">
+                    <li><span className="ck ok">✓</span> {t("Unlimited lessons")}</li>
+                    <li><span className="ck ok">✓</span> {t("All career paths")}</li>
+                    <li><span className="ck ok">✓</span> {t("Full documentation library")}</li>
+                    <li><span className="ck ok">✓</span> {t("Unlimited hearts")}</li>
+                    <li><span className="ck ok">✓</span> {t("Streak freeze & Pro badges")}</li>
+                  </ul>
+                  <Link className="btn btn--sun lg" style={{ width: "100%" }} href="/login"><Crown size={18} /> {t("Go Pro")}</Link>
                 </div>
-                <div className="pcost pro-cost">
-                  <span className="price-month">฿{priceMonth.toLocaleString()}</span>
-                  <span className="price-year">฿{yearlyPerMonth.toLocaleString()}</span>
-                  <small> /{t("mo")}</small>
-                </div>
-                <p className="pbill">
-                  <span className="bill-copy month-copy">{t("Pay monthly, cancel anytime")}</span>
-                  <span className="bill-copy year-copy">{t("Pay yearly ฿{year}, save {pct}%", { year: priceYear.toLocaleString(), pct: savePct })}</span>
-                </p>
-                <ul className="plist">
-                  <li><span className="ck ok">✓</span> {t("Unlimited lessons")}</li>
-                  <li><span className="ck ok">✓</span> {t("All career paths")}</li>
-                  <li><span className="ck ok">✓</span> {t("Full documentation library")}</li>
-                  <li><span className="ck ok">✓</span> {t("Unlimited hearts")}</li>
-                  <li><span className="ck ok">✓</span> {t("Streak freeze & Pro badges")}</li>
-                </ul>
-                <Link className="btn btn--sun lg" style={{ width: "100%" }} href="/login"><Crown size={18} /> {t("Go Pro")}</Link>
               </div>
             </div>
           </div>

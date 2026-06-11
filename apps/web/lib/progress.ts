@@ -1,10 +1,10 @@
-import { createClient } from "./supabase/server"
+import { createClient, getAuthUser } from "./supabase/server"
 
 /** Returns how many lessons have been completed for a course (keyed by slug). */
 export async function getLessonsDone(courseId: string): Promise<number> {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getAuthUser()
   if (!user) return 0
+  const supabase = await createClient()
   const { data } = await supabase
     .from("course_progress")
     .select("lessons_done")

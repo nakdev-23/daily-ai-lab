@@ -29,6 +29,20 @@ export async function updateSession(request: NextRequest) {
 
   let response = NextResponse.next({ request })
 
+  // Guests carry no Supabase auth cookie — there is no session to refresh, so
+  // skip the auth-server round-trip entirely (it added a network hop to every
+  // public page view). Signed-in users still get the full refresh below.
+  const hasAuthCookie = request.cookies.getAll().some((c) => c.name.startsWith("sb-") && c.name.includes("-auth-token"))
+  if (!hasAuthCookie) {
+    if (matches(path, PROTECTED)) {
+      const url = request.nextUrl.clone()
+      url.pathname = "/login"
+      url.searchParams.set("redirect", path)
+      return NextResponse.redirect(url)
+    }
+    return response
+  }
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,

@@ -1,0 +1,77 @@
+/* Daily AI Lab — out-of-hearts lockout (scoped .dlab-ooh) */
+.dlab-ooh {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: var(--font-anuphan, "Anuphan", system-ui, sans-serif);
+  background:
+    radial-gradient(520px 360px at 50% 8%, rgba(255,255,255,.9), rgba(255,255,255,0) 60%),
+    radial-gradient(480px 340px at 84% 84%, rgba(244,92,151,.16), rgba(244,92,151,0) 66%),
+    linear-gradient(180deg, #F1E9FF 0%, #FBF6FF 54%, #FFEAF1 100%);
+  backdrop-filter: blur(4px);
+}
+.dlab-ooh .ooh-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: 8px 30px 30px;
+  text-align: center;
+  border-radius: 26px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(145,115,250,.22);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.9), 0 34px 80px -34px rgba(72,31,184,.5);
+}
+.dlab-ooh .ooh-mascot {
+  width: clamp(120px, 30vw, 150px); height: auto; margin: -52px auto 6px;
+  filter: drop-shadow(0 18px 20px rgba(39,16,96,.22));
+}
+.dlab-ooh .ooh-hearts { display: flex; justify-content: center; gap: 6px; margin-bottom: 16px; color: #F43F5E; }
+.dlab-ooh .ooh-hearts span { display: inline-flex; transition: transform .3s, filter .3s; }
+.dlab-ooh .ooh-hearts span.lost { filter: grayscale(1) opacity(.3); transform: scale(.84); }
+
+.dlab-ooh h2 { margin: 0 0 8px; font-size: clamp(24px, 5vw, 30px); font-weight: 800; letter-spacing: -.02em; color: #1B1729; }
+.dlab-ooh p { margin: 0 auto 16px; max-width: 340px; font-size: 15px; font-weight: 500; color: #6A6385; line-height: 1.55; }
+
+.dlab-ooh .ooh-timer { margin: 0 0 22px; }
+.dlab-ooh .ooh-clock {
+  display: inline-flex; align-items: baseline; gap: 2px;
+  font-family: var(--font-display, "Baloo 2", system-ui, sans-serif);
+  font-size: clamp(38px, 9vw, 52px); font-weight: 800; letter-spacing: .01em; line-height: 1; color: #6C3CF5;
+  font-variant-numeric: tabular-nums;
+}
+.dlab-ooh .ooh-clock i { font-style: normal; color: rgba(108,60,245,.45); transform: translateY(-3px); }
+
+.dlab-ooh .ooh-actions { display: flex; flex-direction: column; gap: 10px; }
+.dlab-ooh .ooh-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  height: 54px; border-radius: 999px; text-decoration: none;
+  font-family: var(--font-display, "Baloo 2", system-ui, sans-serif); font-weight: 800; font-size: 16px;
+  transition: transform .12s ease, filter .2s, box-shadow .12s;
+}
+.dlab-ooh .ooh-btn.primary {
+  color: #fff; background: linear-gradient(180deg,#9173FA,#6C3CF5);
+  box-shadow: 0 5px 0 #481FB8, 0 14px 22px rgba(72,31,184,.4), inset 0 2px 0 rgba(255,255,255,.35);
+}
+.dlab-ooh .ooh-btn.primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.dlab-ooh .ooh-btn.primary:active { transform: translateY(3px); box-shadow: 0 2px 0 #481FB8; }
+.dlab-ooh .ooh-btn.pro {
+  color: #5A3A00; background: linear-gradient(180deg,#FFD84E,#F4A100);
+  box-shadow: 0 5px 0 #B45309, inset 0 2px 0 rgba(255,255,255,.45);
+}
+.dlab-ooh .ooh-btn.pro:hover { transform: translateY(-2px); filter: brightness(1.04); }
+.dlab-ooh .ooh-btn.pro:active { transform: translateY(3px); box-shadow: 0 2px 0 #B45309; }
+
+.dlab-ooh .ooh-note {
+  margin: 16px auto 0; max-width: 360px; padding: 10px 16px; border-radius: 14px;
+  font-size: 13px; font-weight: 600; line-height: 1.5; color: #5A4F9A;
+  background: rgba(145,115,250,.1); border: 1px solid rgba(145,115,250,.18);
+}
+.dlab-ooh .ooh-note b { font-weight: 800; color: #4A3FA0; }
+.dlab-ooh .ooh-hint { display: block; margin-top: 12px; font-size: 12.5px; font-weight: 600; color: #9890B2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dlab-ooh .ooh-hearts span { transition: none; }
+}

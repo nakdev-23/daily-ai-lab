@@ -3,9 +3,10 @@
 import { useState, useEffect, useRef, useTransition } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight } from "lucide-react"
+import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight, Infinity as InfinityIcon } from "lucide-react"
 import type { LessonStep } from "@/lib/lesson-types"
-import { completeLessonAction } from "@/app/(lesson)/daily-learn/actions"
+import { completeLessonAction, loseHeartAction } from "@/app/(lesson)/daily-learn/actions"
+import OutOfHearts from "@/components/out-of-hearts"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
 
@@ -72,15 +73,26 @@ export default function LessonPlayer({
   courseId,
   lessonNum,
   isLastLesson = false,
+  initialHearts = 5,
+  heartsMax = 5,
+  unlimitedHearts = false,
+  nextRefill = null,
 }: {
   steps?: LessonStep[]
   courseId?: string
   lessonNum?: number
   isLastLesson?: boolean
+  initialHearts?: number
+  heartsMax?: number
+  unlimitedHearts?: boolean
+  nextRefill?: string | null
 }) {
   const STEPS = steps && steps.length > 0 ? steps : FALLBACK_STEPS
   const [step, setStep] = useState(0)
-  const [hearts, setHearts] = useState(5)
+  const [hearts, setHearts] = useState(initialHearts)
+  // When hearts hit 0 mid-lesson, lock the player behind the refill countdown.
+  const [lockedRefill, setLockedRefill] = useState<string | null>(null)
+  const HEART_MAX = Math.max(heartsMax, initialHearts, 1)
   const [selected, setSelected] = useState<number | null>(null)
   const [checked, setChecked] = useState(false)
   const savedRef = useRef(false)
@@ -107,13 +119,20 @@ export default function LessonPlayer({
     setStep((s) => Math.min(s + 1, STEPS.length - 1))
   }
 
-  function onCheck() {
+  async function onCheck() {
     if (cur.type === "theory") { next(); return }
     if (cur.type === "quiz") {
       if (selected === null) return
       if (!checked) {
         setChecked(true)
-        if (!cur.options[selected].correct) setHearts((h) => Math.max(0, h - 1))
+        // Wrong answer → deduct a heart server-side so it syncs across lessons
+        // and respects the daily reset. Pro users never lose hearts.
+        if (!cur.options[selected].correct && !unlimitedHearts) {
+          const r = await loseHeartAction()
+          setHearts(r.hearts)
+          // No hearts left → stop the lesson and show the refill countdown.
+          if (r.hearts <= 0 && !r.unlimited) setLockedRefill(r.nextRefill ?? nextRefill ?? "")
+        }
       } else {
         next()
       }
@@ -133,9 +152,13 @@ export default function LessonPlayer({
           <Link className="x" href={backHref} title="ออก"><X size={18} /></Link>
           <div className="lprog"><i style={{ width: `${progress}%` }} /></div>
           <div className="lesson-hearts">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className={i >= hearts ? "lost" : ""}><Heart size={20} className="text-rose-500" fill="currentColor" /></span>
-            ))}
+            {unlimitedHearts ? (
+              <span className="hearts-unlimited"><Heart size={20} className="text-rose-500" fill="currentColor" /><InfinityIcon size={17} strokeWidth={3} /></span>
+            ) : (
+              Array.from({ length: HEART_MAX }).map((_, i) => (
+                <span key={i} className={i >= hearts ? "lost" : ""}><Heart size={20} className="text-rose-500" fill="currentColor" /></span>
+              ))
+            )}
           </div>
         </div>
 
@@ -204,12 +227,14 @@ export default function LessonPlayer({
 
         {cur.type !== "done" && (
           <div className={`lesson-foot ${footState}`}>
-            <button className="btn-check" onClick={onCheck} disabled={footDisabled}>
+            <button className="btn-check" onClick={onCheck} disabled={footDisabled || lockedRefill !== null}>
               {footLabel}
             </button>
           </div>
         )}
       </div>
+
+      {lockedRefill !== null && <OutOfHearts nextRefill={lockedRefill || null} max={HEART_MAX} />}
     </div>
   )
 }

@@ -8,3 +8,6 @@ dist
 !.env.example
 .DS_Store
 .mcp.json
+
+# Scratch artifacts (screenshots, throwaway chrome profile)
+/tmp-*

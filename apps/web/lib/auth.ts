@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation"
-import { createClient } from "./supabase/server"
+import { cache } from "react"
+import { createClient, getAuthUser } from "./supabase/server"
 
 export type Role = "user" | "admin"
 export type Plan = "free" | "pro"
@@ -12,13 +13,11 @@ export type SessionProfile = {
   plan: Plan
 }
 
-/** Current signed-in profile. Returns null if not signed in. */
-export async function getProfile(): Promise<SessionProfile | null> {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+/** Current signed-in profile. Returns null if not signed in. Memoized per request. */
+export const getProfile = cache(async (): Promise<SessionProfile | null> => {
+  const user = await getAuthUser()
   if (!user) return null
+  const supabase = await createClient()
 
   // Profile (role/identity) and subscription (plan) live in separate tables.
   const [{ data: p }, { data: sub }] = await Promise.all([
@@ -39,7 +38,7 @@ export async function getProfile(): Promise<SessionProfile | null> {
     role,
     plan,
   }
-}
+})
 
 export function isAdmin(profile: SessionProfile | null): boolean {
   return profile?.role === "admin"

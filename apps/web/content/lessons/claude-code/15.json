@@ -4,9 +4,16 @@
     "tag": "Claude Code · บทที่ 15 · ตอนที่ 1",
     "title": "Permissions & Settings",
     "body": [
-      { "text": "ควบคุมสิ่งที่ Claude ทำได้ผ่าน " },
-      { "text": "permission rules: allow (ทำได้เลย), ask (ถามก่อน), deny (ห้ามเด็ดขาด)", "bold": true },
-      { "text": " — ตั้งใน settings.json ระดับ user (ทุกโปรเจกต์) หรือระดับโปรเจกต์ (ทีมใช้ร่วมกัน)" }
+      {
+        "text": "ควบคุมสิ่งที่ Claude ทำได้ผ่าน "
+      },
+      {
+        "text": "permission rules: allow (ทำได้เลย), ask (ถามก่อน), deny (ห้ามเด็ดขาด)",
+        "bold": true
+      },
+      {
+        "text": " — ตั้งใน settings.json ระดับ user (ทุกโปรเจกต์) หรือระดับโปรเจกต์ (ทีมใช้ร่วมกัน)"
+      }
     ],
     "example": "\"allow: ['Bash(npm *)', 'Bash(git status)'] / deny: ['Bash(rm -rf *)'] — npm รันได้เลย rm -rf โดนบล็อก\"",
     "mascot": "mascot-read"
@@ -16,42 +23,106 @@
     "tag": "Claude Code · บทที่ 15 · ตอนที่ 2",
     "title": "ตั้งสิทธิ์ให้พอดีกับงาน",
     "body": [
-      { "text": "หลักคิด: " },
-      { "text": "เริ่มเข้มแล้วค่อยผ่อน — allow เฉพาะคำสั่งที่ใช้บ่อยและปลอดภัย", "bold": true },
-      { "text": " เช่น เทสต์/lint/build ให้ allow ไป ส่วน git push, ลบไฟล์, แตะ database ให้ ask เสมอ" }
+      {
+        "text": "หลักคิด: "
+      },
+      {
+        "text": "เริ่มเข้มแล้วค่อยผ่อน — allow เฉพาะคำสั่งที่ใช้บ่อยและปลอดภัย",
+        "bold": true
+      },
+      {
+        "text": " เช่น เทสต์/lint/build ให้ allow ไป ส่วน git push, ลบไฟล์, แตะ database ให้ ask เสมอ"
+      }
     ],
     "example": "\"ทีมตั้งใน .claude/settings.json: เทสต์และ lint อัตโนมัติ แต่ deploy ต้องคนกดยืนยันทุกครั้ง\"",
     "mascot": "mascot-point"
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 1 จาก 3",
+    "tag": "คำถามที่ 1 จาก 5",
     "question": "Permission สามระดับมีอะไรบ้าง?",
     "options": [
-      { "text": "allow, ask, deny", "correct": true },
-      { "text": "เปิด, ปิด" },
-      { "text": "ฟรี, เสียเงิน" }
+      {
+        "text": "allow, ask, deny",
+        "correct": true
+      },
+      {
+        "text": "เปิด, ปิด"
+      },
+      {
+        "text": "ฟรี, เสียเงิน"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 2 จาก 3",
+    "tag": "คำถามที่ 2 จาก 5",
     "question": "คำสั่งแบบไหนเหมาะกับ allow อัตโนมัติ?",
     "options": [
-      { "text": "เทสต์ lint build ที่ปลอดภัยและใช้บ่อย", "correct": true },
-      { "text": "rm -rf และ drop database" },
-      { "text": "ทุกคำสั่งเลย สะดวกดี" }
+      {
+        "text": "เทสต์ lint build ที่ปลอดภัยและใช้บ่อย",
+        "correct": true
+      },
+      {
+        "text": "rm -rf และ drop database"
+      },
+      {
+        "text": "ทุกคำสั่งเลย สะดวกดี"
+      }
     ]
   },
   {
     "type": "quiz",
-    "tag": "คำถามที่ 3 จาก 3",
+    "tag": "คำถามที่ 3 จาก 5",
     "question": "settings ระดับโปรเจกต์มีประโยชน์อะไร?",
     "options": [
-      { "text": "ทีมใช้กติกาชุดเดียวกันทั้งโปรเจกต์", "correct": true },
-      { "text": "ซ่อนการตั้งค่าจากทีม" },
-      { "text": "ไม่มีประโยชน์" }
+      {
+        "text": "ทีมใช้กติกาชุดเดียวกันทั้งโปรเจกต์",
+        "correct": true
+      },
+      {
+        "text": "ซ่อนการตั้งค่าจากทีม"
+      },
+      {
+        "text": "ไม่มีประโยชน์"
+      }
     ]
   },
-  { "type": "done" }
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "ตั้ง Permissions ให้ดีควรเป็นอย่างไร?",
+    "options": [
+      {
+        "text": "เปิดสิทธิ์ทุกอย่างเสมอ"
+      },
+      {
+        "text": "ปิดทุกอย่างจนทำงานไม่ได้"
+      },
+      {
+        "text": "ให้สิทธิ์พอดีกับงาน ไม่มาก/น้อยเกินไป",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ทำไมการตั้งสิทธิ์ให้พอดีจึงสำคัญ?",
+    "options": [
+      {
+        "text": "ไม่สำคัญ"
+      },
+      {
+        "text": "สมดุลความสะดวกกับความปลอดภัย",
+        "correct": true
+      },
+      {
+        "text": "เพื่อความช้า"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
 ]

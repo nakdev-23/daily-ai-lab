@@ -17,9 +17,9 @@ import { updateDisplayName, type SettingsResult } from "./actions"
 const AV = "/assets/daily-ai-lab/avatars"
 const AVATARS = ["heart", "celebrate", "thumbsup", "graduate", "wave", "cool", "read", "think", "yawn", "sad", "sleep"]
 
-type Props = { lang: Lang; displayName: string; email: string; avatar: string | null }
+type Props = { lang: Lang; displayName: string; email: string; avatar: string | null; proPrice: number; plan: "free" | "pro" }
 
-export default function SettingsClient({ lang, displayName, email, avatar }: Props) {
+export default function SettingsClient({ lang, displayName, email, avatar, proPrice, plan }: Props) {
   const router = useRouter()
   const t = makeT(lang)
   const [goal, setGoal] = useState(1)
@@ -150,11 +150,23 @@ export default function SettingsClient({ lang, displayName, email, avatar }: Pro
         {/* Subscription */}
         <section className="set-card glass set-pro" id="subscription">
           <Image src="/assets/daily-ai-lab/mascot-ds/cockatiel-superhero.png" alt="Riri" width={70} height={70} />
-          <div style={{ flex: 1 }}>
-            <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("Upgrade to Pro")}</h3>
-            <p>{t("Unlimited lessons, all career paths and unlimited hearts · ฿199/mo")}</p>
-          </div>
-          <Link className="btn btn--violet md" href="/upgrade">{t("Upgrade")}</Link>
+          {plan === "pro" ? (
+            <>
+              <div style={{ flex: 1 }}>
+                <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("You're on Pro")}</h3>
+                <p>{t("Unlimited lessons, all career paths and unlimited hearts.")}</p>
+              </div>
+              <span className="sg-badge"><Crown size={14} className="text-amber-500" /> Pro</span>
+            </>
+          ) : (
+            <>
+              <div style={{ flex: 1 }}>
+                <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("Upgrade to Pro")}</h3>
+                <p>{t("Unlimited lessons, all career paths and unlimited hearts.")} · ฿{proPrice.toLocaleString()}/{t("mo")}</p>
+              </div>
+              <Link className="btn btn--violet md" href="/upgrade">{t("Upgrade")}</Link>
+            </>
+          )}
         </section>
 
         {/* Danger */}

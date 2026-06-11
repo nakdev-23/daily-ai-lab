@@ -3,6 +3,7 @@ import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
 import { getCourses } from "@/lib/courses"
 import { getCourseContent } from "@/lib/course-content"
+import { getSystemSettings } from "@/lib/system-settings"
 import { getToolColors } from "@/lib/tool-colors"
 import ToolLogo from "@/components/tool-logo"
 import { MessageSquare, CheckCircle2, BookOpen, Check, Zap, Lock, ChevronRight } from "lucide-react"
@@ -15,7 +16,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   const { tool } = await params
   const t = makeT(await getLang())
 
-  const courses = await getCourses()
+  const [courses, settings] = await Promise.all([getCourses(), getSystemSettings()])
   const course = courses.find((c) => toolSlug(c.tool) === tool)
     ?? courses.find((c) => c.tool.toLowerCase() === tool)
     ?? courses.find((c) => c.status === "published")
@@ -99,7 +100,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
           <div className="course-card glass">
             <div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "center", marginBottom: 6 }}>
               <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 22, color: "var(--hero-700)" }}>฿0</span>
-              <span style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 700 }}>{t("to start · Pro ฿199/mo")}</span>
+              <span style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 700 }}>{t("to start")} · Pro ฿{settings.proPriceMonth.toLocaleString()}/{t("mo")}</span>
             </div>
             <p style={{ fontSize: 13, color: "var(--text-muted)", margin: 0 }}>{t("Taught with Riri · Thai & English · Certificate on completion")}</p>
           </div>

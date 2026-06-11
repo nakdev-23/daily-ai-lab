@@ -173,6 +173,7 @@ export const th: Record<string, string> = {
   "Daily quests": "เป้าหมายวันนี้",
   "14h left": "เหลือ 14 ชม.",
   "Earn 30 XP": "เก็บ 30 แต้ม",
+  "Earn {n} XP": "เก็บ {n} แต้ม",
   "Finish 2 lessons": "เรียนให้จบ 2 บท",
   "Score 100% on a quiz": "ทำแบบฝึกหัดถูกหมด",
   "Your week": "สัปดาห์ของคุณ",

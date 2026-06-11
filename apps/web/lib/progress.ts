@@ -14,16 +14,30 @@ export async function getLessonsDone(courseId: string): Promise<number> {
   return data?.lessons_done ?? 0
 }
 
+export type CompleteLessonResult = {
+  ok: boolean
+  xp: number
+  reason: "ok" | "replay" | "sequential" | "daily-limit" | "invalid" | "not-signed-in" | "error"
+}
+
 /**
- * Marks a lesson as completed and awards XP (idempotent — replaying a
- * finished lesson changes nothing). Goes through the complete_lesson RPC
- * so progress + XP + streak update atomically.
+ * Marks a lesson as completed (idempotent — replaying a finished lesson
+ * changes nothing). The complete_lesson RPC owns the XP amount: it reads the
+ * lesson's XP from course content server-side (migration 011), so the client
+ * never decides how much XP it gets. Returns what was awarded and why.
  */
-export async function markLessonDone(courseId: string, lessonNum: number, xp = 10): Promise<void> {
+export async function markLessonDone(courseId: string, lessonNum: number, perfect = false): Promise<CompleteLessonResult> {
   const supabase = await createClient()
-  await supabase.rpc("complete_lesson", {
+  const { data, error } = await supabase.rpc("complete_lesson", {
     p_course_id: courseId,
     p_lesson_num: lessonNum,
-    p_xp: xp,
+    p_perfect: perfect,
   })
+  if (error || !data || typeof data !== "object") return { ok: false, xp: 0, reason: "error" }
+  const r = data as { ok?: boolean; xp?: number; reason?: string }
+  return {
+    ok: r.ok === true,
+    xp: typeof r.xp === "number" ? r.xp : 0,
+    reason: (r.reason as CompleteLessonResult["reason"]) ?? "error",
+  }
 }

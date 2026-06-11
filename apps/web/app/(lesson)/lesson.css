@@ -128,6 +128,15 @@
 .dlab-lesson .lstep.done img { width: 160px; filter: drop-shadow(0 20px 24px rgba(39,16,96,.26)); animation: bobMascot 6s ease-in-out infinite; }
 .dlab-lesson .lstep.done h2 { font-size: 36px; margin: 12px 0 4px; }
 .dlab-lesson .lstep.done p { font-size: 17px; color: var(--text-muted); margin: 0 0 22px; }
+/* actual XP awarded by the server (or the reason nothing was) */
+.dlab-lesson .xp-award { display: inline-flex; align-items: center; gap: 8px; margin: -8px 0 22px; padding: 10px 22px; border-radius: 999px;
+  font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--sun-700, #B45309);
+  background: linear-gradient(180deg, #FFF3C9, #FFE48A); box-shadow: inset 0 2px 0 rgba(255,255,255,.7), 0 10px 20px -10px rgba(224,150,0,.55);
+  animation: lessonStepIn .3s var(--ease-out) both; }
+.dlab-lesson .xp-award .xp-perfect { font-size: 13px; font-weight: 800; color: #fff; background: var(--mint-500, #14A871); border-radius: 999px; padding: 3px 10px; }
+.dlab-lesson .xp-note { margin: -8px 0 22px; max-width: 420px; padding: 10px 18px; border-radius: 14px; font-size: 14px; font-weight: 600; line-height: 1.5;
+  color: #5A4F9A; background: rgba(145,115,250,.1); border: 1px solid rgba(145,115,250,.18); }
+@media (prefers-reduced-motion: reduce) { .dlab-lesson .xp-award { animation: none; } }
 .dlab-lesson .btn--sun { background: linear-gradient(180deg,#FFC93C,#F59E0B); color: #5A3A00; box-shadow: 0 5px 0 #B45309, 0 14px 22px rgba(180,83,9,.34), inset 0 2px 0 rgba(255,255,255,.45); }
 .dlab-lesson .btn--sun:hover { transform: translateY(-2px); filter: brightness(1.05); }
 .dlab-lesson .btn--sun:active { transform: translateY(3px); box-shadow: 0 2px 0 #B45309, 0 6px 12px rgba(180,83,9,.34); }

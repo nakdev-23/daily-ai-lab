@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight, Infinity as InfinityIcon } from "lucide-react"
 import type { LessonStep } from "@/lib/lesson-types"
-import { completeLessonAction, loseHeartAction } from "@/app/(lesson)/daily-learn/actions"
+import { completeLessonAction, loseHeartAction, type CompleteLessonResult } from "@/app/(lesson)/daily-learn/actions"
 import OutOfHearts from "@/components/out-of-hearts"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -95,6 +95,10 @@ export default function LessonPlayer({
   const HEART_MAX = Math.max(heartsMax, initialHearts, 1)
   const [selected, setSelected] = useState<number | null>(null)
   const [checked, setChecked] = useState(false)
+  // Wrong answers this run — a clean run earns the perfect-quiz XP bonus.
+  const mistakesRef = useRef(0)
+  // What the server actually awarded (null = still saving).
+  const [award, setAward] = useState<(CompleteLessonResult & { perfect: boolean }) | null>(null)
   const savedRef = useRef(false)
   const [, startTransition] = useTransition()
 
@@ -107,8 +111,10 @@ export default function LessonPlayer({
   useEffect(() => {
     if (cur.type === "done" && courseId && lessonNum && !savedRef.current) {
       savedRef.current = true
-      startTransition(() => {
-        completeLessonAction(courseId, lessonNum)
+      startTransition(async () => {
+        const perfect = mistakesRef.current === 0
+        const r = await completeLessonAction(courseId, lessonNum, perfect)
+        setAward({ ...r, perfect })
       })
     }
   }, [cur.type, courseId, lessonNum, startTransition])
@@ -125,13 +131,16 @@ export default function LessonPlayer({
       if (selected === null) return
       if (!checked) {
         setChecked(true)
-        // Wrong answer → deduct a heart server-side so it syncs across lessons
-        // and respects the daily reset. Pro users never lose hearts.
-        if (!cur.options[selected].correct && !unlimitedHearts) {
-          const r = await loseHeartAction()
-          setHearts(r.hearts)
-          // No hearts left → stop the lesson and show the refill countdown.
-          if (r.hearts <= 0 && !r.unlimited) setLockedRefill(r.nextRefill ?? nextRefill ?? "")
+        if (!cur.options[selected].correct) {
+          mistakesRef.current += 1
+          // Wrong answer → deduct a heart server-side so it syncs across lessons
+          // and respects the daily reset. Pro users never lose hearts.
+          if (!unlimitedHearts) {
+            const r = await loseHeartAction()
+            setHearts(r.hearts)
+            // No hearts left → stop the lesson and show the refill countdown.
+            if (r.hearts <= 0 && !r.unlimited) setLockedRefill(r.nextRefill ?? nextRefill ?? "")
+          }
         }
       } else {
         next()
@@ -211,6 +220,22 @@ export default function LessonPlayer({
               <Image src={`${M}/mascot-celebrate.png`} alt="Riri" width={160} height={160} />
               <h2 className="display">บทเรียนเสร็จแล้ว!</h2>
               <p>เยี่ยมมาก คุณผ่านบทเรียนนี้แล้ว</p>
+              {/* What the server actually awarded — never a silent failure. */}
+              {award?.ok && (
+                <div className="xp-award" aria-live="polite">
+                  <Zap size={18} fill="currentColor" /> +{award.xp} XP
+                  {award.perfect && <span className="xp-perfect">โบนัสเพอร์เฟกต์!</span>}
+                </div>
+              )}
+              {award && !award.ok && award.reason === "replay" && (
+                <div className="xp-note">โหมดทบทวน — บทนี้จบไปแล้ว เลยไม่ได้รับ XP เพิ่ม</div>
+              )}
+              {award && !award.ok && award.reason === "daily-limit" && (
+                <div className="xp-note">วันนี้เรียนครบโควต้าแพ็กเกจ Free แล้ว — บทนี้ไม่ถูกนับ ลอง Pro เพื่อเรียนไม่จำกัด</div>
+              )}
+              {award && !award.ok && (award.reason === "sequential" || award.reason === "invalid" || award.reason === "error" || award.reason === "not-signed-in") && (
+                <div className="xp-note">บันทึกความคืบหน้าไม่สำเร็จ — กลับหน้าบทเรียนแล้วลองใหม่อีกครั้ง</div>
+              )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
                 {nextHref && (
                   <Link className="btn btn--sun lg" href={nextHref}>

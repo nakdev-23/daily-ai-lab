@@ -17,16 +17,18 @@ import {
 } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
-const XPS = [100, 100, 120, 120, 150, 150, 160, 180, 200, 300]
 
-function buildLevels(lessons: CLesson[], done: number): Level[] {
+// fallbackXp = admin's xp_per_lesson. The number on each node must be exactly
+// what the complete_lesson RPC will award (it reads the same content rows),
+// so no made-up placeholder values here.
+function buildLevels(lessons: CLesson[], done: number, fallbackXp: number): Level[] {
   return lessons.map((lesson, i) => {
     const last = i === lessons.length - 1
     let status: Level["status"]
     if (i < done) status = "done"
     else if (i === done) status = last ? "treasure" : "current"
     else status = last ? "treasure" : "locked"
-    return { n: i + 1, title: lesson.title, xp: lesson.xp || XPS[i] || 120, status }
+    return { n: i + 1, title: lesson.title, xp: lesson.xp || fallbackXp, status }
   })
 }
 
@@ -41,15 +43,16 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   const units = await getCourseContent(course.id)
   const flatLessons = units.flatMap((u) => u.lessons)
 
-  const totalLessons = flatLessons.length || course.lessons || 10
-  const xpGoal = flatLessons.reduce((s, l) => s + (l.xp || 120), 0) || totalLessons * 120
-
   // Must match the key the lesson player saves under (slug, with id fallback)
   const progressKey = course.slug || course.id
   // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
   const today = bangkokTodayISO()
   const settings = await getSystemSettings() // request-memoized (layout already fetched it)
   const goalLessons = Math.max(1, settings.freeLessonsPerDay)
+  const xpPerLesson = Math.max(1, settings.xpPerLesson)
+
+  const totalLessons = flatLessons.length || course.lessons || 10
+  const xpGoal = flatLessons.reduce((s, l) => s + (l.xp || xpPerLesson), 0) || totalLessons * xpPerLesson
 
   let done = 0
   let lessonsToday = 0
@@ -68,7 +71,7 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   }
 
   // XP earned within this course = sum of XP for the lessons already done
-  const xpEarned = flatLessons.slice(0, done).reduce((s, l) => s + (l.xp || 120), 0)
+  const xpEarned = flatLessons.slice(0, done).reduce((s, l) => s + (l.xp || xpPerLesson), 0)
   const hoursLeft = bangkokHoursLeftToday()
 
   const colors = getToolColors(course.tool)
@@ -77,9 +80,9 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   const pct = Math.min(100, totalLessons > 0 ? Math.round((done / totalLessons) * 100) : 0)
 
   const placeholderLessons: CLesson[] = Array.from({ length: totalLessons }, (_, i) => ({
-    id: `ph-${i}`, unit_id: "", title: `${t("Lesson")} ${i + 1}`, xp: XPS[i] ?? 120, order_index: i, kind: "lesson" as const,
+    id: `ph-${i}`, unit_id: "", title: `${t("Lesson")} ${i + 1}`, xp: xpPerLesson, order_index: i, kind: "lesson" as const,
   }))
-  const levels = buildLevels(flatLessons.length > 0 ? flatLessons : placeholderLessons, done)
+  const levels = buildLevels(flatLessons.length > 0 ? flatLessons : placeholderLessons, done, xpPerLesson)
 
   const current = levels.find((l) => l.status === "current") ?? levels.find((l) => l.status === "treasure")
   const firstLesson = `/daily-learn/${topic}/${current?.n ?? 1}`

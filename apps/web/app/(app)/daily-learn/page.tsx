@@ -15,7 +15,7 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 export default async function DailyLearnPage() {
   const lang = await getLang()
   const t = makeT(lang)
-  let name = "Nin", streak = 0, lessonsToday = 0
+  let name = "Nin", streak = 0, lessonsToday = 0, xpToday = 0
   const doneByCourse: Record<string, number> = {}
   // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
   const today = bangkokTodayISO()
@@ -28,12 +28,14 @@ export default async function DailyLearnPage() {
 
   if (profile) {
     const [{ data: g }, { data: progress }] = await Promise.all([
-      supabase.from("game_state").select("streak_current, lessons_today, lessons_today_date").eq("user_id", profile.id).maybeSingle(),
+      // select("*") so the page keeps working even before migration 011 adds xp_today
+      supabase.from("game_state").select("*").eq("user_id", profile.id).maybeSingle(),
       supabase.from("course_progress").select("course_id, lessons_done").eq("user_id", profile.id),
     ])
     name = profile.displayName
     streak = g?.streak_current ?? 0
     lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
+    xpToday = g?.xp_today_date === today ? (g?.xp_today ?? 0) : 0
     for (const row of (progress ?? []) as Array<{ course_id: string; lessons_done: number }>) {
       doneByCourse[row.course_id] = row.lessons_done
     }
@@ -41,6 +43,9 @@ export default async function DailyLearnPage() {
 
   const goalPct = Math.min(100, Math.round((lessonsToday / goalLessons) * 100))
   const hoursLeft = bangkokHoursLeftToday()
+  // Daily XP target = the XP of a full quota day (admin-configured values).
+  const xpGoalToday = Math.max(1, settings.xpPerLesson) * goalLessons
+  const xpPct = Math.min(100, Math.round((xpToday / xpGoalToday) * 100))
 
   const TOPICS = published.map((c) => {
     const colors = getToolColors(c.tool)
@@ -144,8 +149,8 @@ export default async function DailyLearnPage() {
           </div>
           <div className="quest">
             <span className="qic" style={{ background: "var(--sun-100)", color: "var(--sun-700)" }}><Zap size={21} /></span>
-            <div className="qb"><b>{t("Earn 30 XP")}</b><div className="pbar"><i style={{ width: "0%" }} /></div></div>
-            <span className="qx">0/30</span>
+            <div className="qb"><b>{t("Earn {n} XP", { n: xpGoalToday })}</b><div className="pbar"><i style={{ width: `${xpPct}%` }} /></div></div>
+            <span className="qx">{Math.min(xpToday, xpGoalToday)}/{xpGoalToday}</span>
           </div>
           <div className="quest">
             <span className="qic" style={{ background: "var(--mint-100)", color: "var(--mint-600)" }}><CheckCircle2 size={21} /></span>

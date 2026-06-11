@@ -594,17 +594,99 @@ html.js .dlab-home .stage .fcard.badge { animation-delay: .46s, -0.8s; }
 .dlab-home .band-grid .s span { font-size: 14px; font-weight: 700; color: var(--hero-100); }
 
 /* ===================== PRICING ===================== */
-.dlab-home .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 840px; margin: 0 auto; align-items: stretch; }
-.dlab-home .plan { border-radius: var(--radius-xl); padding: 34px; position: relative; display: flex; flex-direction: column; }
-.dlab-home .plan.pro { background: var(--g-violet); color: #fff; box-shadow: 0 34px 64px -20px rgba(72,31,184,.6); border: 1px solid rgba(255,255,255,.18); transform: translateY(-10px); }
-.dlab-home .plan .pname { font-family: var(--font-display); font-weight: 800; font-size: 23px; }
-.dlab-home .plan .pdesc { font-size: 14px; margin-top: 2px; }
-.dlab-home .plan .pcost { font-family: var(--font-display); font-weight: 800; font-size: 50px; margin: 18px 0 6px; line-height: 1; }
-.dlab-home .plan .pcost small { font-size: 17px; font-weight: 700; }
-.dlab-home .plist { list-style: none; margin: 18px 0 26px; padding: 0; display: flex; flex-direction: column; gap: 13px; flex: 1; }
-.dlab-home .plist li { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 700; }
+.dlab-home .pricing-stage { position: relative; max-width: 960px; margin: 0 auto; }
+.dlab-home .pricing-stage::before { content: ""; position: absolute; inset: 80px -54px 20px; z-index: -1; border-radius: 48px;
+  background:
+    radial-gradient(340px 260px at 70% 8%, rgba(255,212,58,.34), transparent 68%),
+    radial-gradient(420px 300px at 8% 88%, rgba(244,92,151,.18), transparent 68%),
+    linear-gradient(180deg, rgba(242,236,254,.72), rgba(255,255,255,0)); }
+.dlab-home .billing-toggle { position: absolute; inline-size: 1px; block-size: 1px; opacity: 0; pointer-events: none; }
+.dlab-home .billing-row { width: max-content; max-width: 100%; margin: 0 auto 36px; padding: 9px 12px; border-radius: 999px;
+  display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.92);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,1), 0 16px 34px -18px rgba(72,31,184,.44), 0 4px 0 rgba(224,218,239,.7); }
+.dlab-home .bill-label { cursor: pointer; user-select: none; font-family: var(--font-display); font-weight: 800; color: var(--text-muted);
+  padding: 8px 12px; border-radius: 999px; transition: color .25s var(--ease-out), background .25s var(--ease-out), transform .25s var(--ease-out); }
+.dlab-home .bill-label span { display: inline-flex; margin-left: 6px; padding: 4px 9px; border-radius: 999px; font-size: 12px;
+  color: var(--hero-700); background: var(--sun-100); box-shadow: inset 0 1px 0 rgba(255,255,255,.85); }
+.dlab-home .bill-month { color: var(--hero-700); background: var(--hero-50); }
+.dlab-home .bill-switch { position: relative; cursor: pointer; width: 72px; height: 38px; flex: none; border-radius: 999px; padding: 4px;
+  background: linear-gradient(180deg, var(--cloud-200), var(--cloud-100)); box-shadow: inset 0 3px 8px rgba(72,31,184,.16), 0 4px 0 var(--cloud-200); }
+.dlab-home .bill-thumb { position: relative; z-index: 2; display: block; width: 30px; height: 30px; border-radius: 999px;
+  background: linear-gradient(180deg, #fff, #F8F5FF); box-shadow: 0 5px 12px rgba(39,16,96,.22), inset 0 1px 0 #fff;
+  transition: transform .34s cubic-bezier(.22,1,.36,1), background .25s var(--ease-out); }
+.dlab-home .bill-sparks { position: absolute; inset: -13px -18px; opacity: 0; pointer-events: none; transform: scale(.72);
+  background:
+    radial-gradient(circle at 20% 38%, var(--sun-400) 0 3px, transparent 4px),
+    radial-gradient(circle at 76% 18%, var(--pink-400) 0 3px, transparent 4px),
+    radial-gradient(circle at 88% 72%, var(--mint-500) 0 3px, transparent 4px),
+    radial-gradient(circle at 34% 82%, var(--sky-500) 0 2px, transparent 3px); }
+.dlab-home .billing-toggle:checked ~ .billing-row .bill-month { color: var(--text-muted); background: transparent; }
+.dlab-home .billing-toggle:checked ~ .billing-row .bill-year { color: var(--hero-700); background: var(--hero-50); transform: translateY(-1px); }
+.dlab-home .billing-toggle:checked ~ .billing-row .bill-switch { background: linear-gradient(180deg, #9173FA, #6C3CF5); box-shadow: inset 0 2px 0 rgba(255,255,255,.35), 0 4px 0 #481FB8; }
+.dlab-home .billing-toggle:checked ~ .billing-row .bill-thumb { transform: translateX(34px); background: linear-gradient(180deg, #FFE67A, #FFD43A); }
+.dlab-home .billing-toggle:checked ~ .billing-row .bill-sparks { animation: billingSpark .55s var(--ease-out); }
+.dlab-home .billing-toggle:focus-visible ~ .billing-row .bill-switch { outline: 3px solid var(--hero-500); outline-offset: 4px; }
+@keyframes billingSpark { 0% { opacity: 0; transform: scale(.62) rotate(-10deg); } 42% { opacity: 1; transform: scale(1) rotate(8deg); } 100% { opacity: 0; transform: scale(1.18) rotate(18deg); } }
+
+.dlab-home .price-grid { display: grid; grid-template-columns: repeat(2, minmax(280px, 1fr)); gap: 24px; max-width: 860px; margin: 0 auto; align-items: stretch; perspective: 1000px; transform-style: preserve-3d; }
+.dlab-home .plan { border-radius: var(--radius-xl); padding: 34px; position: relative; display: flex; flex-direction: column; overflow: hidden;
+  transform-style: preserve-3d; transition: transform .34s var(--ease-out), box-shadow .34s var(--ease-out), filter .34s var(--ease-out); }
+.dlab-home .plan.free { min-height: 500px; z-index: 1; transform: translateY(10px); }
+.dlab-home .plan.free:hover { transform: translateY(2px); filter: saturate(1.02); }
+.dlab-home .plan.pro { isolation: isolate; z-index: 2; color: #fff; background:
+    radial-gradient(320px 240px at 86% 0%, rgba(255,212,58,.34), transparent 64%),
+    radial-gradient(360px 280px at -6% 86%, rgba(244,92,151,.22), transparent 62%),
+    var(--g-violet);
+  min-height: 500px; border: 1px solid rgba(255,255,255,.26); transform: translateY(-6px);
+  box-shadow: 0 7px 0 #481FB8, 0 34px 68px -20px rgba(72,31,184,.66), inset 0 2px 0 rgba(255,255,255,.26); }
+.dlab-home .plan.pro:hover { transform: translateY(-14px); filter: brightness(1.025);
+  box-shadow: 0 9px 0 #481FB8, 0 44px 78px -22px rgba(72,31,184,.7), inset 0 2px 0 rgba(255,255,255,.32); }
+.dlab-home .plan.pro::after { content: ""; position: absolute; inset: 18px; z-index: -1; border-radius: 24px; pointer-events: none; opacity: 0;
+  background:
+    radial-gradient(circle at 18% 22%, var(--sun-300) 0 4px, transparent 5px),
+    radial-gradient(circle at 74% 18%, var(--pink-300) 0 3px, transparent 4px),
+    radial-gradient(circle at 88% 62%, var(--mint-500) 0 3px, transparent 4px),
+    radial-gradient(circle at 28% 82%, var(--sky-500) 0 3px, transparent 4px); }
+.dlab-home .billing-toggle:checked ~ .price-grid .plan.pro::after { animation: proAnnualBurst .75s var(--ease-out); }
+.dlab-home .plan-glow { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(115deg, transparent 0 34%, rgba(255,255,255,.24) 44%, transparent 56% 100%);
+  transform: translateX(-80%); animation: planShine 5.8s var(--ease-out) infinite; }
+.dlab-home .plan-orbit { position: absolute; right: -42px; top: -42px; width: 136px; height: 136px; border-radius: 999px;
+  background: radial-gradient(circle, rgba(255,212,58,.28), transparent 68%); pointer-events: none; }
+@keyframes planShine { 0%, 46% { transform: translateX(-86%); } 64%, 100% { transform: translateX(86%); } }
+@keyframes proAnnualBurst { 0% { opacity: 0; transform: scale(.84) rotate(-8deg); } 38% { opacity: 1; transform: scale(1.02) rotate(4deg); } 100% { opacity: 0; transform: scale(1.2) rotate(12deg); } }
+.dlab-home .p-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.dlab-home .plan .pname { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.05; }
+.dlab-home .plan .pdesc { font-size: 14px; margin-top: 4px; font-weight: 700; }
+.dlab-home .plan.pro .pdesc,
+.dlab-home .plan.pro .pbill { color: var(--hero-100); }
+.dlab-home .plan-chip { flex: none; display: inline-flex; align-items: center; min-height: 31px; padding: 6px 12px; border-radius: 999px;
+  color: var(--hero-700); background: var(--hero-50); font-size: 12px; font-weight: 900; box-shadow: inset 0 1px 0 rgba(255,255,255,.9); }
+.dlab-home .pro-chip { color: var(--hero-700); background: linear-gradient(180deg,#FFE066,#FFD43A); }
+.dlab-home .plan .pcost { position: relative; min-height: 62px; font-family: var(--font-display); font-weight: 800; font-size: clamp(46px, 6vw, 62px); margin: 24px 0 7px; line-height: 1; letter-spacing: -.02em; }
+.dlab-home .plan .pcost small { font-size: 17px; font-weight: 800; color: inherit; opacity: .82; letter-spacing: 0; }
+.dlab-home .pro-cost .price-month,
+.dlab-home .pro-cost .price-year { display: inline-block; transform-origin: 50% 75%; transition: transform .42s var(--ease-out), opacity .26s var(--ease-out), filter .38s var(--ease-out); }
+.dlab-home .pro-cost .price-year { position: absolute; left: 0; top: 0; opacity: 0; transform: translateY(22px) rotateX(-58deg) scale(.94); filter: blur(10px); }
+.dlab-home .billing-toggle:checked ~ .price-grid .pro-cost .price-month { opacity: 0; transform: translateY(-22px) rotateX(58deg) scale(.94); filter: blur(10px); }
+.dlab-home .billing-toggle:checked ~ .price-grid .pro-cost .price-year { opacity: 1; transform: translateY(0) rotateX(0) scale(1); filter: blur(0); animation: pricePop .58s cubic-bezier(.22,1,.36,1); }
+.dlab-home .billing-toggle:checked ~ .price-grid .pro-cost small { animation: periodNudge .5s var(--ease-out); }
+@keyframes pricePop { 0% { transform: translateY(22px) rotateX(-58deg) scale(.92); } 55% { transform: translateY(-6px) rotateX(0) scale(1.08); } 100% { transform: translateY(0) rotateX(0) scale(1); } }
+@keyframes periodNudge { 0% { opacity: .25; transform: translateX(-8px); } 100% { opacity: .82; transform: translateX(0); } }
+.dlab-home .pbill { position: relative; min-height: 24px; margin: 0; color: var(--text-muted); font-size: 13px; font-weight: 800; }
+.dlab-home .bill-copy { display: block; transition: transform .28s var(--ease-out), opacity .2s var(--ease-out); }
+.dlab-home .year-copy { position: absolute; left: 0; top: 0; opacity: 0; transform: translateY(8px); }
+.dlab-home .billing-toggle:checked ~ .price-grid .month-copy { opacity: 0; transform: translateY(-8px); }
+.dlab-home .billing-toggle:checked ~ .price-grid .year-copy { opacity: 1; transform: translateY(0); }
+.dlab-home .plist { list-style: none; margin: 22px 0 28px; padding: 0; display: flex; flex-direction: column; gap: 13px; flex: 1; }
+.dlab-home .plist li { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 800; line-height: 1.45; }
+.dlab-home .plist li.muted { color: var(--text-muted); }
 .dlab-home .ck { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; flex: none; font-size: 13px; font-weight: 900; }
-.dlab-home .badge-pop { position: absolute; top: -14px; right: 24px; white-space: nowrap; background: linear-gradient(180deg, #FFE066, var(--sun-400)); color: var(--hero-700); font-family: var(--font-display); font-weight: 800; font-size: 12.5px; padding: 8px 16px; border-radius: 999px; transform: rotate(4deg); box-shadow: 0 8px 16px rgba(224,150,0,.45), inset 0 2px 0 rgba(255,255,255,.5); }
+.dlab-home .ck.ok { background: var(--mint-100); color: var(--mint-600); }
+.dlab-home .ck.no { background: var(--cloud-100); color: var(--cloud-400); }
+.dlab-home .plan.pro .ck.ok { background: rgba(255,255,255,.2); color: var(--sun-300); box-shadow: inset 0 1px 0 rgba(255,255,255,.2); }
+.dlab-home .badge-pop { position: absolute; top: -18px; left: 22px; z-index: 4; white-space: nowrap; background: linear-gradient(180deg, #FFE066, var(--sun-400)); color: var(--hero-700); font-family: var(--font-display); font-weight: 800; font-size: 12.5px; padding: 8px 16px; border-radius: 999px; transform: rotate(-4deg); box-shadow: 0 8px 16px rgba(224,150,0,.45), inset 0 2px 0 rgba(255,255,255,.5); animation: badgeWiggle 4.5s ease-in-out infinite; }
+@keyframes badgeWiggle { 0%,100% { transform: rotate(-4deg) translateY(0); } 50% { transform: rotate(-1deg) translateY(-3px); } }
 
 /* ===================== FINAL CTA ===================== */
 .dlab-home section.final-cta-section { margin-top: 40px; padding: 40px clamp(18px, 5vw, 72px);
@@ -702,10 +784,29 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .final-mascot { order: -1; }
   .dlab-home .nav-links { display: none; }
 }
+@media (max-width: 760px) {
+  .dlab-home .price-grid { grid-template-columns: 1fr; gap: 22px; max-width: 480px; }
+  .dlab-home .plan.free,
+  .dlab-home .plan.pro,
+  .dlab-home .plan.free:hover,
+  .dlab-home .plan.pro:hover { min-height: auto; transform: none; }
+}
 @media (max-width: 560px) {
   .dlab-home .wrap { padding: 0 18px; }
   .dlab-home .tools-grid, .dlab-home .paths-grid, .dlab-home .price-grid, .dlab-home .band-grid { grid-template-columns: 1fr; }
+  .dlab-home .pricing-stage::before { inset: 58px -18px 4px; border-radius: 30px; }
+  .dlab-home .billing-row { width: 100%; justify-content: center; gap: 6px; padding: 8px; margin-bottom: 24px; }
+  .dlab-home .bill-label { padding: 7px 8px; font-size: 14px; }
+  .dlab-home .bill-label span { margin-left: 3px; padding: 3px 7px; font-size: 11px; }
+  .dlab-home .bill-switch { width: 66px; height: 36px; }
+  .dlab-home .bill-thumb { width: 28px; height: 28px; }
+  .dlab-home .billing-toggle:checked ~ .billing-row .bill-thumb { transform: translateX(30px); }
+  .dlab-home .plan { padding: 28px 22px; }
+  .dlab-home .plan.free { transform: none; }
   .dlab-home .plan.pro { transform: none; }
+  .dlab-home .plan.free:hover,
+  .dlab-home .plan.pro:hover { transform: translateY(-4px); }
+  .dlab-home .p-top { flex-direction: column; gap: 10px; }
   .dlab-home .nav-in { gap: 12px; }
   .dlab-home .nav-cta { gap: 8px; min-width: 0; }
   .dlab-home .nav-cta .link-btn { display: none; }

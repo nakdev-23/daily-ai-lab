@@ -7,6 +7,7 @@ import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight, Infinity as
 import type { LessonStep } from "@/lib/lesson-types"
 import { completeLessonAction, loseHeartAction, type CompleteLessonResult } from "@/app/(lesson)/daily-learn/actions"
 import OutOfHearts from "@/components/out-of-hearts"
+import { makeT, type Lang } from "@/lib/i18n-core"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
 
@@ -77,6 +78,7 @@ export default function LessonPlayer({
   heartsMax = 5,
   unlimitedHearts = false,
   nextRefill = null,
+  lang = "th",
 }: {
   steps?: LessonStep[]
   courseId?: string
@@ -86,7 +88,9 @@ export default function LessonPlayer({
   heartsMax?: number
   unlimitedHearts?: boolean
   nextRefill?: string | null
+  lang?: Lang
 }) {
+  const t = makeT(lang)
   const STEPS = steps && steps.length > 0 ? steps : FALLBACK_STEPS
   const [step, setStep] = useState(0)
   const [hearts, setHearts] = useState(initialHearts)
@@ -148,7 +152,7 @@ export default function LessonPlayer({
     }
   }
 
-  const footLabel = cur.type === "theory" ? "ต่อไป" : !checked ? "ตรวจ" : "ต่อไป"
+  const footLabel = cur.type === "theory" ? t("Next") : !checked ? t("Check") : t("Next")
   const footDisabled = cur.type === "quiz" && selected === null
 
   const backHref = courseId ? `/daily-learn/${courseId}` : "/daily-learn"
@@ -158,7 +162,7 @@ export default function LessonPlayer({
     <div className="dlab-lesson">
       <div className="lesson-shell">
         <div className="lesson-top">
-          <Link className="x" href={backHref} title="ออก"><X size={18} /></Link>
+          <Link className="x" href={backHref} title={t("Exit")}><X size={18} /></Link>
           <div className="lprog"><i style={{ width: `${progress}%` }} /></div>
           <div className="lesson-hearts">
             {unlimitedHearts ? (
@@ -218,32 +222,32 @@ export default function LessonPlayer({
           {cur.type === "done" && (
             <div className="lstep done">
               <Image src={`${M}/mascot-celebrate.png`} alt="Riri" width={160} height={160} />
-              <h2 className="display">บทเรียนเสร็จแล้ว!</h2>
-              <p>เยี่ยมมาก คุณผ่านบทเรียนนี้แล้ว</p>
+              <h2 className="display">{t("Lesson complete!")}</h2>
+              <p>{t("Great job — you finished this lesson")}</p>
               {/* What the server actually awarded — never a silent failure. */}
               {award?.ok && (
                 <div className="xp-award" aria-live="polite">
                   <Zap size={18} fill="currentColor" /> +{award.xp} XP
-                  {award.perfect && <span className="xp-perfect">โบนัสเพอร์เฟกต์!</span>}
+                  {award.perfect && <span className="xp-perfect">{t("Perfect bonus!")}</span>}
                 </div>
               )}
               {award && !award.ok && award.reason === "replay" && (
-                <div className="xp-note">โหมดทบทวน — บทนี้จบไปแล้ว เลยไม่ได้รับ XP เพิ่ม</div>
+                <div className="xp-note">{t("Review mode — this lesson is already complete, so no extra XP")}</div>
               )}
               {award && !award.ok && award.reason === "daily-limit" && (
-                <div className="xp-note">วันนี้เรียนครบโควต้าแพ็กเกจ Free แล้ว — บทนี้ไม่ถูกนับ ลอง Pro เพื่อเรียนไม่จำกัด</div>
+                <div className="xp-note">{t("You hit today's Free quota — this lesson wasn't counted. Go Pro for unlimited learning")}</div>
               )}
               {award && !award.ok && (award.reason === "sequential" || award.reason === "invalid" || award.reason === "error" || award.reason === "not-signed-in") && (
-                <div className="xp-note">บันทึกความคืบหน้าไม่สำเร็จ — กลับหน้าบทเรียนแล้วลองใหม่อีกครั้ง</div>
+                <div className="xp-note">{t("Couldn't save your progress — go back to the lesson list and try again")}</div>
               )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
                 {nextHref && (
                   <Link className="btn btn--sun lg" href={nextHref}>
-                    บทเรียนถัดไป <ChevronRight size={18} />
+                    {t("Next lesson")} <ChevronRight size={18} />
                   </Link>
                 )}
                 <Link className="btn btn--violet lg" href={backHref}>
-                  กลับหน้าบทเรียน
+                  {t("Back to lessons")}
                 </Link>
               </div>
             </div>
@@ -259,7 +263,7 @@ export default function LessonPlayer({
         )}
       </div>
 
-      {lockedRefill !== null && <OutOfHearts nextRefill={lockedRefill || null} max={HEART_MAX} />}
+      {lockedRefill !== null && <OutOfHearts nextRefill={lockedRefill || null} max={HEART_MAX} lang={lang} />}
     </div>
   )
 }

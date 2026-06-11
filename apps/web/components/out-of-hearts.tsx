@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Heart, Home, Crown, RefreshCw } from "lucide-react"
+import { makeT, type Lang } from "@/lib/i18n-core"
 import "./out-of-hearts.css"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -14,7 +15,8 @@ function pad(n: number) { return String(n).padStart(2, "0") }
  * Full-screen lockout shown when a Free user runs out of hearts. Live countdown
  * to the next refill; can't keep learning until a heart returns (or go Pro).
  */
-export default function OutOfHearts({ nextRefill, max = 5 }: { nextRefill: string | null; max?: number }) {
+export default function OutOfHearts({ nextRefill, max = 5, lang = "th" }: { nextRefill: string | null; max?: number; lang?: Lang }) {
+  const t = makeT(lang)
   const target = nextRefill ? new Date(nextRefill).getTime() : 0
   const [remain, setRemain] = useState<number | null>(null)
 
@@ -37,11 +39,11 @@ export default function OutOfHearts({ nextRefill, max = 5 }: { nextRefill: strin
     const bkk = new Date(target + 7 * 3600 * 1000)
     const h = bkk.getUTCHours(), m = bkk.getUTCMinutes()
     const hm = `${pad(h)}:${pad(m)}`
-    return h === 0 && m === 0 ? `เที่ยงคืน (${hm} น.)` : `${hm} น.`
+    return h === 0 && m === 0 ? t("midnight ({hm})", { hm }) : t("{hm}", { hm })
   })()
 
   return (
-    <div className="dlab-ooh" role="alertdialog" aria-label="หัวใจหมด">
+    <div className="dlab-ooh" role="alertdialog" aria-label={t("Out of hearts")}>
       <div className="ooh-card">
         <Image className="ooh-mascot" src={`${M}/mascot-sad.png`} alt="Riri" width={150} height={150} priority />
 
@@ -53,33 +55,33 @@ export default function OutOfHearts({ nextRefill, max = 5 }: { nextRefill: strin
 
         {done ? (
           <>
-            <h2>หัวใจเต็มแล้ว! 💜</h2>
-            <p>กลับไปเรียนต่อได้เลย วันนี้ยังมีอีกหลายบทรอคุณอยู่</p>
+            <h2>{t("Hearts are full again! 💜")}</h2>
+            <p>{t("Jump back in — plenty of lessons are waiting for you today.")}</p>
             <div className="ooh-actions">
               <Link className="ooh-btn primary" href="/daily-learn" onClick={() => location.reload()}>
-                <RefreshCw size={18} /> เริ่มเรียนต่อ
+                <RefreshCw size={18} /> {t("Keep learning")}
               </Link>
             </div>
           </>
         ) : (
           <>
-            <h2>หัวใจหมดแล้ว!</h2>
-            <p>พักก่อนนะ หัวใจจะเต็มใหม่อีกครั้งใน</p>
+            <h2>{t("Out of hearts!")}</h2>
+            <p>{t("Take a break — your hearts refill in")}</p>
             <div className="ooh-timer" aria-live="polite">
               {remain === null
                 ? <span className="ooh-clock">--:--:--</span>
                 : <span className="ooh-clock">{pad(hh)}<i>:</i>{pad(mm)}<i>:</i>{pad(ss)}</span>}
             </div>
             <div className="ooh-actions">
-              <Link className="ooh-btn primary" href="/daily-learn"><Home size={18} /> กลับหน้าหลัก</Link>
-              <Link className="ooh-btn pro" href="/upgrade"><Crown size={18} /> หัวใจไม่จำกัดด้วย Pro</Link>
+              <Link className="ooh-btn primary" href="/daily-learn"><Home size={18} /> {t("Back to home")}</Link>
+              <Link className="ooh-btn pro" href="/upgrade"><Crown size={18} /> {t("Unlimited hearts with Pro")}</Link>
             </div>
             {resetClock && (
               <p className="ooh-note">
-                หัวใจจะเต็มใหม่ให้อัตโนมัติทุกวัน เวลา{resetClock} ตามเวลาประเทศไทย
+                {t("Hearts refill automatically every day at {time}, Thailand time.", { time: resetClock })}
               </p>
             )}
-            <span className="ooh-hint">ระหว่างนี้จะยังเรียนบทอื่นไม่ได้จนกว่าหัวใจจะกลับมา</span>
+            <span className="ooh-hint">{t("You can't start other lessons until a heart returns.")}</span>
           </>
         )}
       </div>

@@ -1,4 +1,4 @@
-import { getProfile } from "@/lib/auth"
+import { getProfile, isPro } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
 import { getHeartState } from "@/lib/hearts"
 import { redirect } from "next/navigation"
@@ -38,7 +38,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const streak = g?.streak_current ?? 0
 
   return (
-    <AppShell displayName={displayName} role={role} xp={xp} hearts={heart.hearts} unlimitedHearts={heart.unlimited} streak={streak} lang={lang} initialCollapsed={initialCollapsed}>
+    <AppShell displayName={displayName} role={role} pro={isPro(profile)} xp={xp} hearts={heart.hearts} unlimitedHearts={heart.unlimited} streak={streak} lang={lang} initialCollapsed={initialCollapsed}>
       {children}
     </AppShell>
   )

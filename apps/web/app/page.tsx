@@ -7,6 +7,7 @@ import LangToggle from "@/components/lang-toggle"
 import ToolLogo from "@/components/tool-logo"
 import { getLang, makeT } from "@/lib/i18n"
 import { getSystemSettings } from "@/lib/system-settings"
+import { getCourses } from "@/lib/courses"
 import {
   Flame, Zap, Award, Sparkles, Target, Rocket, Heart,
   BookOpen, CheckCircle2, Crown, RotateCcw,
@@ -18,8 +19,17 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 const iconStyle = { display: "inline-block", verticalAlign: "-2px" } as const
 
 export default async function HomePage() {
-  const [lang, settings] = await Promise.all([getLang(), getSystemSettings()])
+  const [lang, settings, courses] = await Promise.all([getLang(), getSystemSettings(), getCourses()])
   const t = makeT(lang)
+
+  // Real lesson counts straight from the courses table (published only), so
+  // the landing page never advertises numbers the app can't back up.
+  const lessonsByTool = courses
+    .filter((c) => c.status === "published")
+    .reduce<Record<string, number>>((m, c) => { m[c.tool] = (m[c.tool] ?? 0) + c.lessons; return m }, {})
+  const toolCount = (name: string) =>
+    lessonsByTool[name] ? t("{n} lessons", { n: lessonsByTool[name] }) : t("Coming soon")
+  const toolMeta = (name: string, cat: string) => `${t(cat)} · ${toolCount(name)}`
 
   // Pricing is whatever the admin set in Admin › System (single source of truth).
   const priceMonth = settings.proPriceMonth
@@ -58,7 +68,7 @@ export default async function HomePage() {
         <div className="wrap hero-grid">
           <div className="reveal">
             <span className="pill"><Flame size={14} style={iconStyle} /> {t("15 minutes a day · learn daily")}</span>
-            <h1 className="display">{t("Learn AI")}<br />{t("fun and easy,")}<br /><span className="grad-text">{t("every single day!")}</span></h1>
+            <h1 className="display">{t("Learn AI")}<br />{t("in just 15 minutes a day")}<br /><span className="grad-text">{t("and you'll get good!")}</span></h1>
             <p className="lead">{t("Master ChatGPT, Claude, Gemini, Midjourney, Suno & Runway through bite-size lessons, XP, streaks & adorable rewards — ")}<strong style={{ color: "var(--text-strong)" }}>{t("turn AI into a daily habit")}</strong></p>
             <div className="hero-cta">
               <Link className="btn btn--violet lg" href="/login">{t("Start learning free")}</Link>
@@ -169,8 +179,8 @@ export default async function HomePage() {
                 <button className="opt" data-correct="1"><span className="k">B</span> &quot;{t("Act as a marketing expert. Write 3 ad headlines for a coffee shop.")}&quot;</button>
                 <button className="opt"><span className="k">C</span> &quot;{t("marketing pls")}&quot;</button>
                 <div className="quiz-foot">
-                  <span className="xp-pop"><Zap size={13} style={iconStyle} /> +15 แต้ม</span>
-                  <span className="fb" />
+                  <span className="xp-pop"><Zap size={13} style={iconStyle} /> +15 {t("pts")}</span>
+                  <span className="fb" data-ok={t("Correct! Great job 🎉")} data-no={t("Not quite — try again 💪")} />
                   <button className="quiz-reset"><RotateCcw size={13} style={iconStyle} /> {t("Try again")}</button>
                 </div>
               </div>
@@ -217,47 +227,41 @@ export default async function HomePage() {
             <span className="tools-spark s3" aria-hidden>✦</span>
 
             <div className="tools-hero-head">
-              <span className="tools-kicker"><Sparkles size={18} /> เครื่องมือ AI</span>
-              <h2 className="display">อยากเก่งเครื่องมือไหน เริ่มตรงนี้ได้เลย</h2>
-              <p>มีบทเรียนให้เลือกง่าย ๆ ในเครื่องมือที่อยากใช้ หรือเริ่มจากเส้นทางแนะนำที่เราเตรียมไว้ให้คุณ</p>
+              <span className="tools-kicker"><Sparkles size={18} /> {t("AI tools")}</span>
+              <h2 className="display">{t("Pick a tool and start right here")}</h2>
+              <p>{t("Easy lessons for the tool you want to use — or follow one of our guided paths.")}</p>
             </div>
 
             <div className="tools-board">
               <Link href="/daily-learn/chatgpt-basic" className="tool-feature">
-                <span className="feature-ribbon"><Star size={14} fill="currentColor" /> แนะนำสำหรับคุณ</span>
+                <span className="feature-ribbon"><Star size={14} fill="currentColor" /> {t("Recommended for you")}</span>
                 <span className="feature-crown"><Crown size={20} fill="currentColor" /></span>
+                {/* direct child of the card so `left` is measured from the card edge, not the copy column */}
+                <span className="feature-logo"><ToolLogo name="ChatGPT" size={60} /></span>
                 <Image className="feature-riri" src={`${M}/mascot-point.png`} alt="Riri" width={230} height={230} />
                 <div className="feature-copy">
                   <div className="feature-head">
-                    <span className="feature-logo"><ToolLogo name="ChatGPT" size={40} /></span>
                     <div className="feature-id">
                       <h3>ChatGPT</h3>
-                      <span className="feature-cat"><MessageSquareText size={13} /> แชท &amp; เขียน</span>
+                      <span className="feature-cat"><MessageSquareText size={13} /> {t("Chat & writing")}</span>
                     </div>
                   </div>
-                  <p>ผู้ช่วยอัจฉริยะด้านการแชท การเขียน วิเคราะห์ และช่วยคิดไอเดียได้ทุกเรื่อง</p>
+                  <p>{t("The smart assistant for chat, writing, analysis and brainstorming anything.")}</p>
                   <div className="feature-stats">
-                    <span><BookOpen size={15} /> 64 บทเรียน</span>
-                    <span><Zap size={15} /> ระดับเริ่มต้น</span>
+                    <span><BookOpen size={15} /> {toolCount("ChatGPT")}</span>
+                    <span><Zap size={15} /> {t("Beginner")}</span>
                   </div>
-                  <span className="feature-button">เริ่มเรียนเลย <ChevronRight size={19} /></span>
-                  <div className="feature-proof">
-                    <span><Flame size={15} fill="currentColor" /> ยอดนิยมอันดับ 1</span>
-                    <span className="avatar-stack" aria-label="ผู้เรียนกว่า 12,000 คน">
-                      <i /><i /><i /><i />
-                      <b>+12K เรียนแล้ว</b>
-                    </span>
-                  </div>
+                  <span className="feature-button">{t("Start learning")} <ChevronRight size={19} /></span>
                 </div>
               </Link>
 
               <div className="tool-mini-grid">
                 {[
-                  ["Claude", "52 บทเรียน", "แชท & เขียน", "linear-gradient(160deg,#FFAE72,#E2611C)"],
-                  ["Gemini", "48 บทเรียน", "แชท & เขียน", "linear-gradient(160deg,#70A6FF,#2A6FF0)"],
-                  ["Midjourney", "40 บทเรียน", "รูปภาพ", "linear-gradient(160deg,#BC83FF,#6C3CF5)"],
-                  ["Suno", "32 บทเรียน", "เพลง", "linear-gradient(160deg,#FF8CBE,#F03C89)"],
-                  ["Runway", "36 บทเรียน", "วิดีโอ", "linear-gradient(160deg,#161022,#050408)"],
+                  ["Claude", toolCount("Claude"), t("Chat & writing"), "linear-gradient(160deg,#FFAE72,#E2611C)"],
+                  ["Gemini", toolCount("Gemini"), t("Chat & writing"), "linear-gradient(160deg,#70A6FF,#2A6FF0)"],
+                  ["Midjourney", toolCount("Midjourney"), t("Images"), "linear-gradient(160deg,#BC83FF,#6C3CF5)"],
+                  ["Suno", toolCount("Suno"), t("Music"), "linear-gradient(160deg,#FF8CBE,#F03C89)"],
+                  ["Runway", toolCount("Runway"), t("Video"), "linear-gradient(160deg,#161022,#050408)"],
                 ].map(([name, lessons, tag, bg]) => (
                   <Link className="tool-mini" href="/docs" key={name}>
                     <span className="tool-mini-icon" style={{ background: bg }}><ToolLogo name={name} size={30} /></span>
@@ -271,8 +275,8 @@ export default async function HomePage() {
                 ))}
                 <Link className="tool-mini tool-all" href="/docs">
                   <span className="tool-all-plus"><Plus size={25} /></span>
-                  <b>ดูเครื่องมือทั้งหมด</b>
-                  <small>50+ เครื่องมือ</small>
+                  <b>{t("Browse all tools")}</b>
+                  <small>{t("50+ tools")}</small>
                 </Link>
               </div>
             </div>
@@ -281,29 +285,29 @@ export default async function HomePage() {
               <div className="tools-choice">
                 <span><Trophy size={26} /></span>
                 <div>
-                  <b>อยากเก่งเร็ว เลือกเริ่มจากเส้นทางแนะนำ</b>
-                  <small>เรียนตามลำดับที่เราออกแบบไว้ เพื่อพาคุณเก่งจริง</small>
+                  <b>{t("Want results fast? Start from a guided path")}</b>
+                  <small>{t("Follow the order we designed to actually get good")}</small>
                 </div>
-                <Link href="#paths">ดูเส้นทางแนะนำ <ChevronRight size={18} /></Link>
+                <Link href="#paths">{t("See guided paths")} <ChevronRight size={18} /></Link>
               </div>
               <div className="tools-choice">
                 <span><Sparkles size={26} fill="currentColor" /></span>
                 <div>
-                  <b>หรือเลือกดูเครื่องมือทั้งหมด</b>
-                  <small>ค้นหาและเลือกเรียนในเครื่องมือที่คุณสนใจได้เลย</small>
+                  <b>{t("Or browse every tool")}</b>
+                  <small>{t("Search and learn whichever tool interests you")}</small>
                 </div>
-                <Link className="primary" href="/docs">ดูเครื่องมือทั้งหมด <ChevronRight size={18} /></Link>
+                <Link className="primary" href="/docs">{t("Browse all tools")} <ChevronRight size={18} /></Link>
               </div>
             </div>
 
           <div className="tools-grid">
             {[
-              ["linear-gradient(160deg,#23D08A,#0E8F5E)", "G", "ChatGPT", t("Chat & writing · 64 lessons")],
-              ["linear-gradient(160deg,#FFA866,#E2611C)", "C", "Claude", t("Reasoning & docs · 52 lessons")],
-              ["linear-gradient(160deg,#6F9CFF,#2A6FF0)", "G", "Gemini", t("Google & research · 48 lessons")],
-              ["linear-gradient(160deg,#BC83FF,#6C3CF5)", "M", "Midjourney", t("AI image art · 40 lessons")],
-              ["linear-gradient(160deg,#FF93BE,#F45C97)", "S", "Suno", t("AI music maker · 32 lessons")],
-              ["linear-gradient(160deg,#5C5675,#1B1729)", "R", "Runway", t("AI video & FX · 36 lessons")],
+              ["linear-gradient(160deg,#23D08A,#0E8F5E)", "G", "ChatGPT", toolMeta("ChatGPT", "Chat & writing")],
+              ["linear-gradient(160deg,#FFA866,#E2611C)", "C", "Claude", toolMeta("Claude", "Reasoning & docs")],
+              ["linear-gradient(160deg,#6F9CFF,#2A6FF0)", "G", "Gemini", toolMeta("Gemini", "Google & research")],
+              ["linear-gradient(160deg,#BC83FF,#6C3CF5)", "M", "Midjourney", toolMeta("Midjourney", "AI image art")],
+              ["linear-gradient(160deg,#FF93BE,#F45C97)", "S", "Suno", toolMeta("Suno", "AI music maker")],
+              ["linear-gradient(160deg,#5C5675,#1B1729)", "R", "Runway", toolMeta("Runway", "AI video & FX")],
             ].map(([bg, , name, meta], i) => (
               <Link href="/docs" className="tcard glass tilt reveal" key={i}>
                 <div className="tile" style={{ background: bg }}><ToolLogo name={name} size={24} /></div>

@@ -45,7 +45,6 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
     : `/daily-learn/${progressKey}`
 
   const levelKey = course.level === "beginner" ? t("Beginner") : course.level === "intermediate" ? t("Intermediate") : t("Advanced")
-  const hoursStr = `~${Math.ceil((course.lessons || units.flatMap(u => u.lessons).length) * 12 / 60)}${t("h")}`
 
   const LEARN = [
     t("Write clear prompts that get great answers every time"),
@@ -89,7 +88,6 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
             <div className="course-meta">
               <div className="m"><b>{totalLessons}</b><span>{t("lessons")}</span></div>
               <div className="m"><b>{totalUnits}</b><span>{t("units")}</span></div>
-              <div className="m"><b>{hoursStr}</b><span>{t("total")}</span></div>
               <div className="m"><b>4.9★</b><span>{t("rating")}</span></div>
             </div>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>

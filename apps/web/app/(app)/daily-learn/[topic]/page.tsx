@@ -76,7 +76,6 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
 
   const colors = getToolColors(course.tool)
   const levelKey = course.level === "beginner" ? t("Beginner") : course.level === "intermediate" ? t("Intermediate") : t("Advanced")
-  const hoursStr = `${Math.ceil(totalLessons * 12 / 60)} ${t("hr")}`
   const pct = Math.min(100, totalLessons > 0 ? Math.round((done / totalLessons) * 100) : 0)
 
   const placeholderLessons: CLesson[] = Array.from({ length: totalLessons }, (_, i) => ({
@@ -104,7 +103,6 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
               <p>{course.description}</p>
               <div className="cb-chips">
                 <span className="cb-chip"><BookOpen size={13} /> {totalLessons} {t("lessons")}</span>
-                <span className="cb-chip"><Clock size={13} /> {hoursStr}</span>
                 <span className="cb-chip"><Sparkles size={13} /> {t("Great for beginners")}</span>
               </div>
             </div>
@@ -142,7 +140,6 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
           <div className="rail-card">
             <p className="rc-h"><Compass size={17} className="text-violet-500" /> {t("About this path")}</p>
             <div className="pinfo-row"><span className="pl">{t("Difficulty")}</span><span className="pv">{levelKey}</span></div>
-            <div className="pinfo-row"><span className="pl">{t("Estimated time")}</span><span className="pv">{hoursStr}</span></div>
             <div className="pinfo-row"><span className="pl">{t("Best for")}</span><span className="pv">{t("Newcomers")}</span></div>
             <p style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, color: "var(--text-strong)", margin: "14px 0 8px" }}>{t("What you'll learn")}</p>
             <ul className="learn-list">
@@ -163,7 +160,6 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
       <div className="map-cta">
         <div className="mc-tx">
           <b>{t("Start lesson {n} · {title}", { n: current?.n ?? 1, title: current?.title ?? levels[0]?.title ?? "" })}</b>
-          <span>{t("About 12 minutes")}</span>
         </div>
         <Link className="btn btn--sun lg" href={firstLesson}>{t("Start now")} <ChevronRight size={18} /></Link>
       </div>

@@ -16,6 +16,7 @@ export default async function DailyLearnPage() {
   const lang = await getLang()
   const t = makeT(lang)
   let name = "Nin", streak = 0, lessonsToday = 0, xpToday = 0
+  let streakLastDate: string | null = null
   const doneByCourse: Record<string, number> = {}
   // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
   const today = bangkokTodayISO()
@@ -34,6 +35,7 @@ export default async function DailyLearnPage() {
     ])
     name = profile.displayName
     streak = g?.streak_current ?? 0
+    streakLastDate = g?.streak_last_date ?? null
     lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
     xpToday = g?.xp_today_date === today ? (g?.xp_today ?? 0) : 0
     for (const row of (progress ?? []) as Array<{ course_id: string; lessons_done: number }>) {
@@ -64,8 +66,22 @@ export default async function DailyLearnPage() {
   const firstTopic = TOPICS.find((tp) => tp.pct > 0 && tp.pct < 100) ?? TOPICS[0]
 
   const DAYS = lang === "th" ? ["จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"] : ["M", "T", "W", "T", "F", "S", "S"]
-  const todayIdx = (() => { const d = new Date().getDay(); return d === 0 ? 6 : d - 1 })()
-  const WEEK = DAYS.map((d, i) => ({ d, on: i < todayIdx && streak > todayIdx - i, today: i === todayIdx }))
+  // Weekday of the Bangkok calendar date (not the server's timezone), Mon = 0.
+  const dow = new Date(`${today}T00:00:00Z`).getUTCDay()
+  const todayIdx = dow === 0 ? 6 : dow - 1
+  // The week strip lights the days covered by the current streak run. There is
+  // no per-day history table — streak_current + streak_last_date is exactly
+  // what the DB knows: an unbroken run ending on streak_last_date.
+  const yesterday = new Date(new Date(`${today}T00:00:00Z`).getTime() - 86400000).toISOString().split("T")[0]
+  const learnedToday = lessonsToday > 0 || streakLastDate === today
+  // How many days BEFORE today are part of the active streak run. A run that
+  // ended before yesterday is broken, so no past day lights up.
+  const daysBack = streakLastDate === today ? streak - 1 : streakLastDate === yesterday ? streak : 0
+  const WEEK = DAYS.map((d, i) => ({
+    d,
+    on: i === todayIdx ? learnedToday : i < todayIdx && todayIdx - i <= daysBack,
+    today: i === todayIdx,
+  }))
 
   return (
     <>
@@ -177,7 +193,8 @@ export default async function DailyLearnPage() {
           <div className="streak-week">
             {WEEK.map((s, i) => (
               <div key={i} className={`sday${s.on ? " on" : ""}${s.today ? " today" : ""}`}>
-                <div className="dot">{s.on ? <Flame size={17} /> : s.today ? <Zap size={17} /> : null}</div>
+                {/* today is always the bolt (sun-yellow once lit); past streak days are flames */}
+                <div className="dot">{s.today ? <Zap size={17} /> : s.on ? <Flame size={17} /> : null}</div>
                 <small>{s.d}</small>
               </div>
             ))}

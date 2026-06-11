@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { BarChart3, Brain, Briefcase, ChevronRight, Clock, Crown, Megaphone, PenLine, Video } from "lucide-react"
+import { BarChart3, BookOpen, Brain, Briefcase, ChevronRight, Crown, Megaphone, PenLine, Video } from "lucide-react"
 import { makeT, type Lang } from "@/lib/i18n-core"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -12,66 +12,66 @@ const PATHS = [
   {
     tone: "violet",
     icon: PenLine,
-    tag: "ยอดนิยม",
+    tag: "Most popular",
     title: "AI Content Creator",
     desc: "Write, design & produce with ChatGPT, Midjourney & Suno.",
-    weeks: "6 สัปดาห์",
-    lessons: "84 บท",
+    weeks: "6 weeks",
+    lessons: "84 lessons",
     tools: ["ChatGPT", "Midjourney", "Suno", "Canva"],
     mascot: "mascot-fly",
   },
   {
     tone: "mint",
     icon: Brain,
-    tag: "แนะนำ",
+    tag: "Recommended",
     title: "Prompt Engineer",
     desc: "Master prompting across every major model, beginner to pro.",
-    weeks: "5 สัปดาห์",
-    lessons: "72 บท",
+    weeks: "5 weeks",
+    lessons: "72 lessons",
     tools: ["ChatGPT", "Claude", "Gemini"],
     mascot: "mascot-thumbsup",
   },
   {
     tone: "pink",
     icon: Megaphone,
-    tag: "แนะนำ",
+    tag: "Recommended",
     title: "AI for Marketing",
     desc: "Campaigns, copy & visuals that ship faster with AI.",
-    weeks: "4 สัปดาห์",
-    lessons: "60 บท",
+    weeks: "4 weeks",
+    lessons: "60 lessons",
     tools: ["ChatGPT", "Canva", "Midjourney"],
     mascot: "mascot-point",
   },
   {
     tone: "sky",
     icon: Briefcase,
-    tag: "แนะนำ",
+    tag: "Recommended",
     title: "AI for Business",
     desc: "Automate work and make smarter calls with AI tools.",
-    weeks: "4 สัปดาห์",
-    lessons: "56 บท",
+    weeks: "4 weeks",
+    lessons: "56 lessons",
     tools: ["ChatGPT", "Gemini", "Sheets"],
     mascot: "mascot-laptop",
   },
   {
     tone: "blue",
     icon: BarChart3,
-    tag: "ใหม่",
-    title: "AI สำหรับวิเคราะห์ข้อมูล",
-    desc: "อ่านกราฟ สรุปตัวเลข แล้วเปลี่ยนข้อมูลให้ช่วยตัดสินใจได้",
-    weeks: "4 สัปดาห์",
-    lessons: "48 บท",
+    tag: "New",
+    title: "AI for Data Analysis",
+    desc: "Read charts, summarise numbers & turn data into decisions.",
+    weeks: "4 weeks",
+    lessons: "48 lessons",
     tools: ["Gemini", "ChatGPT", "Sheets"],
     mascot: "mascot-read",
   },
   {
     tone: "sun",
     icon: Video,
-    tag: "ใหม่",
-    title: "AI สำหรับทำวิดีโอ",
-    desc: "วางสคริปต์ ทำภาพ และตัดต่อวิดีโอสั้นด้วย AI",
-    weeks: "4 สัปดาห์",
-    lessons: "44 บท",
+    tag: "New",
+    title: "AI for Video",
+    desc: "Script, storyboard & edit short videos with AI.",
+    weeks: "4 weeks",
+    lessons: "44 lessons",
     tools: ["Runway", "Suno", "ChatGPT"],
     mascot: "mascot-celebrate",
   },
@@ -113,9 +113,9 @@ export default function CareerPathsCarousel({ lang }: { lang: Lang }) {
                 <div className="career-copy">
                   <span className="career-ribbon">
                     {index === 0 ? <Crown size={15} /> : <Icon size={15} />}
-                    {path.tag}
+                    {t(path.tag)}
                   </span>
-                  <div className="career-icon"><Icon size={34} /></div>
+                  <div className="career-icon"><Icon size={26} /></div>
                   <h3 className="display">{t(path.title)}</h3>
                   <p>{t(path.desc)}</p>
                   <div className="career-tools" aria-label="Tools">
@@ -124,9 +124,9 @@ export default function CareerPathsCarousel({ lang }: { lang: Lang }) {
                 </div>
                 <Image className="career-mascot" src={`${M}/${path.mascot}.png`} alt="Riri" width={260} height={260} />
                 <div className="career-foot">
-                  <span><Clock size={17} /> {path.weeks} · {path.lessons}</span>
+                  <span><BookOpen size={17} /> {t(path.lessons)}</span>
                   <Link className="career-cta" href="/paths">
-                    เริ่มเส้นทาง <ChevronRight size={18} />
+                    {t("Start this path")} <ChevronRight size={18} />
                   </Link>
                 </div>
               </article>
@@ -135,13 +135,13 @@ export default function CareerPathsCarousel({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div className="career-dots" role="tablist" aria-label="เลือกเส้นทางอาชีพ">
+      <div className="career-dots" role="tablist" aria-label={t("Pick a career path")}>
         {PATHS.map((path, index) => (
           <button
             key={path.title}
             type="button"
             className={active === index ? "active" : ""}
-            aria-label={`ไปที่ ${t(path.title)}`}
+            aria-label={`${t("Go to")} ${t(path.title)}`}
             aria-current={active === index ? "true" : undefined}
             onClick={() => setActive(index)}
           />

@@ -5,6 +5,7 @@ import { getLessonSteps } from "@/lib/lesson-loader"
 import { getHeartState, nextHeartRefillISO, bangkokTodayISO } from "@/lib/hearts"
 import { getProfile, isPro } from "@/lib/auth"
 import { getSystemSettings } from "@/lib/system-settings"
+import { getLang } from "@/lib/i18n"
 import { getLessonsDone } from "@/lib/progress"
 import { createClient } from "@/lib/supabase/server"
 import OutOfHearts from "@/components/out-of-hearts"
@@ -31,13 +32,14 @@ export default async function LessonPage({
   // fall back to id for legacy rows that predate the slug column.
   const progressKey = course.slug || course.id
 
-  const [units, steps, heart, profile, settings, lessonsDone] = await Promise.all([
+  const [units, steps, heart, profile, settings, lessonsDone, lang] = await Promise.all([
     getCourseContent(course.id),
     getLessonSteps(course.slug, lessonNum),
     heartPromise,
     profilePromise,
     settingsPromise,
     getLessonsDone(progressKey),
+    getLang(),
   ])
   const flat = units.flatMap((u) => u.lessons)
   if (lessonNum > flat.length && flat.length > 0) redirect(`/daily-learn/${topic}`)
@@ -58,13 +60,13 @@ export default async function LessonPage({
       .maybeSingle()
     const doneToday = g?.lessons_today_date === bangkokTodayISO() ? (g?.lessons_today ?? 0) : 0
     if (doneToday >= settings.freeLessonsPerDay) {
-      return <DailyLimitReached limit={settings.freeLessonsPerDay} nextReset={nextHeartRefillISO(0)} />
+      return <DailyLimitReached limit={settings.freeLessonsPerDay} nextReset={nextHeartRefillISO(0)} lang={lang} />
     }
   }
 
   // Out of hearts → can't start any lesson until they refill. Pro is never locked.
   if (!heart.unlimited && heart.hearts <= 0) {
-    return <OutOfHearts nextRefill={heart.nextRefill} max={heart.max} />
+    return <OutOfHearts nextRefill={heart.nextRefill} max={heart.max} lang={lang} />
   }
 
   return (
@@ -77,6 +79,7 @@ export default async function LessonPage({
       heartsMax={heart.max}
       unlimitedHearts={heart.unlimited}
       nextRefill={heart.nextRefill}
+      lang={lang}
     />
   )
 }

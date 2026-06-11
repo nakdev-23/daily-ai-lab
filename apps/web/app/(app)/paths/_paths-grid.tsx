@@ -5,7 +5,7 @@ import Link from "next/link"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import type { CareerPath } from "@/lib/career-paths"
 import {
-  Rocket, Clock, BookOpen, Award, ChevronRight,
+  Rocket, BookOpen, Award, ChevronRight,
   Brain, Megaphone, Briefcase, Zap, Search, Lock,
 } from "lucide-react"
 
@@ -86,7 +86,6 @@ export default function PathsGrid({ lang, paths, isPro = false }: { lang: Lang; 
                         ))}
                       </div>
                       <div className="path-foot">
-                        <span className="pm"><Clock size={14} /> {p.weeks} {t("weeks")}</span>
                         <span className="pm"><BookOpen size={14} /> {lessons || p.modules.length} {t("lessons")}</span>
                         <span className="pm"><Award size={14} /> {t("Certificate")}</span>
                         {p.isPro && !isPro ? (

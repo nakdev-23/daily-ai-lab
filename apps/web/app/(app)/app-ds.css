@@ -160,6 +160,8 @@
 .dlab-app .sday .dot { width: 38px; height: 38px; border-radius: 50%; margin: 0 auto 6px; display: grid; place-items: center; background: var(--cloud-100); color: var(--cloud-400); }
 .dlab-app .sday.on .dot { background: linear-gradient(180deg,#FFB36B,var(--punch-500)); color: #fff; box-shadow: 0 6px 12px -4px rgba(253,115,2,.6); }
 .dlab-app .sday.today .dot { outline: 3px solid var(--sun-300); outline-offset: 2px; }
+/* today + already learned → sun-yellow bolt (violet ink on yellow, per DESIGN.md) */
+.dlab-app .sday.today.on .dot { background: linear-gradient(180deg,#FFE066,var(--sun-400)); color: var(--hero-700); box-shadow: 0 6px 14px -4px rgba(224,168,0,.65); }
 .dlab-app .sday small { font-size: 11px; font-weight: 800; color: var(--text-muted); }
 
 /* focus */

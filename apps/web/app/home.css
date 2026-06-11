@@ -559,9 +559,9 @@ html.js .dlab-home .stage .fcard.badge { animation-delay: .46s, -0.8s; }
 }
 .dlab-home .feature-riri {
   position: absolute;
-  left: 10px;
+  left: 16px;
   bottom: 0;
-  width: 134px;
+  width: 116px;
   height: auto;
   filter: drop-shadow(0 18px 22px rgba(0,0,0,.28));
   transition: transform .3s var(--ease-out);
@@ -575,18 +575,23 @@ html.js .dlab-home .stage .fcard.badge { animation-delay: .46s, -0.8s; }
   padding-top: 42px; /* clears the absolute ribbon/crown sitting at the top */
 }
 .dlab-home .feature-head { display: flex; align-items: center; gap: 14px; }
+/* The tool logo owns the card's left rail (the copy column starts at 158px),
+   with Riri tucked beneath it. */
 .dlab-home .feature-logo {
-  flex: none;
-  width: 56px;
-  height: 56px;
+  position: absolute;
+  z-index: 2;
+  left: 32px;
+  top: 82px;
+  width: 88px;
+  height: 88px;
   display: grid;
   place-items: center;
-  border-radius: 16px;
+  border-radius: 24px;
   color: #fff;
   background: linear-gradient(160deg,#24D08B,#078E5A);
-  box-shadow: inset 0 -8px 14px rgba(0,0,0,.18), inset 0 3px 0 rgba(255,255,255,.28), 0 16px 30px rgba(0,0,0,.2);
+  box-shadow: inset 0 -10px 18px rgba(0,0,0,.18), inset 0 3px 0 rgba(255,255,255,.28), 0 18px 34px rgba(0,0,0,.24);
 }
-.dlab-home .feature-logo svg { width: 34px; height: 34px; }
+.dlab-home .feature-logo svg { width: 50px; height: 50px; }
 .dlab-home .feature-id { display: flex; min-width: 0; flex-direction: column; gap: 7px; }
 .dlab-home .feature-id h3 { margin: 0; color: #fff; font-size: clamp(23px, 2vw, 29px); line-height: 1; letter-spacing: -.01em; }
 .dlab-home .feature-cat {
@@ -888,7 +893,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
 .dlab-home .path h3 { font-size: 18px; margin-bottom: 8px; }
 .dlab-home .path p { font-size: 14px; color: var(--text-muted); margin: 0 0 16px; line-height: 1.5; }
 .dlab-home .path .meta { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 800; color: var(--hero-600); }
-.dlab-home .paths-showcase { padding: 74px 0 70px; overflow: hidden;
+.dlab-home .paths-showcase { padding: 56px 0 52px; overflow: hidden;
   background:
     radial-gradient(520px 320px at 14% 26%, rgba(199,178,251,.28), transparent 68%),
     radial-gradient(540px 360px at 88% 16%, rgba(255,224,102,.2), transparent 62%),
@@ -902,6 +907,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
   background: linear-gradient(145deg,#D8C8FF,#7E55F7 64%,#5728E0); box-shadow: 0 24px 36px rgba(87,40,224,.22);
   transform: rotate(12deg); }
 .dlab-home .paths-showcase .wrap { position: relative; z-index: 1; max-width: 1180px; }
+.dlab-home .paths-head { margin-bottom: 34px; }
 .dlab-home .paths-head { max-width: 720px; margin-bottom: 28px; }
 .dlab-home .paths-head .eyebrow { padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.78);
   border: 1px solid rgba(108,60,245,.14); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 26px rgba(108,60,245,.08);
@@ -971,7 +977,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
 .dlab-home .paths-proof { display: flex; justify-content: center; gap: 22px; margin-top: 18px; color: var(--hero-600); font-weight: 900; }
 .dlab-home .paths-proof span { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: rgba(255,255,255,.74); border: 1px solid rgba(108,60,245,.1); }
 
-.dlab-home .career-carousel { width: min(980px, 100%); margin: 0 auto; }
+.dlab-home .career-carousel { width: min(860px, 100%); margin: 0 auto; }
 .dlab-home .career-viewport { overflow: hidden; border-radius: 32px; position: relative;
   box-shadow:
     0 2px 0 rgba(255,255,255,.7),
@@ -981,7 +987,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
     0 48px 96px -24px rgba(60,24,144,.38),
     0 22px 44px -12px rgba(60,24,144,.22); }
 .dlab-home .career-track { display: flex; transition: transform .56s var(--ease-out); will-change: transform; }
-.dlab-home .career-card { position: relative; flex: 0 0 100%; min-height: 580px; padding: clamp(32px, 5vw, 54px); overflow: hidden; color: #fff; isolation: isolate;
+.dlab-home .career-card { position: relative; flex: 0 0 100%; min-height: 430px; padding: clamp(26px, 3.6vw, 38px); overflow: hidden; color: #fff; isolation: isolate;
   background:
     radial-gradient(520px 360px at 82% 18%, rgba(255,255,255,.44), transparent 64%),
     radial-gradient(300px 240px at 10% -8%, rgba(255,228,100,.32), transparent 66%),
@@ -997,7 +1003,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
     linear-gradient(128deg, rgba(255,255,255,.26) 0%, transparent 48%),
     radial-gradient(circle at 90% 12%, rgba(255,228,100,.6), transparent 12%),
     radial-gradient(circle at 2% 96%, rgba(0,0,0,.22), transparent 28%); }
-.dlab-home .career-card::after { content: ""; position: absolute; right: 7%; bottom: 86px; width: 260px; height: 100px; border-radius: 50%;
+.dlab-home .career-card::after { content: ""; position: absolute; right: 7%; bottom: 72px; width: 190px; height: 74px; border-radius: 50%;
   background: rgba(255,255,255,.28); filter: blur(22px); transform: rotate(-8deg); }
 .dlab-home .career-card--violet { --career-a: #C67BFF; --career-b: #5A28E0; }
 .dlab-home .career-card--mint { --career-a: #5EDB82; --career-b: #0E7A3B; }
@@ -1006,22 +1012,22 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
 .dlab-home .career-card--blue { --career-a: #68C7FF; --career-b: #1860DE; }
 .dlab-home .career-card--sun { --career-a: #FFD06A; --career-b: #E86820; }
 .dlab-home .career-copy { position: relative; z-index: 2; max-width: min(500px, 58%); }
-.dlab-home .career-ribbon { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
+.dlab-home .career-ribbon { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 999px;
   background: linear-gradient(160deg,#FFF5A0,#FFD138 60%,#F7B600); color: #5D3B00; font-weight: 900; font-size: 13px;
   box-shadow: 0 14px 28px rgba(82,50,0,.22), 0 4px 8px rgba(82,50,0,.14), inset 0 1px 0 rgba(255,255,255,.7); }
-.dlab-home .career-icon { width: 84px; height: 84px; margin-top: 32px; border-radius: 26px; display: grid; place-items: center;
+.dlab-home .career-icon { width: 60px; height: 60px; margin-top: 14px; border-radius: 18px; display: grid; place-items: center;
   background: rgba(255,255,255,.2); color: #fff;
   box-shadow: inset 0 -10px 16px rgba(0,0,0,.18), inset 0 2px 0 rgba(255,255,255,.42), 0 10px 24px rgba(0,0,0,.18); }
-.dlab-home .career-card h3 { color: #fff; margin: 20px 0 12px; font-size: clamp(32px, 4.8vw, 50px); line-height: 1.02; text-wrap: balance;
+.dlab-home .career-card h3 { color: #fff; margin: 14px 0 8px; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.05; text-wrap: balance;
   text-shadow: 0 2px 12px rgba(0,0,0,.18); }
-.dlab-home .career-card p { max-width: 460px; margin: 0; color: rgba(255,255,255,.94); font-size: clamp(15px, 2.1vw, 18px); line-height: 1.52; font-weight: 800; text-wrap: pretty; }
-.dlab-home .career-tools { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-.dlab-home .career-tools span { padding: 9px 16px; border-radius: 999px; color: var(--hero-700); background: rgba(255,255,255,.95);
+.dlab-home .career-card p { max-width: 420px; margin: 0; color: rgba(255,255,255,.94); font-size: clamp(14px, 1.7vw, 16px); line-height: 1.5; font-weight: 800; text-wrap: pretty; }
+.dlab-home .career-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.dlab-home .career-tools span { padding: 6px 13px; border-radius: 999px; color: var(--hero-700); background: rgba(255,255,255,.95);
   font-size: 12.5px; font-weight: 900; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
-.dlab-home .career-mascot { position: absolute; z-index: 2; right: clamp(20px, 7vw, 72px); bottom: 100px; width: clamp(170px, 27vw, 280px); height: auto;
+.dlab-home .career-mascot { position: absolute; z-index: 2; right: clamp(18px, 6vw, 56px); bottom: 84px; width: clamp(140px, 19vw, 200px); height: auto;
   filter: drop-shadow(0 32px 28px rgba(39,16,96,.34)) drop-shadow(0 8px 14px rgba(39,16,96,.18));
   animation: bobMascot 6s ease-in-out infinite; }
-.dlab-home .career-foot { position: absolute; z-index: 3; left: clamp(24px, 5vw, 54px); right: clamp(24px, 5vw, 54px); bottom: clamp(24px, 4vw, 36px);
+.dlab-home .career-foot { position: absolute; z-index: 3; left: clamp(22px, 3.6vw, 38px); right: clamp(22px, 3.6vw, 38px); bottom: clamp(18px, 2.6vw, 24px);
   display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 70px; padding: 14px 14px 14px 24px;
   border-radius: 26px;
   background: rgba(255,255,255,.97);
@@ -1029,11 +1035,11 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
   color: var(--hero-700); font-weight: 900; }
 .dlab-home .career-foot span,
 .dlab-home .career-cta { display: inline-flex; align-items: center; gap: 8px; }
-.dlab-home .career-cta { justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 999px; background: var(--g-violet); color: #fff; white-space: nowrap;
+.dlab-home .career-cta { justify-content: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: var(--g-violet); color: #fff; white-space: nowrap;
   font-size: 15px; box-shadow: 0 12px 28px rgba(72,31,184,.4), inset 0 1px 0 rgba(255,255,255,.22);
   transition: transform .18s var(--ease-out), filter .18s var(--ease-out), box-shadow .18s var(--ease-out); }
 .dlab-home .career-cta:hover { transform: translateX(3px) translateY(-1px); filter: brightness(1.06); box-shadow: 0 16px 36px rgba(72,31,184,.5); }
-.dlab-home .career-dots { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.dlab-home .career-dots { display: flex; justify-content: center; gap: 10px; margin-top: 16px; }
 .dlab-home .career-dots button { width: 9px; height: 9px; border: 0; border-radius: 999px; padding: 0; cursor: pointer;
   background: rgba(108,60,245,.24); transition: width .2s var(--ease-out), background .2s var(--ease-out), transform .2s var(--ease-out); }
 .dlab-home .career-dots button:hover { transform: scale(1.15); background: rgba(108,60,245,.46); }
@@ -1209,7 +1215,8 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .gem-right { right: 40px; top: 90px; }
   .dlab-home .tools-board { grid-template-columns: 1fr; gap: 16px; }
   .dlab-home .tool-feature { min-height: 250px; padding-left: 168px; }
-  .dlab-home .feature-riri { width: 150px; }
+  .dlab-home .feature-logo { top: 66px; }
+  .dlab-home .feature-riri { width: 118px; }
   .dlab-home .feature-copy { max-width: 560px; }
   .dlab-home .feature-button { align-self: flex-start; min-width: 260px; }
   .dlab-home .tool-mini-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1240,10 +1247,10 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .paths-head { margin-bottom: 22px; }
   .dlab-home .paths-head h2 { font-size: clamp(34px, 7vw, 48px); }
   .dlab-home .paths-carousel { padding-bottom: 16px; }
-  .dlab-home .career-carousel { width: min(720px, 100%); }
-  .dlab-home .career-card { min-height: 520px; }
+  .dlab-home .career-carousel { width: min(680px, 100%); }
+  .dlab-home .career-card { min-height: 420px; }
   .dlab-home .career-copy { max-width: 62%; }
-  .dlab-home .career-mascot { right: 24px; bottom: 100px; width: 220px; }
+  .dlab-home .career-mascot { right: 22px; bottom: 86px; width: 180px; }
   .dlab-home .path-feature { flex-basis: min(480px, calc(100vw - 56px)); min-height: 350px; padding: 26px; }
   .dlab-home .path-mascot { width: 178px; right: 10px; bottom: 86px; }
   .dlab-home .path-slide { flex-basis: 310px; }
@@ -1281,8 +1288,10 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .feature-ribbon { left: 20px; top: 18px; }
   .dlab-home .feature-crown { right: 16px; top: 16px; }
   .dlab-home .feature-riri { left: -18px; bottom: auto; top: 58px; width: 148px; }
+  .dlab-home .feature-logo { left: auto; right: 20px; top: 84px; }
   .dlab-home .feature-copy { min-height: 0; padding-top: 170px; gap: 14px; }
   .dlab-home .feature-logo { width: 72px; height: 72px; border-radius: 20px; }
+  .dlab-home .feature-logo svg { width: 42px; height: 42px; }
   .dlab-home .feature-copy h3 { font-size: 32px; }
   .dlab-home .feature-copy p { font-size: 15px; }
   .dlab-home .feature-stats span { padding: 9px 11px; font-size: 12px; }
@@ -1334,16 +1343,16 @@ html.js .dlab-home .reveal.in:not(.shown) { animation: revealIn .5s var(--ease-o
   .dlab-home .paths-carousel { gap: 14px; margin: 0 -18px; padding: 4px 18px 16px; scroll-padding-inline: 18px; }
   .dlab-home .career-carousel { width: 100%; }
   .dlab-home .career-viewport { border-radius: 26px; box-shadow: 0 4px 0 rgba(108,60,245,.08), 0 32px 56px -16px rgba(60,24,144,.32); }
-  .dlab-home .career-card { min-height: 540px; padding: 28px 24px; }
-  .dlab-home .career-card::after { right: 18px; bottom: 104px; width: 170px; }
+  .dlab-home .career-card { min-height: 470px; padding: 24px 22px; }
+  .dlab-home .career-card::after { right: 18px; bottom: 92px; width: 150px; }
   .dlab-home .career-copy { max-width: 100%; }
   .dlab-home .career-ribbon { padding: 9px 15px; }
-  .dlab-home .career-icon { width: 72px; height: 72px; border-radius: 22px; margin-top: 26px; }
-  .dlab-home .career-card h3 { max-width: 280px; font-size: clamp(30px, 9.4vw, 40px); }
+  .dlab-home .career-icon { width: 56px; height: 56px; border-radius: 16px; margin-top: 14px; }
+  .dlab-home .career-card h3 { max-width: 280px; font-size: clamp(26px, 7.6vw, 32px); }
   .dlab-home .career-card p { max-width: 290px; font-size: 15px; }
   .dlab-home .career-tools { max-width: 240px; gap: 7px; }
   .dlab-home .career-tools span { padding: 8px 12px; font-size: 12px; }
-  .dlab-home .career-mascot { width: 136px; right: 12px; bottom: 140px; }
+  .dlab-home .career-mascot { width: 118px; right: 12px; bottom: 128px; }
   .dlab-home .career-foot { left: 18px; right: 18px; bottom: 18px; flex-direction: column; align-items: stretch; min-height: 0; padding: 14px 14px; border-radius: 22px; }
   .dlab-home .career-foot span { justify-content: center; }
   .dlab-home .career-cta { width: 100%; }

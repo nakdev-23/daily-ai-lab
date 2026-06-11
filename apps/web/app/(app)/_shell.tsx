@@ -40,6 +40,8 @@ type Props = {
   children: React.ReactNode
   displayName: string
   role: "user" | "admin"
+  /** Active Pro (or admin) — hides every upgrade prompt in the chrome. */
+  pro?: boolean
   xp: number
   hearts: number
   unlimitedHearts?: boolean
@@ -48,7 +50,7 @@ type Props = {
   initialCollapsed: boolean
 }
 
-export default function AppShell({ children, displayName, role, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
+export default function AppShell({ children, displayName, role, pro = false, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -124,11 +126,14 @@ export default function AppShell({ children, displayName, role, xp, hearts, unli
             )}
           </nav>
 
-          <div className="side-pro">
-            <h4><Crown size={16} className="text-amber-500" /> <span className="side-txt">{t("Go Pro")}</span></h4>
-            <p>{t("Unlimited lessons, all paths & hearts.")}</p>
-            <Link className="btn btn--violet sm" style={{ width: "100%" }} href="/upgrade" onClick={() => setOpen(false)}><span className="side-txt">{t("Upgrade")}</span><Crown size={16} className="side-pro-ic" /></Link>
-          </div>
+          {/* Pro members never see the upsell card */}
+          {!pro && (
+            <div className="side-pro">
+              <h4><Crown size={16} className="text-amber-500" /> <span className="side-txt">{t("Go Pro")}</span></h4>
+              <p>{t("Unlimited lessons, all paths & hearts.")}</p>
+              <Link className="btn btn--violet sm" style={{ width: "100%" }} href="/upgrade" onClick={() => setOpen(false)}><span className="side-txt">{t("Upgrade")}</span><Crown size={16} className="side-pro-ic" /></Link>
+            </div>
+          )}
         </aside>
 
         {/* overlay (mobile) */}

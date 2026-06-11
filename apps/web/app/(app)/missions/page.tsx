@@ -3,6 +3,7 @@ import Image from "next/image"
 import { createClient, getAuthUser } from "@/lib/supabase/server"
 import { getCourses } from "@/lib/courses"
 import { getSystemSettings } from "@/lib/system-settings"
+import { getLang, makeT } from "@/lib/i18n"
 import { bangkokTodayISO } from "@/lib/hearts"
 import { BookOpen, Target, FileText, Flame, Star, Check, Clock, ChevronRight } from "lucide-react"
 
@@ -11,7 +12,8 @@ export default async function MissionsPage() {
   // Day boundary = Bangkok midnight, same as the lessons_today tracking in the DB.
   const today = bangkokTodayISO()
 
-  const [user, settings] = await Promise.all([getAuthUser(), getSystemSettings()])
+  const [user, settings, lang] = await Promise.all([getAuthUser(), getSystemSettings(), getLang()])
+  const t = makeT(lang)
   // Daily lesson goal follows the admin-configured Free quota (no hardcoded 3).
   const goalLessons = Math.max(1, settings.freeLessonsPerDay)
   let lessonsToday = 0
@@ -43,19 +45,19 @@ export default async function MissionsPage() {
   }
 
   const MISSIONS = [
-    { icon: BookOpen, title: "เรียนจบบทเรียน 1 บท", xp: 20, current: Math.min(lessonsToday, 1), total: 1 },
-    { icon: Star, title: `เรียนให้ได้ ${goalLessons} บทวันนี้`, xp: 30, current: Math.min(lessonsToday, goalLessons), total: goalLessons },
-    { icon: Flame, title: "เรียนต่อเนื่องให้ครบ 7 วัน", xp: 50, current: Math.min(streak, 7), total: 7 },
-    { icon: Target, title: "ทำแบบฝึกหัดให้ได้ 80% ขึ้นไป", xp: 20, current: 0, total: 1 },
-    { icon: FileText, title: "อ่านเอกสาร 1 หน้า", xp: 10, current: 0, total: 1 },
+    { icon: BookOpen, title: t("Finish 1 lesson"), xp: 20, current: Math.min(lessonsToday, 1), total: 1 },
+    { icon: Star, title: t("Finish {n} lessons today", { n: goalLessons }), xp: 30, current: Math.min(lessonsToday, goalLessons), total: goalLessons },
+    { icon: Flame, title: t("Keep a {n}-day streak", { n: 7 }), xp: 50, current: Math.min(streak, 7), total: 7 },
+    { icon: Target, title: t("Score 80%+ on a quiz"), xp: 20, current: 0, total: 1 },
+    { icon: FileText, title: t("Read 1 docs page"), xp: 10, current: 0, total: 1 },
   ].map((m) => ({ ...m, done: m.current >= m.total }))
 
   return (
     <div className="max-w-[700px] mx-auto px-8 py-8">
       <div className="flex items-center gap-4 mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">เป้าหมายวันนี้ <Target size={22} className="text-[#6B4EFF]" /></h1>
-          <p className="text-sm text-gray-400 flex items-center gap-1.5"><Clock size={14} /> สตรีคปัจจุบัน {streak} วัน · เรียนวันนี้ {lessonsToday} บท</p>
+          <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">{t("Today's goals")} <Target size={22} className="text-[#6B4EFF]" /></h1>
+          <p className="text-sm text-gray-400 flex items-center gap-1.5"><Clock size={14} /> {t("Current streak: {n} days", { n: streak })} · {t("Learned today: {n} lessons", { n: lessonsToday })}</p>
         </div>
         <Image src="/assets/daily-ai-lab/mascot/cockatiel-avatar.png" alt="Mascot" width={64} height={64} className="ml-auto drop-shadow-md" />
       </div>
@@ -73,7 +75,7 @@ export default async function MissionsPage() {
                   <p className="text-[12px] text-gray-400 mt-0.5">{m.current}/{m.total}</p>
                 </div>
               </div>
-              <span className={`text-[14px] font-bold shrink-0 ${m.done ? "text-green-500" : "text-[#6B4EFF]"}`}>+{m.xp} แต้ม</span>
+              <span className={`text-[14px] font-bold shrink-0 ${m.done ? "text-green-500" : "text-[#6B4EFF]"}`}>+{m.xp} {t("pts")}</span>
             </div>
             <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
               <div
@@ -87,10 +89,10 @@ export default async function MissionsPage() {
 
       <div className="mt-6 flex gap-3">
         <Link href={continueHref} className="flex-1 bg-[#6B4EFF] text-white text-sm font-bold py-3 rounded-xl text-center hover:bg-[#5535e8] transition-colors">
-          <span className="inline-flex items-center justify-center gap-1">เริ่มเรียนเลย <ChevronRight size={16} /></span>
+          <span className="inline-flex items-center justify-center gap-1">{t("Start learning")} <ChevronRight size={16} /></span>
         </Link>
         <Link href="/daily-learn" className="flex-1 bg-white border border-[#ede9ff] text-gray-600 text-sm font-medium py-3 rounded-xl text-center hover:bg-[#f5f3ff] transition-colors">
-          กลับหน้าเรียน
+          {t("Back to lessons")}
         </Link>
       </div>
     </div>

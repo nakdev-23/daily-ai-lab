@@ -101,7 +101,7 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
       <div className="course-head glass">
         <div className="ch-tile" style={{ background: bg }}><Icon size={34} /></div>
         <div>
-          <span className="eyebrow">{path.weeks} {t("weeks")} · {path.tag}</span>
+          <span className="eyebrow">{path.tag}</span>
           <h1 className="display" style={{ marginTop: 8 }}>{path.title}</h1>
           <div className="ch-tools">
             {path.tools.map((name) => (

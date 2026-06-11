@@ -166,13 +166,13 @@ export default function HomeFx() {
         if (answered) return
         if (o.getAttribute("data-correct") === "1") {
           answered = true; lock(); o.classList.add("correct")
-          if (fb) { fb.textContent = "ถูกต้อง! เก่งมาก 🎉"; fb.style.color = "var(--mint-600)"; fb.classList.add("show") }
+          if (fb) { fb.textContent = fb.dataset.ok ?? "ถูกต้อง! เก่งมาก 🎉"; fb.style.color = "var(--mint-600)"; fb.classList.add("show") }
           xp?.classList.add("show"); riri?.classList.add("show")
           if (bar) bar.style.width = "78%"
         } else {
           o.classList.add("wrong"); setTimeout(() => o.classList.remove("wrong"), 500)
           if (heartIdx < hearts.length) { hearts[hearts.length - 1 - heartIdx].classList.add("lost"); heartIdx++ }
-          if (fb) { fb.textContent = "ยังไม่ใช่ ลองใหม่อีกที 💪"; fb.style.color = "var(--berry-600)"; fb.classList.add("show") }
+          if (fb) { fb.textContent = fb.dataset.no ?? "ยังไม่ใช่ ลองใหม่อีกที 💪"; fb.style.color = "var(--berry-600)"; fb.classList.add("show") }
         }
       }
       const handlers = opts.map((o) => { const h = () => pick(o); o.addEventListener("click", h); return [o, h] as const })

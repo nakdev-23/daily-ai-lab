@@ -20,7 +20,9 @@ export default function LangToggle({ current = "th", className = "", variant = "
 
   const isDark = variant === "dark"
   const wrap: React.CSSProperties = {
-    display: "inline-flex", padding: 3, borderRadius: 999, gap: 2,
+    // Language toggle hidden app-wide for now (Thai-only). Change back to
+    // "inline-flex" to bring the ไทย/EN switcher back on every page.
+    display: "none", padding: 3, borderRadius: 999, gap: 2,
     background: isDark ? "rgba(255,255,255,.16)" : "var(--cloud-100, #EFEBF7)",
     border: isDark ? "1px solid rgba(255,255,255,.18)" : "1px solid var(--border-subtle, #E0DAEF)",
   }

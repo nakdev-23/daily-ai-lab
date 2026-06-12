@@ -59,7 +59,7 @@ export default function PathEdit({ path }: { path: CareerPath }) {
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 40 }}>
         {path.modules.length === 0 && (
           <div className="glass" style={{ padding: "40px 24px", textAlign: "center", color: "var(--text-muted)" }}>
-            ยังไม่มีโมดูล — กด "เพิ่มโมดูล" ด้านบน
+            ยังไม่มีโมดูล — กด &quot;เพิ่มโมดูล&quot; ด้านบน
           </div>
         )}
         {path.modules.map((mod) => {
@@ -211,7 +211,7 @@ function DeleteModModal({ mod, onClose }: { mod: PathModule; onClose: () => void
         <input type="hidden" name="id" value={mod.id} />
         <div className="modal-head">
           <span className="mh-ic" style={{ background: "var(--berry-100)", color: "var(--berry-600)" }}><Trash2 size={20} /></span>
-          <div className="mh-tx"><h3>ลบโมดูล?</h3><p>"{mod.title}" และขั้นตอนทั้งหมดจะถูกลบ</p></div>
+          <div className="mh-tx"><h3>ลบโมดูล?</h3><p>&quot;{mod.title}&quot; และขั้นตอนทั้งหมดจะถูกลบ</p></div>
           <button type="button" className="modal-x" onClick={onClose}><X size={16} /></button>
         </div>
         <div className="modal-foot spread">
@@ -232,7 +232,7 @@ function DeleteStepModal({ step, onClose }: { step: PathStep; onClose: () => voi
         <input type="hidden" name="id" value={step.id} />
         <div className="modal-head">
           <span className="mh-ic" style={{ background: "var(--berry-100)", color: "var(--berry-600)" }}><Trash2 size={20} /></span>
-          <div className="mh-tx"><h3>ลบขั้นตอน?</h3><p>"{step.title}"</p></div>
+          <div className="mh-tx"><h3>ลบขั้นตอน?</h3><p>&quot;{step.title}&quot;</p></div>
           <button type="button" className="modal-x" onClick={onClose}><X size={16} /></button>
         </div>
         <div className="modal-foot spread">

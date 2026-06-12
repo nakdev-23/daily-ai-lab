@@ -7,7 +7,7 @@ import LangToggle from "@/components/lang-toggle"
 import ToolLogo from "@/components/tool-logo"
 import { getLang, makeT } from "@/lib/i18n"
 import { getSystemSettings } from "@/lib/system-settings"
-import { getCourses } from "@/lib/courses"
+import { getPublishedCourses } from "@/lib/courses"
 import {
   Flame, Zap, Award, Sparkles, Target, Rocket, Heart,
   BookOpen, CheckCircle2, Crown, RotateCcw,
@@ -19,7 +19,7 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 const iconStyle = { display: "inline-block", verticalAlign: "-2px" } as const
 
 export default async function HomePage() {
-  const [lang, settings, courses] = await Promise.all([getLang(), getSystemSettings(), getCourses()])
+  const [lang, settings, courses] = await Promise.all([getLang(), getSystemSettings(), getPublishedCourses()])
   const t = makeT(lang)
 
   // Real lesson counts straight from the courses table (published only), so

@@ -8,9 +8,17 @@ export type Plan = "free" | "pro"
 export type SessionProfile = {
   id: string
   displayName: string
+  /** Raw Google photo URL from OAuth (null if none). */
   avatarUrl: string | null
+  /** Chosen Riri avatar key (e.g. "cool"), null = use the Google photo / initial. */
+  avatarKey: string | null
   role: Role
   plan: Plan
+}
+
+/** Resolve the avatar to actually display: chosen Riri avatar wins, else Google photo. */
+export function avatarUrlFor(p: { avatarKey: string | null; avatarUrl: string | null }): string | null {
+  return p.avatarKey ? `/assets/daily-ai-lab/avatars/avatar-${p.avatarKey}.png` : p.avatarUrl
 }
 
 /** Current signed-in profile. Returns null if not signed in. Memoized per request. */
@@ -21,7 +29,8 @@ export const getProfile = cache(async (): Promise<SessionProfile | null> => {
 
   // Profile (role/identity) and subscription (plan) live in separate tables.
   const [{ data: p }, { data: sub }] = await Promise.all([
-    supabase.from("profiles").select("display_name, avatar_url, role").eq("id", user.id).single(),
+    // select("*") so this keeps working before migration 016 adds avatar_key.
+    supabase.from("profiles").select("*").eq("id", user.id).single(),
     supabase.from("subscriptions").select("plan, expires_at").eq("user_id", user.id).maybeSingle(),
   ])
 
@@ -35,6 +44,7 @@ export const getProfile = cache(async (): Promise<SessionProfile | null> => {
     id: user.id,
     displayName: p?.display_name ?? "นักเรียน",
     avatarUrl: p?.avatar_url ?? null,
+    avatarKey: (p?.avatar_key as string) ?? null,
     role,
     plan,
   }

@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
-import { getCourses } from "@/lib/courses"
-import { getCourseContent } from "@/lib/course-content"
+import { getPublishedCourses } from "@/lib/courses"
+import { getPublishedCourseContent } from "@/lib/course-content"
 import { getSystemSettings } from "@/lib/system-settings"
 import { getToolColors } from "@/lib/tool-colors"
 import ToolLogo from "@/components/tool-logo"
@@ -16,7 +16,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   const { tool } = await params
   const t = makeT(await getLang())
 
-  const [courses, settings] = await Promise.all([getCourses(), getSystemSettings()])
+  const [courses, settings] = await Promise.all([getPublishedCourses(), getSystemSettings()])
   const course = courses.find((c) => toolSlug(c.tool) === tool)
     ?? courses.find((c) => c.tool.toLowerCase() === tool)
     ?? courses.find((c) => c.status === "published")
@@ -34,7 +34,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   // Progress is keyed by slug (course_progress.course_id)
   const progressKey = course.slug || course.id
   const [units, doneCount] = await Promise.all([
-    getCourseContent(course.id),
+    getPublishedCourseContent(course.id),
     getLessonsDone(progressKey),
   ])
 

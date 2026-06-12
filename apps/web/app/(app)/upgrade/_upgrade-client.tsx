@@ -1,16 +1,18 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
-import { Check, X, Crown, CreditCard, RefreshCw, BookOpen, GraduationCap, Wallet, Sparkles } from "lucide-react"
+import { useState, useTransition } from "react"
+import { Check, X, Crown, CreditCard, RefreshCw, BookOpen, Sparkles } from "lucide-react"
 import { makeT, type Lang } from "@/lib/i18n-core"
+import { createCheckoutSession } from "./actions"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
 
 export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang }: { priceMonth: number; priceYear: number; freePerDay: number; lang: Lang }) {
   const t = makeT(lang)
   const [bill, setBill] = useState<"month" | "year">("month")
-  const [toast, setToast] = useState(false)
+  const [err, setErr] = useState(false)
+  const [pending, startTransition] = useTransition()
 
   const FREE_FEATURES = [
     { yes: true, t: t("{n} lessons per day", { n: freePerDay }) }, { yes: true, t: t("XP, streaks & leaderboard") }, { yes: true, t: t("Beginner docs library") },
@@ -50,13 +52,19 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
     { ic: CreditCard, q: t("How do I pay? Can I cancel?"), a: t("We accept credit/debit cards and PromptPay. Cancel anytime from Settings — Pro stays active until the end of the period you paid for, no penalty.") },
     { ic: RefreshCw, q: t("Can I switch between monthly and yearly?"), a: t("Yes, switch anytime and we prorate the difference automatically. Yearly saves about {pct}%.", { pct: savePct }) },
     { ic: BookOpen, q: t("Will I lose my progress if I upgrade?"), a: t("Never. Your XP, streaks, badges and finished lessons all stay — upgrading just unlocks more content and features instantly.") },
-    { ic: GraduationCap, q: t("Is there a student discount?"), a: t("Yes! Students get 50% off — just verify your status with an institution email via Settings.") },
-    { ic: Wallet, q: t("Is there a money-back guarantee?"), a: t("7-day money-back guarantee. Not happy? Tell us and we refund in full, no questions asked.") },
   ]
 
   function upgrade() {
-    setToast(true)
-    setTimeout(() => setToast(false), 2600)
+    setErr(false)
+    startTransition(async () => {
+      try {
+        // Redirects to Stripe Checkout on success.
+        await createCheckoutSession(bill)
+      } catch {
+        setErr(true)
+        setTimeout(() => setErr(false), 4000)
+      }
+    })
   }
 
   return (
@@ -98,7 +106,7 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
               <li key={f}><span className="ck yes"><Check size={13} /></span> {f}</li>
             ))}
           </ul>
-          <button className="btn btn--sun lg" style={{ width: "100%" }} onClick={upgrade}><Crown size={18} /> {t("Upgrade to Pro")}</button>
+          <button className="btn btn--sun lg" style={{ width: "100%" }} onClick={upgrade} disabled={pending}><Crown size={18} /> {pending ? t("Redirecting…") : t("Upgrade to Pro")}</button>
         </div>
       </div>
 
@@ -135,12 +143,12 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
       <div className="up-cta">
         <h2>{t("Ready to learn AI without limits?")}</h2>
         <p>{t("Try Pro today — cancel anytime")}</p>
-        <button className="btn btn--violet lg" onClick={upgrade}><Crown size={18} /> {t("Upgrade to Pro")}</button>
+        <button className="btn btn--violet lg" onClick={upgrade} disabled={pending}><Crown size={18} /> {pending ? t("Redirecting…") : t("Upgrade to Pro")}</button>
       </div>
 
-      {toast && (
-        <div style={{ position: "fixed", bottom: 28, left: "50%", transform: "translateX(-50%)", zIndex: 100, background: "var(--text-strong)", color: "#fff", padding: "13px 22px", borderRadius: 999, fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14.5, boxShadow: "0 16px 34px -10px rgba(0,0,0,.4)", display: "inline-flex", alignItems: "center", gap: 8 }}>
-          <Crown size={16} className="text-amber-300" /> {t("Welcome to Pro! (demo)")}
+      {err && (
+        <div style={{ position: "fixed", bottom: 28, left: "50%", transform: "translateX(-50%)", zIndex: 100, background: "var(--berry-600)", color: "#fff", padding: "13px 22px", borderRadius: 999, fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14.5, boxShadow: "0 16px 34px -10px rgba(0,0,0,.4)", display: "inline-flex", alignItems: "center", gap: 8 }}>
+          <X size={16} /> {t("Couldn't start checkout — try again")}
         </div>
       )}
     </>

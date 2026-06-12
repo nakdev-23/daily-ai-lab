@@ -1,5 +1,7 @@
 import { cache } from "react"
+import { unstable_cache, revalidateTag } from "next/cache"
 import { createClient } from "./supabase/server"
+import { publicClient } from "./supabase/public"
 
 export type SystemSettings = {
   dailyGoalMinutes: number
@@ -60,12 +62,20 @@ function fromRow(r: Row): SystemSettings {
   }
 }
 
-/** Live platform settings. Falls back to defaults if the row/table is missing. Memoized per request. */
-export const getSystemSettings = cache(async (): Promise<SystemSettings> => {
-  const supabase = await createClient()
-  const { data } = await supabase.from("system_settings").select("*").eq("id", 1).maybeSingle()
-  return data ? fromRow(data as Row) : DEFAULT_SETTINGS
-})
+// Settings are read on virtually every page view but change only when the
+// admin saves — cache across requests (revalidated by tag on save) so all
+// visitors share one query per 5-minute window. RLS allows anon reads.
+const fetchSettings = unstable_cache(
+  async (): Promise<SystemSettings> => {
+    const { data } = await publicClient.from("system_settings").select("*").eq("id", 1).maybeSingle()
+    return data ? fromRow(data as Row) : DEFAULT_SETTINGS
+  },
+  ["system-settings"],
+  { revalidate: 300, tags: ["system-settings"] },
+)
+
+/** Live platform settings. Falls back to defaults if the row/table is missing. */
+export const getSystemSettings = cache(fetchSettings)
 
 /** Persist settings (admin only — caller must authorize via requireAdmin). */
 export async function saveSystemSettings(s: SystemSettings): Promise<{ ok: boolean; message: string }> {
@@ -85,5 +95,6 @@ export async function saveSystemSettings(s: SystemSettings): Promise<{ ok: boole
     updated_at: new Date().toISOString(),
   }).eq("id", 1)
   if (error) return { ok: false, message: "บันทึกไม่สำเร็จ — ตรวจสอบว่ารัน migration 008–010 แล้ว" }
+  revalidateTag("system-settings", "max")
   return { ok: true, message: "บันทึกการตั้งค่าแล้ว" }
 }

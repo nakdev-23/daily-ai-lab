@@ -104,7 +104,10 @@
 .dlab-app .tb-burger { display: none; width: 44px; height: 44px; border: 0; cursor: pointer; flex: none; background: var(--cloud-100); border-radius: 12px; align-items: center; justify-content: center; color: var(--hero-600); }
 .dlab-app .app-overlay { position: fixed; inset: 0; background: rgba(27,23,41,.42); z-index: 290; opacity: 0; visibility: hidden; transition: opacity .22s var(--ease-out), visibility .22s; }
 .dlab-app .app-overlay.show { opacity: 1; visibility: visible; }
-.dlab-app .app-body { padding: 32px; width: 100%; animation: appBodyIn .24s var(--ease-out) both; }
+/* No fill mode: a filled transform animation keeps .app-body a containing block
+   for position:fixed forever, which pinned modals to the page instead of the
+   viewport. Without fill the animation ends and fixed children behave normally. */
+.dlab-app .app-body { padding: 32px; width: 100%; animation: appBodyIn .24s var(--ease-out); }
 @keyframes appBodyIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
 /* ===== DASHBOARD ===== */

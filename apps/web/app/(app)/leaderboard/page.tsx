@@ -1,6 +1,7 @@
+import Image from "next/image"
 import { createClient, getAuthUser } from "@/lib/supabase/server"
 import { getLang, makeT } from "@/lib/i18n"
-import { Flame, Crown, Gem, Trophy, ArrowUp, Medal } from "lucide-react"
+import { Flame, Crown, Gem, Trophy } from "lucide-react"
 
 type T = (en: string, vars?: Record<string, string | number>) => string
 
@@ -8,6 +9,7 @@ type LeaderRow = {
   user_id: string
   display_name: string | null
   avatar_url: string | null
+  avatar_key: string | null
   xp: number
   level: number
   streak_current: number
@@ -21,22 +23,24 @@ function bgFor(name: string | null, idx: number) {
   return BG_POOL[sum % BG_POOL.length]
 }
 
-const PIPS = [
-  { icon: Medal, color: "text-orange-700" },
-  { icon: Medal, color: "text-slate-400" },
-  { icon: Medal, color: "text-amber-500" },
-  { icon: Gem, color: "text-sky-500" },
-  { icon: Gem, color: "text-amber-500" },
-  { icon: Gem, color: "text-violet-600", cur: true },
-]
+/** Chosen Riri avatar wins, else the Google photo, else null (show the initial). */
+function avatarSrcFor(r: LeaderRow): string | null {
+  return r.avatar_key ? `/assets/daily-ai-lab/avatars/avatar-${r.avatar_key}.png` : r.avatar_url
+}
+function Avatar({ src, name }: { src: string | null; name: string | null }) {
+  return src
+    ? <Image src={src} alt="" width={56} height={56} unoptimized style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+    : <>{(name ?? "?").charAt(0)}</>
+}
+
 
 function Row({ r, me, t, idx }: { r: LeaderRow; me: boolean; t: T; idx: number }) {
   return (
     <div className={`lbx-row${me ? " me" : ""}`}>
       {me && <span className="youtag">{t("you")}</span>}
       <span className="rk">{r.rank}</span>
-      <span className="av" style={{ background: bgFor(r.display_name, idx) }}>
-        {(r.display_name ?? "?").charAt(0)}
+      <span className="av" style={{ background: avatarSrcFor(r) ? "var(--cloud-100)" : bgFor(r.display_name, idx), overflow: "hidden" }}>
+        <Avatar src={avatarSrcFor(r)} name={r.display_name} />
       </span>
       <span className="nm">
         <b>{r.display_name ?? "—"}</b>
@@ -52,10 +56,14 @@ export default async function LeaderboardPage() {
   const supabase = await createClient()
   const [user, { data: lb }] = await Promise.all([
     getAuthUser(),
-    supabase.rpc("get_leaderboard"),
+    supabase.rpc("get_leaderboard", { limit_count: 200 }),
   ])
   const currentUserId: string | null = user?.id ?? null
   const rows: LeaderRow[] = ((lb as LeaderRow[]) ?? []).sort((a, b) => a.rank - b.rank)
+
+  // All-time standings, no seasons: the hero shows real numbers only.
+  const me = rows.find((r) => r.user_id === currentUserId) ?? null
+  const champion = rows[0] ?? null
 
   // Podium: display order is silver (2nd), gold (1st), bronze (3rd)
   const top3 = rows.slice(0, 3)
@@ -70,16 +78,22 @@ export default async function LeaderboardPage() {
       <div className="lbx-hero">
         <div className="lbx-gem"><Gem size={48} /></div>
         <div className="lbx-mid">
-          <span className="eyebrow"><Trophy size={15} /> {t("Season 7 · live")}</span>
-          <h2 className="display">{t("Diamond Division")}</h2>
-          <p>{t("Reach the Top 10 in XP to rank up · {n} players", { n: rows.length || 30 })}</p>
-          <div className="lbx-leagues">
-            {PIPS.map((p, i) => (
-              <span key={i} className={`lbx-pip ${p.cur ? "cur" : "done"}`}><p.icon size={15} className={p.color} /></span>
-            ))}
-          </div>
+          <span className="eyebrow"><Trophy size={15} /> {t("All-time ranking")}</span>
+          <h2 className="display">{t("Leaderboard")}</h2>
+          <p>{t("Ranked by total XP · {n} players", { n: rows.length })}</p>
+          {champion && (
+            <div className="lbx-champ">
+              <Crown size={14} className="text-amber-500" /> {t("Champion")}: <b>{champion.display_name ?? "—"}</b> · {champion.xp.toLocaleString()} XP
+            </div>
+          )}
         </div>
-        <div className="lbx-timer"><b>{t("2 days")}</b><span>{t("left")}</span></div>
+        <div className="lbx-timer">
+          {me ? (
+            <><b>#{me.rank}</b><span>{t("Your rank")}</span></>
+          ) : (
+            <><b>—</b><span>{t("Finish a lesson to get ranked")}</span></>
+          )}
+        </div>
       </div>
 
       <div className="lbx">
@@ -87,8 +101,8 @@ export default async function LeaderboardPage() {
           {podiumDisplay.map((p, di) => (
             <div key={p.user_id} className={`lbx-pod ${podiumClasses[di]}`}>
               {di === 1 && <span className="crown"><Crown size={26} /></span>}
-              <span className="pav" style={{ background: bgFor(p.display_name, p.rank - 1) }}>
-                {(p.display_name ?? "?").charAt(0)}
+              <span className="pav" style={{ background: avatarSrcFor(p) ? "var(--cloud-100)" : bgFor(p.display_name, p.rank - 1), overflow: "hidden" }}>
+                <Avatar src={avatarSrcFor(p)} name={p.display_name} />
               </span>
               <div className="pnm">{p.display_name ?? "—"}</div>
               <div className="pxp">{p.xp.toLocaleString()} XP</div>
@@ -101,9 +115,6 @@ export default async function LeaderboardPage() {
           {listRows.map((r, i) => (
             <Row key={r.user_id} r={r} me={r.user_id === currentUserId} t={t} idx={i + 3} />
           ))}
-          {listRows.length > 0 && (
-            <div className="lbx-zone up"><ArrowUp size={13} /> {t("Promotion zone")}</div>
-          )}
           {rows.length === 0 && (
             <p style={{ textAlign: "center", color: "var(--text-muted)", padding: "40px 0", margin: 0 }}>
               {t("No players yet. Be the first!")}

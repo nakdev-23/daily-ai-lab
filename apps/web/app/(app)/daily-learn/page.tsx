@@ -5,7 +5,7 @@ import { getProfile } from "@/lib/auth"
 import { getSystemSettings } from "@/lib/system-settings"
 import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLang, makeT } from "@/lib/i18n"
-import { getCourses } from "@/lib/courses"
+import { getPublishedCourses } from "@/lib/courses"
 import { getToolColors } from "@/lib/tool-colors"
 import TopicsGrid from "./_topics-grid"
 import { Flame, Zap, CheckCircle2, Target, ChevronRight, Clock } from "lucide-react"
@@ -22,15 +22,14 @@ export default async function DailyLearnPage() {
   const today = bangkokTodayISO()
 
   // getCourses/getProfile/getSystemSettings are request-memoized — shared with the layout's fetches.
-  const [courses, profile, supabase, settings] = await Promise.all([getCourses(), getProfile(), createClient(), getSystemSettings()])
+  const [courses, profile, supabase, settings] = await Promise.all([getPublishedCourses(), getProfile(), createClient(), getSystemSettings()])
   const published = courses.filter((c) => c.status === "published")
   // Daily lesson goal follows the admin-configured Free quota (no hardcoded 3).
   const goalLessons = Math.max(1, settings.freeLessonsPerDay)
 
   if (profile) {
     const [{ data: g }, { data: progress }] = await Promise.all([
-      // select("*") so the page keeps working even before migration 011 adds xp_today
-      supabase.from("game_state").select("*").eq("user_id", profile.id).maybeSingle(),
+      supabase.from("game_state").select("streak_current, streak_last_date, lessons_today, lessons_today_date, xp_today, xp_today_date").eq("user_id", profile.id).maybeSingle(),
       supabase.from("course_progress").select("course_id, lessons_done").eq("user_id", profile.id),
     ])
     name = profile.displayName

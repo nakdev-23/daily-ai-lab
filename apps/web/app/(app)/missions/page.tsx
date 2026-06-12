@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { createClient, getAuthUser } from "@/lib/supabase/server"
-import { getCourses } from "@/lib/courses"
+import { getPublishedCourses } from "@/lib/courses"
 import { getSystemSettings } from "@/lib/system-settings"
 import { getLang, makeT } from "@/lib/i18n"
 import { bangkokTodayISO } from "@/lib/hearts"
@@ -25,7 +25,7 @@ export default async function MissionsPage() {
     const [{ data: g }, { data: progress }, courses] = await Promise.all([
       supabase.from("game_state").select("lessons_today, lessons_today_date, streak_current").eq("user_id", user.id).maybeSingle(),
       supabase.from("course_progress").select("course_id, lessons_done, updated_at").eq("user_id", user.id).order("updated_at", { ascending: false }),
-      getCourses(),
+      getPublishedCourses(),
     ])
     lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
     streak = g?.streak_current ?? 0

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useActionState } from "react"
+import { useState, useActionState, useSyncExternalStore } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
@@ -12,14 +12,34 @@ import {
 } from "lucide-react"
 import { FcGoogle } from "react-icons/fc"
 import Switch from "@/components/switch"
-import { updateDisplayName, cancelSubscription, type SettingsResult } from "./actions"
+import { updateDisplayName, cancelSubscription, resumeSubscription, updateAvatar, type SettingsResult } from "./actions"
 
 const AV = "/assets/daily-ai-lab/avatars"
 const AVATARS = ["heart", "celebrate", "thumbsup", "graduate", "wave", "cool", "read", "think", "yawn", "sad", "sleep"]
 
-type Props = { lang: Lang; displayName: string; email: string; avatar: string | null; proPrice: number; plan: "free" | "pro" }
+// Read the chosen Riri avatar from localStorage in an SSR-safe way: the server
+// snapshot is null (matches the first client paint, so no hydration mismatch),
+// then it updates to the stored value and on every "dlab-avatar-change" event.
+function subscribeAvatar(cb: () => void) {
+  window.addEventListener("dlab-avatar-change", cb)
+  window.addEventListener("storage", cb)
+  return () => {
+    window.removeEventListener("dlab-avatar-change", cb)
+    window.removeEventListener("storage", cb)
+  }
+}
+function useAvatarSel(fallback: string | null): string | null {
+  return useSyncExternalStore(
+    subscribeAvatar,
+    () => window.localStorage.getItem("dlab-avatar") ?? fallback,
+    () => fallback,
+  )
+}
 
-export default function SettingsClient({ lang, displayName, email, avatar, proPrice, plan }: Props) {
+type SubInfo = { since: string; until: string; cancelAtPeriodEnd: boolean }
+type Props = { lang: Lang; displayName: string; email: string; avatar: string | null; proPrice: number; plan: "free" | "pro"; subscription: SubInfo | null; avatarKey: string | null }
+
+export default function SettingsClient({ lang, displayName, email, avatar, proPrice, plan, subscription, avatarKey }: Props) {
   const router = useRouter()
   const t = makeT(lang)
   const [goal, setGoal] = useState(1)
@@ -27,19 +47,21 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
   const [nameState, saveName, savingName] = useActionState<SettingsResult, FormData>(updateDisplayName, null)
   // Hide the "saved" hint as soon as the user edits again (cleared on submit).
   const [nameEdited, setNameEdited] = useState(false)
-  // Cancel-subscription flow: confirm step + server action result.
-  const [confirmCancel, setConfirmCancel] = useState(false)
+  // Cancel-subscription flow: confirmation modal + server action result.
+  const [showCancel, setShowCancel] = useState(false)
   const [cancelState, cancelSub, cancelling] = useActionState<SettingsResult, FormData>(cancelSubscription, null)
-  // Chosen Riri avatar (persisted in localStorage). null = use Google photo / initial.
-  const [avatarSel, setAvatarSel] = useState<string | null>(() => {
-    if (typeof window === "undefined") return null
-    return window.localStorage.getItem("dlab-avatar")
-  })
+  // Resume flow: turn auto-renew back on before the period ends.
+  const [resumeState, resumeSub, resuming] = useActionState<SettingsResult, FormData>(resumeSubscription, null)
+  // Chosen Riri avatar. DB key (avatarKey) is the source of truth; localStorage
+  // gives instant cross-component updates without a reload.
+  const avatarSel = useAvatarSel(avatarKey)
 
   function pickAvatar(key: string) {
-    setAvatarSel(key)
+    // Instant UI everywhere via the store, then persist to the DB so it shows on
+    // the leaderboard / other devices too.
     localStorage.setItem("dlab-avatar", key)
     window.dispatchEvent(new Event("dlab-avatar-change"))
+    updateAvatar(key).catch(() => {})
   }
 
   const currentAvatar = avatarSel ? `${AV}/avatar-${avatarSel}.png` : avatar
@@ -161,48 +183,54 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
         )}
 
         {/* Subscription */}
-        <section className="set-card glass set-pro" id="subscription">
-          <Image src="/assets/daily-ai-lab/mascot-ds/cockatiel-superhero.png" alt="Riri" width={70} height={70} />
+        <section className="set-card glass" id="subscription">
+          <div className="sc-head"><h3 className="display"><Crown size={20} className="text-amber-500" /> {t("Subscription")}</h3><p>{t("Manage your Pro plan and billing")}</p></div>
           {plan === "pro" ? (
             <>
-              <div style={{ flex: 1 }}>
-                <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("You're on Pro")}</h3>
-                <p>{t("Unlimited lessons, all career paths and unlimited hearts.")}</p>
-                {cancelState && (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 4, marginTop: 8, fontSize: 13, color: cancelState.ok ? "var(--mint-600)" : "var(--berry-600)" }}>
-                    {cancelState.ok && <Check size={14} />}{cancelState.message}
+              <div className="set-row">
+                <div className="sr-info"><b>{t("Current plan")}</b><span>{t("Unlimited lessons, all career paths and unlimited hearts.")}</span></div>
+                <div className="sr-ctrl"><span className="sg-badge"><Crown size={14} className="text-amber-500" /> Pro</span></div>
+              </div>
+
+              {subscription?.since && (
+                <div className="set-row"><div className="sr-info"><b>{t("Subscribed on")}</b><span>{subscription.since}</span></div></div>
+              )}
+
+              {subscription?.until && (subscription.cancelAtPeriodEnd ? (
+                <div className="set-row">
+                  <div className="sr-info"><b>{t("Subscription ending")}</b><span>{t("Pro stays active until {date}, then switches to Free", { date: subscription.until })}</span></div>
+                  <div className="sr-ctrl">
+                    <form action={resumeSub}>
+                      <button type="submit" className="btn btn--violet sm" disabled={resuming}>
+                        <Crown size={15} /> {resuming ? t("Resuming…") : t("Resume subscription")}
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              ) : (
+                <div className="set-row"><div className="sr-info"><b>{t("Next billing date")}</b><span>{subscription.until}</span></div></div>
+              ))}
+
+              {[cancelState, resumeState].map((st, i) => st?.message && (
+                <div className="set-row" key={i}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 700, color: st.ok ? "var(--mint-600)" : "var(--berry-600)" }}>
+                    {st.ok && <Check size={15} />}{st.message}
                   </span>
-                )}
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
-                <span className="sg-badge"><Crown size={14} className="text-amber-500" /> Pro</span>
-                {!confirmCancel ? (
-                  <button
-                    type="button"
-                    onClick={() => setConfirmCancel(true)}
-                    style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 12.5, fontWeight: 700, color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 3 }}
-                  >
-                    {t("Cancel subscription")}
-                  </button>
-                ) : (
-                  <form action={cancelSub} style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
-                    <span style={{ fontSize: 12.5, color: "var(--text-muted)" }}>{t("Switch back to the Free plan?")}</span>
-                    <div style={{ display: "flex", gap: 8 }}>
-                      <button type="button" className="btn btn--ghost sm" onClick={() => setConfirmCancel(false)}>{t("Keep Pro")}</button>
-                      <button type="submit" className="btn btn--danger sm" disabled={cancelling}>{cancelling ? t("Cancelling…") : t("Confirm cancel")}</button>
-                    </div>
-                  </form>
-                )}
-              </div>
+                </div>
+              ))}
+
+              {(!subscription || !subscription.cancelAtPeriodEnd) && (
+                <div className="set-row">
+                  <div className="sr-info"><b>{t("Cancel subscription")}</b><span>{t("You'll keep Pro until the end of your billing period")}</span></div>
+                  <div className="sr-ctrl"><button type="button" className="btn btn--danger sm" onClick={() => setShowCancel(true)}>{t("Cancel subscription")}</button></div>
+                </div>
+              )}
             </>
           ) : (
-            <>
-              <div style={{ flex: 1 }}>
-                <h3 className="display"><Crown size={18} className="text-amber-500" /> {t("Upgrade to Pro")}</h3>
-                <p>{t("Unlimited lessons, all career paths and unlimited hearts.")} · ฿{proPrice.toLocaleString()}/{t("mo")}</p>
-              </div>
-              <Link className="btn btn--violet md" href="/upgrade">{t("Upgrade")}</Link>
-            </>
+            <div className="set-row">
+              <div className="sr-info"><b>{t("Upgrade to Pro")}</b><span>{t("Unlimited lessons, all career paths and unlimited hearts.")} · ฿{proPrice.toLocaleString()}/{t("mo")}</span></div>
+              <div className="sr-ctrl"><Link className="btn btn--violet md" href="/upgrade"><Crown size={16} /> {t("Upgrade")}</Link></div>
+            </div>
           )}
         </section>
 
@@ -215,6 +243,36 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
           </div>
         </section>
       </div>
+
+      {showCancel && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setShowCancel(false)}
+          style={{ position: "fixed", inset: 0, zIndex: 1000, background: "rgba(23,18,66,.45)", backdropFilter: "blur(2px)", display: "grid", placeItems: "center", padding: 20 }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ width: "100%", maxWidth: 420, background: "#fff", borderRadius: 22, padding: 26, boxShadow: "0 30px 60px -20px rgba(39,16,96,.5)" }}
+          >
+            <span style={{ display: "grid", placeItems: "center", width: 52, height: 52, borderRadius: 16, background: "var(--berry-100, #ffe4e6)", color: "var(--berry-600, #e11d48)", margin: "0 auto 14px" }}>
+              <AlertTriangle size={26} />
+            </span>
+            <h3 className="display" style={{ textAlign: "center", fontSize: 20, margin: "0 0 8px", color: "var(--text-strong)" }}>{t("Cancel your Pro subscription?")}</h3>
+            <p style={{ textAlign: "center", fontSize: 14, lineHeight: 1.55, color: "var(--text-muted)", margin: "0 0 22px" }}>
+              {subscription?.until
+                ? t("You'll keep Pro until {date}, then switch to Free. No more charges.", { date: subscription.until })
+                : t("You'll switch back to the Free plan.")}
+            </p>
+            <div style={{ display: "flex", gap: 10 }}>
+              <button type="button" className="btn btn--ghost md" style={{ flex: 1 }} onClick={() => setShowCancel(false)}>{t("Keep Pro")}</button>
+              <form action={cancelSub} onSubmit={() => setShowCancel(false)} style={{ flex: 1, display: "flex" }}>
+                <button type="submit" className="btn btn--danger md" style={{ width: "100%" }} disabled={cancelling}>{cancelling ? t("Cancelling…") : t("Confirm cancel")}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

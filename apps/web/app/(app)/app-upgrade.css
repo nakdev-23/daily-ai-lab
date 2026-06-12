@@ -51,6 +51,9 @@
 .dlab-app .cmp thead th.pro { color: var(--hero-600); }
 .dlab-app .cmp td.feat { font-weight: 700; font-size: 14px; color: var(--text-body); }
 .dlab-app .cmp td.val { text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 14px; }
+/* lucide icons default to baseline alignment, which makes them sit low and look
+   crooked next to text — center them vertically within the row. */
+.dlab-app .cmp td.val svg { display: inline-block; vertical-align: middle; }
 .dlab-app .cmp td.val .yes { color: var(--mint-600); }
 .dlab-app .cmp td.val .no { color: var(--cloud-400); }
 .dlab-app .cmp tbody tr:last-child td { border-bottom: 0; }

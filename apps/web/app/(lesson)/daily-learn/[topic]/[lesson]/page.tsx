@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
-import { getCourse } from "@/lib/courses"
-import { getCourseContent } from "@/lib/course-content"
+import { getPublishedCourse } from "@/lib/courses"
+import { getPublishedCourseContent } from "@/lib/course-content"
 import { getLessonSteps } from "@/lib/lesson-loader"
 import { getHeartState, nextHeartRefillISO, bangkokTodayISO } from "@/lib/hearts"
 import { getProfile, isPro } from "@/lib/auth"
@@ -25,7 +25,7 @@ export default async function LessonPage({
   const heartPromise = getHeartState()
   const profilePromise = getProfile()
   const settingsPromise = getSystemSettings()
-  const course = await getCourse(topic)
+  const course = await getPublishedCourse(topic)
   if (!course) redirect("/daily-learn")
 
   // Progress rows and lesson URLs are keyed by slug (course_progress.course_id);
@@ -33,7 +33,7 @@ export default async function LessonPage({
   const progressKey = course.slug || course.id
 
   const [units, steps, heart, profile, settings, lessonsDone, lang] = await Promise.all([
-    getCourseContent(course.id),
+    getPublishedCourseContent(course.id),
     getLessonSteps(course.slug, lessonNum),
     heartPromise,
     profilePromise,

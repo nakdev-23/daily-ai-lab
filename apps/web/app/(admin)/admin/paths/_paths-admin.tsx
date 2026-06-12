@@ -155,7 +155,7 @@ function DeleteModal({ path, onClose }: { path: CareerPathRow; onClose: () => vo
         <input type="hidden" name="id" value={path.id} />
         <div className="modal-head">
           <span className="mh-ic" style={{ background: "var(--berry-100)", color: "var(--berry-600)" }}><Trash2 size={20} /></span>
-          <div className="mh-tx"><h3>ลบเส้นทาง?</h3><p>"{path.title}" และโมดูลทั้งหมดจะถูกลบ</p></div>
+          <div className="mh-tx"><h3>ลบเส้นทาง?</h3><p>&quot;{path.title}&quot; และโมดูลทั้งหมดจะถูกลบ</p></div>
           <button type="button" className="modal-x" onClick={onClose}><X size={16} /></button>
         </div>
         <div className="modal-foot spread">

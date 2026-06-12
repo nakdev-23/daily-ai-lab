@@ -6,8 +6,8 @@ import { getSystemSettings } from "@/lib/system-settings"
 import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
-import { getCourse } from "@/lib/courses"
-import { getCourseContent, type CLesson } from "@/lib/course-content"
+import { getPublishedCourse } from "@/lib/courses"
+import { getPublishedCourseContent, type CLesson } from "@/lib/course-content"
 import { getToolColors } from "@/lib/tool-colors"
 import ToolLogo from "@/components/tool-logo"
 import QuestMap, { type Level } from "./_questmap"
@@ -36,11 +36,11 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
   const { topic } = await params
   const t = makeT(await getLang())
 
-  const course = await getCourse(topic)
+  const course = await getPublishedCourse(topic)
   if (!course) redirect("/daily-learn")
 
   // course_units are keyed by the course uuid, not the URL slug
-  const units = await getCourseContent(course.id)
+  const units = await getPublishedCourseContent(course.id)
   const flatLessons = units.flatMap((u) => u.lessons)
 
   // Must match the key the lesson player saves under (slug, with id fallback)

@@ -15,9 +15,11 @@ export const th: Record<string, string> = {
   "Learn": "เรียน",
   "Daily Learn": "เรียนรายวัน",
   "Leaderboard": "อันดับผู้เรียน",
-  "Profile": "หน้าของฉัน",
+  "Profile": "โปรไฟล์ของฉัน",
   "Settings": "ตั้งค่า",
   "Admin": "หลังบ้าน",
+  "Pro plan": "แพ็กเกจ Pro",
+  "Free plan": "แพ็กเกจ Free",
   "Go Pro": "สมัคร Pro",
   "Upgrade": "สมัครเพิ่ม",
   "Unlimited lessons, all paths & hearts.": "เรียนได้ไม่จำกัด เปิดครบทุกทางเรียน และมีหัวใจเต็ม ๆ",
@@ -223,7 +225,7 @@ export const th: Record<string, string> = {
   "Bangkok, Thailand": "กรุงเทพฯ, ไทย",
   "Rank #6": "อันดับ #6",
   "Level 8 · AI Explorer": "ระดับ 8 · นักลองใช้ AI",
-  "Edit profile": "แก้ไขหน้าของฉัน",
+  "Edit profile": "แก้ไขโปรไฟล์ของฉัน",
   "In progress": "กำลังเรียน",
   "See all": "ดูทั้งหมด",
   "Prompt Engineer path": "ทางเรียนเขียนคำสั่ง AI",
@@ -540,7 +542,7 @@ export const th: Record<string, string> = {
   "Unit 3": "บทที่ 3",
   "Unit 3 · Precise prompts": "บทที่ 3 · เขียนคำสั่งให้ชัด",
   "Finish to earn the ChatGPT Master badge": "เรียนจบรับเหรียญ ChatGPT Master",
-  "Complete every lesson to earn a profile badge and unlock the next topic.": "ทำครบทุกบทแล้วรับเหรียญในหน้าของฉัน พร้อมเปิดหัวข้อถัดไป",
+  "Complete every lesson to earn a profile badge and unlock the next topic.": "ทำครบทุกบทแล้วรับเหรียญในโปรไฟล์ของฉัน พร้อมเปิดหัวข้อถัดไป",
 
   // ── profile badges ──
   "Your first lesson done": "จบบทเรียนแรก",
@@ -750,6 +752,8 @@ export const th: Record<string, string> = {
   "Ready to learn AI without limits?": "พร้อมเรียน AI แบบไม่มีขีดจำกัดแล้วหรือยัง?",
   "Try Pro today — cancel anytime": "เริ่มทดลอง Pro วันนี้ — ยกเลิกได้ทุกเมื่อ",
   "Welcome to Pro! (demo)": "ยินดีต้อนรับสู่ Pro! (เดโม)",
+  "Redirecting…": "กำลังพาไปหน้าชำระเงิน…",
+  "Couldn't start checkout — try again": "เริ่มชำระเงินไม่สำเร็จ ลองอีกครั้ง",
 
   // ── settings action messages ──
   "Name must be 1–40 characters": "ชื่อต้องมี 1–40 ตัวอักษร",
@@ -764,6 +768,19 @@ export const th: Record<string, string> = {
   "Cancelling…": "กำลังยกเลิก…",
   "Your subscription was cancelled": "ยกเลิกการสมัครสมาชิกแล้ว กลับไปใช้แพ็กเกจ Free",
   "Couldn't cancel — try again": "ยกเลิกไม่สำเร็จ ลองอีกครั้ง",
+  "Cancelled — you'll keep Pro until your billing period ends": "ยกเลิกแล้ว — คุณจะใช้ Pro ได้จนจบรอบบิลปัจจุบัน",
+
+  // ── settings · subscription section ──
+  "Subscription": "แพ็กเกจ",
+  "Manage your Pro plan and billing": "จัดการแพ็กเกจ Pro และการเรียกเก็บเงิน",
+  "Subscribed on": "สมัครเมื่อ",
+  "Next billing date": "เรียกเก็บเงินครั้งถัดไป",
+  "Subscription ending": "การสมัครกำลังจะสิ้นสุด",
+  "Pro stays active until {date}, then switches to Free": "ใช้ Pro ได้ถึง {date} แล้วเปลี่ยนเป็น Free",
+  "You'll keep Pro until the end of your billing period": "คุณจะใช้ Pro ได้จนจบรอบบิลปัจจุบัน",
+  "Cancel your Pro subscription?": "ยกเลิกแพ็กเกจ Pro?",
+  "You'll keep Pro until {date}, then switch to Free. No more charges.": "คุณจะใช้ Pro ได้ถึง {date} แล้วเปลี่ยนเป็น Free โดยไม่มีการเรียกเก็บเงินอีก",
+  "You'll switch back to the Free plan.": "คุณจะกลับไปใช้แพ็กเกจ Free",
 
   // ── tools showcase real-data labels ──
   "Coming soon": "เร็ว ๆ นี้",
@@ -772,4 +789,15 @@ export const th: Record<string, string> = {
   "Topic pages": "หน้าหัวข้อบทเรียน",
   "Previous page": "หน้าก่อนหน้า",
   "Next page": "หน้าถัดไป",
+
+  // ── leaderboard all-time + resume subscription ──
+  "All-time ranking": "อันดับสะสมตลอดกาล",
+  "Ranked by total XP · {n} players": "จัดอันดับจาก XP สะสมทั้งหมด · ผู้เล่น {n} คน",
+  "Champion": "แชมป์",
+  "Your rank": "อันดับของคุณ",
+  "Finish a lesson to get ranked": "เรียนจบ 1 บทเพื่อขึ้นอันดับ",
+  "Resume subscription": "สมัครต่อ (เปิดต่ออายุ)",
+  "Resuming…": "กำลังเปิดต่ออายุ…",
+  "Auto-renew is back on — your Pro continues as usual": "เปิดต่ออายุอัตโนมัติแล้ว — Pro ของคุณใช้ต่อได้ตามปกติ",
+  "Couldn't resume — try again": "เปิดต่ออายุไม่สำเร็จ ลองอีกครั้ง",
 }

@@ -42,6 +42,8 @@ type Props = {
   role: "user" | "admin"
   /** Active Pro (or admin) — hides every upgrade prompt in the chrome. */
   pro?: boolean
+  /** Resolved avatar from the DB (chosen Riri avatar or Google photo). */
+  avatar?: string | null
   xp: number
   hearts: number
   unlimitedHearts?: boolean
@@ -50,7 +52,7 @@ type Props = {
   initialCollapsed: boolean
 }
 
-export default function AppShell({ children, displayName, role, pro = false, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
+export default function AppShell({ children, displayName, role, pro = false, avatar = null, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -72,7 +74,9 @@ export default function AppShell({ children, displayName, role, pro = false, xp,
     }
   }, [])
 
-  const avatarSrc = avatarSel ? `/assets/daily-ai-lab/avatars/avatar-${avatarSel}.png` : null
+  // Instant local pick wins (no reload); otherwise the DB-resolved avatar so a
+  // fresh device still shows the chosen avatar / Google photo.
+  const avatarSrc = avatarSel ? `/assets/daily-ai-lab/avatars/avatar-${avatarSel}.png` : avatar
 
   function toggleCollapse() {
     setCollapsed((c) => {
@@ -100,7 +104,7 @@ export default function AppShell({ children, displayName, role, pro = false, xp,
       <div className={`app${collapsed ? " is-collapsed" : ""}`}>
         {/* Sidebar */}
         <aside className={`sidebar${open ? " open" : ""}${collapsed ? " collapsed" : ""}`}>
-          <Link className="side-brand" href="/">
+          <Link className="side-brand" href="/daily-learn">
             <div className="brand-badge"><Image src={`${M}/mascot-hello.png`} alt="Riri" width={44} height={44} /></div>
             <div className="brand-text">
               <div className="brand-name" style={{ fontSize: 18 }}>Daily AI Lab</div>
@@ -161,7 +165,7 @@ export default function AppShell({ children, displayName, role, pro = false, xp,
                         <span className="tb-menu-av">{avatarSrc ? <Image src={avatarSrc} alt={displayName} width={40} height={40} /> : displayName.charAt(0)}</span>
                         <div style={{ minWidth: 0 }}>
                           <b>{displayName}</b>
-                          <small>{role === "admin" ? t("Admin") : t("Profile")}</small>
+                          <small>{pro ? t("Pro plan") : t("Free plan")}</small>
                         </div>
                       </div>
                       <Link href="/profile" onClick={() => setUserMenu(false)}><User size={16} /> {t("Profile")}</Link>

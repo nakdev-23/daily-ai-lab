@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { getLang, makeT } from "@/lib/i18n"
-import { getProfile } from "@/lib/auth"
+import { getProfile, avatarUrlFor } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
-import { getCourses } from "@/lib/courses"
+import { getPublishedCourses } from "@/lib/courses"
 import { getToolColors } from "@/lib/tool-colors"
 import ToolLogo from "@/components/tool-logo"
 import { MapPin, Gem, Target, Settings, Flame, Zap, CheckCircle2, Award } from "lucide-react"
@@ -27,9 +27,10 @@ export default async function ProfilePage() {
       .select("course_id, lessons_done, updated_at")
       .eq("user_id", profile?.id ?? "")
       .order("updated_at", { ascending: false }),
-    getCourses(),
+    getPublishedCourses(),
   ])
 
+  const avatarSrc = profile ? avatarUrlFor(profile) : null
   const xp = g?.xp ?? 0
   const streak = g?.streak_current ?? 0
   const streakBest = g?.streak_longest ?? 0
@@ -86,8 +87,8 @@ export default async function ProfilePage() {
       <div className="prof-hero">
         <div className="pf-av-wrap">
           <span className="pf-ring" />
-          {profile?.avatarUrl
-            ? <Image className="pf-av" src={profile.avatarUrl} alt={name} width={96} height={96} unoptimized style={{ objectFit: "cover" }} />
+          {avatarSrc
+            ? <Image className="pf-av" src={avatarSrc} alt={name} width={96} height={96} unoptimized style={{ objectFit: "cover" }} />
             : <span className="pf-av">{name.charAt(0).toUpperCase()}</span>}
           <span className="pf-lvl"><Zap size={12} /> Lv {level}</span>
         </div>

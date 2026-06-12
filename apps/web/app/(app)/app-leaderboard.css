@@ -75,3 +75,8 @@
   .dlab-app .lbx-timer { order: 3; }
   .dlab-app .lbx-row .nm small { display: none; }
 }
+
+/* champion line in the all-time hero (replaces the old fake league pips) */
+.dlab-app .lbx-champ { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 999px;
+  background: rgba(255,255,255,.7); border: 1px solid rgba(108,60,245,.14); font-size: 13px; font-weight: 700; color: var(--text-body); }
+.dlab-app .lbx-champ b { color: var(--text-strong); }

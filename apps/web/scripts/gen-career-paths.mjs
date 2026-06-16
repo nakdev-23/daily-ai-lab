@@ -63,7 +63,7 @@ const PATHS = [
     ],
   },
   {
-    slug: "ai-for-students", title: "AI for Students", tag: "ใหม่", tone: "mint", isPro: false,
+    slug: "ai-for-students", title: "AI for Students", tag: "ใหม่", tone: "mint", isPro: true,
     desc: "ผู้ช่วยเรียนที่ใช้ได้จริง: สรุปเนื้อหา ติวสอบ ทำรายงาน และค้นคว้าอย่างมีวิจารณญาณ",
     tools: ["ChatGPT", "Claude", "Gemini"],
     modules: [
@@ -73,7 +73,7 @@ const PATHS = [
     ],
   },
   {
-    slug: "ai-for-writing", title: "AI for Writing", tag: "ใหม่", tone: "violet", isPro: false,
+    slug: "ai-for-writing", title: "AI for Writing", tag: "ใหม่", tone: "violet", isPro: true,
     desc: "เขียนงานทุกแบบให้เร็วและดีขึ้น: บทความ คอนเทนต์ อีเมล โดยคุมโทนและสไตล์ได้",
     tools: ["Claude", "ChatGPT"],
     modules: [
@@ -83,7 +83,7 @@ const PATHS = [
     ],
   },
   {
-    slug: "ai-for-productivity", title: "AI for Productivity", tag: "ใหม่", tone: "sun", isPro: false,
+    slug: "ai-for-productivity", title: "AI for Productivity", tag: "ใหม่", tone: "sun", isPro: true,
     desc: "เพิ่มประสิทธิภาพงานประจำวัน: จัดการอีเมล สรุปประชุม วางแผนงาน และทำงานร่วมกับทีม",
     tools: ["ChatGPT", "Claude", "Gemini"],
     modules: [

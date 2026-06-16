@@ -2,7 +2,6 @@
 -- APPLY ALL: new courses + career paths (migrations 017–021 combined)
 -- Paste this whole file into Supabase SQL Editor and Run ONCE.
 -- Statements run in order; each is idempotent (safe to re-run).
--- Re-running adds ElevenLabs; existing rows are upserted (no duplicates).
 -- ════════════════════════════════════════════════════════════════════
 
 -- ╔══ 017_course_visibility ══╗
@@ -338,7 +337,7 @@ where cp.slug = 'ai-for-automation' and m.order_index = v.mord;
 delete from path_steps where module_id in (select id from path_modules where path_id in (select id from career_paths where slug='ai-for-students'));
 delete from path_modules where path_id in (select id from career_paths where slug='ai-for-students');
 insert into career_paths (slug, title, tag, description, tone, tools, weeks, is_pro, is_published, order_index)
-values ('ai-for-students', 'AI for Students', 'ใหม่', 'ผู้ช่วยเรียนที่ใช้ได้จริง: สรุปเนื้อหา ติวสอบ ทำรายงาน และค้นคว้าอย่างมีวิจารณญาณ', 'mint', ARRAY['ChatGPT','Claude','Gemini'], 3, false, true, 8)
+values ('ai-for-students', 'AI for Students', 'ใหม่', 'ผู้ช่วยเรียนที่ใช้ได้จริง: สรุปเนื้อหา ติวสอบ ทำรายงาน และค้นคว้าอย่างมีวิจารณญาณ', 'mint', ARRAY['ChatGPT','Claude','Gemini'], 3, true, true, 8)
 on conflict (slug) do update set title=excluded.title, tag=excluded.tag, description=excluded.description, tone=excluded.tone, tools=excluded.tools, weeks=excluded.weeks, is_pro=excluded.is_pro, is_published=true, order_index=excluded.order_index;
 
 insert into path_modules (path_id, title, order_index)
@@ -380,7 +379,7 @@ where cp.slug = 'ai-for-students' and m.order_index = v.mord;
 delete from path_steps where module_id in (select id from path_modules where path_id in (select id from career_paths where slug='ai-for-writing'));
 delete from path_modules where path_id in (select id from career_paths where slug='ai-for-writing');
 insert into career_paths (slug, title, tag, description, tone, tools, weeks, is_pro, is_published, order_index)
-values ('ai-for-writing', 'AI for Writing', 'ใหม่', 'เขียนงานทุกแบบให้เร็วและดีขึ้น: บทความ คอนเทนต์ อีเมล โดยคุมโทนและสไตล์ได้', 'violet', ARRAY['Claude','ChatGPT'], 3, false, true, 9)
+values ('ai-for-writing', 'AI for Writing', 'ใหม่', 'เขียนงานทุกแบบให้เร็วและดีขึ้น: บทความ คอนเทนต์ อีเมล โดยคุมโทนและสไตล์ได้', 'violet', ARRAY['Claude','ChatGPT'], 3, true, true, 9)
 on conflict (slug) do update set title=excluded.title, tag=excluded.tag, description=excluded.description, tone=excluded.tone, tools=excluded.tools, weeks=excluded.weeks, is_pro=excluded.is_pro, is_published=true, order_index=excluded.order_index;
 
 insert into path_modules (path_id, title, order_index)
@@ -420,7 +419,7 @@ where cp.slug = 'ai-for-writing' and m.order_index = v.mord;
 delete from path_steps where module_id in (select id from path_modules where path_id in (select id from career_paths where slug='ai-for-productivity'));
 delete from path_modules where path_id in (select id from career_paths where slug='ai-for-productivity');
 insert into career_paths (slug, title, tag, description, tone, tools, weeks, is_pro, is_published, order_index)
-values ('ai-for-productivity', 'AI for Productivity', 'ใหม่', 'เพิ่มประสิทธิภาพงานประจำวัน: จัดการอีเมล สรุปประชุม วางแผนงาน และทำงานร่วมกับทีม', 'sun', ARRAY['ChatGPT','Claude','Gemini'], 3, false, true, 10)
+values ('ai-for-productivity', 'AI for Productivity', 'ใหม่', 'เพิ่มประสิทธิภาพงานประจำวัน: จัดการอีเมล สรุปประชุม วางแผนงาน และทำงานร่วมกับทีม', 'sun', ARRAY['ChatGPT','Claude','Gemini'], 3, true, true, 10)
 on conflict (slug) do update set title=excluded.title, tag=excluded.tag, description=excluded.description, tone=excluded.tone, tools=excluded.tools, weeks=excluded.weeks, is_pro=excluded.is_pro, is_published=true, order_index=excluded.order_index;
 
 insert into path_modules (path_id, title, order_index)

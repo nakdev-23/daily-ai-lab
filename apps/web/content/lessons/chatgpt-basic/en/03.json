@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 5",
+    "title": "GPT-3.5 vs GPT-4o — what's the difference?",
+    "body": [
+      {
+        "text": "ChatGPT offers several models. "
+      },
+      {
+        "text": "GPT-4o",
+        "bold": true
+      },
+      {
+        "text": " is the newer one — smarter, better at complex context, and it can read images too. GPT-3.5 is fast and free, but less capable."
+      }
+    ],
+    "example": "\"Analyze this image and tell me what it shows.\" (using GPT-4o)",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 6",
+    "title": "Which model should you pick?",
+    "body": [
+      {
+        "text": "Use "
+      },
+      {
+        "text": "GPT-3.5 for simple tasks",
+        "bold": true
+      },
+      {
+        "text": " like everyday Q&A or short summaries, and choose GPT-4o when you need higher quality — writing code, analyzing complex data, or working with images."
+      }
+    ],
+    "example": "\"Write Python code to pull data from an API and plot it as a chart.\" (best with GPT-4o)",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can GPT-4o do that GPT-3.5 can't?",
+    "options": [
+      {
+        "text": "Respond faster than GPT-3.5"
+      },
+      {
+        "text": "Analyze images",
+        "correct": true
+      },
+      {
+        "text": "Be used for free with no limits"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When should you use GPT-3.5?",
+    "options": [
+      {
+        "text": "When you need to analyze an image"
+      },
+      {
+        "text": "For simple, non-complex tasks where speed matters",
+        "correct": true
+      },
+      {
+        "text": "When writing complex code"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does GPT-4o stand for?",
+    "options": [
+      {
+        "text": "GPT-4 Online"
+      },
+      {
+        "text": "GPT-4 Optimized"
+      },
+      {
+        "text": "GPT-4 Omni",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want help reading the numbers off a photo of a receipt. Which model should you use?",
+    "options": [
+      {
+        "text": "GPT-3.5"
+      },
+      {
+        "text": "GPT-4o, because it can analyze images",
+        "correct": true
+      },
+      {
+        "text": "Any model — the result is the same"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of task is GPT-3.5 good enough for?",
+    "options": [
+      {
+        "text": "Analyzing photos"
+      },
+      {
+        "text": "Asking for a short definition or summarizing simple text",
+        "correct": true
+      },
+      {
+        "text": "Writing complex code across many files"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 1",
+    "title": "What is a prompt?",
+    "body": [
+      {
+        "text": "A prompt is "
+      },
+      {
+        "text": "the instruction or message you type to ChatGPT",
+        "bold": true
+      },
+      {
+        "text": " to tell it what you want. A good prompt gets you a more accurate, higher-quality answer than a vague one."
+      }
+    ],
+    "example": "\"Write a short, concise, formal email apologizing to a customer for a 2-day shipping delay.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 2",
+    "title": "Why does the prompt matter so much?",
+    "body": [
+      {
+        "text": "A good prompt includes "
+      },
+      {
+        "text": "context, a goal, and clear details",
+        "bold": true
+      },
+      {
+        "text": ". Ask something broad like \"write an article\" and you'll get a generic result — but give full details and you'll get something that actually fits what you need."
+      }
+    ],
+    "example": "\"Write a 300-word article on the benefits of morning exercise, for a health magazine, audience aged 30–45.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "In the context of ChatGPT, what does \"prompt\" mean?",
+    "options": [
+      {
+        "text": "The program ChatGPT runs on"
+      },
+      {
+        "text": "The message or instruction you send to ChatGPT",
+        "correct": true
+      },
+      {
+        "text": "The answer ChatGPT sends back"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good prompt include?",
+    "options": [
+      {
+        "text": "Be as long as possible"
+      },
+      {
+        "text": "Context, a goal, and clear details",
+        "correct": true
+      },
+      {
+        "text": "Just a 1–2 word question"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is the better prompt?",
+    "options": [
+      {
+        "text": "\"Write an article\""
+      },
+      {
+        "text": "\"A 500-word article\""
+      },
+      {
+        "text": "\"Write a 500-word article on saving energy, for high-school students\"",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want a catchy tagline for sunscreen. Which prompt is best?",
+    "options": [
+      {
+        "text": "\"Write a tagline\""
+      },
+      {
+        "text": "\"Write 2 sunscreen taglines for teens, fun tone, under 15 words, emphasizing it's waterproof\"",
+        "correct": true
+      },
+      {
+        "text": "\"What's good about sunscreen?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "If the result still isn't quite right, what should you do first?",
+    "options": [
+      {
+        "text": "Give up and write it yourself"
+      },
+      {
+        "text": "Add details or tell it exactly what to fix in your prompt",
+        "correct": true
+      },
+      {
+        "text": "Send the same prompt over and over"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 3",
+    "title": "The ChatGPT screen & getting started",
+    "body": [
+      {
+        "text": "Open it at "
+      },
+      {
+        "text": "chat.openai.com",
+        "bold": true
+      },
+      {
+        "text": ". The home screen has a message box in the middle — click \"New chat\" to start a fresh conversation, and find your past chats in the left sidebar."
+      }
+    ],
+    "example": "\"Hi! Could you introduce yourself?\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 4",
+    "title": "Chat history & managing conversations",
+    "body": [
+      {
+        "text": "Every conversation is saved in your "
+      },
+      {
+        "text": "Chat History",
+        "bold": true
+      },
+      {
+        "text": " in the left sidebar. You can rename, delete, or jump back into any chat anytime — so it's easy to pick up right where you left off."
+      }
+    ],
+    "example": "\"Continuing from what we discussed earlier, can you summarize everything we covered?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What URL do you use to access ChatGPT?",
+    "options": [
+      {
+        "text": "chatgpt.google.com"
+      },
+      {
+        "text": "chat.openai.com",
+        "correct": true
+      },
+      {
+        "text": "ai.microsoft.com"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does the \"New chat\" button do?",
+    "options": [
+      {
+        "text": "Deletes your entire chat history"
+      },
+      {
+        "text": "Switches the model you're using"
+      },
+      {
+        "text": "Starts a brand-new conversation from scratch",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Where is Chat History located on the screen?",
+    "options": [
+      {
+        "text": "The left sidebar",
+        "correct": true
+      },
+      {
+        "text": "The top bar"
+      },
+      {
+        "text": "The middle of the screen"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You're chatting about trip planning but want to ask about an unrelated work topic. What should you do?",
+    "options": [
+      {
+        "text": "Just keep typing in the same chat"
+      },
+      {
+        "text": "Click New chat to open a fresh chat so the contexts don't mix",
+        "correct": true
+      },
+      {
+        "text": "Delete all history first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of naming your chats in Chat History?",
+    "options": [
+      {
+        "text": "It makes ChatGPT smarter"
+      },
+      {
+        "text": "It's easy to find a past conversation when you have many",
+        "correct": true
+      },
+      {
+        "text": "It speeds up responses"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

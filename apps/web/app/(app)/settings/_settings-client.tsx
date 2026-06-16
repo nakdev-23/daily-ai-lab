@@ -3,7 +3,6 @@
 import { useState, useActionState, useSyncExternalStore } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { createClient } from "@/lib/supabase/client"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import {
@@ -40,7 +39,6 @@ type SubInfo = { since: string; until: string; cancelAtPeriodEnd: boolean }
 type Props = { lang: Lang; displayName: string; email: string; avatar: string | null; proPrice: number; plan: "free" | "pro"; subscription: SubInfo | null; avatarKey: string | null }
 
 export default function SettingsClient({ lang, displayName, email, avatar, proPrice, plan, subscription, avatarKey }: Props) {
-  const router = useRouter()
   const t = makeT(lang)
   const [goal, setGoal] = useState(1)
   const [theme, setTheme] = useState(0)
@@ -82,7 +80,10 @@ export default function SettingsClient({ lang, displayName, email, avatar, proPr
   async function logout() {
     const supabase = createClient()
     await supabase.auth.signOut()
-    router.push("/login")
+    // Hard navigation to home so the server re-evaluates auth as logged-out
+    // and the client router cache is fully cleared (a soft push can keep
+    // stale authed state and skip the redirect).
+    window.location.href = "/"
   }
 
   return (

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 import LangToggle from "@/components/lang-toggle"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import { createClient } from "@/lib/supabase/client"
@@ -54,7 +54,6 @@ type Props = {
 
 export default function AppShell({ children, displayName, role, pro = false, avatar = null, xp, hearts, unlimitedHearts = false, streak, lang, initialCollapsed }: Props) {
   const pathname = usePathname()
-  const router = useRouter()
   const [open, setOpen] = useState(false)
   const [userMenu, setUserMenu] = useState(false)
   // Seeded from a server-read cookie so SSR and first client render match (no hydration mismatch).
@@ -90,7 +89,10 @@ export default function AppShell({ children, displayName, role, pro = false, ava
     setUserMenu(false)
     const supabase = createClient()
     await supabase.auth.signOut()
-    router.push("/login")
+    // Hard navigation (not router.push) so the server re-evaluates auth as
+    // logged-out and the client router cache is fully cleared — a soft push
+    // can leave stale authed RSC state and skip the redirect to home.
+    window.location.href = "/"
   }
 
   const titleKey = Object.keys(TITLES).find((p) => pathname === p || pathname.startsWith(p + "/"))

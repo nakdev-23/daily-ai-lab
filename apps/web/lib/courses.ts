@@ -16,6 +16,28 @@ export type Course = {
   units: number
   lessons: number
   order_index: number
+  /** Hidden from the Daily Learn grid when false (still usable in career paths). */
+  showInDaily: boolean
+  /** Only Pro/admin can open the course when true. */
+  isPro: boolean
+}
+
+// Maps a raw DB row (snake_case, flags may be absent pre-migration) to Course.
+function toCourse(r: Record<string, unknown>): Course {
+  return {
+    id: r.id as string,
+    slug: r.slug as string,
+    title: r.title as string,
+    description: (r.description as string) ?? "",
+    tool: r.tool as string,
+    level: r.level as Course["level"],
+    status: r.status as CourseStatus,
+    units: (r.units as number) ?? 0,
+    lessons: (r.lessons as number) ?? 0,
+    order_index: (r.order_index as number) ?? 99,
+    showInDaily: r.show_in_daily !== false, // default true if column missing
+    isPro: r.is_pro === true,
+  }
 }
 
 export type CourseInput = {
@@ -25,11 +47,12 @@ export type CourseInput = {
   tool: string
   level: Course["level"]
   status?: CourseStatus
+  showInDaily?: boolean
+  isPro?: boolean
 }
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
-const COURSE_COLS = "id, slug, title, description, tool, level, status, units, lessons, order_index"
 
 /**
  * Published courses for user-facing pages, cached ACROSS requests: one
@@ -39,8 +62,8 @@ const COURSE_COLS = "id, slug, title, description, tool, level, status, units, l
  */
 export const getPublishedCourses = unstable_cache(
   async (): Promise<Course[]> => {
-    const { data } = await publicClient.from("courses").select(COURSE_COLS).order("order_index", { ascending: true })
-    return (data as Course[]) ?? []
+    const { data } = await publicClient.from("courses").select("*").order("order_index", { ascending: true })
+    return ((data as Record<string, unknown>[]) ?? []).map(toCourse)
   },
   ["published-courses"],
   { revalidate: 300, tags: ["courses"] },
@@ -50,8 +73,8 @@ export const getPublishedCourses = unstable_cache(
 export const getPublishedCourse = unstable_cache(
   async (id: string): Promise<Course | null> => {
     const column = UUID_RE.test(id) ? "id" : "slug"
-    const { data } = await publicClient.from("courses").select(COURSE_COLS).eq(column, id).maybeSingle()
-    return (data as Course) ?? null
+    const { data } = await publicClient.from("courses").select("*").eq(column, id).maybeSingle()
+    return data ? toCourse(data as Record<string, unknown>) : null
   },
   ["published-course"],
   { revalidate: 300, tags: ["courses"] },
@@ -61,7 +84,7 @@ export const getPublishedCourse = unstable_cache(
 export const getCourses = cache(async (): Promise<Course[]> => {
   const supabase = await createClient()
   const { data } = await supabase.from("courses").select("*").order("order_index", { ascending: true })
-  return (data as Course[]) ?? []
+  return ((data as Record<string, unknown>[]) ?? []).map(toCourse)
 })
 
 export const getCourse = cache(async (id: string): Promise<Course | null> => {
@@ -70,7 +93,7 @@ export const getCourse = cache(async (id: string): Promise<Course | null> => {
   // reject the whole query, so pick the column by the shape of the input.
   const column = UUID_RE.test(id) ? "id" : "slug"
   const { data } = await supabase.from("courses").select("*").eq(column, id).maybeSingle()
-  return (data as Course) ?? null
+  return data ? toCourse(data as Record<string, unknown>) : null
 })
 
 function slugify(title: string): string {
@@ -81,7 +104,11 @@ export async function saveCourse(input: CourseInput): Promise<void> {
   const profile = await getProfile()
   if (profile?.role !== "admin") throw new Error("forbidden")
   const supabase = await createClient()
-  const row = { title: input.title, description: input.description, tool: input.tool, level: input.level, status: input.status ?? "draft", updated_at: new Date().toISOString() }
+  const row: Record<string, unknown> = { title: input.title, description: input.description, tool: input.tool, level: input.level, status: input.status ?? "draft", updated_at: new Date().toISOString() }
+  // Only set the visibility flags when provided, so the columns are optional
+  // until migrations 017/019 are applied (avoids insert errors pre-migration).
+  if (input.showInDaily !== undefined) row.show_in_daily = input.showInDaily
+  if (input.isPro !== undefined) row.is_pro = input.isPro
   if (input.id) {
     // Slug stays fixed after creation — it keys progress rows and lesson files.
     await supabase.from("courses").update(row).eq("id", input.id)

@@ -71,3 +71,30 @@
 @media (pointer: coarse) {
   .dlab-app .lrn-pager .lp-btn, .dlab-app .lrn-pager .lp-dot { height: 44px; min-width: 44px; }
 }
+
+/* ── continue: career paths in progress ── */
+.dlab-app .cont-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 30px; }
+@media (max-width: 720px) { .dlab-app .cont-grid { grid-template-columns: 1fr; } }
+.dlab-app .cont-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 16px;
+  background: #fff; border: 1.5px solid var(--cloud-200); text-decoration: none; color: inherit;
+  transition: border-color .15s, transform .14s var(--ease-bounce), box-shadow .15s; }
+.dlab-app .cont-card:hover { border-color: var(--hero-300); transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(72,31,184,.35); }
+.dlab-app .cont-card .cc-ic { width: 44px; height: 44px; border-radius: 13px; flex: none; display: grid; place-items: center;
+  box-shadow: inset 0 -3px 6px rgba(0,0,0,.07), inset 0 2px 3px rgba(255,255,255,.6); }
+.dlab-app .cont-card .cc-mid { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.dlab-app .cont-card .cc-mid b { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--text-strong);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dlab-app .cont-card .cc-mid .pbar { display: block; height: 8px; border-radius: 999px; background: var(--cloud-100); overflow: hidden; }
+.dlab-app .cont-card .cc-mid .pbar > i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--hero-400), var(--hero-600)); }
+.dlab-app .cont-card .cc-mid small { font-size: 12px; font-weight: 700; color: var(--text-muted); }
+.dlab-app .cont-card .cc-go { flex: none; display: inline-flex; align-items: center; gap: 3px;
+  font-family: var(--font-display); font-weight: 800; font-size: 13.5px; color: var(--hero-600); }
+
+/* Pro badge on a daily course card (top-right, clears the go-arrow) */
+.dlab-app .lrn-card .lc-pro {
+  position: absolute; top: 16px; right: 16px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px;
+  font-family: var(--font-display); font-weight: 800; font-size: 11px; color: #5A3A00;
+  background: linear-gradient(180deg,#FFD84E,#F4A100); box-shadow: 0 4px 10px -2px rgba(224,150,0,.5);
+}
+.dlab-app .lrn-card:hover .go-arrow { /* keep arrow under the badge when both show */ }

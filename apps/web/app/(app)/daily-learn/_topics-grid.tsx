@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import ToolLogo from "@/components/tool-logo"
 import { makeT, type Lang } from "@/lib/i18n-core"
-import { ChevronRight, ChevronLeft, Clock } from "lucide-react"
+import { ChevronRight, ChevronLeft, Clock, Crown } from "lucide-react"
 
 export type Topic = {
   id: string
@@ -15,6 +15,7 @@ export type Topic = {
   dot: string
   level: string
   desc: string
+  pro?: boolean
   n: string
   pct: number
   soft: string
@@ -53,6 +54,7 @@ export default function TopicsGrid({ topics, lang }: { topics: Topic[]; lang: La
             }}
           >
             <span className="blob" />
+            {tp.pro && <span className="lc-pro"><Crown size={12} /> Pro</span>}
             <span className="go-arrow"><ChevronRight size={18} /></span>
             <div className="lc-top">
               <div className="lc-tile" style={{ background: tp.bg }}>

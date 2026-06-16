@@ -20,7 +20,11 @@ export async function loseHeartAction(): Promise<HeartState> {
  */
 export async function completeLessonAction(courseId: string, lessonNum: number, perfect = false): Promise<CompleteLessonResult> {
   if (!Number.isInteger(lessonNum) || lessonNum < 1) return { ok: false, xp: 0, reason: "invalid" }
-  const course = await getPublishedCourse(courseId)
-  if (!course) return { ok: false, xp: 0, reason: "invalid" }
+  // Career-path keys ("path:{slug}") are validated by the RPC against the
+  // path's real step count; course keys are checked here for a fast fail.
+  if (!/^path:[a-z0-9-]+$/.test(courseId)) {
+    const course = await getPublishedCourse(courseId)
+    if (!course) return { ok: false, xp: 0, reason: "invalid" }
+  }
   return markLessonDone(courseId, lessonNum, perfect === true)
 }

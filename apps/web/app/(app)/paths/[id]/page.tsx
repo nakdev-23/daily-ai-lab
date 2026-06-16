@@ -4,7 +4,7 @@ import { notFound, redirect } from "next/navigation"
 import { getLang, makeT } from "@/lib/i18n"
 import { requireUser, isPro } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
-import { getCareerPath, pathCourseSlugs, totalSteps, totalXp } from "@/lib/career-paths"
+import { getCareerPath, totalSteps, totalXp } from "@/lib/career-paths"
 import type { PathStep } from "@/lib/career-paths"
 import ToolLogo from "@/components/tool-logo"
 import {
@@ -42,40 +42,29 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
   // Paywall: Pro career paths require a Pro plan (admins always pass via isPro).
   if (path.isPro && !isPro(profile)) redirect("/upgrade")
 
-  // Fetch course progress for all courses referenced in this path
+  // Path progress lives under its own key ("path:{slug}") — fully separate
+  // from daily-learn course progress. Steps complete strictly in order.
   const supabase = await createClient()
-  const slugs = pathCourseSlugs(path)
-  const { data: progressRows } = await supabase
+  const { data: progressRow } = await supabase
     .from("course_progress")
-    .select("course_id, lessons_done")
+    .select("lessons_done")
     .eq("user_id", profile.id)
-    .in("course_id", slugs)
+    .eq("course_id", `path:${path.slug}`)
+    .maybeSingle()
+  const stepsDone = progressRow?.lessons_done ?? 0
 
-  const lessonsMap: Record<string, number> = {}
-  for (const row of progressRows ?? []) lessonsMap[row.course_id] = row.lessons_done
-
-  // Compute step states in path order
-  let foundCurrent = false
-  function computeState(step: PathStep): StepState {
-    const done = (lessonsMap[step.courseSlug] ?? 0) >= step.lessonNum
-    if (done) return "done"
-    if (!foundCurrent) { foundCurrent = true; return "cur" }
-    return "lock"
-  }
-
-  // Pre-compute all states (must iterate once in order)
+  // Pre-compute step states: first N done, step N+1 is current, rest locked.
   const flatSteps = path.modules.flatMap((m) => m.steps)
   const stateMap = new Map<string, StepState>()
-  for (const s of flatSteps) stateMap.set(s.id, computeState(s))
+  flatSteps.forEach((s, i) => {
+    stateMap.set(s.id, i < stepsDone ? "done" : i === stepsDone ? "cur" : "lock")
+  })
 
-  const doneCount = flatSteps.filter((s) => stateMap.get(s.id) === "done").length
+  const doneCount = Math.min(stepsDone, flatSteps.length)
   const pct = totalSteps(path) > 0 ? Math.round((doneCount / totalSteps(path)) * 100) : 0
 
-  const firstCur = flatSteps.find((s) => stateMap.get(s.id) === "cur")
-  const continueStep = firstCur ?? flatSteps[0]
-  const continueHref = continueStep
-    ? `/daily-learn/${continueStep.courseSlug}/${continueStep.lessonNum}`
-    : `/daily-learn`
+  const continueIdx = Math.min(stepsDone + 1, flatSteps.length)
+  const continueHref = flatSteps.length > 0 ? `/paths-learn/${path.slug}/${continueIdx}` : "/paths"
 
   const { bg, Icon } = TONE_META[path.tone] ?? TONE_META.violet
 
@@ -170,7 +159,8 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
                     <div className="lesson-track">
                       {modSteps.map((step) => {
                         const state = stateMap.get(step.id) ?? "lock"
-                        const href = `/daily-learn/${step.courseSlug}/${step.lessonNum}`
+                        const stepIdx = flatSteps.findIndex((s) => s.id === step.id) + 1
+                        const href = `/paths-learn/${path.slug}/${stepIdx}`
                         const inner = (
                           <>
                             <span className={`lnode ${state}`}>

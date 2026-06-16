@@ -8,7 +8,8 @@
  */
 import type { IconType } from "react-icons"
 import {
-  SiOpenai, SiClaude, SiGooglegemini, SiSuno, SiPerplexity,
+  SiOpenai, SiClaude, SiGooglegemini, SiSuno, SiPerplexity, SiBytedance, SiWindsurf,
+  SiOllama, SiHuggingface, SiStackblitz, SiReplit, SiElevenlabs,
 } from "react-icons/si"
 import { getTool } from "@/lib/tool-registry"
 
@@ -18,6 +19,13 @@ const SI_ICONS: Record<string, IconType> = {
   SiGooglegemini,
   SiSuno,
   SiPerplexity,
+  SiBytedance,
+  SiWindsurf,
+  SiOllama,
+  SiHuggingface,
+  SiStackblitz,
+  SiReplit,
+  SiElevenlabs,
 }
 
 export default function ToolLogo({

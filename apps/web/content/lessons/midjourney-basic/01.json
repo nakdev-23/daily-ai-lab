@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 1 · ตอนที่ 1",
+    "title": "Midjourney คืออะไร",
+    "body": [
+      {
+        "text": "Midjourney คือ "
+      },
+      {
+        "text": "AI สร้างภาพจากข้อความ (Text-to-Image)",
+        "bold": true
+      },
+      {
+        "text": " ที่ขึ้นชื่อเรื่องภาพสวยระดับงานศิลป์ ใช้สร้างภาพประกอบ, ภาพโฆษณา, คอนเซปต์อาร์ต, มู้ดบอร์ด และภาพที่หาถ่ายจริงไม่ได้ ใช้ผ่านเว็บหรือ Discord"
+      }
+    ],
+    "example": "a cozy coffee shop interior, warm morning light, plants, wooden furniture, photorealistic",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 1 · ตอนที่ 2",
+    "title": "ภาษาอังกฤษได้ผลดีกว่า",
+    "body": [
+      {
+        "text": "Midjourney เข้าใจ "
+      },
+      {
+        "text": "ภาษาอังกฤษ",
+        "bold": true
+      },
+      {
+        "text": " ได้แม่นที่สุด ถ้าถนัดไทยให้ร่างไทยแล้วแปลเป็นอังกฤษ (ใช้ ChatGPT ช่วยได้) คำที่เป็นรูปธรรมและศัพท์ศิลปะ/การถ่ายภาพจะให้ผลคมชัดกว่าคำกว้างๆ"
+      }
+    ],
+    "example": "ภาพแมวส้มนอนบนหนังสือ → 'an orange cat sleeping on a stack of books, soft window light, cozy'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 4",
+    "question": "Midjourney ทำอะไร?",
+    "options": [
+      {
+        "text": "สร้างภาพจากข้อความ",
+        "correct": true
+      },
+      {
+        "text": "สร้างวิดีโอจากเสียง"
+      },
+      {
+        "text": "เขียนโค้ดเว็บไซต์"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 4",
+    "question": "ภาษาใดให้ผลแม่นที่สุดใน Midjourney?",
+    "options": [
+      {
+        "text": "ภาษาอังกฤษ",
+        "correct": true
+      },
+      {
+        "text": "ภาษาไทยเท่านั้น"
+      },
+      {
+        "text": "ภาษาญี่ปุ่น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 4",
+    "question": "ถ้าไม่ถนัดอังกฤษควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "ร่างไทยแล้วใช้ ChatGPT ช่วยแปลเป็นอังกฤษ",
+        "correct": true
+      },
+      {
+        "text": "พิมพ์ไทยแล้วหวังว่าจะเข้าใจ"
+      },
+      {
+        "text": "ใช้แต่ emoji"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 4",
+    "question": "งานใดเหมาะกับ Midjourney?",
+    "options": [
+      {
+        "text": "ภาพประกอบ คอนเซปต์อาร์ต ภาพที่หาถ่ายจริงไม่ได้",
+        "correct": true
+      },
+      {
+        "text": "ตัดต่อวิดีโอยาว"
+      },
+      {
+        "text": "บันทึกเสียงพากย์"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

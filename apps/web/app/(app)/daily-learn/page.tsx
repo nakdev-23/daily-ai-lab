@@ -6,9 +6,10 @@ import { getSystemSettings } from "@/lib/system-settings"
 import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLang, makeT } from "@/lib/i18n"
 import { getPublishedCourses } from "@/lib/courses"
+import { getCareerPaths } from "@/lib/career-paths"
 import { getToolColors } from "@/lib/tool-colors"
 import TopicsGrid from "./_topics-grid"
-import { Flame, Zap, CheckCircle2, Target, ChevronRight, Clock } from "lucide-react"
+import { Flame, Zap, CheckCircle2, Target, ChevronRight, Clock, Rocket } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
 
@@ -22,8 +23,10 @@ export default async function DailyLearnPage() {
   const today = bangkokTodayISO()
 
   // getCourses/getProfile/getSystemSettings are request-memoized — shared with the layout's fetches.
-  const [courses, profile, supabase, settings] = await Promise.all([getPublishedCourses(), getProfile(), createClient(), getSystemSettings()])
-  const published = courses.filter((c) => c.status === "published")
+  const [courses, profile, supabase, settings, careerPaths] = await Promise.all([getPublishedCourses(), getProfile(), createClient(), getSystemSettings(), getCareerPaths()])
+  // Daily grid: published courses that opted into the daily view. Media tracks
+  // (Suno/Runway/Midjourney) are show_in_daily=false → reached via career paths.
+  const published = courses.filter((c) => c.status === "published" && c.showInDaily)
   // Daily lesson goal follows the admin-configured Free quota (no hardcoded 3).
   const goalLessons = Math.max(1, settings.freeLessonsPerDay)
 
@@ -42,6 +45,27 @@ export default async function DailyLearnPage() {
     }
   }
 
+  // Career paths the user has started but not finished — powers the
+  // "pick up where you left off" section. A step is done when the user's
+  // progress in its course covers that lesson number.
+  const TONE_BG: Record<string, string> = {
+    violet: "var(--hero-100)", mint: "var(--mint-100)", pink: "var(--pink-100)",
+    sky: "var(--sky-100)", sun: "var(--sun-100)", blue: "var(--sky-100)",
+  }
+  const TONE_FG: Record<string, string> = {
+    violet: "var(--hero-600)", mint: "var(--mint-600)", pink: "var(--pink-500)",
+    sky: "var(--sky-500)", sun: "var(--sun-700)", blue: "var(--sky-500)",
+  }
+  const pathsInProgress = careerPaths
+    .map((cp) => {
+      const total = cp.modules.reduce((n, m) => n + m.steps.length, 0)
+      // Independent track: paths only progress when learned FROM the path.
+      const done = Math.min(doneByCourse[`path:${cp.slug}`] ?? 0, total)
+      return { slug: cp.slug, title: cp.title, tone: cp.tone, done, total }
+    })
+    .filter((cp) => cp.total > 0 && cp.done > 0 && cp.done < cp.total)
+    .slice(0, 4)
+
   const goalPct = Math.min(100, Math.round((lessonsToday / goalLessons) * 100))
   const hoursLeft = bangkokHoursLeftToday()
   // Daily XP target = the XP of a full quota day (admin-configured values).
@@ -56,7 +80,7 @@ export default async function DailyLearnPage() {
     const levelKey = c.level === "beginner" ? "Beginner" : c.level === "intermediate" ? "Intermediate" : "Advanced"
     return {
       id: c.slug || c.id, tool: c.tool, fallback: colors.fallback, bg: colors.bg, title: c.title,
-      dot: colors.dot, level: t(levelKey), desc: c.description,
+      dot: colors.dot, level: t(levelKey), desc: c.description, pro: c.isPro,
       n: `${done} / ${total} ${t("lessons")}`, pct,
       soft: colors.soft, sh: colors.sh, blob: colors.blob, bar: colors.bar, bar2: colors.bar2,
     }
@@ -112,6 +136,34 @@ export default async function DailyLearnPage() {
           )}
         </div>
       </div>
+
+      {/* continue: career paths in progress */}
+      {pathsInProgress.length > 0 && (
+        <>
+          <div className="lrn-head">
+            <h2>{t("Pick up where you left off")}</h2>
+            <span>{t("Your career paths in progress")}</span>
+          </div>
+          <div className="cont-grid">
+            {pathsInProgress.map((cp) => {
+              const pct = Math.round((cp.done / cp.total) * 100)
+              return (
+                <Link key={cp.slug} className="cont-card" href={`/paths/${cp.slug}`}>
+                  <span className="cc-ic" style={{ background: TONE_BG[cp.tone] ?? "var(--hero-100)", color: TONE_FG[cp.tone] ?? "var(--hero-600)" }}>
+                    <Rocket size={20} />
+                  </span>
+                  <span className="cc-mid">
+                    <b>{cp.title}</b>
+                    <span className="pbar"><i style={{ width: `${pct}%` }} /></span>
+                    <small>{cp.done} / {cp.total} {t("lessons")} · {pct}%</small>
+                  </span>
+                  <span className="cc-go">{t("Continue")} <ChevronRight size={15} /></span>
+                </Link>
+              )
+            })}
+          </div>
+        </>
+      )}
 
       {/* topic picker */}
       <div className="lrn-head">

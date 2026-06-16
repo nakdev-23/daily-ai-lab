@@ -41,6 +41,9 @@ export default async function LessonPage({
     getLessonsDone(progressKey),
     getLang(),
   ])
+  // Pro-only course → Free users go upgrade (admins/Pro pass).
+  if (course.isPro && !isPro(profile)) redirect("/upgrade")
+
   const flat = units.flatMap((u) => u.lessons)
   if (lessonNum > flat.length && flat.length > 0) redirect(`/daily-learn/${topic}`)
   const isLastLesson = flat.length > 0 && lessonNum >= flat.length

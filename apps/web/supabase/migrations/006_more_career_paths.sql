@@ -23,7 +23,7 @@ if not exists (select 1 from career_paths where slug = 'ai-content-creator') the
     'ai-content-creator',
     'AI Content Creator',
     'Beginner friendly',
-    'Write, design and produce content end-to-end using AI — from idea to finished article, visual and social post.',
+    'สร้างคอนเทนต์ครบวงจรด้วย AI ตั้งแต่เขียนและคิดคอนเซปต์ ไปจนถึงงานภาพและดีไซน์',
     'pink',
     ARRAY['ChatGPT','Claude'],
     6, false, true, 2
@@ -87,7 +87,7 @@ if not exists (select 1 from career_paths where slug = 'ai-for-marketing') then
     'ai-for-marketing',
     'AI for Marketing',
     'For marketers',
-    'Ship campaigns, copy and creative faster than ever. Turn AI into your always-on marketing teammate.',
+    'ทำการตลาดให้เร็วและคมด้วย AI ตั้งแต่เขียนคำโฆษณา วางแคมเปญ ไปจนถึงรีเสิร์ชและวิเคราะห์ข้อมูล',
     'sun',
     ARRAY['ChatGPT','Gemini','Claude'],
     4, true, true, 3
@@ -144,7 +144,7 @@ if not exists (select 1 from career_paths where slug = 'ai-for-business') then
     'ai-for-business',
     'AI for Business',
     'For professionals',
-    'Automate busywork and make smarter decisions. Bring AI into meetings, docs, data and daily workflows.',
+    'ใช้ AI ลดงานซ้ำและตัดสินใจได้ดีขึ้น ตั้งแต่เอกสารธุรกิจ งานร่วมทีม ไปจนถึงการค้นคว้าข้อมูล',
     'sky',
     ARRAY['Claude','ChatGPT','Gemini'],
     4, true, true, 4
@@ -202,7 +202,7 @@ if not exists (select 1 from career_paths where slug = 'ai-developer') then
     'ai-developer',
     'AI Developer',
     'For developers',
-    'Use AI to write, review and ship code faster. Master Codex and Claude Code from basics to production.',
+    'ใช้ AI ช่วยเขียน รีวิว และส่งงานโค้ดได้เร็วขึ้น ตั้งแต่พื้นฐานจนถึงพรอมป์ขั้นสูงสำหรับนักพัฒนา',
     'mint',
     ARRAY['Claude','Codex','ChatGPT'],
     6, true, true, 5

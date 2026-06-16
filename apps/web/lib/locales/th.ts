@@ -800,4 +800,8 @@ export const th: Record<string, string> = {
   "Resuming…": "กำลังเปิดต่ออายุ…",
   "Auto-renew is back on — your Pro continues as usual": "เปิดต่ออายุอัตโนมัติแล้ว — Pro ของคุณใช้ต่อได้ตามปกติ",
   "Couldn't resume — try again": "เปิดต่ออายุไม่สำเร็จ ลองอีกครั้ง",
+
+  // ── continue section ──
+  "Pick up where you left off": "เรียนต่อจากที่ค้างไว้",
+  "Your career paths in progress": "เส้นทางอาชีพที่คุณกำลังเรียนอยู่",
 }

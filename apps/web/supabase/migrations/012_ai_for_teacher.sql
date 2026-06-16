@@ -16,10 +16,10 @@ if not exists (select 1 from career_paths where slug = 'ai-for-teacher') then
     'ai-for-teacher',
     'AI for Teacher',
     'For educators',
-    'Plan lessons, build materials, grade faster and communicate with parents — let AI take the busywork so you can focus on teaching.',
+    'ใช้ AI ช่วยสอนครบวงจร ตั้งแต่วางแผนบทเรียน ทำสื่อการสอน ออกข้อสอบ ไปจนถึงตรวจงานและสรุป',
     'mint',
     ARRAY['ChatGPT','Claude','Gemini'],
-    5, false, true, 6
+    5, true, true, 6
   ) returning id into _tc;
 
   insert into path_modules (path_id, title, order_index) values

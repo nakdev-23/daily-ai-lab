@@ -26,6 +26,8 @@ export async function saveCourseAction(_prev: CourseActionResult | null, formDat
     tool: String(formData.get("tool") ?? "ChatGPT").trim() || "ChatGPT",
     level: LEVELS.includes(levelRaw) ? levelRaw : "beginner",
     status: STATUSES.includes(statusRaw) ? statusRaw : "draft",
+    showInDaily: formData.get("show_in_daily") === "on",
+    isPro: formData.get("is_pro") === "on",
   })
   await recordAudit(id ? "course.update" : "course.create", { title })
 

@@ -80,6 +80,8 @@ export default function LessonPlayer({
   unlimitedHearts = false,
   nextRefill = null,
   lang = "th",
+  backHref: backHrefProp,
+  nextHref: nextHrefProp,
 }: {
   steps?: LessonStep[]
   courseId?: string
@@ -90,6 +92,10 @@ export default function LessonPlayer({
   unlimitedHearts?: boolean
   nextRefill?: string | null
   lang?: Lang
+  /** Where the X / back buttons return to (e.g. a career path page). */
+  backHref?: string
+  /** Next-lesson URL override (null = no next button). Default: next daily lesson. */
+  nextHref?: string | null
 }) {
   const t = makeT(lang)
   const STEPS = steps && steps.length > 0 ? steps : FALLBACK_STEPS
@@ -109,7 +115,10 @@ export default function LessonPlayer({
 
   const cur = STEPS[step]
   const progress = (step / Math.max(STEPS.length - 1, 1)) * 100
-  const isCorrect = cur.type === "quiz" && selected !== null && cur.options[selected]?.correct
+  // Option order is randomized server-side in getLessonSteps (per request), so
+  // the correct answer isn't always in the same slot. Render as-is here.
+  const curOptions = cur.type === "quiz" ? cur.options : []
+  const isCorrect = cur.type === "quiz" && selected !== null && curOptions[selected]?.correct
   const footState = !checked ? "" : isCorrect ? "ok" : "no"
 
   // Save progress when reaching the done screen (ref guards double-fire in StrictMode)
@@ -136,7 +145,7 @@ export default function LessonPlayer({
       if (selected === null) return
       if (!checked) {
         setChecked(true)
-        if (!cur.options[selected].correct) {
+        if (!curOptions[selected].correct) {
           mistakesRef.current += 1
           // Wrong answer → deduct a heart server-side so it syncs across lessons
           // and respects the daily reset. Pro users never lose hearts.
@@ -156,8 +165,10 @@ export default function LessonPlayer({
   const footLabel = cur.type === "theory" ? t("Next") : !checked ? t("Check") : t("Next")
   const footDisabled = cur.type === "quiz" && selected === null
 
-  const backHref = courseId ? `/daily-learn/${courseId}` : "/daily-learn"
-  const nextHref = courseId && lessonNum && !isLastLesson ? `/daily-learn/${courseId}/${lessonNum + 1}` : null
+  const backHref = backHrefProp ?? (courseId ? `/daily-learn/${courseId}` : "/daily-learn")
+  const nextHref = nextHrefProp !== undefined
+    ? nextHrefProp
+    : courseId && lessonNum && !isLastLesson ? `/daily-learn/${courseId}/${lessonNum + 1}` : null
 
   return (
     <div className="dlab-lesson">
@@ -205,7 +216,7 @@ export default function LessonPlayer({
               <div className="qtag"><Zap size={13} /> {cur.tag}</div>
               <h2 className="display">{cur.question}</h2>
               <div className="options">
-                {cur.options.map((o, i) => {
+                {curOptions.map((o, i) => {
                   let cls = "opt"
                   if (checked) cls += o.correct ? " correct" : i === selected ? " wrong" : ""
                   else if (i === selected) cls += " sel"

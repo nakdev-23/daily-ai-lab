@@ -198,3 +198,10 @@
 @media (prefers-reduced-motion: reduce) {
   .dlab-app .kpi, .dlab-app .cbar, .dlab-app .dtable tbody tr { transition: none; }
 }
+
+/* course visibility / pro toggles in the edit modal */
+.dlab-app .adm-check { display: flex; align-items: flex-start; gap: 10px; margin-top: 14px; cursor: pointer; }
+.dlab-app .adm-check input { width: 18px; height: 18px; margin-top: 2px; flex: none; accent-color: var(--hero-500); cursor: pointer; }
+.dlab-app .adm-check span { display: flex; flex-direction: column; gap: 2px; }
+.dlab-app .adm-check b { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--text-strong); }
+.dlab-app .adm-check small { font-size: 12px; color: var(--text-muted); line-height: 1.4; }

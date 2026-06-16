@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 3 · ตอนที่ 1",
+    "title": "subject + รายละเอียด + สไตล์",
+    "body": [
+      {
+        "text": "prompt ที่ดีเรียงเป็น "
+      },
+      {
+        "text": "ประธาน (อะไร) + รายละเอียด (สี ท่าทาง ฉาก) + สไตล์/อารมณ์ + คำคุณภาพ",
+        "bold": true
+      },
+      {
+        "text": " เช่น 'a woman, red dress, walking in rain, cinematic, moody, highly detailed' ลำดับและ comma ช่วยให้ AI แยกแยะได้"
+      }
+    ],
+    "example": "a samurai standing in bamboo forest, morning mist, dramatic lighting, cinematic, ultra detailed",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 3 · ตอนที่ 2",
+    "title": "คำสไตล์และสื่อ",
+    "body": [
+      {
+        "text": "ระบุ "
+      },
+      {
+        "text": "สื่อ/เทคนิค",
+        "bold": true
+      },
+      {
+        "text": " ได้ เช่น 'oil painting', 'watercolor', '3D render', 'photograph, 35mm' รวมถึงแสง เช่น 'golden hour', 'studio lighting' คำเหล่านี้กำหนดลุคของภาพได้แรงมาก"
+      }
+    ],
+    "example": "a mountain landscape, watercolor painting, soft pastel colors, dreamy, loose brush strokes",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 4",
+    "question": "ลำดับโครงสร้าง prompt ที่ดีคือ?",
+    "options": [
+      {
+        "text": "ประธาน + รายละเอียด + สไตล์ + คำคุณภาพ",
+        "correct": true
+      },
+      {
+        "text": "ราคา + ขนาดไฟล์ + วันที่"
+      },
+      {
+        "text": "ชื่อเรา + อีเมล + เบอร์โทร"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 4",
+    "question": "comma (,) ใน prompt ช่วยอะไร?",
+    "options": [
+      {
+        "text": "ช่วยให้ AI แยกแยะองค์ประกอบแต่ละส่วน",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ภาพใหญ่ขึ้น"
+      },
+      {
+        "text": "ไม่มีผลใดๆ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 4",
+    "question": "คำใดกำหนด 'สื่อ/เทคนิค' ของภาพ?",
+    "options": [
+      {
+        "text": "'oil painting', 'watercolor', 'photograph 35mm'",
+        "correct": true
+      },
+      {
+        "text": "'--fast'"
+      },
+      {
+        "text": "'please make it nice'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 4",
+    "question": "การระบุแสง เช่น 'golden hour' มีผลอย่างไร?",
+    "options": [
+      {
+        "text": "กำหนดลุคและบรรยากาศของภาพได้ชัดเจน",
+        "correct": true
+      },
+      {
+        "text": "เปลี่ยนเป็นวิดีโอ"
+      },
+      {
+        "text": "ลดเครดิตที่ใช้"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

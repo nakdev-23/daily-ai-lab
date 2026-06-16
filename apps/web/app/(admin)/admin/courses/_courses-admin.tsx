@@ -87,6 +87,8 @@ function CourseModal({ course, onClose }: { course: Course | null; onClose: () =
             <div className="fld"><label>ระดับ</label><select className="fin" name="level" defaultValue={course?.level ?? "beginner"}><option value="beginner">เริ่มต้น</option><option value="intermediate">ระดับกลาง</option><option value="advanced">ขั้นสูง</option></select></div>
           </div>
           <div className="fld"><label>สถานะ</label><select className="fin" name="status" defaultValue={course?.status ?? "draft"}><option value="published">เผยแพร่</option><option value="draft">ร่าง</option><option value="queued">รอคิว</option></select></div>
+          <label className="adm-check"><input type="checkbox" name="show_in_daily" defaultChecked={course?.showInDaily ?? true} /> <span><b>แสดงในเรียนรายวัน</b><small>ปิดไว้ถ้าอยากให้เข้าถึงผ่านเส้นทางอาชีพเท่านั้น (เช่น คอร์สเพลง/วิดีโอ/ภาพ)</small></span></label>
+          <label className="adm-check"><input type="checkbox" name="is_pro" defaultChecked={course?.isPro ?? false} /> <span><b>เฉพาะสมาชิก Pro</b><small>ผู้ใช้ Free จะเห็นป้าย Pro และถูกพาไปหน้าอัปเกรดเมื่อกดเข้า</small></span></label>
         </div>
         <div className="modal-foot">
           <button type="button" className="btn btn--ghost md" onClick={onClose}>ยกเลิก</button>

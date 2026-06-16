@@ -7,6 +7,7 @@ import { bangkokTodayISO, bangkokHoursLeftToday } from "@/lib/hearts"
 import { getLessonsDone } from "@/lib/progress"
 import { getLang, makeT } from "@/lib/i18n"
 import { getPublishedCourse } from "@/lib/courses"
+import { getProfile, isPro } from "@/lib/auth"
 import { getPublishedCourseContent, type CLesson } from "@/lib/course-content"
 import { getToolColors } from "@/lib/tool-colors"
 import ToolLogo from "@/components/tool-logo"
@@ -38,6 +39,9 @@ export default async function TopicRoadmapPage({ params }: { params: Promise<{ t
 
   const course = await getPublishedCourse(topic)
   if (!course) redirect("/daily-learn")
+
+  // Pro-only course → Free users go upgrade (admins/Pro pass).
+  if (course.isPro && !isPro(await getProfile())) redirect("/upgrade")
 
   // course_units are keyed by the course uuid, not the URL slug
   const units = await getPublishedCourseContent(course.id)

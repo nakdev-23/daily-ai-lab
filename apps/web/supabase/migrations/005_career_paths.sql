@@ -106,7 +106,7 @@ begin
     'prompt-engineer',
     'Prompt Engineer',
     'Most popular',
-    'Master prompting across ChatGPT, Claude, and Gemini — from first prompt to advanced system prompts.',
+    'เก่งการเขียนพรอมป์ให้ AI ทุกตัว ตั้งแต่พื้นฐานถึงขั้นสูง คุม ChatGPT, Claude และ Gemini ให้ทำงานตรงใจ',
     'violet',
     ARRAY['ChatGPT','Claude','Gemini'],
     5, false, true, 1

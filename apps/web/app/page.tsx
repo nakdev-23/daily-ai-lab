@@ -37,8 +37,29 @@ export default async function HomePage() {
   const yearlyPerMonth = Math.round(priceYear / 12)
   const savePct = priceMonth > 0 ? Math.round((1 - priceYear / (priceMonth * 12)) * 100) : 0
 
+  // Structured data: tells Google this is an educational org + searchable site.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        name: "Daily AI Lab",
+        url: process.env.NEXT_PUBLIC_APP_URL || "https://ailab.learnnakdev.online",
+        logo: `${process.env.NEXT_PUBLIC_APP_URL || "https://ailab.learnnakdev.online"}/icons/icon-512.png`,
+        description: "แพลตฟอร์มเรียน AI ภาษาไทยแบบเกม วันละ 15 นาที — ChatGPT, Claude, Gemini และอีกมากมาย",
+      },
+      {
+        "@type": "WebSite",
+        name: "Daily AI Lab",
+        url: process.env.NEXT_PUBLIC_APP_URL || "https://ailab.learnnakdev.online",
+        inLanguage: ["th", "en"],
+      },
+    ],
+  }
+
   return (
     <div className="dlab-home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="nav-sentinel" aria-hidden />
       <div className="atmos" />
       <div className="orb o1" />

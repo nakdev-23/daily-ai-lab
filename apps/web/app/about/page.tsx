@@ -6,6 +6,12 @@ import LangToggle from "@/components/lang-toggle"
 import { getLang, makeT } from "@/lib/i18n"
 import { Heart, Gamepad2, Puzzle, Sprout } from "lucide-react"
 
+export const metadata = {
+  title: "เกี่ยวกับเรา",
+  description: "Daily AI Lab เกิดจากความเชื่อว่าทักษะ AI ไม่ควรน่ากลัว — ใคร ๆ ก็เรียนได้ ทีละบทเล็ก ๆ วันละ 15 นาที พร้อมริริคอยเชียร์",
+  alternates: { canonical: "/about" },
+}
+
 const M = "/assets/daily-ai-lab/mascot-ds"
 
 export default async function AboutPage() {

@@ -26,9 +26,32 @@ const jbMono = JetBrains_Mono({
   display: "swap",
 })
 
+const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://ailab.learnnakdev.online"
+
 export const metadata: Metadata = {
-  title: "Daily AI Lab",
-  description: "เรียน AI วันละ 15 นาที ค่อย ๆ เก่ง ChatGPT, Claude, Gemini และเครื่องมืออีกเพียบ",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Daily AI Lab — เรียน AI วันละ 15 นาที สนุกเหมือนเล่นเกม",
+    template: "%s · Daily AI Lab",
+  },
+  description: "เรียน ChatGPT, Claude, Gemini และเครื่องมือ AI อีกเพียบ ผ่านบทเรียนสั้น ๆ ภาษาไทย พร้อม XP สตรีค และมาสคอตริริคอยเชียร์ เริ่มฟรีวันนี้",
+  keywords: ["เรียน AI", "คอร์ส AI ภาษาไทย", "ChatGPT", "Claude", "Gemini", "Prompt Engineering", "AI สำหรับมือใหม่"],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "th_TH",
+    url: SITE_URL,
+    siteName: "Daily AI Lab",
+    title: "Daily AI Lab — เรียน AI วันละ 15 นาที สนุกเหมือนเล่นเกม",
+    description: "บทเรียน AI สั้น ๆ ภาษาไทย เล่นสนุกแบบเกม เก่ง ChatGPT, Claude, Gemini ได้จริง เริ่มฟรี",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Daily AI Lab — เรียน AI วันละ 15 นาที" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daily AI Lab — เรียน AI วันละ 15 นาที สนุกเหมือนเล่นเกม",
+    description: "บทเรียน AI สั้น ๆ ภาษาไทย เล่นสนุกแบบเกม เริ่มฟรี",
+    images: ["/og.png"],
+  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

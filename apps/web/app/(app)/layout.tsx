@@ -21,6 +21,9 @@ import "./app-badges.css"
 import "./app-profile.css"
 import "./app-upgrade.css"
 
+// Signed-in surface: keep it out of search results.
+export const metadata = { robots: { index: false, follow: false } }
+
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const lang = await getLang()
   const initialCollapsed = (await cookies()).get("dlab-sidebar")?.value === "1"

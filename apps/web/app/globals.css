@@ -141,8 +141,16 @@ body {
   font-size: 13px;
   line-height: 1.7;
 }
+/* Wide markdown tables scroll horizontally on narrow screens instead of
+   forcing the whole page to overflow. display:block lets the table size to
+   its content, max-width caps it to the column, overflow-x adds the scroll.
+   (responsive) */
 .prose-doc table {
-  width: 100%;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
   margin: 1.2em 0;
   font-size: 14px;

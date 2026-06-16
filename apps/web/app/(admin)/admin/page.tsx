@@ -144,7 +144,7 @@ export default async function AdminOverview() {
         </div>
       </div>
 
-      <div className="admin-grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <div className="admin-grid even">
         <div className="panel glass">
           <div className="p-head"><h3 className="display">ผู้สมัครล่าสุด</h3><Link className="more" href="/admin/users">ดูทั้งหมด</Link></div>
           <div className="atable">

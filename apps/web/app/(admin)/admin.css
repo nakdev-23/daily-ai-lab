@@ -29,6 +29,7 @@
 
 /* chart + breakdown */
 .dlab-app .admin-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; margin-bottom: 22px; align-items: start; }
+.dlab-app .admin-grid.even { grid-template-columns: 1fr 1fr; }
 .dlab-app .panel { padding: 22px; }
 .dlab-app .panel .p-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .dlab-app .panel .p-head h3 { font-size: 18px; margin: 0; }
@@ -183,7 +184,7 @@
 
 @media (max-width: 920px) {
   .dlab-app .kpis { grid-template-columns: repeat(2, 1fr); }
-  .dlab-app .admin-grid { grid-template-columns: 1fr; }
+  .dlab-app .admin-grid, .dlab-app .admin-grid.even { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
   .dlab-app .app { grid-template-columns: 1fr; }
@@ -194,6 +195,9 @@
 }
 @media (max-width: 560px) {
   .dlab-app .kpis { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 360px) {
+  .dlab-app .kpis { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .dlab-app .kpi, .dlab-app .cbar, .dlab-app .dtable tbody tr { transition: none; }

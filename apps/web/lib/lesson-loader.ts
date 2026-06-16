@@ -26,14 +26,25 @@ function normalizeMascot(name: unknown): string | undefined {
 export async function getLessonSteps(
   courseSlug: string,
   lessonNum: number,
+  lang: "th" | "en" = "th",
 ): Promise<LessonStep[] | null> {
   if (!SLUG_RE.test(courseSlug)) return null
   if (!Number.isInteger(lessonNum) || lessonNum < 1 || lessonNum > 99) return null
 
   const n = String(lessonNum).padStart(2, "0")
-  const filePath = path.join(process.cwd(), "content", "lessons", courseSlug, `${n}.json`)
+  const base = path.join(process.cwd(), "content", "lessons", courseSlug)
+  // English lessons live in a parallel `en/` folder; fall back to the Thai
+  // original whenever a translation hasn't been written yet, so the lesson
+  // never renders empty while content is being translated incrementally.
+  const candidates = lang === "en"
+    ? [path.join(base, "en", `${n}.json`), path.join(base, `${n}.json`)]
+    : [path.join(base, `${n}.json`)]
   try {
-    const raw = await readFile(filePath, "utf-8")
+    let raw: string | null = null
+    for (const f of candidates) {
+      try { raw = await readFile(f, "utf-8"); break } catch { /* try next */ }
+    }
+    if (raw === null) return null
     const parsed: unknown = JSON.parse(raw)
     if (!Array.isArray(parsed) || parsed.length === 0) return null
     const steps = parsed as LessonStep[]

@@ -19,7 +19,8 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 const iconStyle = { display: "inline-block", verticalAlign: "-2px" } as const
 
 export default async function HomePage() {
-  const [lang, settings, courses] = await Promise.all([getLang(), getSystemSettings(), getPublishedCourses()])
+  const lang = await getLang()
+  const [settings, courses] = await Promise.all([getSystemSettings(), getPublishedCourses(lang)])
   const t = makeT(lang)
 
   // Real lesson counts straight from the courses table (published only), so

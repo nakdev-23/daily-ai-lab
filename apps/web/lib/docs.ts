@@ -33,10 +33,23 @@ export const LEVELS: Record<DocLevel, { label: string; tag: string; color: strin
 
 const iconPath = (icon: string) => `/assets/daily-ai-lab/icons/${icon}.svg`
 
-async function readDoc(file: string) {
-  const raw = await fs.readFile(path.join(DOCS_DIR, file), "utf8")
+export type Lang = "th" | "en"
+
+async function readDoc(file: string, lang: Lang = "th") {
+  // English docs are an overlay: `foo/01.en.md` next to `foo/01.md`. Fall back
+  // to the Thai original when a translation is missing so docs never go blank
+  // while content is translated incrementally. The slug stays the base name
+  // (no `.en`) so URLs are identical in both languages.
+  const baseSlug = file.replace(/\.md$/, "")
+  let raw: string
+  if (lang === "en") {
+    try { raw = await fs.readFile(path.join(DOCS_DIR, `${baseSlug}.en.md`), "utf8") }
+    catch { raw = await fs.readFile(path.join(DOCS_DIR, file), "utf8") }
+  } else {
+    raw = await fs.readFile(path.join(DOCS_DIR, file), "utf8")
+  }
   const { data, content } = matter(raw)
-  const slug = file.replace(/\.md$/, "")
+  const slug = baseSlug
   const icon = (data.icon as string) ?? "icon-docs"
   const tool = (data.tool as string) ?? "AI"
   const meta: DocMeta = {
@@ -67,24 +80,27 @@ async function collectMdFiles(base = ""): Promise<string[]> {
     const stat = await fs.stat(full).catch(() => null)
     if (!stat) continue
     if (stat.isDirectory()) result = result.concat(await collectMdFiles(rel))
-    else if (entry.endsWith(".md")) result.push(rel)
+    // `.en.md` (and any future `.xx.md`) are language overlays, not their own
+    // docs — the listing is driven by the base Thai files only.
+    else if (entry.endsWith(".md") && !/\.[a-z]{2}\.md$/.test(entry)) result.push(rel)
   }
   return result
 }
 
 const ttl = process.env.NODE_ENV === "production" ? 3600 : 30
 
-async function _getAllDocs(): Promise<DocMeta[]> {
+async function _getAllDocs(lang: Lang = "th"): Promise<DocMeta[]> {
   let files: string[] = []
   try { files = await collectMdFiles() } catch { return [] }
-  const docs = await Promise.all(files.map(async (f) => (await readDoc(f)).meta))
+  const docs = await Promise.all(files.map(async (f) => (await readDoc(f, lang)).meta))
   return docs.sort((a, b) => a.order - b.order)
 }
 
+// `lang` is an argument, so unstable_cache stores a separate entry per language.
 export const getAllDocs = unstable_cache(_getAllDocs, ["dlab-docs-all"], { revalidate: ttl })
 
-export async function getDocsByLevel(): Promise<Record<DocLevel, DocMeta[]>> {
-  const all = await getAllDocs()
+export async function getDocsByLevel(lang: Lang = "th"): Promise<Record<DocLevel, DocMeta[]>> {
+  const all = await getAllDocs(lang)
   const groups: Record<DocLevel, DocMeta[]> = { beginner: [], intermediate: [], pro: [] }
   for (const d of all) groups[d.level]?.push(d)
   return groups
@@ -117,8 +133,8 @@ export async function saveToolConfig(config: Record<string, boolean>): Promise<v
 }
 
 /** One entry per tool, aggregated from all docs — powers the /docs tool grid. */
-export async function getToolGroups(): Promise<ToolGroup[]> {
-  const [all, config] = await Promise.all([getAllDocs(), getToolConfig()])
+export async function getToolGroups(lang: Lang = "th"): Promise<ToolGroup[]> {
+  const [all, config] = await Promise.all([getAllDocs(lang), getToolConfig()])
   const map = new Map<string, ToolGroup>()
   for (const d of all) {
     if (config[d.tool] === false) continue
@@ -140,12 +156,12 @@ export async function getToolGroups(): Promise<ToolGroup[]> {
 }
 
 /** All docs for one tool (by toolSlug), each with rendered html, grouped-ready (sorted by level then order). */
-async function _getDocsForTool(toolSlug: string): Promise<{ tool: string; sections: { meta: DocMeta; html: string }[] }> {
-  const all = await getAllDocs()
+async function _getDocsForTool(toolSlug: string, lang: Lang = "th"): Promise<{ tool: string; sections: { meta: DocMeta; html: string }[] }> {
+  const all = await getAllDocs(lang)
   const matching = all.filter((d) => d.toolSlug === toolSlug)
     .sort((a, b) => (LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]) || (a.order - b.order))
   const sections = await Promise.all(matching.map(async (m) => {
-    const { content } = await readDoc(`${m.slug}.md`)
+    const { content } = await readDoc(`${m.slug}.md`, lang)
     return { meta: m, html: marked.parse(content) as string }
   }))
   return { tool: matching[0]?.tool ?? toolSlug, sections }
@@ -153,9 +169,9 @@ async function _getDocsForTool(toolSlug: string): Promise<{ tool: string; sectio
 
 export const getDocsForTool = unstable_cache(_getDocsForTool, ["dlab-docs-tool"], { revalidate: ttl })
 
-export async function getDoc(slug: string): Promise<{ meta: DocMeta; html: string } | null> {
+export async function getDoc(slug: string, lang: Lang = "th"): Promise<{ meta: DocMeta; html: string } | null> {
   try {
-    const { meta, content } = await readDoc(`${slug}.md`)
+    const { meta, content } = await readDoc(`${slug}.md`, lang)
     const html = marked.parse(content) as string
     return { meta, html }
   } catch {

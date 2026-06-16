@@ -30,12 +30,12 @@ type StepState = "done" | "cur" | "lock"
 
 export default async function PathDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const [path, profile, t, lang] = await Promise.all([
-    getCareerPath(id),
+  const lang = await getLang()
+  const [path, profile] = await Promise.all([
+    getCareerPath(id, lang),
     requireUser(),
-    getLang().then(makeT),
-    getLang(),
   ])
+  const t = makeT(lang)
 
   if (!path) notFound()
 

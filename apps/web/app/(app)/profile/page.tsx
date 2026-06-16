@@ -13,7 +13,8 @@ const B = "/assets/daily-ai-lab/badges"
 type Badge = { img: string; name: string; sub: string; locked: boolean }
 
 export default async function ProfilePage() {
-  const t = makeT(await getLang())
+  const lang = await getLang()
+  const t = makeT(lang)
   const profile = await getProfile()
   const supabase = await createClient()
 
@@ -27,7 +28,7 @@ export default async function ProfilePage() {
       .select("course_id, lessons_done, updated_at")
       .eq("user_id", profile?.id ?? "")
       .order("updated_at", { ascending: false }),
-    getPublishedCourses(),
+    getPublishedCourses(lang),
   ])
 
   const avatarSrc = profile ? avatarUrlFor(profile) : null

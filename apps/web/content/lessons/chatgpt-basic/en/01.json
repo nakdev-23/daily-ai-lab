@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 1",
+    "title": "What is ChatGPT?",
+    "body": [
+      {
+        "text": "ChatGPT is a "
+      },
+      {
+        "text": "conversational AI",
+        "bold": true
+      },
+      {
+        "text": " built by OpenAI. It can answer questions, write content, and help solve problems using natural language. Unlike a search engine that just hands you links, ChatGPT actually \"talks\" with you."
+      }
+    ],
+    "example": "\"How is ChatGPT different from Google? Explain it in simple terms.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 1 · Part 2",
+    "title": "How does ChatGPT work?",
+    "body": [
+      {
+        "text": "ChatGPT was trained on a massive amount of text using a technique called a "
+      },
+      {
+        "text": "Large Language Model (LLM)",
+        "bold": true
+      },
+      {
+        "text": ". That lets it understand the context of a conversation and reply naturally, almost like talking to a real person."
+      }
+    ],
+    "example": "\"Explain what a Large Language Model is in a way a 10-year-old would understand.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is ChatGPT different from a search engine like Google?",
+    "options": [
+      {
+        "text": "ChatGPT is much faster than Google"
+      },
+      {
+        "text": "ChatGPT responds in natural language and generates its own answers",
+        "correct": true
+      },
+      {
+        "text": "ChatGPT searches more of the web than Google"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which company built ChatGPT?",
+    "options": [
+      {
+        "text": "Google"
+      },
+      {
+        "text": "Microsoft"
+      },
+      {
+        "text": "OpenAI",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the core technology behind ChatGPT?",
+    "options": [
+      {
+        "text": "Large Language Model (LLM)",
+        "correct": true
+      },
+      {
+        "text": "Computer Vision"
+      },
+      {
+        "text": "Robotic Process Automation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get the best result when asking ChatGPT to draft a leave-request email, how should you start?",
+    "options": [
+      {
+        "text": "Just type the word \"email\""
+      },
+      {
+        "text": "Give full context — how many days, the reason, who it's for, and the tone you want",
+        "correct": true
+      },
+      {
+        "text": "Ask ChatGPT what the weather is like today"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which of these is NOT something ChatGPT can do?",
+    "options": [
+      {
+        "text": "Answer questions and help write content"
+      },
+      {
+        "text": "Automatically access files on your own computer",
+        "correct": true
+      },
+      {
+        "text": "Help brainstorm ideas"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

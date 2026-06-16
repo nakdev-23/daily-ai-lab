@@ -35,16 +35,17 @@ function buildLevels(lessons: CLesson[], done: number, fallbackXp: number): Leve
 
 export default async function TopicRoadmapPage({ params }: { params: Promise<{ topic: string }> }) {
   const { topic } = await params
-  const t = makeT(await getLang())
+  const lang = await getLang()
+  const t = makeT(lang)
 
-  const course = await getPublishedCourse(topic)
+  const course = await getPublishedCourse(topic, lang)
   if (!course) redirect("/daily-learn")
 
   // Pro-only course → Free users go upgrade (admins/Pro pass).
   if (course.isPro && !isPro(await getProfile())) redirect("/upgrade")
 
   // course_units are keyed by the course uuid, not the URL slug
-  const units = await getPublishedCourseContent(course.id)
+  const units = await getPublishedCourseContent(course.id, lang)
   const flatLessons = units.flatMap((u) => u.lessons)
 
   // Must match the key the lesson player saves under (slug, with id fallback)

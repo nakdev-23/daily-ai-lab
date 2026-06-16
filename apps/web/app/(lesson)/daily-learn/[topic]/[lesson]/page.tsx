@@ -25,21 +25,24 @@ export default async function LessonPage({
   const heartPromise = getHeartState()
   const profilePromise = getProfile()
   const settingsPromise = getSystemSettings()
-  const course = await getPublishedCourse(topic)
+  // getLang is request-cached, so reading it up front is free and lets the
+  // lesson loader + content reader pick the matching language (en/ folder or
+  // *_en columns, Thai fallback).
+  const lang = await getLang()
+  const course = await getPublishedCourse(topic, lang)
   if (!course) redirect("/daily-learn")
 
   // Progress rows and lesson URLs are keyed by slug (course_progress.course_id);
   // fall back to id for legacy rows that predate the slug column.
   const progressKey = course.slug || course.id
 
-  const [units, steps, heart, profile, settings, lessonsDone, lang] = await Promise.all([
-    getPublishedCourseContent(course.id),
-    getLessonSteps(course.slug, lessonNum),
+  const [units, steps, heart, profile, settings, lessonsDone] = await Promise.all([
+    getPublishedCourseContent(course.id, lang),
+    getLessonSteps(course.slug, lessonNum, lang),
     heartPromise,
     profilePromise,
     settingsPromise,
     getLessonsDone(progressKey),
-    getLang(),
   ])
   // Pro-only course → Free users go upgrade (admins/Pro pass).
   if (course.isPro && !isPro(profile)) redirect("/upgrade")

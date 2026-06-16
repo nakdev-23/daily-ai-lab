@@ -25,7 +25,7 @@ export default async function MissionsPage() {
     const [{ data: g }, { data: progress }, courses] = await Promise.all([
       supabase.from("game_state").select("lessons_today, lessons_today_date, streak_current").eq("user_id", user.id).maybeSingle(),
       supabase.from("course_progress").select("course_id, lessons_done, updated_at").eq("user_id", user.id).order("updated_at", { ascending: false }),
-      getPublishedCourses(),
+      getPublishedCourses(lang),
     ])
     lessonsToday = g?.lessons_today_date === today ? (g?.lessons_today ?? 0) : 0
     streak = g?.streak_current ?? 0

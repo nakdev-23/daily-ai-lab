@@ -32,7 +32,8 @@ export default async function PathLessonPage({
   const profilePromise = getProfile()
   const settingsPromise = getSystemSettings()
 
-  const path = await getCareerPath(slug)
+  const lang = await getLang()
+  const path = await getCareerPath(slug, lang)
   if (!path || !path.isPublished) redirect("/paths")
 
   const flatSteps = path.modules.flatMap((m) => m.steps)
@@ -40,13 +41,12 @@ export default async function PathLessonPage({
   const pathStep = flatSteps[stepNum - 1]
 
   const progressKey = `path:${slug}`
-  const [heart, profile, settings, stepsDone, lang, course] = await Promise.all([
+  const [heart, profile, settings, stepsDone, course] = await Promise.all([
     heartPromise,
     profilePromise,
     settingsPromise,
     getLessonsDone(progressKey),
-    getLang(),
-    getPublishedCourse(pathStep.courseSlug),
+    getPublishedCourse(pathStep.courseSlug, lang),
   ])
 
   // Pro-only paths stay behind the paywall, same as the path page itself.
@@ -54,7 +54,7 @@ export default async function PathLessonPage({
   // Underlying course must still be published for its content to be served.
   if (!course) redirect(`/paths/${slug}`)
 
-  const steps = await getLessonSteps(pathStep.courseSlug, pathStep.lessonNum)
+  const steps = await getLessonSteps(pathStep.courseSlug, pathStep.lessonNum, lang)
   const isLastStep = stepNum >= flatSteps.length
 
   // Free-package daily quota: only NEW steps count (replays are always free).

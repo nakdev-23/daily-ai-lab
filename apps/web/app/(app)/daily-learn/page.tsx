@@ -23,7 +23,7 @@ export default async function DailyLearnPage() {
   const today = bangkokTodayISO()
 
   // getCourses/getProfile/getSystemSettings are request-memoized — shared with the layout's fetches.
-  const [courses, profile, supabase, settings, careerPaths] = await Promise.all([getPublishedCourses(), getProfile(), createClient(), getSystemSettings(), getCareerPaths()])
+  const [courses, profile, supabase, settings, careerPaths] = await Promise.all([getPublishedCourses(lang), getProfile(), createClient(), getSystemSettings(), getCareerPaths(lang)])
   // Daily grid: published courses that opted into the daily view. Media tracks
   // (Suno/Runway/Midjourney) are show_in_daily=false → reached via career paths.
   const published = courses.filter((c) => c.status === "published" && c.showInDaily)

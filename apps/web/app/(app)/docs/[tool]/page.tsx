@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ tool: str
 
 export default async function ToolDocsPage({ params }: { params: Promise<{ tool: string }> }) {
   const { tool } = await params
-  const [{ tool: name, sections }, lang, profile] = await Promise.all([getDocsForTool(tool), getLang(), getProfile()])
+  const lang = await getLang()
+  const [{ tool: name, sections }, profile] = await Promise.all([getDocsForTool(tool, lang), getProfile()])
   if (sections.length === 0) {
     // still render the empty-state reader if it's a known tool slug, else 404
     const groups = await getToolGroups()

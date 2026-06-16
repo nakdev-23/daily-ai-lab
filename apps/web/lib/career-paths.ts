@@ -1,4 +1,5 @@
 import { createClient } from "./supabase/server"
+import { locField, type Lang } from "./i18n-core"
 
 export type StepKind = "lesson" | "quiz" | "checkpoint" | "project"
 
@@ -38,13 +39,13 @@ export type CareerPathRow = Omit<CareerPath, "modules">
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
-function rowToPath(p: Record<string, unknown>): CareerPathRow {
+function rowToPath(p: Record<string, unknown>, lang: Lang = "th"): CareerPathRow {
   return {
     id:          p.id as string,
     slug:        p.slug as string,
-    title:       p.title as string,
+    title:       locField(p, "title", lang),
     tag:         p.tag as string,
-    description: p.description as string,
+    description: locField(p, "description", lang),
     tone:        p.tone as string,
     tools:       (p.tools as string[]) ?? [],
     weeks:       p.weeks as number,
@@ -56,7 +57,8 @@ function rowToPath(p: Record<string, unknown>): CareerPathRow {
 
 async function loadModulesAndSteps(
   supabase: Awaited<ReturnType<typeof createClient>>,
-  pathIds: string[]
+  pathIds: string[],
+  lang: Lang = "th"
 ): Promise<{ modules: PathModule[]; modulesByPathId: Map<string, PathModule[]> }> {
   if (pathIds.length === 0) return { modules: [], modulesByPathId: new Map() }
 
@@ -83,7 +85,7 @@ async function loadModulesAndSteps(
     if (!stepsByModule.has(mid)) stepsByModule.set(mid, [])
     stepsByModule.get(mid)!.push({
       id:         s.id as string,
-      title:      s.title as string,
+      title:      locField(s as Record<string, unknown>, "title", lang),
       kind:       s.kind as StepKind,
       courseSlug: s.course_slug as string,
       lessonNum:  s.lesson_num as number,
@@ -94,7 +96,7 @@ async function loadModulesAndSteps(
 
   const modules: PathModule[] = moduleList.map((m) => ({
     id:         m.id as string,
-    title:      m.title as string,
+    title:      locField(m as Record<string, unknown>, "title", lang),
     orderIndex: m.order_index as number,
     steps:      stepsByModule.get(m.id as string) ?? [],
   }))
@@ -111,20 +113,20 @@ async function loadModulesAndSteps(
 
 // ── public query: published paths ────────────────────────────────────────────
 
-export async function getCareerPaths(): Promise<CareerPath[]> {
+export async function getCareerPaths(lang: Lang = "th"): Promise<CareerPath[]> {
   const supabase = await createClient()
   const { data } = await supabase
     .from("career_paths")
     .select("*")
     .order("order_index")
 
-  const rows = (data ?? []).map((p) => rowToPath(p as Record<string, unknown>))
-  const { modulesByPathId } = await loadModulesAndSteps(supabase, rows.map((r) => r.id))
+  const rows = (data ?? []).map((p) => rowToPath(p as Record<string, unknown>, lang))
+  const { modulesByPathId } = await loadModulesAndSteps(supabase, rows.map((r) => r.id), lang)
 
   return rows.map((r) => ({ ...r, modules: modulesByPathId.get(r.id) ?? [] }))
 }
 
-export async function getCareerPath(slug: string): Promise<CareerPath | null> {
+export async function getCareerPath(slug: string, lang: Lang = "th"): Promise<CareerPath | null> {
   const supabase = await createClient()
   const { data: p } = await supabase
     .from("career_paths")
@@ -133,8 +135,8 @@ export async function getCareerPath(slug: string): Promise<CareerPath | null> {
     .maybeSingle()
 
   if (!p) return null
-  const row = rowToPath(p as Record<string, unknown>)
-  const { modulesByPathId } = await loadModulesAndSteps(supabase, [row.id])
+  const row = rowToPath(p as Record<string, unknown>, lang)
+  const { modulesByPathId } = await loadModulesAndSteps(supabase, [row.id], lang)
   return { ...row, modules: modulesByPathId.get(row.id) ?? [] }
 }
 

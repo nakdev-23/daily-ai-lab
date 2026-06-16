@@ -4,6 +4,7 @@ import { getCareerPaths } from "@/lib/career-paths"
 import PathsGrid from "./_paths-grid"
 
 export default async function PathsPage() {
-  const [lang, paths, profile] = await Promise.all([getLang(), getCareerPaths(), getProfile()])
+  const lang = await getLang()
+  const [paths, profile] = await Promise.all([getCareerPaths(lang), getProfile()])
   return <PathsGrid lang={lang} paths={paths} isPro={isPro(profile)} />
 }

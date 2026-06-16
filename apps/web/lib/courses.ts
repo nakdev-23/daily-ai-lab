@@ -3,6 +3,7 @@ import { unstable_cache, revalidateTag } from "next/cache"
 import { getProfile } from "./auth"
 import { createClient } from "./supabase/server"
 import { publicClient } from "./supabase/public"
+import { locField, type Lang } from "./i18n-core"
 
 export type CourseStatus = "published" | "draft" | "queued"
 export type Course = {
@@ -23,12 +24,13 @@ export type Course = {
 }
 
 // Maps a raw DB row (snake_case, flags may be absent pre-migration) to Course.
-function toCourse(r: Record<string, unknown>): Course {
+// `lang` selects the *_en title/description with Thai fallback.
+function toCourse(r: Record<string, unknown>, lang: Lang = "th"): Course {
   return {
     id: r.id as string,
     slug: r.slug as string,
-    title: r.title as string,
-    description: (r.description as string) ?? "",
+    title: locField(r, "title", lang),
+    description: locField(r, "description", lang),
     tool: r.tool as string,
     level: r.level as Course["level"],
     status: r.status as CourseStatus,
@@ -61,9 +63,9 @@ const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
  * grows. RLS on the anon client already filters to published rows.
  */
 export const getPublishedCourses = unstable_cache(
-  async (): Promise<Course[]> => {
+  async (lang: Lang = "th"): Promise<Course[]> => {
     const { data } = await publicClient.from("courses").select("*").order("order_index", { ascending: true })
-    return ((data as Record<string, unknown>[]) ?? []).map(toCourse)
+    return ((data as Record<string, unknown>[]) ?? []).map((r) => toCourse(r, lang))
   },
   ["published-courses"],
   { revalidate: 300, tags: ["courses"] },
@@ -71,10 +73,10 @@ export const getPublishedCourses = unstable_cache(
 
 /** Cached single published course by slug or uuid (same caching as above). */
 export const getPublishedCourse = unstable_cache(
-  async (id: string): Promise<Course | null> => {
+  async (id: string, lang: Lang = "th"): Promise<Course | null> => {
     const column = UUID_RE.test(id) ? "id" : "slug"
     const { data } = await publicClient.from("courses").select("*").eq(column, id).maybeSingle()
-    return data ? toCourse(data as Record<string, unknown>) : null
+    return data ? toCourse(data as Record<string, unknown>, lang) : null
   },
   ["published-course"],
   { revalidate: 300, tags: ["courses"] },
@@ -84,7 +86,7 @@ export const getPublishedCourse = unstable_cache(
 export const getCourses = cache(async (): Promise<Course[]> => {
   const supabase = await createClient()
   const { data } = await supabase.from("courses").select("*").order("order_index", { ascending: true })
-  return ((data as Record<string, unknown>[]) ?? []).map(toCourse)
+  return ((data as Record<string, unknown>[]) ?? []).map((r) => toCourse(r))
 })
 
 export const getCourse = cache(async (id: string): Promise<Course | null> => {

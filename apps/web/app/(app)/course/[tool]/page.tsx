@@ -14,9 +14,10 @@ function toolSlug(name: string) {
 
 export default async function CoursePage({ params }: { params: Promise<{ tool: string }> }) {
   const { tool } = await params
-  const t = makeT(await getLang())
+  const lang = await getLang()
+  const t = makeT(lang)
 
-  const [courses, settings] = await Promise.all([getPublishedCourses(), getSystemSettings()])
+  const [courses, settings] = await Promise.all([getPublishedCourses(lang), getSystemSettings()])
   const course = courses.find((c) => toolSlug(c.tool) === tool)
     ?? courses.find((c) => c.tool.toLowerCase() === tool)
     ?? courses.find((c) => c.status === "published")
@@ -34,7 +35,7 @@ export default async function CoursePage({ params }: { params: Promise<{ tool: s
   // Progress is keyed by slug (course_progress.course_id)
   const progressKey = course.slug || course.id
   const [units, doneCount] = await Promise.all([
-    getPublishedCourseContent(course.id),
+    getPublishedCourseContent(course.id, lang),
     getLessonsDone(progressKey),
   ])
 

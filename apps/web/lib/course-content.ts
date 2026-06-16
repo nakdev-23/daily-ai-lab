@@ -2,6 +2,7 @@ import { unstable_cache, revalidateTag } from "next/cache"
 import { getProfile } from "./auth"
 import { createClient } from "./supabase/server"
 import { publicClient } from "./supabase/public"
+import { locField, type Lang } from "./i18n-core"
 
 export type LessonKind = "lesson" | "quiz" | "check" | "project"
 export type CLesson = { id: string; unit_id: string; title: string; kind: LessonKind; xp: number; order_index: number }
@@ -36,18 +37,35 @@ export async function getCourseContent(courseId: string): Promise<CUnit[]> {
  * page view (free-tier egress saver).
  */
 export const getPublishedCourseContent = unstable_cache(
-  async (courseId: string): Promise<CUnit[]> => {
+  async (courseId: string, lang: Lang = "th"): Promise<CUnit[]> => {
+    // select("*") so the optional *_en columns are read when present without
+    // breaking before migration 022 is applied.
     const { data: unitRows } = await publicClient
-      .from("course_units").select("id, course_id, title, order_index").eq("course_id", courseId).order("order_index")
-    const units = (unitRows ?? []) as Omit<CUnit, "lessons">[]
+      .from("course_units").select("*").eq("course_id", courseId).order("order_index")
+    const units = (unitRows ?? []) as Record<string, unknown>[]
     if (units.length === 0) return []
     const { data: lessonRows } = await publicClient
       .from("course_lessons")
-      .select("id, unit_id, title, kind, xp, order_index")
-      .in("unit_id", units.map((u) => u.id))
+      .select("*")
+      .in("unit_id", units.map((u) => u.id as string))
       .order("order_index")
-    const all = (lessonRows ?? []) as CLesson[]
-    return units.map((u) => ({ ...u, lessons: all.filter((l) => l.unit_id === u.id) }))
+    const all = (lessonRows ?? []) as Record<string, unknown>[]
+    return units.map((u) => ({
+      id: u.id as string,
+      course_id: u.course_id as string,
+      title: locField(u, "title", lang),
+      order_index: u.order_index as number,
+      lessons: all
+        .filter((l) => l.unit_id === u.id)
+        .map((l) => ({
+          id: l.id as string,
+          unit_id: l.unit_id as string,
+          title: locField(l, "title", lang),
+          kind: l.kind as LessonKind,
+          xp: l.xp as number,
+          order_index: l.order_index as number,
+        })),
+    }))
   },
   ["published-course-content"],
   { revalidate: 300, tags: ["course-content"] },

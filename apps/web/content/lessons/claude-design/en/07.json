@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 7 · Part 1",
+    "title": "Color palettes with AI",
+    "body": [
+      {
+        "text": "Claude helps build a palette from the "
+      },
+      {
+        "text": "brand's personality: tell it the mood, the target audience, and the industry",
+        "bold": true
+      },
+      {
+        "text": " — you get primary, secondary, and accent colors with hex codes, the color-psychology reasoning, and pairs to avoid."
+      }
+    ],
+    "example": "\"Build a palette for a finance-education brand aimed at first jobbers: trustworthy but not stuffy, approachable, with hex codes and reasoning\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 7 · Part 2",
+    "title": "Check the colors' accessibility",
+    "body": [
+      {
+        "text": "Pretty colors alone aren't enough — have Claude "
+      },
+      {
+        "text": "check the contrast ratio against WCAG (normal text needs 4.5:1 or higher)",
+        "bold": true
+      },
+      {
+        "text": " and simulate how a color-blind person sees your palette. Colors that can't be told apart need another cue, like an icon or pattern."
+      }
+    ],
+    "example": "\"Check every color pair in this palette for WCAG AA; for any that fail, suggest a close shade that passes\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What info helps the AI build an on-brand palette?",
+    "options": [
+      {
+        "text": "The brand's mood, target audience, and industry",
+        "correct": true
+      },
+      {
+        "text": "Our personal favorite colors"
+      },
+      {
+        "text": "Picking at random"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the minimum contrast ratio for normal text under WCAG AA?",
+    "options": [
+      {
+        "text": "4.5:1",
+        "correct": true
+      },
+      {
+        "text": "1:1"
+      },
+      {
+        "text": "There's no standard"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If two colors in a chart can't be told apart by a color-blind person, what should you do?",
+    "options": [
+      {
+        "text": "Add another cue, like an icon or pattern",
+        "correct": true
+      },
+      {
+        "text": "Leave it; they're a minority"
+      },
+      {
+        "text": "Delete the chart"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When building a color palette with AI, what must you always check?",
+    "options": [
+      {
+        "text": "Just that it looks pretty"
+      },
+      {
+        "text": "The largest possible number of colors"
+      },
+      {
+        "text": "The accessibility of the color pairs, e.g. enough contrast",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why is color accessibility important?",
+    "options": [
+      {
+        "text": "It's not important"
+      },
+      {
+        "text": "Everyone, including people with impaired vision, must be able to read it",
+        "correct": true
+      },
+      {
+        "text": "For slowness"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

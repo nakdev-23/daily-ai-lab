@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 2 · Part 1",
+    "title": "Design brief & creative brief",
+    "body": [
+      {
+        "text": "A good brief is half the design work done — have the AI help "
+      },
+      {
+        "text": "turn the client's vague wants into a clear brief",
+        "bold": true
+      },
+      {
+        "text": ": goals, target audience, scope, deliverables, and success criteria."
+      }
+    ],
+    "example": "\"The client just said 'I want a logo that looks expensive' — help me come up with 10 questions to ask so I can write a brief that actually works\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 2 · Part 2",
+    "title": "A brief structure that works",
+    "body": [
+      {
+        "text": "The main components: "
+      },
+      {
+        "text": "problem/opportunity · target users · key message · deliverables · timeline · what NOT to do",
+        "bold": true
+      },
+      {
+        "text": " — the last one matters a lot, e.g. don't use the competitor's colors, no cartoon fonts for a finance brand."
+      }
+    ],
+    "example": "\"From these client meeting notes, draft a design brief following the 6-point structure; where there isn't enough info, mark what I still need to ask\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does the AI help with when a client's wants are vague?",
+    "options": [
+      {
+        "text": "Asks questions that turn the vagueness into a clear brief",
+        "correct": true
+      },
+      {
+        "text": "Guesses what the client means and just does it"
+      },
+      {
+        "text": "Turns down the job"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which is a component of a good brief?",
+    "options": [
+      {
+        "text": "Target users, key message, and what NOT to do",
+        "correct": true
+      },
+      {
+        "text": "Just the deadline"
+      },
+      {
+        "text": "The price alone"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why is 'what NOT to do' important in a brief?",
+    "options": [
+      {
+        "text": "It keeps the work within the brand's bounds from the start, saving rework",
+        "correct": true
+      },
+      {
+        "text": "It makes the brief longer"
+      },
+      {
+        "text": "It's not important"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get a workable creative brief, what should you specify?",
+    "options": [
+      {
+        "text": "Just the project name"
+      },
+      {
+        "text": "Nothing needs specifying"
+      },
+      {
+        "text": "Goals, target audience, scope, and tone",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does a good design brief help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "It gets the team on the same page before starting",
+        "correct": true
+      },
+      {
+        "text": "It just slows the work down"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

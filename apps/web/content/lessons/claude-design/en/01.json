@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 1 · Part 1",
+    "title": "AI in the design process",
+    "body": [
+      {
+        "text": "Claude doesn't replace the designer — it "
+      },
+      {
+        "text": "speeds up the most time-consuming steps",
+        "bold": true
+      },
+      {
+        "text": " — like writing briefs, brainstorming ideas, writing copy, and creating documentation, many times faster."
+      }
+    ],
+    "example": "\"Help me write a creative brief for rebranding a health app, target audience aged 25–40\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 1 · Part 2",
+    "title": "Design briefs with AI",
+    "body": [
+      {
+        "text": "A good brief must specify "
+      },
+      {
+        "text": "the problem, the target audience, the goals, and the constraints",
+        "bold": true
+      },
+      {
+        "text": " — tell Claude these, then have it help write a complete, clear brief."
+      }
+    ],
+    "example": "\"Write a design brief for a landing page selling an online course, target audience Thai freelancers aged 22–35\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Where does Claude help a designer best?",
+    "options": [
+      {
+        "text": "Creating mockups instead of Figma"
+      },
+      {
+        "text": "Speeding up briefs, copy, brainstorming, and documentation",
+        "correct": true
+      },
+      {
+        "text": "Picking fonts automatically"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What components should a design brief have?",
+    "options": [
+      {
+        "text": "The designer's name and the deadline only"
+      },
+      {
+        "text": "The problem, target audience, goals, and constraints",
+        "correct": true
+      },
+      {
+        "text": "The price and budget"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Can Claude replace a designer?",
+    "options": [
+      {
+        "text": "Yes, in every respect"
+      },
+      {
+        "text": "No — Claude speeds up the work, but judgment and creativity still need a designer",
+        "correct": true
+      },
+      {
+        "text": "Yes, but only for logo work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "At which stages can you use AI in the design process?",
+    "options": [
+      {
+        "text": "Only at delivery"
+      },
+      {
+        "text": "It can't be used at all"
+      },
+      {
+        "text": "From the brief and ideas, all the way to writing copy and documentation",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you view AI in design work?",
+    "options": [
+      {
+        "text": "A toy"
+      },
+      {
+        "text": "An assistant that helps think and speeds up work, not a replacement for design decisions",
+        "correct": true
+      },
+      {
+        "text": "Something that does all the designing for you"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

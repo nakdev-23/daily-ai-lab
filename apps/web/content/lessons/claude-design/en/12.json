@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 12 · Part 1",
+    "title": "Handoff to development",
+    "body": [
+      {
+        "text": "A good handoff reduces back-and-forth — have Claude help write "
+      },
+      {
+        "text": "a spec developers can actually use: behavior for every state, sizes/spacing, edge cases",
+        "bold": true
+      },
+      {
+        "text": " — like what the button looks like while loading, what an empty list shows, how overly long text is truncated."
+      }
+    ],
+    "example": "\"From this form design, write a dev spec: every state (default, focus, error, disabled, loading) and the validation rules\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 12 · Part 2",
+    "title": "Claude Design course wrap-up",
+    "body": [
+      {
+        "text": "The full design cycle: "
+      },
+      {
+        "text": "brief, mood board, UX copy, color, brand voice, design system, Figma, critique, and handoff",
+        "bold": true
+      },
+      {
+        "text": " — AI doesn't replace a designer's eye, but it clears away the paperwork and repetitive work so you can spend your time on the truly creative parts."
+      }
+    ],
+    "example": "\"Capstone: pick one design task on your plate, use AI from brief to handoff, then compare the time to your old way\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What must a good dev spec cover?",
+    "options": [
+      {
+        "text": "Behavior for every state and edge cases",
+        "correct": true
+      },
+      {
+        "text": "Just one screenshot"
+      },
+      {
+        "text": "The Figma filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which is an edge case worth specifying in a handoff?",
+    "options": [
+      {
+        "text": "How overly long text is truncated, what an empty list shows",
+        "correct": true
+      },
+      {
+        "text": "The developer's favorite color"
+      },
+      {
+        "text": "The brand of monitor used to design"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the AI's role in design work?",
+    "options": [
+      {
+        "text": "Clearing repetitive work so we can spend time on creative work",
+        "correct": true
+      },
+      {
+        "text": "Replacing the designer entirely"
+      },
+      {
+        "text": "Deciding taste for us"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should a good handoff to the dev team include?",
+    "options": [
+      {
+        "text": "Just one image"
+      },
+      {
+        "text": "No documentation"
+      },
+      {
+        "text": "Specs, states, and details that can be built from",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you use Claude to help with handoff?",
+    "options": [
+      {
+        "text": "It doesn't help"
+      },
+      {
+        "text": "Help write complete, clear specs and notes",
+        "correct": true
+      },
+      {
+        "text": "Send a blank file"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

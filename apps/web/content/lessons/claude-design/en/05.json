@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 5 · Part 1",
+    "title": "Error messages and microcopy",
+    "body": [
+      {
+        "text": "A good error message answers 3 questions: "
+      },
+      {
+        "text": "what happened · why · what to do next",
+        "bold": true
+      },
+      {
+        "text": " — 'Error 500' is a UX failure, while 'Couldn't save because the connection dropped. Try again.' is good work."
+      }
+    ],
+    "example": "\"Rewrite the error: 'Invalid input' → 'Phone number must be 10 digits and start with 0, e.g. 0812345678'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 5 · Part 2",
+    "title": "Microcopy at the critical points",
+    "body": [
+      {
+        "text": "Points where microcopy decides conversion: "
+      },
+      {
+        "text": "the sign-up form (reduce anxiety) · the payment button (build confidence) · the empty state (show the first step)",
+        "bold": true
+      },
+      {
+        "text": " — have Claude write several versions per point, then pick by brand tone."
+      }
+    ],
+    "example": "\"Under the email field in the sign-up form, write 3 anxiety-reducing microcopy options, e.g. 'No spam, unsubscribe anytime'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What questions should a good error message answer?",
+    "options": [
+      {
+        "text": "What happened, why, what to do next",
+        "correct": true
+      },
+      {
+        "text": "Just the error code"
+      },
+      {
+        "text": "Whose fault it is"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which is a good error message?",
+    "options": [
+      {
+        "text": "\"Phone number must be 10 digits starting with 0\"",
+        "correct": true
+      },
+      {
+        "text": "\"Error 500\""
+      },
+      {
+        "text": "\"Invalid input\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of microcopy should an empty state have?",
+    "options": [
+      {
+        "text": "Tell the first step the user should take",
+        "correct": true
+      },
+      {
+        "text": "Leave it blank"
+      },
+      {
+        "text": "An error message"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should a good error message do?",
+    "options": [
+      {
+        "text": "Just show an error code"
+      },
+      {
+        "text": "Blame the user"
+      },
+      {
+        "text": "State the cause and the fix in a friendly tone",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does microcopy at critical points help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Reduces confusion and builds the user's confidence",
+        "correct": true
+      },
+      {
+        "text": "Clutters the screen"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

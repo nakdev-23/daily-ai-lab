@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 4 · Part 1",
+    "title": "What is UX copy",
+    "body": [
+      {
+        "text": "UX copy is "
+      },
+      {
+        "text": "every word in the interface: buttons, menus, alerts, placeholders",
+        "bold": true
+      },
+      {
+        "text": " — these tiny words decide whether the user moves on or gets lost. Claude helps write them clear, short, and human."
+      }
+    ],
+    "example": "\"A 'OK' button vs 'Save changes' — the latter makes it clear what happens when you tap it, so the user taps with confidence\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 4 · Part 2",
+    "title": "Principles of good UX copy",
+    "body": [
+      {
+        "text": "Three main principles: "
+      },
+      {
+        "text": "clear (say what the action does) · short (cut unnecessary words) · politely human (not bureaucratic or robotic)",
+        "bold": true
+      },
+      {
+        "text": " — send the screen to Claude and have it check every message against these principles."
+      }
+    ],
+    "example": "\"Check the copy on this page: 'The system was unable to process your request' → suggest: 'Couldn't save. Try again.'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is UX copy?",
+    "options": [
+      {
+        "text": "Every word in the interface, like buttons and alerts",
+        "correct": true
+      },
+      {
+        "text": "Copying someone else's design"
+      },
+      {
+        "text": "The copyright of UX"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which button is better by UX copy principles?",
+    "options": [
+      {
+        "text": "'Save changes', because it clearly states the result",
+        "correct": true
+      },
+      {
+        "text": "'OK', because it's shorter"
+      },
+      {
+        "text": "'Click here'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What are the three principles of good UX copy?",
+    "options": [
+      {
+        "text": "Clear, short, and human",
+        "correct": true
+      },
+      {
+        "text": "Long, formal, complex"
+      },
+      {
+        "text": "Funny, random, weird"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should good UX copy be like?",
+    "options": [
+      {
+        "text": "Long and ambiguous"
+      },
+      {
+        "text": "Use as much technical jargon as possible"
+      },
+      {
+        "text": "Clear, short, and helping the user do the next thing",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is UX copy?",
+    "options": [
+      {
+        "text": "Illustrative images"
+      },
+      {
+        "text": "The text in the interface that guides the user",
+        "correct": true
+      },
+      {
+        "text": "The backend code"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

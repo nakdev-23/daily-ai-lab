@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 8 · Part 1",
+    "title": "Brand voice & tone",
+    "body": [
+      {
+        "text": "Brand voice is the brand's consistent personality in how it speaks — have Claude help "
+      },
+      {
+        "text": "define it from 3–5 adjectives, with do/don't examples",
+        "bold": true
+      },
+      {
+        "text": " — e.g. 'friendly, confident, no jargon', with example sentences that fit and that don't."
+      }
+    ],
+    "example": "\"Define the voice for a specialty coffee brand: serious about coffee but fun to talk to / Do: 'This bean is light-roasted, juicy and orange-bright' / Don't: 'A high-quality premium product'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 8 · Part 2",
+    "title": "Voice stays, tone adapts",
+    "body": [
+      {
+        "text": "A key principle: "
+      },
+      {
+        "text": "voice doesn't change, but tone adapts to the situation",
+        "bold": true
+      },
+      {
+        "text": " — the brand is fun during a promo, but when the system goes down it apologizes sincerely while still being itself. Have Claude write a tone map for each situation."
+      }
+    ],
+    "example": "\"Write a message for a 1-hour system outage in our brand voice: still friendly but sincere, no jokes while users are in trouble\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What should a usable brand voice definition include?",
+    "options": [
+      {
+        "text": "3–5 adjectives with do/don't examples",
+        "correct": true
+      },
+      {
+        "text": "Just the logo"
+      },
+      {
+        "text": "The product price"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How do voice and tone differ?",
+    "options": [
+      {
+        "text": "Voice stays constant; tone adapts to the situation",
+        "correct": true
+      },
+      {
+        "text": "They're exactly the same"
+      },
+      {
+        "text": "Tone is constant; voice changes constantly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How should a playful brand write a message during an outage?",
+    "options": [
+      {
+        "text": "Sincere, apologizing genuinely, but still in the brand personality",
+        "correct": true
+      },
+      {
+        "text": "Joke around as usual"
+      },
+      {
+        "text": "Stay silent and say nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do brand voice and tone differ?",
+    "options": [
+      {
+        "text": "They're exactly the same"
+      },
+      {
+        "text": "Voice changes every day"
+      },
+      {
+        "text": "Voice stays constant, while tone can adapt to context",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "To have Claude keep the brand voice consistent, what should you do?",
+    "options": [
+      {
+        "text": "Don't define anything"
+      },
+      {
+        "text": "Define voice guidelines and reference them every time",
+        "correct": true
+      },
+      {
+        "text": "Change the voice for every job"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

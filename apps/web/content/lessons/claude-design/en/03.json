@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 3 · Part 1",
+    "title": "Mood boards and references",
+    "body": [
+      {
+        "text": "Claude can analyze images — upload a reference and have it "
+      },
+      {
+        "text": "decode why that work gives the feeling it does",
+        "bold": true
+      },
+      {
+        "text": ": the color tone, fonts, layout, rhythm, white space — then turn that into words you can use with the team or client."
+      }
+    ],
+    "example": "\"Look at these 4 reference images, explain which elements make them feel 'premium minimal', then summarize it into a design direction\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 3 · Part 2",
+    "title": "From mood to something concrete",
+    "body": [
+      {
+        "text": "The classic problem: the client says 'I want it to feel bright but expensive' — have the AI "
+      },
+      {
+        "text": "turn abstract words into a concrete spec",
+        "bold": true
+      },
+      {
+        "text": ": a color range, a font style, examples of similar brands — to confirm you're on the same page before starting."
+      }
+    ],
+    "example": "\"Turn 'bright but expensive' into 3 directions, each with its color tone and mood, for the client to choose before we start designing\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Claude help with on reference images?",
+    "options": [
+      {
+        "text": "Decoding the elements that create the work's feeling",
+        "correct": true
+      },
+      {
+        "text": "Stealing the work to use directly"
+      },
+      {
+        "text": "It can't view images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When a client uses an abstract word like 'expensive-looking', what should you do?",
+    "options": [
+      {
+        "text": "Turn it into a concrete spec and confirm with the client first",
+        "correct": true
+      },
+      {
+        "text": "Guess and just do it"
+      },
+      {
+        "text": "Say it can't be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of summarizing the design direction into words?",
+    "options": [
+      {
+        "text": "The team and client are on the same page before starting",
+        "correct": true
+      },
+      {
+        "text": "For posting on social media"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To turn a mood into a design direction, what should you do?",
+    "options": [
+      {
+        "text": "Just guess"
+      },
+      {
+        "text": "Skip this step"
+      },
+      {
+        "text": "Have the AI turn the mood into concrete things, like color, shape, tone",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is a mood board for?",
+    "options": [
+      {
+        "text": "No purpose"
+      },
+      {
+        "text": "Gathering inspiration to give a clear direction",
+        "correct": true
+      },
+      {
+        "text": "Storing junk files"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

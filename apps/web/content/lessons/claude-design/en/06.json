@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 6 · Part 1",
+    "title": "Onboarding copy",
+    "body": [
+      {
+        "text": "Good onboarding gets the user to the "
+      },
+      {
+        "text": "aha moment — the point where they first see the product's value — as fast as possible",
+        "bold": true
+      },
+      {
+        "text": ". Every screen in the way is a chance to lose the user, so the copy must move them forward, not explain every feature."
+      }
+    ],
+    "example": "\"A notes app: instead of a 5-screen tour → open straight to 'Write your first note' with a text field right there\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 6 · Part 2",
+    "title": "Writing onboarding with Claude",
+    "body": [
+      {
+        "text": "Tell Claude "
+      },
+      {
+        "text": "what the product's aha moment is, then have it design the shortest path to that point",
+        "bold": true
+      },
+      {
+        "text": " — with copy for each step that prompts action, not just explanation."
+      }
+    ],
+    "example": "\"Product: a group expense-sharing app / aha: seeing how much each friend owes, calculated automatically → design a 3-step onboarding with copy\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is an aha moment?",
+    "options": [
+      {
+        "text": "The point where the user first sees the product's value",
+        "correct": true
+      },
+      {
+        "text": "A loading screen"
+      },
+      {
+        "text": "The payment step"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should good onboarding be like?",
+    "options": [
+      {
+        "text": "Get to the aha moment as fast as possible",
+        "correct": true
+      },
+      {
+        "text": "Tour through every feature first"
+      },
+      {
+        "text": "Force filling out 20 fields"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should onboarding copy be like?",
+    "options": [
+      {
+        "text": "Prompt action, not just explain",
+        "correct": true
+      },
+      {
+        "text": "As long and detailed as possible"
+      },
+      {
+        "text": "Use lots of technical jargon"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When writing good onboarding copy, what should you focus on?",
+    "options": [
+      {
+        "text": "Explaining every feature at length right away"
+      },
+      {
+        "text": "No explanation at all"
+      },
+      {
+        "text": "Getting the user to the first value quickly and clearly",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does good onboarding help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Helps the user get started successfully and stay",
+        "correct": true
+      },
+      {
+        "text": "Makes them quit faster"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

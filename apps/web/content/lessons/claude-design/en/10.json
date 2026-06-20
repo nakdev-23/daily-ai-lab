@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 10 · Part 1",
+    "title": "Figma + Claude",
+    "body": [
+      {
+        "text": "A workflow people actually use: "
+      },
+      {
+        "text": "send a design screenshot from Figma for Claude to critique, or connect Figma's MCP to read the file directly",
+        "bold": true
+      },
+      {
+        "text": " — and from the design, Claude can write component code that matches the spec."
+      }
+    ],
+    "example": "\"Send the checkout screen from Figma: 'Review this page's UX, find where the user might get confused or drop off'\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 10 · Part 2",
+    "title": "From design to code",
+    "body": [
+      {
+        "text": "The design-to-code gap has narrowed a lot: "
+      },
+      {
+        "text": "attach the image + design tokens (color, font, spacing) and have it write the component",
+        "bold": true
+      },
+      {
+        "text": " — specify the project's framework and conventions, and the result is as close to production-ready as possible."
+      }
+    ],
+    "example": "\"From the product card in this image, write a React component using Tailwind per the attached tokens, with responsive support\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Claude work with designs from Figma?",
+    "options": [
+      {
+        "text": "Analyzes screenshots or connects via MCP",
+        "correct": true
+      },
+      {
+        "text": "It can never open a .fig file under any circumstances"
+      },
+      {
+        "text": "Draws in Figma for us directly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To have the AI write code that matches the design, what should you attach?",
+    "options": [
+      {
+        "text": "The design image + design tokens + the framework used",
+        "correct": true
+      },
+      {
+        "text": "Just the page name"
+      },
+      {
+        "text": "A favorite song"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "When sending a design page for the AI to review, how should you ask?",
+    "options": [
+      {
+        "text": "\"Find where the user might get confused or drop off\"",
+        "correct": true
+      },
+      {
+        "text": "\"Is it pretty?\""
+      },
+      {
+        "text": "\"Is it done yet?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To turn a Figma design into code, how do you use Claude?",
+    "options": [
+      {
+        "text": "Copy and paste the image"
+      },
+      {
+        "text": "Do nothing"
+      },
+      {
+        "text": "Have it draft code from the spec, then review it",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "From design to code, how do you do it safely?",
+    "options": [
+      {
+        "text": "Skip testing"
+      },
+      {
+        "text": "Review and test the AI-generated code before using it",
+        "correct": true
+      },
+      {
+        "text": "Use it immediately without checking"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

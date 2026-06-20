@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 9 · Part 1",
+    "title": "Design system documentation",
+    "body": [
+      {
+        "text": "A design system with no docs = no one follows it — Claude helps write "
+      },
+      {
+        "text": "component docs: when to use it, how to use it, and when not to",
+        "bold": true
+      },
+      {
+        "text": " — it can write a usage guideline from a screenshot or the component's code."
+      }
+    ],
+    "example": "\"Write docs for the Primary button: use for the one main action per screen / don't use for destructive actions — use Danger instead\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 9 · Part 2",
+    "title": "Docs developers read and use correctly",
+    "body": [
+      {
+        "text": "A structure that works: "
+      },
+      {
+        "text": "one-sentence overview → when to use/not use → code example → props/variants → common mistakes",
+        "bold": true
+      },
+      {
+        "text": " — the last part is the most valuable, because it prevents the repeated misuse that actually happens on the team."
+      }
+    ],
+    "example": "\"From this Modal component, write docs in the 5-part structure, emphasizing common mistakes like nesting a modal inside a modal\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What questions must component docs answer?",
+    "options": [
+      {
+        "text": "When to use it, how to use it, when not to",
+        "correct": true
+      },
+      {
+        "text": "Who wrote it"
+      },
+      {
+        "text": "How much it costs"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which part of the docs best prevents repeated misuse?",
+    "options": [
+      {
+        "text": "Common mistakes",
+        "correct": true
+      },
+      {
+        "text": "The edit history"
+      },
+      {
+        "text": "The filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What happens to a design system with no documentation?",
+    "options": [
+      {
+        "text": "The team uses it inconsistently and the system loses its meaning",
+        "correct": true
+      },
+      {
+        "text": "No problems at all"
+      },
+      {
+        "text": "Work goes faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should good design system documentation be like?",
+    "options": [
+      {
+        "text": "Vague"
+      },
+      {
+        "text": "No examples"
+      },
+      {
+        "text": "Clear enough that a developer reads it and uses it correctly",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How does design system documentation help the team?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Everyone uses the components and rules consistently",
+        "correct": true
+      },
+      {
+        "text": "It causes confusion"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 11 · Part 1",
+    "title": "Design feedback & critique",
+    "body": [
+      {
+        "text": "Claude is a bias-free critique partner: "
+      },
+      {
+        "text": "send the work and ask for feedback against criteria: hierarchy, contrast, consistency, usability",
+        "bold": true
+      },
+      {
+        "text": " — you get a fresh perspective before shipping, especially when you've stared at your own work until it all looks normal."
+      }
+    ],
+    "example": "\"Critique this poster directly: where does the eye go first, is the main message prominent enough, is anything competing for attention\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Design · Chapter 11 · Part 2",
+    "title": "Give and take feedback like a pro",
+    "body": [
+      {
+        "text": "The AI also helps on the communication side: "
+      },
+      {
+        "text": "turn a client's vague feedback ('it doesn't wow me') into an actionable fix list",
+        "bold": true
+      },
+      {
+        "text": " and help you write up your design rationale so the client understands the reasoning behind it."
+      }
+    ],
+    "example": "\"The client said 'it looks too plain' — interpret that into 5 possibilities, with questions to ask back to find the real meaning\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "When asking the AI for a design critique, what should you specify?",
+    "options": [
+      {
+        "text": "Clear criteria, like hierarchy, contrast, usability",
+        "correct": true
+      },
+      {
+        "text": "Ask for compliments only"
+      },
+      {
+        "text": "No need to specify anything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "The client says 'it doesn't wow me' — what can the AI help with?",
+    "options": [
+      {
+        "text": "Interpret the possibilities and ask questions to find the real meaning",
+        "correct": true
+      },
+      {
+        "text": "Make it 'wow' on its own without asking"
+      },
+      {
+        "text": "Tell you to change clients"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why is an AI critique useful before shipping?",
+    "options": [
+      {
+        "text": "You get a fresh perspective when your eyes have gotten used to your own work",
+        "correct": true
+      },
+      {
+        "text": "The AI always judges correctly"
+      },
+      {
+        "text": "No human review is ever needed again"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should giving design feedback like a pro be like?",
+    "options": [
+      {
+        "text": "Just say you don't like it"
+      },
+      {
+        "text": "Give no reasons"
+      },
+      {
+        "text": "Specific, tied to the goal, and proposing fixes",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you use Claude to help critique design work?",
+    "options": [
+      {
+        "text": "Don't use it"
+      },
+      {
+        "text": "Ask for a perspective based on UX principles and the target audience",
+        "correct": true
+      },
+      {
+        "text": "Ask for compliments only"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

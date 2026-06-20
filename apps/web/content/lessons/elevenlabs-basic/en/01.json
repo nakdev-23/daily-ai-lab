@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 1 · Part 1",
+    "title": "What is ElevenLabs?",
+    "body": [
+      {
+        "text": "ElevenLabs is a "
+      },
+      {
+        "text": "text-to-speech AI",
+        "bold": true
+      },
+      {
+        "text": " that turns text into very natural-sounding human speech. It supports many languages, including Thai, and is used for "
+      },
+      {
+        "text": "video narration, voiceovers, podcasts, and in-app voices",
+        "bold": true
+      },
+      {
+        "text": " without recording yourself."
+      }
+    ],
+    "example": "Read this in a warm, friendly Thai female voice: 'Hello, welcome to our channel.'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 1 · Part 2",
+    "title": "What can it do?",
+    "body": [
+      {
+        "text": "It has "
+      },
+      {
+        "text": "3 core capabilities: text-to-speech (TTS), voice cloning, and dubbing/translating clips",
+        "bold": true
+      },
+      {
+        "text": ". Great for creators who want high-quality narration fast, or for making multilingual content from a single original."
+      }
+    ],
+    "example": "Make a 1-minute narration for a cooking tutorial video, in a clear, friendly Thai male voice",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does ElevenLabs mainly do?",
+    "options": [
+      {
+        "text": "Turns text into human-like speech",
+        "correct": true
+      },
+      {
+        "text": "Edits video"
+      },
+      {
+        "text": "Generates images from text"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What are ElevenLabs' 3 core capabilities?",
+    "options": [
+      {
+        "text": "TTS, voice cloning, dubbing/translation",
+        "correct": true
+      },
+      {
+        "text": "Coding, web building, logo design"
+      },
+      {
+        "text": "Chat, web search, making slides"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What work is ElevenLabs good for?",
+    "options": [
+      {
+        "text": "Video narration, voiceovers, podcasts",
+        "correct": true
+      },
+      {
+        "text": "Live sports broadcasting"
+      },
+      {
+        "text": "Scheduling appointments"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Does ElevenLabs support Thai?",
+    "options": [
+      {
+        "text": "Yes, it speaks Thai naturally",
+        "correct": true
+      },
+      {
+        "text": "English only"
+      },
+      {
+        "text": "It doesn't do speech at all"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

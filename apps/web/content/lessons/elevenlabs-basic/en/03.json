@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 3 · Part 1",
+    "title": "Stability and Similarity",
+    "body": [
+      {
+        "text": "The main settings are "
+      },
+      {
+        "text": "Stability",
+        "bold": true
+      },
+      {
+        "text": " (consistency — low = more emotional variety, high = steady and even) and "
+      },
+      {
+        "text": "Similarity",
+        "bold": true
+      },
+      {
+        "text": " (how close to the reference voice). For ads that need emotion, lower Stability; for long readings that need steadiness, raise Stability."
+      }
+    ],
+    "example": "Documentary narration → high Stability for a steady tone; fun ad → low Stability for emotion",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 3 · Part 2",
+    "title": "Experiment and compare",
+    "body": [
+      {
+        "text": "There's no single 'correct' value — "
+      },
+      {
+        "text": "generate several versions with different settings and compare",
+        "bold": true
+      },
+      {
+        "text": ", then keep the one that fits best. Adjusting one value at a time and listening helps you understand what each does."
+      }
+    ],
+    "example": "Read the same sentence 3 times at Stability 30 / 50 / 70, then pick the most natural one",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does a low Stability value do?",
+    "options": [
+      {
+        "text": "Gives the voice more emotional variety",
+        "correct": true
+      },
+      {
+        "text": "Makes the voice as steady as possible"
+      },
+      {
+        "text": "Makes the voice quieter"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "For a long reading that needs steadiness, what should you set?",
+    "options": [
+      {
+        "text": "High Stability",
+        "correct": true
+      },
+      {
+        "text": "Lowest Stability"
+      },
+      {
+        "text": "Mute"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "How do you find the right settings?",
+    "options": [
+      {
+        "text": "Generate several versions with different values and compare",
+        "correct": true
+      },
+      {
+        "text": "Always use defaults, never change"
+      },
+      {
+        "text": "Set every value to maximum"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What does Similarity control?",
+    "options": [
+      {
+        "text": "How close it is to the reference voice",
+        "correct": true
+      },
+      {
+        "text": "The length of the audio"
+      },
+      {
+        "text": "The voice's language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

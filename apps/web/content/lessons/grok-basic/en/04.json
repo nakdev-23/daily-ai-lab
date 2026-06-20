@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 4 · Part 1",
+    "title": "Live data ≠ always correct",
+    "body": [
+      {
+        "text": "Because Grok pulls from social media and the web, the data may contain "
+      },
+      {
+        "text": "rumors or bias",
+        "bold": true
+      },
+      {
+        "text": ". "
+      },
+      {
+        "text": "Verify it against trusted sources",
+        "bold": true
+      },
+      {
+        "text": " before using it for important decisions — especially finance, health, and legal matters."
+      }
+    ],
+    "example": "Before sharing news → ask Grok for the source, then open the link and check it against a major news outlet",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 4 · Part 2",
+    "title": "Ask for a well-rounded view",
+    "body": [
+      {
+        "text": "Ask for "
+      },
+      {
+        "text": "multiple perspectives",
+        "bold": true
+      },
+      {
+        "text": " to reduce bias — like 'what are the counterarguments?' Hearing several sides helps you decide better. And don't use AI answers in place of expert advice on high-risk matters."
+      }
+    ],
+    "example": "What are the supporting and opposing views on this? Summarize both sides neutrally.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Why verify information from Grok?",
+    "options": [
+      {
+        "text": "Live data may contain rumors or bias",
+        "correct": true
+      },
+      {
+        "text": "Because Grok answers slowly"
+      },
+      {
+        "text": "Because live data is always correct"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Which topics need extra caution before trusting AI?",
+    "options": [
+      {
+        "text": "Finance, health, and legal matters",
+        "correct": true
+      },
+      {
+        "text": "Your favorite color"
+      },
+      {
+        "text": "Breakfast menus"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "How do you reduce bias in answers?",
+    "options": [
+      {
+        "text": "Ask for multiple perspectives, e.g. 'what are the counterarguments?'",
+        "correct": true
+      },
+      {
+        "text": "Ask one side only"
+      },
+      {
+        "text": "Always believe the first answer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Before sharing news you got from Grok, what should you do?",
+    "options": [
+      {
+        "text": "Open the source link and verify against trusted outlets",
+        "correct": true
+      },
+      {
+        "text": "Share immediately for speed"
+      },
+      {
+        "text": "Change the headline yourself"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

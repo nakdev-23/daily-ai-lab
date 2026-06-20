@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 2 · Part 1",
+    "title": "Ask for answers you can verify",
+    "body": [
+      {
+        "text": "When asking about current topics, also request "
+      },
+      {
+        "text": "sources",
+        "bold": true
+      },
+      {
+        "text": " — like 'summarize with source links' so you can check further — and specify a clear time frame like 'this week' so old data doesn't mix in."
+      }
+    ],
+    "example": "Summarize 5 key tech news items this week, with a source link for each.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 2 · Part 2",
+    "title": "Dig deeper continuously",
+    "body": [
+      {
+        "text": "You can keep asking as a conversation — have it expand on a point you care about, or compare multiple viewpoints. Asking step by step gives deeper, more on-target answers than one all-in-one question."
+      }
+    ],
+    "example": "Expand on point 3 in detail, and tell me what differing opinions there are.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "When asking about current topics, what should you also request?",
+    "options": [
+      {
+        "text": "Sources / origin links",
+        "correct": true
+      },
+      {
+        "text": "The longest possible answer"
+      },
+      {
+        "text": "An answer in English only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Why specify a time frame like 'this week'?",
+    "options": [
+      {
+        "text": "So old data doesn't mix in",
+        "correct": true
+      },
+      {
+        "text": "To make the answer shorter"
+      },
+      {
+        "text": "Because Grok doesn't understand dates"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "How do you get deeper answers?",
+    "options": [
+      {
+        "text": "Keep asking as a step-by-step conversation",
+        "correct": true
+      },
+      {
+        "text": "Ask one all-in-one question and stop"
+      },
+      {
+        "text": "Repeat the same question over and over"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Which prompt is best for current news?",
+    "options": [
+      {
+        "text": "'Summarize 5 tech news items this week, with source links'",
+        "correct": true
+      },
+      {
+        "text": "'Anything new?'"
+      },
+      {
+        "text": "'Tell me anything'"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

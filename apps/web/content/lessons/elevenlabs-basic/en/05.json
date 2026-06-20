@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 5 · Part 1",
+    "title": "Dubbing: turn a clip into many languages",
+    "body": [
+      {
+        "text": "The "
+      },
+      {
+        "text": "Dubbing",
+        "bold": true
+      },
+      {
+        "text": " feature converts the speech in a clip into another language while keeping the original tone. Make Thai content into English (or vice versa) quickly — great for reaching audiences abroad. Check the translation and lip timing before publishing."
+      }
+    ],
+    "example": "Upload a Thai product-review clip → make an English-voice version with Dubbing to post on an international channel",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 5 · Part 2",
+    "title": "Export and use it",
+    "body": [
+      {
+        "text": "Download as an audio file (e.g. MP3) to drop into your editor. Commercial usage rights depend on your "
+      },
+      {
+        "text": "plan",
+        "bold": true
+      },
+      {
+        "text": " — if you'll monetize it, check the terms first, and give credit where the terms require."
+      }
+    ],
+    "example": "Finish the narration → export MP3 → import into your editor and lay it over the video",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does Dubbing do?",
+    "options": [
+      {
+        "text": "Converts the speech in a clip to another language, keeping the original tone",
+        "correct": true
+      },
+      {
+        "text": "Only adds subtitles"
+      },
+      {
+        "text": "Edits the visuals"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Before publishing a dubbed clip, what should you do?",
+    "options": [
+      {
+        "text": "Check the translation and timing first",
+        "correct": true
+      },
+      {
+        "text": "Post immediately without checking"
+      },
+      {
+        "text": "Delete the original file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Commercial usage rights for the audio depend on what?",
+    "options": [
+      {
+        "text": "The plan you subscribe to",
+        "correct": true
+      },
+      {
+        "text": "The length of the audio"
+      },
+      {
+        "text": "The word count of the script"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What goal is Dubbing good for?",
+    "options": [
+      {
+        "text": "Reaching audiences abroad from a single original clip",
+        "correct": true
+      },
+      {
+        "text": "Reducing video file size"
+      },
+      {
+        "text": "Increasing image resolution"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

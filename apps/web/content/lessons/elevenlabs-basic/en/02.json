@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 2 · Part 1",
+    "title": "Pick a voice and paste your text",
+    "body": [
+      {
+        "text": "The simplest steps: "
+      },
+      {
+        "text": "pick a voice from the library → paste your text → click generate",
+        "bold": true
+      },
+      {
+        "text": ". There are many ready-made voices — male/female, various tones. Preview samples before choosing one that fits the job — a bright voice for ads, a soft voice for documentaries."
+      }
+    ],
+    "example": "Paste a 3-sentence ad script, choose a bright female voice, then click generate",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 2 · Part 2",
+    "title": "Use punctuation correctly",
+    "body": [
+      {
+        "text": "The voice sounds much more natural when the text has "
+      },
+      {
+        "text": "complete punctuation",
+        "bold": true
+      },
+      {
+        "text": ". Periods, commas, and line breaks help the AI pace correctly. A long sentence with no commas sounds rushed — add periods/commas to control the pacing."
+      }
+    ],
+    "example": "Instead of 'Hi everyone today we're learning about voice' use 'Hi everyone, today we're learning about voice.'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What are the first steps to generate a voice?",
+    "options": [
+      {
+        "text": "Pick a voice → paste text → click generate",
+        "correct": true
+      },
+      {
+        "text": "Always record yourself first"
+      },
+      {
+        "text": "Only write code to call the API"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What makes the voice sound more natural?",
+    "options": [
+      {
+        "text": "Complete punctuation",
+        "correct": true
+      },
+      {
+        "text": "Typing in all caps"
+      },
+      {
+        "text": "Removing all commas"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "How should you choose a voice?",
+    "options": [
+      {
+        "text": "Preview samples and pick one that fits the job",
+        "correct": true
+      },
+      {
+        "text": "Always pick the first voice"
+      },
+      {
+        "text": "Choose at random"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "How does a long sentence with no commas sound?",
+    "options": [
+      {
+        "text": "Rushed, with poor pacing",
+        "correct": true
+      },
+      {
+        "text": "Always better"
+      },
+      {
+        "text": "It causes an error"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

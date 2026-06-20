@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 3 · Part 1",
+    "title": "Generate images from text",
+    "body": [
+      {
+        "text": "Grok can generate images from a description. Same principle as other image tools: state the "
+      },
+      {
+        "text": "subject + details + style",
+        "bold": true
+      },
+      {
+        "text": " clearly. The more concrete your description, the closer the image matches what you want."
+      }
+    ],
+    "example": "Generate an image: a cute robot watering plants in a garden in the morning, 3D cartoon style, bright colors",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 3 · Part 2",
+    "title": "Analyze and summarize long content",
+    "body": [
+      {
+        "text": "Use Grok to summarize articles, analyze data, or help draft writing like any chatbot. The difference is it can weave in current information, making it great for research that needs both knowledge and the latest news."
+      }
+    ],
+    "example": "Analyze how this year's EV trend affects the charging-station business, based on the latest data.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the principle of good image generation?",
+    "options": [
+      {
+        "text": "State the subject + details + style clearly",
+        "correct": true
+      },
+      {
+        "text": "Just type one word"
+      },
+      {
+        "text": "Use only numbers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How is Grok different from other chatbots for research?",
+    "options": [
+      {
+        "text": "It can weave current information into existing knowledge",
+        "correct": true
+      },
+      {
+        "text": "It can't summarize at all"
+      },
+      {
+        "text": "It only works in English"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What can Grok do besides answer text?",
+    "options": [
+      {
+        "text": "Generate images from a description",
+        "correct": true
+      },
+      {
+        "text": "Call customers on the phone"
+      },
+      {
+        "text": "Print paper documents"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What work is Grok best suited for?",
+    "options": [
+      {
+        "text": "Research that needs both knowledge and the latest news",
+        "correct": true
+      },
+      {
+        "text": "Work that forbids using new data"
+      },
+      {
+        "text": "Editing movies"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

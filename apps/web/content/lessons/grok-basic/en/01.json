@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 1 · Part 1",
+    "title": "What is Grok?",
+    "body": [
+      {
+        "text": "Grok is a "
+      },
+      {
+        "text": "conversational AI from xAI",
+        "bold": true
+      },
+      {
+        "text": ". Its standout feature is access to "
+      },
+      {
+        "text": "real-time information",
+        "bold": true
+      },
+      {
+        "text": " from the X platform and the web, so it answers about recent events better than chatbots that only know old data. Great for following news and trends."
+      }
+    ],
+    "example": "What AI trends are being talked about most on X right now? Summarize 5.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Grok · Chapter 1 · Part 2",
+    "title": "How is it different from other chatbots?",
+    "body": [
+      {
+        "text": "Most chatbots have a 'knowledge cutoff' and can't answer about new things, but Grok "
+      },
+      {
+        "text": "can pull live data",
+        "bold": true
+      },
+      {
+        "text": ", so it suits questions that need current references. Still, live data must be verified — social posts can be wrong."
+      }
+    ],
+    "example": "What's the price of gold today, and what factors are moving it? Brief summary.",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is Grok's main standout feature?",
+    "options": [
+      {
+        "text": "Access to real-time data from X and the web",
+        "correct": true
+      },
+      {
+        "text": "Drawing animated cartoons"
+      },
+      {
+        "text": "Editing audio"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How is Grok different from chatbots with a knowledge cutoff?",
+    "options": [
+      {
+        "text": "It can answer about recent events because it pulls live data",
+        "correct": true
+      },
+      {
+        "text": "It's always slower"
+      },
+      {
+        "text": "It only answers about old topics"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What is Grok good for?",
+    "options": [
+      {
+        "text": "Following news, trends, and questions needing current references",
+        "correct": true
+      },
+      {
+        "text": "Work with nothing to do with new information"
+      },
+      {
+        "text": "Editing video"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Even though Grok pulls live data, what should you still do?",
+    "options": [
+      {
+        "text": "Verify the data, because social posts can be wrong",
+        "correct": true
+      },
+      {
+        "text": "Believe everything it answers"
+      },
+      {
+        "text": "Disconnect from the internet"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

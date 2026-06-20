@@ -1,0 +1,105 @@
+[
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 4 · Part 1",
+    "title": "What is voice cloning?",
+    "body": [
+      {
+        "text": "Voice cloning",
+        "bold": true
+      },
+      {
+        "text": " creates an AI voice from a real voice sample. Record a short clip of yourself and you get 'your voice' that can say anything you type — great for making content in your own voice without re-recording every time. Quality depends on how clear the sample is."
+      }
+    ],
+    "example": "Record yourself reading an article for 1–2 minutes in a quiet room → use it as the reference to clone your own voice",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ElevenLabs · Chapter 4 · Part 2",
+    "title": "Always get permission",
+    "body": [
+      {
+        "text": "Never clone someone else's voice without permission",
+        "bold": true
+      },
+      {
+        "text": " — it violates both ethics and the terms of use. Only clone your own voice, or a voice whose owner has consented in writing. Impersonating someone's voice can be illegal and cause serious harm."
+      }
+    ],
+    "example": "To use a team host's voice → get written consent before recording the voice sample",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "How does voice cloning work?",
+    "options": [
+      {
+        "text": "Creates an AI voice from a real voice sample",
+        "correct": true
+      },
+      {
+        "text": "Turns text into images"
+      },
+      {
+        "text": "Removes background noise"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What does cloning quality depend on?",
+    "options": [
+      {
+        "text": "How clear the reference voice sample is",
+        "correct": true
+      },
+      {
+        "text": "The screen color"
+      },
+      {
+        "text": "The length of the filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the proper way to clone a voice?",
+    "options": [
+      {
+        "text": "Clone your own voice, or one the owner consents to",
+        "correct": true
+      },
+      {
+        "text": "Clone a celebrity you like"
+      },
+      {
+        "text": "Clone anyone's voice you find online"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What about impersonating someone's voice without permission?",
+    "options": [
+      {
+        "text": "It's unethical, against the terms, and may be illegal",
+        "correct": true
+      },
+      {
+        "text": "It's totally fine"
+      },
+      {
+        "text": "It's good for SEO"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

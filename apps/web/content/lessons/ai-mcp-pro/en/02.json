@@ -1,0 +1,108 @@
+[
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 2 · Part 1",
+    "title": "A server = a connector for one tool",
+    "body": [
+      {
+        "text": "An MCP server",
+        "bold": true
+      },
+      {
+        "text": " is a small program that connects one type of tool or data for the AI to use — a server for files, a server for a database, a server for GitHub. There are many ready-made servers to choose from."
+      }
+    ],
+    "example": "Install the 'filesystem' MCP server → the AI can read/write files in the folders you allow",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 2 · Part 2",
+    "title": "The AI picks the tools itself",
+    "body": [
+      {
+        "text": "Once a server is connected, the AI "
+      },
+      {
+        "text": "sees a list of available tools",
+        "bold": true
+      },
+      {
+        "text": " and chooses which to use for the task. Ask about files and it calls the file-reading tool. You don't direct each step — you just state the goal."
+      }
+    ],
+    "example": "Ask 'which file was edited most recently?' → the AI calls the list-files tool and checks dates itself",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is an MCP server?",
+    "options": [
+      {
+        "text": "A program that connects one type of tool/data for the AI to use",
+        "correct": true
+      },
+      {
+        "text": "A web browser"
+      },
+      {
+        "text": "An image file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What are some example MCP servers?",
+    "options": [
+      {
+        "text": "filesystem, database, GitHub",
+        "correct": true
+      },
+      {
+        "text": "Only a calculator"
+      },
+      {
+        "text": "None to choose from"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Once a server is connected, what does the AI do?",
+    "options": [
+      {
+        "text": "Sees the list of tools and picks what to use for the task",
+        "correct": true
+      },
+      {
+        "text": "Requires you to direct every step"
+      },
+      {
+        "text": "Stops working immediately"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the benefit of the AI picking tools itself?",
+    "options": [
+      {
+        "text": "You just state the goal — no step-by-step commands",
+        "correct": true
+      },
+      {
+        "text": "You must write code every time"
+      },
+      {
+        "text": "Always slower than doing it by hand"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

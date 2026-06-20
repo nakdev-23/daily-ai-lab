@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 3 · Part 1",
+    "title": "Start with a ready-made server",
+    "body": [
+      {
+        "text": "The easiest way is to use a "
+      },
+      {
+        "text": "ready-made server",
+        "bold": true
+      },
+      {
+        "text": " someone has already built — connecting a documents folder, a database, or a service you use regularly. Set it up in an MCP-capable app, then start asking tasks that reference that data."
+      }
+    ],
+    "example": "Connect an MCP to the company documents folder → 'find the vacation-leave policy from the HR documents'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 3 · Part 2",
+    "title": "Combine multiple servers",
+    "body": [
+      {
+        "text": "You can connect several servers at once, letting the AI work across systems — pull data from a database + write a summary to a file, in one command. This is where MCP is powerful: combining multiple tools to work continuously."
+      }
+    ],
+    "example": "Pull sales from the database + create a summary report file + save it to a folder, in one command",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the easiest way to start with MCP?",
+    "options": [
+      {
+        "text": "Use a ready-made server someone has built",
+        "correct": true
+      },
+      {
+        "text": "Always write a server from scratch"
+      },
+      {
+        "text": "Don't connect anything at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Can you connect multiple servers at once?",
+    "options": [
+      {
+        "text": "Yes, letting the AI work across systems",
+        "correct": true
+      },
+      {
+        "text": "No, only one at a time"
+      },
+      {
+        "text": "Only servers of the same kind"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Where is MCP powerful?",
+    "options": [
+      {
+        "text": "Combining multiple tools to work continuously in one command",
+        "correct": true
+      },
+      {
+        "text": "Changing the AI's color"
+      },
+      {
+        "text": "Reducing file size"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's an example of cross-system work with MCP?",
+    "options": [
+      {
+        "text": "Pull data from a database and write a summary to a file",
+        "correct": true
+      },
+      {
+        "text": "Play music on a speaker"
+      },
+      {
+        "text": "Print a document"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

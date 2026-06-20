@@ -1,0 +1,115 @@
+[
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 2 · Part 1",
+    "title": "What is an agent?",
+    "body": [
+      {
+        "text": "An agent",
+        "bold": true
+      },
+      {
+        "text": " is an AI that doesn't just answer — it "
+      },
+      {
+        "text": "plans and uses tools on its own, step by step",
+        "bold": true
+      },
+      {
+        "text": ", to reach a goal: search the web → read results → summarize → save a file. You only give the end goal; you don't direct each step."
+      }
+    ],
+    "example": "Goal: 'Find 5 competitors, build a price comparison table, and save it as a file' (the agent does every step itself)",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 2 · Part 2",
+    "title": "Give a clear goal and boundaries",
+    "body": [
+      {
+        "text": "An agent works well with a "
+      },
+      {
+        "text": "clear goal plus boundaries/conditions",
+        "bold": true
+      },
+      {
+        "text": " — like 'use this year's data only' or 'never delete files.' The clearer the boundaries, the less the agent goes off track. Always review the result before using it for real."
+      }
+    ],
+    "example": "Goal + boundaries: 'Summarize this month's customer reviews, use only in-system data, don't guess beyond it'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "How is an agent different from a normal chatbot?",
+    "options": [
+      {
+        "text": "It plans and uses tools on its own, step by step, to reach a goal",
+        "correct": true
+      },
+      {
+        "text": "It always answers more briefly"
+      },
+      {
+        "text": "It only works offline"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How do you instruct an agent?",
+    "options": [
+      {
+        "text": "Give the end goal; don't direct each step",
+        "correct": true
+      },
+      {
+        "text": "Direct every mouse click"
+      },
+      {
+        "text": "Never state the goal"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "When does an agent work well?",
+    "options": [
+      {
+        "text": "The goal is clear and there are boundaries/conditions",
+        "correct": true
+      },
+      {
+        "text": "There are no boundaries at all"
+      },
+      {
+        "text": "The goal is vague"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Before using an agent's result for real, what should you do?",
+    "options": [
+      {
+        "text": "Always review the result first",
+        "correct": true
+      },
+      {
+        "text": "Use it immediately without looking"
+      },
+      {
+        "text": "Delete the result"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 3 · Part 1",
+    "title": "Start with repeated work",
+    "body": [
+      {
+        "text": "Pick work you repeat that has clear steps, and write it as a Skill: "
+      },
+      {
+        "text": "(1) state when to use it (2) list the steps (3) include examples of good output",
+        "bold": true
+      },
+      {
+        "text": ". The clearer the examples, the more closely the AI follows them."
+      }
+    ],
+    "example": "A 'Summarize meeting' Skill: use it when you have meeting notes → extract topics, decisions, assigned tasks → format as bullets",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 3 · Part 2",
+    "title": "Test and refine",
+    "body": [
+      {
+        "text": "Try the Skill on several real tasks and see if results match. When it misses, "
+      },
+      {
+        "text": "add a rule or example",
+        "bold": true
+      },
+      {
+        "text": " covering that case. Refining a Skill from real results makes it steadily more accurate — like training a new employee."
+      }
+    ],
+    "example": "The meeting-summary Skill forgot to capture 'due dates' → add a rule: also state each task's due date",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What kind of work should you start building a Skill from?",
+    "options": [
+      {
+        "text": "Work you repeat that has clear steps",
+        "correct": true
+      },
+      {
+        "text": "Work you've never done before"
+      },
+      {
+        "text": "A one-and-done task"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What does a good Skill include?",
+    "options": [
+      {
+        "text": "When to use it + steps + examples of good output",
+        "correct": true
+      },
+      {
+        "text": "Just the Skill's name"
+      },
+      {
+        "text": "Prices and promotions"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "If a Skill misses on some cases, what should you do?",
+    "options": [
+      {
+        "text": "Add a rule or example covering that case",
+        "correct": true
+      },
+      {
+        "text": "Delete the Skill immediately"
+      },
+      {
+        "text": "Stop using AI"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Refining a Skill from real results is like what?",
+    "options": [
+      {
+        "text": "Training a new employee to get steadily better",
+        "correct": true
+      },
+      {
+        "text": "Turning the machine off and on"
+      },
+      {
+        "text": "Changing the screen color"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

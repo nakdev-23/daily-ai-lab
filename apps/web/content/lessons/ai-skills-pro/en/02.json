@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 2 · Part 1",
+    "title": "The main file: description + steps",
+    "body": [
+      {
+        "text": "A Skill usually has a main description file (e.g. SKILL.md) stating "
+      },
+      {
+        "text": "'when to use it' + 'what steps to follow'",
+        "bold": true
+      },
+      {
+        "text": ". The most important part is the "
+      },
+      {
+        "text": "description of when to use this Skill",
+        "bold": true
+      },
+      {
+        "text": ", because the AI uses that to decide when to pick it up."
+      }
+    ],
+    "example": "SKILL.md: 'Use when the user asks to write a formal email' + steps: ask the purpose → draft → adjust tone",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 2 · Part 2",
+    "title": "Supporting files",
+    "body": [
+      {
+        "text": "Besides the main file, you can add "
+      },
+      {
+        "text": "example files, templates, or reference data",
+        "bold": true
+      },
+      {
+        "text": ", which the AI pulls in when needed. Tip: write a concise, clear description — don't cram everything into one file until it's cluttered."
+      }
+    ],
+    "example": "Skill folder: SKILL.md + template-email.md + 3 examples of good emails",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the most important part of a Skill's main file?",
+    "options": [
+      {
+        "text": "The description of when to use this Skill",
+        "correct": true
+      },
+      {
+        "text": "The file's background color"
+      },
+      {
+        "text": "The author's name"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What does the AI use the 'when to use' description for?",
+    "options": [
+      {
+        "text": "Deciding when to pick up the Skill",
+        "correct": true
+      },
+      {
+        "text": "Setting the Skill's price"
+      },
+      {
+        "text": "Choosing the AI's language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Besides the main file, what can a Skill include?",
+    "options": [
+      {
+        "text": "Example files, templates, or reference data",
+        "correct": true
+      },
+      {
+        "text": "Music files"
+      },
+      {
+        "text": "Videos only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's a tip for writing a good Skill?",
+    "options": [
+      {
+        "text": "Write it concise and clear, don't cram everything into one file",
+        "correct": true
+      },
+      {
+        "text": "Make it as long as possible"
+      },
+      {
+        "text": "Don't describe when to use it"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

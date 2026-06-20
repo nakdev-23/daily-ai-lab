@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 4 · Part 1",
+    "title": "Grant only the access needed",
+    "body": [
+      {
+        "text": "MCP lets AI touch real data, so manage permissions carefully. The "
+      },
+      {
+        "text": "least privilege",
+        "bold": true
+      },
+      {
+        "text": " principle: allow access only to the folders/data that are needed, and give 'read-only' access if editing isn't required — reducing the risk of data damage."
+      }
+    ],
+    "example": "Connect MCP with read-only access to the reports folder, with no permission to delete or edit files",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 4 · Part 2",
+    "title": "Trust only verified servers",
+    "body": [
+      {
+        "text": "Install MCP servers only from "
+      },
+      {
+        "text": "trusted sources",
+        "bold": true
+      },
+      {
+        "text": ", because a server can access your data. Check who made it and what it can do before connecting — just like installing any plugin: an unknown one could be a vulnerability."
+      }
+    ],
+    "example": "Before installing a server → check the developer, the permissions it requests, and reviews, before allowing data access",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does the least privilege principle mean?",
+    "options": [
+      {
+        "text": "Grant access only to what's necessary",
+        "correct": true
+      },
+      {
+        "text": "Grant everything for convenience"
+      },
+      {
+        "text": "Grant no access at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "If you don't need to edit the data, what access should you grant?",
+    "options": [
+      {
+        "text": "Read-only",
+        "correct": true
+      },
+      {
+        "text": "Read and delete"
+      },
+      {
+        "text": "Administrator rights"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Where should you install MCP servers from?",
+    "options": [
+      {
+        "text": "Trusted, verified sources",
+        "correct": true
+      },
+      {
+        "text": "Anywhere"
+      },
+      {
+        "text": "Only links sent in chat"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Why be careful about unknown servers?",
+    "options": [
+      {
+        "text": "Because a server can access your data — it could be a vulnerability",
+        "correct": true
+      },
+      {
+        "text": "Because it distorts colors"
+      },
+      {
+        "text": "Because it drains the battery"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

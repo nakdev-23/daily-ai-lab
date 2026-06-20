@@ -1,0 +1,115 @@
+[
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 3 · Part 1",
+    "title": "What is RAG?",
+    "body": [
+      {
+        "text": "RAG (Retrieval-Augmented Generation)",
+        "bold": true
+      },
+      {
+        "text": " means having the AI "
+      },
+      {
+        "text": "search your data first, then answer",
+        "bold": true
+      },
+      {
+        "text": " based on it, instead of answering from general knowledge. This makes answers match your documents/knowledge base and reduces hallucination."
+      }
+    ],
+    "example": "Give the AI a product manual → ask 'how to reset model X' → it answers from the real manual, no guessing",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 3 · Part 2",
+    "title": "What is it good for?",
+    "body": [
+      {
+        "text": "RAG suits a "
+      },
+      {
+        "text": "specific knowledge base",
+        "bold": true
+      },
+      {
+        "text": " — company documents, manuals, policies, FAQs. You can build a customer chatbot grounded in your organization's real data. The key is that the data is up to date and well organized."
+      }
+    ],
+    "example": "Build an employee FAQ assistant grounded in all your HR documents → it answers policy questions accurately",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "How does RAG work?",
+    "options": [
+      {
+        "text": "Searches your data first, then answers based on it",
+        "correct": true
+      },
+      {
+        "text": "Answers from general knowledge only"
+      },
+      {
+        "text": "Generates images from text"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's the main benefit of RAG?",
+    "options": [
+      {
+        "text": "Answers match your documents and reduce hallucination",
+        "correct": true
+      },
+      {
+        "text": "It makes the AI answer longer"
+      },
+      {
+        "text": "It changes the language automatically"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What kind of data is RAG good for?",
+    "options": [
+      {
+        "text": "A specific knowledge base like manuals, policies, FAQs",
+        "correct": true
+      },
+      {
+        "text": "General entertainment news"
+      },
+      {
+        "text": "Songs and videos"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the key factor that makes RAG accurate?",
+    "options": [
+      {
+        "text": "The data must be up to date and well organized",
+        "correct": true
+      },
+      {
+        "text": "Using very long prompts"
+      },
+      {
+        "text": "Changing the screen color"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 1 · Part 1",
+    "title": "What is a Skill?",
+    "body": [
+      {
+        "text": "A Skill is a "
+      },
+      {
+        "text": "prepackaged set of instructions + knowledge",
+        "bold": true
+      },
+      {
+        "text": " that teaches an AI to do a specialized task consistently. Instead of retyping long instructions every time, you store the method as a Skill and just call it — like a 'recipe' the AI picks up and uses."
+      }
+    ],
+    "example": "Instead of explaining your brand's writing style every time → create a 'Write in our brand style' Skill to call on",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 1 · Part 2",
+    "title": "Why it's useful",
+    "body": [
+      {
+        "text": "Skills make "
+      },
+      {
+        "text": "results consistent",
+        "bold": true
+      },
+      {
+        "text": ", give the whole team the same standard, and save time. They're great for frequently repeated work — checking documents against a checklist, formatting reports, or reviewing code to team rules."
+      }
+    ],
+    "example": "A 'Review contract' Skill that knows the legal checklist your team uses → the same standard review on every contract",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is a Skill?",
+    "options": [
+      {
+        "text": "A packaged set of instructions + knowledge to teach AI a repeatable specialized task",
+        "correct": true
+      },
+      {
+        "text": "A video editing program"
+      },
+      {
+        "text": "A customer database"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's the main benefit of a Skill?",
+    "options": [
+      {
+        "text": "Consistent results and time savings on repeated work",
+        "correct": true
+      },
+      {
+        "text": "It makes the AI respond slower"
+      },
+      {
+        "text": "It adds more words to the answer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What work is a good fit for a Skill?",
+    "options": [
+      {
+        "text": "Frequently repeated, standardized work like checking documents against a checklist",
+        "correct": true
+      },
+      {
+        "text": "A one-off task never repeated"
+      },
+      {
+        "text": "Work with no fixed pattern at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What is a Skill like?",
+    "options": [
+      {
+        "text": "A recipe the AI can reuse",
+        "correct": true
+      },
+      {
+        "text": "A power-off button"
+      },
+      {
+        "text": "A wallpaper"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

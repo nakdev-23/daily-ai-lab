@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 1 · Part 1",
+    "title": "Break a big task into small steps",
+    "body": [
+      {
+        "text": "Don't give a complex task all at once — "
+      },
+      {
+        "text": "break it into a chain",
+        "bold": true
+      },
+      {
+        "text": ": the output of one step becomes the input of the next. For example: (1) summarize the article → (2) extract the key points → (3) write posts from those points. Each step is clear and checkable."
+      }
+    ],
+    "example": "Step 1: Summarize this report\nStep 2: Extract the 3 standout points\nStep 3: Write 3 post captions, one from each point",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 1 · Part 2",
+    "title": "Why it beats one big prompt",
+    "body": [
+      {
+        "text": "Splitting into steps gives "
+      },
+      {
+        "text": "higher quality and easier fixes",
+        "bold": true
+      },
+      {
+        "text": ". If one step's output is poor, you fix just that step instead of redoing everything — like an assembly line with quality checks at each point."
+      }
+    ],
+    "example": "If the captions miss the mark → go back and sharpen only the 'extract key points' step, no need to start over",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is prompt chaining?",
+    "options": [
+      {
+        "text": "Breaking a task into steps, where one step's output feeds the next",
+        "correct": true
+      },
+      {
+        "text": "Asking the same question over and over"
+      },
+      {
+        "text": "Commanding everything in one sentence"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's the benefit of splitting into steps?",
+    "options": [
+      {
+        "text": "Higher quality and you can fix just the faulty step",
+        "correct": true
+      },
+      {
+        "text": "Takes longer for no benefit"
+      },
+      {
+        "text": "Always makes the answer shorter"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "If a middle step's output is poor, what should you do?",
+    "options": [
+      {
+        "text": "Fix just that step, no need to redo everything",
+        "correct": true
+      },
+      {
+        "text": "Start over every time"
+      },
+      {
+        "text": "Skip straight to the last step"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What is prompt chaining like?",
+    "options": [
+      {
+        "text": "An assembly line with quality checks at each point",
+        "correct": true
+      },
+      {
+        "text": "Randomly clicking around"
+      },
+      {
+        "text": "Turning off the machine"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

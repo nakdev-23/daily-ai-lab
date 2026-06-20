@@ -1,0 +1,125 @@
+[
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 4 · Part 1",
+    "title": "Combine every technique into a system",
+    "body": [
+      {
+        "text": "Real work often mixes several techniques: use "
+      },
+      {
+        "text": "RAG",
+        "bold": true
+      },
+      {
+        "text": " to retrieve data → "
+      },
+      {
+        "text": "chaining",
+        "bold": true
+      },
+      {
+        "text": " to process it in steps → "
+      },
+      {
+        "text": "agent/MCP",
+        "bold": true
+      },
+      {
+        "text": " to act and save results. Designing a workflow means deciding which step uses what, so they flow together toward a goal."
+      }
+    ],
+    "example": "Workflow: RAG finds the policy → summarize in plain language → write an email to the team → save it to the system",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Advanced AI · Chapter 4 · Part 2",
+    "title": "Start small, measure, scale",
+    "body": [
+      {
+        "text": "Don't build a huge workflow all at once — "
+      },
+      {
+        "text": "start with the key steps, test, measure, then expand",
+        "bold": true
+      },
+      {
+        "text": ". Always have a 'human-in-the-loop' checkpoint at risky points to catch mistakes before anything goes live."
+      }
+    ],
+    "example": "Start with RAG + summarize; once it works well, add an auto-email step with a person approving it",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does a real workflow often combine?",
+    "options": [
+      {
+        "text": "RAG + chaining + agent/MCP flowing together",
+        "correct": true
+      },
+      {
+        "text": "Only a single technique"
+      },
+      {
+        "text": "No planning at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How should you build a workflow?",
+    "options": [
+      {
+        "text": "Start small, test, measure, then expand",
+        "correct": true
+      },
+      {
+        "text": "Build it all big in one go"
+      },
+      {
+        "text": "Don't test it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What is human-in-the-loop?",
+    "options": [
+      {
+        "text": "A checkpoint where a person reviews risky steps before going live",
+        "correct": true
+      },
+      {
+        "text": "The AI does everything with no humans allowed"
+      },
+      {
+        "text": "A power-off button"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's a good example workflow order?",
+    "options": [
+      {
+        "text": "Retrieve data → process in steps → act → save results",
+        "correct": true
+      },
+      {
+        "text": "Save results first, then find the data"
+      },
+      {
+        "text": "Randomize the order every time"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

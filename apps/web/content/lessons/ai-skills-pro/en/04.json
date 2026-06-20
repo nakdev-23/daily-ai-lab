@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 4 · Part 1",
+    "title": "One Skill, one job",
+    "body": [
+      {
+        "text": "Don't cram multiple jobs into one Skill — keep it "
+      },
+      {
+        "text": "one Skill = one clear job",
+        "bold": true
+      },
+      {
+        "text": ", so it's easy to call and maintain. For example, split 'write email', 'summarize meeting', and 'review contract' into separate Skills."
+      }
+    ],
+    "example": "Instead of one big 'office helper' Skill → split into smaller Skills by task type",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Skills · Chapter 4 · Part 2",
+    "title": "Share the standard with the whole team",
+    "body": [
+      {
+        "text": "A good Skill can be shared with the team so everyone works to the same standard. Keep it in a central place and version it together — this is the real power of Skills at the organization level."
+      }
+    ],
+    "example": "The content team all use the same 'brand tone' Skill → everyone's work has one consistent voice",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's a good Skill design principle?",
+    "options": [
+      {
+        "text": "One Skill = one clear job",
+        "correct": true
+      },
+      {
+        "text": "Cram every job into one Skill"
+      },
+      {
+        "text": "Don't name the Skill"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's the benefit of splitting Skills by task?",
+    "options": [
+      {
+        "text": "Easy to call and easy to maintain",
+        "correct": true
+      },
+      {
+        "text": "It makes the AI slower"
+      },
+      {
+        "text": "It wastes space unnecessarily"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the power of Skills at the team level?",
+    "options": [
+      {
+        "text": "Everyone works to the same standard when sharing Skills",
+        "correct": true
+      },
+      {
+        "text": "Each person gets wildly different results"
+      },
+      {
+        "text": "No effect on the team"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "How should a team store its Skills?",
+    "options": [
+      {
+        "text": "In a central place, versioned together",
+        "correct": true
+      },
+      {
+        "text": "On one person's machine, never shared"
+      },
+      {
+        "text": "Delete them every week"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

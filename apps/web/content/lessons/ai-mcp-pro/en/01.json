@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 1 · Part 1",
+    "title": "What is MCP?",
+    "body": [
+      {
+        "text": "MCP ("
+      },
+      {
+        "text": "Model Context Protocol",
+        "bold": true
+      },
+      {
+        "text": ") is a "
+      },
+      {
+        "text": "common standard",
+        "bold": true
+      },
+      {
+        "text": " that lets AI connect to external tools and data. Think of it as the AI's 'USB port': plug in any tool and the AI can use it, without building a custom one-off connection every time."
+      }
+    ],
+    "example": "Connect MCP so the AI can read files in your project folder, then ask 'summarize what this code does'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "MCP · Chapter 1 · Part 2",
+    "title": "What problem does it solve?",
+    "body": [
+      {
+        "text": "Normally AI only knows what we type. MCP lets the AI "
+      },
+      {
+        "text": "access our real data",
+        "bold": true
+      },
+      {
+        "text": " — files, databases, calendars, or company systems — in a structured, secure way, so answers are grounded in real data instead of guesses."
+      }
+    ],
+    "example": "Connect MCP to a sales database → ask 'what are the top 5 best-selling products this month?'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does MCP stand for?",
+    "options": [
+      {
+        "text": "Model Context Protocol",
+        "correct": true
+      },
+      {
+        "text": "Multi Channel Platform"
+      },
+      {
+        "text": "Music Creation Program"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What is MCP like?",
+    "options": [
+      {
+        "text": "A USB port for AI — plug in any tool and it works",
+        "correct": true
+      },
+      {
+        "text": "A computer speaker"
+      },
+      {
+        "text": "A photo editor"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What problem does MCP solve?",
+    "options": [
+      {
+        "text": "It lets AI access our real data in a structured way",
+        "correct": true
+      },
+      {
+        "text": "It makes AI type faster"
+      },
+      {
+        "text": "It changes the AI's voice"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the result of connecting MCP?",
+    "options": [
+      {
+        "text": "Answers grounded in real data instead of guesses",
+        "correct": true
+      },
+      {
+        "text": "The AI forgets all previous info"
+      },
+      {
+        "text": "The AI only works offline"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

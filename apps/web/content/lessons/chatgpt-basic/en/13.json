@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 1",
+    "title": "What is iterating, and why do it?",
+    "body": [
+      {
+        "text": ""
+      },
+      {
+        "text": "Iterating",
+        "bold": true
+      },
+      {
+        "text": " means refining a result over and over with follow-up prompts — like \"make it shorter,\" \"add an example,\" or \"change the tone to formal.\" It works better than retyping a brand-new prompt each time."
+      }
+    ],
+    "example": "\"Great. Now add a call-to-action at the end of the article and make it more clickable.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 2",
+    "title": "Techniques for good follow-up prompts",
+    "body": [
+      {
+        "text": "A good follow-up prompt "
+      },
+      {
+        "text": "states clearly what you want changed",
+        "bold": true
+      },
+      {
+        "text": " instead of just saying \"fix it.\" Say what to change, where, and why — e.g. \"the second paragraph is too long, cut it to 3 sentences.\""
+      }
+    ],
+    "example": "\"Point 3 isn't clear yet — explain it with a real-life example and add one supporting statistic.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does \"iterate\" mean in the context of using ChatGPT?",
+    "options": [
+      {
+        "text": "Deleting the chat and starting over"
+      },
+      {
+        "text": "Refining the result repeatedly with follow-up prompts",
+        "correct": true
+      },
+      {
+        "text": "Switching the model you use"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good follow-up prompt be like?",
+    "options": [
+      {
+        "text": "Just say \"fix it\" with no details"
+      },
+      {
+        "text": "Clearly state what to change, where, and how",
+        "correct": true
+      },
+      {
+        "text": "Retype the whole prompt from scratch"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is an example of a good follow-up prompt?",
+    "options": [
+      {
+        "text": "\"Fix it\""
+      },
+      {
+        "text": "\"Better than before\""
+      },
+      {
+        "text": "\"Trim the first paragraph to 2 sentences and add emoji to make it more readable\"",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "ChatGPT wrote an article but it's too long. How should you follow up?",
+    "options": [
+      {
+        "text": "\"Not good\""
+      },
+      {
+        "text": "\"Cut it to about 200 words and keep the same subheadings\"",
+        "correct": true
+      },
+      {
+        "text": "Start a whole new chat"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the principle behind iterating?",
+    "options": [
+      {
+        "text": "Ask once and it must be perfect"
+      },
+      {
+        "text": "Gradually adjust point by point until you get the right result",
+        "correct": true
+      },
+      {
+        "text": "The longer, the better"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

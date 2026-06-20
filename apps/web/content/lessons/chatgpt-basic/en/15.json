@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 5",
+    "title": "ChatGPT in everyday life",
+    "body": [
+      {
+        "text": "ChatGPT helps with all kinds of everyday tasks, like "
+      },
+      {
+        "text": "planning trips, writing to-do lists, finding recipes, or prepping for a job interview",
+        "bold": true
+      },
+      {
+        "text": ". Think of something that takes you time, then try letting ChatGPT help — you'll save a lot of it."
+      }
+    ],
+    "example": "\"Plan a 3-day, 2-night trip to Chiang Mai, budget 5,000 baht for 2 people, focused on nature and local food.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 6",
+    "title": "Build a ChatGPT habit",
+    "body": [
+      {
+        "text": "The key is to "
+      },
+      {
+        "text": "use it every day on the real tasks you run into",
+        "bold": true
+      },
+      {
+        "text": " — drafting emails, finding gift ideas, or learning something new. The more you use it, the better you get at writing prompts that deliver the result you want."
+      }
+    ],
+    "example": "\"I need to send a report to my boss today — proofread this email to be formal and concise before I send it: [paste the email]\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which is an example of using ChatGPT in everyday life?",
+    "options": [
+      {
+        "text": "Only for coding work"
+      },
+      {
+        "text": "Planning trips, writing to-do lists, and prepping for job interviews",
+        "correct": true
+      },
+      {
+        "text": "Only translating important documents"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the best way to build your ChatGPT skills?",
+    "options": [
+      {
+        "text": "Finish reading a book about AI first"
+      },
+      {
+        "text": "Use it every day on real tasks and practice writing prompts",
+        "correct": true
+      },
+      {
+        "text": "Wait for AI to improve first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "After finishing this course, what should you do next?",
+    "options": [
+      {
+        "text": "Stop using ChatGPT until you study more"
+      },
+      {
+        "text": "Use ChatGPT in real work and life, and practice iterating answers to make them better",
+        "correct": true
+      },
+      {
+        "text": "Learn a new model before actually using it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get better at ChatGPT, what habit should you build?",
+    "options": [
+      {
+        "text": "Use it every day on real tasks, then adjust prompts based on the results",
+        "correct": true
+      },
+      {
+        "text": "Only read theory"
+      },
+      {
+        "text": "Use it once and quit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which everyday ChatGPT uses can you start with right now?",
+    "options": [
+      {
+        "text": "Drafting customer replies, planning meals, and summarizing emails",
+        "correct": true
+      },
+      {
+        "text": "Replacing all your thinking without checking anything"
+      },
+      {
+        "text": "None at all"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

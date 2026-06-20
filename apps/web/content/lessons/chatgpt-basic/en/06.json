@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 5",
+    "title": "Specify the output format you want",
+    "body": [
+      {
+        "text": "Stating the "
+      },
+      {
+        "text": "format, length, and style",
+        "bold": true
+      },
+      {
+        "text": " of the output helps ChatGPT match what you need — for example, ask for bullet points, a table, a list of headings, or a word count."
+      }
+    ],
+    "example": "\"Give 5 reasons to exercise daily, as bullet points, each under 20 words.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 6",
+    "title": "Set the tone and style",
+    "body": [
+      {
+        "text": "Beyond format, you can also set the "
+      },
+      {
+        "text": "tone",
+        "bold": true
+      },
+      {
+        "text": " — formal, casual, playful, or academic — which helps the content fit different channels and audiences."
+      }
+    ],
+    "example": "\"Write a Facebook post promoting a coffee shop in a fun, friendly, eye-catching style, no more than 3 lines.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does specifying the output format in a prompt help with?",
+    "options": [
+      {
+        "text": "It makes ChatGPT work faster"
+      },
+      {
+        "text": "It gets you a result that better matches what you need",
+        "correct": true
+      },
+      {
+        "text": "It reduces ChatGPT's quota usage"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "In prompt writing, what does \"tone\" refer to?",
+    "options": [
+      {
+        "text": "The length of the text"
+      },
+      {
+        "text": "The voice or writing style, e.g. formal or casual",
+        "correct": true
+      },
+      {
+        "text": "The language the answer is in"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which prompt specifies the output format most clearly?",
+    "options": [
+      {
+        "text": "\"Tell me the benefits of fruit\""
+      },
+      {
+        "text": "\"Write about fruit\""
+      },
+      {
+        "text": "\"Make a table comparing 5 fruits, showing calories, vitamins, and price per kilogram\"",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want to compare phone plans from 3 carriers. Which format is easiest to read?",
+    "options": [
+      {
+        "text": "Ask for a long paragraph"
+      },
+      {
+        "text": "Ask for a comparison table — price / data / calls",
+        "correct": true
+      },
+      {
+        "text": "Ask for a poem"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Writing an Instagram caption for a 50%-off promo, what tone should you set?",
+    "options": [
+      {
+        "text": "Academic and serious"
+      },
+      {
+        "text": "Fun, catchy, concise",
+        "correct": true
+      },
+      {
+        "text": "Formal, like an official letter"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

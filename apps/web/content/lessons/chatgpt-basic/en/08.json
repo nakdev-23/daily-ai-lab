@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 3",
+    "title": "Translating languages with ChatGPT",
+    "body": [
+      {
+        "text": "ChatGPT can translate "
+      },
+      {
+        "text": "more than 50 languages",
+        "bold": true
+      },
+      {
+        "text": ", and it can adapt the tone to fit the context too — formal for business, or casual for social media. It feels more natural than Google Translate."
+      }
+    ],
+    "example": "\"Translate this into formal English for a business email: 'Thank you for your interest in our product.'\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 4",
+    "title": "Summarizing text with ChatGPT",
+    "body": [
+      {
+        "text": ""
+      },
+      {
+        "text": "Summarization",
+        "bold": true
+      },
+      {
+        "text": " is one of ChatGPT's standout skills. Paste a long article, report, or document and ask for the key points — saving you a lot of reading time."
+      }
+    ],
+    "example": "\"Summarize this article into 5 key points, each no more than 2 sentences: [paste the article]\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is ChatGPT better than Google Translate?",
+    "options": [
+      {
+        "text": "It translates faster"
+      },
+      {
+        "text": "It translates more naturally and adapts tone to context",
+        "correct": true
+      },
+      {
+        "text": "It supports more languages"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When you want to summarize a long article, what should you do?",
+    "options": [
+      {
+        "text": "Just give the article's title"
+      },
+      {
+        "text": "Paste the article and specify what kind of summary you want",
+        "correct": true
+      },
+      {
+        "text": "Ask point by point"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main benefit of summarizing text with ChatGPT?",
+    "options": [
+      {
+        "text": "It saves time reading large amounts of information",
+        "correct": true
+      },
+      {
+        "text": "It makes the information 100% accurate"
+      },
+      {
+        "text": "It turns text into images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You need to send a business email in English. How should you ask it to translate?",
+    "options": [
+      {
+        "text": "\"Translate to English\""
+      },
+      {
+        "text": "\"Translate to formal English for a business email\"",
+        "correct": true
+      },
+      {
+        "text": "\"Translate it in teen slang\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "You have a 10-page report and want the gist quickly. What should you do?",
+    "options": [
+      {
+        "text": "Read the whole thing yourself first"
+      },
+      {
+        "text": "Paste the content and ask for a summary in 5 key points",
+        "correct": true
+      },
+      {
+        "text": "Ask it to translate to another language first"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

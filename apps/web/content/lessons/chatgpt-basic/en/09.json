@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 5",
+    "title": "How does ChatGPT help you brainstorm?",
+    "body": [
+      {
+        "text": "ChatGPT is a "
+      },
+      {
+        "text": "thinking partner that never runs out of ideas",
+        "bold": true
+      },
+      {
+        "text": " — great for brainstorming product names, campaign ideas, post topics, or solutions to a problem. Just give the context and ask for \"10 ideas\" to get a varied list instantly."
+      }
+    ],
+    "example": "\"Brainstorm 10 Japanese-style coffee shop names that are easy to remember and sound premium.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 6",
+    "title": "Ask ChatGPT for multiple perspectives",
+    "body": [
+      {
+        "text": "Beyond ideas, you can have ChatGPT "
+      },
+      {
+        "text": "analyze from several angles",
+        "bold": true
+      },
+      {
+        "text": " — the customer's view, a competitor's view, or the business view — helping you spot opportunities and risks you might have missed."
+      }
+    ],
+    "example": "\"Analyze a fresh-cut fruit delivery business idea from the perspective of customers, competitors, and investors.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What kind of brainstorming is ChatGPT good for?",
+    "options": [
+      {
+        "text": "Only finding product names"
+      },
+      {
+        "text": "Product names, campaign ideas, post topics, and problem solutions",
+        "correct": true
+      },
+      {
+        "text": "Only marketing work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How do you get a variety of ideas from ChatGPT?",
+    "options": [
+      {
+        "text": "Ask one idea at a time"
+      },
+      {
+        "text": "Give the context and ask for \"10 ideas\" or however many you want",
+        "correct": true
+      },
+      {
+        "text": "Use English only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of asking ChatGPT for multiple perspectives?",
+    "options": [
+      {
+        "text": "It makes the answer longer"
+      },
+      {
+        "text": "It helps you spot opportunities and risks you might have missed",
+        "correct": true
+      },
+      {
+        "text": "It makes the information more up to date"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want lots of coffee shop name ideas. How should you ask?",
+    "options": [
+      {
+        "text": "\"Name a shop\""
+      },
+      {
+        "text": "\"Suggest 20 coffee shop names, warm and memorable, each with a short reason\"",
+        "correct": true
+      },
+      {
+        "text": "\"Is a coffee shop a good idea?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "To make a well-rounded decision on something important, what should you ask ChatGPT for?",
+    "options": [
+      {
+        "text": "A single \"most correct\" answer"
+      },
+      {
+        "text": "Pros, cons, and multiple perspectives to compare",
+        "correct": true
+      },
+      {
+        "text": "To predict the future"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

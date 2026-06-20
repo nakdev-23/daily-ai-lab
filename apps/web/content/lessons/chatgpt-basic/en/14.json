@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 3",
+    "title": "What is hallucination?",
+    "body": [
+      {
+        "text": "Hallucination is when ChatGPT "
+      },
+      {
+        "text": "produces information that sounds credible but is false",
+        "bold": true
+      },
+      {
+        "text": " — citing people, statistics, or events that don't actually exist. It's an important limitation to watch for, especially when using answers for serious work."
+      }
+    ],
+    "example": "\"For the statistic you just gave, please also provide the source and year of publication so I can verify it.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 5 · Part 4",
+    "title": "Other limitations to know",
+    "body": [
+      {
+        "text": "Besides hallucination, ChatGPT's knowledge is "
+      },
+      {
+        "text": "cut off at the model's training date (knowledge cutoff)",
+        "bold": true
+      },
+      {
+        "text": ", so don't rely on it for the latest news. Always verify important facts against other sources."
+      }
+    ],
+    "example": "\"I know your data has a cutoff — can you tell me what changes in 2024 I should be aware of?\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does hallucination mean in ChatGPT?",
+    "options": [
+      {
+        "text": "ChatGPT responds too slowly"
+      },
+      {
+        "text": "ChatGPT produces info that sounds credible but isn't true",
+        "correct": true
+      },
+      {
+        "text": "ChatGPT refuses to answer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does knowledge cutoff mean?",
+    "options": [
+      {
+        "text": "ChatGPT only knows info before its training date — not the latest news",
+        "correct": true
+      },
+      {
+        "text": "The maximum number of words ChatGPT can answer"
+      },
+      {
+        "text": "How long ChatGPT stays online per day"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should you do when ChatGPT gives you a statistic or fact?",
+    "options": [
+      {
+        "text": "Believe it immediately because AI doesn't lie"
+      },
+      {
+        "text": "Always verify the fact against other sources",
+        "correct": true
+      },
+      {
+        "text": "Just ask again to confirm"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "ChatGPT gives a statistic with a cited source. What should you do?",
+    "options": [
+      {
+        "text": "Trust it and use it right away"
+      },
+      {
+        "text": "Check it against the real source first — it could be off",
+        "correct": true
+      },
+      {
+        "text": "Use it now and fix it later"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "You ask about this week's news but ChatGPT says it doesn't know. Why?",
+    "options": [
+      {
+        "text": "ChatGPT is broken"
+      },
+      {
+        "text": "It has a knowledge cutoff — its data may not be up to date",
+        "correct": true
+      },
+      {
+        "text": "You need to pay more"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

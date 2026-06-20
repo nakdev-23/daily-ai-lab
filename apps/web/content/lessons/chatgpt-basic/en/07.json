@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 1",
+    "title": "How does ChatGPT help you write?",
+    "body": [
+      {
+        "text": "ChatGPT is a "
+      },
+      {
+        "text": "powerful writing assistant",
+        "bold": true
+      },
+      {
+        "text": " — articles, social posts, emails, reports, or video scripts. Just give it the topic, audience, and format you want, and you'll get a draft you can refine right away."
+      }
+    ],
+    "example": "\"Write a 500-word article on 'how to choose a laptop for students' in a casual tone, with 3 subheadings.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 3 · Part 2",
+    "title": "Edit and improve existing writing",
+    "body": [
+      {
+        "text": "Besides writing from scratch, ChatGPT can also "
+      },
+      {
+        "text": "proofread and improve writing you already have",
+        "bold": true
+      },
+      {
+        "text": " — adjust the tone, check grammar, or make it more concise. Just paste your original text and say what you want changed."
+      }
+    ],
+    "example": "\"Make this more formal and 30% more concise: [paste your original text]\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How can ChatGPT help with writing?",
+    "options": [
+      {
+        "text": "Only with academic articles"
+      },
+      {
+        "text": "Writing new content, editing, and improving existing writing",
+        "correct": true
+      },
+      {
+        "text": "Only checking English grammar"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When you want ChatGPT to edit your writing, what should you do?",
+    "options": [
+      {
+        "text": "Just say \"make it better\" with no details"
+      },
+      {
+        "text": "Paste the original text and say what you want changed",
+        "correct": true
+      },
+      {
+        "text": "Give only the title without attaching the text"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kinds of content can ChatGPT help write?",
+    "options": [
+      {
+        "text": "Only news and reports"
+      },
+      {
+        "text": "Only social media posts"
+      },
+      {
+        "text": "Articles, emails, social posts, scripts, and much more",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have a draft and want it shorter and more formal. How should you ask?",
+    "options": [
+      {
+        "text": "Just say \"rewrite it\""
+      },
+      {
+        "text": "Paste the text and say \"make it ~30% more concise and more formal\"",
+        "correct": true
+      },
+      {
+        "text": "Send only the title"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of writing is ChatGPT good for?",
+    "options": [
+      {
+        "text": "Only academic articles"
+      },
+      {
+        "text": "A wide range — emails, posts, scripts, and reports",
+        "correct": true
+      },
+      {
+        "text": "English only"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 5",
+    "title": "What are Custom GPTs?",
+    "body": [
+      {
+        "text": "Custom GPTs are versions of ChatGPT "
+      },
+      {
+        "text": "specially tuned for a specific task or topic",
+        "bold": true
+      },
+      {
+        "text": " — like a GPT for coding, a GPT for language learning, or a GPT loaded with a company's own knowledge. They're built by users and companies."
+      }
+    ],
+    "example": "\"I want a GPT that helps write Instagram captions for restaurants, with suitable hashtags.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 6",
+    "title": "What is the GPT Store?",
+    "body": [
+      {
+        "text": "The GPT Store is like an "
+      },
+      {
+        "text": "App Store, but for Custom GPTs",
+        "bold": true
+      },
+      {
+        "text": ". It has thousands of ready-made GPTs to use for free — for analyzing PDFs, teaching cooking, or helping with UX design. Find it in the left sidebar of ChatGPT."
+      }
+    ],
+    "example": "\"Find a Custom GPT that analyzes Thai PDF documents and summarizes the key points.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are Custom GPTs?",
+    "options": [
+      {
+        "text": "A new version of ChatGPT"
+      },
+      {
+        "text": "ChatGPT tuned for a specific task or topic",
+        "correct": true
+      },
+      {
+        "text": "A feature for admins only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is the GPT Store like?",
+    "options": [
+      {
+        "text": "A shop selling OpenAI's API"
+      },
+      {
+        "text": "An App Store, but for Custom GPTs",
+        "correct": true
+      },
+      {
+        "text": "OpenAI's database"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which are examples of Custom GPTs in the GPT Store?",
+    "options": [
+      {
+        "text": "A GPT for controlling IoT devices"
+      },
+      {
+        "text": "GPTs for analyzing PDFs, teaching cooking, and UX design",
+        "correct": true
+      },
+      {
+        "text": "A GPT for stock trading"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You design often and want a ready-set specialized assistant. Where should you look?",
+    "options": [
+      {
+        "text": "GPT Store",
+        "correct": true
+      },
+      {
+        "text": "Chat History"
+      },
+      {
+        "text": "The New chat button"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of work are Custom GPTs best for?",
+    "options": [
+      {
+        "text": "One-off tasks you never repeat"
+      },
+      {
+        "text": "Repetitive work where you want the role/settings to stay consistent",
+        "correct": true
+      },
+      {
+        "text": "Work that needs randomness"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

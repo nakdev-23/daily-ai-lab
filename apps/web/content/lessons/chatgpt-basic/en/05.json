@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 3",
+    "title": "What is role prompting?",
+    "body": [
+      {
+        "text": "Role prompting means telling ChatGPT to "
+      },
+      {
+        "text": "\"play the part\" of an expert in some field",
+        "bold": true
+      },
+      {
+        "text": ". Starting with \"Act as...\" or \"You are...\" makes the answer more specialized and better targeted."
+      }
+    ],
+    "example": "\"You are a professional nutritionist. Suggest high-protein breakfast options for someone who works out.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 2 · Part 4",
+    "title": "Examples of role prompting",
+    "body": [
+      {
+        "text": "Popular roles include "
+      },
+      {
+        "text": "teacher, marketer, programmer, writer, or business consultant",
+        "bold": true
+      },
+      {
+        "text": ". Naming a role helps ChatGPT adjust its tone, level of expertise, and perspective to fit the task."
+      }
+    ],
+    "example": "\"Act as a senior marketing consultant. Analyze the strengths and weaknesses of a newly opened local coffee brand.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does role prompting work?",
+    "options": [
+      {
+        "text": "It switches the model to a different type"
+      },
+      {
+        "text": "It tells ChatGPT to take on the role of an expert in some field",
+        "correct": true
+      },
+      {
+        "text": "It makes ChatGPT search the web"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which prompt is a correct example of role prompting?",
+    "options": [
+      {
+        "text": "\"Help me write an email\""
+      },
+      {
+        "text": "\"You are a lawyer specializing in labor law. Explain an employee's sick-leave rights.\"",
+        "correct": true
+      },
+      {
+        "text": "\"Summarize today's economic news\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main benefit of role prompting?",
+    "options": [
+      {
+        "text": "It makes ChatGPT respond faster"
+      },
+      {
+        "text": "It makes answers more expert and better targeted",
+        "correct": true
+      },
+      {
+        "text": "It makes ChatGPT use the latest data from the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want beginner-friendly advice on starting to save money. Which role fits best?",
+    "options": [
+      {
+        "text": "\"You are a personal finance advisor. Explain it simply for a beginner.\"",
+        "correct": true
+      },
+      {
+        "text": "\"You are the world's greatest poet.\""
+      },
+      {
+        "text": "Don't add a role at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Adding a role helps most with what?",
+    "options": [
+      {
+        "text": "Making ChatGPT respond faster"
+      },
+      {
+        "text": "Tuning the expertise level and tone of the answer to fit the task",
+        "correct": true
+      },
+      {
+        "text": "Letting ChatGPT search the web"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

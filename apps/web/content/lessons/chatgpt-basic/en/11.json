@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 3",
+    "title": "What are Custom Instructions?",
+    "body": [
+      {
+        "text": "Custom Instructions let you set "
+      },
+      {
+        "text": "permanent instructions that apply to every conversation",
+        "bold": true
+      },
+      {
+        "text": " without retyping them each time — like who you are, the tone you want, or whether answers should be short or long."
+      }
+    ],
+    "example": "\"Always answer in Thai, use simple language, avoid jargon, and include an example in every answer.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 4",
+    "title": "Setting up Custom Instructions",
+    "body": [
+      {
+        "text": "Custom Instructions have two parts: "
+      },
+      {
+        "text": "\"about you\" and \"how you want ChatGPT to respond\"",
+        "bold": true
+      },
+      {
+        "text": ". Set them under Settings > Personalization > Custom Instructions — they take effect on every new conversation right away."
+      }
+    ],
+    "example": "\"I own a small food business (SME). When answering, keep in mind the budget constraints of a small business.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do Custom Instructions work?",
+    "options": [
+      {
+        "text": "They apply only to the current conversation"
+      },
+      {
+        "text": "They're permanent instructions that apply to every new conversation",
+        "correct": true
+      },
+      {
+        "text": "They only work with GPT-4o"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How many parts do Custom Instructions have?",
+    "options": [
+      {
+        "text": "1 part"
+      },
+      {
+        "text": "2 parts: about you, and how you want ChatGPT to respond",
+        "correct": true
+      },
+      {
+        "text": "3 parts"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main benefit of Custom Instructions?",
+    "options": [
+      {
+        "text": "They make ChatGPT free to use with no limits"
+      },
+      {
+        "text": "No retyping each time — ChatGPT remembers the behavior you want",
+        "correct": true
+      },
+      {
+        "text": "They give ChatGPT access to your private data"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want every answer in Thai and always concise, without repeating the instruction. Where do you set this?",
+    "options": [
+      {
+        "text": "Custom Instructions",
+        "correct": true
+      },
+      {
+        "text": "Click New chat every time"
+      },
+      {
+        "text": "Switch the model"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How are Custom Instructions different from typing an instruction in each chat?",
+    "options": [
+      {
+        "text": "They only work once"
+      },
+      {
+        "text": "Set once, applies to every conversation that follows",
+        "correct": true
+      },
+      {
+        "text": "They make responses slower"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 1",
+    "title": "What is Memory in ChatGPT?",
+    "body": [
+      {
+        "text": "The "
+      },
+      {
+        "text": "Memory",
+        "bold": true
+      },
+      {
+        "text": " feature lets ChatGPT remember important details about you across conversations — your name, job, preferences, or goals — so you don't have to reintroduce yourself every time you start a new chat."
+      }
+    ],
+    "example": "\"Remember that I'm a high-school English teacher and I like using everyday-life examples.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Basics · Chapter 4 · Part 2",
+    "title": "Managing ChatGPT's Memory",
+    "body": [
+      {
+        "text": "You can "
+      },
+      {
+        "text": "view, edit, or delete Memory",
+        "bold": true
+      },
+      {
+        "text": " under Settings > Personalization > Memory. ChatGPT shows everything it has remembered, and you control what it keeps or forgets."
+      }
+    ],
+    "example": "\"Forget the info about my old project, and remember that I now work in the fintech industry.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does the Memory feature do in ChatGPT?",
+    "options": [
+      {
+        "text": "Makes ChatGPT respond faster"
+      },
+      {
+        "text": "Lets ChatGPT remember your info across chats, so you don't reintroduce yourself",
+        "correct": true
+      },
+      {
+        "text": "Lets ChatGPT search the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Where do you manage ChatGPT's Memory?",
+    "options": [
+      {
+        "text": "Settings > Personalization > Memory",
+        "correct": true
+      },
+      {
+        "text": "Settings > Account > Privacy"
+      },
+      {
+        "text": "Settings > Model > Preferences"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's an example of info worth letting ChatGPT remember?",
+    "options": [
+      {
+        "text": "Passwords and sensitive personal data"
+      },
+      {
+        "text": "Your job, preferences, and work-related goals",
+        "correct": true
+      },
+      {
+        "text": "Credit card details"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want ChatGPT to suggest menus knowing you're allergic to cow's milk. What should you do?",
+    "options": [
+      {
+        "text": "Tell it this and have it saved to Memory",
+        "correct": true
+      },
+      {
+        "text": "Retype it every single time"
+      },
+      {
+        "text": "Switch to GPT-3.5"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which is appropriate to let ChatGPT remember via Memory?",
+    "options": [
+      {
+        "text": "Your bank password"
+      },
+      {
+        "text": "Your job, preferences, and the work style you use regularly",
+        "correct": true
+      },
+      {
+        "text": "Your credit card number"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

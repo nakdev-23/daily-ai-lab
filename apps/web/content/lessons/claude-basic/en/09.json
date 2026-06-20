@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 5",
+    "title": "Using Projects for work",
+    "body": [
+      {
+        "text": "Projects are ideal for repetitive work or work that needs consistency. Real examples: a "
+      },
+      {
+        "text": "Project for writing blog or social media content",
+        "bold": true
+      },
+      {
+        "text": " with the brand voice and style guide in its Knowledge, or a customer support Project where Claude answers questions following set FAQs and company policy — so "
+      },
+      {
+        "text": "everyone on the team gets output to the same standard",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"This Project already has all the product info. Draft a reply for a customer asking about the return policy — polite and concise.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 6",
+    "title": "Real-world Project examples",
+    "body": [
+      {
+        "text": "Beyond content and support, Projects also suit "
+      },
+      {
+        "text": "research, studying, and personal development",
+        "bold": true
+      },
+      {
+        "text": " — like a language-learning Project where Claude knows your level and picks up where you left off, or a project-management Project with your team info and timeline. Having separate Projects means you "
+      },
+      {
+        "text": "don't mix the contexts of different kinds of work",
+        "bold": true
+      },
+      {
+        "text": ", so Claude stays focused and more accurate."
+      }
+    ],
+    "example": "\"My Japanese-learning Project: I've studied for 3 months and know all of Hiragana and Katakana. Today I want to practice 10 basic Kanji.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the benefit of separating Projects by type of work?",
+    "options": [
+      {
+        "text": "It saves more tokens"
+      },
+      {
+        "text": "It prevents mixing contexts, so Claude stays focused and more accurate",
+        "correct": true
+      },
+      {
+        "text": "It makes Claude 50% faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which kind of Project is best suited to Claude Projects?",
+    "options": [
+      {
+        "text": "A one-time question you never use again"
+      },
+      {
+        "text": "A blog-writing Project that needs a consistent style and brand voice",
+        "correct": true
+      },
+      {
+        "text": "A simple number calculation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "To have Claude help manage a team, what should you put in Project Knowledge?",
+    "options": [
+      {
+        "text": "Team info, timeline, and work rules",
+        "correct": true
+      },
+      {
+        "text": "Claude's personal history"
+      },
+      {
+        "text": "Passwords for various systems"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have Claude help with HR work consistently, what should you put in Project Knowledge?",
+    "options": [
+      {
+        "text": "Company policies, document templates, and relevant regulations",
+        "correct": true
+      },
+      {
+        "text": "All employees' sensitive personal data"
+      },
+      {
+        "text": "Nothing at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of separating Projects by type of work?",
+    "options": [
+      {
+        "text": "Contexts don't mix, so answers fit each area of work",
+        "correct": true
+      },
+      {
+        "text": "It makes things slower"
+      },
+      {
+        "text": "There's no benefit"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

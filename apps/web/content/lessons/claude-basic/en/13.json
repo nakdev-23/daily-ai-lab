@@ -1,0 +1,149 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 1",
+    "title": "Free vs Pro vs Team",
+    "body": [
+      {
+        "text": "Claude.ai has 3 main plans. The "
+      },
+      {
+        "text": "Free",
+        "bold": true
+      },
+      {
+        "text": " plan is free but has a daily usage limit and uses Claude Sonnet. The "
+      },
+      {
+        "text": "Pro",
+        "bold": true
+      },
+      {
+        "text": " plan, $20/month, gives about 5x more usage, access to Opus, and priority access during busy times. The "
+      },
+      {
+        "text": "Team",
+        "bold": true
+      },
+      {
+        "text": " plan, $25–30/user/month, adds organization features like an admin console and usage analytics to make managing a team easier."
+      }
+    ],
+    "example": "\"Compare the value of Claude's Free vs Pro plans for a freelancer who writes articles.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 2",
+    "title": "Which plan should you use?",
+    "body": [
+      {
+        "text": "Choosing a plan depends on how often you use it. If you use Claude occasionally or are still trying it out, "
+      },
+      {
+        "text": "the Free plan is enough to start",
+        "bold": true
+      },
+      {
+        "text": ". If you use it heavily every day for professional work, Pro is great value — higher limits and a better model. For a business with a team, the "
+      },
+      {
+        "text": "Team plan gives both collaboration and admin control",
+        "bold": true
+      },
+      {
+        "text": " needed for organization-level use."
+      }
+    ],
+    "example": "\"I'm a content creator who uses Claude to write blogs 3–4 hours a day. Should I upgrade to Pro?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How much is Claude.ai's Pro plan per month?",
+    "options": [
+      {
+        "text": "$10/month"
+      },
+      {
+        "text": "$20/month",
+        "correct": true
+      },
+      {
+        "text": "$50/month"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Who is Claude.ai's Team plan best suited for?",
+    "options": [
+      {
+        "text": "Users who want to try it for free"
+      },
+      {
+        "text": "A freelancer working solo"
+      },
+      {
+        "text": "Organizations needing an admin console and collaboration",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main limitation of Claude.ai's Free plan?",
+    "options": [
+      {
+        "text": "It works on mobile only"
+      },
+      {
+        "text": "It has a daily usage limit",
+        "correct": true
+      },
+      {
+        "text": "You can't chat more than 5 sentences"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You use Claude heavily every day and want the most capable model. Which plan?",
+    "options": [
+      {
+        "text": "Pro",
+        "correct": true
+      },
+      {
+        "text": "Free"
+      },
+      {
+        "text": "No subscription needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "A team of several people wants to share Projects together. Which plan fits?",
+    "options": [
+      {
+        "text": "Team",
+        "correct": true
+      },
+      {
+        "text": "Free"
+      },
+      {
+        "text": "No plan supports it"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

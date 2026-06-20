@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 3",
+    "title": "What is long context?",
+    "body": [
+      {
+        "text": "The context window is the total amount of information an AI can 'remember' and process in a single conversation. Claude has a "
+      },
+      {
+        "text": "200,000-token context window",
+        "bold": true
+      },
+      {
+        "text": ", which is huge compared to other AIs. One token ≈ 0.75 English words. That means Claude can read and analyze "
+      },
+      {
+        "text": "documents hundreds of pages long in one go",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"Here's the company's annual report [paste 50 pages]. Summarize the key financial points for me.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 4",
+    "title": "The benefits of long context",
+    "body": [
+      {
+        "text": "Long context makes Claude extremely useful for tasks with lots of information — reading and analyzing "
+      },
+      {
+        "text": "contracts, research reports, or an entire project codebase",
+        "bold": true
+      },
+      {
+        "text": " without trimming anything. Claude remembers everything in the same conversation, including uploaded files, so it can "
+      },
+      {
+        "text": "reference information from the start of the chat even much later on",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"I've shared the whole codebase. Can you find a bug that might be causing a memory leak in the system?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How big is Claude's context window?",
+    "options": [
+      {
+        "text": "32,000 tokens"
+      },
+      {
+        "text": "100,000 tokens"
+      },
+      {
+        "text": "200,000 tokens",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does context window mean?",
+    "options": [
+      {
+        "text": "The size of the application window"
+      },
+      {
+        "text": "How much information an AI can remember and process in one conversation",
+        "correct": true
+      },
+      {
+        "text": "The max number of questions per day"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which kind of work benefits most from Claude's long context?",
+    "options": [
+      {
+        "text": "Asking short general questions"
+      },
+      {
+        "text": "Analyzing documents hundreds of pages long or an entire codebase",
+        "correct": true
+      },
+      {
+        "text": "Generating images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have a 50-page contract and want Claude to find risky clauses. What should you do?",
+    "options": [
+      {
+        "text": "Paste/upload the whole thing and just ask — Claude handles long context",
+        "correct": true
+      },
+      {
+        "text": "Type it one paragraph at a time"
+      },
+      {
+        "text": "Summarize it yourself first, then ask"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "A large context window helps most with what kind of work?",
+    "options": [
+      {
+        "text": "Asking a single short question"
+      },
+      {
+        "text": "Analyzing long documents or multiple files at once",
+        "correct": true
+      },
+      {
+        "text": "Generating images"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

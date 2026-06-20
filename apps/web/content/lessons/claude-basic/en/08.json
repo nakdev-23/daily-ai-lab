@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 3",
+    "title": "What is Project Knowledge?",
+    "body": [
+      {
+        "text": "Project Knowledge means adding reference files or documents into a Project so Claude can use them as a "
+      },
+      {
+        "text": "permanent knowledge base throughout the Project",
+        "bold": true
+      },
+      {
+        "text": ". You can upload files like a style guide, company info, FAQs, or API documentation. After that, Claude will "
+      },
+      {
+        "text": "reference those files automatically",
+        "bold": true
+      },
+      {
+        "text": " in every conversation in the Project — no need to resend the files."
+      }
+    ],
+    "example": "\"[Add Brand Guideline.pdf to Project Knowledge] Draft an Instagram post for our new campaign, following the brand voice in the file I gave you.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 4",
+    "title": "Manage Project Knowledge effectively",
+    "body": [
+      {
+        "text": "Managing your knowledge files well makes Claude more accurate. Include only "
+      },
+      {
+        "text": "information that's frequently used and important to the work",
+        "bold": true
+      },
+      {
+        "text": ". For a writing Project, add a style guide and target-audience profile; for a software Project, add the tech stack and coding standards. You can "
+      },
+      {
+        "text": "update or delete knowledge files anytime",
+        "bold": true
+      },
+      {
+        "text": ", and the change takes effect in the next conversation."
+      }
+    ],
+    "example": "\"Here's the latest competitor analysis [upload file]. Update the Project Knowledge, then recommend the strategy we should focus on.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the benefit of Project Knowledge?",
+    "options": [
+      {
+        "text": "It makes Claude answer 2x faster"
+      },
+      {
+        "text": "It gives Claude a permanent reference knowledge base without resending files each time",
+        "correct": true
+      },
+      {
+        "text": "It connects Claude to the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What files should you add to Project Knowledge for a software development Project?",
+    "options": [
+      {
+        "text": "Team profile photos"
+      },
+      {
+        "text": "The project's tech stack and coding standards",
+        "correct": true
+      },
+      {
+        "text": "Your personal schedule"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "When you update a file in Project Knowledge, when does the change take effect?",
+    "options": [
+      {
+        "text": "You must restart the Project first"
+      },
+      {
+        "text": "In the next conversation after the update",
+        "correct": true
+      },
+      {
+        "text": "You have to wait 24 hours"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For a software development Project, what should you put in Project Knowledge?",
+    "options": [
+      {
+        "text": "Spec documents, example code, and coding guidelines",
+        "correct": true
+      },
+      {
+        "text": "Cat pictures"
+      },
+      {
+        "text": "Production passwords"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "After updating a file in Project Knowledge, when does it take effect?",
+    "options": [
+      {
+        "text": "In the next conversation of that Project",
+        "correct": true
+      },
+      {
+        "text": "It has no effect at all"
+      },
+      {
+        "text": "You must create a new Project"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

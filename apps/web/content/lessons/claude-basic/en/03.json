@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 5",
+    "title": "Getting started with Claude.ai",
+    "body": [
+      {
+        "text": "Claude.ai is the main web interface for using Claude directly. Open it at "
+      },
+      {
+        "text": "claude.ai",
+        "bold": true
+      },
+      {
+        "text": " — nothing to install. The main screen has a sidebar for your conversation history, a New Chat button to start a fresh conversation, and a message box that supports "
+      },
+      {
+        "text": "uploading files, images, and documents",
+        "bold": true
+      },
+      {
+        "text": " directly, making it quick and easy to work with Claude."
+      }
+    ],
+    "example": "\"I'm using Claude for the first time. What should I start with?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 6",
+    "title": "Modes and features in Claude.ai",
+    "body": [
+      {
+        "text": "Claude.ai has several modes. In a normal conversation, Claude remembers the context of that whole chat. There's also "
+      },
+      {
+        "text": "Projects Mode",
+        "bold": true
+      },
+      {
+        "text": ", which lets Claude remember information across conversations, and "
+      },
+      {
+        "text": "Artifacts",
+        "bold": true
+      },
+      {
+        "text": ", which display results like code or documents in a separate panel — making it much easier to work with the output."
+      }
+    ],
+    "example": "\"Make a table comparing popular frameworks like React, Vue, and Angular.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "To start a new conversation with Claude on Claude.ai, which button do you press?",
+    "options": [
+      {
+        "text": "Start Chat"
+      },
+      {
+        "text": "New Chat",
+        "correct": true
+      },
+      {
+        "text": "Open Session"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "In Claude.ai, which feature shows results like code in a separate panel?",
+    "options": [
+      {
+        "text": "Projects"
+      },
+      {
+        "text": "Artifacts",
+        "correct": true
+      },
+      {
+        "text": "Sidebar"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How do you access Claude.ai?",
+    "options": [
+      {
+        "text": "You must always install an application first"
+      },
+      {
+        "text": "Through a web browser at claude.ai, no install needed",
+        "correct": true
+      },
+      {
+        "text": "Only on the mobile app"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have Claude write code and want to see it in a separate panel to keep editing. What should you use?",
+    "options": [
+      {
+        "text": "Artifacts",
+        "correct": true
+      },
+      {
+        "text": "Chat History"
+      },
+      {
+        "text": "The New chat button"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you get started with Claude.ai?",
+    "options": [
+      {
+        "text": "Open claude.ai and log in",
+        "correct": true
+      },
+      {
+        "text": "Install from the App Store only"
+      },
+      {
+        "text": "You have to write code yourself first"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

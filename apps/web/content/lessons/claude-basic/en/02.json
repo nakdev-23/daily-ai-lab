@@ -1,0 +1,149 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 3",
+    "title": "Claude models: Haiku, Sonnet, Opus",
+    "body": [
+      {
+        "text": "Anthropic offers Claude in three tiers to fit different needs. "
+      },
+      {
+        "text": "Haiku",
+        "bold": true
+      },
+      {
+        "text": " is the fastest and most economical — great for simple tasks or when you need a quick response. "
+      },
+      {
+        "text": "Sonnet",
+        "bold": true
+      },
+      {
+        "text": " is the balanced middle tier, good for everyday work. And "
+      },
+      {
+        "text": "Opus",
+        "bold": true
+      },
+      {
+        "text": " is the top tier and most powerful, for complex tasks that need deep analysis."
+      }
+    ],
+    "example": "\"I need to summarize a 50-page report. Which Claude model should I use, and why?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 4",
+    "title": "Which model should you pick?",
+    "body": [
+      {
+        "text": "Picking the right model saves time and money. For "
+      },
+      {
+        "text": "writing, summarizing, or general Q&A, Sonnet",
+        "bold": true
+      },
+      {
+        "text": " is the best value. For coding or complex data analysis, Opus gives better results. Haiku is great for chatbots or work that needs "
+      },
+      {
+        "text": "high speed and large volume",
+        "bold": true
+      },
+      {
+        "text": ". On Claude.ai, the Free plan can use Sonnet, while Opus needs a Pro plan or higher."
+      }
+    ],
+    "example": "\"Help me write a job application email for a Data Analyst role, in professional English.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which Claude model is best for high speed and large volume?",
+    "options": [
+      {
+        "text": "Opus"
+      },
+      {
+        "text": "Sonnet"
+      },
+      {
+        "text": "Haiku",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What kind of work is the Opus tier best suited for?",
+    "options": [
+      {
+        "text": "Auto-answering repetitive FAQs"
+      },
+      {
+        "text": "Complex analysis that needs high expertise",
+        "correct": true
+      },
+      {
+        "text": "Sending short back-and-forth messages"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "On Claude.ai, which tier can the Free plan use?",
+    "options": [
+      {
+        "text": "Haiku only"
+      },
+      {
+        "text": "Sonnet",
+        "correct": true
+      },
+      {
+        "text": "Opus only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You need to summarize many short emails quickly and cheaply. Which Claude model?",
+    "options": [
+      {
+        "text": "Haiku",
+        "correct": true
+      },
+      {
+        "text": "Opus"
+      },
+      {
+        "text": "Any model gives the same result"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "For analyzing complex legal documents that need top accuracy, which model?",
+    "options": [
+      {
+        "text": "Haiku"
+      },
+      {
+        "text": "Opus",
+        "correct": true
+      },
+      {
+        "text": "Any model"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

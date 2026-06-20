@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 1",
+    "title": "What are Projects?",
+    "body": [
+      {
+        "text": "Projects is a Claude.ai feature that lets you create a dedicated 'workspace' for each kind of work. What makes Projects different from a normal conversation is that "
+      },
+      {
+        "text": "Claude remembers context and information across conversations",
+        "bold": true
+      },
+      {
+        "text": " within the same Project. No matter how many new chats you start, Claude always remembers the "
+      },
+      {
+        "text": "base information, rules, and context you've set",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"I want to create a Project for writing a technology blog. What should I set up in the Project to start?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 3 · Part 2",
+    "title": "Why are Projects useful?",
+    "body": [
+      {
+        "text": "Before Projects, you had to explain the context every time you started a new chat. Projects fix this by letting you "
+      },
+      {
+        "text": "set a system prompt, or base instructions",
+        "bold": true
+      },
+      {
+        "text": " that Claude remembers throughout the Project — your writing style, company info, or work rules — so you don't have to retype it. And Claude "
+      },
+      {
+        "text": "stays consistent across the whole Project",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"In this Project, always answer in Thai, use polite language, and focus on content for office workers aged 25–35.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the main difference between Projects and a normal conversation in Claude.ai?",
+    "options": [
+      {
+        "text": "Projects use a better model"
+      },
+      {
+        "text": "Projects let Claude remember context across conversations",
+        "correct": true
+      },
+      {
+        "text": "Projects respond faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Before the Projects feature, what problem did users often face?",
+    "options": [
+      {
+        "text": "Claude answered too slowly"
+      },
+      {
+        "text": "Having to re-explain the context every time they started a new chat",
+        "correct": true
+      },
+      {
+        "text": "They couldn't upload files"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the system prompt in Projects used for?",
+    "options": [
+      {
+        "text": "Setting base info and rules Claude remembers throughout the Project",
+        "correct": true
+      },
+      {
+        "text": "Changing the model used in the Project"
+      },
+      {
+        "text": "Limiting the number of conversations in the Project"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You make content for the same brand repeatedly and want Claude to remember the brand tone in every chat. What should you use?",
+    "options": [
+      {
+        "text": "Create a Project, set a system prompt, and add brand knowledge",
+        "correct": true
+      },
+      {
+        "text": "Open a new chat every time"
+      },
+      {
+        "text": "Retype the brand tone every time"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is the system prompt in Projects for?",
+    "options": [
+      {
+        "text": "Setting the role/rules for Claude in every chat of the Project",
+        "correct": true
+      },
+      {
+        "text": "Deleting history"
+      },
+      {
+        "text": "Changing the website's language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

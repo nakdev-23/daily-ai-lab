@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 5",
+    "title": "Claude for everyday life",
+    "body": [
+      {
+        "text": "Claude is more useful than many people think. In daily life you can use Claude for "
+      },
+      {
+        "text": "writing, planning, learning, and decision-making",
+        "bold": true
+      },
+      {
+        "text": " — drafting important emails, planning trips, understanding complex topics, or brainstorming ideas. Claude is like a "
+      },
+      {
+        "text": "personal assistant skilled in many areas, ready to help 24 hours a day",
+        "bold": true
+      },
+      {
+        "text": ", with no extra charge for asking a lot."
+      }
+    ],
+    "example": "\"I have an important meeting tomorrow and need to present the Q3 results. Help me create an outline for a 15-minute presentation.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 6",
+    "title": "Tips to get the most out of Claude",
+    "body": [
+      {
+        "text": "Getting good results from Claude starts with "
+      },
+      {
+        "text": "giving clear, complete context",
+        "bold": true
+      },
+      {
+        "text": " — tell Claude who you are, what the task is for, and the result you want. If the first answer isn't right, "
+      },
+      {
+        "text": "iterate by giving direct feedback",
+        "bold": true
+      },
+      {
+        "text": ". Claude doesn't mind being corrected, and the more you use it, the better you'll get at communicating with it."
+      }
+    ],
+    "example": "\"That answer is too long and too formal. Rewrite it half the length, in a casual tone, and add a real example.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What helps you get the best answer from Claude?",
+    "options": [
+      {
+        "text": "Asking short questions of no more than 5 words"
+      },
+      {
+        "text": "Giving clear context — who you are, what the task is, and the result you want",
+        "correct": true
+      },
+      {
+        "text": "Using English only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "If Claude's answer isn't quite what you need, what should you do?",
+    "options": [
+      {
+        "text": "Always start a new conversation"
+      },
+      {
+        "text": "Give direct feedback on what to adjust and have Claude revise it",
+        "correct": true
+      },
+      {
+        "text": "Claude can only fix itself once"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which best describes Claude in everyday life?",
+    "options": [
+      {
+        "text": "A tool for developers and scientists only"
+      },
+      {
+        "text": "A personal assistant skilled in many areas — writing, planning, learning, and decisions, 24/7",
+        "correct": true
+      },
+      {
+        "text": "A search engine smarter than Google"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get the best answer from Claude, what should you do?",
+    "options": [
+      {
+        "text": "Give full context, state your goal and the format you want",
+        "correct": true
+      },
+      {
+        "text": "Always ask as briefly as possible"
+      },
+      {
+        "text": "Never give details"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "If the answer still isn't right, what should you do?",
+    "options": [
+      {
+        "text": "Say what you want changed and have it adjust (iterate)",
+        "correct": true
+      },
+      {
+        "text": "Give up"
+      },
+      {
+        "text": "Start over completely every time"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

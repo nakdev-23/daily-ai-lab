@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 5",
+    "title": "Upload files & documents",
+    "body": [
+      {
+        "text": "Claude.ai supports uploading many file types directly in the chat window: "
+      },
+      {
+        "text": "PDF, Word, Excel, images (PNG/JPG), and code files",
+        "bold": true
+      },
+      {
+        "text": ". Click the paperclip icon or drag a file into the message box, and Claude reads and analyzes its contents right away — so you can "
+      },
+      {
+        "text": "ask questions about the file's contents directly",
+        "bold": true
+      },
+      {
+        "text": " without copy-pasting the text yourself."
+      }
+    ],
+    "example": "\"[Upload a lease agreement PDF] Summarize the key terms of this contract, especially the termination clause.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 6",
+    "title": "Analyzing images with Claude",
+    "body": [
+      {
+        "text": "Claude has vision capabilities, so it can "
+      },
+      {
+        "text": "analyze images, charts, graphs, and screenshots",
+        "bold": true
+      },
+      {
+        "text": ". Upload an image and Claude can describe the content, read text in the image, analyze data in a chart, or review a UI design. This is very useful for "
+      },
+      {
+        "text": "designers, data analysts, and developers",
+        "bold": true
+      },
+      {
+        "text": " who want quick feedback."
+      }
+    ],
+    "example": "\"[Upload a screenshot of a dashboard] What UX issues does this UI have, and how should I improve it?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which file type does Claude.ai NOT support uploading directly?",
+    "options": [
+      {
+        "text": "PDF files"
+      },
+      {
+        "text": ".mp4 video files",
+        "correct": true
+      },
+      {
+        "text": "PNG image files"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To have Claude analyze a chart in a report, what should you do?",
+    "options": [
+      {
+        "text": "Describe the chart to Claude yourself"
+      },
+      {
+        "text": "Upload the image of the chart directly to Claude",
+        "correct": true
+      },
+      {
+        "text": "Claude can't analyze images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the correct way to upload a file in Claude.ai?",
+    "options": [
+      {
+        "text": "Email it first and Claude will fetch it"
+      },
+      {
+        "text": "Click the paperclip icon or drag the file into the message box",
+        "correct": true
+      },
+      {
+        "text": "You must convert it to text first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want Claude to explain a sales chart in a PDF report. What should you do?",
+    "options": [
+      {
+        "text": "Upload the file/chart image and ask",
+        "correct": true
+      },
+      {
+        "text": "Retype all the numbers"
+      },
+      {
+        "text": "Send only the filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which is true about uploading files in Claude.ai?",
+    "options": [
+      {
+        "text": "Drag the file or click the attach button in the chat box",
+        "correct": true
+      },
+      {
+        "text": "You must upload to Google Drive first"
+      },
+      {
+        "text": "You can't upload at all"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

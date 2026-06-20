@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 1",
+    "title": "What are Artifacts?",
+    "body": [
+      {
+        "text": "Artifacts is a feature Claude uses to show long or structured results in a separate panel on the right, instead of in the normal chat. "
+      },
+      {
+        "text": "Artifacts support several types",
+        "bold": true
+      },
+      {
+        "text": ": Markdown documents, code in any language, HTML/CSS, SVG, and React components. Claude creates an Artifact automatically when the result is long or is "
+      },
+      {
+        "text": "content you'll likely want to reuse",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"Write a one-page (A4) business plan for an online coffee shop focused on monthly subscriptions.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 2",
+    "title": "Working with Artifacts",
+    "body": [
+      {
+        "text": "When Claude creates an Artifact, you can "
+      },
+      {
+        "text": "edit, copy, and use it right away",
+        "bold": true
+      },
+      {
+        "text": ". There's a Copy button for the whole thing, and you can ask Claude to revise or improve an Artifact without recreating it from scratch — Claude "
+      },
+      {
+        "text": "updates only the part you want changed",
+        "bold": true
+      },
+      {
+        "text": ", making the workflow far smoother than copy-pasting from a normal chat."
+      }
+    ],
+    "example": "\"For the Artifact you made, add a 'Marketing Plan' section and make the tone more professional.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Where do Artifacts show results in Claude.ai?",
+    "options": [
+      {
+        "text": "In the normal chat as usual"
+      },
+      {
+        "text": "In a separate panel on the right",
+        "correct": true
+      },
+      {
+        "text": "In an email sent to the user"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which of these do Artifacts NOT support?",
+    "options": [
+      {
+        "text": "Python code"
+      },
+      {
+        "text": "React components"
+      },
+      {
+        "text": "MP4 video files",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "To edit an Artifact Claude already created, what should you do?",
+    "options": [
+      {
+        "text": "Delete the old Artifact and have Claude recreate it entirely"
+      },
+      {
+        "text": "Tell Claude which part to change — it updates it for you",
+        "correct": true
+      },
+      {
+        "text": "Artifacts can't be edited after they're created"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Claude made a summary table and you want to fix a few cells. What should you do?",
+    "options": [
+      {
+        "text": "Tell Claude to fix just those spots — it updates the existing Artifact",
+        "correct": true
+      },
+      {
+        "text": "Create a new Project"
+      },
+      {
+        "text": "Copy it out and edit by hand only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of result are Artifacts good for?",
+    "options": [
+      {
+        "text": "Code, documents, or work you want to view/edit separately from the chat",
+        "correct": true
+      },
+      {
+        "text": "A short one-line answer"
+      },
+      {
+        "text": "A photo"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

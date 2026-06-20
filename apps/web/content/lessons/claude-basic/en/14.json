@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 3",
+    "title": "The Claude mobile app",
+    "body": [
+      {
+        "text": "Anthropic has a Claude app for "
+      },
+      {
+        "text": "iOS and Android",
+        "bold": true
+      },
+      {
+        "text": " that gives a full experience on mobile. You can start new conversations, access Projects you created on desktop, and upload images straight from your camera or gallery. The "
+      },
+      {
+        "text": "voice input",
+        "bold": true
+      },
+      {
+        "text": " feature on mobile lets you talk to Claude conveniently on the go, without typing."
+      }
+    ],
+    "example": "\"[Take a photo of a Japanese food menu] Translate this menu to Thai and suggest dishes a beginner should try.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 5 · Part 4",
+    "title": "Making the most of Claude mobile",
+    "body": [
+      {
+        "text": "Claude mobile is great for use cases that need "
+      },
+      {
+        "text": "convenience and speed throughout the day",
+        "bold": true
+      },
+      {
+        "text": " — photograph a document and have Claude summarize it, ask questions by voice while driving, or copy-paste text from another app for Claude to revise. Everything "
+      },
+      {
+        "text": "syncs across devices automatically",
+        "bold": true
+      },
+      {
+        "text": " between mobile and desktop, so you can keep working seamlessly."
+      }
+    ],
+    "example": "\"[Take a photo of an English contract] Explain the main terms of this contract in simple Thai.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which operating systems is the Claude mobile app available on?",
+    "options": [
+      {
+        "text": "iOS only"
+      },
+      {
+        "text": "iOS and Android",
+        "correct": true
+      },
+      {
+        "text": "Android and Windows Phone"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of voice input in Claude mobile?",
+    "options": [
+      {
+        "text": "It makes Claude read answers aloud"
+      },
+      {
+        "text": "It lets you talk to Claude without typing — great on the go",
+        "correct": true
+      },
+      {
+        "text": "It converts voice into an MP3 file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Will a conversation started in Claude mobile appear on Claude desktop?",
+    "options": [
+      {
+        "text": "No, mobile and desktop are completely separate"
+      },
+      {
+        "text": "Yes, conversations sync across devices automatically",
+        "correct": true
+      },
+      {
+        "text": "Only on Pro plans and up"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You're out and about and want to capture an idea by voice as text. What should you use in Claude mobile?",
+    "options": [
+      {
+        "text": "Voice input",
+        "correct": true
+      },
+      {
+        "text": "Artifacts"
+      },
+      {
+        "text": "System prompt"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "If you start a chat on mobile, will you see it on desktop?",
+    "options": [
+      {
+        "text": "Yes, because conversations sync across devices",
+        "correct": true
+      },
+      {
+        "text": "No, never"
+      },
+      {
+        "text": "You have to email it to yourself"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

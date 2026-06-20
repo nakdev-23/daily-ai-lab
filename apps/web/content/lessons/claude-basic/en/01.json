@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 1",
+    "title": "What is Claude?",
+    "body": [
+      {
+        "text": "Claude is an AI assistant built by "
+      },
+      {
+        "text": "Anthropic",
+        "bold": true
+      },
+      {
+        "text": ", an AI safety company founded in 2021 by a team of former OpenAI researchers. Claude is designed around three core qualities: "
+      },
+      {
+        "text": "Helpful, Harmless, and Honest",
+        "bold": true
+      },
+      {
+        "text": " — together known as the HHH principles. That's what sets Claude apart: a special focus on safety and ethics."
+      }
+    ],
+    "example": "\"What is Claude and what can it do? Explain it in simple terms.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 1 · Part 2",
+    "title": "Claude's HHH principles",
+    "body": [
+      {
+        "text": "Anthropic trains Claude with a technique called "
+      },
+      {
+        "text": "Constitutional AI",
+        "bold": true
+      },
+      {
+        "text": ", which gives the AI a set of principles to follow when responding. So Claude tries to answer straightforwardly, refuses requests that could cause harm, and clearly says when it's unsure. This design makes "
+      },
+      {
+        "text": "Claude well suited to work that demands reliability and careful attention",
+        "bold": true
+      },
+      {
+        "text": " — like analyzing documents, writing, and advising on complex matters."
+      }
+    ],
+    "example": "\"Explain what Constitutional AI is, and how it makes Claude safer than other AIs.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which company built Claude?",
+    "options": [
+      {
+        "text": "OpenAI"
+      },
+      {
+        "text": "Anthropic",
+        "correct": true
+      },
+      {
+        "text": "Google DeepMind"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does the first 'H' in Claude's HHH principles stand for?",
+    "options": [
+      {
+        "text": "Human"
+      },
+      {
+        "text": "Helpful",
+        "correct": true
+      },
+      {
+        "text": "Humble"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the technique Anthropic uses to train Claude to follow ethical principles?",
+    "options": [
+      {
+        "text": "Reinforcement Learning"
+      },
+      {
+        "text": "Supervised Fine-tuning"
+      },
+      {
+        "text": "Constitutional AI",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want Claude to help draft a polite, careful company policy announcement. Why is Claude a good fit?",
+    "options": [
+      {
+        "text": "It's the fastest in the world"
+      },
+      {
+        "text": "It's built on Helpful, Honest, Harmless principles, so it's good for carefully-worded work",
+        "correct": true
+      },
+      {
+        "text": "It's connected to the internet at all times"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "You want a straight answer with no made-up info. Which HHH principle is most relevant?",
+    "options": [
+      {
+        "text": "Honest",
+        "correct": true
+      },
+      {
+        "text": "Fast"
+      },
+      {
+        "text": "Cheap"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

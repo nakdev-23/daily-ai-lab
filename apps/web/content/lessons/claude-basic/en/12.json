@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 5",
+    "title": "Preview & share Artifacts",
+    "body": [
+      {
+        "text": "For HTML or React Artifacts, Claude provides a Preview button so you can see the real result in a preview window. You can also "
+      },
+      {
+        "text": "share an Artifact with others via a share link",
+        "bold": true
+      },
+      {
+        "text": " — the recipient can open it without a Claude.ai account. This is very useful for quickly sharing a "
+      },
+      {
+        "text": "prototype or report with your team or clients",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"Build an interactive dashboard showing monthly sales data with charts, and show me a preview.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 6",
+    "title": "Export and use Artifacts",
+    "body": [
+      {
+        "text": "Besides share links, you can "
+      },
+      {
+        "text": "download Artifacts",
+        "bold": true
+      },
+      {
+        "text": " as files directly — code as .html or .py, or a document as .md. Artifacts made with Claude are a "
+      },
+      {
+        "text": "good starting point for real work",
+        "bold": true
+      },
+      {
+        "text": ", not always the final result. A good approach is to take the Artifact from Claude and refine it further in your editor or IDE to get exactly what you need."
+      }
+    ],
+    "example": "\"For the HTML Artifact you built, export it as files ready to deploy on Netlify, and explain the deployment steps.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is the Preview button in Claude Artifacts for?",
+    "options": [
+      {
+        "text": "Seeing the real result of HTML or React Artifacts in a preview window",
+        "correct": true
+      },
+      {
+        "text": "Previewing the next conversation"
+      },
+      {
+        "text": "Showing a preview for sharing on social media"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Does the recipient of an Artifact share link need a Claude.ai account?",
+    "options": [
+      {
+        "text": "They need a Claude.ai Pro account only"
+      },
+      {
+        "text": "No — they can open the Artifact without an account",
+        "correct": true
+      },
+      {
+        "text": "They need a Claude.ai account on any plan"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the best way to use a Code Artifact from Claude?",
+    "options": [
+      {
+        "text": "Deploy it to production immediately without edits"
+      },
+      {
+        "text": "Use it as a starting point and refine it in your IDE as needed",
+        "correct": true
+      },
+      {
+        "text": "Leave it in Claude only, never export"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You finished a piece in an Artifact and want to show a friend. What should you do?",
+    "options": [
+      {
+        "text": "Use the Artifact's share link",
+        "correct": true
+      },
+      {
+        "text": "Send your account password to your friend"
+      },
+      {
+        "text": "Send a screenshot only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the best way to use a Code Artifact from Claude?",
+    "options": [
+      {
+        "text": "Read, understand, and test it before using it for real",
+        "correct": true
+      },
+      {
+        "text": "Put it into production immediately without checking"
+      },
+      {
+        "text": "Copy it without reading"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

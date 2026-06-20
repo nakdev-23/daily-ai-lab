@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 1",
+    "title": "Claude's answering style",
+    "body": [
+      {
+        "text": "Claude automatically adapts its style to the context. For technical questions it answers in detail and with structure; for casual chat it keeps things short and friendly. "
+      },
+      {
+        "text": "Claude doesn't always answer in black and white",
+        "bold": true
+      },
+      {
+        "text": " — especially for complex questions, it tends to lay out both sides and give a "
+      },
+      {
+        "text": "more nuanced, deeper perspective than a typical answer",
+        "bold": true
+      },
+      {
+        "text": " so you can decide with full information."
+      }
+    ],
+    "example": "\"What are the pros and cons of using AI at work? Give me a well-rounded view.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 2 · Part 2",
+    "title": "You can customize the answering style",
+    "body": [
+      {
+        "text": "You can tell Claude directly how you want it to answer — short, casual, or expert. Claude can also "
+      },
+      {
+        "text": "mimic a tone and writing style",
+        "bold": true
+      },
+      {
+        "text": " from an example you give it. "
+      },
+      {
+        "text": "Assigning Claude a role or persona",
+        "bold": true
+      },
+      {
+        "text": " — like \"answer as a financial advisor\" or \"answer like a teacher for kids\" — helps you get a response that fits exactly what you need."
+      }
+    ],
+    "example": "\"Answer like a close friend who's an investing expert: how should I start saving if I have 3,000 baht left over each month?\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "If you want Claude to answer short and concise, what should you do?",
+    "options": [
+      {
+        "text": "You can't adjust it — Claude always answers the same way"
+      },
+      {
+        "text": "Tell Claude directly in your prompt that you want a short answer",
+        "correct": true
+      },
+      {
+        "text": "You have to switch the model first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When you ask Claude a complex question, how does it tend to answer?",
+    "options": [
+      {
+        "text": "With a single short answer"
+      },
+      {
+        "text": "It refuses to answer complex questions"
+      },
+      {
+        "text": "It gives multiple perspectives and a deeper answer",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of giving Claude a persona like 'answer as a financial advisor'?",
+    "options": [
+      {
+        "text": "It makes Claude respond faster"
+      },
+      {
+        "text": "It gets you an answer better matched to the context and your needs",
+        "correct": true
+      },
+      {
+        "text": "It gives Claude real-time data access"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Claude's answer is too long and you want it concise. What should you do?",
+    "options": [
+      {
+        "text": "Say clearly: \"answer short and concise, as bullets, no more than 5 points\"",
+        "correct": true
+      },
+      {
+        "text": "Repeat the same prompt"
+      },
+      {
+        "text": "Change the language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Setting a persona like \"answer as a financial advisor\" helps with what?",
+    "options": [
+      {
+        "text": "Making it respond faster"
+      },
+      {
+        "text": "Tuning the perspective and expertise level to fit the task",
+        "correct": true
+      },
+      {
+        "text": "Letting Claude search the web"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

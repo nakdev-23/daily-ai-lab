@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 3",
+    "title": "Code Artifacts",
+    "body": [
+      {
+        "text": "Code Artifacts are one of Claude's most powerful features. When Claude writes code, it shows in the Artifact pane with syntax highlighting — and even more exciting, Claude can "
+      },
+      {
+        "text": "run HTML, CSS, and JavaScript in a sandbox instantly",
+        "bold": true
+      },
+      {
+        "text": ", without leaving Claude.ai. You see the real result right away. For other languages, Claude shows "
+      },
+      {
+        "text": "the expected output and explains how to run it",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "\"Build an interactive to-do list with HTML, CSS, and JavaScript — add/remove items, and save data in LocalStorage.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Basics · Chapter 4 · Part 4",
+    "title": "Iterating on code with Claude",
+    "body": [
+      {
+        "text": "One of the best workflows is iterating on code with Claude in a single conversation. Start by asking for the initial code, then report a bug you found or a feature to add, and Claude will "
+      },
+      {
+        "text": "fix and update the code Artifact directly",
+        "bold": true
+      },
+      {
+        "text": ", so you can see the change history. This style is great for "
+      },
+      {
+        "text": "quickly building a prototype or MVP",
+        "bold": true
+      },
+      {
+        "text": " — even non-developers can build small web apps."
+      }
+    ],
+    "example": "\"The code has a bug: when I click Delete, the list doesn't refresh. Please fix it, and add a Mark as Done feature too.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which kind of code can Claude run directly in the Claude.ai sandbox?",
+    "options": [
+      {
+        "text": "Python and Java"
+      },
+      {
+        "text": "HTML, CSS, and JavaScript",
+        "correct": true
+      },
+      {
+        "text": "C++ and Rust"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does iterating on code with Claude mean?",
+    "options": [
+      {
+        "text": "Having Claude run code on a real server"
+      },
+      {
+        "text": "Improving the code step by step in one conversation, with Claude updating the Artifact",
+        "correct": true
+      },
+      {
+        "text": "Copying code from Stack Overflow"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Who are Code Artifacts best suited for?",
+    "options": [
+      {
+        "text": "Professional developers only"
+      },
+      {
+        "text": "Everyone, including non-developers who want to build a quick prototype",
+        "correct": true
+      },
+      {
+        "text": "Only Team plan users and up"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want Claude to help build a simple web page and see the result instantly. What should you use?",
+    "options": [
+      {
+        "text": "A Code Artifact where you can preview the result",
+        "correct": true
+      },
+      {
+        "text": "Memory"
+      },
+      {
+        "text": "Voice input"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does iterating on code with Claude mean?",
+    "options": [
+      {
+        "text": "Gradually asking for fixes/features until the code is what you want",
+        "correct": true
+      },
+      {
+        "text": "Writing it once with no edits allowed"
+      },
+      {
+        "text": "Deleting the code"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

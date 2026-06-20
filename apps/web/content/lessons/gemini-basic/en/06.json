@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 5",
+    "title": "Talk to Gemini with your voice",
+    "body": [
+      {
+        "text": "Gemini supports "
+      },
+      {
+        "text": "voice input — talking to it directly",
+        "bold": true
+      },
+      {
+        "text": ". Just tap the microphone button and speak; Gemini converts your voice to text and replies. Great for when typing isn't convenient."
+      }
+    ],
+    "example": "\"[Tap the mic] Make me a to-do list for today: I have a meeting, a report to send, and a client to call.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 6",
+    "title": "Analyze video with Gemini",
+    "body": [
+      {
+        "text": "Gemini can "
+      },
+      {
+        "text": "analyze video content and answer questions about what happens in the clip",
+        "bold": true
+      },
+      {
+        "text": " — summarizing the content, pointing out key moments, or explaining how things shown in the video are done."
+      }
+    ],
+    "example": "\"[Attach a meeting video] Summarize the points agreed on and the action items in this video.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does voice input in Gemini work?",
+    "options": [
+      {
+        "text": "Gemini calls you back"
+      },
+      {
+        "text": "Tap the mic, speak, and Gemini converts your voice to text and replies",
+        "correct": true
+      },
+      {
+        "text": "You must install a separate app"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How does Gemini analyze video?",
+    "options": [
+      {
+        "text": "It only looks at the video thumbnail"
+      },
+      {
+        "text": "It reads the clip's content and answers questions about what happens",
+        "correct": true
+      },
+      {
+        "text": "It converts the video to MP3"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a benefit of using voice with Gemini?",
+    "options": [
+      {
+        "text": "Convenient when typing isn't practical, like while driving or busy",
+        "correct": true
+      },
+      {
+        "text": "Gemini always understands speech more accurately than typing"
+      },
+      {
+        "text": "Voice works in English only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Your hands are full but you want to ask Gemini something. What should you use?",
+    "options": [
+      {
+        "text": "Voice conversation mode",
+        "correct": true
+      },
+      {
+        "text": "Type one letter at a time"
+      },
+      {
+        "text": "Wait until your hands are free"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of video analysis with Gemini?",
+    "options": [
+      {
+        "text": "It can summarize content / answer questions from a video",
+        "correct": true
+      },
+      {
+        "text": "It edits the video instead"
+      },
+      {
+        "text": "It uploads to YouTube for you"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

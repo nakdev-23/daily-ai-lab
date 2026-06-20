@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 3",
+    "title": "Create your own Gem",
+    "body": [
+      {
+        "text": "To create a Gem, go to the Gems menu in Gemini and click 'Create a Gem', then "
+      },
+      {
+        "text": "name it, set its role, and add instructions for how you want it to respond",
+        "bold": true
+      },
+      {
+        "text": " — like its answering style, knowledge scope, or language."
+      }
+    ],
+    "example": "\"Create a Gem named 'Marketing Assistant' that responds like a Marketing Specialist with 10 years of experience.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 4",
+    "title": "Define a Gem's behavior",
+    "body": [
+      {
+        "text": "You can add detailed instructions to a Gem, like "
+      },
+      {
+        "text": "telling it to always answer briefly, use Thai, or never go off-topic",
+        "bold": true
+      },
+      {
+        "text": ". The clearer the instructions, the more closely the Gem works the way you want."
+      }
+    ],
+    "example": "\"Instructions: Always answer in Thai, use bullet points, and no more than 5 points per answer.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the first step to creating a Gem?",
+    "options": [
+      {
+        "text": "Download the Gemini app"
+      },
+      {
+        "text": "Go to the Gems menu and click 'Create a Gem'",
+        "correct": true
+      },
+      {
+        "text": "Open the Google Play Store"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What are Instructions in a Gem?",
+    "options": [
+      {
+        "text": "A Gemini user manual"
+      },
+      {
+        "text": "Guidance that defines the Gem's behavior and response style",
+        "correct": true
+      },
+      {
+        "text": "A list of frequently asked questions"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "To make a Gem that always answers in Thai, what should you do?",
+    "options": [
+      {
+        "text": "Select 'Thai Mode' in settings"
+      },
+      {
+        "text": "Add the instruction 'always answer in Thai' when creating the Gem",
+        "correct": true
+      },
+      {
+        "text": "Gemini will answer in Thai automatically"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want a Gem to act as a workout coach. What should you do?",
+    "options": [
+      {
+        "text": "Set its role and behavior when creating the Gem",
+        "correct": true
+      },
+      {
+        "text": "Hope the Gem guesses"
+      },
+      {
+        "text": "Change the Gemini version"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does clearly defining a Gem's behavior help with?",
+    "options": [
+      {
+        "text": "Getting answers that match the style and task every time",
+        "correct": true
+      },
+      {
+        "text": "Making it respond slower"
+      },
+      {
+        "text": "It has no effect"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

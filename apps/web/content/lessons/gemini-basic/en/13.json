@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 1",
+    "title": "Gemini in Google Search",
+    "body": [
+      {
+        "text": "Google Search has integrated Gemini in the form of "
+      },
+      {
+        "text": "AI Overviews, which summarize an answer at the top of the search results",
+        "bold": true
+      },
+      {
+        "text": ", so you get an answer right away without clicking into different websites."
+      }
+    ],
+    "example": "\"Search: 'easy sourdough bread for beginners' and notice the AI Overview at the top.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 2",
+    "title": "How do AI Overviews work?",
+    "body": [
+      {
+        "text": "AI Overviews "
+      },
+      {
+        "text": "gather information from multiple sources and synthesize a comprehensive answer",
+        "bold": true
+      },
+      {
+        "text": ", with citations you can click to verify — great for questions that need several perspectives."
+      }
+    ],
+    "example": "\"Search: 'pros and cons of remote work' and look at the AI Overview summarized from several sites.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are AI Overviews in Google Search?",
+    "options": [
+      {
+        "text": "Ads at the top of search results"
+      },
+      {
+        "text": "AI-summarized answers that appear at the top of search results",
+        "correct": true
+      },
+      {
+        "text": "Images related to the search"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the main benefit of AI Overviews?",
+    "options": [
+      {
+        "text": "It makes Google search faster"
+      },
+      {
+        "text": "You get an answer instantly without clicking into many websites",
+        "correct": true
+      },
+      {
+        "text": "It always shows results in Thai"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Do AI Overviews show citations?",
+    "options": [
+      {
+        "text": "No, Gemini makes up the whole answer"
+      },
+      {
+        "text": "Yes, it shows citations you can click to verify",
+        "correct": true
+      },
+      {
+        "text": "It shows only Google's own sites"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You search Google and see a summarized answer above the results. What is that?",
+    "options": [
+      {
+        "text": "AI Overviews",
+        "correct": true
+      },
+      {
+        "text": "An ad"
+      },
+      {
+        "text": "A virus"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you use AI Overviews safely?",
+    "options": [
+      {
+        "text": "Use it as a starting point, then verify with the citations before trusting it",
+        "correct": true
+      },
+      {
+        "text": "Believe everything immediately"
+      },
+      {
+        "text": "Turn off the internet"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

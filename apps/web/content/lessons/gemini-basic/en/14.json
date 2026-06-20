@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 3",
+    "title": "Gemini on the mobile app",
+    "body": [
+      {
+        "text": "Gemini has apps for Android and iOS that "
+      },
+      {
+        "text": "give you the experience of having an AI assistant in your pocket all the time",
+        "bold": true
+      },
+      {
+        "text": " — talk to it, snap a photo and ask, or even use it in place of Google Assistant on Android devices."
+      }
+    ],
+    "example": "\"[On mobile] Take a photo of a foreign-language sign and tap 'Ask about this image' to translate it instantly.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 4",
+    "title": "Standout features in Gemini mobile",
+    "body": [
+      {
+        "text": "The Gemini mobile app has special features like "
+      },
+      {
+        "text": "Live Camera Mode, which analyzes what the camera sees in real time",
+        "bold": true
+      },
+      {
+        "text": ", plus notifications that let you reach Gemini faster from your home screen."
+      }
+    ],
+    "example": "\"[Open Camera Mode] Point the camera at a food menu and ask 'About how many calories is this dish?'\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which operating systems does the Gemini mobile app support?",
+    "options": [
+      {
+        "text": "Android only"
+      },
+      {
+        "text": "Android and iOS",
+        "correct": true
+      },
+      {
+        "text": "Only newer iPhones"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does Live Camera Mode in Gemini mobile do?",
+    "options": [
+      {
+        "text": "Records video and uploads to YouTube"
+      },
+      {
+        "text": "Analyzes what the camera sees in real time",
+        "correct": true
+      },
+      {
+        "text": "Filters photos in your album"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "On Android, what can Gemini replace?",
+    "options": [
+      {
+        "text": "The Chrome browser"
+      },
+      {
+        "text": "Google Assistant",
+        "correct": true
+      },
+      {
+        "text": "Google Maps"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You're out and want to snap a photo and ask right away. What should you use?",
+    "options": [
+      {
+        "text": "Gemini on the mobile app",
+        "correct": true
+      },
+      {
+        "text": "Wait until you get home"
+      },
+      {
+        "text": "Send a fax"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's a convenient standout feature of Gemini mobile?",
+    "options": [
+      {
+        "text": "Snap a photo / speak to ask instantly",
+        "correct": true
+      },
+      {
+        "text": "It can only type"
+      },
+      {
+        "text": "It only works while charging"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

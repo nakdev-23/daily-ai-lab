@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 1",
+    "title": "Upload an image for Gemini to analyze",
+    "body": [
+      {
+        "text": "Gemini can "
+      },
+      {
+        "text": "analyze images and describe the details in them",
+        "bold": true
+      },
+      {
+        "text": " accurately — describing a scene, naming objects, or reading text that appears in the image."
+      }
+    ],
+    "example": "\"[Attach a food photo] What dish is this? What ingredients does it have?\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 2",
+    "title": "Ask questions about an image",
+    "body": [
+      {
+        "text": "After uploading an image, you can ask specific questions about it — "
+      },
+      {
+        "text": "Gemini connects the image to your question and answers in context",
+        "bold": true
+      },
+      {
+        "text": " — like asking where a place is, or suggesting a recipe from a photo."
+      }
+    ],
+    "example": "\"[Attach a recipe photo in a foreign language] Translate it and summarize how to make it.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Gemini do with an uploaded image?",
+    "options": [
+      {
+        "text": "Edit and retouch the image"
+      },
+      {
+        "text": "Analyze, describe, and answer questions about the image",
+        "correct": true
+      },
+      {
+        "text": "Turn the image into a video"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "If you upload a photo of a Japanese menu, what can Gemini help with?",
+    "options": [
+      {
+        "text": "Order the food automatically"
+      },
+      {
+        "text": "Translate and explain the menu",
+        "correct": true
+      },
+      {
+        "text": "Find nearby restaurants"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is an example of Gemini's image analysis?",
+    "options": [
+      {
+        "text": "Asking 'What's the weather today?'"
+      },
+      {
+        "text": "Attaching a chart image and asking 'What does this data say?'",
+        "correct": true
+      },
+      {
+        "text": "Asking Gemini to write a poem"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You photographed a foreign-language menu and want to know what the dish is. What should you do?",
+    "options": [
+      {
+        "text": "Upload the photo to Gemini and ask",
+        "correct": true
+      },
+      {
+        "text": "Type a guess yourself"
+      },
+      {
+        "text": "Wait for Gemini to guess on its own"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of asking questions about an image?",
+    "options": [
+      {
+        "text": "The AI can describe/analyze what it sees in the image",
+        "correct": true
+      },
+      {
+        "text": "It makes the image sharper"
+      },
+      {
+        "text": "It deletes the image automatically"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

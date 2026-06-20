@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 5",
+    "title": "Share a Gem with others",
+    "body": [
+      {
+        "text": "After creating a Gem, you can "
+      },
+      {
+        "text": "share a link so others can use it right away",
+        "bold": true
+      },
+      {
+        "text": " — the recipient doesn't have to create the Gem themselves; they just click the link and start chatting with it."
+      }
+    ],
+    "example": "\"Share the 'Teacher's Assistant' Gem link with the school's teachers so everyone can use it together.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 6",
+    "title": "Use Google's Gems",
+    "body": [
+      {
+        "text": "Google offers "
+      },
+      {
+        "text": "ready-made, prebuilt Gems like Learning Coach, Brainstormer, and Career Guide",
+        "bold": true
+      },
+      {
+        "text": " you can use right away without building your own — perfect for beginners who aren't sure how to create a Gem yet."
+      }
+    ],
+    "example": "\"[Open the 'Brainstormer' Gem] Help me brainstorm marketing campaign ideas for a new green-tea product.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you share a Gem for others to use?",
+    "options": [
+      {
+        "text": "Email the Gem file"
+      },
+      {
+        "text": "Share the Gem link for the recipient to click and use",
+        "correct": true
+      },
+      {
+        "text": "Others must recreate the same Gem themselves"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Who are Google's prebuilt Gems good for?",
+    "options": [
+      {
+        "text": "Gemini Advanced users only"
+      },
+      {
+        "text": "Beginners who want to use a Gem without building one",
+        "correct": true
+      },
+      {
+        "text": "Software developers only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the 'Brainstormer' prebuilt Gem used for?",
+    "options": [
+      {
+        "text": "Checking grammar"
+      },
+      {
+        "text": "Helping brainstorm and generate new ideas",
+        "correct": true
+      },
+      {
+        "text": "Managing a calendar"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To use a ready-made assistant Google provides, where do you look?",
+    "options": [
+      {
+        "text": "Google's Gems library",
+        "correct": true
+      },
+      {
+        "text": "The trash"
+      },
+      {
+        "text": "Network settings"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of sharing a Gem with a team?",
+    "options": [
+      {
+        "text": "Everyone can use an assistant configured the same way",
+        "correct": true
+      },
+      {
+        "text": "It makes the Gem disappear"
+      },
+      {
+        "text": "It slows down your internet"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 5",
+    "title": "Gemini in everyday life",
+    "body": [
+      {
+        "text": "Gemini makes daily life easier in "
+      },
+      {
+        "text": "every situation — from planning trips, cooking, and scheduling, to learning a new language",
+        "bold": true
+      },
+      {
+        "text": ". Just describe the problem or need, and Gemini helps you think, analyze, and find a solution right away."
+      }
+    ],
+    "example": "\"Help me plan next week's schedule — I have 3 meetings, 2 deliverables to submit, and I want to work out 4 days.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 5 · Part 6",
+    "title": "Recap of everything you've learned",
+    "body": [
+      {
+        "text": "Throughout this course you've learned Gemini's basics, its multimodal abilities, its integration with Google Workspace, and how to build Gems. The "
+      },
+      {
+        "text": "key is to actually use it every day",
+        "bold": true
+      },
+      {
+        "text": " — the more you use it, the more new ways you'll discover for Gemini to improve your life and work."
+      }
+    ],
+    "example": "\"Set a goal: use Gemini at least once a day for 7 days, and notice how it helps you.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which is the best example of using Gemini in everyday life?",
+    "options": [
+      {
+        "text": "Using Gemini as an alarm clock"
+      },
+      {
+        "text": "Having Gemini help plan a trip and organize your weekly schedule",
+        "correct": true
+      },
+      {
+        "text": "Having Gemini post on social media for you every day"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which best summarizes everything you learned about Gemini's capabilities?",
+    "options": [
+      {
+        "text": "Gemini can only chat and answer questions"
+      },
+      {
+        "text": "Gemini is a multimodal AI integrated with Google Workspace that can build Gems",
+        "correct": true
+      },
+      {
+        "text": "Gemini only works on computers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the best way to build your Gemini skills?",
+    "options": [
+      {
+        "text": "Read a book about AI"
+      },
+      {
+        "text": "Watch tutorial videos"
+      },
+      {
+        "text": "Actually use it every day and try it on many kinds of work",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get the most out of Gemini in daily life, what should you do?",
+    "options": [
+      {
+        "text": "Use it through Gmail/Docs/Search that you already use every day",
+        "correct": true
+      },
+      {
+        "text": "Use it once and quit"
+      },
+      {
+        "text": "Don't use it at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which everyday Gemini uses can you start with right now?",
+    "options": [
+      {
+        "text": "Summarizing emails, drafting documents, and searching with verification",
+        "correct": true
+      },
+      {
+        "text": "Believing every answer without checking"
+      },
+      {
+        "text": "None at all"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

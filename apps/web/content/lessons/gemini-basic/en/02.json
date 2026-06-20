@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 3",
+    "title": "How many versions of Gemini are there?",
+    "body": [
+      {
+        "text": "Google offers Gemini in several versions by capability: "
+      },
+      {
+        "text": "Flash, Pro, and Ultra",
+        "bold": true
+      },
+      {
+        "text": ". Each has its own strength — Flash focuses on speed, Pro on balance, and Ultra on highly complex work."
+      }
+    ],
+    "example": "\"How are Gemini Pro and Flash different? Which is better for writing articles?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 4",
+    "title": "What is Gemini 2.0 Flash?",
+    "body": [
+      {
+        "text": "Gemini 2.0 Flash is the latest version that "
+      },
+      {
+        "text": "delivers high speed and solid performance at a great value",
+        "bold": true
+      },
+      {
+        "text": ", ideal for everyday tasks like summarizing, answering questions, and general data analysis."
+      }
+    ],
+    "example": "\"Use Gemini 2.0 Flash to summarize this month's report into 5 points.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What kind of work is Gemini Flash good for?",
+    "options": [
+      {
+        "text": "Work that needs speed and everyday use",
+        "correct": true
+      },
+      {
+        "text": "Deep research only"
+      },
+      {
+        "text": "Graphic design"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does Gemini Ultra focus on?",
+    "options": [
+      {
+        "text": "Response speed"
+      },
+      {
+        "text": "Highly complex work that needs strong accuracy",
+        "correct": true
+      },
+      {
+        "text": "Translation only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which version balances speed and capability?",
+    "options": [
+      {
+        "text": "Gemini Flash"
+      },
+      {
+        "text": "Gemini Ultra"
+      },
+      {
+        "text": "Gemini Pro",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You need fast answers for high-volume work. Which version?",
+    "options": [
+      {
+        "text": "Gemini 2.0 Flash",
+        "correct": true
+      },
+      {
+        "text": "The slowest version"
+      },
+      {
+        "text": "Any version gives the same result"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is Gemini 2.0 Flash known for?",
+    "options": [
+      {
+        "text": "Fast, and supports multiple media (text/images/files)",
+        "correct": true
+      },
+      {
+        "text": "Types in one language only"
+      },
+      {
+        "text": "Works only on TVs"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

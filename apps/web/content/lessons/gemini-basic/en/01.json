@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 1",
+    "title": "What is Gemini?",
+    "body": [
+      {
+        "text": "Gemini is Google's AI assistant, built to be a "
+      },
+      {
+        "text": "multimodal AI assistant",
+        "bold": true
+      },
+      {
+        "text": " — it can take in text, images, audio, and video to handle your needs comprehensively."
+      }
+    ],
+    "example": "\"Gemini, can you summarize the current state of AI for me?\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 2",
+    "title": "What can Gemini do?",
+    "body": [
+      {
+        "text": "Gemini helps with all kinds of things — writing, data analysis, and answering questions. Its core strength is "
+      },
+      {
+        "text": "understanding context and giving smart answers",
+        "bold": true
+      },
+      {
+        "text": ", which sets it apart from a regular search engine that just finds links."
+      }
+    ],
+    "example": "\"Help me write a thank-you email to a client after our meeting.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Gemini?",
+    "options": [
+      {
+        "text": "Google's web search engine"
+      },
+      {
+        "text": "Google's multimodal AI assistant",
+        "correct": true
+      },
+      {
+        "text": "A chat app for businesses only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does multimodal mean?",
+    "options": [
+      {
+        "text": "It only takes text input"
+      },
+      {
+        "text": "It has multiple languages"
+      },
+      {
+        "text": "It takes many input types, like text, images, and audio",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How is Gemini different from a regular search engine?",
+    "options": [
+      {
+        "text": "Gemini is much faster"
+      },
+      {
+        "text": "Gemini understands context and gives smart answers, not just links",
+        "correct": true
+      },
+      {
+        "text": "Gemini searches more"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want to find the latest info with a summary. Why does Gemini stand out?",
+    "options": [
+      {
+        "text": "It's connected to Google's ecosystem, so it reaches broad data and services",
+        "correct": true
+      },
+      {
+        "text": "It always works offline"
+      },
+      {
+        "text": "It needs no login"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Which is a key strength of Gemini?",
+    "options": [
+      {
+        "text": "It works with Gmail, Docs, and Drive",
+        "correct": true
+      },
+      {
+        "text": "It plays games"
+      },
+      {
+        "text": "It installs on a router"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

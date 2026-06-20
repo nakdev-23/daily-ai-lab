@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 1",
+    "title": "What can Gemini do in Gmail?",
+    "body": [
+      {
+        "text": "Gemini is built into Gmail to "
+      },
+      {
+        "text": "summarize emails, suggest draft replies, and create new emails from a short description",
+        "bold": true
+      },
+      {
+        "text": ", making your inbox much easier and faster to manage."
+      }
+    ],
+    "example": "\"Draft a polite, professional email declining a meeting and proposing an alternative date.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 2",
+    "title": "Reply Suggestions and Summarize in Gmail",
+    "body": [
+      {
+        "text": "The Reply Suggestions feature "
+      },
+      {
+        "text": "offers short reply options that fit the context of that email",
+        "bold": true
+      },
+      {
+        "text": ", while Summarize condenses long emails or long threads down to just the key points."
+      }
+    ],
+    "example": "\"Summarize this thread for me — I replied late and want to know what was agreed.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Gemini in Gmail help with?",
+    "options": [
+      {
+        "text": "Organizing files in Drive"
+      },
+      {
+        "text": "Summarizing emails, drafting replies, and creating new emails",
+        "correct": true
+      },
+      {
+        "text": "Sending emails automatically on a schedule"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What are Reply Suggestions?",
+    "options": [
+      {
+        "text": "Replying to emails automatically"
+      },
+      {
+        "text": "Short reply options Gemini offers based on the email's context",
+        "correct": true
+      },
+      {
+        "text": "Translating emails to another language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of the Summarize feature in Gmail?",
+    "options": [
+      {
+        "text": "Deleting unwanted emails"
+      },
+      {
+        "text": "Condensing a long email thread to just the key points",
+        "correct": true
+      },
+      {
+        "text": "Adding an automatic signature"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You got a very long email and want the gist quickly. What should you use in Gmail?",
+    "options": [
+      {
+        "text": "Gemini's Summarize feature",
+        "correct": true
+      },
+      {
+        "text": "Read every line yourself first"
+      },
+      {
+        "text": "Delete the email"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "You want to reply to an email quickly. What should you use?",
+    "options": [
+      {
+        "text": "Reply Suggestions to help draft a reply",
+        "correct": true
+      },
+      {
+        "text": "Close Gmail"
+      },
+      {
+        "text": "Send an empty email"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

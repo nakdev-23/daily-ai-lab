@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 1",
+    "title": "What are Gems?",
+    "body": [
+      {
+        "text": "Gems are "
+      },
+      {
+        "text": "custom AI assistants you create for a specific purpose",
+        "bold": true
+      },
+      {
+        "text": ", similar to OpenAI's Custom GPTs. You can set a role, give knowledge, and define the response style for each Gem."
+      }
+    ],
+    "example": "\"I want to create a Gem that's a 'fitness coach' to recommend personal workout programs.\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 4 · Part 2",
+    "title": "How are Gems different from a normal chat?",
+    "body": [
+      {
+        "text": "A normal chat with Gemini starts fresh every time, but a Gem "
+      },
+      {
+        "text": "remembers the role and instructions you set across every conversation",
+        "bold": true
+      },
+      {
+        "text": ", so you don't have to re-explain the context each time you use it."
+      }
+    ],
+    "example": "\"[Open the 'Professional Translator' Gem] Translate this into formal Japanese: Thank you for trusting us.\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are Gems?",
+    "options": [
+      {
+        "text": "A points/rewards system in Gemini"
+      },
+      {
+        "text": "Custom AI assistants for a specific purpose",
+        "correct": true
+      },
+      {
+        "text": "An advanced search feature in Google"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What are Gems similar to in OpenAI?",
+    "options": [
+      {
+        "text": "ChatGPT Plus"
+      },
+      {
+        "text": "DALL-E"
+      },
+      {
+        "text": "Custom GPTs",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main advantage of Gems over a normal chat?",
+    "options": [
+      {
+        "text": "Gems respond faster than normal chat"
+      },
+      {
+        "text": "Gems remember their role and instructions, so no re-explaining",
+        "correct": true
+      },
+      {
+        "text": "Gems are free with no limits"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You do the same kind of work repeatedly and want a pre-configured assistant. What should you use?",
+    "options": [
+      {
+        "text": "Create a Gem for that work",
+        "correct": true
+      },
+      {
+        "text": "Open a new chat every time"
+      },
+      {
+        "text": "Retype the same instruction every time"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How are Gems different from a normal chat?",
+    "options": [
+      {
+        "text": "Role/instructions are set in advance and reusable",
+        "correct": true
+      },
+      {
+        "text": "Faster because it doesn't think"
+      },
+      {
+        "text": "No difference at all"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

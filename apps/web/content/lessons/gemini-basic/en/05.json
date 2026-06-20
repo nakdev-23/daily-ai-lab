@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 3",
+    "title": "Analyze PDF files with Gemini",
+    "body": [
+      {
+        "text": "Gemini supports uploading PDF files and "
+      },
+      {
+        "text": "can read the whole document and answer questions right away",
+        "bold": true
+      },
+      {
+        "text": " — great for summarizing reports, contracts, or long academic documents."
+      }
+    ],
+    "example": "\"[Attach an annual report PDF] Summarize the key points and main figures.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 2 · Part 4",
+    "title": "What is Document Q&A?",
+    "body": [
+      {
+        "text": "Document Q&A means "
+      },
+      {
+        "text": "asking specific questions about a document's contents",
+        "bold": true
+      },
+      {
+        "text": " — like finding information in a contract without reading all of it, or comparing data across different pages."
+      }
+    ],
+    "example": "\"[Attach an employment contract PDF] What are the vacation-leave terms in this contract?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Gemini do with a PDF file?",
+    "options": [
+      {
+        "text": "Edit and save a new PDF"
+      },
+      {
+        "text": "Read, summarize, and answer questions from the PDF's content",
+        "correct": true
+      },
+      {
+        "text": "Convert the PDF to a Word file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of Document Q&A?",
+    "options": [
+      {
+        "text": "It prints documents faster"
+      },
+      {
+        "text": "It helps you find information in a document without reading all of it",
+        "correct": true
+      },
+      {
+        "text": "It creates new documents from templates"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is the most appropriate example of using Gemini with a PDF?",
+    "options": [
+      {
+        "text": "Asking 'Write me a novel'"
+      },
+      {
+        "text": "Attaching a 50-page report and asking 'What are the key points?'",
+        "correct": true
+      },
+      {
+        "text": "Asking Gemini to draw illustrations"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have a 30-page PDF manual and want to ask only about topics you care about. What should you do?",
+    "options": [
+      {
+        "text": "Upload the PDF and ask specific questions (Document Q&A)",
+        "correct": true
+      },
+      {
+        "text": "Read all 30 pages yourself first"
+      },
+      {
+        "text": "Retype all the content"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of work is Document Q&A good for?",
+    "options": [
+      {
+        "text": "Quickly finding answers in long documents",
+        "correct": true
+      },
+      {
+        "text": "Drawing pictures"
+      },
+      {
+        "text": "Composing songs"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

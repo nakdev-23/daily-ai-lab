@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 5",
+    "title": "Gemini in Google Drive",
+    "body": [
+      {
+        "text": "Gemini in Google Drive helps you "
+      },
+      {
+        "text": "search files with natural language and summarize file contents directly",
+        "bold": true
+      },
+      {
+        "text": ", without opening files one by one — making it much faster to manage lots of documents."
+      }
+    ],
+    "example": "\"Find files about 'vendor contracts' created last month.\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 6",
+    "title": "Summarize Drive files with AI",
+    "body": [
+      {
+        "text": "You can "
+      },
+      {
+        "text": "click a file in Drive and have Gemini summarize the key content in seconds",
+        "bold": true
+      },
+      {
+        "text": ", so you know what a file is about before deciding to open and read it all — a big time-saver."
+      }
+    ],
+    "example": "\"[Select a file in Drive] Summarize this file: give the main points and conclusion.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Gemini in Google Drive help you search files?",
+    "options": [
+      {
+        "text": "It can only search by filename"
+      },
+      {
+        "text": "Search with natural language — by topic or time period",
+        "correct": true
+      },
+      {
+        "text": "It can only search files shared with others"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of summarizing files in Drive?",
+    "options": [
+      {
+        "text": "Automatically deleting duplicate files"
+      },
+      {
+        "text": "Knowing a file's main content without reading all of it",
+        "correct": true
+      },
+      {
+        "text": "Converting files to another format"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is an example of using Gemini with Google Drive?",
+    "options": [
+      {
+        "text": "Asking 'Create a new spreadsheet for me'"
+      },
+      {
+        "text": "Asking 'Find the 2024 budget file I created'",
+        "correct": true
+      },
+      {
+        "text": "Asking 'Delete all files in this folder'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have lots of files in Google Drive and want the gist of one quickly. What should you do?",
+    "options": [
+      {
+        "text": "Have Gemini summarize that file in Drive",
+        "correct": true
+      },
+      {
+        "text": "Download and read all of it first"
+      },
+      {
+        "text": "Delete the file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Before having AI summarize a confidential work file, what should you be careful about?",
+    "options": [
+      {
+        "text": "Check that it's data allowed to be shared/processed under policy",
+        "correct": true
+      },
+      {
+        "text": "Don't worry about anything"
+      },
+      {
+        "text": "Make the file public first"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

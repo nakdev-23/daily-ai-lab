@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 3",
+    "title": "Gemini in Google Docs",
+    "body": [
+      {
+        "text": "Gemini in Google Docs works as a writing assistant: the "
+      },
+      {
+        "text": "'Help me write' feature creates content, improves sentences, and expands ideas",
+        "bold": true
+      },
+      {
+        "text": " based on your instructions — great for starting a document or report."
+      }
+    ],
+    "example": "\"Help me write: an introduction for the Marketing team's Q2 performance report.\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 3 · Part 4",
+    "title": "Adjust writing style with Gemini",
+    "body": [
+      {
+        "text": "Besides creating content, Gemini can "
+      },
+      {
+        "text": "adjust the writing tone — formal, casual, more concise, or more detailed",
+        "bold": true
+      },
+      {
+        "text": ". Just select the text and tell Gemini to adjust it to the style you want."
+      }
+    ],
+    "example": "\"[Select text] Refine: make it formal, suitable for sending to executives.\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does the 'Help me write' feature in Google Docs do?",
+    "options": [
+      {
+        "text": "Spell-check only"
+      },
+      {
+        "text": "Helps create content, improve sentences, and expand ideas",
+        "correct": true
+      },
+      {
+        "text": "Translate documents to a foreign language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To make text more formal, what should you do?",
+    "options": [
+      {
+        "text": "Delete it and rewrite everything"
+      },
+      {
+        "text": "Select the text and ask Gemini to make it formal",
+        "correct": true
+      },
+      {
+        "text": "Copy it into Google Translate"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of work is Gemini in Google Docs good for?",
+    "options": [
+      {
+        "text": "Creating spreadsheets and charts"
+      },
+      {
+        "text": "Writing, editing, and refining content in a document",
+        "correct": true
+      },
+      {
+        "text": "Presenting slides"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You're writing a report in Google Docs and want it more formal. What should you do?",
+    "options": [
+      {
+        "text": "Use Gemini in Docs to adjust the writing tone",
+        "correct": true
+      },
+      {
+        "text": "Retype the whole thing yourself"
+      },
+      {
+        "text": "Just change the font"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What can Gemini in Google Docs help with?",
+    "options": [
+      {
+        "text": "Drafting, editing, and summarizing content in a document",
+        "correct": true
+      },
+      {
+        "text": "Typing in place of a real keyboard"
+      },
+      {
+        "text": "Typing only headings"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

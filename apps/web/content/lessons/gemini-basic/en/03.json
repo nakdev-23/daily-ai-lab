@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 5",
+    "title": "Getting started at gemini.google.com",
+    "body": [
+      {
+        "text": "The website gemini.google.com is the main place to use Gemini, with "
+      },
+      {
+        "text": "a simple chat screen plus a sidebar for your conversation history",
+        "bold": true
+      },
+      {
+        "text": ". It's free with a Google account — just start typing your question right away."
+      }
+    ],
+    "example": "\"Go to gemini.google.com and type: 'What's the weather in Bangkok today?'\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Basics · Chapter 1 · Part 6",
+    "title": "Conversation modes in Gemini",
+    "body": [
+      {
+        "text": "Gemini supports several modes — typing text, uploading files, and using voice — with "
+      },
+      {
+        "text": "a microphone button for talking and an attachment button for files",
+        "bold": true
+      },
+      {
+        "text": ", making interaction flexible and convenient."
+      }
+    ],
+    "example": "\"Tap the microphone icon and say: 'Recommend some restaurants near me.'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the main website for using Gemini?",
+    "options": [
+      {
+        "text": "google.com/gemini"
+      },
+      {
+        "text": "gemini.google.com",
+        "correct": true
+      },
+      {
+        "text": "ai.google.com"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What account do you need to access gemini.google.com?",
+    "options": [
+      {
+        "text": "A Microsoft account"
+      },
+      {
+        "text": "A Google account",
+        "correct": true
+      },
+      {
+        "text": "An Apple account"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the microphone button in Gemini for?",
+    "options": [
+      {
+        "text": "Recording audio and turning it into a podcast"
+      },
+      {
+        "text": "Talking to Gemini by voice instead of typing",
+        "correct": true
+      },
+      {
+        "text": "Reading the result aloud"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you get started with Gemini?",
+    "options": [
+      {
+        "text": "Open gemini.google.com and log in with a Google account",
+        "correct": true
+      },
+      {
+        "text": "You have to buy a hardware box first"
+      },
+      {
+        "text": "You have to write code first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "You want to start a new topic unrelated to the current chat. What should you do?",
+    "options": [
+      {
+        "text": "Open a new chat so the contexts don't mix",
+        "correct": true
+      },
+      {
+        "text": "Keep typing in the same chat"
+      },
+      {
+        "text": "Delete your account"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

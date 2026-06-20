@@ -15,17 +15,17 @@ everywhere. Bilingual infra is already in place (Thai fallback when EN missing).
 ## Check what's left
 `cd apps/web && node scripts/translate-content.mjs --kind all --dry-run`
 
-## Done (165/219 lessons)
-- chatgpt-basic ✅ · claude-basic ✅ · gemini-basic ✅
-- ai-advanced-pro ✅ · ai-mcp-pro ✅ · ai-skills-pro ✅
-- grok-basic ✅ · elevenlabs-basic ✅ · lovable-basic ✅ · midjourney-basic ✅
-- suno-basic ✅ · runway-basic ✅ · codex-basic ✅ · codex-advanced ✅
-- chatgpt-advanced ✅ · claude-advanced ✅ · gemini-advanced ✅
+## Done — ALL 219 lessons ✅ (dry-run: 0/219 remaining)
+All lesson courses translated to English and pushed.
 
-## Next (lessons first, then docs) — 54 lessons left
-claude-code (18) → claude-cowork (12) → claude-design (12) →
-claude-other (12) → (any remaining)
-→ then all 349 docs (.en.md).
+## Next — DOCS (349 .en.md files left)
+Translate per tool dir under `content/docs/<tool>/`:
+antigravity(4) base44(4) bolt(4) chatgpt(14) claude(19) codex(11) cursor(6)
+dall-e(13) elevenlabs(6) gemini(30) google-ai-studio(4) google-flow(4)
+google-jules(4) google-stitch(4) grok(23) hermes(8) heygen(6) huggingface(4)
+kimi(4) kling-ai(16) lovable(4) midjourney(56) ollama(4) openclaw(7)
+openrouter(4) perplexity(18) replit(4) runway(20) seedance(5) suno(20)
+windsurf(6) z-ai(13)
 Always run the dry-run to confirm the true remaining set.
 
 Commit per course/tool with message `feat(i18n): translate <name> to English`,

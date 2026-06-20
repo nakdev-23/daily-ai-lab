@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 4 · Part 1",
+    "title": "What is Code Interpreter?",
+    "body": [
+      {
+        "text": "Code Interpreter (Advanced Data Analysis) lets ChatGPT "
+      },
+      {
+        "text": "write and actually run Python code in a sandbox",
+        "bold": true
+      },
+      {
+        "text": " — calculating accurately, analyzing files, and creating charts, not just guessing answers from text."
+      }
+    ],
+    "example": "\"Upload sales.xlsx and ask: which month had the highest sales, and what's the percent growth from the previous month?\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 4 · Part 2",
+    "title": "How is it different from asking normally?",
+    "body": [
+      {
+        "text": "Asking a normal AI to do math can give wrong answers because it \"guesses\" — but Code Interpreter "
+      },
+      {
+        "text": "calculates with real code, so the results are reliable",
+        "bold": true
+      },
+      {
+        "text": " — great for numbers, statistics, and large datasets."
+      }
+    ],
+    "example": "\"Calculate the mean, median, and SD of the price column, then find outliers using the IQR method\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Code Interpreter do?",
+    "options": [
+      {
+        "text": "Write and run real Python code to analyze data",
+        "correct": true
+      },
+      {
+        "text": "Only show example code, can't run it"
+      },
+      {
+        "text": "Directly control our computer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why are Code Interpreter's calculations more reliable than asking normally?",
+    "options": [
+      {
+        "text": "Because it uses a smarter model"
+      },
+      {
+        "text": "Because it calculates with real code, not guessing from text",
+        "correct": true
+      },
+      {
+        "text": "Because it answers slower so it's more careful"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What work is Code Interpreter best for?",
+    "options": [
+      {
+        "text": "Writing a Mother's Day poem"
+      },
+      {
+        "text": "Analyzing sales from an Excel file",
+        "correct": true
+      },
+      {
+        "text": "Translating an English article"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have an Excel file and want real number analysis. What should you use?",
+    "options": [
+      {
+        "text": "Code Interpreter (Advanced Data Analysis)",
+        "correct": true
+      },
+      {
+        "text": "Just ask verbally without uploading the file"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How is Code Interpreter different from asking normally?",
+    "options": [
+      {
+        "text": "It can run code to actually process the data",
+        "correct": true
+      },
+      {
+        "text": "It types faster"
+      },
+      {
+        "text": "No difference"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

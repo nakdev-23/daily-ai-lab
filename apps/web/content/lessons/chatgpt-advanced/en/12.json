@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 12 · Part 1",
+    "title": "ChatGPT Team & Enterprise",
+    "body": [
+      {
+        "text": "Organization plans provide a "
+      },
+      {
+        "text": "shared team workspace, internal Custom GPT sharing, and data not used to train the model",
+        "bold": true
+      },
+      {
+        "text": " — Enterprise adds bigger context capacity, SSO, admin permission controls, and enterprise-grade security standards."
+      }
+    ],
+    "example": "\"The marketing team shares a 'Brand Voice Checker' GPT so everyone checks writing against the same brand standard\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 12 · Part 2",
+    "title": "Pick the plan that fits the work",
+    "body": [
+      {
+        "text": "Rule of thumb: "
+      },
+      {
+        "text": "solo → Plus · small team needing a shared workspace → Team · large org needing SSO and compliance → Enterprise",
+        "bold": true
+      },
+      {
+        "text": " — what Team/Enterprise share is that business data isn't used for training."
+      }
+    ],
+    "example": "\"A team of 8 working on documents together daily → Team is the best fit, with shared GPTs and an admin console\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the data advantage of Team/Enterprise plans?",
+    "options": [
+      {
+        "text": "Business data isn't used to train the model",
+        "correct": true
+      },
+      {
+        "text": "Data is automatically shared publicly"
+      },
+      {
+        "text": "No difference from the free plan"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which feature is specific to Enterprise?",
+    "options": [
+      {
+        "text": "Chatting with AI"
+      },
+      {
+        "text": "SSO and enterprise-level permission controls",
+        "correct": true
+      },
+      {
+        "text": "Image generation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "A team of 5 wants to share a Custom GPT internally. Which plan?",
+    "options": [
+      {
+        "text": "Free"
+      },
+      {
+        "text": "Team",
+        "correct": true
+      },
+      {
+        "text": "No plan can do it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "An org wants to use ChatGPT together securely and manageably. Which plan?",
+    "options": [
+      {
+        "text": "Team or Enterprise",
+        "correct": true
+      },
+      {
+        "text": "Free"
+      },
+      {
+        "text": "No plan needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What do Team/Enterprise plans excel at?",
+    "options": [
+      {
+        "text": "User management and organization data privacy",
+        "correct": true
+      },
+      {
+        "text": "Playing games"
+      },
+      {
+        "text": "No advantages"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

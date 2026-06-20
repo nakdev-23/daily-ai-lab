@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 2 · Part 1",
+    "title": "Few-shot Prompting",
+    "body": [
+      {
+        "text": "Few-shot means "
+      },
+      {
+        "text": "giving 2–3 examples of the answer you want",
+        "bold": true
+      },
+      {
+        "text": " before asking the real question — the AI mimics the format, tone, and structure of your examples."
+      }
+    ],
+    "example": "\"Turn names into emails: John Smith → john.s@company.com, Jane Doe → jane.d@company.com, so what about Michael Lee?\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 2 · Part 2",
+    "title": "When to use few-shot",
+    "body": [
+      {
+        "text": "Use it when you want a "
+      },
+      {
+        "text": "specific output format",
+        "bold": true
+      },
+      {
+        "text": " — like a table format, a writing style, or a data-arrangement pattern that's harder to describe in words than to show by example."
+      }
+    ],
+    "example": "\"Write a news summary in this format: [Headline] | [one-line gist] | [impact]. Example: ...\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is few-shot prompting?",
+    "options": [
+      {
+        "text": "Asking briefly, no more than 5 words"
+      },
+      {
+        "text": "Giving examples of the desired answer before the real question",
+        "correct": true
+      },
+      {
+        "text": "Asking repeatedly over many rounds"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which situation is few-shot best for?",
+    "options": [
+      {
+        "text": "Wanting a specific output format that's hard to describe",
+        "correct": true
+      },
+      {
+        "text": "Asking general-knowledge questions"
+      },
+      {
+        "text": "Wanting the fastest possible answer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How many examples are appropriate?",
+    "options": [
+      {
+        "text": "Always exactly 1, never more"
+      },
+      {
+        "text": "2–3 varied, correct examples",
+        "correct": true
+      },
+      {
+        "text": "The more the better, 50+ examples"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get output that matches your specific format, what should you do?",
+    "options": [
+      {
+        "text": "Give 2–3 examples first (few-shot)",
+        "correct": true
+      },
+      {
+        "text": "Never give examples"
+      },
+      {
+        "text": "Type in all caps"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does few-shot help with?",
+    "options": [
+      {
+        "text": "Making output match the style/format you want",
+        "correct": true
+      },
+      {
+        "text": "Making it answer slower"
+      },
+      {
+        "text": "Changing the model version"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

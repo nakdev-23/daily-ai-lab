@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 5 · Part 1",
+    "title": "Analyze data with Python",
+    "body": [
+      {
+        "text": "Upload a CSV / Excel / JSON file and "
+      },
+      {
+        "text": "ask for analysis in plain language",
+        "bold": true
+      },
+      {
+        "text": " — ChatGPT writes the pandas code itself: filter, group, pivot — without you needing to code."
+      }
+    ],
+    "example": "\"From this file, group sales by region, sort highest to lowest, and tell me which region grew fastest vs last year\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 5 · Part 2",
+    "title": "Techniques for good data answers",
+    "body": [
+      {
+        "text": "Start by having the AI "
+      },
+      {
+        "text": "explore the data first (what columns, how many rows)",
+        "bold": true
+      },
+      {
+        "text": ", then drill into questions — and always ask it to show the calculation steps so you can verify."
+      }
+    ],
+    "example": "\"First, summarize this file's structure: what columns, how many rows, any missing data, then propose 3 worthwhile questions to analyze\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which file types can be used for data analysis?",
+    "options": [
+      {
+        "text": "CSV, Excel, and JSON",
+        "correct": true
+      },
+      {
+        "text": "Only .txt"
+      },
+      {
+        "text": "Only image files"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Before drilling into analysis questions, what should you do first?",
+    "options": [
+      {
+        "text": "Ask the hardest question immediately"
+      },
+      {
+        "text": "Have the AI explore the data structure first",
+        "correct": true
+      },
+      {
+        "text": "Delete half the data to shrink the file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why ask the AI to show the calculation steps?",
+    "options": [
+      {
+        "text": "To make the answer longer"
+      },
+      {
+        "text": "So you can verify the correctness of the method",
+        "correct": true
+      },
+      {
+        "text": "Because the AI forces you to"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get deep conclusions from a dataset, what should you do?",
+    "options": [
+      {
+        "text": "Upload the file and ask clear analytical questions",
+        "correct": true
+      },
+      {
+        "text": "Ask vaguely, 'take a look'"
+      },
+      {
+        "text": "Send only the filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's a technique for good data answers?",
+    "options": [
+      {
+        "text": "Specify the columns/metrics/time period you care about",
+        "correct": true
+      },
+      {
+        "text": "Don't say anything"
+      },
+      {
+        "text": "Ask one cell at a time"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

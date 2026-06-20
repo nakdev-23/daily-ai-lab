@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 10 · Part 1",
+    "title": "Create a Custom GPT",
+    "body": [
+      {
+        "text": "A Custom GPT is "
+      },
+      {
+        "text": "your own pre-configured version of ChatGPT",
+        "bold": true
+      },
+      {
+        "text": " — add instructions, knowledge files, and turn tools on/off. Build it through the GPT Builder, no coding needed."
+      }
+    ],
+    "example": "\"Create a GPT named 'Coffee Shop Assistant' that knows the whole menu from the uploaded file and answers customers in polite Thai\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 10 · Part 2",
+    "title": "Elements of a good GPT",
+    "body": [
+      {
+        "text": "A truly usable GPT needs "
+      },
+      {
+        "text": "clear instructions + up-to-date knowledge + example questions (conversation starters)",
+        "bold": true
+      },
+      {
+        "text": " — and test it on many real cases before sharing it with others."
+      }
+    ],
+    "example": "\"Conversation starters: 'Recommend best-sellers' / 'This month's promotions' / 'How to pre-order'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is a Custom GPT?",
+    "options": [
+      {
+        "text": "A self-configured version of ChatGPT with instructions and knowledge",
+        "correct": true
+      },
+      {
+        "text": "An AI model you must train from scratch"
+      },
+      {
+        "text": "An Excel add-on"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Do you need to code to create a Custom GPT?",
+    "options": [
+      {
+        "text": "You need at least Python"
+      },
+      {
+        "text": "No, build it through the GPT Builder",
+        "correct": true
+      },
+      {
+        "text": "You must hire a programmer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Before sharing a GPT with others, what should you do?",
+    "options": [
+      {
+        "text": "Test it on several real cases first",
+        "correct": true
+      },
+      {
+        "text": "Share it now, users will test it"
+      },
+      {
+        "text": "Delete all the knowledge first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For repetitive specialized work, you want a preset assistant. What should you do?",
+    "options": [
+      {
+        "text": "Create a Custom GPT",
+        "correct": true
+      },
+      {
+        "text": "Open a new chat every time"
+      },
+      {
+        "text": "Retype the same instruction"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should a good Custom GPT have?",
+    "options": [
+      {
+        "text": "Clear instructions, relevant knowledge, and examples",
+        "correct": true
+      },
+      {
+        "text": "Just a cool name"
+      },
+      {
+        "text": "No configuration"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

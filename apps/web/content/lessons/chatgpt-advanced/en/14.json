@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 14 · Part 1",
+    "title": "ChatGPT Voice Mode",
+    "body": [
+      {
+        "text": "Voice Mode lets you "
+      },
+      {
+        "text": "talk to ChatGPT by voice in real time",
+        "bold": true
+      },
+      {
+        "text": " — you can interrupt and change topics mid-conversation. Great while driving, cooking, or practicing a language with a conversation partner that never gets bored."
+      }
+    ],
+    "example": "\"Practice an English job interview with me — ask one question at a time, then give feedback on my pronunciation and answers\"",
+    "mascot": "mascot-hello"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 14 · Part 2",
+    "title": "Make the most of Voice Mode",
+    "body": [
+      {
+        "text": "The best use cases: "
+      },
+      {
+        "text": "practicing a language, rehearsing a presentation, brainstorming on the go, and Q&A when your hands are full",
+        "bold": true
+      },
+      {
+        "text": " — state the role at the start of the conversation, just like a normal prompt, to give the chat direction."
+      }
+    ],
+    "example": "\"Pretend to be a hesitant customer; I'll practice my insurance pitch — ask hard questions, then assess how well I answered\"",
+    "mascot": "mascot-wave"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's a standout feature of Voice Mode?",
+    "options": [
+      {
+        "text": "Talking by voice in real time, with the ability to interrupt",
+        "correct": true
+      },
+      {
+        "text": "Typing faster"
+      },
+      {
+        "text": "Creating videos"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which situation is best for Voice Mode?",
+    "options": [
+      {
+        "text": "Writing a 50-page report"
+      },
+      {
+        "text": "Practicing English conversation while driving",
+        "correct": true
+      },
+      {
+        "text": "Analyzing an Excel file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "To give a voice conversation direction, what should you do?",
+    "options": [
+      {
+        "text": "State the role and goal at the start of the conversation",
+        "correct": true
+      },
+      {
+        "text": "Speak as fast as possible"
+      },
+      {
+        "text": "Say nothing, the AI knows"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To practice English conversation interactively by voice, what should you use?",
+    "options": [
+      {
+        "text": "Voice Mode",
+        "correct": true
+      },
+      {
+        "text": "Typing only"
+      },
+      {
+        "text": "Mute"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you make the most of Voice Mode?",
+    "options": [
+      {
+        "text": "Practice speaking / Q&A while your hands are busy",
+        "correct": true
+      },
+      {
+        "text": "Use it instead of a keyboard for long documents"
+      },
+      {
+        "text": "It's useless"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

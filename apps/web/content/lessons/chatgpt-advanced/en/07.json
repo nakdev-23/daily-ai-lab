@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 7 · Part 1",
+    "title": "DALL·E in ChatGPT",
+    "body": [
+      {
+        "text": "Type a description of the image you want, and ChatGPT uses "
+      },
+      {
+        "text": "DALL·E to create the image right in the chat",
+        "bold": true
+      },
+      {
+        "text": " — and because it's a chat, you can ask for edits immediately, like changing colors, adding objects, or changing the camera angle."
+      }
+    ],
+    "example": "\"Create an image of an orange cat wearing sunglasses, working at a laptop in a coffee shop, pastel illustration style\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 7 · Part 2",
+    "title": "Write great image prompts",
+    "body": [
+      {
+        "text": "A formula that always works: "
+      },
+      {
+        "text": "subject + action + scene + style + lighting/color tone",
+        "bold": true
+      },
+      {
+        "text": " — the clearer you picture it, the more on-target the result, and specifying a style strongly controls the look."
+      }
+    ],
+    "example": "\"A minimalist bakery logo, a croissant, clean lines, golden-brown color, cream background\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the benefit of creating images through ChatGPT's chat?",
+    "options": [
+      {
+        "text": "You can ask for edits continuing from the same image",
+        "correct": true
+      },
+      {
+        "text": "You always get 8K resolution"
+      },
+      {
+        "text": "Unlimited free generation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good image prompt include?",
+    "options": [
+      {
+        "text": "Just a one-word object is enough"
+      },
+      {
+        "text": "Subject, action, scene, style, and color tone",
+        "correct": true
+      },
+      {
+        "text": "Over 500 words, all in English"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "You got an image but want to change the background. What should you do?",
+    "options": [
+      {
+        "text": "Open a new chat and start over"
+      },
+      {
+        "text": "Tell it in the same chat what background you want instead",
+        "correct": true
+      },
+      {
+        "text": "It can't be done — you must use Photoshop"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get an illustration matching your imagination, how should you write the image prompt?",
+    "options": [
+      {
+        "text": "Clearly state the style, colors, composition, and viewpoint",
+        "correct": true
+      },
+      {
+        "text": "Just type 'a nice picture'"
+      },
+      {
+        "text": "Don't describe anything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is DALL·E in ChatGPT used for?",
+    "options": [
+      {
+        "text": "Creating images from descriptions",
+        "correct": true
+      },
+      {
+        "text": "Editing video"
+      },
+      {
+        "text": "Composing music"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

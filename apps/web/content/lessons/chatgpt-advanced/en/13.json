@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 13 · Part 1",
+    "title": "ChatGPT + Zapier",
+    "body": [
+      {
+        "text": "Zapier connects ChatGPT to "
+      },
+      {
+        "text": "over 6,000 apps with no code",
+        "bold": true
+      },
+      {
+        "text": " — build automations like: email arrives → AI summarizes → send to Slack, or a new form → AI drafts a reply → save to Sheets."
+      }
+    ],
+    "example": "\"Zap: when there's a new customer review in Google Forms → ChatGPT analyzes sentiment → notify the team in Slack if it's a bad review\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 13 · Part 2",
+    "title": "Design automations that work",
+    "body": [
+      {
+        "text": "Formula: "
+      },
+      {
+        "text": "Trigger (event) → AI processing → Action (result)",
+        "bold": true
+      },
+      {
+        "text": " — start with daily repetitive tasks, write the prompt in the Zap clearly like instructing a new employee, and test on real data before turning it on."
+      }
+    ],
+    "example": "\"Trigger: a new email containing 'quote' → AI extracts company, product, budget → Action: add a row in Google Sheets\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does Zapier let ChatGPT do?",
+    "options": [
+      {
+        "text": "Connect to other apps to automate work",
+        "correct": true
+      },
+      {
+        "text": "Answer more intelligently"
+      },
+      {
+        "text": "Be used unlimited for free"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the structure of an automation?",
+    "options": [
+      {
+        "text": "Trigger → AI processing → Action",
+        "correct": true
+      },
+      {
+        "text": "Action → Trigger → wait"
+      },
+      {
+        "text": "No structure, runs randomly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of work should you automate first?",
+    "options": [
+      {
+        "text": "A once-in-a-lifetime task"
+      },
+      {
+        "text": "Repetitive work you do the same way every day",
+        "correct": true
+      },
+      {
+        "text": "Strategic decision-making"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To automate ChatGPT connected to other apps, what should you use?",
+    "options": [
+      {
+        "text": "Connect with Zapier",
+        "correct": true
+      },
+      {
+        "text": "Type it yourself every time"
+      },
+      {
+        "text": "Disconnect everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you design an automation that works?",
+    "options": [
+      {
+        "text": "Define clear trigger/action and test step by step",
+        "correct": true
+      },
+      {
+        "text": "Connect everything at once without testing"
+      },
+      {
+        "text": "Skip testing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

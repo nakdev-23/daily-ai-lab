@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 15 · Part 1",
+    "title": "Canvas & Document Editing",
+    "body": [
+      {
+        "text": "Canvas opens an "
+      },
+      {
+        "text": "editing workspace next to the chat",
+        "bold": true
+      },
+      {
+        "text": " — a document or code shows as a workpiece you can edit in specific spots. Highlight just a paragraph and ask for a change, without the AI rewriting the whole thing."
+      }
+    ],
+    "example": "\"Open Canvas to write an article 'AI in daily life', then highlight the intro and say: make it more engaging, start with a question\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 15 · Part 2",
+    "title": "ChatGPT Advanced recap",
+    "body": [
+      {
+        "text": "You've learned it all: "
+      },
+      {
+        "text": "advanced prompting, Code Interpreter, DALL·E, Search, Custom GPT, Actions, Zapier, Voice, and Canvas",
+        "bold": true
+      },
+      {
+        "text": " — together these skills turn ChatGPT from a toy into a real work tool."
+      }
+    ],
+    "example": "\"Next challenge: pick one of your routine tasks and design a workflow using at least 3 features from this course\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is Canvas different from a normal chat?",
+    "options": [
+      {
+        "text": "You can edit specific spots without rewriting the whole thing",
+        "correct": true
+      },
+      {
+        "text": "It answers 2x faster"
+      },
+      {
+        "text": "It's only for code"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To edit just the intro of an article in Canvas, what do you do?",
+    "options": [
+      {
+        "text": "Delete the whole article and start over"
+      },
+      {
+        "text": "Highlight the intro and ask to change only that part",
+        "correct": true
+      },
+      {
+        "text": "It can't be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which tool fits 'analyze sales from an Excel file'?",
+    "options": [
+      {
+        "text": "Voice Mode"
+      },
+      {
+        "text": "Code Interpreter",
+        "correct": true
+      },
+      {
+        "text": "DALL·E"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To edit a long document with the AI piece by piece, what should you use?",
+    "options": [
+      {
+        "text": "Canvas",
+        "correct": true
+      },
+      {
+        "text": "A normal chat, scrolling up and down"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you get the most from advanced ChatGPT?",
+    "options": [
+      {
+        "text": "Pick the feature that fits the task and always verify the results",
+        "correct": true
+      },
+      {
+        "text": "Use the same feature for everything"
+      },
+      {
+        "text": "Don't verify the results"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

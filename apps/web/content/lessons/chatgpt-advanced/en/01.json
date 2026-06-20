@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 1 · Part 1",
+    "title": "Chain of Thought Prompting",
+    "body": [
+      {
+        "text": "Chain of thought is having the AI "
+      },
+      {
+        "text": "show its thinking step by step",
+        "bold": true
+      },
+      {
+        "text": " — instead of jumping straight to the answer, tell the AI to 'think step by step' for more accurate results."
+      }
+    ],
+    "example": "\"Solve this math problem step by step: if you buy 3 items priced 120, 85, and 200 baht with a 15% discount, how much do you pay?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 1 · Part 2",
+    "title": "Why chain of thought works well",
+    "body": [
+      {
+        "text": "Having the AI reason out the steps reduces "
+      },
+      {
+        "text": "jumping to wrong conclusions (reasoning errors)",
+        "bold": true
+      },
+      {
+        "text": " — great for complex problems like math, analysis, or decision-making."
+      }
+    ],
+    "example": "\"Analyze the pros and cons of renting vs buying a home, showing your reasoning point by point\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is chain of thought prompting?",
+    "options": [
+      {
+        "text": "Asking several questions at once"
+      },
+      {
+        "text": "Having the AI show its thinking step by step",
+        "correct": true
+      },
+      {
+        "text": "Connecting ChatGPT to an API"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What kind of work is chain of thought best for?",
+    "options": [
+      {
+        "text": "Writing a short poem"
+      },
+      {
+        "text": "Translating a simple sentence"
+      },
+      {
+        "text": "Complex math problems and analysis",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which phrase best triggers chain of thought?",
+    "options": [
+      {
+        "text": "\"Keep it short\""
+      },
+      {
+        "text": "\"Think step by step, then answer\"",
+        "correct": true
+      },
+      {
+        "text": "\"Answer as fast as possible\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want ChatGPT to solve a multi-step problem more accurately. What should you do?",
+    "options": [
+      {
+        "text": "Ask it to think step by step (chain of thought)",
+        "correct": true
+      },
+      {
+        "text": "Tell it to answer as briefly as possible"
+      },
+      {
+        "text": "Ask repeatedly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of work suits chain of thought?",
+    "options": [
+      {
+        "text": "Work needing multi-step reasoning, like calculation and planning",
+        "correct": true
+      },
+      {
+        "text": "A short greeting"
+      },
+      {
+        "text": "Changing the language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

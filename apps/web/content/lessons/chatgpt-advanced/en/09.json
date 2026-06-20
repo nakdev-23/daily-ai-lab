@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 9 · Part 1",
+    "title": "File Upload & Analysis",
+    "body": [
+      {
+        "text": "You can drag many file types into the chat: "
+      },
+      {
+        "text": "PDF, Word, Excel, PowerPoint, images, and code",
+        "bold": true
+      },
+      {
+        "text": " — ChatGPT reads the content and can summarize, answer questions, compare, or extract the info you need."
+      }
+    ],
+    "example": "\"Read this lease agreement PDF and summarize the key terms, penalties, and things to watch for before signing\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 9 · Part 2",
+    "title": "Techniques for working with files",
+    "body": [
+      {
+        "text": "You can upload several files at once to "
+      },
+      {
+        "text": "compare across documents",
+        "bold": true
+      },
+      {
+        "text": " — like comparing 3 quotes, or this year's report vs last year's — and clearly state what you want from each file."
+      }
+    ],
+    "example": "\"Compare these 3 quote files: total price, timeline, warranty terms — make a table and recommend the best value\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which file types can you upload for ChatGPT to analyze?",
+    "options": [
+      {
+        "text": "PDF, Word, Excel, images, and many more",
+        "correct": true
+      },
+      {
+        "text": "Only .txt files"
+      },
+      {
+        "text": "Only images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To compare 3 vendor quotes, what should you do?",
+    "options": [
+      {
+        "text": "Upload one file each in 3 separate chats"
+      },
+      {
+        "text": "Upload all 3 files in one chat and ask for a comparison table",
+        "correct": true
+      },
+      {
+        "text": "Type all the content yourself, line by line"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which instruction gives the best result when working with files?",
+    "options": [
+      {
+        "text": "\"Read this file\""
+      },
+      {
+        "text": "\"Summarize the key terms, penalties, and cautions from this contract\"",
+        "correct": true
+      },
+      {
+        "text": "\"Is this file good?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have a long contract PDF and want to find risky clauses. What should you do?",
+    "options": [
+      {
+        "text": "Upload the file and ask specifically",
+        "correct": true
+      },
+      {
+        "text": "Retype all the content"
+      },
+      {
+        "text": "Guess"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's a technique for working with files effectively?",
+    "options": [
+      {
+        "text": "Clearly say what you want to summarize/find in the file",
+        "correct": true
+      },
+      {
+        "text": "Upload a blank file with no question"
+      },
+      {
+        "text": "Send the wrong file type"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 3 · Part 1",
+    "title": "System Instructions",
+    "body": [
+      {
+        "text": "System instructions are "
+      },
+      {
+        "text": "rules the AI must follow for the whole conversation",
+        "bold": true
+      },
+      {
+        "text": " — in ChatGPT you set them via Custom Instructions or when creating a Custom GPT, so you don't have to retype them every time."
+      }
+    ],
+    "example": "\"You are an HR assistant. Answer in polite Thai, always reference company policy, and if unsure, say to check with a real HR person\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 3 · Part 2",
+    "title": "Write effective system instructions",
+    "body": [
+      {
+        "text": "A good structure is "
+      },
+      {
+        "text": "role + scope + answer format + restrictions",
+        "bold": true
+      },
+      {
+        "text": " — the clearer it is, the less the AI drifts, and the more consistent its behavior throughout use."
+      }
+    ],
+    "example": "\"Role: math tutor / Scope: high school / Format: step-by-step with exercises / Restriction: don't give the answer directly, hint first\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How are system instructions different from a normal prompt?",
+    "options": [
+      {
+        "text": "They apply for the whole conversation, no retyping",
+        "correct": true
+      },
+      {
+        "text": "They only work in English"
+      },
+      {
+        "text": "They answer faster than a normal prompt"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should be in system instructions?",
+    "options": [
+      {
+        "text": "Today's specific question"
+      },
+      {
+        "text": "Role, scope, answer format, and restrictions",
+        "correct": true
+      },
+      {
+        "text": "Your entire personal history"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "In ChatGPT, where do you set system instructions?",
+    "options": [
+      {
+        "text": "Custom Instructions in Settings, or when creating a Custom GPT",
+        "correct": true
+      },
+      {
+        "text": "Only by writing code"
+      },
+      {
+        "text": "You can't — it's only in the API"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To keep ChatGPT's behavior consistent across tasks, where should you set it?",
+    "options": [
+      {
+        "text": "System instructions",
+        "correct": true
+      },
+      {
+        "text": "Retype it in every chat"
+      },
+      {
+        "text": "Change the theme"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should good system instructions specify?",
+    "options": [
+      {
+        "text": "Role, constraints, and output format clearly",
+        "correct": true
+      },
+      {
+        "text": "Just the words 'help me'"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

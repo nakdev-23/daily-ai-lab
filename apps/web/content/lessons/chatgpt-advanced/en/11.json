@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 11 · Part 1",
+    "title": "Actions & API Integration",
+    "body": [
+      {
+        "text": "Actions let a Custom GPT "
+      },
+      {
+        "text": "call external APIs",
+        "bold": true
+      },
+      {
+        "text": " — check real stock, book a slot, pull data from a company system — defined via an OpenAPI schema that specifies what the GPT can call."
+      }
+    ],
+    "example": "\"A restaurant GPT that checks table availability from the real booking system via API and books for the customer right in the chat\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 11 · Part 2",
+    "title": "Action security",
+    "body": [
+      {
+        "text": "Open only the endpoints you need, use "
+      },
+      {
+        "text": "API key / OAuth, and require confirmation before important actions",
+        "bold": true
+      },
+      {
+        "text": " — don't let the GPT delete or change data without the user's confirmation."
+      }
+    ],
+    "example": "\"Setup: reading data is automatic, but booking/canceling requires the user to confirm every time\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Actions in a Custom GPT do?",
+    "options": [
+      {
+        "text": "Call external APIs to pull or send real data",
+        "correct": true
+      },
+      {
+        "text": "Change the text color in chat"
+      },
+      {
+        "text": "Only make it respond faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What defines how Actions call an API?",
+    "options": [
+      {
+        "text": "A plain Word file"
+      },
+      {
+        "text": "An OpenAPI schema",
+        "correct": true
+      },
+      {
+        "text": "Nothing — the GPT guesses"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is a correct security practice?",
+    "options": [
+      {
+        "text": "Open every endpoint for the GPT to use freely"
+      },
+      {
+        "text": "Important actions must require user confirmation first",
+        "correct": true
+      },
+      {
+        "text": "Embed the API key in the instructions for everyone to see"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Connecting Actions to an external API, what should you be most careful about?",
+    "options": [
+      {
+        "text": "Limit permissions and validate data sent/received",
+        "correct": true
+      },
+      {
+        "text": "Put the secret key in a public instruction"
+      },
+      {
+        "text": "Open every permission"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What can Actions in a Custom GPT do?",
+    "options": [
+      {
+        "text": "Call external services/data via API",
+        "correct": true
+      },
+      {
+        "text": "Change the app color"
+      },
+      {
+        "text": "Delete the account"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

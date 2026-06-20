@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 6 · Part 1",
+    "title": "Create charts and visualizations",
+    "body": [
+      {
+        "text": "Beyond numbers, ChatGPT can "
+      },
+      {
+        "text": "draw charts from your data",
+        "bold": true
+      },
+      {
+        "text": " — bar, line, pie, scatter, heatmap. Just say what you want to see, and download it as an image file to use."
+      }
+    ],
+    "example": "\"Create a bar chart comparing quarterly sales, with numbers on the bars, in a blue color scheme\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 6 · Part 2",
+    "title": "Pick the chart that fits the story",
+    "body": [
+      {
+        "text": "Simple rule: "
+      },
+      {
+        "text": "comparison → bar · trend → line · proportion → pie · relationship → scatter",
+        "bold": true
+      },
+      {
+        "text": " — tell ChatGPT what story you want the chart to tell, and have it suggest the right type."
+      }
+    ],
+    "example": "\"What chart should I use to show that sales grew steadily for 6 months? Create it, with the reasoning\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "To show monthly sales trends, which chart should you use?",
+    "options": [
+      {
+        "text": "Pie chart"
+      },
+      {
+        "text": "Line chart",
+        "correct": true
+      },
+      {
+        "text": "Scatter plot"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Can charts made in ChatGPT be used elsewhere?",
+    "options": [
+      {
+        "text": "Yes, you can download them as image files",
+        "correct": true
+      },
+      {
+        "text": "No, only viewable in chat"
+      },
+      {
+        "text": "Only with a per-image paid plan"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "To show the market share of 4 brands, which chart fits best?",
+    "options": [
+      {
+        "text": "Line chart"
+      },
+      {
+        "text": "Pie chart",
+        "correct": true
+      },
+      {
+        "text": "Histogram"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To compare monthly sales, which chart should you choose?",
+    "options": [
+      {
+        "text": "A line or bar chart",
+        "correct": true
+      },
+      {
+        "text": "A pie chart only"
+      },
+      {
+        "text": "No chart needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should the chart type be based on?",
+    "options": [
+      {
+        "text": "The story you're conveying (trend/comparison/proportion)",
+        "correct": true
+      },
+      {
+        "text": "Your favorite color"
+      },
+      {
+        "text": "Random choice"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

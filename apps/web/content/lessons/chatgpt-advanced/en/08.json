@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 8 · Part 1",
+    "title": "Web Search & Browsing",
+    "body": [
+      {
+        "text": "The model's knowledge has a cutoff date, but Search mode lets ChatGPT "
+      },
+      {
+        "text": "search the web in real time with citations",
+        "bold": true
+      },
+      {
+        "text": " — great for news, latest prices, or recent events."
+      }
+    ],
+    "example": "\"Search the latest news on this year's tax deduction measures, summarize 5 points, with source links\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advanced · Chapter 8 · Part 2",
+    "title": "Use Search wisely",
+    "body": [
+      {
+        "text": "Always check that the answer "
+      },
+      {
+        "text": "has citation links and credible sources",
+        "bold": true
+      },
+      {
+        "text": " — for important matters (finance, health, legal), always click through to the original source to confirm before relying on it."
+      }
+    ],
+    "example": "\"Compare the current 12-month fixed deposit rates of 5 major banks as a table, citing the banks' websites directly\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "When should you use Web Search mode?",
+    "options": [
+      {
+        "text": "When you need the latest info or current events",
+        "correct": true
+      },
+      {
+        "text": "When you want a faster answer"
+      },
+      {
+        "text": "When writing a novel"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's a key benefit of answers from Search mode?",
+    "options": [
+      {
+        "text": "It can never be wrong"
+      },
+      {
+        "text": "It has source links you can verify",
+        "correct": true
+      },
+      {
+        "text": "It's shorter than a normal answer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "You got financial info from Search — what should you do before relying on it?",
+    "options": [
+      {
+        "text": "Use it right away, the AI already checked"
+      },
+      {
+        "text": "Click through to the original source to confirm accuracy",
+        "correct": true
+      },
+      {
+        "text": "Ask the same question 3 times"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get the latest event info, what should you do?",
+    "options": [
+      {
+        "text": "Enable Search/Browsing and have it summarize with sources",
+        "correct": true
+      },
+      {
+        "text": "Rely purely on the model's memory"
+      },
+      {
+        "text": "Turn off the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you use Web Search wisely?",
+    "options": [
+      {
+        "text": "Check the citations the system provides",
+        "correct": true
+      },
+      {
+        "text": "Believe everything immediately"
+      },
+      {
+        "text": "Never look at the sources"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 12 · Part 1",
+    "title": "Security Best Practices",
+    "body": [
+      {
+        "text": "Security rules when using AI to write code: "
+      },
+      {
+        "text": "no secrets in code or prompts · check the dependencies the AI adds · watch for injection at every input point",
+        "bold": true
+      },
+      {
+        "text": " — the AI writes code fast, but security always needs a human to check."
+      }
+    ],
+    "example": "\"Before approving: check there's no hardcoded API key, where new dependencies come from, and whether inputs are validated\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 12 · Part 2",
+    "title": "Codex Advanced recap",
+    "body": [
+      {
+        "text": "You're ready for agentic coding: "
+      },
+      {
+        "text": "multi-step work, environment config, CI/CD, TDD, review, and security",
+        "bold": true
+      },
+      {
+        "text": " — the goal isn't for the AI to replace you, but to shift your time to what humans do best: design, decide, and review."
+      }
+    ],
+    "example": "\"Final challenge: set up AGENTS.md + an environment for your real repo, then run 3 tasks in parallel this week\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which is a correct security rule?",
+    "options": [
+      {
+        "text": "Never put secrets in code or prompts",
+        "correct": true
+      },
+      {
+        "text": "Pasting API keys in prompts is fine, it's convenient"
+      },
+      {
+        "text": "The AI already handles all security itself"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When the AI adds a new dependency, what should you do?",
+    "options": [
+      {
+        "text": "Check its source and trustworthiness before approving",
+        "correct": true
+      },
+      {
+        "text": "Trust the AI and install it right away"
+      },
+      {
+        "text": "Never use dependencies ever"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the real goal of agentic coding?",
+    "options": [
+      {
+        "text": "Shift human time to design, decisions, and review",
+        "correct": true
+      },
+      {
+        "text": "Lay off all the programmers"
+      },
+      {
+        "text": "Write the most code in the world"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the most important security best practice?",
+    "options": [
+      {
+        "text": "Embed secret keys in public code"
+      },
+      {
+        "text": "Grant full access to everything"
+      },
+      {
+        "text": "Don't expose secret keys, and check code and permissions before use",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the summary of using Codex advanced safely?",
+    "options": [
+      {
+        "text": "Skip the checks"
+      },
+      {
+        "text": "Always plan, test, review, and mind security",
+        "correct": true
+      },
+      {
+        "text": "Use AI work immediately as-is"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 10 · Part 1",
+    "title": "Code Review & Safety",
+    "body": [
+      {
+        "text": "Use Codex as the "
+      },
+      {
+        "text": "first reviewer of every PR",
+        "bold": true
+      },
+      {
+        "text": " — have it check for bugs, security holes, performance, and conventions before it reaches a human reviewer. This lightens the team's load and catches problems early."
+      }
+    ],
+    "example": "\"Review this PR: find bugs that might slip through, security risks, slow queries, and code that breaks the project's conventions\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 10 · Part 2",
+    "title": "Safe boundaries",
+    "body": [
+      {
+        "text": "The principle for controlling an AI agent: "
+      },
+      {
+        "text": "least privilege — give the minimum access needed to work",
+        "bold": true
+      },
+      {
+        "text": " — the sandbox has no real secrets, merging must go through a human, and AI-written code must pass tests + review like everyone's code."
+      }
+    ],
+    "example": "\"Team policy: the AI agent may not push directly to main / every PR needs at least 1 human approval\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you get value from Codex in code review?",
+    "options": [
+      {
+        "text": "Use it as the first reviewer before a human",
+        "correct": true
+      },
+      {
+        "text": "Replace all human reviewers"
+      },
+      {
+        "text": "Use it only for small PRs"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is the least-privilege principle for an AI agent?",
+    "options": [
+      {
+        "text": "Give the minimum access that still lets it work",
+        "correct": true
+      },
+      {
+        "text": "Give full admin rights for convenience"
+      },
+      {
+        "text": "Give no access at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should AI-written code pass before entering main?",
+    "options": [
+      {
+        "text": "Tests and human review, like everyone's code",
+        "correct": true
+      },
+      {
+        "text": "Nothing — the AI is trustworthy"
+      },
+      {
+        "text": "Just a spell check"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's a safe boundary for code review and safety?",
+    "options": [
+      {
+        "text": "Auto-merge without looking"
+      },
+      {
+        "text": "Don't check anything"
+      },
+      {
+        "text": "Always review and test AI code before merging",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the risk of accepting AI code without checking?",
+    "options": [
+      {
+        "text": "It always makes things faster"
+      },
+      {
+        "text": "It may contain bugs or security holes",
+        "correct": true
+      },
+      {
+        "text": "There's no risk"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

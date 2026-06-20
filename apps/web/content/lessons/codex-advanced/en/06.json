@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 6 · Part 1",
+    "title": "Database Tasks",
+    "body": [
+      {
+        "text": "Codex covers database work end to end: "
+      },
+      {
+        "text": "designing schemas, writing migrations, and optimizing queries",
+        "bold": true
+      },
+      {
+        "text": " — attach the current schema and say what you want to change, and it writes a safe migration."
+      }
+    ],
+    "example": "\"Add a notifications table (user_id, type, read_at) with an index suited to the query 'a user's unread notifications'\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 6 · Part 2",
+    "title": "Migrate safely",
+    "body": [
+      {
+        "text": "Iron rule of migrations: "
+      },
+      {
+        "text": "they must be reversible (rollback) and not break existing data",
+        "bold": true
+      },
+      {
+        "text": " — always ask for a down migration alongside the up, and test on a copy of real data before running on production."
+      }
+    ],
+    "example": "\"Write a migration changing the price column from int to decimal, with a down migration and a plan for if existing data has odd values\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "To have Codex help with database work, what should you attach?",
+    "options": [
+      {
+        "text": "The current schema and what you want to change",
+        "correct": true
+      },
+      {
+        "text": "All customer data"
+      },
+      {
+        "text": "The database password"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What qualities must a good migration have?",
+    "options": [
+      {
+        "text": "Reversible and doesn't break existing data",
+        "correct": true
+      },
+      {
+        "text": "Runs as fast as possible regardless of impact"
+      },
+      {
+        "text": "Always deletes old data"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Before running a migration on production, what should you do?",
+    "options": [
+      {
+        "text": "Test on a copy of real data first",
+        "correct": true
+      },
+      {
+        "text": "Run it at noon when usage peaks"
+      },
+      {
+        "text": "Delete the backup to free space"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you do a database migration safely?",
+    "options": [
+      {
+        "text": "Run it on production immediately"
+      },
+      {
+        "text": "Don't back up the data"
+      },
+      {
+        "text": "Back up the data and test on a non-production environment first",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the main risk of a migration?",
+    "options": [
+      {
+        "text": "It always makes things faster"
+      },
+      {
+        "text": "Data damage if it goes wrong, so be careful",
+        "correct": true
+      },
+      {
+        "text": "There's no risk"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

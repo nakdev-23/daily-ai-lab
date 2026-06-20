@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 4 · Part 1",
+    "title": "API & Webhook Automation",
+    "body": [
+      {
+        "text": "Connecting systems is one of Codex's strengths: "
+      },
+      {
+        "text": "writing API endpoints, webhook handlers, and integrations with external services",
+        "bold": true
+      },
+      {
+        "text": " — attach the API docs of the service you're connecting to, then describe the behavior you want."
+      }
+    ],
+    "example": "\"Write a webhook handler that receives the 'payment.succeeded' event from Stripe and updates the order status to paid, verifying the signature\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 4 · Part 2",
+    "title": "Resilient integrations",
+    "body": [
+      {
+        "text": "A good integration must handle failures: "
+      },
+      {
+        "text": "retry, timeout, idempotency, and logging",
+        "bold": true
+      },
+      {
+        "text": " — always specify in the instruction 'what to do if the downstream API fails,' because networks can always fail."
+      }
+    ],
+    "example": "\"Add 3 retries with exponential backoff; if a webhook is duplicated, ignore it (idempotent); and log every request\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Before having Codex connect an external API, what should you attach?",
+    "options": [
+      {
+        "text": "That service's API documentation",
+        "correct": true
+      },
+      {
+        "text": "The company logo"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good webhook handler have?",
+    "options": [
+      {
+        "text": "Signature verification and idempotency",
+        "correct": true
+      },
+      {
+        "text": "Accept every request without checking"
+      },
+      {
+        "text": "Respond as slowly as possible"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why define behavior for when the downstream API fails?",
+    "options": [
+      {
+        "text": "Because networks can always fail — the system must handle it",
+        "correct": true
+      },
+      {
+        "text": "Because APIs never fail"
+      },
+      {
+        "text": "To make the code longer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you design a resilient API/webhook integration?",
+    "options": [
+      {
+        "text": "Assume it never fails"
+      },
+      {
+        "text": "Don't validate anything"
+      },
+      {
+        "text": "Handle errors and retries, and validate inputs and outputs",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is a webhook for?",
+    "options": [
+      {
+        "text": "Printing documents"
+      },
+      {
+        "text": "Letting systems notify each other of events automatically",
+        "correct": true
+      },
+      {
+        "text": "Drawing pictures"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

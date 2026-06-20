@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 2 · Part 1",
+    "title": "Complex multi-step tasks",
+    "body": [
+      {
+        "text": "Complex work needs a "
+      },
+      {
+        "text": "multi-step plan that the AI lays out and follows step by step",
+        "bold": true
+      },
+      {
+        "text": " — Codex breaks it down itself: analyze the code → plan → fix piece by piece → run tests → summarize. You can review the plan before it starts."
+      }
+    ],
+    "example": "\"Migrate the auth system from session-based to JWT across the whole project — propose a step-by-step plan before starting\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 2 · Part 2",
+    "title": "Control multi-step work with checkpoints",
+    "body": [
+      {
+        "text": "For high-risk work, set "
+      },
+      {
+        "text": "checkpoints to stop and wait for review along the way",
+        "bold": true
+      },
+      {
+        "text": " — e.g. stop after planning, stop after the first module — to adjust direction before damage spreads."
+      }
+    ],
+    "example": "\"Do steps 1–2 first, then stop for me to review; if it's OK, continue with the rest\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Codex handle complex work?",
+    "options": [
+      {
+        "text": "Breaks it into steps, plans, then does it step by step",
+        "correct": true
+      },
+      {
+        "text": "Does everything at once in one go"
+      },
+      {
+        "text": "Always refuses complex work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What are checkpoints in multi-step work for?",
+    "options": [
+      {
+        "text": "Stopping to review so you can adjust before damage spreads",
+        "correct": true
+      },
+      {
+        "text": "Letting the AI rest"
+      },
+      {
+        "text": "Just slowing things down"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Before the AI starts a big job, what should you ask for first?",
+    "options": [
+      {
+        "text": "A step-by-step plan",
+        "correct": true
+      },
+      {
+        "text": "All the code immediately"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you keep multi-step work from going off track?",
+    "options": [
+      {
+        "text": "Let it run to the end, then look"
+      },
+      {
+        "text": "Don't check at all"
+      },
+      {
+        "text": "Set checkpoints to review results periodically",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of checkpoints?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Catching problems early before they snowball",
+        "correct": true
+      },
+      {
+        "text": "Slowing things down for nothing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

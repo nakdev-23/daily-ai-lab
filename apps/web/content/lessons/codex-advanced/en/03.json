@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 3 · Part 1",
+    "title": "Environment Config",
+    "body": [
+      {
+        "text": "Codex's environment is configurable: "
+      },
+      {
+        "text": "setup script, dependencies, env variables, and internet access",
+        "bold": true
+      },
+      {
+        "text": " — set it once to match your project, and every task can run tests and build just like a real machine."
+      }
+    ],
+    "example": "\"Setup script: npm install && npx prisma generate — every task starts with all dependencies ready\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 3 · Part 2",
+    "title": "AGENTS.md — the AI's guidebook",
+    "body": [
+      {
+        "text": "Put an "
+      },
+      {
+        "text": "AGENTS.md file in the repo to state the project's rules",
+        "bold": true
+      },
+      {
+        "text": " — how to run tests, what the code structure is, which conventions must not be broken. Codex reads and follows it automatically."
+      }
+    ],
+    "example": "\"AGENTS.md: 'Run tests with npm test / use TypeScript strict / no any / commit messages in English'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can you configure in Codex's environment?",
+    "options": [
+      {
+        "text": "Setup script, dependencies, and env variables",
+        "correct": true
+      },
+      {
+        "text": "The screen color"
+      },
+      {
+        "text": "Nothing can be configured"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is AGENTS.md for?",
+    "options": [
+      {
+        "text": "Stating the project's rules and conventions for the AI to follow",
+        "correct": true
+      },
+      {
+        "text": "Storing passwords"
+      },
+      {
+        "text": "A list of employees"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why set a setup script for the environment?",
+    "options": [
+      {
+        "text": "So every task starts with dependencies ready, like a real machine",
+        "correct": true
+      },
+      {
+        "text": "For looks"
+      },
+      {
+        "text": "Required by GitHub"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What is AGENTS.md for?",
+    "options": [
+      {
+        "text": "Storing passwords"
+      },
+      {
+        "text": "A junk file"
+      },
+      {
+        "text": "A guidebook and rules so the AI works correctly in the project",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does a good environment config help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "The AI works with the project's tools and structure",
+        "correct": true
+      },
+      {
+        "text": "It slows things down"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

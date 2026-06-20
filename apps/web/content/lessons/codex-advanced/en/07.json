@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 7 · Part 1",
+    "title": "Spec-driven Development",
+    "body": [
+      {
+        "text": "Instead of giving commands one at a time, write a "
+      },
+      {
+        "text": "spec — a document describing what the feature must do and what conditions apply",
+        "bold": true
+      },
+      {
+        "text": " — then have Codex implement the whole thing per the spec. The result is more on-target and easier to verify."
+      }
+    ],
+    "example": "\"Spec: a coupon system — usable once per user, expires on a set date, can't combine with other promos, log every use\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 7 · Part 2",
+    "title": "Write a spec the AI can read",
+    "body": [
+      {
+        "text": "A spec the AI works well from needs "
+      },
+      {
+        "text": "measurable behavior + input/output examples + exceptions (edge cases)",
+        "bold": true
+      },
+      {
+        "text": " — if you haven't covered all the edge cases, ask the AI to point out which cases the spec doesn't yet cover."
+      }
+    ],
+    "example": "\"Read this spec and ask any unclear questions before writing code, e.g. coupons expire at midnight in which time zone?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is spec-driven development?",
+    "options": [
+      {
+        "text": "Write a doc of the desired behavior first, then have the AI implement it",
+        "correct": true
+      },
+      {
+        "text": "Write code first, then figure out what it does"
+      },
+      {
+        "text": "No documentation at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What must a good spec have?",
+    "options": [
+      {
+        "text": "Measurable behavior, examples, and edge cases",
+        "correct": true
+      },
+      {
+        "text": "At least 100 pages"
+      },
+      {
+        "text": "Just the feature name"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If you worry the spec isn't complete, what should you do?",
+    "options": [
+      {
+        "text": "Have the AI ask questions to find ambiguities before coding",
+        "correct": true
+      },
+      {
+        "text": "Just start coding and fix it later"
+      },
+      {
+        "text": "Cancel the feature"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you do spec-driven development?",
+    "options": [
+      {
+        "text": "Don't write a spec"
+      },
+      {
+        "text": "Only explain it verbally"
+      },
+      {
+        "text": "Write a clear spec for the AI to read and follow",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of writing a spec for the AI?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Reduces misunderstandings and delivers on-target work",
+        "correct": true
+      },
+      {
+        "text": "Just slows things down"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

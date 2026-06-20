@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 1 · Part 1",
+    "title": "What is agentic coding?",
+    "body": [
+      {
+        "text": "Agentic coding is having the AI "
+      },
+      {
+        "text": "carry out multiple steps continuously and automatically",
+        "bold": true
+      },
+      {
+        "text": " — not just writing one piece of code, but planning, writing, testing, and fixing until the job is done."
+      }
+    ],
+    "example": "\"Build a REST API for authentication with JWT, middleware, and complete tests\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 1 · Part 2",
+    "title": "Plan the task clearly",
+    "body": [
+      {
+        "text": "A good task needs a "
+      },
+      {
+        "text": "clear scope, measurable output, and key constraints",
+        "bold": true
+      },
+      {
+        "text": " — tell Codex what you want, what not to do, and what stack the project uses."
+      }
+    ],
+    "example": "\"Refactor the auth module to TypeScript, don't change the API interface, use Jest for tests\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does agentic coding mean?",
+    "options": [
+      {
+        "text": "The AI writes code 10x faster"
+      },
+      {
+        "text": "The AI carries out multiple steps continuously until the job is done",
+        "correct": true
+      },
+      {
+        "text": "The AI uses many agents at once"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the most important info when writing a task for Codex?",
+    "options": [
+      {
+        "text": "The name of the responsible developer"
+      },
+      {
+        "text": "A clear scope, measurable output, and constraints",
+        "correct": true
+      },
+      {
+        "text": "The date and time the task was created"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of work should you use agentic coding for?",
+    "options": [
+      {
+        "text": "Fixing a typo in a document"
+      },
+      {
+        "text": "Multi-step work, like building a new feature with tests",
+        "correct": true
+      },
+      {
+        "text": "Reading API docs"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For agentic coding to work well, what should you start with?",
+    "options": [
+      {
+        "text": "Let the AI guess"
+      },
+      {
+        "text": "No planning"
+      },
+      {
+        "text": "Plan the task clearly before the AI starts",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is agentic coding?",
+    "options": [
+      {
+        "text": "Playing games"
+      },
+      {
+        "text": "Having the AI carry out multiple steps per the defined plan",
+        "correct": true
+      },
+      {
+        "text": "Typing code one character at a time"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

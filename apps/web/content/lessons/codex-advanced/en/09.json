@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 9 · Part 1",
+    "title": "Documentation Generation",
+    "body": [
+      {
+        "text": "Have the AI write the docs nobody wants to write: "
+      },
+      {
+        "text": "README, API docs, comments, and architecture overviews",
+        "bold": true
+      },
+      {
+        "text": " — Codex reads the real code and summarizes it accurately, because the docs are based on the current code, not someone's memory."
+      }
+    ],
+    "example": "\"Write a new README: how to install, run the project, the folder structure, and the env variables to set, based on the real code\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 9 · Part 2",
+    "title": "Living documentation",
+    "body": [
+      {
+        "text": "Docs die because no one updates them — fix that by "
+      },
+      {
+        "text": "tying doc updates to every task that changes behavior",
+        "bold": true
+      },
+      {
+        "text": ". For example, add to AGENTS.md: 'if you change the API, update the docs too,' and the AI will do it every time."
+      }
+    ],
+    "example": "\"Add a rule to AGENTS.md: every new endpoint must have a request/response example in docs/api.md\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Why are docs the AI writes from code accurate?",
+    "options": [
+      {
+        "text": "Because they're based on the real current code, not memory",
+        "correct": true
+      },
+      {
+        "text": "Because the AI is never wrong"
+      },
+      {
+        "text": "They aren't accurate"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How do you keep docs from dying (going stale)?",
+    "options": [
+      {
+        "text": "Tie doc updates to every task that changes behavior",
+        "correct": true
+      },
+      {
+        "text": "Write once and never touch it again"
+      },
+      {
+        "text": "Don't write docs at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What docs can the AI help write?",
+    "options": [
+      {
+        "text": "README, API docs, and architecture overviews",
+        "correct": true
+      },
+      {
+        "text": "Only one-line comments"
+      },
+      {
+        "text": "The AI can't write docs"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What does living documentation mean?",
+    "options": [
+      {
+        "text": "Docs that are never updated"
+      },
+      {
+        "text": "Empty docs"
+      },
+      {
+        "text": "Docs that update with the code and stay usable",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you use AI for documentation generation?",
+    "options": [
+      {
+        "text": "Don't make docs"
+      },
+      {
+        "text": "Have it draft from the code, then verify accuracy",
+        "correct": true
+      },
+      {
+        "text": "Generate and never check"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

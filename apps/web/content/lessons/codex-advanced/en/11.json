@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 11 · Part 1",
+    "title": "Rate Limits & Quotas",
+    "body": [
+      {
+        "text": "Every plan has a quota — bigger jobs use more — so "
+      },
+      {
+        "text": "spend your quota on the work that's most worth it",
+        "bold": true
+      },
+      {
+        "text": ": let the AI do the tedious, repetitive work (tests, docs, migrations), and keep the important architecture decisions for yourself."
+      }
+    ],
+    "example": "\"Worth it: 'write 30 test cases for this module' / Not worth it: a new task every time you change one character\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 11 · Part 2",
+    "title": "Quota-saving techniques",
+    "body": [
+      {
+        "text": "Three main techniques: "
+      },
+      {
+        "text": "write complete instructions that finish in one pass · keep working in the same task instead of opening new ones · set up a good AGENTS.md to reduce repeated commands",
+        "bold": true
+      },
+      {
+        "text": " — a vague instruction that takes 5 rounds of back-and-forth uses more quota than one clear instruction."
+      }
+    ],
+    "example": "\"Instead of 'fix the form' then 4 more fixes → write all conditions up front: validation, error state, loading, a11y\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What work uses AI quota most worthwhile?",
+    "options": [
+      {
+        "text": "Repetitive work like writing tests and docs",
+        "correct": true
+      },
+      {
+        "text": "Company strategy decisions"
+      },
+      {
+        "text": "Work you can do yourself in 10 seconds"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which approach saves quota?",
+    "options": [
+      {
+        "text": "Write complete instructions that finish in one pass",
+        "correct": true
+      },
+      {
+        "text": "Give short instructions and fix them over 10 rounds"
+      },
+      {
+        "text": "Open a new task for every small edit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How does AGENTS.md save quota?",
+    "options": [
+      {
+        "text": "It reduces repeating the rules in every task",
+        "correct": true
+      },
+      {
+        "text": "It makes the AI work for free"
+      },
+      {
+        "text": "It has nothing to do with quota"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's a good quota/rate-limit technique?",
+    "options": [
+      {
+        "text": "Fire requests as frequently as possible"
+      },
+      {
+        "text": "Ignore the limit"
+      },
+      {
+        "text": "Combine work, reduce repeat requests, and batch when appropriate",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "When you hit a rate limit, what should you do?",
+    "options": [
+      {
+        "text": "Quit"
+      },
+      {
+        "text": "Wait and retry appropriately with backoff",
+        "correct": true
+      },
+      {
+        "text": "Immediately spam retries"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

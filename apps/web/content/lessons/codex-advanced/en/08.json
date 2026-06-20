@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 8 · Part 1",
+    "title": "Test-driven Development",
+    "body": [
+      {
+        "text": "TDD fits AI perfectly: "
+      },
+      {
+        "text": "write failing tests first, then have the AI write code until the tests pass",
+        "bold": true
+      },
+      {
+        "text": " — the tests become a runnable spec, so the AI knows exactly what 'done' means."
+      }
+    ],
+    "example": "\"Here are 5 tests for parseThaiDate that all currently fail — write the implementation to pass them all without changing the tests\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 8 · Part 2",
+    "title": "Red → Green → Refactor",
+    "body": [
+      {
+        "text": "The TDD cycle: "
+      },
+      {
+        "text": "Red (tests fail) → Green (code passes the tests) → Refactor (clean it up while tests stay green)",
+        "bold": true
+      },
+      {
+        "text": " — watch out for the AI 'cheating' by hardcoding answers to pass the tests; check that the implementation is real."
+      }
+    ],
+    "example": "\"The tests pass now — refactor it to be more readable, with all test cases still passing\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does TDD start with?",
+    "options": [
+      {
+        "text": "Writing failing tests first",
+        "correct": true
+      },
+      {
+        "text": "Finishing the code first"
+      },
+      {
+        "text": "Writing documentation first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why does TDD fit AI well?",
+    "options": [
+      {
+        "text": "The tests are a runnable spec, so the AI knows what 'done' means",
+        "correct": true
+      },
+      {
+        "text": "It removes the need to review code"
+      },
+      {
+        "text": "The AI likes the color red"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should you watch for when having the AI write code to pass tests?",
+    "options": [
+      {
+        "text": "The AI may hardcode answers instead of really fixing it",
+        "correct": true
+      },
+      {
+        "text": "The AI will always delete the tests"
+      },
+      {
+        "text": "Nothing to watch for"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What does the TDD Red-Green-Refactor cycle mean?",
+    "options": [
+      {
+        "text": "Always write code before tests"
+      },
+      {
+        "text": "Don't write tests"
+      },
+      {
+        "text": "Write failing tests first, make them pass, then refactor",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you have Codex help with TDD?",
+    "options": [
+      {
+        "text": "Don't use tests"
+      },
+      {
+        "text": "Have it draft tests and code per the cycle, and you verify",
+        "correct": true
+      },
+      {
+        "text": "Skip the testing step"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

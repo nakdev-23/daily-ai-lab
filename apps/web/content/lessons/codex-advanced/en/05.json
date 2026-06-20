@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 5 · Part 1",
+    "title": "CI/CD Integration",
+    "body": [
+      {
+        "text": "Codex can write and fix "
+      },
+      {
+        "text": "pipelines: GitHub Actions, automated tests, build, and deploy",
+        "bold": true
+      },
+      {
+        "text": " — and when CI goes red, send it the log to analyze the cause and get it back to green."
+      }
+    ],
+    "example": "\"Create GitHub Actions: run lint + tests on every PR, build when merged to main, auto-deploy to staging\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advanced · Chapter 5 · Part 2",
+    "title": "Fix broken CI with AI",
+    "body": [
+      {
+        "text": "A red CI is a great task: "
+      },
+      {
+        "text": "paste the error log from the pipeline and have it find the root cause",
+        "bold": true
+      },
+      {
+        "text": " — often it's a dependency version mismatch, a flaky test, or a different env, which the AI can diagnose from the log very quickly."
+      }
+    ],
+    "example": "\"CI fails at the 'npm test' step on Node 20 but passes locally. Here's the log: ... find the cause and fix it\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Codex help with for CI/CD?",
+    "options": [
+      {
+        "text": "Writing pipelines and diagnosing broken CI from the log",
+        "correct": true
+      },
+      {
+        "text": "Just watching, can't do anything"
+      },
+      {
+        "text": "Only deleting the pipeline"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "CI is red but local passes — what's the usual cause?",
+    "options": [
+      {
+        "text": "A different environment, like a dependency version",
+        "correct": true
+      },
+      {
+        "text": "GitHub hates us"
+      },
+      {
+        "text": "The code was hacked"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the most important info when having the AI fix CI?",
+    "options": [
+      {
+        "text": "The error log from the pipeline",
+        "correct": true
+      },
+      {
+        "text": "The project name"
+      },
+      {
+        "text": "The repo's star count"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you use AI to fix broken CI?",
+    "options": [
+      {
+        "text": "Disable CI"
+      },
+      {
+        "text": "Merge while still red"
+      },
+      {
+        "text": "Have it read the log to find the cause, then verify the fix before merging",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does CI/CD integration help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Consistent automated testing and delivery",
+        "correct": true
+      },
+      {
+        "text": "Always making deploys slow"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

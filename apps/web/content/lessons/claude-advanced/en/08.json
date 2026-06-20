@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 8 · Part 1",
+    "title": "Chain of Thought",
+    "body": [
+      {
+        "text": "Even without Extended Thinking, you can trigger step-by-step reasoning with a prompt: "
+      },
+      {
+        "text": "'think step by step before answering' or have it show its reasoning in <thinking>",
+        "bold": true
+      },
+      {
+        "text": " — great for logic problems, math, and multi-condition decisions."
+      }
+    ],
+    "example": "\"3 customers have different budgets and needs. Think step by step about which package fits each, showing your reasoning before the conclusion\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 8 · Part 2",
+    "title": "Structured CoT",
+    "body": [
+      {
+        "text": "Level it up by "
+      },
+      {
+        "text": "defining the thinking steps yourself",
+        "bold": true
+      },
+      {
+        "text": " — like 'Step 1 identify the variables, Step 2 check the conditions, Step 3 calculate, Step 4 verify the answer backwards' — for both accuracy and verifiability."
+      }
+    ],
+    "example": "\"Review this contract in 4 steps: 1) parties and duties 2) financial terms 3) risks 4) summary recommendation\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you trigger chain of thought with a prompt?",
+    "options": [
+      {
+        "text": "Tell it to think step by step before answering",
+        "correct": true
+      },
+      {
+        "text": "Type all in caps"
+      },
+      {
+        "text": "Ask 3 times"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is structured CoT?",
+    "options": [
+      {
+        "text": "Defining the thinking steps for the AI to follow",
+        "correct": true
+      },
+      {
+        "text": "Letting the AI think randomly"
+      },
+      {
+        "text": "Answering with no thinking at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which work benefits most from CoT?",
+    "options": [
+      {
+        "text": "Logic problems and multi-condition decisions",
+        "correct": true
+      },
+      {
+        "text": "A morning greeting"
+      },
+      {
+        "text": "Asking for a capital city"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have Claude reason in clear steps, what should you do?",
+    "options": [
+      {
+        "text": "Ask for structured chain of thought",
+        "correct": true
+      },
+      {
+        "text": "Forbid explanations"
+      },
+      {
+        "text": "Ask for one word"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How is structured CoT different from normal?",
+    "options": [
+      {
+        "text": "It defines steps/headings to reason through systematically",
+        "correct": true
+      },
+      {
+        "text": "It has no steps"
+      },
+      {
+        "text": "Purely random"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

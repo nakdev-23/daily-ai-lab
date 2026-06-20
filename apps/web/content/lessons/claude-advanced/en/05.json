@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 5 · Part 1",
+    "title": "System Prompt",
+    "body": [
+      {
+        "text": "A system prompt is a "
+      },
+      {
+        "text": "system-level instruction that sets Claude's identity and rules",
+        "bold": true
+      },
+      {
+        "text": " — separate from user messages and weighted more heavily. Use it to set the app's role, scope, tone, and answer format."
+      }
+    ],
+    "example": "\"system: 'You are a Thai labor-law assistant. Always cite the relevant section, and if a question is out of scope, recommend seeing a lawyer'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 5 · Part 2",
+    "title": "Design a strong system prompt",
+    "body": [
+      {
+        "text": "Key elements: "
+      },
+      {
+        "text": "role · available knowledge · output format · restrictions · how to handle out-of-scope questions",
+        "bold": true
+      },
+      {
+        "text": " — write restrictions as behaviors to do instead, like 'if you don't know, say you don't know' rather than 'don't make things up.'"
+      }
+    ],
+    "example": "\"If the user asks a price not in the data, say 'let me check with the sales team' — don't estimate the price yourself\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is a system prompt different from a user message?",
+    "options": [
+      {
+        "text": "It's a system-level instruction weighted more heavily",
+        "correct": true
+      },
+      {
+        "text": "They're identical"
+      },
+      {
+        "text": "It only works in English"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How should you write restrictions?",
+    "options": [
+      {
+        "text": "State the behavior to do instead, like 'if unsure, say you're unsure'",
+        "correct": true
+      },
+      {
+        "text": "Write the word 'don't' a lot"
+      },
+      {
+        "text": "Have no restrictions"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should be in a customer-service chatbot's system prompt?",
+    "options": [
+      {
+        "text": "Role, data scope, and how to handle out-of-scope questions",
+        "correct": true
+      },
+      {
+        "text": "The CEO's personal history"
+      },
+      {
+        "text": "System passwords"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To keep Claude on the same role and rules every time, what should you do?",
+    "options": [
+      {
+        "text": "Write a clear system prompt",
+        "correct": true
+      },
+      {
+        "text": "Retype it in every message"
+      },
+      {
+        "text": "Switch models often"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should a strong system prompt specify?",
+    "options": [
+      {
+        "text": "Role, scope, tone, and output format",
+        "correct": true
+      },
+      {
+        "text": "Just the words 'help me'"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

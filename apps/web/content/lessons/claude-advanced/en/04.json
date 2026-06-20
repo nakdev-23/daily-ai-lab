@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 4 · Part 1",
+    "title": "What is the Anthropic API?",
+    "body": [
+      {
+        "text": "The API is the gateway for "
+      },
+      {
+        "text": "your app to call Claude directly",
+        "bold": true
+      },
+      {
+        "text": " — build a chatbot, a document-summarization system, or AI features in a product. You pay for the tokens you actually use."
+      }
+    ],
+    "example": "\"An online store calls the API to have Claude answer customer questions from product data, 24 hours a day\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 4 · Part 2",
+    "title": "The structure of an API call",
+    "body": [
+      {
+        "text": "Send a request with "
+      },
+      {
+        "text": "model + messages (the conversation) + max_tokens",
+        "bold": true
+      },
+      {
+        "text": " to the Messages API and get an answer back — pick the model for the job: Haiku is fast and cheap, Sonnet is balanced, Opus is the smartest."
+      }
+    ],
+    "example": "\"{ model: 'claude-sonnet-4-5', max_tokens: 1024, messages: [{ role: 'user', content: 'Summarize this text' }] }\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is the Anthropic API used for?",
+    "options": [
+      {
+        "text": "Letting your app call Claude directly",
+        "correct": true
+      },
+      {
+        "text": "Downloading the model onto your machine"
+      },
+      {
+        "text": "Editing images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What are API costs based on?",
+    "options": [
+      {
+        "text": "The number of tokens actually used",
+        "correct": true
+      },
+      {
+        "text": "The number of company employees"
+      },
+      {
+        "text": "An annual flat fee only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "For high-volume work needing speed and low cost, which model?",
+    "options": [
+      {
+        "text": "Haiku",
+        "correct": true
+      },
+      {
+        "text": "Opus"
+      },
+      {
+        "text": "Always use the biggest model"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have your app call Claude, what should you use?",
+    "options": [
+      {
+        "text": "The Anthropic API",
+        "correct": true
+      },
+      {
+        "text": "Copy answers by hand every time"
+      },
+      {
+        "text": "Disconnect everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you store an API key securely?",
+    "options": [
+      {
+        "text": "Keep it server-side / in a secret variable, not in client code",
+        "correct": true
+      },
+      {
+        "text": "Put it in the web page code"
+      },
+      {
+        "text": "Share it in a public chat"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

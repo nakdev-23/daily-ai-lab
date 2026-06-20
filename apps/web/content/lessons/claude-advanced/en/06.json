@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 6 · Part 1",
+    "title": "Tool Use (Function Calling)",
+    "body": [
+      {
+        "text": "Tool Use lets Claude "
+      },
+      {
+        "text": "call functions you've prepared",
+        "bold": true
+      },
+      {
+        "text": " — define a tool with a schema for what parameters it takes, and when Claude sees it's needed, it sends a call request with the correct values."
+      }
+    ],
+    "example": "\"Tool: get_weather(city) → user asks 'will it rain in Chiang Mai tomorrow?' → Claude calls get_weather('Chiang Mai') and answers from real data\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 6 · Part 2",
+    "title": "Design tools Claude uses well",
+    "body": [
+      {
+        "text": "The key is a "
+      },
+      {
+        "text": "clear description — what the tool does, when to use it, and what the parameters mean",
+        "bold": true
+      },
+      {
+        "text": ". Claude chooses tools based on this description; if it's vague, it'll call the wrong one or not call at all."
+      }
+    ],
+    "example": "\"Good: 'Search products by name or SKU, returns price and stock, use when a customer asks about a product' / Bad: 'search stuff'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Tool Use?",
+    "options": [
+      {
+        "text": "Letting Claude call functions you've prepared",
+        "correct": true
+      },
+      {
+        "text": "Letting Claude install software itself"
+      },
+      {
+        "text": "A drawing tool"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does Claude decide to call a tool based on?",
+    "options": [
+      {
+        "text": "The tool's description and schema",
+        "correct": true
+      },
+      {
+        "text": "Random choice"
+      },
+      {
+        "text": "Calling every tool every time"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a good tool description like?",
+    "options": [
+      {
+        "text": "Clearly states what it does, when to use it, what the parameters are",
+        "correct": true
+      },
+      {
+        "text": "As short as possible, like 'search'"
+      },
+      {
+        "text": "Written in secret code"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have Claude call functions / fetch external data, what should you use?",
+    "options": [
+      {
+        "text": "Tool Use (Function Calling)",
+        "correct": true
+      },
+      {
+        "text": "Tell it to guess"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you design tools Claude uses well?",
+    "options": [
+      {
+        "text": "Clearly explain input/output and when it should be used",
+        "correct": true
+      },
+      {
+        "text": "Give the tool a long name"
+      },
+      {
+        "text": "Don't explain it"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

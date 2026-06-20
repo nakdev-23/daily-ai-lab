@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 10 · Part 1",
+    "title": "Computer Use",
+    "body": [
+      {
+        "text": "Computer Use lets Claude "
+      },
+      {
+        "text": "see the screen, move the mouse, click, and type like a person using a computer",
+        "bold": true
+      },
+      {
+        "text": " — opening the door to automating programs with no API, like filling out old web forms or testing a UI automatically."
+      }
+    ],
+    "example": "\"Command: 'Open the company's legacy ERP, copy this month's sales into Google Sheets' — Claude does it through the real screen\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 10 · Part 2",
+    "title": "Use it safely",
+    "body": [
+      {
+        "text": "Because the AI can actually control the machine, you must "
+      },
+      {
+        "text": "run it in a separate VM/sandbox, not your main machine, and limit what it can access",
+        "bold": true
+      },
+      {
+        "text": " — important actions need a human confirmation point first, like before sending or paying."
+      }
+    ],
+    "example": "\"Set the rule: the AI can fill the form, but must stop for a person to check before clicking submit every time\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Computer Use do?",
+    "options": [
+      {
+        "text": "See the screen, click, and type like a person using a computer",
+        "correct": true
+      },
+      {
+        "text": "Repair hardware"
+      },
+      {
+        "text": "Increase CPU speed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is Computer Use good for?",
+    "options": [
+      {
+        "text": "Automating programs that have no API",
+        "correct": true
+      },
+      {
+        "text": "Work that already has an API"
+      },
+      {
+        "text": "Playing games for you"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's an important caution for Computer Use?",
+    "options": [
+      {
+        "text": "Run it in a separate sandbox and have a human confirmation point",
+        "correct": true
+      },
+      {
+        "text": "Give admin rights on your main machine"
+      },
+      {
+        "text": "No caution needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To let Claude control the screen/clicks (Computer Use) safely, what should you do?",
+    "options": [
+      {
+        "text": "Use a restricted environment and review the actions",
+        "correct": true
+      },
+      {
+        "text": "Grant full permissions immediately"
+      },
+      {
+        "text": "Don't check the results"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What work is Computer Use good for?",
+    "options": [
+      {
+        "text": "Repetitive on-screen tasks that can be controlled/reviewed",
+        "correct": true
+      },
+      {
+        "text": "Managing a bank account unsupervised"
+      },
+      {
+        "text": "Everything, with no caution"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 3 · Part 1",
+    "title": "When to use Extended Thinking",
+    "body": [
+      {
+        "text": "Turn it on when the task needs "
+      },
+      {
+        "text": "multi-step reasoning: math, complex code, deep analysis, planning",
+        "bold": true
+      },
+      {
+        "text": " — for general knowledge, translation, or short summaries, don't bother; it just wastes resources."
+      }
+    ],
+    "example": "\"Turn on: 'Design a database schema for a hotel booking system' / Don't: 'What's the capital of Japan?'\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 3 · Part 2",
+    "title": "Read Claude's thinking process",
+    "body": [
+      {
+        "text": "Claude can show its thinking steps — the benefit is "
+      },
+      {
+        "text": "checking whether its reasoning is on track before trusting the answer",
+        "bold": true
+      },
+      {
+        "text": ". If you see it misunderstood the problem from the start, fix the prompt and ask again right away."
+      }
+    ],
+    "example": "\"In the thinking you see Claude interpret 'quarter' as the calendar year, but your company uses the fiscal year → clarify and re-ask\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which work should turn on Extended Thinking?",
+    "options": [
+      {
+        "text": "Designing systems or analysis needing multi-step reasoning",
+        "correct": true
+      },
+      {
+        "text": "Asking the capitals of countries"
+      },
+      {
+        "text": "Saying hello"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of viewing the thinking process?",
+    "options": [
+      {
+        "text": "Checking the reasoning is on track before trusting the answer",
+        "correct": true
+      },
+      {
+        "text": "Making it answer faster"
+      },
+      {
+        "text": "Watching for entertainment"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If you see Claude misunderstood the problem in its thinking, what should you do?",
+    "options": [
+      {
+        "text": "Fix the prompt to be clearer and ask again",
+        "correct": true
+      },
+      {
+        "text": "Wait for it to finish and use it anyway"
+      },
+      {
+        "text": "Stop using AI"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For simple, straightforward tasks, what should you do?",
+    "options": [
+      {
+        "text": "No need to turn on Extended Thinking",
+        "correct": true
+      },
+      {
+        "text": "Always max out thinking"
+      },
+      {
+        "text": "Ask in a loop"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of reading Claude's thinking process?",
+    "options": [
+      {
+        "text": "Understanding the reasoning and verifying correctness",
+        "correct": true
+      },
+      {
+        "text": "It makes the answer wrong"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

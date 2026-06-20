@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 7 · Part 1",
+    "title": "XML Tags in prompts",
+    "body": [
+      {
+        "text": "Claude is trained to understand "
+      },
+      {
+        "text": "XML tags for dividing parts of a prompt",
+        "bold": true
+      },
+      {
+        "text": " — use <document>, <example>, <instructions> to separate data from commands, reducing confusion when the prompt is long and complex."
+      }
+    ],
+    "example": "\"<instructions>Summarize in 3 points</instructions> <document>...10 pages of content...</document>\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 7 · Part 2",
+    "title": "Common patterns",
+    "body": [
+      {
+        "text": "Popular ones: "
+      },
+      {
+        "text": "<context> background · <example> examples · <thinking> think in this tag · <answer> the final answer",
+        "bold": true
+      },
+      {
+        "text": " — telling it to answer inside a specific tag makes it easy to extract the result for use in your code."
+      }
+    ],
+    "example": "\"Analyze in <thinking>, then give the final answer only in <answer>, so the system can pull just the answer to display\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What do XML tags in a prompt help with?",
+    "options": [
+      {
+        "text": "Separating data from commands, reducing confusion",
+        "correct": true
+      },
+      {
+        "text": "Making the text colorful"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To separate a long document from the instructions, which tag?",
+    "options": [
+      {
+        "text": "<document>...</document> around the content",
+        "correct": true
+      },
+      {
+        "text": "Just run it all together"
+      },
+      {
+        "text": "Use emoji as separators"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why is telling it to answer in <answer> useful for developers?",
+    "options": [
+      {
+        "text": "You can easily extract just the answer for your code",
+        "correct": true
+      },
+      {
+        "text": "It makes the answer always correct"
+      },
+      {
+        "text": "It saves tokens"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have Claude clearly separate parts of the prompt (context vs question), what should you do?",
+    "options": [
+      {
+        "text": "Wrap them in XML tags like <context> <question>",
+        "correct": true
+      },
+      {
+        "text": "Write it all together"
+      },
+      {
+        "text": "Type in caps"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of XML tags in a prompt?",
+    "options": [
+      {
+        "text": "Helps Claude understand the prompt's structure more accurately",
+        "correct": true
+      },
+      {
+        "text": "Makes it answer slower"
+      },
+      {
+        "text": "No effect"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

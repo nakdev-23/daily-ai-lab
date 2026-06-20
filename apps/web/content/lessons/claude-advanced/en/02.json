@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 2 · Part 1",
+    "title": "Adjust the Thinking Budget",
+    "body": [
+      {
+        "text": "Extended Thinking is adjustable — how much "
+      },
+      {
+        "text": "time Claude spends thinking before answering",
+        "bold": true
+      },
+      {
+        "text": " — more for hard tasks, quick answers for easy ones. In the API it's set as budget_tokens; in the app you pick a level."
+      }
+    ],
+    "example": "\"A 10-year financial planning problem → high thinking / 'what day is it today' → no thinking, instant answer\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 2 · Part 2",
+    "title": "Balance quality and speed",
+    "body": [
+      {
+        "text": "More thinking = "
+      },
+      {
+        "text": "more accurate but slower and more expensive",
+        "bold": true
+      },
+      {
+        "text": " — start low, and only increase if the answer isn't good enough, rather than maxing it out every time and wasting it."
+      }
+    ],
+    "example": "\"Summarizing an email: low thinking is enough / reviewing a legal contract: increase thinking for careful reasoning\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is the Thinking Budget?",
+    "options": [
+      {
+        "text": "How much Claude is allowed to think before answering",
+        "correct": true
+      },
+      {
+        "text": "The monthly fee"
+      },
+      {
+        "text": "How many chats you can open"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "More thinking trades off against what?",
+    "options": [
+      {
+        "text": "Slower answers and higher cost",
+        "correct": true
+      },
+      {
+        "text": "No downside at all"
+      },
+      {
+        "text": "Shorter answers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a good strategy for setting thinking?",
+    "options": [
+      {
+        "text": "Start low, and increase only if the answer isn't good",
+        "correct": true
+      },
+      {
+        "text": "Max it out all the time"
+      },
+      {
+        "text": "Keep it off no matter the task"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To balance quality and speed, what should you do?",
+    "options": [
+      {
+        "text": "Adjust the Thinking Budget to match the task's difficulty",
+        "correct": true
+      },
+      {
+        "text": "Always set it to maximum"
+      },
+      {
+        "text": "Turn everything off"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "A high Thinking Budget suits what kind of work?",
+    "options": [
+      {
+        "text": "Hard work that needs accuracy",
+        "correct": true
+      },
+      {
+        "text": "Short greetings"
+      },
+      {
+        "text": "Every task, even easy ones"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

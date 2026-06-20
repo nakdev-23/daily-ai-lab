@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 13 · Part 1",
+    "title": "Claude for Teams",
+    "body": [
+      {
+        "text": "The Team plan provides a "
+      },
+      {
+        "text": "shared workspace: shared Projects, member management, and data not used to train the model",
+        "bold": true
+      },
+      {
+        "text": " — the same team uses the same Project Knowledge, so everyone gets answers on the same context."
+      }
+    ],
+    "example": "\"The content team creates a 'Brand Guidelines' Project with the tone of voice, so everyone writes in the same style automatically\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 13 · Part 2",
+    "title": "Organize a workspace the team will use",
+    "body": [
+      {
+        "text": "What works: "
+      },
+      {
+        "text": "create a Project per major task, not per person + update the Knowledge regularly + assign an owner to each Project",
+        "bold": true
+      },
+      {
+        "text": " — an ownerless Project becomes stale data that makes the AI answer wrong."
+      }
+    ],
+    "example": "\"Team Projects: 'Support FAQ' (owner: CS lead) / 'Sales Playbook' (owner: sales manager)\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does the Team plan offer that the solo plan doesn't?",
+    "options": [
+      {
+        "text": "A shared workspace and Project sharing within the team",
+        "correct": true
+      },
+      {
+        "text": "A secretly smarter model"
+      },
+      {
+        "text": "Free forever"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How should you create Projects?",
+    "options": [
+      {
+        "text": "Per major task, with an assigned owner",
+        "correct": true
+      },
+      {
+        "text": "A separate one per person"
+      },
+      {
+        "text": "One Project for everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What problem does an ownerless Project cause?",
+    "options": [
+      {
+        "text": "Stale Knowledge makes the AI give wrong info",
+        "correct": true
+      },
+      {
+        "text": "It's auto-deleted"
+      },
+      {
+        "text": "No problem"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For a team using Claude together, how should you organize the workspace?",
+    "options": [
+      {
+        "text": "Separate spaces/permissions by team and task",
+        "correct": true
+      },
+      {
+        "text": "One account with the password shared company-wide"
+      },
+      {
+        "text": "No management needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does Claude for Teams excel at?",
+    "options": [
+      {
+        "text": "Collaboration and user management",
+        "correct": true
+      },
+      {
+        "text": "Playing games"
+      },
+      {
+        "text": "Editing video"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

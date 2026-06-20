@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 15 · Part 1",
+    "title": "Enterprise Integrations",
+    "body": [
+      {
+        "text": "At the enterprise level, Claude connects into your ecosystem several ways: "
+      },
+      {
+        "text": "direct API, Amazon Bedrock, Google Vertex AI, and MCP to connect internal tools",
+        "bold": true
+      },
+      {
+        "text": " — choose based on your existing infrastructure. A team already on AWS that uses Bedrock passes compliance more easily."
+      }
+    ],
+    "example": "\"A bank uses Claude via Bedrock because its data is already in the AWS VPC, so it doesn't leave the audited environment\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 15 · Part 2",
+    "title": "Claude Advanced course wrap-up",
+    "body": [
+      {
+        "text": "The full path: "
+      },
+      {
+        "text": "Extended Thinking, API, Tool Use, advanced prompting, Computer Use, Batch, Streaming, and Enterprise",
+        "bold": true
+      },
+      {
+        "text": " — this knowledge is the foundation for building AI systems that actually work in an organization."
+      }
+    ],
+    "example": "\"Capstone: design an internal company Q&A AI system — choose the model, the integration method, and complete security measures\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How can an organization access Claude?",
+    "options": [
+      {
+        "text": "Direct API, Amazon Bedrock, Google Vertex AI",
+        "correct": true
+      },
+      {
+        "text": "Only on a CD"
+      },
+      {
+        "text": "Free download from any website"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why do organizations on AWS often choose Bedrock?",
+    "options": [
+      {
+        "text": "Data stays in the existing audited system, so compliance is easier",
+        "correct": true
+      },
+      {
+        "text": "Because it's free"
+      },
+      {
+        "text": "Because the model is smarter than other versions"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What role does MCP play in an organization?",
+    "options": [
+      {
+        "text": "Connecting Claude to internal tools and data",
+        "correct": true
+      },
+      {
+        "text": "It's a new model"
+      },
+      {
+        "text": "An email system"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you get the most from advanced Claude?",
+    "options": [
+      {
+        "text": "Choose API/Tool Use/Thinking to fit the task and control security",
+        "correct": true
+      },
+      {
+        "text": "Use defaults for everything"
+      },
+      {
+        "text": "Don't verify the results"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should enterprise Claude integration consider?",
+    "options": [
+      {
+        "text": "Data security, permissions, and auditing",
+        "correct": true
+      },
+      {
+        "text": "Speed only"
+      },
+      {
+        "text": "Nothing to consider"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

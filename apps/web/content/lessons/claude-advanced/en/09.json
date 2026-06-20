@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 9 · Part 1",
+    "title": "Constitutional AI",
+    "body": [
+      {
+        "text": "Claude is trained with "
+      },
+      {
+        "text": "Constitutional AI — a set of principles that teach it to be safe and honest",
+        "bold": true
+      },
+      {
+        "text": " — instead of relying on a human to check every answer, the model learns to critique and fix its own answers against these principles."
+      }
+    ],
+    "example": "\"This is why Claude refuses dangerous requests, and admits when it's unsure instead of making things up\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 9 · Part 2",
+    "title": "Effects in real use",
+    "body": [
+      {
+        "text": "What users get: "
+      },
+      {
+        "text": "honesty (admitting it doesn't know) and consistency (it doesn't break character easily)",
+        "bold": true
+      },
+      {
+        "text": " — if Claude refuses a legitimate task of yours, add context, like saying it's a test of your own company's system."
+      }
+    ],
+    "example": "\"'Help me test SQL injection on my own company's system; I'm authorized to test per this document' — clear context, the work proceeds\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Constitutional AI?",
+    "options": [
+      {
+        "text": "Training a model with a set of principles to be safe and honest",
+        "correct": true
+      },
+      {
+        "text": "A country's laws"
+      },
+      {
+        "text": "The name of a new model"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What effect of Constitutional AI do users feel?",
+    "options": [
+      {
+        "text": "Claude admits when unsure instead of making things up",
+        "correct": true
+      },
+      {
+        "text": "It answers any question no matter what"
+      },
+      {
+        "text": "It answers much slower"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If Claude refuses a legitimate task of yours, what should you do?",
+    "options": [
+      {
+        "text": "Add context for why the task is legitimate",
+        "correct": true
+      },
+      {
+        "text": "Yell at it until it complies"
+      },
+      {
+        "text": "Quit immediately"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the real-world effect of Constitutional AI?",
+    "options": [
+      {
+        "text": "Claude is cautious about / refuses harmful content per its principles",
+        "correct": true
+      },
+      {
+        "text": "It always answers slowly"
+      },
+      {
+        "text": "No effect"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the idea of Constitutional AI?",
+    "options": [
+      {
+        "text": "Training it to hold to principles/values when answering",
+        "correct": true
+      },
+      {
+        "text": "Letting it answer anything at all"
+      },
+      {
+        "text": "Focusing only on speed"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

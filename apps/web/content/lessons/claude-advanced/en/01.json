@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 1 · Part 1",
+    "title": "What is Extended Thinking?",
+    "body": [
+      {
+        "text": "Extended Thinking is a mode that lets Claude "
+      },
+      {
+        "text": "think deeply before answering, like a thinker who reflects before speaking",
+        "bold": true
+      },
+      {
+        "text": " — great for complex problems, multi-faceted analysis, or tasks that need high accuracy."
+      }
+    ],
+    "example": "\"Analyze the pros and cons of investing in an index fund vs real estate in Thailand over 10 years\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 1 · Part 2",
+    "title": "When to turn on Extended Thinking",
+    "body": [
+      {
+        "text": "Use Extended Thinking when you want "
+      },
+      {
+        "text": "a more correct answer over a faster one",
+        "bold": true
+      },
+      {
+        "text": " — like business planning, data analysis, or important decisions, not for simple everyday questions."
+      }
+    ],
+    "example": "\"Design a database for a hotel booking app supporting 100,000 users, with the trade-offs of each option\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Extended Thinking in Claude?",
+    "options": [
+      {
+        "text": "Claude answers longer"
+      },
+      {
+        "text": "Claude thinks deeply before answering, for higher accuracy",
+        "correct": true
+      },
+      {
+        "text": "Claude searches the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What kind of work is Extended Thinking best for?",
+    "options": [
+      {
+        "text": "\"Translate this sentence to English\""
+      },
+      {
+        "text": "Analyzing a complex business plan",
+        "correct": true
+      },
+      {
+        "text": "\"How do I say hello?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the downside of Extended Thinking?",
+    "options": [
+      {
+        "text": "It answers wrong more often"
+      },
+      {
+        "text": "It takes longer and uses more tokens",
+        "correct": true
+      },
+      {
+        "text": "It doesn't support Thai"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For a complex problem needing deep reasoning, what should you do with Claude?",
+    "options": [
+      {
+        "text": "Turn on Extended Thinking",
+        "correct": true
+      },
+      {
+        "text": "Ask for the shortest answer"
+      },
+      {
+        "text": "Ask repeatedly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does Extended Thinking help with?",
+    "options": [
+      {
+        "text": "Having Claude reason in steps before answering, boosting accuracy on hard tasks",
+        "correct": true
+      },
+      {
+        "text": "Always answering faster"
+      },
+      {
+        "text": "Changing the language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

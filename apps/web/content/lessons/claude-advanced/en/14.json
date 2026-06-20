@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 14 · Part 1",
+    "title": "Privacy & Security",
+    "body": [
+      {
+        "text": "Anthropic's principle: "
+      },
+      {
+        "text": "on business plans (Team/Enterprise/API), data is not used to train the model by default",
+        "bold": true
+      },
+      {
+        "text": " — organizations should set a policy for what level of data may go into the AI, and which confidential data must never be entered."
+      }
+    ],
+    "example": "\"Example policy: public/internal docs → OK / customer personal data, ID numbers, financials → must be masked first\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 14 · Part 2",
+    "title": "User-side best practices",
+    "body": [
+      {
+        "text": "Three habits to have: "
+      },
+      {
+        "text": "remove/replace real names and identifying info before entering · use a plan suited to the data's confidentiality · read the data policy of the plan you use",
+        "bold": true
+      },
+      {
+        "text": " — data security starts with the user, not just the provider."
+      }
+    ],
+    "example": "\"Replace 'John Smith, ID 1-2345-...' with 'Customer A' before sending the case to the AI for analysis\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do Anthropic's business plans handle data?",
+    "options": [
+      {
+        "text": "Not used to train the model by default",
+        "correct": true
+      },
+      {
+        "text": "Sold to ad companies"
+      },
+      {
+        "text": "Published publicly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Before giving customer data to the AI to analyze, what should you do?",
+    "options": [
+      {
+        "text": "Remove or mask identifying information first",
+        "correct": true
+      },
+      {
+        "text": "Include everything, including ID numbers"
+      },
+      {
+        "text": "Add their full phone number"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Whose responsibility is data security?",
+    "options": [
+      {
+        "text": "Both the provider and the user",
+        "correct": true
+      },
+      {
+        "text": "The provider only"
+      },
+      {
+        "text": "Nobody's"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's a good user-side security practice?",
+    "options": [
+      {
+        "text": "Don't enter more confidential data than needed, and check the data policy",
+        "correct": true
+      },
+      {
+        "text": "Enter all your passwords"
+      },
+      {
+        "text": "Share confidential data with everyone"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Before putting organization data into the AI, what should you do?",
+    "options": [
+      {
+        "text": "Check that the data can be shared/processed per policy",
+        "correct": true
+      },
+      {
+        "text": "Always put in anything"
+      },
+      {
+        "text": "Don't think about it"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

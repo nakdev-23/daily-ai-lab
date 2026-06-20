@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 11 · Part 1",
+    "title": "Batch Processing",
+    "body": [
+      {
+        "text": "For high-volume work that's not urgent, use the "
+      },
+      {
+        "text": "Batch API — submit jobs as a batch, get results within 24 hours at half the price",
+        "bold": true
+      },
+      {
+        "text": ". Great for summarizing thousands of documents, categorizing data, or translating lots of content."
+      }
+    ],
+    "example": "\"Send 10,000 customer reviews to the Batch API for sentiment analysis — done overnight, at half price\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 11 · Part 2",
+    "title": "Choose Batch or Real-time",
+    "body": [
+      {
+        "text": "Deciding rule: "
+      },
+      {
+        "text": "a user is waiting for the answer → real-time / a large background job → batch",
+        "bold": true
+      },
+      {
+        "text": " — a good system often uses both: live chat in real time, and daily reports processed as a batch at night."
+      }
+    ],
+    "example": "\"Customer chatbot → real-time / summarize the day's tickets for the manager in the morning → batch\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the advantage of the Batch API?",
+    "options": [
+      {
+        "text": "Half the price for work that can wait",
+        "correct": true
+      },
+      {
+        "text": "Faster than real-time"
+      },
+      {
+        "text": "Free and unlimited"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What work is suited to the Batch API?",
+    "options": [
+      {
+        "text": "Analyzing 10,000 reviews that aren't urgent",
+        "correct": true
+      },
+      {
+        "text": "A chatbot where the customer is waiting"
+      },
+      {
+        "text": "An emergency alert system"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How does a well-designed system use Batch and Real-time?",
+    "options": [
+      {
+        "text": "Both together: real-time for live interaction, batch for background work",
+        "correct": true
+      },
+      {
+        "text": "Pick only one forever"
+      },
+      {
+        "text": "Use batch for everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For a large, non-urgent volume of work, what's the cost-effective approach?",
+    "options": [
+      {
+        "text": "Batch processing",
+        "correct": true
+      },
+      {
+        "text": "Send each request rushed, one at a time"
+      },
+      {
+        "text": "Don't do it at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "When should you choose Real-time over Batch?",
+    "options": [
+      {
+        "text": "When the user needs an answer immediately",
+        "correct": true
+      },
+      {
+        "text": "When there's a large non-urgent backlog"
+      },
+      {
+        "text": "There's no difference"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 12 · Part 1",
+    "title": "Streaming Responses",
+    "body": [
+      {
+        "text": "Streaming sends the answer "
+      },
+      {
+        "text": "piece by piece in real time, instead of waiting until it's done and sending the whole block",
+        "bold": true
+      },
+      {
+        "text": " — users see the text flow out instantly, and the feeling of 'fast' is very different, even if total processing time is the same."
+      }
+    ],
+    "example": "\"Without streaming: a silent screen for 15 seconds, then the whole answer appears / With streaming: text starts flowing within 1 second\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advanced · Chapter 12 · Part 2",
+    "title": "Use streaming in real apps",
+    "body": [
+      {
+        "text": "Turn it on with "
+      },
+      {
+        "text": "stream: true, then receive events piece by piece and append them to the display",
+        "bold": true
+      },
+      {
+        "text": " — chat and writing tools should always stream, while background jobs nobody is watching don't need it."
+      }
+    ],
+    "example": "\"A web chatbot → stream so the user sees the system working / a nightly report cron job → no need to stream\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is streaming?",
+    "options": [
+      {
+        "text": "Sending the answer piece by piece in real time",
+        "correct": true
+      },
+      {
+        "text": "Watching movies online"
+      },
+      {
+        "text": "Recording audio"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does streaming mainly help with?",
+    "options": [
+      {
+        "text": "User experience — it feels fast because you see output immediately",
+        "correct": true
+      },
+      {
+        "text": "Making the AI smarter"
+      },
+      {
+        "text": "Reducing cost to zero"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which work doesn't need streaming?",
+    "options": [
+      {
+        "text": "Background jobs nobody is watching",
+        "correct": true
+      },
+      {
+        "text": "A web chatbot"
+      },
+      {
+        "text": "A writing assistant"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have users see the answer appear gradually in your app, what should you use?",
+    "options": [
+      {
+        "text": "Streaming responses",
+        "correct": true
+      },
+      {
+        "text": "Wait until it's done, then show it"
+      },
+      {
+        "text": "Turn off the display"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of streaming in real apps?",
+    "options": [
+      {
+        "text": "Users feel it's fast and see progress",
+        "correct": true
+      },
+      {
+        "text": "It breaks the app"
+      },
+      {
+        "text": "No effect"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

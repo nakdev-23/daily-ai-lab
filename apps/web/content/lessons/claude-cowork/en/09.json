@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 9 · Part 1",
+    "title": "Pro & con analysis",
+    "body": [
+      {
+        "text": "For hard decisions, let the AI bring order: "
+      },
+      {
+        "text": "lay out the pros and cons of each option, with criteria for comparison",
+        "bold": true
+      },
+      {
+        "text": " — give it the context and constraints (budget, time, team) so the analysis fits your situation, not a generic textbook."
+      }
+    ],
+    "example": "\"Compare 'hire an agency' vs 'build our own team' for marketing, budget 100k/month, need results in 6 months, team is currently 2 people\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 9 · Part 2",
+    "title": "Have the AI argue against itself",
+    "body": [
+      {
+        "text": "An advanced technique: "
+      },
+      {
+        "text": "ask for a devil's advocate — have the AI argue against the option you're leaning toward",
+        "bold": true
+      },
+      {
+        "text": " — we all have biases, so having the AI find the weaknesses of your favorite option genuinely helps you decide more carefully."
+      }
+    ],
+    "example": "\"I'm leaning toward hiring an agency — play devil's advocate and give the best reasons why we shouldn't\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What must you tell the AI for a good pro & con analysis?",
+    "options": [
+      {
+        "text": "Our real context and constraints, like budget, time, team",
+        "correct": true
+      },
+      {
+        "text": "Just the option names"
+      },
+      {
+        "text": "The answer you want to get"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What technique is devil's advocate?",
+    "options": [
+      {
+        "text": "Having the AI argue against the option you're leaning toward",
+        "correct": true
+      },
+      {
+        "text": "Having the AI agree with everything"
+      },
+      {
+        "text": "A kind of card game"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why is it useful to have the AI argue against your favorite option?",
+    "options": [
+      {
+        "text": "It reduces your own bias and helps you decide more carefully",
+        "correct": true
+      },
+      {
+        "text": "It wastes more time"
+      },
+      {
+        "text": "It's not useful"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To decide an important matter from all angles, what should you ask for?",
+    "options": [
+      {
+        "text": "Ask for the single most correct answer"
+      },
+      {
+        "text": "Ask it to predict the future"
+      },
+      {
+        "text": "Ask for a pro & con, and have the AI argue against itself",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How does having the AI argue against itself help?",
+    "options": [
+      {
+        "text": "It's not useful"
+      },
+      {
+        "text": "You see the weaknesses of each option more clearly",
+        "correct": true
+      },
+      {
+        "text": "It just causes confusion"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

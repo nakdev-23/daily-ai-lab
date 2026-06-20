@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 12 · Part 1",
+    "title": "Templates & reusable prompts",
+    "body": [
+      {
+        "text": "Work you repeat every week should have a "
+      },
+      {
+        "text": "prompt template you write once and use forever",
+        "bold": true
+      },
+      {
+        "text": " — keep it in Project instructions or a team notes file, and just swap in the new data each time."
+      }
+    ],
+    "example": "\"Weekly report template: 'From the attached data, summarize 1) highlights 2) key numbers 3) problems + fixes 4) next week's plan, no more than one page'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 12 · Part 2",
+    "title": "Claude Cowork course wrap-up",
+    "body": [
+      {
+        "text": "You've covered the full set of office skills: "
+      },
+      {
+        "text": "documents, email, meetings, research, analysis, planning, and templates",
+        "bold": true
+      },
+      {
+        "text": " — a final tip: notice the work you repeat most often, and build your first template from that."
+      }
+    ],
+    "example": "\"Capstone: pick one recurring task, build a template, use it for real for a week, and measure the time you save\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What kind of work suits a prompt template?",
+    "options": [
+      {
+        "text": "Recurring work, like a weekly report",
+        "correct": true
+      },
+      {
+        "text": "Work done only once"
+      },
+      {
+        "text": "No work is suitable"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Where can you keep templates?",
+    "options": [
+      {
+        "text": "In Project instructions or team notes",
+        "correct": true
+      },
+      {
+        "text": "Only in your head"
+      },
+      {
+        "text": "They can't be saved"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should you build your first template from?",
+    "options": [
+      {
+        "text": "The work we repeat most often",
+        "correct": true
+      },
+      {
+        "text": "The hardest task in the world"
+      },
+      {
+        "text": "Someone else's work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You want repetitive work to go faster — what should you do?",
+    "options": [
+      {
+        "text": "Retype it every time"
+      },
+      {
+        "text": "Stop doing it"
+      },
+      {
+        "text": "Build templates / reusable prompts",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What do reusable prompts help with?",
+    "options": [
+      {
+        "text": "Nothing useful"
+      },
+      {
+        "text": "You get consistent results and start work faster",
+        "correct": true
+      },
+      {
+        "text": "They make the results messy"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

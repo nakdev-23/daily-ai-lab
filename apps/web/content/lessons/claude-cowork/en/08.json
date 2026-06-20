@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 8 · Part 1",
+    "title": "Analyzing data and numbers",
+    "body": [
+      {
+        "text": "Upload a table/spreadsheet and ask in plain language: "
+      },
+      {
+        "text": "find trends, compare, spot anomalies",
+        "bold": true
+      },
+      {
+        "text": " — great for people who aren't comfortable with Excel formulas but still need to read data well."
+      }
+    ],
+    "example": "\"From this monthly expense table, which category rose abnormally in the last 3 months, and what's the likely reason?\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 8 · Part 2",
+    "title": "From numbers to decisions",
+    "body": [
+      {
+        "text": "The most valuable final step: "
+      },
+      {
+        "text": "have the AI translate the numbers into business meaning and options",
+        "bold": true
+      },
+      {
+        "text": " — not just 'sales down 12%' but 'down mainly from the new-customer segment; the options are A or B'."
+      }
+    ],
+    "example": "\"From this analysis, summarize the 3 things we should do next, with the pros and cons of each, to present to my boss\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How can someone not comfortable with Excel use Claude to analyze data?",
+    "options": [
+      {
+        "text": "Upload the table and ask in plain language",
+        "correct": true
+      },
+      {
+        "text": "They have to learn to write formulas first"
+      },
+      {
+        "text": "It can't be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which is the most valuable step of analysis?",
+    "options": [
+      {
+        "text": "Translating the numbers into meaning and decision options",
+        "correct": true
+      },
+      {
+        "text": "Counting the rows in the table"
+      },
+      {
+        "text": "Changing the table's color"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which question gets the deepest answer?",
+    "options": [
+      {
+        "text": "\"Which category rose abnormally, and what's the likely reason?\"",
+        "correct": true
+      },
+      {
+        "text": "\"How many rows does this table have?\""
+      },
+      {
+        "text": "\"Is this table pretty?\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have sales figures and want recommendations — what should you do?",
+    "options": [
+      {
+        "text": "Just stare at the numbers"
+      },
+      {
+        "text": "Delete the data"
+      },
+      {
+        "text": "Have Claude analyze it and propose decision directions",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does 'from numbers to decisions' mean?",
+    "options": [
+      {
+        "text": "Do nothing"
+      },
+      {
+        "text": "Turn the data into conclusions you can act on",
+        "correct": true
+      },
+      {
+        "text": "Retype the numbers"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

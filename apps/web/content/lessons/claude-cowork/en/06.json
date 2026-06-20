@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 6 · Part 1",
+    "title": "Presentation outline",
+    "body": [
+      {
+        "text": "Have the AI lay out a slide structure from "
+      },
+      {
+        "text": "the presentation's goal + the audience + the time available",
+        "bold": true
+      },
+      {
+        "text": " — you get a smooth narrative flow, with a main point per slide and speaker notes."
+      }
+    ],
+    "example": "\"Lay out a 10-minute presentation pitching a new project to executives: opening hook → problem → solution → numbers → ask for approval\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 6 · Part 2",
+    "title": "One slide, one idea",
+    "body": [
+      {
+        "text": "A rule the AI enforces well: "
+      },
+      {
+        "text": "each slide has a single point, and the title is a sentence that communicates on its own",
+        "bold": true
+      },
+      {
+        "text": " — ask it to change a title from 'Q3 Sales' to a sentence like 'Q3 sales grew 23%, the highest in two years'."
+      }
+    ],
+    "example": "\"Rewrite every slide title in the outline into a sentence that conveys the main point without reading the body\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What information helps the AI build a good presentation outline?",
+    "options": [
+      {
+        "text": "The goal, the audience, and the time available",
+        "correct": true
+      },
+      {
+        "text": "The template color"
+      },
+      {
+        "text": "The computer brand"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good slide title be like?",
+    "options": [
+      {
+        "text": "A sentence that conveys the main point on its own",
+        "correct": true
+      },
+      {
+        "text": "A single short word, like 'Sales'"
+      },
+      {
+        "text": "A full page long"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does the 'one slide, one idea' rule help with?",
+    "options": [
+      {
+        "text": "The audience grasps the point without getting lost",
+        "correct": true
+      },
+      {
+        "text": "It just adds more slides"
+      },
+      {
+        "text": "It saves printer ink"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When making a presentation outline, what's the good principle?",
+    "options": [
+      {
+        "text": "Cram everything into one slide"
+      },
+      {
+        "text": "No titles"
+      },
+      {
+        "text": "One slide, one idea",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does a presentation outline help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Ordering the story so it flows smoothly",
+        "correct": true
+      },
+      {
+        "text": "Just adding more slides"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

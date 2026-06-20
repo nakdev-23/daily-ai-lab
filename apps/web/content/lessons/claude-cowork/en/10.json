@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 10 · Part 1",
+    "title": "To-do & project planning",
+    "body": [
+      {
+        "text": "Throw a big goal at the AI and have it break it into "
+      },
+      {
+        "text": "a plan: subtasks, sequence, durations, and milestones",
+        "bold": true
+      },
+      {
+        "text": " — e.g. 'organize a seminar for 200 people in 2 months' gives you a checklist with a timeline you can start on right away."
+      }
+    ],
+    "example": "\"Plan opening an online store in 6 weeks, broken into weekly tasks, noting which can run in parallel and which have to wait\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 10 · Part 2",
+    "title": "A good plan finds the risks first",
+    "body": [
+      {
+        "text": "Add value by asking for a "
+      },
+      {
+        "text": "pre-mortem: if this project failed, what would the likely causes be",
+        "bold": true
+      },
+      {
+        "text": " — the AI points out risks you overlooked, then you build the safeguards into the timeline from the start."
+      }
+    ],
+    "example": "\"Suppose this seminar failed — what are the 3 most likely causes, and how do we prevent each from week one?\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does the AI help plan a project?",
+    "options": [
+      {
+        "text": "Breaks the goal into subtasks, sequence, and a timeline",
+        "correct": true
+      },
+      {
+        "text": "Does the whole project for you"
+      },
+      {
+        "text": "Just gives encouragement"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is a pre-mortem?",
+    "options": [
+      {
+        "text": "Imagining it has failed, then finding the causes in advance",
+        "correct": true
+      },
+      {
+        "text": "A meeting after the project ends"
+      },
+      {
+        "text": "A health checkup"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What information makes a plan usable in reality?",
+    "options": [
+      {
+        "text": "Noting which tasks run in parallel and which depend on others",
+        "correct": true
+      },
+      {
+        "text": "Putting every task on the last day"
+      },
+      {
+        "text": "Specifying no times at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should good project planning include?",
+    "options": [
+      {
+        "text": "Starting work with no plan"
+      },
+      {
+        "text": "Just the project name"
+      },
+      {
+        "text": "Listing tasks, sequence, and risks in advance",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does 'a good plan finds the risks first' mean?",
+    "options": [
+      {
+        "text": "No need to think about risks"
+      },
+      {
+        "text": "Anticipate problems and prepare to handle them",
+        "correct": true
+      },
+      {
+        "text": "Wait for the problem to happen first"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

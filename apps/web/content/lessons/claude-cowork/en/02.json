@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 2 · Part 1",
+    "title": "Writing reports and memos",
+    "body": [
+      {
+        "text": "Have Claude draft a report from "
+      },
+      {
+        "text": "raw data + the structure you want + the audience",
+        "bold": true
+      },
+      {
+        "text": " — say who's reading (executives like it short, the team likes detail) and the result fits the audience right away."
+      }
+    ],
+    "example": "\"Write a memo to executives from these sales figures: no more than one page, start with the conclusion, then three reasons, then a recommendation\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 2 · Part 2",
+    "title": "Structure first, content later",
+    "body": [
+      {
+        "text": "A tip for long writing: "
+      },
+      {
+        "text": "have the AI propose an outline first, approve it, then write the full text",
+        "bold": true
+      },
+      {
+        "text": " — fixing an outline is easier than fixing 10 pages of content, and it keeps the report on point."
+      }
+    ],
+    "example": "\"First, propose an outline for the quarterly results report — don't write the content yet, let me adjust the structure first\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What information helps the AI write a report that hits the mark?",
+    "options": [
+      {
+        "text": "The raw data, the structure you want, and the audience",
+        "correct": true
+      },
+      {
+        "text": "Just a one-word topic"
+      },
+      {
+        "text": "Your favorite color"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a memo to executives be like?",
+    "options": [
+      {
+        "text": "Short, starting with the conclusion, then the reasons",
+        "correct": true
+      },
+      {
+        "text": "Long and detailed, 20 pages"
+      },
+      {
+        "text": "Full of technical jargon"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why ask for an outline before writing the full text?",
+    "options": [
+      {
+        "text": "Fixing the structure is easier than fixing long content",
+        "correct": true
+      },
+      {
+        "text": "It makes the AI work slower"
+      },
+      {
+        "text": "No reason"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To write a good report, where should you start?",
+    "options": [
+      {
+        "text": "Write it all at once with no structure"
+      },
+      {
+        "text": "Write from the end to the front"
+      },
+      {
+        "text": "Lay out the structure first, then fill in the content",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why lay out the structure before writing?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "It makes the content organized and easy to read",
+        "correct": true
+      },
+      {
+        "text": "It just slows things down"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

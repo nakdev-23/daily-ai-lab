@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 11 · Part 1",
+    "title": "Claude + Notion/Google Docs",
+    "body": [
+      {
+        "text": "Work alongside the tools you already use, in several ways: "
+      },
+      {
+        "text": "paste content to be polished, upload docs files to be summarized, or connect an integration/MCP",
+        "bold": true
+      },
+      {
+        "text": " — let Claude be the 'think and draft' step, then keep the final work in your team's system as usual."
+      }
+    ],
+    "example": "\"Draft a spec doc in Claude until you're happy → drop it into Notion for the team to comment → bring the feedback back to Claude to revise\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 11 · Part 2",
+    "title": "The draft–review–revise loop",
+    "body": [
+      {
+        "text": "A workflow that works for team documents: "
+      },
+      {
+        "text": "AI does the first draft (fast) → a human reviews and adds context (accurate) → AI revises accordingly (quick)",
+        "bold": true
+      },
+      {
+        "text": " — don't let the AI write and send straight off, and don't write it all yourself when the AI could draft it."
+      }
+    ],
+    "example": "\"Here are 6 comments from the team in the doc — revise the draft for all of them; if any conflict, ask me first\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Claude work with Notion/Google Docs?",
+    "options": [
+      {
+        "text": "Paste content, upload files, or connect an integration",
+        "correct": true
+      },
+      {
+        "text": "They can't be used together at all"
+      },
+      {
+        "text": "You have to stop using Notion first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's an effective document workflow?",
+    "options": [
+      {
+        "text": "AI drafts → a person reviews → AI revises accordingly",
+        "correct": true
+      },
+      {
+        "text": "AI writes and sends without anyone looking"
+      },
+      {
+        "text": "A person writes every character themselves"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If team feedback contradicts itself, what should the AI do?",
+    "options": [
+      {
+        "text": "Ask us first instead of guessing",
+        "correct": true
+      },
+      {
+        "text": "Always pick the first one"
+      },
+      {
+        "text": "Delete the comments"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When doing draft–review–revise in Notion/Docs, how should you use Claude?",
+    "options": [
+      {
+        "text": "Use it once and you're done"
+      },
+      {
+        "text": "Don't use it at all"
+      },
+      {
+        "text": "Help at each round: draft, review, and revise",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of the draft–review–revise loop?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "The work gets better round by round",
+        "correct": true
+      },
+      {
+        "text": "It makes the work worse"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

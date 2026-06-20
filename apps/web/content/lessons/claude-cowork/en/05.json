@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 5 · Part 1",
+    "title": "Meeting notes & summaries",
+    "body": [
+      {
+        "text": "Paste the transcript or raw notes and have Claude summarize them into "
+      },
+      {
+        "text": "decisions · action items (who, what, when) · open issues",
+        "bold": true
+      },
+      {
+        "text": " — turn a one-hour meeting into a summary the team can read in 2 minutes."
+      }
+    ],
+    "example": "\"Summarize these meeting notes, split into: decisions / action items with owner names and deadlines / topics to discuss further\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 5 · Part 2",
+    "title": "Useful before the meeting too",
+    "body": [
+      {
+        "text": "The AI helps across the whole cycle: "
+      },
+      {
+        "text": "before — draft an agenda from open items / after — summarize and draft the follow-up email",
+        "bold": true
+      },
+      {
+        "text": " — a meeting with a clear agenda finishes faster, and a follow-up sent right away keeps action items from getting lost."
+      }
+    ],
+    "example": "\"From last meeting's summary and the open tasks, draft a 30-minute agenda for tomorrow, ordered by priority\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What should a good meeting summary include?",
+    "options": [
+      {
+        "text": "Decisions, action items, and open issues",
+        "correct": true
+      },
+      {
+        "text": "Every word, verbatim"
+      },
+      {
+        "text": "Just the attendee list"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does a complete action item consist of?",
+    "options": [
+      {
+        "text": "Who does it, what they do, when it's due",
+        "correct": true
+      },
+      {
+        "text": "Just the task name"
+      },
+      {
+        "text": "The mood of the meeting"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How can the AI help before a meeting?",
+    "options": [
+      {
+        "text": "Draft an agenda from open items and the previous summary",
+        "correct": true
+      },
+      {
+        "text": "Attend the whole meeting for us"
+      },
+      {
+        "text": "Cancel the meeting"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Before a meeting, how would you use Claude to help?",
+    "options": [
+      {
+        "text": "Cancel the meeting"
+      },
+      {
+        "text": "Don't prepare anything"
+      },
+      {
+        "text": "Draft the agenda and the questions to ask",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "After a meeting, what should you use Claude for?",
+    "options": [
+      {
+        "text": "Send blank slides"
+      },
+      {
+        "text": "Summarize into notes and action items",
+        "correct": true
+      },
+      {
+        "text": "Delete the notes"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

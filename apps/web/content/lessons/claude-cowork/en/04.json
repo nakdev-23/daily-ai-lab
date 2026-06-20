@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 4 · Part 1",
+    "title": "Writing email",
+    "body": [
+      {
+        "text": "The formula for an email the AI writes well: "
+      },
+      {
+        "text": "state the recipient + the goal + the points to include + the tone",
+        "bold": true
+      },
+      {
+        "text": " — from asking to reschedule, to following up, to politely declining, all the way to replying to an angry customer."
+      }
+    ],
+    "example": "\"Write a follow-up email about an invoice two weeks overdue; the recipient is a regular client, tone polite but clear, requesting a new payment date\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 4 · Part 2",
+    "title": "Let the AI help think through hard emails",
+    "body": [
+      {
+        "text": "For sensitive emails (declining, apologizing, negotiating), ask for "
+      },
+      {
+        "text": "several versions in different tones, then mix and pick",
+        "bold": true
+      },
+      {
+        "text": " — and have the AI analyze where the email you're about to send might be misread before you hit send."
+      }
+    ],
+    "example": "\"Write 3 versions of an email declining this offer: direct / gentle / leaving the door open for future talks\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What should you tell the AI when asking it to write an email?",
+    "options": [
+      {
+        "text": "The recipient, the goal, the points, and the tone",
+        "correct": true
+      },
+      {
+        "text": "Just the words 'write an email'"
+      },
+      {
+        "text": "Your email password"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What technique should you use for a sensitive email?",
+    "options": [
+      {
+        "text": "Ask for several versions in different tones, then mix and pick",
+        "correct": true
+      },
+      {
+        "text": "Send the first version immediately"
+      },
+      {
+        "text": "Don't use AI for this kind of work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Before sending an important email, what else can the AI help with?",
+    "options": [
+      {
+        "text": "Analyze where the message might be misread",
+        "correct": true
+      },
+      {
+        "text": "Send it for you"
+      },
+      {
+        "text": "Add lots of emoji"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have to write a hard email, like a polite refusal — what should you do?",
+    "options": [
+      {
+        "text": "Send a blank email"
+      },
+      {
+        "text": "Just type 'no'"
+      },
+      {
+        "text": "Have Claude help draft it by giving the context and tone",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does 'let the AI help think through hard emails' mean?",
+    "options": [
+      {
+        "text": "Have it delete the email"
+      },
+      {
+        "text": "Have it help organize the points and the right wording",
+        "correct": true
+      },
+      {
+        "text": "Have it send on our behalf immediately"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

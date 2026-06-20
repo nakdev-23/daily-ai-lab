@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 1 · Part 1",
+    "title": "Summarize long documents with Claude",
+    "body": [
+      {
+        "text": "Claude reads and summarizes long documents very well, because it has a "
+      },
+      {
+        "text": "context window of up to 200,000 tokens",
+        "bold": true
+      },
+      {
+        "text": " — just upload a PDF report or a contract, then ask which parts you want summarized."
+      }
+    ],
+    "example": "\"Summarize this annual report, focusing on the key numbers, the main strategy, and the risks worth watching\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 1 · Part 2",
+    "title": "Writing reports and memos",
+    "body": [
+      {
+        "text": "Tell Claude the "
+      },
+      {
+        "text": "audience, the tone, and the key points that must be included",
+        "bold": true
+      },
+      {
+        "text": " — Claude will then write something that fits your needs, instead of something generic."
+      }
+    ],
+    "example": "\"Write a one-page executive memo for the CEO about Q3 results, formal tone, focused on action items\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Why is Claude well-suited to summarizing long documents?",
+    "options": [
+      {
+        "text": "Claude reads faster than a person"
+      },
+      {
+        "text": "Claude has a large context window of up to 200K tokens, so it can read a long document whole",
+        "correct": true
+      },
+      {
+        "text": "Claude has an internet connection"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should you tell Claude before asking it to write a report?",
+    "options": [
+      {
+        "text": "The date and time"
+      },
+      {
+        "text": "The audience, the tone, and the key points the report must include",
+        "correct": true
+      },
+      {
+        "text": "The filename you want to save it as"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How do you upload a PDF for Claude to analyze?",
+    "options": [
+      {
+        "text": "Send the PDF's URL"
+      },
+      {
+        "text": "Use the attachment clip in Claude.ai and upload the file directly",
+        "correct": true
+      },
+      {
+        "text": "Copy all the text and paste it into the chat"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have a long report and want a short memo summary — what should you do?",
+    "options": [
+      {
+        "text": "Type the whole summary yourself"
+      },
+      {
+        "text": "Send only the filename"
+      },
+      {
+        "text": "Paste the document and ask for a memo summary organized by topic",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does summarizing documents with Claude help with?",
+    "options": [
+      {
+        "text": "Nothing useful"
+      },
+      {
+        "text": "Saves time and quickly pulls out the main points",
+        "correct": true
+      },
+      {
+        "text": "Makes the document longer"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

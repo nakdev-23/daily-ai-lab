@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 7 · Part 1",
+    "title": "Research with Claude",
+    "body": [
+      {
+        "text": "Use Claude as a research assistant: "
+      },
+      {
+        "text": "summarize long documents, compare multiple sources, and ask follow-up questions",
+        "bold": true
+      },
+      {
+        "text": " — upload reports, articles, or market data, then probe exactly the points you need right away."
+      }
+    ],
+    "example": "\"From these 3 market reports, summarize the trends all of them agree on, and the points where they conflict, with each side's reasoning\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 7 · Part 2",
+    "title": "Always verify the source",
+    "body": [
+      {
+        "text": "A principle for researchers using AI: "
+      },
+      {
+        "text": "have the AI cite which part of the document each conclusion comes from",
+        "bold": true
+      },
+      {
+        "text": " — and for key facts you'll base a decision on, open the source document and verify it yourself; don't rely on the summary alone."
+      }
+    ],
+    "example": "\"For every conclusion, state which document and which page it came from, so I can check it back\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Claude help with research?",
+    "options": [
+      {
+        "text": "Summarizes long documents and compares multiple sources",
+        "correct": true
+      },
+      {
+        "text": "Guesses the research results for you"
+      },
+      {
+        "text": "Runs experiments in the lab"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why ask the AI to cite the source of each conclusion?",
+    "options": [
+      {
+        "text": "So you can check it back against the real data",
+        "correct": true
+      },
+      {
+        "text": "It makes the answer longer"
+      },
+      {
+        "text": "It's not necessary at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "For a key fact you'll base an important decision on, what should you do?",
+    "options": [
+      {
+        "text": "Open the source document and verify it yourself",
+        "correct": true
+      },
+      {
+        "text": "Just trust the AI's summary"
+      },
+      {
+        "text": "Ask the AI 3 more times and that's enough"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When using Claude for research, what should you always do?",
+    "options": [
+      {
+        "text": "Believe everything immediately"
+      },
+      {
+        "text": "Don't cite anything"
+      },
+      {
+        "text": "Verify the source before believing it",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why must you verify the source?",
+    "options": [
+      {
+        "text": "For slowness"
+      },
+      {
+        "text": "The AI may give inaccurate info or fabricate a source",
+        "correct": true
+      },
+      {
+        "text": "The AI is always 100% right"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 3 · Part 1",
+    "title": "Translating documents",
+    "body": [
+      {
+        "text": "Claude translates better than ordinary translation tools because it "
+      },
+      {
+        "text": "adjusts tone and context: formal, semi-formal, or casual",
+        "bold": true
+      },
+      {
+        "text": " — tell it the type of document and the recipient, e.g. a contract, a customer email, or a social post."
+      }
+    ],
+    "example": "\"Translate this email into business-formal English for a Japanese client we've just met, keeping the Thai sense of politeness\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Cowork · Chapter 3 · Part 2",
+    "title": "Professional-grade translation",
+    "body": [
+      {
+        "text": "A quality-boosting technique: "
+      },
+      {
+        "text": "give it a glossary of company-specific terms and ask it to keep technical terms that shouldn't be translated",
+        "bold": true
+      },
+      {
+        "text": " — for important documents, back-translate to check the meaning hasn't drifted."
+      }
+    ],
+    "example": "\"Translate this manual, always using 'home loan' for 'สินเชื่อบ้าน', and keeping the words API and dashboard untranslated\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the strength of translating with Claude?",
+    "options": [
+      {
+        "text": "It adjusts tone and context to the type of document",
+        "correct": true
+      },
+      {
+        "text": "It only translates word-for-word"
+      },
+      {
+        "text": "It only translates to English"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does a glossary help with in translation?",
+    "options": [
+      {
+        "text": "Company-specific terms get translated consistently every time",
+        "correct": true
+      },
+      {
+        "text": "It makes translation faster"
+      },
+      {
+        "text": "It doesn't help"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is back-translation?",
+    "options": [
+      {
+        "text": "Translating back to the original language to check the meaning hasn't drifted",
+        "correct": true
+      },
+      {
+        "text": "Translating backwards word by word"
+      },
+      {
+        "text": "Deleting the translation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Translating a business document — how should you instruct Claude?",
+    "options": [
+      {
+        "text": "Translate word-for-word"
+      },
+      {
+        "text": "Translate in slang"
+      },
+      {
+        "text": "Translate formally, preserving meaning and specialized terms",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How does professional translation differ from word-for-word?",
+    "options": [
+      {
+        "text": "No difference"
+      },
+      {
+        "text": "It considers the context and tone of the content",
+        "correct": true
+      },
+      {
+        "text": "It's faster because it doesn't think"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

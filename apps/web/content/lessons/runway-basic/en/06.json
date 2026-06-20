@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 6 · Part 1",
+    "title": "Continuity between shots",
+    "body": [
+      {
+        "text": "When joining several shots, keep the "
+      },
+      {
+        "text": "color tone, lighting, and style",
+        "bold": true
+      },
+      {
+        "text": " close so the clip looks like one story. The trick is to repeat the lighting/tone description in every prompt, like 'golden evening light, warm tone' in every shot."
+      }
+    ],
+    "example": "End every prompt the same way: 'cinematic, warm golden hour lighting, film grain'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 6 · Part 2",
+    "title": "Plan before rendering",
+    "body": [
+      {
+        "text": "Sketch a short storyboard first — how many shots and what each one is — to save credits and time, because re-rendering has a cost. Planning beats guessing as you go."
+      }
+    ],
+    "example": "Storyboard: 1) logo fades in 2) product spins 3) someone uses the product 4) closing text",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What helps several shots look like one story?",
+    "options": [
+      {
+        "text": "Keeping color tone, lighting, and style close",
+        "correct": true
+      },
+      {
+        "text": "Using wildly different clip lengths"
+      },
+      {
+        "text": "Changing the style every shot"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Why sketch a storyboard first?",
+    "options": [
+      {
+        "text": "It saves credits and time — no random rendering",
+        "correct": true
+      },
+      {
+        "text": "Because the system requires it"
+      },
+      {
+        "text": "To make the clip longer"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the trick for lighting continuity?",
+    "options": [
+      {
+        "text": "Put the same lighting/tone description in every prompt",
+        "correct": true
+      },
+      {
+        "text": "Let the AI randomize the lighting"
+      },
+      {
+        "text": "Use only one shot"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What does planning shots in advance give you?",
+    "options": [
+      {
+        "text": "Lower re-render cost and organized work",
+        "correct": true
+      },
+      {
+        "text": "Smaller files"
+      },
+      {
+        "text": "Automatic higher resolution"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

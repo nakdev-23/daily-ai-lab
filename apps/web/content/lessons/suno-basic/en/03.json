@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 3 · Part 1",
+    "title": "The ingredients of a good style",
+    "body": [
+      {
+        "text": "A good style description has "
+      },
+      {
+        "text": "genre + standout instruments + mood + tempo",
+        "bold": true
+      },
+      {
+        "text": ", e.g. 'acoustic pop, mostly acoustic guitar, warm, slow tempo.' Suno understands English music terms well — lo-fi, synthwave, ballad, upbeat."
+      }
+    ],
+    "example": "lo-fi hip hop, soft piano with rain sounds, relaxing, for focus work, no vocals",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 3 · Part 2",
+    "title": "Avoid words that are too vague",
+    "body": [
+      {
+        "text": "Words like 'nice' or 'good' don't help — they're not measurable. Replace them with "
+      },
+      {
+        "text": "concrete words",
+        "bold": true
+      },
+      {
+        "text": ", e.g. replace 'fun' with 'fast tempo, punchy drums.' Being specific makes results repeatable and easy to refine."
+      }
+    ],
+    "example": "Pop-rock, fast tempo 130 BPM, heavy electric guitar, positive energy, good for workout motivation",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Which element is NOT necessary in a good style description?",
+    "options": [
+      {
+        "text": "Genre"
+      },
+      {
+        "text": "Mood"
+      },
+      {
+        "text": "The real name of a copyrighted singer",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What should you replace 'fun' with so Suno understands more clearly?",
+    "options": [
+      {
+        "text": "'fast tempo, punchy drums'",
+        "correct": true
+      },
+      {
+        "text": "'really nice'"
+      },
+      {
+        "text": "'the kind that makes you happy'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Does Suno understand English genre terms?",
+    "options": [
+      {
+        "text": "Yes, well — like lo-fi, ballad, synthwave",
+        "correct": true
+      },
+      {
+        "text": "No, it must be Thai only"
+      },
+      {
+        "text": "Only Thai song titles"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Why is specifying a concrete style important?",
+    "options": [
+      {
+        "text": "Because Suno likes long prompts"
+      },
+      {
+        "text": "Because it makes results repeatable and easy to refine",
+        "correct": true
+      },
+      {
+        "text": "Because it charges by word count"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

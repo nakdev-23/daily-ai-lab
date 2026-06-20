@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 3 · Part 1",
+    "title": "Camera terms worth knowing",
+    "body": [
+      {
+        "text": "Add camera directions to your prompt to control movement, like "
+      },
+      {
+        "text": "'zoom in', 'pan left', 'aerial drone shot', 'tracking shot', 'slow motion'",
+        "bold": true
+      },
+      {
+        "text": ". These make the clip look intentionally directed, not a still image with a slight wobble."
+      }
+    ],
+    "example": "Aerial drone shot flying over snowy mountains at dawn, moving slowly forward",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 3 · Part 2",
+    "title": "Speed and direction",
+    "body": [
+      {
+        "text": "Specify the speed (slow motion / time-lapse) and the direction of an object's movement to get the pacing you want. Without it, the motion may stutter or move too fast."
+      }
+    ],
+    "example": "Time-lapse of clouds moving quickly across the sky over a city, sunset gradually changing color",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Which directions control the camera?",
+    "options": [
+      {
+        "text": "'aerial drone shot', 'pan left'",
+        "correct": true
+      },
+      {
+        "text": "'nice image'"
+      },
+      {
+        "text": "'--music on'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Why specify the movement speed?",
+    "options": [
+      {
+        "text": "To get the pacing you want — not stuttering or too fast",
+        "correct": true
+      },
+      {
+        "text": "Because the system requires it"
+      },
+      {
+        "text": "To make the file bigger"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What does 'slow motion' do?",
+    "options": [
+      {
+        "text": "Slows the motion down for a dramatic look",
+        "correct": true
+      },
+      {
+        "text": "Rotates the image 360 degrees"
+      },
+      {
+        "text": "Adds voiceover"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What do camera terms help with?",
+    "options": [
+      {
+        "text": "Making the clip look intentionally directed, with clear camera movement",
+        "correct": true
+      },
+      {
+        "text": "Reducing render time"
+      },
+      {
+        "text": "Changing the clip's language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

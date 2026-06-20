@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 1 · Part 1",
+    "title": "What is Suno?",
+    "body": [
+      {
+        "text": "Suno is a "
+      },
+      {
+        "text": "text-to-music AI",
+        "bold": true
+      },
+      {
+        "text": " that turns a description into a full song — music and vocals — in a few dozen seconds. Just say the genre and mood you want, and it composes the melody, arranges it, and sings it, even if you "
+      },
+      {
+        "text": "can't play an instrument",
+        "bold": true
+      },
+      {
+        "text": "."
+      }
+    ],
+    "example": "A chill acoustic pop song about a weekend morning in Bangkok, in Thai, female vocals",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 1 · Part 2",
+    "title": "What can you use it for?",
+    "body": [
+      {
+        "text": "Use it for "
+      },
+      {
+        "text": "video/ad soundtracks, brand jingles, birthday songs, song-idea demos",
+        "bold": true
+      },
+      {
+        "text": ", or just for fun. Its strength is making prototypes very fast — great for creators and marketers who want a custom song without hiring a studio."
+      }
+    ],
+    "example": "A bright 15-second jingle for a coffee shop, lyrics about fragrant morning coffee",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What can Suno do?",
+    "options": [
+      {
+        "text": "Create a full song with vocals from a description you type",
+        "correct": true
+      },
+      {
+        "text": "Edit video from uploaded clips"
+      },
+      {
+        "text": "Convert images to text"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's Suno's strength for creators?",
+    "options": [
+      {
+        "text": "You must be able to play an instrument first"
+      },
+      {
+        "text": "Making custom song prototypes fast without a studio",
+        "correct": true
+      },
+      {
+        "text": "It replaces pro audio software in every case"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What work is Suno best suited for?",
+    "options": [
+      {
+        "text": "Video soundtracks or short ad jingles",
+        "correct": true
+      },
+      {
+        "text": "Mastering songs for major-label release"
+      },
+      {
+        "text": "Transcribing speech into subtitles"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "To get a song that fits, what must you do?",
+    "options": [
+      {
+        "text": "Always upload an original audio file"
+      },
+      {
+        "text": "Describe the genre, mood, and details of the song you want",
+        "correct": true
+      },
+      {
+        "text": "Pick only from preset songs"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

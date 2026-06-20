@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 8 · Part 1",
+    "title": "Downloads and usage rights",
+    "body": [
+      {
+        "text": "You can download as an audio (and video) file. Commercial usage rights "
+      },
+      {
+        "text": "depend on your plan",
+        "bold": true
+      },
+      {
+        "text": " — the free plan is usually personal use only. If you'll use it in ads or to earn money, always check your plan's terms first."
+      }
+    ],
+    "example": "Before using a song in a monetized YouTube clip → check whether your plan allows commercial use",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 8 · Part 2",
+    "title": "Don't imitate real artists",
+    "body": [
+      {
+        "text": "Avoid naming a real artist to 'copy their voice' — it violates the terms and risks copyright issues. Instead, describe the "
+      },
+      {
+        "text": "voice characteristics",
+        "bold": true
+      },
+      {
+        "text": ", e.g. 'a warm, deep male voice, indie style' — safer and still effective."
+      }
+    ],
+    "example": "Instead of 'sing like artist X' use 'a clear, bright female voice, K-pop style, upbeat'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Commercial usage rights for songs depend on what?",
+    "options": [
+      {
+        "text": "Your subscription plan",
+        "correct": true
+      },
+      {
+        "text": "The song's length"
+      },
+      {
+        "text": "How many times you hit generate"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What should you do instead of asking it to copy a real artist's voice?",
+    "options": [
+      {
+        "text": "Describe the voice characteristics and style instead",
+        "correct": true
+      },
+      {
+        "text": "Clearly name the artist"
+      },
+      {
+        "text": "Upload that artist's song as a reference"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Before using a song in a monetized clip, what should you do?",
+    "options": [
+      {
+        "text": "Check your plan's terms for commercial use",
+        "correct": true
+      },
+      {
+        "text": "Download and use it freely in every case"
+      },
+      {
+        "text": "Rename the song file"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Which vocal prompt is safer?",
+    "options": [
+      {
+        "text": "'Sing like that famous artist'"
+      },
+      {
+        "text": "'A warm, deep male voice, indie style'",
+        "correct": true
+      },
+      {
+        "text": "'Copy the voice from the original song'"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

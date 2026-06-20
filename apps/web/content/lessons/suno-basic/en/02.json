@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 2 · Part 1",
+    "title": "Simple Mode: just type and get a song",
+    "body": [
+      {
+        "text": "The easiest mode is to type a description in the "
+      },
+      {
+        "text": "Song description",
+        "bold": true
+      },
+      {
+        "text": " box and click Create — Suno writes both the melody and lyrics. The tip is to include "
+      },
+      {
+        "text": "3 things: genre + mood + topic",
+        "bold": true
+      },
+      {
+        "text": " in one sentence. The clearer it is, the more on-target the result."
+      }
+    ],
+    "example": "A fun country song encouraging hard-working people, fast tempo, male vocals",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 2 · Part 2",
+    "title": "Specify language and vocals",
+    "body": [
+      {
+        "text": "For a Thai song, say so directly: "
+      },
+      {
+        "text": "'in Thai'",
+        "bold": true
+      },
+      {
+        "text": ", and specify the vocals — like 'female vocals', 'male vocals', 'deep and soft'. If you don't, Suno guesses, which may give a language or tone you didn't want."
+      }
+    ],
+    "example": "A slow, sad R&B song about saying goodbye, in Thai, soft female vocals",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "In Simple Mode, what should you include in the description?",
+    "options": [
+      {
+        "text": "Genre + mood + topic",
+        "correct": true
+      },
+      {
+        "text": "Only the name of an artist to imitate"
+      },
+      {
+        "text": "Only the length in seconds"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "If you want a Thai song, what should you do?",
+    "options": [
+      {
+        "text": "Let Suno guess on its own"
+      },
+      {
+        "text": "Put the word 'in Thai' in the prompt",
+        "correct": true
+      },
+      {
+        "text": "Always write the prompt in English"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Which prompt gives the most on-target result?",
+    "options": [
+      {
+        "text": "'A nice song'"
+      },
+      {
+        "text": "'A bright, uplifting pop song, mid tempo, in Thai, female vocals'",
+        "correct": true
+      },
+      {
+        "text": "'Make a song'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What happens if you don't specify the vocals?",
+    "options": [
+      {
+        "text": "Suno picks for you, which may not match your taste",
+        "correct": true
+      },
+      {
+        "text": "The song will have no vocals at all"
+      },
+      {
+        "text": "The system shows an error"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

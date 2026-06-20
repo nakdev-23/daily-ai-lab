@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 6 · Part 1",
+    "title": "Verse–Chorus–Bridge",
+    "body": [
+      {
+        "text": "A typical pop song has the structure "
+      },
+      {
+        "text": "Intro → Verse → Chorus → Verse → Chorus → Bridge → Chorus → Outro",
+        "bold": true
+      },
+      {
+        "text": ". Arranging the sections right gives the song a 'journey': the Verse tells the story, the Chorus is the core message, and the Bridge shifts the mood before returning to the hook."
+      }
+    ],
+    "example": "[Intro]\n[Verse] tell the story of a new morning\n[Chorus] an uplifting hook\n[Bridge] shift the mood\n[Chorus]\n[Outro]",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 6 · Part 2",
+    "title": "Special tags to shape the sound",
+    "body": [
+      {
+        "text": "Add hints in parentheses to suggest the instrumentation, like (guitar solo), (soft piano), (build up). Suno sometimes responds, adding dimension to the song. Experiment and listen to the results."
+      }
+    ],
+    "example": "[Verse] ...\n(soft piano)\n[Chorus] ...\n(guitar solo)\n[Outro]",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "In general, what does the Chorus do in a song?",
+    "options": [
+      {
+        "text": "It's the core message / the catchy hook",
+        "correct": true
+      },
+      {
+        "text": "It tells the story's details"
+      },
+      {
+        "text": "It only ends the song"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What is the Bridge for?",
+    "options": [
+      {
+        "text": "Shifting the mood before returning to the hook",
+        "correct": true
+      },
+      {
+        "text": "Being the song title"
+      },
+      {
+        "text": "Shortening the song"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Which is an instrumentation-hint tag?",
+    "options": [
+      {
+        "text": "[Title]"
+      },
+      {
+        "text": "(guitar solo)",
+        "correct": true
+      },
+      {
+        "text": "--length 30"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Why is arranging the sections important?",
+    "options": [
+      {
+        "text": "It gives the song an emotional journey and a professional feel",
+        "correct": true
+      },
+      {
+        "text": "It makes the audio file smaller"
+      },
+      {
+        "text": "It removes the need for lyrics"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

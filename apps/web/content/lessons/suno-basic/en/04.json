@@ -1,0 +1,125 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 4 · Part 1",
+    "title": "You can write your own lyrics",
+    "body": [
+      {
+        "text": "In "
+      },
+      {
+        "text": "Custom Mode",
+        "bold": true
+      },
+      {
+        "text": " you can type your own lyrics fully, and use "
+      },
+      {
+        "text": "structure tags",
+        "bold": true
+      },
+      {
+        "text": " to tell Suno which part is which — like [Verse], [Chorus], [Bridge], [Outro]. Suno composes a melody to fit each section, giving the song a clear structure like a real song."
+      }
+    ],
+    "example": "[Verse]\nThe first light of day shines in\n[Chorus]\nStand up and fight on together",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 4 · Part 2",
+    "title": "Let AI help write the lyrics",
+    "body": [
+      {
+        "text": "If you're stuck on lyrics, use ChatGPT or Claude to draft them first — give the theme, mood, and number of sections, then paste the lyrics into Suno. The trick is to ask for "
+      },
+      {
+        "text": "rhyme",
+        "bold": true
+      },
+      {
+        "text": " and a "
+      },
+      {
+        "text": "repeatable hook",
+        "bold": true
+      },
+      {
+        "text": " so it's catchy."
+      }
+    ],
+    "example": "Help write Thai lyrics on the theme of friendship — 1 Verse and 1 Chorus, rhyming with a catchy hook",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Which tag marks the song's hook?",
+    "options": [
+      {
+        "text": "[Verse]"
+      },
+      {
+        "text": "[Chorus]",
+        "correct": true
+      },
+      {
+        "text": "[Intro]"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Which mode lets you type your own lyrics fully?",
+    "options": [
+      {
+        "text": "Custom Mode",
+        "correct": true
+      },
+      {
+        "text": "Simple Mode"
+      },
+      {
+        "text": "Auto Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the trick to make lyrics catchy?",
+    "options": [
+      {
+        "text": "Make them rhyme and have a repeatable hook",
+        "correct": true
+      },
+      {
+        "text": "Cram as many words as possible into one section"
+      },
+      {
+        "text": "Change the theme on every line"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "If you're stuck on lyrics, what's the best move?",
+    "options": [
+      {
+        "text": "Always leave the lyrics field blank"
+      },
+      {
+        "text": "Use ChatGPT/Claude to draft by giving the theme and mood",
+        "correct": true
+      },
+      {
+        "text": "Type random words to fill the lines"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

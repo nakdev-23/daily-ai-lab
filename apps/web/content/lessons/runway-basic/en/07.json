@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 7 · Part 1",
+    "title": "Add sound to your clip",
+    "body": [
+      {
+        "text": "AI clips often have no fitting audio, so add "
+      },
+      {
+        "text": "background music (e.g. from Suno) and sound effects",
+        "bold": true
+      },
+      {
+        "text": " during editing. Sound is half of a clip's emotion — don't overlook it."
+      }
+    ],
+    "example": "Making an ad clip → music from Suno (bright, upbeat) + a whoosh sound on shot transitions",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 7 · Part 2",
+    "title": "Export to match the platform",
+    "body": [
+      {
+        "text": "Choose the aspect ratio to match where you'll post: "
+      },
+      {
+        "text": "9:16 for Reels/TikTok, 16:9 for YouTube, 1:1 for a square feed",
+        "bold": true
+      },
+      {
+        "text": ". Set it from the start so you don't have to crop later and ruin the composition."
+      }
+    ],
+    "example": "Making a TikTok clip → set 9:16 from the start, place the subject centered in the vertical frame",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Why add sound to AI clips?",
+    "options": [
+      {
+        "text": "Clips often have no fitting audio, and sound is half the emotion",
+        "correct": true
+      },
+      {
+        "text": "Because the system requires it"
+      },
+      {
+        "text": "To reduce file size"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What's the aspect ratio for Reels/TikTok?",
+    "options": [
+      {
+        "text": "9:16 vertical",
+        "correct": true
+      },
+      {
+        "text": "16:9 horizontal"
+      },
+      {
+        "text": "1:1 square"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "When should you set the aspect ratio?",
+    "options": [
+      {
+        "text": "From the start, so you don't have to crop later",
+        "correct": true
+      },
+      {
+        "text": "Always after exporting"
+      },
+      {
+        "text": "No need to set it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Where can you get background music to add?",
+    "options": [
+      {
+        "text": "Make it in Suno and add it during editing",
+        "correct": true
+      },
+      {
+        "text": "Runway always makes the music for you"
+      },
+      {
+        "text": "Use copyrighted music freely with no issues"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

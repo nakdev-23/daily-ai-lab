@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 2 · Part 1",
+    "title": "Prompt formula: scene + action + atmosphere",
+    "body": [
+      {
+        "text": "A good video prompt states "
+      },
+      {
+        "text": "what's in the scene + what's happening + atmosphere/lighting",
+        "bold": true
+      },
+      {
+        "text": ". Write something 'visible,' not a vague feeling. The more concrete it is, the more accurately the camera captures it."
+      }
+    ],
+    "example": "A young woman strolling through a flower field, wind in her hair, golden evening light, warm tone",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 2 · Part 2",
+    "title": "One shot, one idea",
+    "body": [
+      {
+        "text": "Don't cram multiple events into one shot — it confuses the AI. Keep "
+      },
+      {
+        "text": "one shot = one main action",
+        "bold": true
+      },
+      {
+        "text": ". To tell a longer story, break it into several shots and edit them together."
+      }
+    ],
+    "example": "One shot: a cat slowly jumping onto a sofa (not 'a cat walks, jumps, then runs out the door')",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does a good video prompt formula include?",
+    "options": [
+      {
+        "text": "Scene + action + atmosphere/lighting",
+        "correct": true
+      },
+      {
+        "text": "Filename + length + price"
+      },
+      {
+        "text": "Your favorite director's name"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How many main actions should there be per shot?",
+    "options": [
+      {
+        "text": "One main action",
+        "correct": true
+      },
+      {
+        "text": "The more the better"
+      },
+      {
+        "text": "At least five"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Which prompt is better?",
+    "options": [
+      {
+        "text": "'A man running on the beach in the morning, soft light, gentle waves'",
+        "correct": true
+      },
+      {
+        "text": "'Make a cool clip'"
+      },
+      {
+        "text": "'Anything that looks nice'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "To tell a longer story, what should you do?",
+    "options": [
+      {
+        "text": "Break it into several shots and edit them together",
+        "correct": true
+      },
+      {
+        "text": "Cram every event into one shot"
+      },
+      {
+        "text": "Write a page-long prompt"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

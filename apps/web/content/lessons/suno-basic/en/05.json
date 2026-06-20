@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 5 · Part 1",
+    "title": "Separate Style and Lyrics fields",
+    "body": [
+      {
+        "text": "Custom Mode has 2 main fields: "
+      },
+      {
+        "text": "Style of Music",
+        "bold": true
+      },
+      {
+        "text": " (the style/genre only) and "
+      },
+      {
+        "text": "Lyrics",
+        "bold": true
+      },
+      {
+        "text": " (the lyrics + structure tags). Separating them gives much more precise control than Simple Mode — great when you already have a clear vision of the song."
+      }
+    ],
+    "example": "Style: warm acoustic pop, in Thai, female vocals\nLyrics: [Verse] ... [Chorus] ...",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 5 · Part 2",
+    "title": "Set the title and length",
+    "body": [
+      {
+        "text": "You can set a song name in the Title field and roughly control the length by the number of sections. The more lyrics, the longer the song. For a short song (like a jingle), use just a short 1 Verse + 1 Chorus."
+      }
+    ],
+    "example": "Style: bright 20-second jingle\nLyrics: [Chorus] Fragrant coffee to start a new day",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What are Custom Mode's main fields?",
+    "options": [
+      {
+        "text": "Style of Music and Lyrics",
+        "correct": true
+      },
+      {
+        "text": "Title and Volume"
+      },
+      {
+        "text": "Tempo and Key only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "For a short jingle-style song, what should you do?",
+    "options": [
+      {
+        "text": "Use short lyrics — just one section",
+        "correct": true
+      },
+      {
+        "text": "Repeat [Verse] 10 times"
+      },
+      {
+        "text": "Write the longest lyrics possible"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the benefit of separate Style and Lyrics fields?",
+    "options": [
+      {
+        "text": "More precise control of style and lyrics than Simple Mode",
+        "correct": true
+      },
+      {
+        "text": "It finishes songs 10x faster"
+      },
+      {
+        "text": "You get a song without entering anything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What most affects the song's length?",
+    "options": [
+      {
+        "text": "The song title"
+      },
+      {
+        "text": "The number of sections / length of the lyrics",
+        "correct": true
+      },
+      {
+        "text": "The cover color"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

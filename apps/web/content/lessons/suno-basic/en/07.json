@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 7 · Part 1",
+    "title": "Extend the song to make it longer",
+    "body": [
+      {
+        "text": "If the song is too short, use "
+      },
+      {
+        "text": "Extend",
+        "bold": true
+      },
+      {
+        "text": " from the point you want, and Suno continues it smoothly. Use it to build a full-length song from a section you like, or add an Outro that gradually fades out."
+      }
+    ],
+    "example": "Extend from 1:20 → add a [Bridge], then a [Chorus] and an [Outro] that gradually softens",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · Chapter 7 · Part 2",
+    "title": "Try several versions and choose",
+    "body": [
+      {
+        "text": "Each time you Create, Suno gives you "
+      },
+      {
+        "text": "2 versions",
+        "bold": true
+      },
+      {
+        "text": " to choose from, and you can re-generate as many times as you like. The trick is to keep the closest one and tweak the prompt a little at a time, rather than redoing everything."
+      }
+    ],
+    "example": "You like the Chorus melody but want a slower Verse → change only the tempo word in Style, then generate again",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Which feature makes a song longer?",
+    "options": [
+      {
+        "text": "Extend",
+        "correct": true
+      },
+      {
+        "text": "Crop"
+      },
+      {
+        "text": "Mute"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How many versions does Suno give each time you Create?",
+    "options": [
+      {
+        "text": "1"
+      },
+      {
+        "text": "2",
+        "correct": true
+      },
+      {
+        "text": "10"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's a good way to refine a song?",
+    "options": [
+      {
+        "text": "Keep the closest one and tweak the prompt a little at a time",
+        "correct": true
+      },
+      {
+        "text": "Delete everything and restart every time"
+      },
+      {
+        "text": "Hit generate rapidly without changing the prompt"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What is Extend good for?",
+    "options": [
+      {
+        "text": "Building a full-length song from a section you like",
+        "correct": true
+      },
+      {
+        "text": "Reducing background noise"
+      },
+      {
+        "text": "Changing the song's language"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

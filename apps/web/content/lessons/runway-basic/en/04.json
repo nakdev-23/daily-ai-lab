@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 4 · Part 1",
+    "title": "Start from an image you control",
+    "body": [
+      {
+        "text": "Upload a still image (your own photo, or one made in Midjourney) and have Runway animate it. This "
+      },
+      {
+        "text": "controls the composition more precisely",
+        "bold": true
+      },
+      {
+        "text": " than text-to-video, because you start from an image you've already chosen. Great for clips from brand/product images."
+      }
+    ],
+    "example": "Upload a product image, then prompt: the camera slowly orbits the product, soft blurred background",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 4 · Part 2",
+    "title": "Say only what should move",
+    "body": [
+      {
+        "text": "In image-to-video, have the prompt specify "
+      },
+      {
+        "text": "what should move",
+        "bold": true
+      },
+      {
+        "text": ", like 'hair and fabric flowing in the wind, while the background stays still.' Being clear prevents artifacts and gives a smoother result."
+      }
+    ],
+    "example": "Make the steam from a coffee cup rise slowly, while the cup and table stay still",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the benefit of image-to-video over text-to-video?",
+    "options": [
+      {
+        "text": "More precise control of composition, since you start from a chosen image",
+        "correct": true
+      },
+      {
+        "text": "It renders hour-long clips"
+      },
+      {
+        "text": "You don't write a prompt at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "In image-to-video, what should the prompt specify?",
+    "options": [
+      {
+        "text": "What should move and what should stay still",
+        "correct": true
+      },
+      {
+        "text": "The product's price"
+      },
+      {
+        "text": "The number of viewers you want"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What still images can you use?",
+    "options": [
+      {
+        "text": "Your own photos, or images made in Midjourney",
+        "correct": true
+      },
+      {
+        "text": "Only images from Runway"
+      },
+      {
+        "text": "Only black-and-white images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What does clearly stating what stays still help with?",
+    "options": [
+      {
+        "text": "Preventing artifacts and getting a smoother result",
+        "correct": true
+      },
+      {
+        "text": "Making the clip longer"
+      },
+      {
+        "text": "Adding audio automatically"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

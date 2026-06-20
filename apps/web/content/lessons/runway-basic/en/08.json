@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 8 · Part 1",
+    "title": "Project: a 10-second product promo clip",
+    "body": [
+      {
+        "text": "Combine everything you learned: plan a 3–4 shot storyboard, write each shot's prompt with the formula scene + action + camera + tone, render, edit together, add music and closing text, then export 9:16."
+      }
+    ],
+    "example": "Shot 1: product spinning on a flat surface\nShot 2: a hand picking it up\nShot 3: a satisfied smile\nShot 4: logo + slogan",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 8 · Part 2",
+    "title": "Check before delivering",
+    "body": [
+      {
+        "text": "Check the "
+      },
+      {
+        "text": "tone continuity, image sharpness, music timing matching the cuts, and that text is legible on mobile",
+        "bold": true
+      },
+      {
+        "text": ". A good short clip tells its story in 10 seconds and makes the product memorable."
+      }
+    ],
+    "example": "Checklist: same color tone in every shot ✓ music matches the cuts ✓ logo is clear ✓ 9:16 ratio ✓",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the first thing to do in a clip project?",
+    "options": [
+      {
+        "text": "Plan a storyboard of what shots you need",
+        "correct": true
+      },
+      {
+        "text": "Render randomly first, then think"
+      },
+      {
+        "text": "Upload to TikTok immediately"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What should each shot's prompt include?",
+    "options": [
+      {
+        "text": "Scene + action + camera direction + tone",
+        "correct": true
+      },
+      {
+        "text": "Just the product name"
+      },
+      {
+        "text": "Price and promotion"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Before exporting, what should you check?",
+    "options": [
+      {
+        "text": "Tone continuity, music timing, and text legible on mobile",
+        "correct": true
+      },
+      {
+        "text": "The character count of the prompt"
+      },
+      {
+        "text": "The export button's color"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What makes a good short ad clip?",
+    "options": [
+      {
+        "text": "Tells its story in ~10 seconds and makes the product memorable",
+        "correct": true
+      },
+      {
+        "text": "As long as possible"
+      },
+      {
+        "text": "As many shots as possible with no story"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

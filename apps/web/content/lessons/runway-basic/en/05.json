@@ -1,0 +1,101 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 5 · Part 1",
+    "title": "Paint where you want movement",
+    "body": [
+      {
+        "text": "Motion Brush",
+        "bold": true
+      },
+      {
+        "text": " lets you 'paint' the area of the image you want to move, then set its direction — e.g. paint a waterfall and have it flow down. Unpainted areas stay still, giving you very fine control over movement."
+      }
+    ],
+    "example": "Paint the flag and set it to wave to the right, while the flagpole and sky stay still",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 5 · Part 2",
+    "title": "Combine with camera directions",
+    "body": [
+      {
+        "text": "Use Motion Brush to control objects + camera directions to control the whole frame at the same time — e.g. paint waves rolling in, then direct the camera to slowly zoom in, for a clip with depth and clear direction."
+      }
+    ],
+    "example": "Motion Brush: ocean waves rolling to shore + Camera: slow zoom in + sunset light",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "How does Motion Brush work?",
+    "options": [
+      {
+        "text": "Paint the area you want to move, then set its direction",
+        "correct": true
+      },
+      {
+        "text": "Removes an object from the image"
+      },
+      {
+        "text": "Changes the whole clip's color"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What happens to areas you didn't paint with Motion Brush?",
+    "options": [
+      {
+        "text": "They stay still",
+        "correct": true
+      },
+      {
+        "text": "They disappear"
+      },
+      {
+        "text": "They move faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What can you use Motion Brush together with?",
+    "options": [
+      {
+        "text": "Camera directions to control the whole frame at the same time",
+        "correct": true
+      },
+      {
+        "text": "Nothing — it can't be combined"
+      },
+      {
+        "text": "Only black-and-white images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the main benefit of Motion Brush?",
+    "options": [
+      {
+        "text": "Fine control of movement in specific spots",
+        "correct": true
+      },
+      {
+        "text": "Unlimited free rendering"
+      },
+      {
+        "text": "Turning the clip into music"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

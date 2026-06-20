@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 1 · Part 1",
+    "title": "What is Runway?",
+    "body": [
+      {
+        "text": "Runway is an "
+      },
+      {
+        "text": "AI video tool",
+        "bold": true
+      },
+      {
+        "text": ". Its Gen-family models create short clips from text (text-to-video) or from a still image (image-to-video). Great for B-roll, short ad clips, intros, and visuals that are hard to film for real."
+      }
+    ],
+    "example": "A close-up of a coffee drop falling into a glass, slow motion, warm light, blurred background",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Runway · Chapter 1 · Part 2",
+    "title": "Short clips, but powerful",
+    "body": [
+      {
+        "text": "Clips are usually only "
+      },
+      {
+        "text": "a few seconds",
+        "bold": true
+      },
+      {
+        "text": " each. The idea is to create several short shots and edit them together. Don't expect a full-length film in one clip — think in 'shots,' like filming a movie."
+      }
+    ],
+    "example": "Shot 1: a city at night from above\nShot 2: cars with light-trail tail lights\nShot 3: a neon sign close-up",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is Runway used for?",
+    "options": [
+      {
+        "text": "Creating video clips from text or a still image",
+        "correct": true
+      },
+      {
+        "text": "Composing background music"
+      },
+      {
+        "text": "Only writing scripts automatically"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Roughly how long is each generated clip?",
+    "options": [
+      {
+        "text": "A few seconds",
+        "correct": true
+      },
+      {
+        "text": "10 minutes"
+      },
+      {
+        "text": "1 hour"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the right way to think about using Runway?",
+    "options": [
+      {
+        "text": "Create several short shots and edit them together",
+        "correct": true
+      },
+      {
+        "text": "Expect a full film in one clip"
+      },
+      {
+        "text": "Use it to 100% replace a real camera for everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What work is Runway good for?",
+    "options": [
+      {
+        "text": "B-roll or visuals that are hard to film for real",
+        "correct": true
+      },
+      {
+        "text": "Live sports broadcasting"
+      },
+      {
+        "text": "Real-time meeting recording"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

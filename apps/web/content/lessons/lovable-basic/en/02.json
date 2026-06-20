@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 2 · Part 1",
+    "title": "Give the big picture first, then details",
+    "body": [
+      {
+        "text": "Your first prompt should state "
+      },
+      {
+        "text": "what the app does + which screens/features it has + the rough style",
+        "bold": true
+      },
+      {
+        "text": ". Don't dive into every detail yet — let Lovable build the structure first, then refine piece by piece, like sketching before coloring."
+      }
+    ],
+    "example": "Build a restaurant table-booking app: a screen to pick date/time and party size, and a confirmation screen, warm tone",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 2 · Part 2",
+    "title": "See the live preview and iterate",
+    "body": [
+      {
+        "text": "Lovable shows a "
+      },
+      {
+        "text": "live preview",
+        "bold": true
+      },
+      {
+        "text": " immediately. If it's not right, type the changes point by point. The workflow is to iterate, not to get it all in one command. The more concrete you are, the more on-target the result."
+      }
+    ],
+    "example": "Make the confirm button bigger and green, and move it to the center of the screen",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What should your first prompt focus on?",
+    "options": [
+      {
+        "text": "The big picture: what the app does, its screens/features, rough style",
+        "correct": true
+      },
+      {
+        "text": "The color of every button right away"
+      },
+      {
+        "text": "Every line of code you want"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How does Lovable let you see results?",
+    "options": [
+      {
+        "text": "It shows a live preview immediately",
+        "correct": true
+      },
+      {
+        "text": "It sends a ZIP file to open yourself"
+      },
+      {
+        "text": "You must deploy first to see it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the correct way to work?",
+    "options": [
+      {
+        "text": "Iterate piece by piece, telling it changes point by point",
+        "correct": true
+      },
+      {
+        "text": "Get it perfect in one command"
+      },
+      {
+        "text": "Never edit after it's built"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Which comparison fits building an app with Lovable?",
+    "options": [
+      {
+        "text": "Sketch the structure first, then color/detail it",
+        "correct": true
+      },
+      {
+        "text": "Type all the code by hand"
+      },
+      {
+        "text": "Wait for the AI to do it with no instructions"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

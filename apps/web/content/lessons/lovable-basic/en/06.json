@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 6 · Part 1",
+    "title": "Deploy it online",
+    "body": [
+      {
+        "text": "Click "
+      },
+      {
+        "text": "Publish",
+        "bold": true
+      },
+      {
+        "text": " to give your app a real shareable link, and you can connect your own domain. Before publishing, try every button/form to make sure it all works, and check it on mobile too — most users open it on their phone."
+      }
+    ],
+    "example": "Publish the app, then test adding/removing tasks on mobile before sharing it with friends to try",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 6 · Part 2",
+    "title": "Know the tool's limits",
+    "body": [
+      {
+        "text": "Lovable is great at building fast, but very complex systems may need a developer to take it further. Tip: use it to build a prototype to "
+      },
+      {
+        "text": "test ideas with real users",
+        "bold": true
+      },
+      {
+        "text": " before investing in full development — saving both time and money."
+      }
+    ],
+    "example": "Build a queue-booking prototype, let 10 customers try it, and gather feedback before full development",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What do you click to give your app a real shareable link?",
+    "options": [
+      {
+        "text": "Publish",
+        "correct": true
+      },
+      {
+        "text": "Delete"
+      },
+      {
+        "text": "Preview only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Before publishing, what should you do?",
+    "options": [
+      {
+        "text": "Try every button/form and check it on mobile",
+        "correct": true
+      },
+      {
+        "text": "Delete the database"
+      },
+      {
+        "text": "Skip all testing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What's the best way to get value from Lovable?",
+    "options": [
+      {
+        "text": "Build a prototype to test ideas with real users before full development",
+        "correct": true
+      },
+      {
+        "text": "Use it to build a huge complex system with no help"
+      },
+      {
+        "text": "Build it and never test"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Why check the app on mobile?",
+    "options": [
+      {
+        "text": "Because most users open it on their phone",
+        "correct": true
+      },
+      {
+        "text": "Because mobile always renders so differently it's unusable"
+      },
+      {
+        "text": "There's no need to check"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

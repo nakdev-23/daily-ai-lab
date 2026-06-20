@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 1 · Part 1",
+    "title": "What is Lovable?",
+    "body": [
+      {
+        "text": "Lovable is an "
+      },
+      {
+        "text": "AI that builds web apps from a chat prompt (prompt-to-app)",
+        "bold": true
+      },
+      {
+        "text": ". Just say what app you want and it builds the pages, buttons, forms, and logic right away. Great for people with ideas but no coding skills who want a working prototype fast."
+      }
+    ],
+    "example": "Build a to-do list app with a field to add tasks, a checkbox to mark done, and delete — clean blue design",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 1 · Part 2",
+    "title": "What is it good for?",
+    "body": [
+      {
+        "text": "It's great for "
+      },
+      {
+        "text": "landing pages, internal team apps, MVP prototypes, and small tools",
+        "bold": true
+      },
+      {
+        "text": " you want quickly. Its strength is instant results and editing in plain language. It's not a replacement for a dev team on huge, very complex systems — but it gets ideas onto the web for real in minutes."
+      }
+    ],
+    "example": "Build a landing page promoting an online course, with a headline, 3 key benefits, and a sign-up button",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does Lovable do?",
+    "options": [
+      {
+        "text": "Builds web apps from a plain-language description",
+        "correct": true
+      },
+      {
+        "text": "Edits video"
+      },
+      {
+        "text": "Composes background music"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Who benefits most from Lovable?",
+    "options": [
+      {
+        "text": "People with ideas but no coding skills who want a fast prototype",
+        "correct": true
+      },
+      {
+        "text": "Only senior engineers"
+      },
+      {
+        "text": "People who don't want a website at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What work is Lovable good for?",
+    "options": [
+      {
+        "text": "Landing pages, MVP prototypes, small tools",
+        "correct": true
+      },
+      {
+        "text": "A huge, very complex banking system"
+      },
+      {
+        "text": "Live broadcasting"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's Lovable's strength?",
+    "options": [
+      {
+        "text": "Instant results and editing in plain language",
+        "correct": true
+      },
+      {
+        "text": "You must set up a server first"
+      },
+      {
+        "text": "It only works in English"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

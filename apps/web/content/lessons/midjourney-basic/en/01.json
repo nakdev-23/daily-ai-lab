@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 1 · Part 1",
+    "title": "What is Midjourney?",
+    "body": [
+      {
+        "text": "Midjourney is a "
+      },
+      {
+        "text": "text-to-image AI",
+        "bold": true
+      },
+      {
+        "text": " famous for art-quality images. Use it for illustrations, ad visuals, concept art, mood boards, and images you can't photograph for real. Use it via the web or Discord."
+      }
+    ],
+    "example": "a cozy coffee shop interior, warm morning light, plants, wooden furniture, photorealistic",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 1 · Part 2",
+    "title": "English works better",
+    "body": [
+      {
+        "text": "Midjourney understands "
+      },
+      {
+        "text": "English",
+        "bold": true
+      },
+      {
+        "text": " most accurately. If you're more comfortable in Thai, draft in Thai and translate to English (ChatGPT can help). Concrete words and art/photography terms give sharper results than vague ones."
+      }
+    ],
+    "example": "An orange cat sleeping on books → 'an orange cat sleeping on a stack of books, soft window light, cozy'",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does Midjourney do?",
+    "options": [
+      {
+        "text": "Generates images from text",
+        "correct": true
+      },
+      {
+        "text": "Creates videos from audio"
+      },
+      {
+        "text": "Writes website code"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Which language gives the most accurate results in Midjourney?",
+    "options": [
+      {
+        "text": "English",
+        "correct": true
+      },
+      {
+        "text": "Thai only"
+      },
+      {
+        "text": "Japanese"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "If you're not comfortable in English, what should you do?",
+    "options": [
+      {
+        "text": "Draft in Thai and use ChatGPT to translate to English",
+        "correct": true
+      },
+      {
+        "text": "Type Thai and hope it understands"
+      },
+      {
+        "text": "Use only emoji"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What work is Midjourney good for?",
+    "options": [
+      {
+        "text": "Illustrations, concept art, images you can't photograph",
+        "correct": true
+      },
+      {
+        "text": "Editing long videos"
+      },
+      {
+        "text": "Recording voiceovers"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

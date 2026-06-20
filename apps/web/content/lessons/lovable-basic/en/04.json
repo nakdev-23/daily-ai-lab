@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 4 · Part 1",
+    "title": "Why you need a database",
+    "body": [
+      {
+        "text": "An app that stores data permanently (like items a user adds) needs a "
+      },
+      {
+        "text": "database",
+        "bold": true
+      },
+      {
+        "text": ". Lovable can connect to "
+      },
+      {
+        "text": "Supabase",
+        "bold": true
+      },
+      {
+        "text": ". Once connected, data isn't lost on refresh, and multiple users can see shared data."
+      }
+    ],
+    "example": "Connect Supabase so the task list is saved permanently and isn't lost when you close and reopen",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 4 · Part 2",
+    "title": "Describe the data structure you want",
+    "body": [
+      {
+        "text": "Describe the "
+      },
+      {
+        "text": "tables and fields",
+        "bold": true
+      },
+      {
+        "text": " in plain language, like 'store each task with a title, a done/not-done status, and a created date.' Lovable sets up the tables — no SQL needed."
+      }
+    ],
+    "example": "Create a table to store customers: name, email, phone, and date added",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Why does an app need a database?",
+    "options": [
+      {
+        "text": "To store data permanently and let multiple people share it",
+        "correct": true
+      },
+      {
+        "text": "To make the app load slower"
+      },
+      {
+        "text": "It's never necessary in any case"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "Which database can Lovable connect to?",
+    "options": [
+      {
+        "text": "Supabase",
+        "correct": true
+      },
+      {
+        "text": "Nothing at all"
+      },
+      {
+        "text": "Excel only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "How do you describe the data structure to Lovable?",
+    "options": [
+      {
+        "text": "Describe the tables and fields in plain language",
+        "correct": true
+      },
+      {
+        "text": "You must write all the SQL yourself"
+      },
+      {
+        "text": "Only by drawing a picture"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the result of connecting a database?",
+    "options": [
+      {
+        "text": "Data isn't lost on refresh",
+        "correct": true
+      },
+      {
+        "text": "The app always works offline"
+      },
+      {
+        "text": "Every button changes color"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

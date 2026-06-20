@@ -1,0 +1,118 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 6 · Part 1",
+    "title": "Move step by step from an image you like",
+    "body": [
+      {
+        "text": "Once you have a close image, use "
+      },
+      {
+        "text": "Vary (Subtle/Strong)",
+        "bold": true
+      },
+      {
+        "text": " to make similar versions and find the right one, and "
+      },
+      {
+        "text": "Upscale",
+        "bold": true
+      },
+      {
+        "text": " to add detail before using it. This is faster than writing a whole new prompt."
+      }
+    ],
+    "example": "You like the composition of image 3 → press V3 (Vary) for similar versions, then Upscale the best one",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 6 · Part 2",
+    "title": "Remix to change specific things",
+    "body": [
+      {
+        "text": "Turn on "
+      },
+      {
+        "text": "Remix",
+        "bold": true
+      },
+      {
+        "text": " mode to edit the prompt during a Variation — like changing the shirt color or the background while keeping the rest. Great for adjusting details without starting over."
+      }
+    ],
+    "example": "Remix: change 'red dress' to 'blue dress' while keeping the same pose and scene",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does Vary do?",
+    "options": [
+      {
+        "text": "Creates similar versions from an image you like",
+        "correct": true
+      },
+      {
+        "text": "Deletes the image"
+      },
+      {
+        "text": "Converts it to video"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "When should you Upscale?",
+    "options": [
+      {
+        "text": "When you have the right image, to add detail before using it",
+        "correct": true
+      },
+      {
+        "text": "Before writing the prompt"
+      },
+      {
+        "text": "Every time you open the program"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What does Remix help with?",
+    "options": [
+      {
+        "text": "Editing specific parts of the prompt while keeping the rest",
+        "correct": true
+      },
+      {
+        "text": "Adding sound to the image"
+      },
+      {
+        "text": "Changing the prompt's language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Why are Vary/Upscale faster than writing a new prompt?",
+    "options": [
+      {
+        "text": "Because they build on an image that's already close",
+        "correct": true
+      },
+      {
+        "text": "Because they use more credits"
+      },
+      {
+        "text": "Because they skip reviewing the result"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

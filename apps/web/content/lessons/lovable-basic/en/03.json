@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 3 · Part 1",
+    "title": "Make specific edit requests",
+    "body": [
+      {
+        "text": "State the "
+      },
+      {
+        "text": "element + the change",
+        "bold": true
+      },
+      {
+        "text": " clearly — like 'change the homepage headline to...' or 'add a search box at the top of the list.' The more you target a specific spot, the more precisely Lovable edits it without affecting the rest."
+      }
+    ],
+    "example": "Add a search box at the top of the product list that filters by name in real time",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 3 · Part 2",
+    "title": "You can roll back mistakes",
+    "body": [
+      {
+        "text": "If you don't like an edit, use version history to "
+      },
+      {
+        "text": "roll back",
+        "bold": true
+      },
+      {
+        "text": " — so you can experiment freely. Tip: change one thing at a time and check the result; it's easier to find the cause when something breaks than changing ten things at once."
+      }
+    ],
+    "example": "Roll back to the version before the background color was changed",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "How do you make a good UI edit request?",
+    "options": [
+      {
+        "text": "Specify the element and the change precisely",
+        "correct": true
+      },
+      {
+        "text": "Say vaguely 'make it nicer'"
+      },
+      {
+        "text": "Give no details"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What do you do if you don't like an edit?",
+    "options": [
+      {
+        "text": "Roll back using version history",
+        "correct": true
+      },
+      {
+        "text": "Rebuild the whole app from scratch"
+      },
+      {
+        "text": "Nothing can be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Why change one thing at a time?",
+    "options": [
+      {
+        "text": "It's easier to find the cause when something breaks",
+        "correct": true
+      },
+      {
+        "text": "Because the system forces it"
+      },
+      {
+        "text": "To use more credits"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Which edit prompt is the most specific?",
+    "options": [
+      {
+        "text": "'Add a search box at the top of the list that filters by name'",
+        "correct": true
+      },
+      {
+        "text": "'Tweak it a bit'"
+      },
+      {
+        "text": "'Change everything'"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

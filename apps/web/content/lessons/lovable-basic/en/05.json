@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 5 · Part 1",
+    "title": "Why you need login",
+    "body": [
+      {
+        "text": "If your app has each person's private data, it needs an "
+      },
+      {
+        "text": "authentication system (auth)",
+        "bold": true
+      },
+      {
+        "text": ". Lovable can add login by email or Google. With auth in place, you can correctly separate each user's data."
+      }
+    ],
+    "example": "Add Google login and let each user see only their own task list",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Lovable · Chapter 5 · Part 2",
+    "title": "Basic security",
+    "body": [
+      {
+        "text": "With multiple users, set rules for "
+      },
+      {
+        "text": "who can see/edit whose data",
+        "bold": true
+      },
+      {
+        "text": ". Tell Lovable to restrict permissions, e.g. 'users can only edit their own data.' Don't let everyone see each other's data."
+      }
+    ],
+    "example": "Set a rule: each user can only see and edit their own data",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "When does an app need a login system?",
+    "options": [
+      {
+        "text": "When it has each user's private data",
+        "correct": true
+      },
+      {
+        "text": "Every app always needs it even without private data"
+      },
+      {
+        "text": "No app ever needs it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What kinds of login can Lovable add?",
+    "options": [
+      {
+        "text": "Email or Google",
+        "correct": true
+      },
+      {
+        "text": "Fingerprint only"
+      },
+      {
+        "text": "It can't add any"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "With multiple users, what must you set?",
+    "options": [
+      {
+        "text": "Rules for who can see/edit whose data",
+        "correct": true
+      },
+      {
+        "text": "The login button's color"
+      },
+      {
+        "text": "A thousand-character password length"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's good security to set?",
+    "options": [
+      {
+        "text": "Users can only edit their own data",
+        "correct": true
+      },
+      {
+        "text": "Everyone can see and edit everyone's data"
+      },
+      {
+        "text": "Turn off login for simplicity"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

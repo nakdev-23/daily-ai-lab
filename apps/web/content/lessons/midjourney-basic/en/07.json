@@ -1,0 +1,125 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 7 · Part 1",
+    "title": "Style Reference (--sref)",
+    "body": [
+      {
+        "text": "If you want several images in the "
+      },
+      {
+        "text": "same style",
+        "bold": true
+      },
+      {
+        "text": " (like a brand image set), use "
+      },
+      {
+        "text": "--sref [image link]",
+        "bold": true
+      },
+      {
+        "text": " to lock the reference image's style, so a feed or album looks like one cohesive set. Very important for brand work."
+      }
+    ],
+    "example": "coffee cup on table --sref [brand-style image link] --ar 1:1",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 7 · Part 2",
+    "title": "Character Reference (--cref)",
+    "body": [
+      {
+        "text": "If you want the "
+      },
+      {
+        "text": "same character's appearance",
+        "bold": true
+      },
+      {
+        "text": " across many images, use "
+      },
+      {
+        "text": "--cref [character image link]",
+        "bold": true
+      },
+      {
+        "text": ". Great for keeping a brand mascot/character consistent across many scenes."
+      }
+    ],
+    "example": "the same mascot character riding a bike --cref [mascot image link]",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What does --sref control?",
+    "options": [
+      {
+        "text": "Keeping the image style consistent with a reference",
+        "correct": true
+      },
+      {
+        "text": "Aspect ratio"
+      },
+      {
+        "text": "Clip length"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "To keep the same character's look across images, what do you use?",
+    "options": [
+      {
+        "text": "--cref",
+        "correct": true
+      },
+      {
+        "text": "--ar"
+      },
+      {
+        "text": "--v"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Which work benefits most from --sref?",
+    "options": [
+      {
+        "text": "A brand image set that must look cohesive",
+        "correct": true
+      },
+      {
+        "text": "A single one-off image"
+      },
+      {
+        "text": "Translation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What is --cref good for?",
+    "options": [
+      {
+        "text": "Keeping a character/mascot consistent across many scenes",
+        "correct": true
+      },
+      {
+        "text": "Changing the background automatically"
+      },
+      {
+        "text": "Adding a watermark"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

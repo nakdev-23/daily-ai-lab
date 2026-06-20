@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 3 · Part 1",
+    "title": "subject + details + style",
+    "body": [
+      {
+        "text": "A good prompt is ordered as "
+      },
+      {
+        "text": "subject (what) + details (color, pose, scene) + style/mood + quality words",
+        "bold": true
+      },
+      {
+        "text": ", e.g. 'a woman, red dress, walking in rain, cinematic, moody, highly detailed.' Order and commas help the AI tell things apart."
+      }
+    ],
+    "example": "a samurai standing in bamboo forest, morning mist, dramatic lighting, cinematic, ultra detailed",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 3 · Part 2",
+    "title": "Medium and style words",
+    "body": [
+      {
+        "text": "You can specify a "
+      },
+      {
+        "text": "medium/technique",
+        "bold": true
+      },
+      {
+        "text": " like 'oil painting', 'watercolor', '3D render', 'photograph, 35mm', plus lighting like 'golden hour' or 'studio lighting'. These words shape the look of the image strongly."
+      }
+    ],
+    "example": "a mountain landscape, watercolor painting, soft pastel colors, dreamy, loose brush strokes",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's a good prompt structure order?",
+    "options": [
+      {
+        "text": "subject + details + style + quality words",
+        "correct": true
+      },
+      {
+        "text": "price + file size + date"
+      },
+      {
+        "text": "your name + email + phone"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What do commas (,) help with in a prompt?",
+    "options": [
+      {
+        "text": "Helping the AI tell each element apart",
+        "correct": true
+      },
+      {
+        "text": "Making the image bigger"
+      },
+      {
+        "text": "They have no effect"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Which words specify the image's 'medium/technique'?",
+    "options": [
+      {
+        "text": "'oil painting', 'watercolor', 'photograph 35mm'",
+        "correct": true
+      },
+      {
+        "text": "'--fast'"
+      },
+      {
+        "text": "'please make it nice'"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the effect of specifying lighting like 'golden hour'?",
+    "options": [
+      {
+        "text": "It clearly defines the look and mood of the image",
+        "correct": true
+      },
+      {
+        "text": "It turns it into a video"
+      },
+      {
+        "text": "It reduces credits used"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

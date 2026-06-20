@@ -1,0 +1,129 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 4 · Part 1",
+    "title": "Control aspect ratio with --ar",
+    "body": [
+      {
+        "text": "Add parameters to the end of your prompt, starting with --, like "
+      },
+      {
+        "text": "--ar 16:9",
+        "bold": true
+      },
+      {
+        "text": " (landscape), "
+      },
+      {
+        "text": "--ar 9:16",
+        "bold": true
+      },
+      {
+        "text": " (vertical, for mobile), "
+      },
+      {
+        "text": "--ar 1:1",
+        "bold": true
+      },
+      {
+        "text": " (square). Pick the one that matches where you'll use the image."
+      }
+    ],
+    "example": "a serene beach at sunset, palm trees, warm tones --ar 16:9",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 4 · Part 2",
+    "title": "Model version and stylization",
+    "body": [
+      {
+        "text": "--v",
+        "bold": true
+      },
+      {
+        "text": " selects the model version (newer versions are usually more realistic), while "
+      },
+      {
+        "text": "--stylize",
+        "bold": true
+      },
+      {
+        "text": " (or --s) controls how much artistic flair the AI adds. Low = sticks to the prompt; high = prettier but can drift from the prompt."
+      }
+    ],
+    "example": "minimalist logo, geometric, clean --v 6 --s 100",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What kind of image does --ar 9:16 give?",
+    "options": [
+      {
+        "text": "Vertical, good for mobile",
+        "correct": true
+      },
+      {
+        "text": "Landscape"
+      },
+      {
+        "text": "Square"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What do parameters start with?",
+    "options": [
+      {
+        "text": "The -- symbol",
+        "correct": true
+      },
+      {
+        "text": "The # symbol"
+      },
+      {
+        "text": "The @ symbol"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What does a high --stylize value do?",
+    "options": [
+      {
+        "text": "More artistic flair, but may drift from the prompt",
+        "correct": true
+      },
+      {
+        "text": "Always sticks exactly to the prompt"
+      },
+      {
+        "text": "Turns the image black and white"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What should you choose --ar based on?",
+    "options": [
+      {
+        "text": "Where you'll use the image (e.g. 9:16 for mobile)",
+        "correct": true
+      },
+      {
+        "text": "At random"
+      },
+      {
+        "text": "The number of words in the prompt"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

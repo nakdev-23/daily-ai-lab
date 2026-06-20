@@ -1,0 +1,97 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 5 · Part 1",
+    "title": "Use an image as a reference",
+    "body": [
+      {
+        "text": "Put an image link (or upload one) before your prompt so Midjourney references that image's composition/style. Great when you want a look close to a sample image — you can mix a reference image with a text description."
+      }
+    ],
+    "example": "[reference image link] a product photo in the same lighting style, white background",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 5 · Part 2",
+    "title": "Blend multiple images",
+    "body": [
+      {
+        "text": "You can add more than one reference image to blend ideas — e.g. image A (color tone) + image B (composition). Midjourney mixes them. Experiment with the balance to find the sweet spot."
+      }
+    ],
+    "example": "[pastel-tone image] [living-room image] cozy living room in pastel tones",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What is an image prompt?",
+    "options": [
+      {
+        "text": "Using an image as a reference so the AI follows its style/composition",
+        "correct": true
+      },
+      {
+        "text": "Turning an image into text"
+      },
+      {
+        "text": "Removing an image's background"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How many reference images can you add?",
+    "options": [
+      {
+        "text": "More than one, to blend ideas",
+        "correct": true
+      },
+      {
+        "text": "Always just one"
+      },
+      {
+        "text": "None at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "When is an image prompt useful?",
+    "options": [
+      {
+        "text": "When you want a look/style close to a sample image",
+        "correct": true
+      },
+      {
+        "text": "When you want background music"
+      },
+      {
+        "text": "When you want to write an article"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Can you mix a reference image with text?",
+    "options": [
+      {
+        "text": "Yes, use a reference image together with a text description",
+        "correct": true
+      },
+      {
+        "text": "No, you must choose one or the other"
+      },
+      {
+        "text": "Only black-and-white images"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 2 · Part 1",
+    "title": "Type /imagine followed by a prompt",
+    "body": [
+      {
+        "text": "Start generating with the "
+      },
+      {
+        "text": "/imagine",
+        "bold": true
+      },
+      {
+        "text": " command, then type your prompt after it. Midjourney gives you 4 options, then you choose "
+      },
+      {
+        "text": "U",
+        "bold": true
+      },
+      {
+        "text": " (Upscale) or "
+      },
+      {
+        "text": "V",
+        "bold": true
+      },
+      {
+        "text": " (Variation — a similar version) of the one you like."
+      }
+    ],
+    "example": "/imagine a futuristic city at night, neon lights, rain, cinematic, highly detailed",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 2 · Part 2",
+    "title": "Try and iterate",
+    "body": [
+      {
+        "text": "The first image is rarely perfect. The real workflow is "
+      },
+      {
+        "text": "try → see the result → tweak the prompt → try again",
+        "bold": true
+      },
+      {
+        "text": ". Keep words that work, drop words that throw it off, a little at a time — you don't need a perfect prompt on the first try."
+      }
+    ],
+    "example": "Image too dark → add 'bright daylight, soft lighting' and /imagine again",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "What's the command to start generating an image?",
+    "options": [
+      {
+        "text": "/imagine",
+        "correct": true
+      },
+      {
+        "text": "/create-video"
+      },
+      {
+        "text": "/sing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "How many options does Midjourney give per generation?",
+    "options": [
+      {
+        "text": "4 options",
+        "correct": true
+      },
+      {
+        "text": "1 option"
+      },
+      {
+        "text": "20 options"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "What does the U button do?",
+    "options": [
+      {
+        "text": "Upscales the selected image",
+        "correct": true
+      },
+      {
+        "text": "Deletes the image"
+      },
+      {
+        "text": "Adds audio"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "What's the real workflow with Midjourney?",
+    "options": [
+      {
+        "text": "Try, see the result, tweak the prompt, and try again a bit at a time",
+        "correct": true
+      },
+      {
+        "text": "Write a perfect prompt once and be done"
+      },
+      {
+        "text": "Keep randomizing without reading the results"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

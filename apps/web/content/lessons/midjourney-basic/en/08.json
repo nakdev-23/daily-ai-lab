@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 8 · Part 1",
+    "title": "Resolution and usage",
+    "body": [
+      {
+        "text": "Upscale to a high-enough resolution before using it — print needs higher resolution than web. Always check details the AI often gets wrong, like "
+      },
+      {
+        "text": "fingers, text, and symbols",
+        "bold": true
+      },
+      {
+        "text": ", before delivering the final work."
+      }
+    ],
+    "example": "Before using a person image in an ad → zoom in to check hands/fingers and any text in the image for glitches",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · Chapter 8 · Part 2",
+    "title": "Rights and responsibility",
+    "body": [
+      {
+        "text": "Commercial usage rights depend on your "
+      },
+      {
+        "text": "subscription plan",
+        "bold": true
+      },
+      {
+        "text": ", and don't create images imitating real brands/people in misleading ways. Use AI responsibly and check before publishing."
+      }
+    ],
+    "example": "Making a shop ad image → create your own brand character, don't copy someone else's logo/cartoon",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 4",
+    "question": "Which details does AI often get wrong, to check before use?",
+    "options": [
+      {
+        "text": "Fingers, text, symbols",
+        "correct": true
+      },
+      {
+        "text": "File size"
+      },
+      {
+        "text": "Filename"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 4",
+    "question": "What does print work need more of than web?",
+    "options": [
+      {
+        "text": "Higher resolution",
+        "correct": true
+      },
+      {
+        "text": "Smaller files"
+      },
+      {
+        "text": "Fewer colors"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 4",
+    "question": "Commercial usage rights for images depend on what?",
+    "options": [
+      {
+        "text": "Your subscription plan",
+        "correct": true
+      },
+      {
+        "text": "The image size"
+      },
+      {
+        "text": "How many images you generated"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 4",
+    "question": "Which is responsible use of AI?",
+    "options": [
+      {
+        "text": "Create your own brand character, don't imitate others misleadingly",
+        "correct": true
+      },
+      {
+        "text": "Copy a famous brand's logo"
+      },
+      {
+        "text": "Make fake images of real people"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 12 · Part 1",
+    "title": "Future of Claude",
+    "body": [
+      {
+        "text": "The clear direction: "
+      },
+      {
+        "text": "agents that work continuously for longer, deeper multimodal abilities, and broader tool connections via MCP",
+        "bold": true
+      },
+      {
+        "text": " — the durable skills are framing the task clearly, breaking work into parts, and reviewing the results, which apply to every model to come."
+      }
+    ],
+    "example": "\"The people who are good with AI today aren't the ones who memorize the most features, but the ones who communicate goals clearly and review work well\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 12 · Part 2",
+    "title": "Claude Other course wrap-up",
+    "body": [
+      {
+        "text": "You've toured every angle: "
+      },
+      {
+        "text": "education, creative writing, research, law, and health",
+        "bold": true
+      },
+      {
+        "text": " — the same core across every field: AI extends human ability, but the responsibility and the final decision are ours."
+      }
+    ],
+    "example": "\"Capstone: pick the field closest to you, and apply a technique from this course to one real piece of work this week\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the most durable AI skill?",
+    "options": [
+      {
+        "text": "Framing the task clearly, breaking work into parts, reviewing results well",
+        "correct": true
+      },
+      {
+        "text": "Memorizing every feature name"
+      },
+      {
+        "text": "Typing fast"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the shared core of using AI across every field?",
+    "options": [
+      {
+        "text": "AI extends ability, but the final decision is ours",
+        "correct": true
+      },
+      {
+        "text": "AI can decide everything for us"
+      },
+      {
+        "text": "Never use AI for important work"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the clear future direction of Claude?",
+    "options": [
+      {
+        "text": "Agents that work longer and connect to broader tools",
+        "correct": true
+      },
+      {
+        "text": "Going back to ever-shorter answers"
+      },
+      {
+        "text": "Development has stopped"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you view the future of using Claude?",
+    "options": [
+      {
+        "text": "Use it in place of all thinking"
+      },
+      {
+        "text": "Stop using it"
+      },
+      {
+        "text": "Keep learning and use it responsibly",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the key lesson from this course?",
+    "options": [
+      {
+        "text": "AI is useless"
+      },
+      {
+        "text": "AI is a powerful assistant that must be used with judgment",
+        "correct": true
+      },
+      {
+        "text": "AI is always right"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

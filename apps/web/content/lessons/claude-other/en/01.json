@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 1 · Part 1",
+    "title": "Claude for students",
+    "body": [
+      {
+        "text": "Claude acts as "
+      },
+      {
+        "text": "a personal tutor with endless patience",
+        "bold": true
+      },
+      {
+        "text": " — ask as many times as you want, adjust the level of explanation, and get fresh examples until it clicks."
+      }
+    ],
+    "example": "\"Explain photosynthesis simply, then give an everyday example — I'm just starting grade 10\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 1 · Part 2",
+    "title": "Tutor mode — two-way learning",
+    "body": [
+      {
+        "text": "Instead of just reading the answer, tell Claude to "
+      },
+      {
+        "text": "teach with the Socratic method — ask questions back",
+        "bold": true
+      },
+      {
+        "text": " — this helps you understand more deeply and remember longer than reading alone."
+      }
+    ],
+    "example": "\"Help me learn calculus by asking me questions to think first; don't give the answer directly until I've tried\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Why is Claude well-suited as a tutor?",
+    "options": [
+      {
+        "text": "Claude has past exams for every subject"
+      },
+      {
+        "text": "Claude is patient, can re-explain unlimited times, and adapts to the learner",
+        "correct": true
+      },
+      {
+        "text": "Claude is connected to real teachers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is the Socratic method of teaching?",
+    "options": [
+      {
+        "text": "Giving the answer directly"
+      },
+      {
+        "text": "Asking questions back so the learner works out the answer themselves",
+        "correct": true
+      },
+      {
+        "text": "Having them read a book first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What makes Claude teach at the right level for the learner?",
+    "options": [
+      {
+        "text": "Tell it your level and background knowledge in the prompt",
+        "correct": true
+      },
+      {
+        "text": "Ask many times"
+      },
+      {
+        "text": "Use only Claude Pro"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should a student use Claude effectively?",
+    "options": [
+      {
+        "text": "Have it do all the homework for you"
+      },
+      {
+        "text": "Copy without reading"
+      },
+      {
+        "text": "Have it explain and ask review questions, not copy the answers",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does two-way tutor mode mean?",
+    "options": [
+      {
+        "text": "No asking allowed"
+      },
+      {
+        "text": "Back-and-forth Q&A until the learner truly understands",
+        "correct": true
+      },
+      {
+        "text": "Just reading aloud"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

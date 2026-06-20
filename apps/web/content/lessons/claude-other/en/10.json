@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 10 · Part 1",
+    "title": "Legal & compliance",
+    "body": [
+      {
+        "text": "Legal work the AI can genuinely help with: "
+      },
+      {
+        "text": "summarize contracts, flag unusual terms, compare document versions, and explain legal jargon in plain language",
+        "bold": true
+      },
+      {
+        "text": " — good for preparing before you see a lawyer, not for replacing one."
+      }
+    ],
+    "example": "\"Read this office lease, flag the unusually unfavorable terms, and the questions I should ask the landlord before signing\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 10 · Part 2",
+    "title": "A clear boundary",
+    "body": [
+      {
+        "text": "The rule for using AI with the law: "
+      },
+      {
+        "text": "use it to understand and prepare questions, but real legal decisions must go through a professional",
+        "bold": true
+      },
+      {
+        "text": " — laws differ by country and change over time, and mistakes are too costly to risk."
+      }
+    ],
+    "example": "\"Use AI to condense a 30-page contract to one page of key points, then discuss it efficiently with your lawyer — saving on billable hours\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does the AI help with legal documents?",
+    "options": [
+      {
+        "text": "Summarizing contracts and flagging unusual terms",
+        "correct": true
+      },
+      {
+        "text": "Judging cases instead of the court"
+      },
+      {
+        "text": "Signing contracts for us"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Who should real legal decisions go through?",
+    "options": [
+      {
+        "text": "A real lawyer or legal expert",
+        "correct": true
+      },
+      {
+        "text": "The AI can decide directly"
+      },
+      {
+        "text": "A friend who's watched legal dramas"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of using AI before seeing a lawyer?",
+    "options": [
+      {
+        "text": "Understand the document and prepare questions, making the lawyer meeting worth the time",
+        "correct": true
+      },
+      {
+        "text": "You never need to hire a lawyer again"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should you be careful about using AI for legal/compliance work?",
+    "options": [
+      {
+        "text": "Use it instead of a lawyer"
+      },
+      {
+        "text": "No need to verify"
+      },
+      {
+        "text": "Treat it as preliminary info that an expert must verify",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the AI's clear boundary in legal matters?",
+    "options": [
+      {
+        "text": "No boundary"
+      },
+      {
+        "text": "Helps draft and explain, but isn't formal legal advice",
+        "correct": true
+      },
+      {
+        "text": "Replaces a court ruling"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

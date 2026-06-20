@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 2 · Part 1",
+    "title": "Tutor mode",
+    "body": [
+      {
+        "text": "Claude is a good tutor when you tell it to "
+      },
+      {
+        "text": "teach Socratically: ask leading questions, hint step by step, don't reveal the answer right away",
+        "bold": true
+      },
+      {
+        "text": " — figuring it out yourself is what makes it stick, unlike copying the answer."
+      }
+    ],
+    "example": "\"Be my grade-11 physics tutor: I'll send a problem — don't give the answer directly, ask leading questions step by step until I find it myself\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 2 · Part 2",
+    "title": "Adapt the teaching to the learner",
+    "body": [
+      {
+        "text": "Tell it your level and the style you learn best with: "
+      },
+      {
+        "text": "'explain like I'm 12' or 'use football examples'",
+        "bold": true
+      },
+      {
+        "text": " — and ask for more practice on the points you still get wrong; the AI will tune the difficulty to fit you."
+      }
+    ],
+    "example": "\"I get supply-demand now, but I'm still confused about elasticity — re-explain with a bubble-tea-shop example, then give me 3 practice problems\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Socratic teaching?",
+    "options": [
+      {
+        "text": "Leading questions to make you think, without revealing the answer right away",
+        "correct": true
+      },
+      {
+        "text": "Giving away every answer as fast as possible"
+      },
+      {
+        "text": "Reading the textbook aloud"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why is figuring it out yourself better than copying the answer?",
+    "options": [
+      {
+        "text": "It makes you actually remember and understand",
+        "correct": true
+      },
+      {
+        "text": "It's just slower, with no upside"
+      },
+      {
+        "text": "It lowers your scores"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should you tell the AI so it teaches at the right level?",
+    "options": [
+      {
+        "text": "Your knowledge level and the kind of examples you find easy",
+        "correct": true
+      },
+      {
+        "text": "Just the subject name"
+      },
+      {
+        "text": "Your GPA"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get Claude to teach at your level, what should you do?",
+    "options": [
+      {
+        "text": "Always have it teach at the hardest level"
+      },
+      {
+        "text": "Tell it nothing"
+      },
+      {
+        "text": "State your background and have it adapt to your understanding",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of adapting the teaching to the learner?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Easier to understand and you don't get lost",
+        "correct": true
+      },
+      {
+        "text": "It causes confusion"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 5 · Part 1",
+    "title": "Dialogue & characters",
+    "body": [
+      {
+        "text": "Characters come alive when they have a "
+      },
+      {
+        "text": "character sheet: goal, wound, fear, and a distinctive way of speaking",
+        "bold": true
+      },
+      {
+        "text": " — build it with the AI and use it as a reference throughout the story, so the dialogue never breaks character."
+      }
+    ],
+    "example": "\"Create a character sheet for the protagonist: a 50-year-old rural doctor who lost his son, speaks little, falls back on 'we'll see how it goes' when dodging anything sad\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 5 · Part 2",
+    "title": "Test dialogue by role-playing",
+    "body": [
+      {
+        "text": "A fun and effective technique: "
+      },
+      {
+        "text": "have the AI play the character and talk to it",
+        "bold": true
+      },
+      {
+        "text": " — ask hard questions and see if the answers fit; it helps you find the character's true voice before writing for real."
+      }
+    ],
+    "example": "\"Play this doctor — I'm a reporter asking about his son — answer the way this character really would\"",
+    "mascot": "mascot-hello"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What should a character sheet include?",
+    "options": [
+      {
+        "text": "Goal, emotional wound, fear, and a distinctive way of speaking",
+        "correct": true
+      },
+      {
+        "text": "Just name and age"
+      },
+      {
+        "text": "Appearance only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How do you test a character's voice?",
+    "options": [
+      {
+        "text": "Have the AI play the character and talk to it",
+        "correct": true
+      },
+      {
+        "text": "Read it aloud yourself"
+      },
+      {
+        "text": "It can't be tested"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does a character sheet help with in a long story?",
+    "options": [
+      {
+        "text": "Dialogue stays consistent and in character",
+        "correct": true
+      },
+      {
+        "text": "It makes the story shorter"
+      },
+      {
+        "text": "It doesn't help"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To test a character's dialogue for realism, what should you do?",
+    "options": [
+      {
+        "text": "Write it yourself without testing"
+      },
+      {
+        "text": "Skip it"
+      },
+      {
+        "text": "Have Claude play the character and try a conversation",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does good dialogue and character design help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Characters get a distinctive, believable voice",
+        "correct": true
+      },
+      {
+        "text": "Everyone speaks the same"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

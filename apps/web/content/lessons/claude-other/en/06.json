@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 6 · Part 1",
+    "title": "World building",
+    "body": [
+      {
+        "text": "Make a fantasy/sci-fi world feel real by having the AI help "
+      },
+      {
+        "text": "trace the chain of consequences of the rules you set",
+        "bold": true
+      },
+      {
+        "text": " — e.g. 'if magic costs years of your lifespan, what would this world's economy, religion, and laws look like?'"
+      }
+    ],
+    "example": "\"A world where it rains only once a year: help me think through the effects on architecture, occupations, festivals, and political conflict\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 6 · Part 2",
+    "title": "A world bible keeps the world from breaking",
+    "body": [
+      {
+        "text": "Keep the world's rules in a "
+      },
+      {
+        "text": "world bible and have the AI run a consistency check",
+        "bold": true
+      },
+      {
+        "text": " — as the story grows, it helps catch things like 'chapter 12 violates the magic rule set in chapter 2'."
+      }
+    ],
+    "example": "\"Here's the world bible and a draft of a new chapter — check whether anything conflicts with the world's rules\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does the AI help world building best?",
+    "options": [
+      {
+        "text": "Tracing the chain of consequences of the rules you set",
+        "correct": true
+      },
+      {
+        "text": "Copying the world from a famous movie"
+      },
+      {
+        "text": "Just generating city names at random"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is a world bible?",
+    "options": [
+      {
+        "text": "A document collecting the story world's rules and information",
+        "correct": true
+      },
+      {
+        "text": "A religious scripture"
+      },
+      {
+        "text": "A map only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does a consistency check help with?",
+    "options": [
+      {
+        "text": "Catching where the story conflicts with the world's set rules",
+        "correct": true
+      },
+      {
+        "text": "Counting words"
+      },
+      {
+        "text": "Translating languages"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should world building have to keep the world from contradicting itself?",
+    "options": [
+      {
+        "text": "Just remember it all in your head"
+      },
+      {
+        "text": "No rules needed"
+      },
+      {
+        "text": "A world bible collecting the world's rules and details",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you use Claude to help with world building?",
+    "options": [
+      {
+        "text": "It doesn't help"
+      },
+      {
+        "text": "Help expand details and check consistency",
+        "correct": true
+      },
+      {
+        "text": "Build the whole world for us without checking"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

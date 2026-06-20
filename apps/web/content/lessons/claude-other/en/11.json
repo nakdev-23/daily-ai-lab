@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 11 · Part 1",
+    "title": "Claude for healthcare",
+    "body": [
+      {
+        "text": "In health, the AI helps with "
+      },
+      {
+        "text": "understanding: explaining lab results in plain language, preparing questions before a doctor's visit, summarizing health research",
+        "bold": true
+      },
+      {
+        "text": " — medical staff can use it to help draft documents and summarize cases, but diagnosis is the doctor's job."
+      }
+    ],
+    "example": "\"My blood test shows HbA1c 6.1 — what does that mean, and what should I ask the doctor at my next appointment?\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 11 · Part 2",
+    "title": "The line you must not cross",
+    "body": [
+      {
+        "text": "The same principle as law, but stricter: "
+      },
+      {
+        "text": "the AI can give knowledge, but never use it in place of a diagnosis or to delay seeing a doctor when you have symptoms",
+        "bold": true
+      },
+      {
+        "text": " — an emergency means the hospital, not a chatbot."
+      }
+    ],
+    "example": "\"Fine: 'Explain what type 2 diabetes is' / Not fine: 'Chest pain radiating to my left arm, what medicine should I take?' (go to the hospital immediately!)\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's an appropriate way the AI helps with health?",
+    "options": [
+      {
+        "text": "Explaining lab results and preparing questions before a doctor's visit",
+        "correct": true
+      },
+      {
+        "text": "Diagnosing illness instead of the doctor"
+      },
+      {
+        "text": "Prescribing medicine"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "If you have severe chest pain, what should you do?",
+    "options": [
+      {
+        "text": "Go to the hospital immediately",
+        "correct": true
+      },
+      {
+        "text": "Ask the AI first"
+      },
+      {
+        "text": "Wait and watch the symptoms for 3 days"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Whose job is diagnosing illness?",
+    "options": [
+      {
+        "text": "A doctor",
+        "correct": true
+      },
+      {
+        "text": "The AI"
+      },
+      {
+        "text": "A health forum"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the line you must not cross using AI for healthcare?",
+    "options": [
+      {
+        "text": "Use it to prescribe instead of the doctor"
+      },
+      {
+        "text": "Trust every recommendation"
+      },
+      {
+        "text": "Don't use it in place of a doctor's diagnosis or treatment",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the AI's appropriate role in healthcare?",
+    "options": [
+      {
+        "text": "No boundary"
+      },
+      {
+        "text": "Provide general information and help organize documents, under expert oversight",
+        "correct": true
+      },
+      {
+        "text": "Treat patients instead of doctors"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

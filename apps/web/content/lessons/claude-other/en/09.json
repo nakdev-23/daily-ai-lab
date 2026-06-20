@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 9 · Part 1",
+    "title": "Citation & bibliography",
+    "body": [
+      {
+        "text": "The AI helps with the tedious citation work: "
+      },
+      {
+        "text": "convert reference lists between formats (APA, MLA, Chicago, Vancouver)",
+        "bold": true
+      },
+      {
+        "text": " and check the consistency of the whole bibliography."
+      }
+    ],
+    "example": "\"Convert these 20 references from APA 7 to Vancouver, ordered by the sequence they're cited in the text\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 9 · Part 2",
+    "title": "A trap to watch out for",
+    "body": [
+      {
+        "text": "The most important caution: "
+      },
+      {
+        "text": "don't have the AI 'find' citations for you — it may invent references that don't exist (hallucinated citations)",
+        "bold": true
+      },
+      {
+        "text": ". Use the AI only to format references you actually have; for finding sources, use Google Scholar or a real database."
+      }
+    ],
+    "example": "\"Fine: 'Format this entry in APA' / Risky: 'Find 10 papers about X to cite' (you may get fakes)\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does the AI safely help with citations?",
+    "options": [
+      {
+        "text": "Formatting references you actually have",
+        "correct": true
+      },
+      {
+        "text": "Generating a brand-new reference list for you"
+      },
+      {
+        "text": "It can't help at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is a hallucinated citation?",
+    "options": [
+      {
+        "text": "A reference the AI invents but that doesn't actually exist",
+        "correct": true
+      },
+      {
+        "text": "A reference that's too old"
+      },
+      {
+        "text": "A foreign-language reference"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Where should you find real sources?",
+    "options": [
+      {
+        "text": "Google Scholar or a real academic database",
+        "correct": true
+      },
+      {
+        "text": "Have the AI make them up"
+      },
+      {
+        "text": "Social media"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the trap of AI citations to watch out for?",
+    "options": [
+      {
+        "text": "Citations are always correct"
+      },
+      {
+        "text": "No need to check"
+      },
+      {
+        "text": "The AI may invent fake sources; you must check every time",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should you do with a reference list the AI gives you?",
+    "options": [
+      {
+        "text": "Delete it"
+      },
+      {
+        "text": "Verify each one actually exists and is correct",
+        "correct": true
+      },
+      {
+        "text": "Use it immediately"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

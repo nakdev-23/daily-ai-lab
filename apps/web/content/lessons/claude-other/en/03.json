@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 3 · Part 1",
+    "title": "Summarizing and reviewing lessons",
+    "body": [
+      {
+        "text": "The most effective review technique with AI: "
+      },
+      {
+        "text": "active recall — have the AI quiz you on what you studied, instead of re-reading",
+        "bold": true
+      },
+      {
+        "text": " — upload your slides or notes and have it create questions, flashcards, or a mock exam."
+      }
+    ],
+    "example": "\"From this chapter's slides, create 10 questions, ask one at a time, give the answer with an explanation after I respond, and keep the ones I get wrong to ask again\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 3 · Part 2",
+    "title": "The Feynman technique with AI",
+    "body": [
+      {
+        "text": "A way to prove you truly understand: "
+      },
+      {
+        "text": "explain the topic to the AI in your own words, then have it catch where you're still misunderstanding",
+        "bold": true
+      },
+      {
+        "text": " — if you can't explain it simply, you don't understand it well enough yet."
+      }
+    ],
+    "example": "\"I'll explain photosynthesis as I understand it; listen and point out what's wrong or missing: '...'\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is active recall?",
+    "options": [
+      {
+        "text": "Testing yourself with questions, instead of re-reading",
+        "correct": true
+      },
+      {
+        "text": "Reading the book 10 times over"
+      },
+      {
+        "text": "Highlighting every line"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How do you use the Feynman technique with AI?",
+    "options": [
+      {
+        "text": "Explain it to the AI, then have it catch where you're confused",
+        "correct": true
+      },
+      {
+        "text": "Have the AI explain it only"
+      },
+      {
+        "text": "Memorize it word for word"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What should you do with questions you got wrong in a quiz?",
+    "options": [
+      {
+        "text": "Have the AI keep them and re-ask until you get them right",
+        "correct": true
+      },
+      {
+        "text": "Skip them"
+      },
+      {
+        "text": "Stop studying that subject"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you do the Feynman technique with AI?",
+    "options": [
+      {
+        "text": "Memorize only"
+      },
+      {
+        "text": "Skip review"
+      },
+      {
+        "text": "Explain the topic in simple language and have the AI find what you don't get yet",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does summarizing and reviewing with AI help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Checks your understanding and helps you remember more accurately",
+        "correct": true
+      },
+      {
+        "text": "Makes you forget faster"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

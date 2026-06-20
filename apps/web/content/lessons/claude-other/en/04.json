@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 4 · Part 1",
+    "title": "Novels, short stories, poetry",
+    "body": [
+      {
+        "text": "Claude is a good creative-writing thought partner: "
+      },
+      {
+        "text": "brainstorm plots, develop the storyline, or co-write by trading sections",
+        "bold": true
+      },
+      {
+        "text": " — state the genre, tone, and inspiration; the clearer the direction, the more distinctive and less generic the work."
+      }
+    ],
+    "example": "\"Help me develop a magical-realism short story set in a Thai floating market, tone lonely but warm — propose 3 different plots\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 4 · Part 2",
+    "title": "AI as editor, not ghostwriter",
+    "body": [
+      {
+        "text": "What the AI helps with best in writing: "
+      },
+      {
+        "text": "checking pacing, character consistency, and the points where a reader might drop off",
+        "bold": true
+      },
+      {
+        "text": " — the story's voice should be yours; use AI to polish, not to replace."
+      }
+    ],
+    "example": "\"Read this chapter 3 — does the protagonist talk differently than in the first two chapters, and where does the pacing get slow enough that a reader might put it down?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What should you tell the AI for help with creative writing?",
+    "options": [
+      {
+        "text": "The genre, tone, and inspiration",
+        "correct": true
+      },
+      {
+        "text": "Just 'write me a novel'"
+      },
+      {
+        "text": "The page count only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the right role for AI in writing?",
+    "options": [
+      {
+        "text": "An editor that helps polish; the story's voice stays yours",
+        "correct": true
+      },
+      {
+        "text": "Write the whole book and put your name on it"
+      },
+      {
+        "text": "Just check spelling"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does the AI check well in a manuscript?",
+    "options": [
+      {
+        "text": "Pacing and character consistency",
+        "correct": true
+      },
+      {
+        "text": "Future sales"
+      },
+      {
+        "text": "The author's handwriting"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the appropriate way to use AI in creative writing?",
+    "options": [
+      {
+        "text": "Have it write for you and pass it off as yours"
+      },
+      {
+        "text": "Copy someone else's work"
+      },
+      {
+        "text": "Use it as an editor to help polish, not write the whole thing",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does 'AI as editor' mean?",
+    "options": [
+      {
+        "text": "Delete the work"
+      },
+      {
+        "text": "Help with critique, refine the prose, and suggest options",
+        "correct": true
+      },
+      {
+        "text": "Decide everything for you"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

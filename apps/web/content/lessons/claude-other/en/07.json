@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 7 · Part 1",
+    "title": "Claude for research",
+    "body": [
+      {
+        "text": "Researchers can use Claude to speed up several steps: "
+      },
+      {
+        "text": "summarize papers, compare methodologies across several, and help design research questions",
+        "bold": true
+      },
+      {
+        "text": " — with long context, it reads a whole paper and you can probe any part."
+      }
+    ],
+    "example": "\"Read this paper and summarize: the research question, the method, the main results, the limitations, and the gap a follow-up could build on\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 7 · Part 2",
+    "title": "Limits you need to know",
+    "body": [
+      {
+        "text": "The iron rule of academic work: "
+      },
+      {
+        "text": "the AI can help read, think, and draft, but facts and citations must always be checked against the original",
+        "bold": true
+      },
+      {
+        "text": " — the AI may misremember a paper's details, and most universities have AI-use policies you must follow."
+      }
+    ],
+    "example": "\"Use AI to summarize 20 papers to filter which are relevant, then actually read only the 5 that pass — saving time without the risk\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which research steps can Claude help with?",
+    "options": [
+      {
+        "text": "Summarizing papers, comparing methodology, and designing research questions",
+        "correct": true
+      },
+      {
+        "text": "Running the experiments for you"
+      },
+      {
+        "text": "Publishing on your behalf"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What must you do with facts and citations from the AI?",
+    "options": [
+      {
+        "text": "Always check them against the original",
+        "correct": true
+      },
+      {
+        "text": "Use them as-is without checking"
+      },
+      {
+        "text": "Delete them all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the smart way to use AI to filter papers?",
+    "options": [
+      {
+        "text": "Have the AI pre-filter, then actually read only the ones that pass",
+        "correct": true
+      },
+      {
+        "text": "Read nothing and trust the AI completely"
+      },
+      {
+        "text": "Read every one yourself as before"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Using Claude for research, what limit must you know?",
+    "options": [
+      {
+        "text": "It can be trusted 100%"
+      },
+      {
+        "text": "No citations needed"
+      },
+      {
+        "text": "The AI may be inaccurate; you must verify and cite the real source",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is the AI's scope in research?",
+    "options": [
+      {
+        "text": "No limits"
+      },
+      {
+        "text": "Helps search and summarize, but doesn't replace the researcher's verification",
+        "correct": true
+      },
+      {
+        "text": "Does all the research for you"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

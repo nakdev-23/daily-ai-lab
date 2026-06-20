@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 8 · Part 1",
+    "title": "Literature review",
+    "body": [
+      {
+        "text": "A literature review goes much faster when the AI "
+      },
+      {
+        "text": "groups the research by theme, finds the consensus, and the points where researchers disagree",
+        "bold": true
+      },
+      {
+        "text": " — upload several papers and have it synthesize an overview of the field."
+      }
+    ],
+    "example": "\"From these 8 papers, group them by the approach used, summarize what the findings agree on, and what's still being debated\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Other · Chapter 8 · Part 2",
+    "title": "Finding the research gap",
+    "body": [
+      {
+        "text": "The most powerful question of a literature review: "
+      },
+      {
+        "text": "'what has no one studied yet' — have the AI help point out the research gap",
+        "bold": true
+      },
+      {
+        "text": " from the limitations the papers admit themselves and the questions they leave open."
+      }
+    ],
+    "example": "\"From the limitations of every paper I've read, propose 3 research gaps suitable for a master's thesis\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does the AI help with a literature review?",
+    "options": [
+      {
+        "text": "Groups by theme, finds consensus and disagreements",
+        "correct": true
+      },
+      {
+        "text": "Writes the whole thesis"
+      },
+      {
+        "text": "Picks the topic for you"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Where do you find a research gap?",
+    "options": [
+      {
+        "text": "In the limitations the papers admit and the questions they leave open",
+        "correct": true
+      },
+      {
+        "text": "By guessing at random"
+      },
+      {
+        "text": "By copying someone else's topic"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is the result of a good literature review?",
+    "options": [
+      {
+        "text": "An overview of the field and gaps to build on",
+        "correct": true
+      },
+      {
+        "text": "Just a long list of papers"
+      },
+      {
+        "text": "A summary of each one with no connections"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should a literature review with AI focus on?",
+    "options": [
+      {
+        "text": "Copying and pasting the abstracts"
+      },
+      {
+        "text": "Skipping the reading"
+      },
+      {
+        "text": "Finding research gaps and synthesizing the themes",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does finding a research gap mean?",
+    "options": [
+      {
+        "text": "It's unrelated to research"
+      },
+      {
+        "text": "A point no one has studied yet or that's still unclear",
+        "correct": true
+      },
+      {
+        "text": "A point that's already fully studied"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

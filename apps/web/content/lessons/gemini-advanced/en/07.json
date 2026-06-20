@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 7 · Part 1",
+    "title": "Imagen in Gemini",
+    "body": [
+      {
+        "text": "Imagen is Google's image model that "
+      },
+      {
+        "text": "excels at realism and rendering text within images",
+        "bold": true
+      },
+      {
+        "text": " — call it through Gemini, describe in Thai or English, and set the style and aspect ratio."
+      }
+    ],
+    "example": "\"Create a poster for 'Bangkok Coffee Fest' with clear text on the sign, an evening outdoor market scene, warm tone\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 7 · Part 2",
+    "title": "Pro-level image prompts",
+    "body": [
+      {
+        "text": "An effective structure: "
+      },
+      {
+        "text": "subject + context/scene + art style + lighting + camera angle",
+        "bold": true
+      },
+      {
+        "text": " — adding photography terms like 'golden hour', 'close-up', 'shallow depth of field' gives you a lot of control over the result."
+      }
+    ],
+    "example": "\"A bowl of boat noodles, close-up, rising steam, golden-hour light, food photography style, blurred background\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does Imagen excel at?",
+    "options": [
+      {
+        "text": "Realism and rendering text within images",
+        "correct": true
+      },
+      {
+        "text": "Creating music"
+      },
+      {
+        "text": "Translation"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What structure should a good image prompt have?",
+    "options": [
+      {
+        "text": "Subject, scene, style, lighting, camera angle",
+        "correct": true
+      },
+      {
+        "text": "Just one short word"
+      },
+      {
+        "text": "Numbers only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does 'golden hour' in an image prompt help with?",
+    "options": [
+      {
+        "text": "Controlling the lighting to feel warm, like late afternoon",
+        "correct": true
+      },
+      {
+        "text": "Making the whole image gold"
+      },
+      {
+        "text": "No effect"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get high-quality images with Imagen, how should you write the prompt?",
+    "options": [
+      {
+        "text": "Clearly state style, lighting, composition, and viewpoint",
+        "correct": true
+      },
+      {
+        "text": "Type 'a nice picture'"
+      },
+      {
+        "text": "Don't describe anything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is Imagen in Gemini used for?",
+    "options": [
+      {
+        "text": "Creating images from descriptions",
+        "correct": true
+      },
+      {
+        "text": "Editing audio"
+      },
+      {
+        "text": "Writing code"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

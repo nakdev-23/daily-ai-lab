@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 2 · Part 1",
+    "title": "Research Reports",
+    "body": [
+      {
+        "text": "Gemini's Deep Research "
+      },
+      {
+        "text": "searches dozens of sources and writes them up into a report with citations",
+        "bold": true
+      },
+      {
+        "text": " — set the task and let it work for several minutes, getting a multi-page, structured report like an analyst wrote it."
+      }
+    ],
+    "example": "\"Research the EV market in Southeast Asia: market size, key players, each country's government policy, and the 3-year outlook\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 2 · Part 2",
+    "title": "Set the research task for a good report",
+    "body": [
+      {
+        "text": "A good task specifies the "
+      },
+      {
+        "text": "scope (region/time period), the angle of interest, and the report format",
+        "bold": true
+      },
+      {
+        "text": " — and review the research plan Gemini proposes before it starts, so you can steer it from the outset."
+      }
+    ],
+    "example": "\"Before starting, check the proposed research plan: if it's missing the Chinese-competitor angle, add it before confirming\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is Deep Research different from asking normally?",
+    "options": [
+      {
+        "text": "It searches dozens of sources and writes them into a report with citations",
+        "correct": true
+      },
+      {
+        "text": "It answers more briefly"
+      },
+      {
+        "text": "No difference"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good research task specify?",
+    "options": [
+      {
+        "text": "Scope, the angle of interest, and the report format",
+        "correct": true
+      },
+      {
+        "text": "Just one word"
+      },
+      {
+        "text": "A budget"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Before Deep Research starts working, what can you do?",
+    "options": [
+      {
+        "text": "Review and adjust the search plan it proposes",
+        "correct": true
+      },
+      {
+        "text": "Nothing at all"
+      },
+      {
+        "text": "You must search yourself first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get an on-target research report, how should you set the task?",
+    "options": [
+      {
+        "text": "Clearly state the scope, questions, and desired output",
+        "correct": true
+      },
+      {
+        "text": "Type just a broad topic"
+      },
+      {
+        "text": "Say nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What is Research Reports good for?",
+    "options": [
+      {
+        "text": "Gathering and summarizing in-depth info from many sources",
+        "correct": true
+      },
+      {
+        "text": "Writing poems"
+      },
+      {
+        "text": "Playing games"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

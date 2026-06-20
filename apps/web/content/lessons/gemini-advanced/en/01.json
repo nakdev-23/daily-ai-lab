@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 1 · Part 1",
+    "title": "What is Deep Research?",
+    "body": [
+      {
+        "text": "Deep Research is Gemini "
+      },
+      {
+        "text": "automatically searching and synthesizing hundreds of sources",
+        "bold": true
+      },
+      {
+        "text": " — instead of Googling one query at a time, one command gives you a complete report with sources."
+      }
+    ],
+    "example": "\"Do Deep Research on EV market trends in ASEAN for 2025–2030 and summarize it as a report\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 1 · Part 2",
+    "title": "Deep Research vs normal search",
+    "body": [
+      {
+        "text": "Normal search gives a list of websites, but Deep Research "
+      },
+      {
+        "text": "reads, analyzes, and synthesizes the information for you",
+        "bold": true
+      },
+      {
+        "text": " — saving hours, great for research, reports, or decisions that need complete information."
+      }
+    ],
+    "example": "\"Research and compare the 5 most popular Python frameworks for data science in 2025\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Deep Research in Gemini?",
+    "options": [
+      {
+        "text": "Normal Google searching"
+      },
+      {
+        "text": "Gemini searching and synthesizing hundreds of sources into a report automatically",
+        "correct": true
+      },
+      {
+        "text": "Searching YouTube"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is Deep Research good for?",
+    "options": [
+      {
+        "text": "Asking what the weather is today"
+      },
+      {
+        "text": "Research, business reports, and analysis needing many sources",
+        "correct": true
+      },
+      {
+        "text": "Translating a short sentence"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main advantage of Deep Research?",
+    "options": [
+      {
+        "text": "It's free of charge"
+      },
+      {
+        "text": "Saves hours, producing a report with sources automatically",
+        "correct": true
+      },
+      {
+        "text": "It works offline"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To get an automatic summary report from many sources, what should you use?",
+    "options": [
+      {
+        "text": "Deep Research",
+        "correct": true
+      },
+      {
+        "text": "Search each site yourself"
+      },
+      {
+        "text": "Turn off the internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How is Deep Research different from normal search?",
+    "options": [
+      {
+        "text": "It reads many sources and synthesizes a report",
+        "correct": true
+      },
+      {
+        "text": "Faster because it reads nothing"
+      },
+      {
+        "text": "No difference"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

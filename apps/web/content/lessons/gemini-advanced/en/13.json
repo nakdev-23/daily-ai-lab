@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 13 · Part 1",
+    "title": "Gemini in Workspace, advanced",
+    "body": [
+      {
+        "text": "Gemini is deeply embedded in Workspace: "
+      },
+      {
+        "text": "drafting in Gmail/Docs, creating slides in Slides, analyzing in Sheets, summarizing meetings in Meet",
+        "bold": true
+      },
+      {
+        "text": " — its strength is working with data in your account without copying back and forth."
+      }
+    ],
+    "example": "\"In Sheets: 'Create a column grading customers A/B/C from purchase amount and frequency' — Gemini writes the formula itself\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 13 · Part 2",
+    "title": "Cross-app in one command",
+    "body": [
+      {
+        "text": "The real power is connecting across apps: "
+      },
+      {
+        "text": "reference a Drive file from Gmail, pull Docs data to make slides, summarize emails into a table",
+        "bold": true
+      },
+      {
+        "text": " — use @ to reference a specific file right in the prompt."
+      }
+    ],
+    "example": "\"In Slides: 'Create an 8-slide deck from @Q3Report in Drive, formal tone, with charts from the report's numbers'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Gemini in Workspace do?",
+    "options": [
+      {
+        "text": "Draft documents, create slides, analyze sheets, summarize meetings",
+        "correct": true
+      },
+      {
+        "text": "Only answer chats"
+      },
+      {
+        "text": "Change the background color"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's Gemini's strength in Workspace?",
+    "options": [
+      {
+        "text": "Working with data in your account without copying back and forth",
+        "correct": true
+      },
+      {
+        "text": "Free for everyone"
+      },
+      {
+        "text": "Works offline"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What does the @ symbol do in a Workspace prompt?",
+    "options": [
+      {
+        "text": "References a specific file in Drive",
+        "correct": true
+      },
+      {
+        "text": "Emails a person"
+      },
+      {
+        "text": "Inserts an emoji"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To do cross-app work (e.g. pull from Gmail to summarize in Docs), what should you use?",
+    "options": [
+      {
+        "text": "Gemini in Workspace",
+        "correct": true
+      },
+      {
+        "text": "Switch apps and type yourself"
+      },
+      {
+        "text": "Send a fax"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of cross-app commands?",
+    "options": [
+      {
+        "text": "Fewer steps, faster continuous work",
+        "correct": true
+      },
+      {
+        "text": "Makes things slower"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

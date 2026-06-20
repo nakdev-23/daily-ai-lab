@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 14 · Part 1",
+    "title": "Smart Features",
+    "body": [
+      {
+        "text": "Smart features that work quietly: "
+      },
+      {
+        "text": "Smart Reply/Compose in Gmail, Smart Fill in Sheets, automatic summaries in Docs",
+        "bold": true
+      },
+      {
+        "text": " — small things that together save hours per week."
+      }
+    ],
+    "example": "\"Smart Fill: type the split first/last name in the first 2 rows, and Sheets sees the pattern and fills the rest of the column\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 14 · Part 2",
+    "title": "Configure them to fit you",
+    "body": [
+      {
+        "text": "Smart features are adjustable: "
+      },
+      {
+        "text": "turn each one on/off in Settings, in both Gmail and Workspace",
+        "bold": true
+      },
+      {
+        "text": " — some people like full help; for some work (like sensitive emails) you should turn it off and type every word. Choose what fits the context."
+      }
+    ],
+    "example": "\"The sales team enables Smart Compose fully / the legal team turns it off for contract emails, for word-level precision\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does Smart Fill in Sheets do?",
+    "options": [
+      {
+        "text": "Sees the pattern from examples and fills in the rest",
+        "correct": true
+      },
+      {
+        "text": "Fills the table with color"
+      },
+      {
+        "text": "Removes duplicate data"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Can smart features be turned off?",
+    "options": [
+      {
+        "text": "Yes, adjust each feature in Settings",
+        "correct": true
+      },
+      {
+        "text": "They can't be turned off"
+      },
+      {
+        "text": "You must delete the account to turn them off"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "For what work might you turn off Smart Compose?",
+    "options": [
+      {
+        "text": "Sensitive emails where every word must be precise",
+        "correct": true
+      },
+      {
+        "text": "A lunch-invite email"
+      },
+      {
+        "text": "No work needs it off"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To tune smart features to fit your privacy needs, what should you do?",
+    "options": [
+      {
+        "text": "Turn features on/off as needed in settings",
+        "correct": true
+      },
+      {
+        "text": "Turn everything on without looking"
+      },
+      {
+        "text": "Delete the account"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What are Smart Features?",
+    "options": [
+      {
+        "text": "AI features that assist work within Google services",
+        "correct": true
+      },
+      {
+        "text": "A mobile game"
+      },
+      {
+        "text": "An antivirus program"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

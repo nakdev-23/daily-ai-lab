@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 9 · Part 1",
+    "title": "Music AI Sandbox",
+    "body": [
+      {
+        "text": "Google is experimenting with AI music tools: "
+      },
+      {
+        "text": "create melodies, loops, and tracks from a description or a hum",
+        "bold": true
+      },
+      {
+        "text": " — designed as a tool to help musicians find ideas and sketch faster, not to replace songwriting."
+      }
+    ],
+    "example": "\"Create an 80 BPM lo-fi drum loop with a rainy-night mood, as a base idea for a new song\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 9 · Part 2",
+    "title": "AI in the creative process",
+    "body": [
+      {
+        "text": "Same lesson as images and video: "
+      },
+      {
+        "text": "AI is great at the start (ideas, first drafts), humans are great at the finish (taste, polish)",
+        "bold": true
+      },
+      {
+        "text": " — and respect copyright: be careful about asking it to imitate a specific artist."
+      }
+    ],
+    "example": "\"Use AI to generate 10 melody ideas → the musician picks 1 and develops it further by hand\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is the Music AI Sandbox designed for?",
+    "options": [
+      {
+        "text": "Helping musicians find ideas and sketch faster",
+        "correct": true
+      },
+      {
+        "text": "Replacing all musicians"
+      },
+      {
+        "text": "Listening to music for free"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Where is AI great in the creative process?",
+    "options": [
+      {
+        "text": "At the start: ideas and first drafts",
+        "correct": true
+      },
+      {
+        "text": "Final taste judgments"
+      },
+      {
+        "text": "Equally at every stage"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the copyright caution?",
+    "options": [
+      {
+        "text": "Avoid asking it to imitate a specific artist",
+        "correct": true
+      },
+      {
+        "text": "There's no caution"
+      },
+      {
+        "text": "Never use AI for music at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you view AI in the music creative process?",
+    "options": [
+      {
+        "text": "As a tool to help think/experiment, not to replace all your thinking",
+        "correct": true
+      },
+      {
+        "text": "Let AI do everything with no checks"
+      },
+      {
+        "text": "Never use it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "The Music AI Sandbox is good for what?",
+    "options": [
+      {
+        "text": "Experimenting with music ideas using AI",
+        "correct": true
+      },
+      {
+        "text": "Typing documents"
+      },
+      {
+        "text": "Sending email"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

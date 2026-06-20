@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 3 · Part 1",
+    "title": "NotebookLM",
+    "body": [
+      {
+        "text": "NotebookLM is a research assistant that "
+      },
+      {
+        "text": "answers only from the sources you upload (no guessing beyond the documents)",
+        "bold": true
+      },
+      {
+        "text": " — add PDFs, Google Docs, links, or YouTube, then ask, summarize, or create an Audio Overview to listen to like a podcast."
+      }
+    ],
+    "example": "\"Upload 3 annual reports + 5 news articles, then ask: how did the company's strategy change over 3 years, and from which sources?\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 3 · Part 2",
+    "title": "How it differs from regular Gemini",
+    "body": [
+      {
+        "text": "Key difference: "
+      },
+      {
+        "text": "Gemini answers from general knowledge + the web / NotebookLM answers from your documents and points to the citation",
+        "bold": true
+      },
+      {
+        "text": " — for work where accuracy is tied to specific documents, like company manuals or textbooks, use NotebookLM."
+      }
+    ],
+    "example": "\"Asking about the company's leave policy → NotebookLM loaded with the employee handbook answers and points to the page, no web guessing\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does NotebookLM answer from?",
+    "options": [
+      {
+        "text": "Only the sources you upload, with citation locations",
+        "correct": true
+      },
+      {
+        "text": "General knowledge across the whole internet"
+      },
+      {
+        "text": "Random answers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is an Audio Overview?",
+    "options": [
+      {
+        "text": "A summary of the documents as podcast-style audio",
+        "correct": true
+      },
+      {
+        "text": "Background music for reading"
+      },
+      {
+        "text": "A notification sound"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which work suits NotebookLM more than regular Gemini?",
+    "options": [
+      {
+        "text": "Asking from specific documents, like a company manual",
+        "correct": true
+      },
+      {
+        "text": "Asking today's news"
+      },
+      {
+        "text": "Generating images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To do Q&A grounded only in your own documents, what should you use?",
+    "options": [
+      {
+        "text": "NotebookLM",
+        "correct": true
+      },
+      {
+        "text": "General Google search"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How does NotebookLM differ from regular Gemini?",
+    "options": [
+      {
+        "text": "It cites only the sources/documents you upload",
+        "correct": true
+      },
+      {
+        "text": "It needs no documents"
+      },
+      {
+        "text": "It can't use PDFs"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

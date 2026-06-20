@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 5 · Part 1",
+    "title": "1M Context Window",
+    "body": [
+      {
+        "text": "Gemini takes context at the "
+      },
+      {
+        "text": "scale of a million tokens — a whole book, an entire code repo, or hours of video",
+        "bold": true
+      },
+      {
+        "text": " in one conversation, with no need to chop documents into pieces like before."
+      }
+    ],
+    "example": "\"Upload an 800-page manual and ask: 'Does the return policy in Chapter 12 conflict with the FAQ at the end anywhere?'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 5 · Part 2",
+    "title": "Get value from a large context",
+    "body": [
+      {
+        "text": "Work unlocked by a large context: "
+      },
+      {
+        "text": "finding inconsistencies across long documents, analyzing an entire codebase, summarizing long meeting videos",
+        "bold": true
+      },
+      {
+        "text": " — but accuracy can be lower in the middle than at the start/end, so for key questions point to the location, like 'focus mainly on Chapter 12.'"
+      }
+    ],
+    "example": "\"Analyze this whole repo: what's the architecture, and where are patterns used inconsistently?\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What does a 1M context window mean?",
+    "options": [
+      {
+        "text": "It can take book-scale input in one conversation",
+        "correct": true
+      },
+      {
+        "text": "It can answer 1 million words"
+      },
+      {
+        "text": "It has 1 million users"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which work benefits most from a large context?",
+    "options": [
+      {
+        "text": "Finding inconsistencies across long documents",
+        "correct": true
+      },
+      {
+        "text": "Asking short general questions"
+      },
+      {
+        "text": "Greetings"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a technique to improve accuracy when a document is very long?",
+    "options": [
+      {
+        "text": "Point to the location to focus on, like which chapter is key",
+        "correct": true
+      },
+      {
+        "text": "Ask as broadly as possible"
+      },
+      {
+        "text": "Delete half the document"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "You have hundreds of pages of documents to analyze together. Which strength helps?",
+    "options": [
+      {
+        "text": "A large context window (up to ~1M)",
+        "correct": true
+      },
+      {
+        "text": "Cut it down to one page"
+      },
+      {
+        "text": "Retype everything"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How do you get value from a large context?",
+    "options": [
+      {
+        "text": "Include all the relevant documents, then ask cross-file questions",
+        "correct": true
+      },
+      {
+        "text": "Add as much irrelevant data as possible"
+      },
+      {
+        "text": "Include nothing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

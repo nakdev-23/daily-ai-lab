@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 11 · Part 1",
+    "title": "Google AI Studio",
+    "body": [
+      {
+        "text": "AI Studio is a "
+      },
+      {
+        "text": "free playground for experimenting with prompts and model settings before writing real code",
+        "bold": true
+      },
+      {
+        "text": " — adjust system instructions and temperature, test on real files, then click 'Get code' for ready-to-use code."
+      }
+    ],
+    "example": "\"Experiment with a receipt-extraction prompt in AI Studio until it's accurate, then export the Python code into your app\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 11 · Part 2",
+    "title": "Prototype fast with AI Studio",
+    "body": [
+      {
+        "text": "A time-saving workflow: "
+      },
+      {
+        "text": "experiment in Studio (no code) → once it's good, export → write the code once",
+        "bold": true
+      },
+      {
+        "text": " — better than editing code back and forth every time you want to change the prompt."
+      }
+    ],
+    "example": "\"Try 5 versions of a system prompt in Studio in 10 minutes vs editing code + re-running 5 times over an hour\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Google AI Studio?",
+    "options": [
+      {
+        "text": "A playground to experiment with prompts and models before coding",
+        "correct": true
+      },
+      {
+        "text": "A video editing program"
+      },
+      {
+        "text": "A photo studio"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does the 'Get code' button in AI Studio do?",
+    "options": [
+      {
+        "text": "Turns your experimented settings into ready-to-use code",
+        "correct": true
+      },
+      {
+        "text": "Downloads the model"
+      },
+      {
+        "text": "Buys credits"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Why experiment with prompts in Studio before coding?",
+    "options": [
+      {
+        "text": "Adjusting prompts is faster than editing code over many rounds",
+        "correct": true
+      },
+      {
+        "text": "Because you can't write code at all"
+      },
+      {
+        "text": "No reason"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To prototype prompts and test models quickly, what should you use?",
+    "options": [
+      {
+        "text": "Google AI Studio",
+        "correct": true
+      },
+      {
+        "text": "Excel"
+      },
+      {
+        "text": "Gmail"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does AI Studio help with?",
+    "options": [
+      {
+        "text": "Experimenting with prompts/parameters before moving to the API",
+        "correct": true
+      },
+      {
+        "text": "Editing video"
+      },
+      {
+        "text": "Playing games"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

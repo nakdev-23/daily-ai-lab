@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 8 · Part 1",
+    "title": "Veo for video",
+    "body": [
+      {
+        "text": "Veo is Google's "
+      },
+      {
+        "text": "text-to-video model: describe a scene and get a video clip",
+        "bold": true
+      },
+      {
+        "text": " — set the camera movement, atmosphere, and style. Great for b-roll, social content, and prototyping ad ideas."
+      }
+    ],
+    "example": "\"A drone clip flying over rice terraces in the morning, light mist, the sun just rising, camera moving slowly forward\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 8 · Part 2",
+    "title": "Write video prompts",
+    "body": [
+      {
+        "text": "Video needs more thought than a 2D still: "
+      },
+      {
+        "text": "the subject's motion and the camera's movement (pan, zoom, tracking)",
+        "bold": true
+      },
+      {
+        "text": " — specify both clearly and the clip looks intentional, not a still image moving on its own."
+      }
+    ],
+    "example": "\"A cat walking on an old city wall, camera tracking from the side, leaves drifting past the lens, indie-film tone\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Veo?",
+    "options": [
+      {
+        "text": "A text-to-video model",
+        "correct": true
+      },
+      {
+        "text": "A video editing app"
+      },
+      {
+        "text": "A camera"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does a video prompt need to consider beyond a still image?",
+    "options": [
+      {
+        "text": "The subject's and camera's movement",
+        "correct": true
+      },
+      {
+        "text": "The number of pixels"
+      },
+      {
+        "text": "No difference"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is Veo good for?",
+    "options": [
+      {
+        "text": "B-roll, social content, and ad prototypes",
+        "correct": true
+      },
+      {
+        "text": "Live sports broadcasting"
+      },
+      {
+        "text": "Video-call meetings"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To create a short video from a description, what should you use?",
+    "options": [
+      {
+        "text": "Veo",
+        "correct": true
+      },
+      {
+        "text": "Imagen"
+      },
+      {
+        "text": "NotebookLM"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "To write a good video prompt, what should you specify?",
+    "options": [
+      {
+        "text": "The scene, motion, tone, and desired length",
+        "correct": true
+      },
+      {
+        "text": "Just the word 'video'"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 15 · Part 1",
+    "title": "Gemini Enterprise",
+    "body": [
+      {
+        "text": "At the enterprise level, Google offers "
+      },
+      {
+        "text": "Gemini for Workspace enterprise edition: data not used for training, admin controls, audit, and compliance",
+        "bold": true
+      },
+      {
+        "text": " — including grounding with internal company data for answers based on real company context."
+      }
+    ],
+    "example": "\"An employee asks 'what's our WFH policy?' — Gemini answers from the internal HR documents, not general knowledge\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 15 · Part 2",
+    "title": "Gemini Advanced course wrap-up",
+    "body": [
+      {
+        "text": "The full ecosystem: "
+      },
+      {
+        "text": "Deep Research, NotebookLM, Thinking, creative (Imagen/Veo), API, AI Studio, Vertex, and Workspace",
+        "bold": true
+      },
+      {
+        "text": " — Gemini's strength is integrating with the Google tools you already use; start there to see results fastest."
+      }
+    ],
+    "example": "\"Capstone: pick one routine task in Gmail/Docs/Sheets and use Gemini to do it faster this week\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How does Gemini Enterprise handle organization data?",
+    "options": [
+      {
+        "text": "Not used for training, with controls and audit",
+        "correct": true
+      },
+      {
+        "text": "Shares data publicly"
+      },
+      {
+        "text": "Sells data to competitors"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What does grounding with internal data mean?",
+    "options": [
+      {
+        "text": "Answering based on the organization's real documents",
+        "correct": true
+      },
+      {
+        "text": "Answering from rumors"
+      },
+      {
+        "text": "Not answering at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's Gemini's main strength vs other AIs?",
+    "options": [
+      {
+        "text": "Integrating with the Google tools people already use",
+        "correct": true
+      },
+      {
+        "text": "Being the only AI in the world"
+      },
+      {
+        "text": "No strength"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How do you get the most from advanced Gemini?",
+    "options": [
+      {
+        "text": "Pick the tool (Deep Research/NotebookLM/API) that fits the task",
+        "correct": true
+      },
+      {
+        "text": "Use the same tool for everything"
+      },
+      {
+        "text": "Don't verify the results"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should you always do when using AI to research information?",
+    "options": [
+      {
+        "text": "Verify the sources before using it",
+        "correct": true
+      },
+      {
+        "text": "Believe everything immediately"
+      },
+      {
+        "text": "Don't cite anything"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 12 · Part 1",
+    "title": "Vertex AI",
+    "body": [
+      {
+        "text": "Vertex AI is "
+      },
+      {
+        "text": "Google Cloud's enterprise AI platform",
+        "bold": true
+      },
+      {
+        "text": " — use Gemini with enterprise features: organization-grade security, MLOps, grounding with company data, and SLAs."
+      }
+    ],
+    "example": "\"A bank runs Gemini through Vertex AI because it needs data residency, audit logs, and an SLA that AI Studio doesn't have\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 12 · Part 2",
+    "title": "AI Studio vs Vertex AI",
+    "body": [
+      {
+        "text": "Simple dividing line: "
+      },
+      {
+        "text": "getting started/prototyping → AI Studio · an organization's production system → Vertex AI",
+        "bold": true
+      },
+      {
+        "text": " — the code moves over easily, so starting in Studio and growing into Vertex as the system gets serious is the normal path."
+      }
+    ],
+    "example": "\"A startup builds an MVP on AI Studio for free → wins enterprise customers → moves to Vertex AI for compliance\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is Vertex AI?",
+    "options": [
+      {
+        "text": "Google Cloud's enterprise AI platform",
+        "correct": true
+      },
+      {
+        "text": "An online game"
+      },
+      {
+        "text": "A small model"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which feature is a highlight of Vertex AI?",
+    "options": [
+      {
+        "text": "Enterprise security, MLOps, and SLAs",
+        "correct": true
+      },
+      {
+        "text": "Free unlimited use"
+      },
+      {
+        "text": "Stickers"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "When should you move from AI Studio to Vertex AI?",
+    "options": [
+      {
+        "text": "When the system enters enterprise production",
+        "correct": true
+      },
+      {
+        "text": "Always from day one"
+      },
+      {
+        "text": "Never move"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For enterprise work needing scale and security management, what should you use?",
+    "options": [
+      {
+        "text": "Vertex AI",
+        "correct": true
+      },
+      {
+        "text": "AI Studio only"
+      },
+      {
+        "text": "No option"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How is AI Studio different from Vertex AI?",
+    "options": [
+      {
+        "text": "AI Studio is for quick experimenting; Vertex is for enterprise production",
+        "correct": true
+      },
+      {
+        "text": "They're identical"
+      },
+      {
+        "text": "Vertex is for casual play"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

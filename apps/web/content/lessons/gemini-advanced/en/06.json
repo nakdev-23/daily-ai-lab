@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 6 · Part 1",
+    "title": "Gemini Flash Thinking",
+    "body": [
+      {
+        "text": "The Flash family is "
+      },
+      {
+        "text": "fast and cheap, while Flash Thinking adds reasoning while staying quick",
+        "bold": true
+      },
+      {
+        "text": " — a sweet spot for everyday work that needs both speed and logic, like helping answer customers or reviewing lots of work."
+      }
+    ],
+    "example": "\"Triaging 200 customer emails a day: Flash Thinking sorts by type + urgency quickly and with reasoning\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 6 · Part 2",
+    "title": "Choose the model for the job",
+    "body": [
+      {
+        "text": "How to choose within the Gemini family: "
+      },
+      {
+        "text": "Flash → fast, high-volume work · Flash Thinking → fast work that needs logic · Pro → the deepest, most complex work",
+        "bold": true
+      },
+      {
+        "text": " — start with the smaller model and move up when quality isn't enough, saving time and cost."
+      }
+    ],
+    "example": "\"Daily news summary → Flash / contract analysis → Pro / automatic form-logic checks → Flash Thinking\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What's the standout of the Flash model?",
+    "options": [
+      {
+        "text": "Fast and low cost, good for high-volume work",
+        "correct": true
+      },
+      {
+        "text": "The smartest in the family"
+      },
+      {
+        "text": "It creates videos"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is Flash Thinking good for?",
+    "options": [
+      {
+        "text": "Fast work that also needs logic",
+        "correct": true
+      },
+      {
+        "text": "Hours-long deep research"
+      },
+      {
+        "text": "Playing games"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the cost-saving model-choice strategy?",
+    "options": [
+      {
+        "text": "Start with the smaller model and move up when quality isn't enough",
+        "correct": true
+      },
+      {
+        "text": "Use the biggest model for everything"
+      },
+      {
+        "text": "Choose at random"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For reasoning work that needs speed, which model should you pick?",
+    "options": [
+      {
+        "text": "Gemini Flash Thinking",
+        "correct": true
+      },
+      {
+        "text": "The slowest model"
+      },
+      {
+        "text": "Any model"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the principle for choosing a model by task?",
+    "options": [
+      {
+        "text": "Balance speed, quality, and the task's complexity",
+        "correct": true
+      },
+      {
+        "text": "Choose by the coolest name"
+      },
+      {
+        "text": "Random"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

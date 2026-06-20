@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 10 · Part 1",
+    "title": "Gemini API",
+    "body": [
+      {
+        "text": "Developers call Gemini in their apps via the "
+      },
+      {
+        "text": "Gemini API: it supports text, images, audio, video, and function calling",
+        "bold": true
+      },
+      {
+        "text": " — with a free tier to try and SDKs in several languages (Python, JS, Go)."
+      }
+    ],
+    "example": "\"A restaurant app sends a receipt photo to the Gemini API to extract the items and prices as JSON automatically\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 10 · Part 2",
+    "title": "The structure of a call",
+    "body": [
+      {
+        "text": "The core of using the API: "
+      },
+      {
+        "text": "choose the model → send contents (text/files) → set the config (temperature, max tokens, response format)",
+        "bold": true
+      },
+      {
+        "text": " — you can set the response to a JSON schema, so the result is ready to use in your code immediately."
+      }
+    ],
+    "example": "\"config: { responseMimeType: 'application/json', responseSchema: {...} } — always get JSON matching the schema, no text parsing needed\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What input does the Gemini API support?",
+    "options": [
+      {
+        "text": "Text, images, audio, and video",
+        "correct": true
+      },
+      {
+        "text": "Text only"
+      },
+      {
+        "text": "Images only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of setting the response to a JSON schema?",
+    "options": [
+      {
+        "text": "The result is usable in code immediately, no parsing needed",
+        "correct": true
+      },
+      {
+        "text": "It answers faster"
+      },
+      {
+        "text": "It's free forever"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Do you have to pay before trying the Gemini API?",
+    "options": [
+      {
+        "text": "No, there's a free tier to try",
+        "correct": true
+      },
+      {
+        "text": "You must pay annually first"
+      },
+      {
+        "text": "You must be a company"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To have your app use Gemini's capabilities, what should you use?",
+    "options": [
+      {
+        "text": "The Gemini API",
+        "correct": true
+      },
+      {
+        "text": "Copy answers by hand"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you store an API key securely?",
+    "options": [
+      {
+        "text": "Keep it server-side / in a secret variable, not in public code",
+        "correct": true
+      },
+      {
+        "text": "Put it in the web page code for all to see"
+      },
+      {
+        "text": "Post it on social media"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

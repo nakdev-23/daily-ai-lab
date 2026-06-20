@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 4 · Part 1",
+    "title": "Thinking Mode",
+    "body": [
+      {
+        "text": "Gemini's Thinking mode lets the model "
+      },
+      {
+        "text": "take multiple steps to think before answering",
+        "bold": true
+      },
+      {
+        "text": " — great for math problems, complex code, and planning. You can see the thinking process to check the reasoning."
+      }
+    ],
+    "example": "\"A problem to optimize a 15-stop delivery route → Thinking mode works through the constraints step by step before concluding the best route\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advanced · Chapter 4 · Part 2",
+    "title": "Use it at the right time",
+    "body": [
+      {
+        "text": "Same principle as Claude's Extended Thinking: "
+      },
+      {
+        "text": "multi-step reasoning work → turn on / general work → turn off for speed",
+        "bold": true
+      },
+      {
+        "text": " — notice whether the problem needs 'planning or working through conditions'; if so, that's a sign to turn it on."
+      }
+    ],
+    "example": "\"On: 'Plan the Q3 marketing budget under these 5 constraints' / Off: 'Translate this sentence to English'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What kind of problem is Thinking Mode good for?",
+    "options": [
+      {
+        "text": "Problems needing multi-step reasoning",
+        "correct": true
+      },
+      {
+        "text": "General greetings"
+      },
+      {
+        "text": "Translating one word"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of seeing the thinking process?",
+    "options": [
+      {
+        "text": "Checking the reasoning is on track before trusting the answer",
+        "correct": true
+      },
+      {
+        "text": "Casual reading"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What signals you should turn on Thinking?",
+    "options": [
+      {
+        "text": "The problem requires planning or working through many conditions",
+        "correct": true
+      },
+      {
+        "text": "You want the fastest answer"
+      },
+      {
+        "text": "A short question"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "For work needing complex multi-step reasoning, what should you do?",
+    "options": [
+      {
+        "text": "Turn on Thinking Mode",
+        "correct": true
+      },
+      {
+        "text": "Ask for the shortest answer"
+      },
+      {
+        "text": "Ask repeatedly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "When should you use Thinking Mode?",
+    "options": [
+      {
+        "text": "When the problem needs multi-step analysis/planning",
+        "correct": true
+      },
+      {
+        "text": "Every time, even for easy questions"
+      },
+      {
+        "text": "Never"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

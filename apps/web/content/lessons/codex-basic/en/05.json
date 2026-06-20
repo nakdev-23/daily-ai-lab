@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 5 · Part 1",
+    "title": "Branch & Sandbox",
+    "body": [
+      {
+        "text": "Codex doesn't edit the main branch directly — every task works on a "
+      },
+      {
+        "text": "new branch in a sandbox separate from your real code",
+        "bold": true
+      },
+      {
+        "text": ", just like a good developer always cuts a feature branch first."
+      }
+    ],
+    "example": "\"Task 'add dark mode' → Codex creates a branch 'add-dark-mode', finishes the work, then proposes a diff to review\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 5 · Part 2",
+    "title": "How safe is the sandbox?",
+    "body": [
+      {
+        "text": "In the sandbox, code can run and tests can run, but it has "
+      },
+      {
+        "text": "no access to production systems or real secrets",
+        "bold": true
+      },
+      {
+        "text": " — even if the AI makes a mistake, the damage is limited to the sandbox."
+      }
+    ],
+    "example": "\"The AI ran tests and they broke in the sandbox? No problem — the real code on main is unaffected\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which branch does Codex edit code on?",
+    "options": [
+      {
+        "text": "main directly"
+      },
+      {
+        "text": "A new branch created separately for that task",
+        "correct": true
+      },
+      {
+        "text": "No branch at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "If the AI's code breaks tests in the sandbox, what happens?",
+    "options": [
+      {
+        "text": "Production crashes immediately"
+      },
+      {
+        "text": "The real code is unaffected — damage stays in the sandbox",
+        "correct": true
+      },
+      {
+        "text": "The repo gets deleted"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What can the sandbox NOT access?",
+    "options": [
+      {
+        "text": "Code in the repo"
+      },
+      {
+        "text": "Production systems and real secrets",
+        "correct": true
+      },
+      {
+        "text": "Test files"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Why is the Codex sandbox safe?",
+    "options": [
+      {
+        "text": "Because it does nothing"
+      },
+      {
+        "text": "It's not safe at all"
+      },
+      {
+        "text": "It runs separately from the real system — you can experiment without affecting production",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you use Branch and Sandbox well?",
+    "options": [
+      {
+        "text": "Skip testing"
+      },
+      {
+        "text": "Experiment with changes before merging into the main code",
+        "correct": true
+      },
+      {
+        "text": "Edit production directly"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

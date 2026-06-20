@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 8 · Part 1",
+    "title": "Write tests automatically",
+    "body": [
+      {
+        "text": "Something Codex is great at: "
+      },
+      {
+        "text": "writing tests for code that doesn't have any",
+        "bold": true
+      },
+      {
+        "text": " — point it at the target file or function, and it analyzes the edge cases and writes covering unit tests."
+      }
+    ],
+    "example": "\"Write unit tests for the calculateDiscount function in lib/pricing.ts, covering: 0% discount, over 100%, negative price\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 8 · Part 2",
+    "title": "Good tests test behavior",
+    "body": [
+      {
+        "text": "Valuable tests "
+      },
+      {
+        "text": "test the behavior the user sees, not the code's internals",
+        "bold": true
+      },
+      {
+        "text": " — tell the AI what the code 'should do,' then review whether the tests cover the important cases, especially edge cases."
+      }
+    ],
+    "example": "\"This function should return the price after discount, never negative, rounded to 2 decimals — write tests for this behavior\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "To have Codex write tests, what should you tell it?",
+    "options": [
+      {
+        "text": "The target file and the edge cases you're worried about",
+        "correct": true
+      },
+      {
+        "text": "Just the words 'write tests'"
+      },
+      {
+        "text": "The number of lines you want"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good test test?",
+    "options": [
+      {
+        "text": "The behavior the code should have",
+        "correct": true
+      },
+      {
+        "text": "Internal variable names"
+      },
+      {
+        "text": "Typing speed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Which is an edge case for a discount-calculation function?",
+    "options": [
+      {
+        "text": "A normal 10% discount"
+      },
+      {
+        "text": "A discount over 100% or a negative price",
+        "correct": true
+      },
+      {
+        "text": "A long product name"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should a good test test?",
+    "options": [
+      {
+        "text": "The number of lines"
+      },
+      {
+        "text": "The code's color"
+      },
+      {
+        "text": "The code's behavior, that it works as expected",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does having Codex write tests automatically help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Catching bugs fast and being confident when changing code",
+        "correct": true
+      },
+      {
+        "text": "Always making the code slower"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

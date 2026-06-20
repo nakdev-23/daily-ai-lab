@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 1 · Part 1",
+    "title": "What is OpenAI Codex?",
+    "body": [
+      {
+        "text": "Codex is an "
+      },
+      {
+        "text": "AI agent for writing and editing code automatically",
+        "bold": true
+      },
+      {
+        "text": " — it works in a separate sandbox, runs real code, tests it, and hands you the result to review before merging."
+      }
+    ],
+    "example": "\"Add unit tests for the calculateDiscount() function in cart.js, covering all edge cases\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 1 · Part 2",
+    "title": "How is Codex different from ChatGPT?",
+    "body": [
+      {
+        "text": "ChatGPT suggests code, but Codex "
+      },
+      {
+        "text": "runs real code in a separate environment (sandbox)",
+        "bold": true
+      },
+      {
+        "text": " — with GitHub integration, running tests, fixing bugs, and creating PRs automatically."
+      }
+    ],
+    "example": "\"Run the test suite and fix every failing test in src/utils/\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is Codex different from ChatGPT?",
+    "options": [
+      {
+        "text": "Codex is cheaper"
+      },
+      {
+        "text": "Codex runs real code in a sandbox and works autonomously",
+        "correct": true
+      },
+      {
+        "text": "Codex is better at Thai"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is Codex best suited for?",
+    "options": [
+      {
+        "text": "Writing Thai articles"
+      },
+      {
+        "text": "Fixing bugs, writing tests, and refactoring code",
+        "correct": true
+      },
+      {
+        "text": "Generating AI images"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "After Codex finishes, what's the next step?",
+    "options": [
+      {
+        "text": "Nothing — it merges automatically"
+      },
+      {
+        "text": "Review the result and approve or reject the changes",
+        "correct": true
+      },
+      {
+        "text": "Restart the server"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How is OpenAI Codex different from ChatGPT?",
+    "options": [
+      {
+        "text": "They're identical"
+      },
+      {
+        "text": "It's just for casual chat"
+      },
+      {
+        "text": "It focuses on working with code and running tasks in a real environment",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What kind of work is Codex good for?",
+    "options": [
+      {
+        "text": "Composing songs"
+      },
+      {
+        "text": "Writing, fixing, and testing code",
+        "correct": true
+      },
+      {
+        "text": "Drawing pictures"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 9 · Part 1",
+    "title": "Refactor code",
+    "body": [
+      {
+        "text": "Refactoring means "
+      },
+      {
+        "text": "improving the code's structure without changing its behavior",
+        "bold": true
+      },
+      {
+        "text": " — Codex can break up giant functions, reduce duplication, and move to more modern patterns across the whole project."
+      }
+    ],
+    "example": "\"The handleSubmit function is 200 lines long — break it into readable smaller functions, with exactly the same behavior\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 9 · Part 2",
+    "title": "Refactor safely",
+    "body": [
+      {
+        "text": "Golden rule: "
+      },
+      {
+        "text": "have tests before refactoring — passing tests both before and after is proof the behavior didn't change",
+        "bold": true
+      },
+      {
+        "text": ". If there are no tests yet, have Codex write them first, then refactor."
+      }
+    ],
+    "example": "\"Step 1: write tests covering the current handleSubmit / Step 2: refactor / Step 3: run tests to confirm they all still pass\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is correct refactoring?",
+    "options": [
+      {
+        "text": "Improving code structure without changing behavior",
+        "correct": true
+      },
+      {
+        "text": "Adding a new feature"
+      },
+      {
+        "text": "Cutting code as short as possible regardless of the result"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the proof that a refactor didn't change behavior?",
+    "options": [
+      {
+        "text": "Tests pass both before and after the refactor",
+        "correct": true
+      },
+      {
+        "text": "The code is shorter"
+      },
+      {
+        "text": "The AI says it didn't change"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If the code to refactor has no tests, what should you do?",
+    "options": [
+      {
+        "text": "Refactor right away and risk it"
+      },
+      {
+        "text": "Write tests covering the current behavior first, then refactor",
+        "correct": true
+      },
+      {
+        "text": "Never refactor"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you refactor safely?",
+    "options": [
+      {
+        "text": "Tear it all down at once without testing"
+      },
+      {
+        "text": "Don't test"
+      },
+      {
+        "text": "Have tests covering it and change a little at a time with checks",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does refactoring mean?",
+    "options": [
+      {
+        "text": "Deleting the project"
+      },
+      {
+        "text": "Improving code structure while keeping the same behavior",
+        "correct": true
+      },
+      {
+        "text": "Adding a new feature"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

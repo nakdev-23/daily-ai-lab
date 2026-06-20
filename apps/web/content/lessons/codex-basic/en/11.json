@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 11 · Part 1",
+    "title": "GitHub Integration",
+    "body": [
+      {
+        "text": "Codex is tightly tied to GitHub: it "
+      },
+      {
+        "text": "opens a Pull Request automatically with a description of the changes",
+        "bold": true
+      },
+      {
+        "text": " — the team reviews through GitHub as usual, using the workflow they already know."
+      }
+    ],
+    "example": "\"Task done → Codex opens a PR 'Add loading state to checkout button' with a description of what changed and why\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 11 · Part 2",
+    "title": "Codex in code review",
+    "body": [
+      {
+        "text": "Besides writing code, Codex can also "
+      },
+      {
+        "text": "respond to PR comments and make fixes per the review",
+        "bold": true
+      },
+      {
+        "text": " — when a reviewer comments asking for a change, you can have Codex make the fix without pulling the code to your machine."
+      }
+    ],
+    "example": "\"Reviewer: 'this should handle null too' → tell Codex: 'make the reviewer's requested change and push to the same PR'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "When a task finishes, what can Codex do on GitHub?",
+    "options": [
+      {
+        "text": "Open a Pull Request with a description",
+        "correct": true
+      },
+      {
+        "text": "Delete the repository"
+      },
+      {
+        "text": "Change the repo's owner"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Does the team need to change its code-review workflow to use Codex?",
+    "options": [
+      {
+        "text": "No — review the PR on GitHub as usual",
+        "correct": true
+      },
+      {
+        "text": "You must stop using GitHub"
+      },
+      {
+        "text": "You must review only via email"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "A reviewer asks for a change on the PR Codex opened — what can you do?",
+    "options": [
+      {
+        "text": "Tell Codex to make the change per the comment and push to the same PR",
+        "correct": true
+      },
+      {
+        "text": "You must always close the PR and start a new task"
+      },
+      {
+        "text": "It can't be changed at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What can Codex help with during code review?",
+    "options": [
+      {
+        "text": "Delete the repo"
+      },
+      {
+        "text": "Close GitHub"
+      },
+      {
+        "text": "Help review and propose improvements in the Pull Request",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How should you use GitHub Integration well?",
+    "options": [
+      {
+        "text": "Don't review at all"
+      },
+      {
+        "text": "Let the AI help review, but a human still decides to merge",
+        "correct": true
+      },
+      {
+        "text": "Let the AI merge by itself every time"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

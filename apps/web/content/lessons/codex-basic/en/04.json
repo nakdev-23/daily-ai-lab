@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 4 · Part 1",
+    "title": "Create your first Task",
+    "body": [
+      {
+        "text": "Start by connecting a GitHub repo, then "
+      },
+      {
+        "text": "write the instruction like a ticket for a teammate",
+        "bold": true
+      },
+      {
+        "text": " — state the problem, where you think it's relevant, and the result you want. The clearer it is, the more on-target the AI."
+      }
+    ],
+    "example": "\"The submit button on /checkout has no loading state when clicked — add a spinner while waiting for the API and disable the button to prevent double clicks\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 4 · Part 2",
+    "title": "Write tasks so the AI performs well",
+    "body": [
+      {
+        "text": "A good task formula: "
+      },
+      {
+        "text": "context (what's broken/missing) + scope (which files it can touch) + success criteria (how to know it's done)",
+        "bold": true
+      },
+      {
+        "text": " — add 'don't touch X' if there's an off-limits zone."
+      }
+    ],
+    "example": "\"Add phone-number validation to the signup form (10 digits, starting with 0), show an error under the field, don't change the API schema\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What do you need to do before creating your first task?",
+    "options": [
+      {
+        "text": "Connect a GitHub repo to Codex",
+        "correct": true
+      },
+      {
+        "text": "Delete all the old code"
+      },
+      {
+        "text": "Write 100% test coverage first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should a good task include?",
+    "options": [
+      {
+        "text": "Context, scope, and success criteria",
+        "correct": true
+      },
+      {
+        "text": "Just the words 'fix it please'"
+      },
+      {
+        "text": "The whole project's code pasted in"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If there are files that must not be changed, what should you do?",
+    "options": [
+      {
+        "text": "Don't mention it — the AI will figure it out"
+      },
+      {
+        "text": "State clearly in the instruction which files not to touch",
+        "correct": true
+      },
+      {
+        "text": "Delete that file first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you write tasks so Codex performs well?",
+    "options": [
+      {
+        "text": "Just say 'fix it' briefly"
+      },
+      {
+        "text": "Say nothing"
+      },
+      {
+        "text": "Clearly state the goal, scope, and success conditions",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does a good task help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "The AI understands and delivers work that matches your needs",
+        "correct": true
+      },
+      {
+        "text": "It always breaks the work"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

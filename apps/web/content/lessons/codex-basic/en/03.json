@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 3 · Part 1",
+    "title": "Tasks & Environments",
+    "body": [
+      {
+        "text": "Work in Codex is called a "
+      },
+      {
+        "text": "Task — each task runs in its own separate environment",
+        "bold": true
+      },
+      {
+        "text": " that clones the repo with its dependencies, so the AI can experiment with edits and run tests without affecting your real code."
+      }
+    ],
+    "example": "\"Task: 'Add dark mode to the settings page' → Codex opens an environment, edits the code, runs tests, and hands it back to review\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 3 · Part 2",
+    "title": "Why separate environments",
+    "body": [
+      {
+        "text": "Separation keeps it "
+      },
+      {
+        "text": "safe (your main code doesn't break) and parallel (many tasks at once)",
+        "bold": true
+      },
+      {
+        "text": " — every change must pass your review before it enters the real code."
+      }
+    ],
+    "example": "\"Run 3 tasks at once: fix a bug, write tests, update docs — each in its own environment, no collisions\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Where does a Codex task run?",
+    "options": [
+      {
+        "text": "In a separate environment that clones the repo",
+        "correct": true
+      },
+      {
+        "text": "Directly on your machine"
+      },
+      {
+        "text": "In production code immediately"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why is separating environments safe?",
+    "options": [
+      {
+        "text": "The AI can experiment with edits without affecting the real code",
+        "correct": true
+      },
+      {
+        "text": "Because nobody can see the code"
+      },
+      {
+        "text": "Because it runs faster"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "When can a task's changes enter the real code?",
+    "options": [
+      {
+        "text": "As soon as the task finishes"
+      },
+      {
+        "text": "After you review and approve it",
+        "correct": true
+      },
+      {
+        "text": "Automatically every midnight"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Why separate environments per task?",
+    "options": [
+      {
+        "text": "For slowness"
+      },
+      {
+        "text": "It's unnecessary"
+      },
+      {
+        "text": "To prevent collisions and test safely",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What do Tasks and Environments help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Organizing work and isolating an experimentation space",
+        "correct": true
+      },
+      {
+        "text": "Causing confusion"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

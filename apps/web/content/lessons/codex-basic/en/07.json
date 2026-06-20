@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 7 · Part 1",
+    "title": "Debug with Codex",
+    "body": [
+      {
+        "text": "When you hit a bug, give Codex the "
+      },
+      {
+        "text": "error message + steps to reproduce",
+        "bold": true
+      },
+      {
+        "text": " — it traces the code, finds the root cause, and proposes a fix with an explanation of why it broke."
+      }
+    ],
+    "example": "\"TypeError: Cannot read properties of undefined (reading 'map') on the /orders page, happens when a user has no orders yet — find the cause and fix it\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 7 · Part 2",
+    "title": "Fix the root cause, not the symptom",
+    "body": [
+      {
+        "text": "Always ask the AI to "
+      },
+      {
+        "text": "explain the root cause before proposing a fix",
+        "bold": true
+      },
+      {
+        "text": " — and have it add a test that catches this bug, so it doesn't come back in the future."
+      }
+    ],
+    "example": "\"First explain why orders can be undefined, then fix the root cause and add a test case for a user with no orders\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What info helps the AI find a bug fastest?",
+    "options": [
+      {
+        "text": "The error message and steps to reproduce",
+        "correct": true
+      },
+      {
+        "text": "The name of the person who wrote the code"
+      },
+      {
+        "text": "The date the code was written"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why ask for the root cause before accepting a fix?",
+    "options": [
+      {
+        "text": "To fix the actual cause, not just mask the symptom",
+        "correct": true
+      },
+      {
+        "text": "To make the answer longer"
+      },
+      {
+        "text": "It's unnecessary, just fixing is enough"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "After fixing a bug, what should you add to keep it from returning?",
+    "options": [
+      {
+        "text": "A test that catches this bug",
+        "correct": true
+      },
+      {
+        "text": "Delete that part of the code"
+      },
+      {
+        "text": "Nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should debugging with Codex focus on?",
+    "options": [
+      {
+        "text": "Deleting the whole file"
+      },
+      {
+        "text": "Ignoring it"
+      },
+      {
+        "text": "Fixing the root cause of the problem, not masking the symptom",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does fixing the root cause mean?",
+    "options": [
+      {
+        "text": "Just restarting"
+      },
+      {
+        "text": "Finding and fixing the true cause of the bug",
+        "correct": true
+      },
+      {
+        "text": "Hiding the error message"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

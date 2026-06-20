@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 2 · Part 1",
+    "title": "Codex App vs ChatGPT",
+    "body": [
+      {
+        "text": "ChatGPT can chat about anything, but Codex is "
+      },
+      {
+        "text": "designed specifically for code work",
+        "bold": true
+      },
+      {
+        "text": " — it connects to a real repo, reads the whole project, edits multiple files at once, and can open a Pull Request itself."
+      }
+    ],
+    "example": "\"Tell Codex: 'Fix the bug where the login page doesn't redirect after a successful login' — it finds the relevant files and fixes the whole set\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 2 · Part 2",
+    "title": "When to use which",
+    "body": [
+      {
+        "text": "Simple rule: "
+      },
+      {
+        "text": "asking concepts/learning → ChatGPT · making real edits in a repo → Codex",
+        "bold": true
+      },
+      {
+        "text": " — if the task needs to touch multiple files, run tests, or open a PR, that's a sign to use Codex."
+      }
+    ],
+    "example": "\"'Explain async/await' → ChatGPT / 'Convert the whole project's API from callbacks to async/await' → Codex\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is Codex different from ChatGPT?",
+    "options": [
+      {
+        "text": "It connects to a real repo and can edit multiple files",
+        "correct": true
+      },
+      {
+        "text": "It's better at general chat"
+      },
+      {
+        "text": "It's a photo-editing app"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which task suits Codex more than ChatGPT?",
+    "options": [
+      {
+        "text": "Asking what Python is"
+      },
+      {
+        "text": "Refactoring a whole project and opening a PR",
+        "correct": true
+      },
+      {
+        "text": "Writing a birthday song"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a sign you should use Codex instead of ChatGPT?",
+    "options": [
+      {
+        "text": "The task needs to touch multiple files, run tests, or open a PR",
+        "correct": true
+      },
+      {
+        "text": "You want a short answer"
+      },
+      {
+        "text": "You have no internet"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When should you use Codex instead of asking ChatGPT?",
+    "options": [
+      {
+        "text": "When you want to chat casually"
+      },
+      {
+        "text": "In all cases, it's the same"
+      },
+      {
+        "text": "When you want it to actually edit or run code in a real project",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the advantage of the Codex App?",
+    "options": [
+      {
+        "text": "No advantage"
+      },
+      {
+        "text": "It can work with the codebase and the environment",
+        "correct": true
+      },
+      {
+        "text": "It types faster"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

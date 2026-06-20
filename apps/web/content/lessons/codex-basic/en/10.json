@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 10 · Part 1",
+    "title": "Parallel Tasks",
+    "body": [
+      {
+        "text": "Codex's real power is "
+      },
+      {
+        "text": "running many tasks at once",
+        "bold": true
+      },
+      {
+        "text": " — each task has its own environment. Kick off 3–4 tasks in the morning, then come back to review the results in the afternoon."
+      }
+    ],
+    "example": "\"Morning: assign 'fix the login bug' + 'add checkout tests' + 'update README' → Afternoon: review 3 PRs\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 10 · Part 2",
+    "title": "Split work for good parallelism",
+    "body": [
+      {
+        "text": "Tasks that parallelize well must "
+      },
+      {
+        "text": "not touch the same files",
+        "bold": true
+      },
+      {
+        "text": " — if two tasks edit the same file, you get a merge conflict. Group work by zones of the code instead."
+      }
+    ],
+    "example": "\"Parallelizable: fix the login page + write API tests + update docs / Bad: two tasks both editing utils.ts\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are parallel tasks?",
+    "options": [
+      {
+        "text": "Running many tasks at once, each with a separate environment",
+        "correct": true
+      },
+      {
+        "text": "One very large task"
+      },
+      {
+        "text": "Running tests repeatedly"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which tasks parallelize well?",
+    "options": [
+      {
+        "text": "Work that doesn't touch the same files",
+        "correct": true
+      },
+      {
+        "text": "Work that both edits the same file"
+      },
+      {
+        "text": "Work that has to wait on each other in sequence"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If two tasks edit the same file, what happens?",
+    "options": [
+      {
+        "text": "No problem, the system merges it itself"
+      },
+      {
+        "text": "You may get a merge conflict to resolve yourself",
+        "correct": true
+      },
+      {
+        "text": "The second task is auto-deleted"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you split work for good parallelism?",
+    "options": [
+      {
+        "text": "Combine everything into one task"
+      },
+      {
+        "text": "Do it one line at a time"
+      },
+      {
+        "text": "Separate work that doesn't depend on each other",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the benefit of parallel tasks?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Working on multiple parts at once finishes faster",
+        "correct": true
+      },
+      {
+        "text": "It makes things slower"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

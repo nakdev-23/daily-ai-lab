@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 6 · Part 1",
+    "title": "Review and Approve",
+    "body": [
+      {
+        "text": "When a task finishes, Codex shows a "
+      },
+      {
+        "text": "diff — a summary of which files changed and what lines were added/removed",
+        "bold": true
+      },
+      {
+        "text": ". Your job is to read the diff like reviewing a teammate's PR, then approve."
+      }
+    ],
+    "example": "\"The diff shows: 3 files changed, added a spinner component, edited checkout.tsx, added 2 test cases — read it, then click approve\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 6 · Part 2",
+    "title": "Review like a professional",
+    "body": [
+      {
+        "text": "Checklist before approving: "
+      },
+      {
+        "text": "does it match the task · does it touch files beyond the scope · do the tests pass · are there hidden side effects",
+        "bold": true
+      },
+      {
+        "text": " — if it's not right, ask for fixes within the same task; no need to start over."
+      }
+    ],
+    "example": "\"Almost there, but the spinner should use the theme color, not a hardcoded #3b82f6 — fix this and resend\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is a diff?",
+    "options": [
+      {
+        "text": "A summary of code changes: which files, what was added/removed",
+        "correct": true
+      },
+      {
+        "text": "The new branch name"
+      },
+      {
+        "text": "An error message"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should you check before approving?",
+    "options": [
+      {
+        "text": "Matches the task, within scope, tests pass",
+        "correct": true
+      },
+      {
+        "text": "Number of lines added — the more the better"
+      },
+      {
+        "text": "No need to check, the AI is always right"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If the work is almost good but needs fixes, what should you do?",
+    "options": [
+      {
+        "text": "Approve it and fix it yourself later"
+      },
+      {
+        "text": "Ask for the specific fixes within the same task",
+        "correct": true
+      },
+      {
+        "text": "Delete the task and write all the code yourself"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you review Codex's work professionally?",
+    "options": [
+      {
+        "text": "Click Approve immediately without reading"
+      },
+      {
+        "text": "Reject everything"
+      },
+      {
+        "text": "Read, understand, and test before approving",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why review before approving?",
+    "options": [
+      {
+        "text": "It's unnecessary"
+      },
+      {
+        "text": "To prevent bugs or code that doesn't match the intent",
+        "correct": true
+      },
+      {
+        "text": "For slowness"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

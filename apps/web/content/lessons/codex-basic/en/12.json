@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 12 · Part 1",
+    "title": "Pricing & Best Practices",
+    "body": [
+      {
+        "text": "Codex comes with paid ChatGPT plans (Plus/Pro/Team), and "
+      },
+      {
+        "text": "usage quota depends on the plan",
+        "bold": true
+      },
+      {
+        "text": " — large, complex tasks use more quota than small ones. Breaking a big job into smaller tasks controls both quality and quota better."
+      }
+    ],
+    "example": "\"Instead of 'rewrite the whole app' → split into 'extract the auth module' + 'extract payment' + 'extract UI', one task at a time\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Basics · Chapter 12 · Part 2",
+    "title": "Best-practices recap",
+    "body": [
+      {
+        "text": "The heart of using Codex: "
+      },
+      {
+        "text": "write clear tasks · split into small jobs · review every diff · always have tests · never skip the review",
+        "bold": true
+      },
+      {
+        "text": " — the AI gets better every day, but responsibility for the code is still yours."
+      }
+    ],
+    "example": "\"Course complete! Start with a small task in your real repo, like 'add tests for a function that doesn't have any'\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How should you handle a large, complex job?",
+    "options": [
+      {
+        "text": "Split it into several smaller tasks",
+        "correct": true
+      },
+      {
+        "text": "Do it all in one command"
+      },
+      {
+        "text": "Don't use Codex for big jobs"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Which is a Codex best practice?",
+    "options": [
+      {
+        "text": "Always review every diff before approving",
+        "correct": true
+      },
+      {
+        "text": "Auto-approve everything to save time"
+      },
+      {
+        "text": "No need for tests"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "Who has final responsibility for code quality?",
+    "options": [
+      {
+        "text": "The AI"
+      },
+      {
+        "text": "Us — the people who use and review the code",
+        "correct": true
+      },
+      {
+        "text": "GitHub"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the best practice when using Codex?",
+    "options": [
+      {
+        "text": "Use the code immediately without checking"
+      },
+      {
+        "text": "Skip testing"
+      },
+      {
+        "text": "Write clear tasks, test, and review before using for real",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should you keep in mind about pricing?",
+    "options": [
+      {
+        "text": "It has nothing to do with usage"
+      },
+      {
+        "text": "Use resources appropriately for the job",
+        "correct": true
+      },
+      {
+        "text": "Use as wastefully as possible"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

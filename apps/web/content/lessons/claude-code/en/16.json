@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 16 · Part 1",
+    "title": "Multi-agent Workflows",
+    "body": [
+      {
+        "text": "Break big work into "
+      },
+      {
+        "text": "subagents working in parallel",
+        "bold": true
+      },
+      {
+        "text": " — the main agent plans and dispatches subtasks to child agents, e.g. one searches the code, another writes tests, then results are combined back."
+      }
+    ],
+    "example": "\"'Do a security review of the whole project' → split into 3 agents: check auth, check the API, check dependencies — faster than one at a time\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 16 · Part 2",
+    "title": "When to split into agents",
+    "body": [
+      {
+        "text": "Good when "
+      },
+      {
+        "text": "subtasks are independent and use a lot of context",
+        "bold": true
+      },
+      {
+        "text": " — like searching across many files; each agent has its own context, so it doesn't crowd the main task's memory."
+      }
+    ],
+    "example": "\"A single continuous task, like fixing one bug → no need to split; doing it directly is faster\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are subagents?",
+    "options": [
+      {
+        "text": "Child agents that take subtasks to do in parallel",
+        "correct": true
+      },
+      {
+        "text": "Human assistants"
+      },
+      {
+        "text": "Always smaller models"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What work suits multi-agent?",
+    "options": [
+      {
+        "text": "Independent subtasks, like checking multiple zones at once",
+        "correct": true
+      },
+      {
+        "text": "A one-line bug fix"
+      },
+      {
+        "text": "Every task always"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the context advantage of subagents?",
+    "options": [
+      {
+        "text": "Each has its own context, not crowding the main task",
+        "correct": true
+      },
+      {
+        "text": "They all share one context"
+      },
+      {
+        "text": "They have no context at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "When should you split work into multi-agent?",
+    "options": [
+      {
+        "text": "Every task, even small ones"
+      },
+      {
+        "text": "Never split"
+      },
+      {
+        "text": "When the work is big and splits into parts that can run in parallel",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What do multi-agent workflows help with?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Distributing complex work so it's more manageable",
+        "correct": true
+      },
+      {
+        "text": "Always causing confusion"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

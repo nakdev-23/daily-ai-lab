@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 4 · Part 1",
+    "title": "Read, Edit, and Write",
+    "body": [
+      {
+        "text": "Three core tools: "
+      },
+      {
+        "text": "Read reads a file · Edit changes specific spots · Write creates/rewrites a whole file",
+        "bold": true
+      },
+      {
+        "text": " — Claude picks which to use for the task; you just state the desired result, and Edit shows a diff of only what changed."
+      }
+    ],
+    "example": "\"'Add validation to the signup form' → Claude reads the form file (Read) then edits just the submit function (Edit)\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 4 · Part 2",
+    "title": "Review the diff before accepting",
+    "body": [
+      {
+        "text": "Every change shows as a red/green diff — "
+      },
+      {
+        "text": "read it before accepting, every time",
+        "bold": true
+      },
+      {
+        "text": ". If it's not right, reject and say what you want changed; Claude adjusts immediately, no harm done."
+      }
+    ],
+    "example": "\"The diff shows it'll delete a function that's still used → click no and say 'that function is still used on the admin page, don't delete it'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which tool edits specific spots in a file?",
+    "options": [
+      {
+        "text": "Edit",
+        "correct": true
+      },
+      {
+        "text": "Read"
+      },
+      {
+        "text": "Delete"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What do red and green in a diff mean?",
+    "options": [
+      {
+        "text": "Red = removed lines, green = added lines",
+        "correct": true
+      },
+      {
+        "text": "Red = error, green = passed"
+      },
+      {
+        "text": "Just decorative colors"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "If the diff isn't right, what should you do?",
+    "options": [
+      {
+        "text": "Reject and state what you want more clearly",
+        "correct": true
+      },
+      {
+        "text": "Always accept and fix it later"
+      },
+      {
+        "text": "Close the program immediately"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Before accepting Claude Code's file edit, what should you do?",
+    "options": [
+      {
+        "text": "Accept immediately without looking"
+      },
+      {
+        "text": "Reject every time"
+      },
+      {
+        "text": "Review the diff and understand it before accepting",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What are Read, Edit, Write for?",
+    "options": [
+      {
+        "text": "Deleting the account"
+      },
+      {
+        "text": "Reading, editing, and writing files in the project",
+        "correct": true
+      },
+      {
+        "text": "Changing the terminal color"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

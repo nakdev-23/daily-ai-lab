@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 11 · Part 1",
+    "title": "Add an MCP Server",
+    "body": [
+      {
+        "text": "Add it with one command: "
+      },
+      {
+        "text": "claude mcp add <name> <command to run the server>",
+        "bold": true
+      },
+      {
+        "text": " — or define it in the project's .mcp.json so the whole team gets the same servers automatically."
+      }
+    ],
+    "example": "\"$ claude mcp add github -- npx -y @modelcontextprotocol/server-github\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 11 · Part 2",
+    "title": "Choose servers carefully",
+    "body": [
+      {
+        "text": "An MCP server can act on your behalf, so "
+      },
+      {
+        "text": "use only trusted servers and give the lowest-privilege token that's enough",
+        "bold": true
+      },
+      {
+        "text": " — like a read-only token if the job is just reading, and keep tokens in env, not embedded in a committed config file."
+      }
+    ],
+    "example": "\"GitHub token for MCP: choose only repo:read scope if the job is code review, not full access\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you add an MCP server in Claude Code?",
+    "options": [
+      {
+        "text": "claude mcp add, or a .mcp.json file",
+        "correct": true
+      },
+      {
+        "text": "You can't install one"
+      },
+      {
+        "text": "Email Anthropic to request it"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What's the benefit of a project .mcp.json?",
+    "options": [
+      {
+        "text": "The whole team gets the same MCP servers automatically",
+        "correct": true
+      },
+      {
+        "text": "It makes code run faster"
+      },
+      {
+        "text": "It hides code from the team"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of token should you give an MCP server?",
+    "options": [
+      {
+        "text": "The lowest privilege that's enough, stored in env",
+        "correct": true
+      },
+      {
+        "text": "Full admin, embedded in a committed file"
+      },
+      {
+        "text": "Share the token in a group chat"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What should you be careful about when adding an MCP server?",
+    "options": [
+      {
+        "text": "Install every one you find"
+      },
+      {
+        "text": "Grant full permissions immediately"
+      },
+      {
+        "text": "Use only trusted servers and limit permissions",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why choose MCP servers carefully?",
+    "options": [
+      {
+        "text": "It doesn't matter"
+      },
+      {
+        "text": "It concerns security and data access",
+        "correct": true
+      },
+      {
+        "text": "For looks"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 14 · Part 1",
+    "title": "Hooks",
+    "body": [
+      {
+        "text": "Hooks are "
+      },
+      {
+        "text": "commands that run automatically when an event happens",
+        "bold": true
+      },
+      {
+        "text": " — like PostToolUse running after Claude edits a file (auto-format the code), or PreToolUse checking before a command runs. Set them in settings.json."
+      }
+    ],
+    "example": "\"A popular hook: after every Edit, run prettier --write on that file — so AI code always matches the team's format\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 14 · Part 2",
+    "title": "Hooks teams actually use",
+    "body": [
+      {
+        "text": "Worthwhile examples: "
+      },
+      {
+        "text": "auto-format after edits · log all bash commands for audit · block dangerous commands",
+        "bold": true
+      },
+      {
+        "text": " — hooks make rules automatic and systematic, not reliant on the AI's or a person's memory."
+      }
+    ],
+    "example": "\"PreToolUse hook: if a command contains 'rm -rf' or 'drop table', block it and warn immediately\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are hooks?",
+    "options": [
+      {
+        "text": "Commands that run automatically when a defined event happens",
+        "correct": true
+      },
+      {
+        "text": "Hooks for hanging things"
+      },
+      {
+        "text": "Plugins that boost intelligence"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "To auto-format code after the AI edits a file, which hook?",
+    "options": [
+      {
+        "text": "PostToolUse with a Write|Edit matcher",
+        "correct": true
+      },
+      {
+        "text": "SessionStart"
+      },
+      {
+        "text": "It can't be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of hooks over reminders in the prompt?",
+    "options": [
+      {
+        "text": "They're automatic and don't rely on the AI's memory",
+        "correct": true
+      },
+      {
+        "text": "They save electricity"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What are hooks in Claude Code for?",
+    "options": [
+      {
+        "text": "Changing the background color"
+      },
+      {
+        "text": "Playing music"
+      },
+      {
+        "text": "Running things automatically on events, like after editing a file",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's an example of a hook teams actually use?",
+    "options": [
+      {
+        "text": "Sending spam email"
+      },
+      {
+        "text": "Running a formatter or tests automatically after a code edit",
+        "correct": true
+      },
+      {
+        "text": "Shutting down the computer"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 17 · Part 1",
+    "title": "Custom Slash Commands",
+    "body": [
+      {
+        "text": "Create your own shortcut commands with "
+      },
+      {
+        "text": "markdown files in .claude/commands/",
+        "bold": true
+      },
+      {
+        "text": " — e.g. a review.md file becomes the /review command, can use $ARGUMENTS to take user input, and the team shares it via git."
+      }
+    ],
+    "example": "\".claude/commands/review.md: 'Review the code in $ARGUMENTS for bugs, security, and performance' → use: /review src/auth\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 17 · Part 2",
+    "title": "Commands a team should have",
+    "body": [
+      {
+        "text": "The most used in real teams: "
+      },
+      {
+        "text": "/review (code review) · /test (write tests to team standards) · /pr (prepare commit + PR description)",
+        "bold": true
+      },
+      {
+        "text": " — turn frequently repeated workflows into a command once, and everyone on the team uses the same standard."
+      }
+    ],
+    "example": "\"/pr → check the git diff, write a commit message to the team's convention, create a full PR description from the template\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you create a custom slash command?",
+    "options": [
+      {
+        "text": "Create a .md file in .claude/commands/",
+        "correct": true
+      },
+      {
+        "text": "You must write a new extension"
+      },
+      {
+        "text": "It can't be done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What is $ARGUMENTS in a command file?",
+    "options": [
+      {
+        "text": "The value the user types after the command",
+        "correct": true
+      },
+      {
+        "text": "A filename"
+      },
+      {
+        "text": "A password"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How does a team share slash commands?",
+    "options": [
+      {
+        "text": "Commit the .claude/commands folder to git",
+        "correct": true
+      },
+      {
+        "text": "Email the file every time"
+      },
+      {
+        "text": "They can't be shared"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the benefit of custom slash commands?",
+    "options": [
+      {
+        "text": "Change the website language"
+      },
+      {
+        "text": "Delete the project"
+      },
+      {
+        "text": "Create shortcuts for frequently repeated work",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What commands should a team have?",
+    "options": [
+      {
+        "text": "Random commands"
+      },
+      {
+        "text": "Routine repeated work, like review/test/ship",
+        "correct": true
+      },
+      {
+        "text": "Commands nobody uses"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

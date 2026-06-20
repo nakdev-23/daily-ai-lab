@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 13 · Part 1",
+    "title": "CLAUDE.md",
+    "body": [
+      {
+        "text": "CLAUDE.md is a "
+      },
+      {
+        "text": "guide file Claude Code reads automatically every time it starts work in the project",
+        "bold": true
+      },
+      {
+        "text": " — put the test command, project structure, conventions, and restrictions in it, so you don't re-explain every session."
+      }
+    ],
+    "example": "\"CLAUDE.md: 'Run tests: npm test / Use Tailwind, no separate CSS / all components live in src/components'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 13 · Part 2",
+    "title": "Write a good CLAUDE.md",
+    "body": [
+      {
+        "text": "Key principles: "
+      },
+      {
+        "text": "keep it short, only what the AI can't infer, and update it when rules change",
+        "bold": true
+      },
+      {
+        "text": " — don't include what's already readable from the code; include team rules, restrictions, and project-specific commands."
+      }
+    ],
+    "example": "\"Include: 'deploy only with ./scripts/deploy.sh' / Don't include: 'this project uses React' (readable from package.json)\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "When is CLAUDE.md read?",
+    "options": [
+      {
+        "text": "Automatically every time work starts in the project",
+        "correct": true
+      },
+      {
+        "text": "Only when told to read it"
+      },
+      {
+        "text": "Never read"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What should be in CLAUDE.md?",
+    "options": [
+      {
+        "text": "Team rules and specific commands the AI can't infer",
+        "correct": true
+      },
+      {
+        "text": "Everything already readable from the code"
+      },
+      {
+        "text": "Passwords and API keys"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the main benefit of CLAUDE.md?",
+    "options": [
+      {
+        "text": "No re-explaining project rules every session",
+        "correct": true
+      },
+      {
+        "text": "It makes code run faster"
+      },
+      {
+        "text": "It replaces the README for humans"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What is CLAUDE.md for?",
+    "options": [
+      {
+        "text": "Storing passwords"
+      },
+      {
+        "text": "A junk file"
+      },
+      {
+        "text": "Holding project context/rules so Claude works correctly",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should a good CLAUDE.md have?",
+    "options": [
+      {
+        "text": "Leave it blank"
+      },
+      {
+        "text": "Clear guidelines, structure, and requirements",
+        "correct": true
+      },
+      {
+        "text": "Random content"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

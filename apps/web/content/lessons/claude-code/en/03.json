@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 3 · Part 1",
+    "title": "Your first conversation",
+    "body": [
+      {
+        "text": "Talk to Claude Code "
+      },
+      {
+        "text": "in plain language — no syntax to memorize",
+        "bold": true
+      },
+      {
+        "text": " — start by having it explore the project, explain the code, or ask how a feature works; it finds the relevant files itself."
+      }
+    ],
+    "example": "\"'Give me an overview of this project — what does each part do?' — perfect for your first day on a new team\"",
+    "mascot": "mascot-hello"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 3 · Part 2",
+    "title": "Give your first command confidently",
+    "body": [
+      {
+        "text": "For every file edit or command, Claude Code "
+      },
+      {
+        "text": "always asks permission first",
+        "bold": true
+      },
+      {
+        "text": " — you see the diff before accepting, so you can start with small tasks worry-free, like fixing a typo, adding a comment, or writing a test."
+      }
+    ],
+    "example": "\"'Change the Login button text to Thai' → Claude finds the file, shows the diff → you click yes → done\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you instruct Claude Code?",
+    "options": [
+      {
+        "text": "Type in plain language, say what you want",
+        "correct": true
+      },
+      {
+        "text": "You must memorize all the special commands"
+      },
+      {
+        "text": "Write it only as JSON"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Before Claude Code edits a file, what happens?",
+    "options": [
+      {
+        "text": "It asks permission and shows a diff first",
+        "correct": true
+      },
+      {
+        "text": "It edits without telling you"
+      },
+      {
+        "text": "It sends an email"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's a good first task for a beginner?",
+    "options": [
+      {
+        "text": "Have it explore and explain the project",
+        "correct": true
+      },
+      {
+        "text": "Rewrite the whole system immediately"
+      },
+      {
+        "text": "Delete all the code"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "To make your first command work well, what should you do?",
+    "options": [
+      {
+        "text": "Just type 'do it please'"
+      },
+      {
+        "text": "Say nothing"
+      },
+      {
+        "text": "State the goal and context clearly",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What should your first conversation with Claude Code be like?",
+    "options": [
+      {
+        "text": "Ask for one short answer"
+      },
+      {
+        "text": "Specify the task you want and the relevant files/parts",
+        "correct": true
+      },
+      {
+        "text": "Ask it to guess"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

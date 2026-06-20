@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 8 · Part 1",
+    "title": "Todos and task tracking",
+    "body": [
+      {
+        "text": "For multi-step work, Claude Code creates a "
+      },
+      {
+        "text": "todo list so you can see the steps and how far along it is",
+        "bold": true
+      },
+      {
+        "text": " — the list updates live while it works: pending → in progress → completed, so you always see progress."
+      }
+    ],
+    "example": "\"A big task shows: ✓ create the API endpoint / ⏳ add the UI page / ○ write tests / ○ update docs\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 8 · Part 2",
+    "title": "Use the todo to control scope",
+    "body": [
+      {
+        "text": "The todo list is a promise of what it'll do — "
+      },
+      {
+        "text": "see the list and you can speak up immediately if something's missing or extra",
+        "bold": true
+      },
+      {
+        "text": ", like 'add an item: also test on mobile' or 'skip the last item, it's out of scope'."
+      }
+    ],
+    "example": "\"You see the todo has no migration of old data → say 'don't forget to migrate the existing user data' before it starts\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is the todo list in Claude Code for?",
+    "options": [
+      {
+        "text": "Seeing the steps and progress of multi-step work",
+        "correct": true
+      },
+      {
+        "text": "A shopping list"
+      },
+      {
+        "text": "No use"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "You see the todo list is missing an important step. What should you do?",
+    "options": [
+      {
+        "text": "Speak up immediately to add that step",
+        "correct": true
+      },
+      {
+        "text": "Wait until it's done, then mention it"
+      },
+      {
+        "text": "Don't say anything, it'll figure it out"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What are the todo statuses?",
+    "options": [
+      {
+        "text": "pending, in progress, completed",
+        "correct": true
+      },
+      {
+        "text": "happy, sad, angry"
+      },
+      {
+        "text": "only done"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What is todo/task tracking for?",
+    "options": [
+      {
+        "text": "Decorating the screen"
+      },
+      {
+        "text": "Making things slower"
+      },
+      {
+        "text": "Controlling scope and tracking progress",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "How does the todo help with multi-step work?",
+    "options": [
+      {
+        "text": "No effect"
+      },
+      {
+        "text": "Breaks work into steps and stays on track",
+        "correct": true
+      },
+      {
+        "text": "Makes it forget the work"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

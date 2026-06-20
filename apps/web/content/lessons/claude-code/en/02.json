@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 2 · Part 1",
+    "title": "Install and set up",
+    "body": [
+      {
+        "text": "Very easy to install: "
+      },
+      {
+        "text": "npm install -g @anthropic-ai/claude-code, then type claude in the terminal",
+        "bold": true
+      },
+      {
+        "text": " — the first time, it asks you to log in with a Claude account (Pro/Max) or an API key, and then it's ready to use."
+      }
+    ],
+    "example": "\"$ npm install -g @anthropic-ai/claude-code\\n$ cd my-project\\n$ claude\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 2 · Part 2",
+    "title": "Always start in the project folder",
+    "body": [
+      {
+        "text": "Claude Code works with "
+      },
+      {
+        "text": "the folder you open it in (the working directory)",
+        "bold": true
+      },
+      {
+        "text": " — it sees the files in that project, reads the structure, and can edit them. So always cd into your project before running claude."
+      }
+    ],
+    "example": "\"Open in ~/my-shop and ask 'what framework does this project use?' — Claude reads package.json and answers right away\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How do you install Claude Code?",
+    "options": [
+      {
+        "text": "npm install -g @anthropic-ai/claude-code",
+        "correct": true
+      },
+      {
+        "text": "Download a .exe from a random site"
+      },
+      {
+        "text": "You can't install it — web only"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Before running claude, what should you do?",
+    "options": [
+      {
+        "text": "cd into the project folder first",
+        "correct": true
+      },
+      {
+        "text": "Turn off the internet"
+      },
+      {
+        "text": "Delete node_modules"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What can Claude Code log in with?",
+    "options": [
+      {
+        "text": "A Claude account or an API key",
+        "correct": true
+      },
+      {
+        "text": "A social media account"
+      },
+      {
+        "text": "No login needed"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Where should you start using Claude Code?",
+    "options": [
+      {
+        "text": "Anywhere, it doesn't matter"
+      },
+      {
+        "text": "In a system folder"
+      },
+      {
+        "text": "Always in the project folder you want to work on",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why start in the project folder?",
+    "options": [
+      {
+        "text": "No reason"
+      },
+      {
+        "text": "So Claude Code understands the project's files/structure",
+        "correct": true
+      },
+      {
+        "text": "For looks"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

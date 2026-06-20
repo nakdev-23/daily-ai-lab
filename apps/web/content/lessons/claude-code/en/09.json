@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 9 · Part 1",
+    "title": "Plan Mode",
+    "body": [
+      {
+        "text": "Plan Mode lets Claude "
+      },
+      {
+        "text": "read and plan, but not change anything yet",
+        "bold": true
+      },
+      {
+        "text": " — it explores the code and proposes a detailed plan; you read it, adjust, then approve it to act. Great for big work or unfamiliar code."
+      }
+    ],
+    "example": "\"Press Shift+Tab to enter Plan Mode and ask 'what's needed to move from REST to GraphQL?' — you get a plan with nothing changed\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 9 · Part 2",
+    "title": "A good plan is half the work done",
+    "body": [
+      {
+        "text": "Use Plan Mode when "
+      },
+      {
+        "text": "the cost of getting it wrong is high: legacy code, production systems, work across many modules",
+        "bold": true
+      },
+      {
+        "text": " — read the plan and push back, like 'why this approach?' or 'is there a way without migrating the DB?'"
+      }
+    ],
+    "example": "\"The plan proposes editing 12 files → ask 'can we narrow it to just one module first?' → get a lower-risk new plan\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What can Plan Mode do?",
+    "options": [
+      {
+        "text": "Read and plan, but not edit files",
+        "correct": true
+      },
+      {
+        "text": "Edit files 2x faster"
+      },
+      {
+        "text": "Auto-delete branches"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "When should you use Plan Mode?",
+    "options": [
+      {
+        "text": "Big work, unfamiliar code, or high cost of getting it wrong",
+        "correct": true
+      },
+      {
+        "text": "Fixing a single typo"
+      },
+      {
+        "text": "Always, with no exceptions"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "You got a plan but disagree with parts. What can you do?",
+    "options": [
+      {
+        "text": "Push back and ask to adjust the plan before approving",
+        "correct": true
+      },
+      {
+        "text": "You must always accept the plan"
+      },
+      {
+        "text": "Turn off the machine"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the benefit of Plan Mode?",
+    "options": [
+      {
+        "text": "It just slows things down"
+      },
+      {
+        "text": "No benefit"
+      },
+      {
+        "text": "Planning before acting makes big work clearer and lower-risk",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does 'a good plan is half the work done' mean?",
+    "options": [
+      {
+        "text": "The less planning the better"
+      },
+      {
+        "text": "A clear plan helps you act correctly and faster",
+        "correct": true
+      },
+      {
+        "text": "Planning isn't necessary"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

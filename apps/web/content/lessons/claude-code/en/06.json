@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 6 · Part 1",
+    "title": "Search and Glob",
+    "body": [
+      {
+        "text": "Two ways to search a project: "
+      },
+      {
+        "text": "Grep searches file contents (regex supported) · Glob finds filenames by pattern",
+        "bold": true
+      },
+      {
+        "text": " — Claude always uses these to find the relevant code before editing, so it doesn't miss a spot that needs changing."
+      }
+    ],
+    "example": "\"'Find every file that calls getUserData' → Grep searches for 'getUserData' across the project, finds 7 files\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 6 · Part 2",
+    "title": "Search before editing — a habit for big work",
+    "body": [
+      {
+        "text": "Cross-file refactors are safe because "
+      },
+      {
+        "text": "Claude finds all the affected spots before it starts editing",
+        "bold": true
+      },
+      {
+        "text": " — you can help by stating the scope, like 'only in src/' or 'excluding the old test files'."
+      }
+    ],
+    "example": "\"'Rename the function formatPrice to formatCurrency everywhere it's used, only in src/'\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How are Grep and Glob different?",
+    "options": [
+      {
+        "text": "Grep searches file contents, Glob finds filenames",
+        "correct": true
+      },
+      {
+        "text": "They're identical"
+      },
+      {
+        "text": "Glob deletes files, Grep creates files"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why is searching before editing important for refactoring?",
+    "options": [
+      {
+        "text": "It finds all affected spots so nothing that needs changing is missed",
+        "correct": true
+      },
+      {
+        "text": "It makes the code shorter"
+      },
+      {
+        "text": "It's not important"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How can you make the search more accurate?",
+    "options": [
+      {
+        "text": "State the scope, like which folder only",
+        "correct": true
+      },
+      {
+        "text": "Saying nothing is best"
+      },
+      {
+        "text": "Delete irrelevant files first"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "Before editing code in big work, what habit should you have?",
+    "options": [
+      {
+        "text": "Edit right away without searching"
+      },
+      {
+        "text": "Delete files you don't understand"
+      },
+      {
+        "text": "Search (Search/Glob) to understand the code before editing",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What are Search and Glob for?",
+    "options": [
+      {
+        "text": "Creating images"
+      },
+      {
+        "text": "Searching text and files in the project",
+        "correct": true
+      },
+      {
+        "text": "Sending email"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

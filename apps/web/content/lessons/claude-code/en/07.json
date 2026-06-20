@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 7 · Part 1",
+    "title": "Let Claude Code Run",
+    "body": [
+      {
+        "text": "For long tasks, let it "
+      },
+      {
+        "text": "work through many steps without you steering every move",
+        "bold": true
+      },
+      {
+        "text": " — give it a big goal and it plans, breaks it into steps, and works through them one by one: search the code, edit, run tests, fix, until done."
+      }
+    ],
+    "example": "\"'Add a feature to export reports as PDF, both backend and a UI button, with tests' then let it run for a while\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 7 · Part 2",
+    "title": "The balance of letting go",
+    "body": [
+      {
+        "text": "How much you can let go depends on risk: "
+      },
+      {
+        "text": "writing tests/docs can run long · touching the database or money logic should be controlled step by step",
+        "bold": true
+      },
+      {
+        "text": " — and having tests + git to roll back is the real safety net."
+      }
+    ],
+    "example": "\"Before letting it run long: commit the current work first, so if the result is bad, git checkout takes you back instantly\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is letting Claude Code run long good for?",
+    "options": [
+      {
+        "text": "Multi-step work with a clear goal, like a feature with tests",
+        "correct": true
+      },
+      {
+        "text": "Every task without thinking"
+      },
+      {
+        "text": "No task is suitable"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What work should be controlled step by step instead of running long?",
+    "options": [
+      {
+        "text": "Work touching the database or financial logic",
+        "correct": true
+      },
+      {
+        "text": "Writing documentation"
+      },
+      {
+        "text": "Fixing a typo"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the safety net before letting a long task run?",
+    "options": [
+      {
+        "text": "Commit first and have tests covering it",
+        "correct": true
+      },
+      {
+        "text": "Pray"
+      },
+      {
+        "text": "Turn off the screen and don't watch"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's the balance of Let Claude Code Run?",
+    "options": [
+      {
+        "text": "Let everything run with no oversight"
+      },
+      {
+        "text": "Control every line until it can't work"
+      },
+      {
+        "text": "Let it work continuously but still verify the results",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "When letting Claude Code run long, what should you do?",
+    "options": [
+      {
+        "text": "Cancel every time"
+      },
+      {
+        "text": "Check results periodically and test",
+        "correct": true
+      },
+      {
+        "text": "Don't look until it's done"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

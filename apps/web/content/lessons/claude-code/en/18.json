@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 18 · Part 1",
+    "title": "Best Practices",
+    "body": [
+      {
+        "text": "The formula strong teams use: "
+      },
+      {
+        "text": "a complete CLAUDE.md · start big work in Plan Mode · commit often · tests as a safety net · review every diff",
+        "bold": true
+      },
+      {
+        "text": " — AI makes you many times faster, but an engineer's basic discipline matters just as much."
+      }
+    ],
+    "example": "\"Morning start: claude → /review yesterday's work → Plan Mode for today's work → run subtasks during the meeting\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 18 · Part 2",
+    "title": "Claude Code course wrap-up",
+    "body": [
+      {
+        "text": "You're fully equipped now: "
+      },
+      {
+        "text": "the core tools, agentic workflow, MCP, hooks, permissions, multi-agent, and slash commands",
+        "bold": true
+      },
+      {
+        "text": " — the next step is hands-on with a real project: start small, build trust, then expand the scope step by step."
+      }
+    ],
+    "example": "\"Capstone: set up CLAUDE.md + permissions in a real repo, then have Claude Code fix one real issue all the way to a PR\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Which is a Claude Code best practice?",
+    "options": [
+      {
+        "text": "Start big work in Plan Mode and review every diff",
+        "correct": true
+      },
+      {
+        "text": "Let everything run without looking"
+      },
+      {
+        "text": "Don't commit until the end of the week"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why commit often when working with AI?",
+    "options": [
+      {
+        "text": "You can roll back instantly if the result is bad",
+        "correct": true
+      },
+      {
+        "text": "To make the GitHub graph green"
+      },
+      {
+        "text": "No reason"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the best way to start using Claude Code with a team?",
+    "options": [
+      {
+        "text": "Start small, build trust, then expand step by step",
+        "correct": true
+      },
+      {
+        "text": "Let AI do everything from day one"
+      },
+      {
+        "text": "Forbid the team from using it until it's perfect"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What's an important Claude Code best practice?",
+    "options": [
+      {
+        "text": "Accept every edit without checking"
+      },
+      {
+        "text": "Skip testing"
+      },
+      {
+        "text": "Give clear context, review diffs, and test before going live",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What's the summary of using Claude Code safely?",
+    "options": [
+      {
+        "text": "Don't configure anything"
+      },
+      {
+        "text": "Plan, control permissions, and always review the work",
+        "correct": true
+      },
+      {
+        "text": "Let it do everything without looking"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

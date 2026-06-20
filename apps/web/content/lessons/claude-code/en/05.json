@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 5 · Part 1",
+    "title": "Bash and running commands",
+    "body": [
+      {
+        "text": "Claude Code can "
+      },
+      {
+        "text": "run real terminal commands: npm install, run tests, git commit",
+        "bold": true
+      },
+      {
+        "text": " — its strength is seeing the command's output; if a test fails, it reads the error and keeps fixing the code itself."
+      }
+    ],
+    "example": "\"'Run the tests and fix everything that fails' → run npm test → see 3 failures → fix the code → re-run until all green\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 5 · Part 2",
+    "title": "The fix-until-it-passes loop",
+    "body": [
+      {
+        "text": "This is the power of agentic coding: "
+      },
+      {
+        "text": "act → see the result → adjust → repeat until it succeeds",
+        "bold": true
+      },
+      {
+        "text": " — command it with a goal instead of steps, like 'make the build pass', and let it loop through the fixes itself."
+      }
+    ],
+    "example": "\"'Make npm run build pass with no warnings' — Claude loops through each error until it's clean\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "Can Claude Code run terminal commands?",
+    "options": [
+      {
+        "text": "Yes, and it sees the output to keep working",
+        "correct": true
+      },
+      {
+        "text": "Not at all"
+      },
+      {
+        "text": "Only ls"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "If tests fail after Claude edits the code, what can it do?",
+    "options": [
+      {
+        "text": "Read the error and keep fixing until it passes",
+        "correct": true
+      },
+      {
+        "text": "Stop immediately"
+      },
+      {
+        "text": "Always delete the tests"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What kind of command uses the agentic power fully?",
+    "options": [
+      {
+        "text": "Command with a goal, like 'make the build pass'",
+        "correct": true
+      },
+      {
+        "text": "Command one keystroke at a time"
+      },
+      {
+        "text": "Command nothing at all"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What does the fix-until-it-passes loop mean?",
+    "options": [
+      {
+        "text": "Fix once, no testing allowed"
+      },
+      {
+        "text": "Leave it broken"
+      },
+      {
+        "text": "Run a command, see the result, and fix repeatedly until tests pass",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "When letting Claude Code run bash commands, what should you watch for?",
+    "options": [
+      {
+        "text": "Turn off checks"
+      },
+      {
+        "text": "Review commands that will run, especially those affecting files/the system",
+        "correct": true
+      },
+      {
+        "text": "Run anything immediately"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

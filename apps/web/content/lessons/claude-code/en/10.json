@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 10 · Part 1",
+    "title": "What is MCP?",
+    "body": [
+      {
+        "text": "MCP (Model Context Protocol) is "
+      },
+      {
+        "text": "a standard for connecting AI to external tools and data",
+        "bold": true
+      },
+      {
+        "text": " — like USB for the AI world: write an MCP server once and it works with any app that supports it, no custom integration needed."
+      }
+    ],
+    "example": "\"A Postgres MCP server lets Claude talk to the database / a Slack one lets it read and send messages\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 10 · Part 2",
+    "title": "What MCP changes in your workflow",
+    "body": [
+      {
+        "text": "Once Claude Code connects MCP, it can "
+      },
+      {
+        "text": "work across systems in a single sentence",
+        "bold": true
+      },
+      {
+        "text": " — like reading a GitHub issue, checking real data in the database, then editing the code to match, with no copy-pasting across screens."
+      }
+    ],
+    "example": "\"'Read issue #42 and fix the bug, checking the real data in the users table too' — done in one command\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What is MCP?",
+    "options": [
+      {
+        "text": "A standard for connecting AI to external tools and data",
+        "correct": true
+      },
+      {
+        "text": "A new AI model"
+      },
+      {
+        "text": "A programming language"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "Why compare MCP to USB for the AI world?",
+    "options": [
+      {
+        "text": "Write it once and it works with any app that supports the standard",
+        "correct": true
+      },
+      {
+        "text": "You plug in a real USB cable"
+      },
+      {
+        "text": "It stores a lot of data"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "How does MCP change your workflow?",
+    "options": [
+      {
+        "text": "You can work across systems without copy-pasting",
+        "correct": true
+      },
+      {
+        "text": "You must open more screens"
+      },
+      {
+        "text": "It changes nothing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What is MCP?",
+    "options": [
+      {
+        "text": "A new programming language"
+      },
+      {
+        "text": "A mobile game"
+      },
+      {
+        "text": "A standard connecting Claude to external tools/data",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "What does MCP change in the workflow?",
+    "options": [
+      {
+        "text": "It changes nothing"
+      },
+      {
+        "text": "It gives Claude access to more external services",
+        "correct": true
+      },
+      {
+        "text": "It makes typing slower"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

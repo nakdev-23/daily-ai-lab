@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 15 · Part 1",
+    "title": "Permissions & Settings",
+    "body": [
+      {
+        "text": "Control what Claude can do with "
+      },
+      {
+        "text": "permission rules: allow (do it directly), ask (ask first), deny (never)",
+        "bold": true
+      },
+      {
+        "text": " — set them in settings.json at the user level (all projects) or the project level (shared by the team)."
+      }
+    ],
+    "example": "\"allow: ['Bash(npm *)', 'Bash(git status)'] / deny: ['Bash(rm -rf *)'] — npm runs directly, rm -rf is blocked\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 15 · Part 2",
+    "title": "Set permissions to fit the work",
+    "body": [
+      {
+        "text": "Principle: "
+      },
+      {
+        "text": "start strict and loosen — allow only the frequently-used, safe commands",
+        "bold": true
+      },
+      {
+        "text": " — like tests/lint/build can be allowed, while git push, deleting files, and touching the database should always ask."
+      }
+    ],
+    "example": "\"The team sets in .claude/settings.json: tests and lint auto-run, but deploy requires a person to confirm every time\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "What are the three permission levels?",
+    "options": [
+      {
+        "text": "allow, ask, deny",
+        "correct": true
+      },
+      {
+        "text": "on, off"
+      },
+      {
+        "text": "free, paid"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "What commands are appropriate to auto-allow?",
+    "options": [
+      {
+        "text": "Tests, lint, build — safe and frequently used",
+        "correct": true
+      },
+      {
+        "text": "rm -rf and drop database"
+      },
+      {
+        "text": "Every command — it's convenient"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What's the benefit of project-level settings?",
+    "options": [
+      {
+        "text": "The team uses one shared rule set across the project",
+        "correct": true
+      },
+      {
+        "text": "Hides settings from the team"
+      },
+      {
+        "text": "No benefit"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "How should you set permissions well?",
+    "options": [
+      {
+        "text": "Always allow everything"
+      },
+      {
+        "text": "Deny everything until nothing works"
+      },
+      {
+        "text": "Grant permissions that fit the work — not too much or too little",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why is setting appropriate permissions important?",
+    "options": [
+      {
+        "text": "It's not important"
+      },
+      {
+        "text": "It balances convenience and security",
+        "correct": true
+      },
+      {
+        "text": "For slowness"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

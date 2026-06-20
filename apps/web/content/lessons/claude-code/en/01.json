@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 1 · Part 1",
+    "title": "What is Claude Code?",
+    "body": [
+      {
+        "text": "Claude Code is a "
+      },
+      {
+        "text": "CLI tool that lets Claude work directly in your project",
+        "bold": true
+      },
+      {
+        "text": " — reading files, editing code, running commands, and doing multi-step work without copy-pasting code back and forth."
+      }
+    ],
+    "example": "\"Find the bug in src/auth/ and fix it, with tests\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · Chapter 1 · Part 2",
+    "title": "Why developers love Claude Code",
+    "body": [
+      {
+        "text": "Claude Code can access "
+      },
+      {
+        "text": "the entire codebase at once",
+        "bold": true
+      },
+      {
+        "text": " — it understands the whole project's context, not just one snippet, so it can solve problems across files."
+      }
+    ],
+    "example": "\"Refactor the entire authentication system, separating concerns properly\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 1 of 5",
+    "question": "How is Claude Code different from using Claude.ai in the browser?",
+    "options": [
+      {
+        "text": "Claude Code is cheaper"
+      },
+      {
+        "text": "Claude Code works directly in the project, reading and editing files",
+        "correct": true
+      },
+      {
+        "text": "Claude Code only supports Python"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 2 of 5",
+    "question": "How is Claude Code installed?",
+    "options": [
+      {
+        "text": "App Store"
+      },
+      {
+        "text": "npm install -g @anthropic-ai/claude-code",
+        "correct": true
+      },
+      {
+        "text": "Download from claude.ai"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 3 of 5",
+    "question": "What is CLAUDE.md for?",
+    "options": [
+      {
+        "text": "Storing API keys"
+      },
+      {
+        "text": "Telling Claude the project's conventions and context",
+        "correct": true
+      },
+      {
+        "text": "Saving chat history"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 4 of 5",
+    "question": "What is Claude Code?",
+    "options": [
+      {
+        "text": "A regular chatbot that only replies to text"
+      },
+      {
+        "text": "A photo editor"
+      },
+      {
+        "text": "An AI tool that reads, edits, and runs code in a real project via the terminal",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "Question 5 of 5",
+    "question": "Why do developers love Claude Code?",
+    "options": [
+      {
+        "text": "Because you don't write any code at all"
+      },
+      {
+        "text": "It works with the real codebase — reading files, editing, and running commands",
+        "correct": true
+      },
+      {
+        "text": "Because it plays games"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

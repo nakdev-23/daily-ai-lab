@@ -15,17 +15,17 @@ everywhere. Bilingual infra is already in place (Thai fallback when EN missing).
 ## Check what's left
 `cd apps/web && node scripts/translate-content.mjs --kind all --dry-run`
 
-## Done (96/219 lessons)
+## Done (108/219 lessons)
 - chatgpt-basic ✅ · claude-basic ✅ · gemini-basic ✅
 - ai-advanced-pro ✅ · ai-mcp-pro ✅ · ai-skills-pro ✅
 - grok-basic ✅ · elevenlabs-basic ✅ · lovable-basic ✅ · midjourney-basic ✅
-- suno-basic ✅ · runway-basic ✅
+- suno-basic ✅ · runway-basic ✅ · codex-basic ✅
 
-## Next (lessons first, then docs) — 123 lessons left
-codex-basic (12) → codex-advanced (12) → chatgpt-advanced (15) →
-claude-advanced (15) → gemini-advanced (15) → claude-code (18) →
-claude-cowork (12) → claude-design (12) → claude-other (12)
-→ (any remaining) → then all 349 docs (.en.md).
+## Next (lessons first, then docs) — 111 lessons left
+codex-advanced (12) → chatgpt-advanced (15) → claude-advanced (15) →
+gemini-advanced (15) → claude-code (18) → claude-cowork (12) →
+claude-design (12) → claude-other (12) → (any remaining)
+→ then all 349 docs (.en.md).
 Always run the dry-run to confirm the true remaining set.
 
 Commit per course/tool with message `feat(i18n): translate <name> to English`,

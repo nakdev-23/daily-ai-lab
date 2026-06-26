@@ -863,6 +863,8 @@ export const th: Record<string, string> = {
   "characters": "ตัวอักษร",
   "Review with the rubric": "ตรวจงานด้วย rubric",
   "Score the current version honestly before submitting.": "ประเมินฉบับปัจจุบันตามจริงก่อนส่ง เพื่อเห็นจุดที่ควรปรับ",
+  "What AI will grade": "เกณฑ์ที่ AI จะใช้ตรวจ",
+  "AI scores your work against these criteria when you submit.": "พอกดส่ง AI จะให้คะแนนงานคุณตามเกณฑ์เหล่านี้",
   "Rubric score": "คะแนน rubric",
   "Feedback on your project": "Feedback สำหรับโปรเจกต์",
   "Strong points": "จุดที่ทำได้ดี",

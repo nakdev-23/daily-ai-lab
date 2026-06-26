@@ -39,7 +39,6 @@ export default function PathActivity({
   const t = makeT(lang)
   const [title, setTitle] = useState(initialSubmission?.artifactTitle ?? step.title)
   const [content, setContent] = useState(initialSubmission?.content ?? step.starterTemplate)
-  const [scores, setScores] = useState<Record<string, number>>(initialSubmission?.selfScores ?? {})
   const [feedback, setFeedback] = useState<ProjectFeedback | null>(initialSubmission?.feedback ?? null)
   const [error, setError] = useState("")
   const [award, setAward] = useState<number | null>(null)
@@ -57,8 +56,9 @@ export default function PathActivity({
     }
   }, [feedback])
 
-  const allScored = step.rubric.length > 0 && step.rubric.every((criterion) => scores[criterion.key] >= 1)
-  const canSubmit = title.trim().length >= 3 && content.trim().length >= 80 && allScored
+  // AI is the assessor now — the learner no longer self-scores the rubric. The
+  // rubric is shown read-only so they know what AI will grade against.
+  const canSubmit = title.trim().length >= 3 && content.trim().length >= 80
   const isProject = step.kind === "project"
 
   function downloadPlaybook() {
@@ -81,7 +81,7 @@ export default function PathActivity({
         stepId: step.id,
         artifactTitle: title,
         content,
-        selfScores: scores,
+        selfScores: {},
       })
       if (!result.ok) {
         setChecking(false)
@@ -153,27 +153,11 @@ export default function PathActivity({
         <section className="rubric-panel">
           <div className="rubric-heading">
             <ClipboardCheck size={21} />
-            <div><h2>{t("Review with the rubric")}</h2><p>{t("Score the current version honestly before submitting.")}</p></div>
+            <div><h2>{t("What AI will grade")}</h2><p>{t("AI scores your work against these criteria when you submit.")}</p></div>
           </div>
           {step.rubric.map((criterion) => (
-            <div className="rubric-row" key={criterion.key}>
+            <div className="rubric-row read-only" key={criterion.key}>
               <div><b>{criterion.label}</b><p>{criterion.guidance}</p></div>
-              <div className="rubric-scale" aria-label={criterion.label}>
-                {[1, 2, 3, 4].map((score) => (
-                  <button
-                    type="button"
-                    className={scores[criterion.key] === score ? "selected" : ""}
-                    onClick={() => {
-                      setScores((current) => ({ ...current, [criterion.key]: score }))
-                      setFeedback(null)
-                    }}
-                    key={score}
-                    aria-label={`${criterion.label} ${score}/4`}
-                  >
-                    {scores[criterion.key] === score ? <Check size={15} /> : score}
-                  </button>
-                ))}
-              </div>
             </div>
           ))}
         </section>

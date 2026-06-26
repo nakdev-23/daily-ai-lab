@@ -52,7 +52,9 @@
       {
         "text": "ส่งอีเมลขอ Anthropic"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ เพิ่ม MCP server ด้วย claude mcp add หรือไฟล์ .mcp.json  💡 ใช้ต่อ: ตัวอย่าง: claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+    "incorrectFeedback": "ไม่ใช่ติดตั้งไม่ได้หรือต้องส่งอีเมลขอ — ใช้ claude mcp add ได้เลย  💡 ใช้ต่อ: จำคำสั่ง claude mcp add <ชื่อ> -- <คำสั่งรัน>"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ซ่อนโค้ดจากทีม"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง .mcp.json ในโปรเจกต์ทำให้ทั้งทีมได้ MCP servers ชุดเดียวกันอัตโนมัติ  💡 ใช้ต่อ: commit .mcp.json ลง git เพื่อนใหม่เข้าทีมก็ได้ server ครบ",
+    "incorrectFeedback": ".mcp.json ไม่ได้ทำให้โค้ดรันเร็วหรือซ่อนโค้ด — มันแชร์ชุด server ให้ทีม  💡 ใช้ต่อ: ใช้ .mcp.json ให้ทีมตั้งค่าเหมือนกันทุกคน"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "แชร์ token ในแชทกลุ่ม"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ให้ token สิทธิ์ต่ำสุดที่พอใช้งานและเก็บใน env  💡 ใช้ต่อ: งานแค่อ่านข้อมูล ใช้ token read-only ก็พอ",
+    "incorrectFeedback": "อย่าให้ full admin ฝังในไฟล์ที่ commit หรือแชร์ token ในแชต — ให้สิทธิ์ต่ำสุดและเก็บใน env  💡 ใช้ต่อ: token รั่ว = ระบบทั้งระบบเสี่ยง"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "เลือกเฉพาะ server ที่เชื่อถือได้และจำกัดสิทธิ์",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ เลือกเฉพาะ server ที่เชื่อถือได้และจำกัดสิทธิ์  💡 ใช้ต่อ: ก่อนเพิ่ม server ถามว่ามันต้องเข้าถึงอะไรบ้าง จำเป็นไหม",
+    "incorrectFeedback": "อย่าติดตั้งทุกตัวที่เจอหรือให้สิทธิ์เต็มทันที — เลือกที่เชื่อถือได้และจำกัดสิทธิ์  💡 ใช้ต่อ: MCP server ทำงานแทนเราได้ จึงต้องระวัง"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "เพื่อความสวยงาม"
       }
+    ],
+    "correctFeedback": "ใช่ ต้องเลือก MCP server อย่างระวังเพราะเกี่ยวกับความปลอดภัยและการเข้าถึงข้อมูล  💡 ใช้ต่อ: ดูแหล่งที่มาและสิทธิ์ที่ขอ ก่อนเพิ่มทุกครั้ง",
+    "incorrectFeedback": "ไม่ใช่ไม่สำคัญหรือเพื่อความสวยงาม — เป็นเรื่องความปลอดภัยของข้อมูล  💡 ใช้ต่อ: ให้สิทธิ์น้อยที่สุดที่งานต้องใช้"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · เพิ่ม MCP server",
+    "title": "เพิ่ม MCP server ด้วย claude mcp add",
+    "instruction": "ลองเพิ่ม MCP server หนึ่งตัว (เช่น GitHub) ด้วยคำสั่งเดียว แล้วตรวจว่าเพิ่มสำเร็จ จำไว้ว่าให้ token สิทธิ์ต่ำสุด",
+    "example": "claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+    "checks": [
+      "เปิด terminal ในโปรเจกต์ของคุณ",
+      "รันคำสั่ง claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+      "เมื่อต้องใส่ token ให้เลือก scope แบบ read-only ถ้างานแค่อ่าน และเก็บ token ใน env",
+      "พิมพ์ claude mcp list เพื่อยืนยันว่า server ใหม่ปรากฏในรายการ"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · เพิ่ม MCP อย่างปลอดภัย",
+    "title": "ร่างคำสั่งเพิ่ม MCP server พร้อมหลักความปลอดภัย",
+    "instruction": "บทนี้สอนวิธีเพิ่ม MCP server และให้สิทธิ์ต่ำสุด ลองร่างคำสั่ง claude mcp add สำหรับ server ที่คุณอยากใช้ พร้อมระบุว่าจะให้สิทธิ์ token แค่ไหนและเก็บไว้ที่ไหน",
+    "payoff": "ได้คำสั่งเพิ่ม MCP ที่พร้อมรัน และหลักคิดเรื่องสิทธิ์/การเก็บ token ที่ใช้กับ server อื่นได้ทุกตัว",
+    "examples": {
+      "bad": "claude mcp add github (ใช้ token full admin ฝังในไฟล์ที่ commit)",
+      "badNote": "ให้สิทธิ์เกินจำเป็นและฝัง token ในไฟล์ที่ commit ลง git — token รั่วได้และเสี่ยงทั้งระบบ",
+      "good": "claude mcp add github -- npx -y @modelcontextprotocol/server-github\n(งานคือรีวิวโค้ด → ใช้ token scope repo:read เท่านั้น เก็บใน env ไม่ commit)",
+      "goodNote": "เพิ่มด้วยคำสั่งเดียว + ให้สิทธิ์ต่ำสุดที่พอใช้ (read) + เก็บ token ใน env → ปลอดภัย"
+    },
+    "starterPrompt": "claude mcp add ____ -- ____\n(สิทธิ์ที่ให้: ____ เก็บ token ที่: ____)",
+    "requirements": [
+      "เลือก MCP server ที่เชื่อถือได้และตรงกับงานของคุณ",
+      "ระบุระดับสิทธิ์ต่ำสุดที่พอใช้ (เช่น read-only ถ้าแค่อ่าน)",
+      "ระบุว่าจะเก็บ token ใน env ไม่ฝังในไฟล์ที่ commit"
     ]
   },
   {

@@ -35,7 +35,8 @@ export default function PathEdit({ path }: { path: CareerPath }) {
   function toggleOpen(id: string) {
     setOpen((prev) => {
       const next = new Set(prev)
-      next.has(id) ? next.delete(id) : next.add(id)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
       return next
     })
   }
@@ -191,6 +192,9 @@ function StepModal({ step, moduleId, nextOrder, onClose }: { step: PathStep | nu
             <div className="fld"><label>Slug ของคอร์ส</label><input className="fin" name="course_slug" defaultValue={step?.courseSlug ?? ""} placeholder="chatgpt-basic" required /></div>
             <div className="fld"><label>บทที่</label><input className="fin" name="lesson_num" type="number" min="1" defaultValue={step?.lessonNum ?? 1} /></div>
           </div>
+          <div className="fld"><label>โจทย์สำหรับ Checkpoint / Project</label><textarea className="fin" name="brief" rows={3} defaultValue={step?.brief ?? ""} placeholder="อธิบายสถานการณ์จริงและเป้าหมายของงาน" /></div>
+          <div className="fld"><label>สิ่งที่ต้องส่ง</label><textarea className="fin" name="deliverable" rows={2} defaultValue={step?.deliverable ?? ""} placeholder="ชิ้นงานฉบับพร้อมใช้ พร้อม prompt และ checklist" /></div>
+          <div className="fld"><label>Starter template</label><textarea className="fin" name="starter_template" rows={7} defaultValue={step?.starterTemplate ?? ""} placeholder={"เป้าหมายของงาน:\nกลุ่มผู้ใช้:\nPrompt:\nชิ้นงานฉบับสุดท้าย:"} /></div>
           <div className="fld"><label>ลำดับ</label><input className="fin" name="order_index" type="number" min="0" defaultValue={step?.orderIndex ?? nextOrder} /></div>
         </div>
         <div className="modal-foot">

@@ -37,7 +37,7 @@ ChatGPT opens Canvas automatically when the system detects the task suits Canvas
 2. Choose **Canvas** from the menu
 3. Or type in the chat *"open a Canvas for this task"* or *"write it as a document"*
 
-> **Note**: Canvas works only with **GPT-4o** and newer models (the trained AI program).
+> **Note**: Canvas works only with **GPT-5.5** and newer models (the trained AI program).
 
 ---
 

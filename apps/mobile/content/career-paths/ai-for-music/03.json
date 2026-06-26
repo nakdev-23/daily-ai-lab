@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Music · บทที่ 3 · Brief",
+    "title": "Music Brief คือเข็มทิศของเพลง",
+    "body": [
+      { "text": "ถ้า brief ชัด เพลงจะไม่หลุดทางง่าย Brief ที่ดีควรมี use case, audience, mood, genre, tempo, instrumentation, language, length, structure และข้อห้าม เช่น ไม่เลียนเสียงศิลปินจริง ไม่ใช้คำแบรนด์ถ้าไม่ได้รับอนุญาต" }
+    ],
+    "example": "Use case: เพลงประกอบคลิปเปิดตัวคาเฟ่\nAudience: คนวัยทำงานที่ชอบร้านเงียบอบอุ่น\nMood: cozy, hopeful, light\nGenre: acoustic pop\nLength: 30 วินาที\nStructure: intro 4 bars -> hook -> short outro",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Music · บทที่ 3 · Success criteria",
+    "title": "เขียนเกณฑ์สำเร็จก่อน ไม่งั้นจะเลือกเพลงด้วยความรู้สึกล้วน",
+    "body": [
+      { "text": "การเลือกเพลงจาก AI ต้องมีเกณฑ์ ไม่ใช่แค่ฟังแล้วชอบ เช่น hook จำได้ไหม, mood ตรงโจทย์ไหม, เสียงร้องชัดไหม, เพลงเข้ากับ use case ไหม, มีจุดที่ต้องแก้หรือไม่ เกณฑ์นี้จะใช้ตอน generate หลายเวอร์ชันในบทถัดไป" }
+    ],
+    "example": "คะแนน 1-5:\n- Hook จำง่าย\n- Mood ตรง brief\n- ใช้กับคลิปได้จริง\n- ไม่มีส่วนเสียงเพี้ยนหรือคำแปลก\n- ไม่เสี่ยงเลียนแบบศิลปินจริง",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Brief",
+    "title": "ทำ Music Brief สำหรับเพลงของคุณ",
+    "instruction": "ใช้โปรเจกต์จากบท 1 แล้วเขียน Music Brief ให้ละเอียดพอที่จะใช้สั่ง AI ทำเพลงจริงได้ คิดเหมือนคุณจะส่ง brief นี้ให้โปรดิวเซอร์หรือเพื่อนร่วมทีมอ่าน",
+    "payoff": "Music Brief ที่พร้อมใช้สร้าง lyrics และ style prompt",
+    "starterPrompt": "Music Brief\n\nชื่อโปรเจกต์เพลง:\n\nUse case / ใช้ที่ไหน:\n\nผู้ฟังเป้าหมาย:\n\nMood ที่ต้องการ:\n\nGenre / style:\n\nTempo หรือพลังงานของเพลง:\n\nเครื่องดนตรีหรือ texture ที่อยากได้:\n\nภาษาและความยาว:\n\nโครงสร้างเพลงที่อยากได้:\n\nสิ่งที่ห้ามทำ:\n\nเกณฑ์สำเร็จ 3-5 ข้อ:\n1.\n2.\n3.\n",
+    "requirements": [
+      "ระบุ use case, audience, mood และ genre ชัด",
+      "มีรายละเอียดด้าน tempo/instrument/length/structure",
+      "มีข้อห้ามและเกณฑ์สำเร็จสำหรับเลือกเวอร์ชัน"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Use case / ใช้ที่ไหน", "ผู้ฟังเป้าหมาย", "Mood ที่ต้องการ", "Genre / style"], "minChars": 8 },
+      { "filledAfterAll": ["Tempo หรือพลังงานของเพลง", "เครื่องดนตรีหรือ texture ที่อยากได้", "ภาษาและความยาว", "โครงสร้างเพลงที่อยากได้"], "minChars": 6 },
+      { "filledAfterAll": ["สิ่งที่ห้ามทำ", "เกณฑ์สำเร็จ 3-5 ข้อ"], "minChars": 10 }
+    ],
+    "minLength": 200
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Brief",
+    "question": "Music Brief ที่ดีควรช่วยอะไร?",
+    "options": [
+      { "text": "ทำให้ AI และคนทำงานเข้าใจ use case, mood, structure, constraints และเกณฑ์เลือกเพลง", "correct": true },
+      { "text": "ทำให้ไม่ต้องฟังเพลงที่ generate แล้ว" },
+      { "text": "ทำให้เพลงเหมือนเพลงดังมากขึ้น" }
+    ],
+    "correctFeedback": "ถูกต้อง brief คือเครื่องมือควบคุมทิศทางและใช้ตัดสินผลลัพธ์หลัง generate",
+    "incorrectFeedback": "Brief ไม่ได้แทนการฟังตรวจ และไม่ควรใช้เพื่อเลียนแบบเพลงดัง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Criteria",
+    "question": "ทำไมต้องมีเกณฑ์สำเร็จก่อน generate เพลง?",
+    "options": [
+      { "text": "เพื่อเลือกเวอร์ชันด้วยเหตุผล เช่น mood ตรง, hook จำง่าย, ใช้จริงได้", "correct": true },
+      { "text": "เพื่อให้เพลงยาวขึ้นเสมอ" },
+      { "text": "เพื่อไม่ต้องแก้ prompt อีก" }
+    ],
+    "correctFeedback": "ถูกต้อง เกณฑ์ช่วยให้การคัดเลือกไม่ใช่แค่ความรู้สึกชั่วคราว",
+    "incorrectFeedback": "เกณฑ์ไม่ได้ทำให้เพลงยาวขึ้นหรือทำให้ไม่ต้อง iterate แต่ช่วยให้ iterate ตรงจุด"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Constraints",
+    "question": "ข้อห้ามใดควรอยู่ใน Music Brief?",
+    "options": [
+      { "text": "ไม่เลียนเสียงศิลปินจริง ไม่ใช้ชื่อแบรนด์จริงถ้าไม่ได้รับอนุญาต และไม่อ้างสิทธิ์เกินจริง", "correct": true },
+      { "text": "ห้ามแก้เพลงหลัง generate" },
+      { "text": "ห้ามทำหลายเวอร์ชัน" }
+    ],
+    "correctFeedback": "ถูกต้อง ข้อห้ามควรลดความเสี่ยงด้านสิทธิ์และการใช้งานจริง",
+    "incorrectFeedback": "การแก้และทำหลายเวอร์ชันคือส่วนสำคัญของงานกำกับเพลง AI"
+  },
+  { "type": "done" }
+]

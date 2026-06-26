@@ -1,0 +1,33 @@
+.dlab-app .portfolio-page { width: 100%; max-width: 980px; margin: 0 auto; }
+.dlab-app .portfolio-head {
+  min-height: 170px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--hero-100);
+}
+.dlab-app .portfolio-head > div > span { display: inline-flex; align-items: center; gap: 7px; color: var(--hero-700); font-size: 13px; font-weight: 800; }
+.dlab-app .portfolio-head h1 { max-width: 650px; margin: 8px 0 5px; color: var(--text-strong); font-size: 30px; }
+.dlab-app .portfolio-head p { max-width: 620px; margin: 0; color: var(--text-body); line-height: 1.65; }
+.dlab-app .portfolio-head img { flex: none; object-fit: contain; }
+.dlab-app .portfolio-empty { margin-top: 24px; padding: 54px 24px; border: 2px dashed var(--hero-200); border-radius: var(--radius-lg); text-align: center; }
+.dlab-app .portfolio-empty > svg { color: var(--hero-500); }
+.dlab-app .portfolio-empty h2 { margin: 14px 0 6px; font-size: 23px; }
+.dlab-app .portfolio-empty p { max-width: 600px; margin: 0 auto 24px; color: var(--text-muted); line-height: 1.65; }
+.dlab-app .portfolio-list { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.dlab-app .portfolio-artifact { padding: 22px; border-radius: var(--radius-md); background: #fff; box-shadow: 0 5px 0 var(--cloud-200); }
+.dlab-app .portfolio-meta { display: flex; justify-content: space-between; gap: 12px; color: var(--hero-600); font-size: 12px; font-weight: 800; }
+.dlab-app .portfolio-meta time { color: var(--text-muted); }
+.dlab-app .portfolio-artifact h2 { margin: 12px 0 7px; color: var(--text-strong); font-size: 20px; }
+.dlab-app .portfolio-artifact > p { margin: 0; color: var(--text-body); font-size: 14px; line-height: 1.65; white-space: pre-line; }
+.dlab-app .portfolio-foot { margin-top: 18px; padding-top: 15px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--cloud-100); }
+.dlab-app .portfolio-score { display: inline-flex; align-items: center; gap: 6px; color: var(--mint-600); font-size: 12px; font-weight: 800; }
+.dlab-app .portfolio-foot a { display: inline-flex; align-items: center; gap: 4px; color: var(--hero-700); font-size: 12px; font-weight: 800; text-decoration: none; }
+@media (max-width: 640px) {
+  .dlab-app .portfolio-head { padding: 22px; }
+  .dlab-app .portfolio-head img { width: 80px; height: 80px; }
+  .dlab-app .portfolio-foot { align-items: flex-start; flex-direction: column; }
+}

@@ -2,13 +2,15 @@
 
 import Image from "next/image"
 import { useState, useTransition } from "react"
-import { Check, X, Crown, CreditCard, RefreshCw, BookOpen, Sparkles } from "lucide-react"
+import { Check, X, Crown, CreditCard, BookOpen, Sparkles, Lock } from "lucide-react"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import { createCheckoutSession } from "./actions"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
 
-export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang }: { priceMonth: number; priceYear: number; freePerDay: number; lang: Lang }) {
+type PathContext = { title: string; remaining: number; outcomes: string[]; deliverables: string[] }
+
+export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang, reason, pathContext }: { priceMonth: number; priceYear: number; freePerDay: number; lang: Lang; reason?: string; pathContext?: PathContext }) {
   const t = makeT(lang)
   const [bill, setBill] = useState<"month" | "year">("month")
   const [err, setErr] = useState(false)
@@ -20,7 +22,8 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
   ]
   const PRO_FEATURES = [
     t("Unlimited lessons"), t("All career paths"), t("Full documentation library"),
-    t("Unlimited hearts"), t("Streak freeze & Pro badges"), t("No ads"),
+    t("Prompt template library"), t("Downloadable project playbooks"),
+    t("AI-graded projects + certificate"), t("Portfolio artifacts"),
   ]
 
   const CMP: ({ grp: string } | { feat: string; free: string | boolean; pro: string | boolean })[] = [
@@ -28,15 +31,19 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
     { feat: t("Lessons per day"), free: t("{n} lessons", { n: freePerDay }), pro: t("Unlimited") },
     { feat: t("Career paths"), free: false, pro: true },
     { feat: t("Docs library"), free: t("Beginner"), pro: t("Every level") },
-    { feat: t("Practice mode"), free: false, pro: true },
+    { feat: t("Hands-on practice steps"), free: true, pro: true },
+    { feat: t("AI feedback on practice prompts"), free: true, pro: true },
     { grp: t("Game & hearts") },
     { feat: t("Hearts"), free: t("{n} hearts", { n: 5 }), pro: t("Unlimited") },
     { feat: t("Streak freeze"), free: false, pro: true },
     { feat: t("Exclusive Pro badges"), free: false, pro: true },
+    { grp: t("Work you can take with you") },
+    { feat: t("Prompt template library"), free: false, pro: true },
+    { feat: t("Downloadable project playbooks"), free: false, pro: true },
+    { feat: t("AI-graded career projects"), free: false, pro: true },
+    { feat: t("Portfolio artifacts"), free: t("1 sample"), pro: t("Every project") },
     { grp: t("Others") },
-    { feat: t("No ads"), free: false, pro: true },
     { feat: t("Certificate on completion"), free: false, pro: true },
-    { feat: t("Priority support"), free: false, pro: true },
   ]
 
   // Yearly is shown as an effective per-month price; savings vs paying monthly.
@@ -50,7 +57,6 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
 
   const FAQ = [
     { ic: CreditCard, q: t("How do I pay? Can I cancel?"), a: t("We accept credit/debit cards and PromptPay. Cancel anytime from Settings — Pro stays active until the end of the period you paid for, no penalty.") },
-    { ic: RefreshCw, q: t("Can I switch between monthly and yearly?"), a: t("Yes, switch anytime and we prorate the difference automatically. Yearly saves about {pct}%.", { pct: savePct }) },
     { ic: BookOpen, q: t("Will I lose my progress if I upgrade?"), a: t("Never. Your XP, streaks, badges and finished lessons all stay — upgrading just unlocks more content and features instantly.") },
   ]
 
@@ -69,10 +75,37 @@ export default function UpgradeClient({ priceMonth, priceYear, freePerDay, lang 
 
   return (
     <>
+      {pathContext ? (
+        <div className="up-context" style={{ maxWidth: 880, margin: "8px auto 0", padding: "18px 22px", borderRadius: 18, background: "var(--hero-100)", border: "1px solid var(--hero-200, #e7ddff)" }}>
+          <span className="eyebrow"><Lock size={14} style={{ display: "inline", verticalAlign: "-2px" }} /> {t("Continue {title}", { title: pathContext.title })}</span>
+          <h2 className="display" style={{ fontSize: "clamp(22px,3vw,30px)", margin: "6px 0 8px" }}>
+            {t("Unlock the rest of this path")}
+          </h2>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.6, margin: 0 }}>
+            {t("You tried the first lessons free. Go Pro to unlock the remaining {n} steps — with AI review, project feedback, certificate, and a portfolio you can use for real work.", { n: pathContext.remaining })}
+          </p>
+          {pathContext.deliverables.length > 0 && (
+            <ul style={{ margin: "12px 0 0", padding: 0, listStyle: "none", display: "flex", flexWrap: "wrap", gap: "8px 16px" }}>
+              {pathContext.deliverables.map((d) => (
+                <li key={d} style={{ display: "flex", alignItems: "center", gap: 6, fontWeight: 700, fontSize: 13.5 }}>
+                  <Check size={15} className="text-violet-600" /> {d}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ) : reason === "daily_limit" ? (
+        <div className="up-context" style={{ maxWidth: 880, margin: "8px auto 0", padding: "18px 22px", borderRadius: 18, background: "var(--hero-100)", border: "1px solid var(--hero-200, #e7ddff)" }}>
+          <span className="eyebrow"><Crown size={14} style={{ display: "inline", verticalAlign: "-2px" }} /> {t("Out of free lessons today")}</span>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.6, margin: "6px 0 0" }}>
+            {t("Go Pro for unlimited lessons, every career path, AI review and certificates — keep your momentum going.")}
+          </p>
+        </div>
+      ) : null}
       <div className="up-hero">
         <Image className="up-mascot" src={`${M}/cockatiel-superhero.png`} alt="Riri Pro" width={120} height={120} />
         <h1>{t("Unlock your full potential with")} <span className="grad-text">Pro</span></h1>
-        <p>{t("Unlimited lessons, every career path, unlimited hearts and more.")}</p>
+        <p>{t("Build reusable prompts, complete real projects, and leave with work for your portfolio.")}</p>
         <div className="bill-toggle">
           <button className={bill === "month" ? "on" : ""} onClick={() => setBill("month")}>{t("Monthly")}</button>
           <button className={bill === "year" ? "on" : ""} onClick={() => setBill("year")}>{t("Yearly")} <span className="save-tag">{t("Save ~{pct}%", { pct: savePct })}</span></button>

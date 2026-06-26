@@ -8,7 +8,7 @@ import LangToggle from "@/components/lang-toggle"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import { createClient } from "@/lib/supabase/client"
 import {
-  GraduationCap, Rocket, BookOpen, Trophy, User, Settings, Shield,
+  GraduationCap, Rocket, BookOpen, Trophy, Award, BriefcaseBusiness, User, Settings, Shield,
   Crown, Flame, Zap, Heart, Menu, PanelLeftClose, PanelLeftOpen, LogOut,
   Infinity as InfinityIcon,
 } from "lucide-react"
@@ -18,6 +18,8 @@ const M = "/assets/daily-ai-lab/mascot-ds"
 const NAV = [
   { href: "/daily-learn", en: "Daily Learn", icon: GraduationCap },
   { href: "/paths", en: "Career paths", icon: Rocket },
+  { href: "/portfolio", en: "Portfolio", icon: BriefcaseBusiness },
+  { href: "/certificates", en: "Certificates", icon: Award },
   { href: "/docs", en: "Docs", icon: BookOpen },
   { href: "/leaderboard", en: "Leaderboard", icon: Trophy },
 ]
@@ -26,6 +28,8 @@ const TITLES: Record<string, string> = {
   "/daily-learn": "Daily Learn",
   "/dashboard": "Daily Learn",
   "/paths": "Career paths",
+  "/portfolio": "Portfolio",
+  "/certificates": "Certificates",
   "/docs": "Docs",
   "/leaderboard": "Leaderboard",
   "/profile": "Profile",
@@ -136,7 +140,7 @@ export default function AppShell({ children, displayName, role, pro = false, ava
           {!pro && (
             <div className="side-pro">
               <h4><Crown size={16} className="text-amber-500" /> <span className="side-txt">{t("Go Pro")}</span></h4>
-              <p>{t("Unlimited lessons, all paths & hearts.")}</p>
+              <p>{t("Projects, playbooks, feedback & portfolio.")}</p>
               <Link className="btn btn--violet sm" style={{ width: "100%" }} href="/upgrade" onClick={() => setOpen(false)}><span className="side-txt">{t("Upgrade")}</span><Crown size={16} className="side-pro-ic" /></Link>
             </div>
           )}

@@ -6,7 +6,7 @@ import { makeT, type Lang } from "@/lib/i18n-core"
 import type { CareerPath } from "@/lib/career-paths"
 import {
   Rocket, BookOpen, Award, ChevronRight,
-  Brain, Megaphone, Briefcase, Zap, Search, Lock,
+  Brain, Megaphone, Briefcase, Zap, Search, Hammer,
 } from "lucide-react"
 
 const TONE_META: Record<string, { bg: string; cls: string; Icon: React.ElementType }> = {
@@ -85,18 +85,20 @@ export default function PathsGrid({ lang, paths, isPro = false }: { lang: Lang; 
                           </span>
                         ))}
                       </div>
+                      {p.practicalRatio > 0 && (
+                        <div className="path-ratio">
+                          <span><Hammer size={14} /> {p.practicalRatio}% {t("hands-on practice")}</span>
+                          <span>{100 - p.practicalRatio}% {t("essential theory")}</span>
+                        </div>
+                      )}
                       <div className="path-foot">
                         <span className="pm"><BookOpen size={14} /> {lessons || p.modules.length} {t("lessons")}</span>
                         <span className="pm"><Award size={14} /> {t("Certificate")}</span>
-                        {p.isPro && !isPro ? (
-                          <Link className="btn btn--ghost md" style={{ marginLeft: "auto" }} href="/upgrade">
-                            <Lock size={14} /> Pro
-                          </Link>
-                        ) : (
-                          <Link className="btn btn--violet md" style={{ marginLeft: "auto" }} href={`/paths/${p.slug}`}>
-                            {t("Start path")} <ChevronRight size={16} />
-                          </Link>
-                        )}
+                        <Link className="btn btn--violet md" style={{ marginLeft: "auto" }} href={`/paths/${p.slug}`}>
+                          {p.isPro && !isPro
+                            ? <>{t("Preview free")} <ChevronRight size={16} /></>
+                            : <>{t("Start path")} <ChevronRight size={16} /></>}
+                        </Link>
                       </div>
                     </div>
                   </div>

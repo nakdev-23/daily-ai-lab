@@ -123,6 +123,10 @@ export async function saveStepAction(
     lesson_num:  parseInt(form.get("lesson_num") as string) || 1,
     xp:          parseInt(form.get("xp") as string) || 10,
     order_index: parseInt(form.get("order_index") as string) || 0,
+    brief:       (form.get("brief") as string | null)?.trim() || null,
+    deliverable: (form.get("deliverable") as string | null)?.trim() || null,
+    starter_template: (form.get("starter_template") as string | null)?.trim() || null,
+    is_portfolio: form.get("kind") === "project",
   }
   const { error } = id
     ? await supabase.from("path_steps").update(payload).eq("id", id)

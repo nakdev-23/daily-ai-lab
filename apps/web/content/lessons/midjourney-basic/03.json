@@ -52,7 +52,9 @@
       {
         "text": "ชื่อเรา + อีเมล + เบอร์โทร"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง เรียง ประธาน + รายละเอียด + สไตล์ + คำคุณภาพ ช่วยให้ AI แยกแยะได้ชัด  💡 ใช้ต่อ: ขึ้นต้นด้วย \"อะไร\" เสมอ แล้วค่อยเติมสี ฉาก แสง สไตล์",
+    "incorrectFeedback": "ราคา ขนาดไฟล์ หรืออีเมล ไม่เกี่ยวกับ prompt ภาพเลย  💡 ใช้ต่อ: ลำดับที่ดีคือ ประธาน → รายละเอียด → สไตล์ → คำคุณภาพ"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ไม่มีผลใดๆ"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ comma ช่วยให้ AI แยกแต่ละองค์ประกอบออกจากกัน อ่าน prompt ได้เป็นส่วน ๆ  💡 ใช้ต่อ: คั่นทุกไอเดียด้วย comma เช่น a cat, red collar, on a sofa, cozy",
+    "incorrectFeedback": "comma ไม่ได้ทำให้ภาพใหญ่ขึ้น และมีผลจริง  💡 ใช้ต่อ: ใช้ comma คั่นองค์ประกอบ AI จะไม่สับสนว่าคำไหนขยายคำไหน"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "'please make it nice'"
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ 'oil painting', 'watercolor', 'photograph 35mm' คือคำกำหนดสื่อ/เทคนิคของภาพ  💡 ใช้ต่อ: เลือกสื่อให้ตรงลุค เช่น อยากได้ภาพถ่ายใส่ 'photograph', อยากได้ภาพวาดใส่ 'oil painting'",
+    "incorrectFeedback": "'--fast' คือพารามิเตอร์ความเร็ว ส่วน 'please make it nice' กว้างเกินจน AI ไม่เข้าใจ  💡 ใช้ต่อ: ระบุสื่อชัด ๆ เช่น watercolor, 3D render, photograph"
   },
   {
     "type": "quiz",
@@ -103,6 +109,41 @@
       {
         "text": "ลดเครดิตที่ใช้"
       }
+    ],
+    "correctFeedback": "ใช่ คำแสงอย่าง 'golden hour' กำหนดบรรยากาศและลุคของภาพได้แรงมาก  💡 ใช้ต่อ: ลองสลับ 'golden hour' กับ 'studio lighting' กับ 'moody night' ดูอารมณ์ต่างกันชัด",
+    "incorrectFeedback": "คำแสงไม่ได้เปลี่ยนเป็นวิดีโอหรือลดเครดิต มันคุมบรรยากาศภาพ  💡 ใช้ต่อ: ใส่คำแสงทุกครั้ง ภาพจะมีมิติขึ้นทันที"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · เขียน prompt มีโครงสร้าง",
+    "title": "ประธาน + รายละเอียด + สไตล์ + คุณภาพ",
+    "instruction": "เขียน prompt ที่เรียงเป็นชั้น ๆ คั่นด้วย comma แล้วลองสลับคำสไตล์ดูว่าลุคเปลี่ยนแค่ไหน",
+    "example": "/imagine a samurai standing in bamboo forest, morning mist, dramatic lighting, cinematic, ultra detailed",
+    "checks": [
+      "พิมพ์ /imagine แล้ววาง prompt ด้านบน กด Enter ดูผล",
+      "สังเกตว่าแต่ละส่วนที่คั่นด้วย comma มีผลต่อภาพยังไง",
+      "ลองเปลี่ยน 'cinematic' เป็น 'watercolor painting' แล้ว /imagine ใหม่",
+      "เทียบสองภาพ จะเห็นว่าคำสไตล์/สื่อเปลี่ยนลุคได้แรงมาก",
+      "เก็บคำที่เวิร์กไว้เป็นสูตรของตัวเอง"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · prompt มีโครงสร้าง",
+    "title": "เรียง prompt เป็นชั้น + เลือกสื่อ/แสง",
+    "instruction": "บทนี้สอนโครงสร้าง ประธาน + รายละเอียด + สไตล์ + คุณภาพ และคำสื่อ/แสง ลองเขียน prompt 1 อันสำหรับภาพที่อยากใช้จริง โดยเรียงเป็นชั้นคั่นด้วย comma และระบุสื่อ (เช่น watercolor) กับแสง (เช่น golden hour)",
+    "payoff": "ได้ prompt ที่คุมลุคได้ตามตั้งใจ ไม่ใช่ปล่อย AI เดา และมีสูตรเรียงคำที่ใช้ซ้ำได้ทุกภาพ",
+    "examples": {
+      "bad": "samurai forest cool nice please",
+      "badNote": "ไม่มีโครงสร้าง ไม่มี comma ไม่ระบุสื่อ/แสง AI สับสนว่าคำไหนสำคัญ",
+      "good": "a samurai standing in a bamboo forest, morning mist, dramatic side lighting, cinematic, ultra detailed",
+      "goodNote": "เรียง subject → รายละเอียด → แสง → สไตล์ → คุณภาพ คั่น comma ชัด AI แยกแยะได้"
+    },
+    "starterPrompt": "[ประธาน], [รายละเอียด: สี/ท่าทาง/ฉาก], [สไตล์/สื่อ], [แสง], [คำคุณภาพ]",
+    "requirements": [
+      "ประธาน + รายละเอียด: ตัวเอกคืออะไร อยู่ในฉากแบบไหน คั่นด้วย comma",
+      "สื่อ/สไตล์: ระบุเทคนิค เช่น photograph 35mm, watercolor, 3D render",
+      "แสง + คุณภาพ: ใส่คำแสง (golden hour ฯลฯ) และคำคุณภาพ (highly detailed)"
     ]
   },
   {

@@ -84,6 +84,7 @@ export default async function LessonPage({
       initialHearts={heart.hearts}
       heartsMax={heart.max}
       unlimitedHearts={heart.unlimited}
+      isPro={isPro(profile)}
       nextRefill={heart.nextRefill}
       lang={lang}
     />

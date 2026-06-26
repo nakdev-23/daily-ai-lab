@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 6 · ตอนที่ 1",
+    "title": "Database Tasks",
+    "body": [
+      {
+        "text": "Codex ช่วยงานฐานข้อมูลได้ครบ: "
+      },
+      {
+        "text": "ออกแบบ schema, เขียน migration, ปรับ query ให้เร็วขึ้น",
+        "bold": true
+      },
+      {
+        "text": " — แนบ schema ปัจจุบันแล้วบอกว่าต้องการเปลี่ยนอะไร มันจะเขียน migration ที่ปลอดภัยให้"
+      }
+    ],
+    "example": "\"เพิ่มตาราง notifications (user_id, type, read_at) พร้อม index ที่เหมาะกับ query 'แจ้งเตือนที่ยังไม่อ่านของ user'\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 6 · ตอนที่ 2",
+    "title": "Migration อย่างปลอดภัย",
+    "body": [
+      {
+        "text": "กฎเหล็กของ migration: "
+      },
+      {
+        "text": "ย้อนกลับได้ (rollback) และไม่ทำข้อมูลเดิมพัง",
+        "bold": true
+      },
+      {
+        "text": " — ขอ down migration คู่กับ up เสมอ และทดสอบกับสำเนาข้อมูลจริงก่อนรันบน production"
+      }
+    ],
+    "example": "\"เขียน migration เปลี่ยนคอลัมน์ price จาก int เป็น decimal พร้อม down migration และแผนถ้าข้อมูลเดิมมีค่าผิดปกติ\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "จะให้ Codex ช่วยงานฐานข้อมูล ควรแนบอะไร?",
+    "options": [
+      {
+        "text": "schema ปัจจุบันและสิ่งที่ต้องการเปลี่ยน",
+        "correct": true
+      },
+      {
+        "text": "ข้อมูลลูกค้าทั้งหมด"
+      },
+      {
+        "text": "รหัสผ่านฐานข้อมูล"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "Migration ที่ดีต้องมีคุณสมบัติอะไร?",
+    "options": [
+      {
+        "text": "ย้อนกลับได้และไม่ทำข้อมูลเดิมพัง",
+        "correct": true
+      },
+      {
+        "text": "รันเร็วที่สุดไม่สนผลกระทบ"
+      },
+      {
+        "text": "ลบข้อมูลเก่าทิ้งเสมอ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ก่อนรัน migration บน production ควรทำอะไร?",
+    "options": [
+      {
+        "text": "ทดสอบกับสำเนาข้อมูลจริงก่อน",
+        "correct": true
+      },
+      {
+        "text": "รันเลยตอนเที่ยงวันที่คนใช้เยอะสุด"
+      },
+      {
+        "text": "ลบ backup ทิ้งให้เครื่องว่าง"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "ทำ Database Migration อย่างปลอดภัยควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "รันบน production ทันที"
+      },
+      {
+        "text": "ไม่สำรองข้อมูล"
+      },
+      {
+        "text": "สำรองข้อมูลและทดสอบบน environment ที่ไม่ใช่ production ก่อน",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ความเสี่ยงหลักของ migration คือ?",
+    "options": [
+      {
+        "text": "ทำให้เร็วขึ้นเสมอ"
+      },
+      {
+        "text": "ข้อมูลเสียหายหากผิดพลาด จึงต้องระวัง",
+        "correct": true
+      },
+      {
+        "text": "ไม่มีความเสี่ยง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

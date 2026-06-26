@@ -11,3 +11,11 @@ dist
 
 # Scratch artifacts (screenshots, throwaway chrome profile)
 /tmp-*
+
+# Playwright MCP working dir + ad-hoc screenshots
+.playwright-mcp/
+pw-*.png
+
+# Expo caches / export output
+.expo/
+.expo-export-test/

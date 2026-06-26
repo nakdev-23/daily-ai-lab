@@ -1,15 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
-import { notFound, redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import { getLang, makeT } from "@/lib/i18n"
 import { requireUser, isPro } from "@/lib/auth"
 import { createClient } from "@/lib/supabase/server"
 import { getCareerPath, totalSteps, totalXp } from "@/lib/career-paths"
-import type { PathStep } from "@/lib/career-paths"
+import { FREE_CAREER_PREVIEW_STEPS, pathUpgradeHref } from "@/lib/career-preview"
+import { getMyCertificateForPath } from "@/lib/certificates"
 import ToolLogo from "@/components/tool-logo"
 import {
   Brain, Zap, Check, Lock, Award, BookOpen,
-  CheckCircle2, Flag, Wrench, ChevronRight,
+  CheckCircle2, Flag, Wrench, ChevronRight, Target, BriefcaseBusiness,
 } from "lucide-react"
 
 const TONE_META: Record<string, { bg: string; Icon: React.ElementType }> = {
@@ -39,18 +40,23 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
 
   if (!path) notFound()
 
-  // Paywall: Pro career paths require a Pro plan (admins always pass via isPro).
-  if (path.isPro && !isPro(profile)) redirect("/upgrade")
+  // Free preview: Pro paths are viewable, and Free users may learn the first
+  // few steps before the paywall. Pro users (and admins) get full access.
+  const isProUser = isPro(profile)
+  const isPreview = path.isPro && !isProUser
 
   // Path progress lives under its own key ("path:{slug}") — fully separate
   // from daily-learn course progress. Steps complete strictly in order.
   const supabase = await createClient()
-  const { data: progressRow } = await supabase
-    .from("course_progress")
-    .select("lessons_done")
-    .eq("user_id", profile.id)
-    .eq("course_id", `path:${path.slug}`)
-    .maybeSingle()
+  const [{ data: progressRow }, certificate] = await Promise.all([
+    supabase
+      .from("course_progress")
+      .select("lessons_done")
+      .eq("user_id", profile.id)
+      .eq("course_id", `path:${path.slug}`)
+      .maybeSingle(),
+    getMyCertificateForPath(path.id),
+  ])
   const stepsDone = progressRow?.lessons_done ?? 0
 
   // Pre-compute step states: first N done, step N+1 is current, rest locked.
@@ -64,7 +70,14 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
   const pct = totalSteps(path) > 0 ? Math.round((doneCount / totalSteps(path)) * 100) : 0
 
   const continueIdx = Math.min(stepsDone + 1, flatSteps.length)
-  const continueHref = flatSteps.length > 0 ? `/paths-learn/${path.slug}/${continueIdx}` : "/paths"
+  // For a Free user mid-preview, the next step may be past the preview cap — send
+  // them to a contextual upgrade instead of a step they can't open.
+  const continueLocked = isPreview && continueIdx > FREE_CAREER_PREVIEW_STEPS
+  const continueHref = flatSteps.length === 0
+    ? "/paths"
+    : continueLocked
+      ? pathUpgradeHref(path.slug, continueIdx, "path_locked")
+      : `/paths-learn/${path.slug}/${continueIdx}`
 
   const { bg, Icon } = TONE_META[path.tone] ?? TONE_META.violet
 
@@ -77,8 +90,6 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
   const kindLabel: Record<string, string> = {
     lesson: t("Lesson"), quiz: t("Quiz"), checkpoint: t("Checkpoint"), project: t("Project"),
   }
-  const _ = lang // suppress unused
-
   return (
     <>
       <div className="wrap" style={{ paddingTop: 8, fontSize: 13.5, fontWeight: 700, color: "var(--text-muted)" }}>
@@ -110,21 +121,56 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
         </div>
         <div className="ch-cta">
           <Link className="btn btn--violet lg" href={continueHref}>
-            {doneCount > 0 ? t("Continue") : t("Start learning")} <ChevronRight size={18} />
+            {continueLocked
+              ? <><Lock size={16} /> {t("Unlock to continue")}</>
+              : <>{doneCount > 0 ? t("Continue") : t("Start learning")} <ChevronRight size={18} /></>}
           </Link>
+          {isPreview && (
+            <span className="xp">{t("Free preview: first {n} steps", { n: FREE_CAREER_PREVIEW_STEPS })}</span>
+          )}
           <span className="xp"><Zap size={13} /> {totalXp(path).toLocaleString()} XP {t("total")}</span>
         </div>
       </div>
 
-      <div className="wrap" style={{ maxWidth: 836, marginBottom: 24 }}>
-        <div className="callout note" style={{ margin: 0 }}>
-          <span className="ci"><BookOpen size={20} /></span>
-          <span className="cc">
-            <b>{t("Learn lesson by lesson")}</b>{" "}
-            {t("No long videos — each lesson is short, mixed with quizzes you try yourself. Earn XP and unlock the next, like a game.")}
-          </span>
+      {path.practicalRatio > 0 && (
+        <div className="wrap path-value">
+          <div className="path-ratio-card glass">
+            <div className="ratio-donut" style={{ "--practice": `${path.practicalRatio}%` } as React.CSSProperties}>
+              <strong>{path.practicalRatio}%</strong>
+              <span>{t("practice")}</span>
+            </div>
+            <div>
+              <b>{t("Built around real work")}</b>
+              <p>{t("Every practical step produces work you can review, improve, or add to your portfolio.")}</p>
+              <div className="ratio-legend">
+                <span className="practice">{path.practicalRatio}% {t("hands-on practice")}</span>
+                <span>{100 - path.practicalRatio}% {t("essential theory")}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="path-value-grid">
+            <article className="path-value-card glass">
+              <span className="path-value-icon target"><Target size={20} /></span>
+              <div>
+                <h2>{t("What you will be able to do")}</h2>
+                <ul>
+                  {path.outcomes.map((outcome) => <li key={outcome}><Check size={15} /> {outcome}</li>)}
+                </ul>
+              </div>
+            </article>
+            <article className="path-value-card glass">
+              <span className="path-value-icon portfolio"><BriefcaseBusiness size={20} /></span>
+              <div>
+                <h2>{t("Work you will build")}</h2>
+                <ul>
+                  {path.deliverables.map((deliverable) => <li key={deliverable}><Check size={15} /> {deliverable}</li>)}
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
+      )}
 
       <section className="block" style={{ padding: "0 0 60px" }}>
         <div className="roadmap">
@@ -160,29 +206,36 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
                       {modSteps.map((step) => {
                         const state = stateMap.get(step.id) ?? "lock"
                         const stepIdx = flatSteps.findIndex((s) => s.id === step.id) + 1
-                        const href = `/paths-learn/${path.slug}/${stepIdx}`
+                        // Past the free-preview cap, a Free user sees a Pro lock that
+                        // links to a contextual upgrade instead of the step.
+                        const proLocked = isPreview && stepIdx > FREE_CAREER_PREVIEW_STEPS
+                        const href = proLocked
+                          ? pathUpgradeHref(path.slug, stepIdx, "path_locked")
+                          : `/paths-learn/${path.slug}/${stepIdx}`
                         const inner = (
                           <>
-                            <span className={`lnode ${state}`}>
-                              {state === "done" ? <Check size={17} /> : state === "cur" ? <Zap size={17} /> : <Lock size={16} />}
+                            <span className={`lnode ${proLocked ? "lock" : state}`}>
+                              {proLocked || state === "lock" ? <Lock size={16} /> : state === "done" ? <Check size={17} /> : <Zap size={17} />}
                             </span>
                             <div className="li">
                               <b>
                                 {step.title}
-                                {state === "cur" && <span className="lpill">{t("Start here")}</span>}
+                                {proLocked
+                                  ? <span className="lpill">Pro</span>
+                                  : state === "cur" && <span className="lpill">{t("Start here")}</span>}
                               </b>
                               <span>{kindIcon[step.kind]} {kindLabel[step.kind]} · +{step.xp} XP</span>
                             </div>
                             <span className="lx">
-                              {state === "done" ? `+${step.xp} XP` : state === "cur"
+                              {proLocked ? t("Unlock") : state === "done" ? `+${step.xp} XP` : state === "cur"
                                 ? <>{t("Continue")} <ChevronRight size={13} style={{ display: "inline", verticalAlign: "-2px" }} /></>
                                 : `+${step.xp} XP`}
                             </span>
                           </>
                         )
-                        return state === "lock"
+                        return state === "lock" && !proLocked
                           ? <span key={step.id} className="lrow lock">{inner}</span>
-                          : <Link key={step.id} className={`lrow${state === "cur" ? " cur" : ""}`} href={href}>{inner}</Link>
+                          : <Link key={step.id} className={`lrow${proLocked ? " prolock" : state === "cur" ? " cur" : ""}`} href={href}>{inner}</Link>
                       })}
                     </div>
                   </div>
@@ -192,12 +245,23 @@ export default async function PathDetailPage({ params }: { params: Promise<{ id:
           })}
         </div>
 
-        <div className="cert-card glass">
+        <div className={`cert-card glass${certificate ? " earned" : ""}`}>
           <Image src="/assets/daily-ai-lab/mascot-ds/mascot-celebrate.png" alt="Riri" width={84} height={84} />
           <div>
-            <h3 className="display">{t("Finish to earn a certificate")}</h3>
-            <p>{t("Complete every module to earn a {title} certificate for your portfolio or LinkedIn.", { title: path.title })}</p>
+            <h3 className="display">
+              {certificate ? t("Certificate earned") : t("Finish to earn a certificate")}
+            </h3>
+            <p>
+              {certificate
+                ? t("Your certificate has a public verification URL and is ready to share.")
+                : t("Complete every module to earn a {title} certificate for your portfolio or LinkedIn.", { title: path.title })}
+            </p>
           </div>
+          {certificate && (
+            <Link className="btn btn--violet sm cert-view" href={`/certificate/${certificate.verificationCode}`}>
+              {t("View certificate")} <ChevronRight size={16} />
+            </Link>
+          )}
         </div>
       </section>
     </>

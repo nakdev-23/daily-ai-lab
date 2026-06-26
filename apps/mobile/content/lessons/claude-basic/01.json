@@ -1,0 +1,142 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 1 · ตอนที่ 1",
+    "title": "Claude คืออะไร?",
+    "body": [
+      {
+        "text": "Claude คือ AI Assistant ที่พัฒนาโดย "
+      },
+      {
+        "text": "Anthropic",
+        "bold": true
+      },
+      {
+        "text": " บริษัท AI Safety ที่ก่อตั้งในปี 2021 โดยทีมอดีตนักวิจัยจาก OpenAI Claude ถูกออกแบบมาให้มีคุณสมบัติหลักสามประการ ได้แก่ "
+      },
+      {
+        "text": "Helpful (มีประโยชน์), Harmless (ไม่เป็นอันตราย) และ Honest (ซื่อสัตย์)",
+        "bold": true
+      },
+      {
+        "text": " ซึ่งเรียกรวมกันว่าหลักการ HHH ทำให้ Claude แตกต่างจาก AI ทั่วไปตรงที่ใส่ใจเรื่องความปลอดภัยและจริยธรรมเป็นพิเศษ"
+      }
+    ],
+    "example": "\"Claude คืออะไร และทำอะไรได้บ้าง? อธิบายให้เข้าใจง่ายๆ หน่อย\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 1 · ตอนที่ 2",
+    "title": "หลักการ HHH ของ Claude",
+    "body": [
+      {
+        "text": "Anthropic ฝึก Claude ด้วยเทคนิคที่เรียกว่า "
+      },
+      {
+        "text": "Constitutional AI",
+        "bold": true
+      },
+      {
+        "text": " ซึ่งกำหนดชุดหลักการให้ AI ยึดถือในการตอบสนอง Claude จึงพยายามตอบคำถามอย่างตรงไปตรงมา ปฏิเสธคำขอที่อาจก่อให้เกิดอันตราย และบอกอย่างชัดเจนเมื่อไม่แน่ใจในข้อมูล การออกแบบนี้ทำให้ "
+      },
+      {
+        "text": "Claude เหมาะสำหรับงานที่ต้องการความน่าเชื่อถือและความละเอียดรอบคอบสูง",
+        "bold": true
+      },
+      {
+        "text": " เช่น การวิเคราะห์เอกสาร การเขียน และการให้คำแนะนำในเรื่องซับซ้อน"
+      }
+    ],
+    "example": "\"ช่วยอธิบายว่า Constitutional AI คืออะไร และมันทำให้ Claude ปลอดภัยกว่า AI อื่นอย่างไร?\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Claude ถูกพัฒนาโดยบริษัทใด?",
+    "options": [
+      {
+        "text": "OpenAI"
+      },
+      {
+        "text": "Anthropic",
+        "correct": true
+      },
+      {
+        "text": "Google DeepMind"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ตัว 'H' ตัวแรกในหลักการ HHH ของ Claude หมายถึงอะไร?",
+    "options": [
+      {
+        "text": "Human (เป็นมนุษย์)"
+      },
+      {
+        "text": "Helpful (มีประโยชน์)",
+        "correct": true
+      },
+      {
+        "text": "Humble (ถ่อมตน)"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "เทคนิคที่ Anthropic ใช้ฝึก Claude เพื่อให้ยึดหลักจริยธรรมเรียกว่าอะไร?",
+    "options": [
+      {
+        "text": "Reinforcement Learning"
+      },
+      {
+        "text": "Supervised Fine-tuning"
+      },
+      {
+        "text": "Constitutional AI",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้ Claude ช่วยร่างประกาศนโยบายบริษัทแบบสุภาพและรอบคอบ Claude เหมาะเพราะเหตุใด?",
+    "options": [
+      {
+        "text": "ตอบเร็วที่สุดในโลก"
+      },
+      {
+        "text": "ออกแบบตามหลัก Helpful, Honest, Harmless จึงเหมาะกับงานที่ต้องระวังถ้อยคำ",
+        "correct": true
+      },
+      {
+        "text": "เชื่อมต่ออินเทอร์เน็ตตลอดเวลา"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "อยากได้คำตอบที่ตรงไปตรงมา ไม่กุข้อมูล หลัก HHH ข้อใดเกี่ยวข้องที่สุด?",
+    "options": [
+      {
+        "text": "Honest (ซื่อสัตย์)",
+        "correct": true
+      },
+      {
+        "text": "Fast (เร็ว)"
+      },
+      {
+        "text": "Cheap (ถูก)"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

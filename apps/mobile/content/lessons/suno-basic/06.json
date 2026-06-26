@@ -1,0 +1,104 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · บทที่ 6 · ตอนที่ 1",
+    "title": "Verse–Chorus–Bridge",
+    "body": [
+      {
+        "text": "เพลงป็อปทั่วไปมีโครงสร้าง "
+      },
+      {
+        "text": "Intro → Verse → Chorus → Verse → Chorus → Bridge → Chorus → Outro",
+        "bold": true
+      },
+      {
+        "text": " การจัดท่อนให้ถูกทำให้เพลงมี 'การเดินทาง' Verse เล่าเรื่อง Chorus คือใจความ Bridge เปลี่ยนอารมณ์ก่อนกลับฮุก"
+      }
+    ],
+    "example": "[Intro]\n[Verse] เล่าเรื่องเช้าวันใหม่\n[Chorus] ฮุกให้กำลังใจ\n[Bridge] เปลี่ยนอารมณ์\n[Chorus]\n[Outro]",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · บทที่ 6 · ตอนที่ 2",
+    "title": "แท็กพิเศษช่วยคุมเสียง",
+    "body": [
+      {
+        "text": "ใส่คำใบ้ในวงเล็บเพื่อแนะนำการบรรเลงได้ เช่น (guitar solo), (soft piano), (build up) บางครั้ง Suno จะตอบสนอง ทำให้เพลงมีมิติขึ้น ลองทดลองแล้วฟังผล"
+      }
+    ],
+    "example": "[Verse] ...\n(soft piano)\n[Chorus] ...\n(guitar solo)\n[Outro]",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 4",
+    "question": "โดยทั่วไป Chorus ทำหน้าที่อะไรในเพลง?",
+    "options": [
+      {
+        "text": "เป็นใจความหลัก/ท่อนฮุกที่ติดหู",
+        "correct": true
+      },
+      {
+        "text": "เล่ารายละเอียดของเรื่อง"
+      },
+      {
+        "text": "ปิดท้ายเพลงเท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 4",
+    "question": "Bridge มีไว้เพื่ออะไร?",
+    "options": [
+      {
+        "text": "เปลี่ยนอารมณ์ก่อนกลับเข้าฮุก",
+        "correct": true
+      },
+      {
+        "text": "เป็นชื่อเพลง"
+      },
+      {
+        "text": "ลดความยาวเพลง"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 4",
+    "question": "ข้อใดเป็นแท็กคำใบ้การบรรเลง?",
+    "options": [
+      {
+        "text": "[Title]"
+      },
+      {
+        "text": "(guitar solo)",
+        "correct": true
+      },
+      {
+        "text": "--length 30"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 4",
+    "question": "ทำไมการจัดโครงสร้างท่อนจึงสำคัญ?",
+    "options": [
+      {
+        "text": "ทำให้เพลงมีการเดินทางทางอารมณ์และฟังเป็นมืออาชีพ",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ไฟล์เพลงเล็กลง"
+      },
+      {
+        "text": "ทำให้ไม่ต้องใส่เนื้อร้อง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

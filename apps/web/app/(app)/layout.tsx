@@ -20,6 +20,8 @@ import "./app-questmap.css"
 import "./app-badges.css"
 import "./app-profile.css"
 import "./app-upgrade.css"
+import "./app-certificates.css"
+import "./app-portfolio.css"
 
 // Signed-in surface: keep it out of search results.
 export const metadata = { robots: { index: false, follow: false } }

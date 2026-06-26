@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 4 · ตอนที่ 1",
+    "title": "Anthropic API คืออะไร",
+    "body": [
+      {
+        "text": "API คือประตูให้ "
+      },
+      {
+        "text": "แอปของเราเรียกใช้ Claude ได้โดยตรง",
+        "bold": true
+      },
+      {
+        "text": " — สร้างแชทบอท ระบบสรุปเอกสาร หรือฟีเจอร์ AI ในผลิตภัณฑ์ จ่ายตามจำนวน token ที่ใช้จริง"
+      }
+    ],
+    "example": "\"ร้านค้าออนไลน์เรียก API ให้ Claude ตอบคำถามลูกค้าจากข้อมูลสินค้า ตลอด 24 ชั่วโมง\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 4 · ตอนที่ 2",
+    "title": "โครงสร้างการเรียก API",
+    "body": [
+      {
+        "text": "ส่ง request ที่มี "
+      },
+      {
+        "text": "model + messages (บทสนทนา) + max_tokens",
+        "bold": true
+      },
+      {
+        "text": " ไปที่ Messages API แล้วได้คำตอบกลับมา — เลือกโมเดลตามงาน: Haiku เร็วถูก, Sonnet สมดุล, Opus ฉลาดสุด"
+      }
+    ],
+    "example": "\"{ model: 'claude-sonnet-4-5', max_tokens: 1024, messages: [{ role: 'user', content: 'สรุปข้อความนี้' }] }\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Anthropic API ใช้ทำอะไร?",
+    "options": [
+      {
+        "text": "ให้แอปของเราเรียกใช้ Claude ได้โดยตรง",
+        "correct": true
+      },
+      {
+        "text": "ดาวน์โหลดโมเดลมาไว้ในเครื่อง"
+      },
+      {
+        "text": "แต่งรูปภาพ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ค่าใช้จ่าย API คิดจากอะไร?",
+    "options": [
+      {
+        "text": "จำนวน token ที่ใช้จริง",
+        "correct": true
+      },
+      {
+        "text": "จำนวนพนักงานบริษัท"
+      },
+      {
+        "text": "เหมาจ่ายรายปีเท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "งานปริมาณมากที่ต้องการความเร็วและต้นทุนต่ำ ควรใช้โมเดลไหน?",
+    "options": [
+      {
+        "text": "Haiku",
+        "correct": true
+      },
+      {
+        "text": "Opus"
+      },
+      {
+        "text": "ใช้โมเดลใหญ่สุดเสมอ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้แอปของเราเรียกใช้ Claude ควรใช้อะไร?",
+    "options": [
+      {
+        "text": "Anthropic API",
+        "correct": true
+      },
+      {
+        "text": "ก็อปคำตอบมือทุกครั้ง"
+      },
+      {
+        "text": "ปิดการเชื่อมต่อ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ควรเก็บ API key อย่างไรให้ปลอดภัย?",
+    "options": [
+      {
+        "text": "เก็บฝั่งเซิร์ฟเวอร์/ตัวแปรลับ ไม่ฝังในโค้ดฝั่งผู้ใช้",
+        "correct": true
+      },
+      {
+        "text": "ใส่ในโค้ดหน้าเว็บ"
+      },
+      {
+        "text": "แชร์ในแชทสาธารณะ"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

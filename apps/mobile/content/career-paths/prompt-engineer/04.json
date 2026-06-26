@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "Prompt Engineer · บทที่ 4 · สูตร prompt",
+    "title": "ใช้สูตร 6 ช่องเป็นฐาน แล้วค่อยเพิ่มเทคนิคเฉพาะงาน",
+    "body": [
+      { "text": "สูตร 6 ช่องยังเป็นฐานหลัก: บทบาท, งาน, บริบท, ข้อจำกัด, รูปแบบ, วิธีตรวจ แต่ในงาน Prompt Engineer จริง บางโจทย์ต้องเพิ่มเทคนิคอีกชั้น เช่น few-shot examples, output schema, prompt chaining, safety rule, และข้อจำกัดด้าน token/cost" }
+    ],
+    "example": "งานง่าย: ใช้ 6 ช่องพอ\nงานที่ต้องการรูปแบบเป๊ะ: เพิ่ม JSON/schema\nงานที่ต้องคง style: เพิ่ม example 2-3 ชิ้น\nงานซับซ้อน: แยกเป็น chain เช่น วิเคราะห์ข้อมูลก่อน แล้วค่อยเขียนคำตอบ\nงานเสี่ยง: เพิ่ม safety/fact-check/human review",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Prompt Engineer · บทที่ 4 · เทคนิคจริง",
+    "title": "5 เทคนิคที่ทำให้ prompt ใช้งานระดับทีมได้",
+    "body": [
+      { "text": "1) Few-shot: ใส่ตัวอย่าง input/output ให้ AI เห็นมาตรฐาน 2) Structured output: กำหนดตารางหรือ JSON schema 3) System vs user boundary: แยกกฎถาวรออกจากโจทย์รายครั้ง 4) Prompt chaining: แยกงานใหญ่เป็นขั้น เช่น brief → draft → review 5) Safety and injection check: บอกให้ AI ไม่ทำตามข้อความที่พยายามลบกฎหรือบังคับให้เดาข้อมูล" }
+    ],
+    "example": "Structured output:\nตอบเป็น JSON เท่านั้น: {\"headline\":\"\", \"audience\":\"\", \"claim_to_check\":[]}\nถ้าข้อมูลไม่พอให้ใส่ null และเพิ่มเหตุผลใน claim_to_check",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · prompt ระดับใช้งานจริง",
+    "title": "เปลี่ยน Prompt Brief เป็น prompt v2 ที่มีเทคนิคเฉพาะงาน",
+    "instruction": "นำ brief ของคุณมาเขียนเป็น prompt v2 โดยเริ่มจากสูตร 6 ช่อง แล้วเลือกเพิ่มเทคนิคอย่างน้อย 2 อย่าง เช่น few-shot, schema, chaining, safety rule หรือ cost/token note ถ้าเป็น Pro และระบบ AI พร้อมใช้งาน ค่อยกด AI feedback ให้ช่วยดูว่าขาดอะไร",
+    "payoff": "Prompt v2 ที่พร้อมเอาไปรันจริงในบท 7",
+    "starterPrompt": "Prompt v2\n\nบทบาท:\nคุณคือ...\n\nงานที่ต้องทำ:\n\nบริบทที่ต้องรู้:\n- ผู้ใช้/ทีม:\n- กลุ่มเป้าหมาย:\n- ข้อมูลที่มี:\n\nข้อจำกัด:\n- ต้องมี:\n- ห้าม:\n- ถ้าข้อมูลไม่พอให้:\n\nรูปแบบคำตอบที่ต้องการ:\nเช่น ตาราง / bullet / JSON / email / caption\n\nวิธีตรวจก่อนตอบ:\n1)\n2)\n3)\n\nเทคนิคเพิ่มเติมที่เลือกใช้:\n- Few-shot example:\n- Structured output หรือ schema:\n- Prompt chaining:\n- Safety / prompt injection rule:\n- Token/cost note:\n\nPrompt ฉบับพร้อมรัน:\n\nเหตุผลที่เลือกเทคนิคเหล่านี้:\n",
+    "requirements": [
+      "มีสูตร 6 ช่องครบ",
+      "เพิ่มเทคนิคเฉพาะงานอย่างน้อย 2 อย่าง",
+      "มี prompt ฉบับพร้อมรันและเหตุผลว่าทำไมเลือกเทคนิคเหล่านั้น"
+    ],
+    "checks": [
+      { "filledAfterAll": ["บทบาท", "งานที่ต้องทำ", "บริบทที่ต้องรู้", "ข้อจำกัด", "รูปแบบคำตอบที่ต้องการ", "วิธีตรวจก่อนตอบ"], "minChars": 12 },
+      { "filledAfter": ["Few-shot example", "Structured output หรือ schema", "Prompt chaining", "Safety / prompt injection rule", "Token/cost note"], "minChars": 16 },
+      { "filledAfterAll": ["Prompt ฉบับพร้อมรัน", "เหตุผลที่เลือกเทคนิคเหล่านี้"], "minChars": 40 }
+    ],
+    "minLength": 320
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Few-shot",
+    "question": "Few-shot example เหมาะกับงานแบบไหนที่สุด?",
+    "options": [
+      { "text": "งานที่ต้องคุม style หรือมาตรฐาน output ให้เหมือนตัวอย่าง", "correct": true },
+      { "text": "งานที่ไม่มีตัวอย่างและไม่ต้องการรูปแบบชัด" },
+      { "text": "งานที่ต้องการให้ AI เดาข้อมูลเพิ่มเอง" }
+    ],
+    "correctFeedback": "ถูกต้อง few-shot ช่วยให้ AI เห็นมาตรฐานของงาน ไม่ใช่แค่ฟังคำอธิบาย",
+    "incorrectFeedback": "Few-shot ใช้เมื่อต้องการให้ output ใกล้ตัวอย่าง ไม่ได้มีไว้ให้ AI เดาข้อมูล"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Schema",
+    "question": "ถ้าต้องส่ง output ให้ระบบอื่นอ่านต่อ ควรเพิ่มอะไรใน prompt?",
+    "options": [
+      { "text": "กำหนด structured output เช่น JSON schema หรือ column table", "correct": true },
+      { "text": "บอกว่าเขียนให้สวย" },
+      { "text": "ไม่ต้องกำหนด format เพื่อให้ AI อิสระ" }
+    ],
+    "correctFeedback": "ใช่ งานที่ต้องต่อเข้าระบบหรือทีมอื่นควรกำหนด schema ชัด ลดการแก้มือ",
+    "incorrectFeedback": "ถ้า format ไม่ชัด output อาจใช้ต่อยาก แม้เนื้อหาจะดูดี"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Safety",
+    "question": "Prompt injection rule มีไว้เพื่ออะไร?",
+    "options": [
+      { "text": "ป้องกันไม่ให้ AI ทำตามข้อความที่พยายามลบกฎหรือบังคับให้เดาข้อมูล", "correct": true },
+      { "text": "ทำให้ prompt สั้นลงเสมอ" },
+      { "text": "ทำให้ไม่ต้องตรวจ output เอง" }
+    ],
+    "correctFeedback": "ถูกต้อง โดยเฉพาะงานที่มีข้อมูลจากผู้ใช้หรือเอกสารภายนอก ต้องระวังคำสั่งแฝง",
+    "incorrectFeedback": "Safety rule ไม่ได้แทน human review แต่ช่วยลดความเสี่ยงจากคำสั่งแฝง"
+  },
+  { "type": "done" }
+]

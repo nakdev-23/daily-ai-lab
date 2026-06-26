@@ -46,7 +46,7 @@ OpenAI has plans designed specifically for organizational use, at 2 levels:
 - Examples: a GPT that knows the company's products, a GPT for HR policy
 
 **Higher usage limits**
-- Use GPT-4o and other models more than Free and Plus
+- Use GPT-5.5 and other models more than Free and Plus
 - Reduces hitting limits during work
 
 **Admin Console (admin management — a system for controlling members and team settings)**
@@ -122,7 +122,7 @@ OpenAI has plans designed specifically for organizational use, at 2 levels:
 
 | Feature | Free | Plus | Teams | Enterprise |
 |---|---|---|---|---|
-| GPT-4o | Limited | ✓ | ✓ | ✓ |
+| GPT-5.5 | Limited | ✓ | ✓ | ✓ |
 | Advanced Voice | Limited | ✓ | ✓ | ✓ |
 | Image Generation | Limited | ✓ | ✓ | ✓ |
 | Advanced Data Analysis | ✗ | ✓ | ✓ | ✓ |

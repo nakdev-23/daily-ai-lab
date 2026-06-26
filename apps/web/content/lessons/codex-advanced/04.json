@@ -52,7 +52,9 @@
       {
         "text": "ไม่ต้องแนบอะไร"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ก่อนสั่งเชื่อม API ภายนอก ควรแนบเอกสาร API ของบริการนั้น  💡 ใช้ต่อ: แปะลิงก์ docs หรือตัวอย่าง request/response ให้ AI จะเขียน integration ได้ตรง",
+    "incorrectFeedback": "รูปโลโก้ไม่ช่วย และ 'ไม่ต้องแนบ' ก็เสี่ยง — สิ่งที่ต้องแนบคือเอกสาร API ของบริการ  💡 ใช้ต่อ: ไม่มี docs AI ต้องเดา field และ endpoint เอง เสี่ยงผิด"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ตอบช้าที่สุดเท่าที่ทำได้"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง webhook handler ที่ดีต้อง verify signature และ idempotency  💡 ใช้ต่อ: ระบุในคำสั่งให้ 'verify signature และถ้า event ซ้ำให้ ignore' เสมอ",
+    "incorrectFeedback": "รับทุก request โดยไม่ตรวจ หรือตอบช้า ๆ ไม่ใช่ของดี — webhook ที่ดีต้อง verify signature + idempotent  💡 ใช้ต่อ: ไม่ verify = ใครก็ปลอม event มายิงได้"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "เพื่อให้โค้ดยาวขึ้น"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ต้องกำหนดพฤติกรรมตอน API ปลายทางล่ม เพราะเครือข่ายล้มเหลวได้เสมอ  💡 ใช้ต่อ: สั่งเพิ่ม retry + timeout + logging ไว้ในคำสั่ง integration ทุกครั้ง",
+    "incorrectFeedback": "API ล่มได้จริง และเหตุผลไม่ใช่ 'ทำให้โค้ดยาว' — ต้องวางแผนรับมือความล้มเหลว  💡 ใช้ต่อ: integration ที่ไม่กัน fail พังเงียบ ๆ ตอนเครือข่ายมีปัญหา"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "จัดการ error และ retry พร้อมตรวจสอบข้อมูลเข้า-ออก",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง integration ที่ทนทานต้องจัดการ error และ retry พร้อมตรวจข้อมูลเข้า-ออก  💡 ใช้ต่อ: ระบุ retry แบบ exponential backoff และ log ทุก request ในคำสั่ง",
+    "incorrectFeedback": "สมมติว่าไม่มีวันพังหรือไม่ตรวจอะไร คือสูตรพังในโปรดักชัน — ต้องจัดการ error + retry + validate  💡 ใช้ต่อ: ออกแบบเผื่อ fail เสมอ เพราะของจริงมันล่ม"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "วาดรูป"
       }
+    ],
+    "correctFeedback": "ใช่ Webhook ใช้ให้ระบบแจ้งเหตุการณ์ระหว่างกันอัตโนมัติ  💡 ใช้ต่อ: เช่น Stripe ยิง event 'payment.succeeded' มา แล้วระบบเราอัปเดตออเดอร์เอง",
+    "incorrectFeedback": "Webhook ไม่ใช่พิมพ์เอกสารหรือวาดรูป — มันคือช่องให้ระบบแจ้งเหตุการณ์กันอัตโนมัติ  💡 ใช้ต่อ: มองว่ามันคือ 'ระบบโทรหากันเองเมื่อมีอะไรเกิดขึ้น'"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · เชื่อม API ภายนอก",
+    "title": "ให้ Codex เขียน webhook handler ที่ทนทาน",
+    "instruction": "ลองสั่ง Codex เขียน webhook handler โดยแนบเอกสาร API และระบุการรับมือความล้มเหลว (retry, idempotency, verify signature)",
+    "example": "เขียน webhook handler รับ event 'payment.succeeded' จาก Stripe แล้วอัปเดตสถานะออเดอร์เป็น paid: ต้อง verify signature, ถ้า event ซ้ำให้ ignore (idempotent), retry 3 ครั้งแบบ backoff ถ้าอัปเดต DB ล้มเหลว และ log ทุก request",
+    "checks": [
+      "เปิด Codex แล้วเลือก repo",
+      "แนบลิงก์เอกสาร webhook ของบริการ (เช่น Stripe) หรือก๊อปตัวอย่าง payload",
+      "วางคำสั่งจากช่อง example ที่ระบุ verify + idempotent + retry + log",
+      "ดู diff ว่ามันใส่การ verify signature และจัดการ event ซ้ำครบไหม"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · integration ที่ทนทาน",
+    "title": "เขียนคำสั่ง integration ที่กันความล้มเหลว",
+    "instruction": "บทนี้สอนว่า integration ที่ดีต้องมี retry, timeout, idempotency และ logging และต้องระบุเสมอว่า 'ถ้า API ปลายทางล่มให้ทำอะไร' ลองเขียนคำสั่งเชื่อม API/webhook ในโปรเจกต์คุณให้ครบเงื่อนไขเหล่านี้",
+    "payoff": "ได้ integration ที่ไม่พังเงียบ ๆ ตอนเครือข่ายมีปัญหา และก๊อปคำสั่งไปสั่ง Codex ได้จริง",
+    "examples": {
+      "bad": "เชื่อมกับ API ส่ง SMS ให้หน่อย",
+      "badNote": "ไม่บอกพฤติกรรมตอน API ล่ม ไม่พูดถึง retry/timeout/log — ได้โค้ดที่พังตอนปลายทางมีปัญหา",
+      "good": "เชื่อม API ส่ง SMS (แนบ docs): ส่งข้อความยืนยันออเดอร์ ถ้า API timeout เกิน 5 วิให้ retry 3 ครั้งแบบ exponential backoff, ถ้ายังล้มเหลวให้ log error และ enqueue ไว้ส่งซ้ำภายหลัง อย่าทำให้ flow เช็คเอาต์ค้าง",
+      "goodNote": "ระบุ timeout + retry + พฤติกรรมเมื่อล้มเหลว + logging → integration ทนทานต่อความล้มเหลวจริง"
+    },
+    "starterPrompt": "เชื่อม API ___ : ถ้า timeout/ล่มให้ ___ retry ___ ครั้ง และ log ___ อย่าทำให้ ___ ค้าง",
+    "requirements": [
+      "แนบหรืออ้างอิงเอกสาร API ของบริการที่จะเชื่อม",
+      "ระบุพฤติกรรมเมื่อ API ปลายทางล่ม (retry/timeout/queue)",
+      "ใส่ idempotency และ logging เพื่อให้ตรวจสอบย้อนหลังได้"
     ]
   },
   {

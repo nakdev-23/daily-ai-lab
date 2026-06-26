@@ -1,0 +1,82 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Developer · บทที่ 7 · Integration",
+    "title": "เขียน integration ที่ไม่พังเพราะ API ล่ม",
+    "body": [
+      { "text": "integration จริงคือโค้ดที่เรียก API ส่ง system/user prompt รับ JSON parse แล้วใช้ผล แต่ของจริงต้องเผื่อว่า API อาจ " },
+      { "text": "ช้า ติด rate limit timeout หรือคืนผลผิดรูป จึงต้องมี error handling และ retry", "bold": true },
+      { "text": " อย่าให้ทั้งฟีเจอร์พังเพราะการเรียกครั้งเดียวล้มเหลว ให้จับ error จัดการอย่างเหมาะสม และมีข้อความหรือพฤติกรรมสำรองเมื่อเรียกไม่สำเร็จ" }
+    ],
+    "example": "เรียก API -> ถ้า timeout ลอง retry 1-2 ครั้งแบบเว้นจังหวะ -> ถ้ายังไม่ได้ คืนสถานะผิดพลาดที่ผู้ใช้เข้าใจ ไม่ใช่ทำทั้งแอป crash",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Developer · บทที่ 7 · Eval",
+    "title": "Eval set คือสิ่งที่แยกมืออาชีพจากการเดา",
+    "body": [
+      { "text": "อย่าตัดสินว่าฟีเจอร์ใช้ได้จากการ ลองครั้งเดียวแล้วเวิร์ก ให้สร้าง " },
+      { "text": "eval set: ชุดเคสทดสอบหลายเคส รวมเคสยากและ edge แล้ววัดว่าผ่านกี่เคส", "bold": true },
+      { "text": " เช่น ผ่าน 9 ใน 10 ตาม success criteria การมี eval ทำให้คุณรู้คุณภาพจริงและเห็นว่าแก้แล้วดีขึ้นไหม นอกจากนี้ให้สังเกต cost และ latency ต่อการเรียกด้วย" }
+    ],
+    "example": "Eval: 10 อีเมลที่รู้คำตอบจริง -> รันฟีเจอร์ -> จัดถูก 8/10, ดู 2 เคสที่ผิดแล้วปรับ prompt -> รันใหม่ได้ 10/10",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Integration & Eval",
+    "title": "เขียน integration จริงและทำ eval set",
+    "instruction": "ใช้ prompt และ schema จากบทก่อน เขียนโค้ดที่เรียก API จริงให้รันได้ เก็บผลรันจริง สร้าง eval set อย่างน้อย 3 เคสพร้อมผลที่คาดหวัง บอก error handling ที่ใส่ และสังเกต cost/latency พร้อมแนบลิงก์โค้ด",
+    "payoff": "Working Integration + eval results สำหรับ checkpoint",
+    "starterPrompt": "Integration & Eval\n\nฟีเจอร์:\n\nโค้ด integration (ลิงก์ repo/gist หรือสรุปโค้ด):\n\nผลรันจริง (ตัวอย่าง input -> output):\n\nEval set (เคส + ผลที่คาดหวัง + ผ่าน/ไม่ผ่าน):\n1.\n2.\n3.\n\nError handling/retry ที่ใส่:\n\ncost/latency ที่สังเกตได้:\n",
+    "requirements": [
+      "มีโค้ดที่เรียก API จริงและผลรันจริง",
+      "มี eval set หลายเคสพร้อมผลที่คาดหวัง",
+      "มี error handling และข้อสังเกต cost/latency"
+    ],
+    "checks": [
+      { "filledAfterAll": ["โค้ด integration (ลิงก์ repo/gist หรือสรุปโค้ด)", "ผลรันจริง (ตัวอย่าง input -> output)"], "minChars": 10 },
+      { "filledAfter": ["Eval set (เคส + ผลที่คาดหวัง + ผ่าน/ไม่ผ่าน)"], "minChars": 12 },
+      { "filledAfterAll": ["Error handling/retry ที่ใส่", "cost/latency ที่สังเกตได้"], "minChars": 6 }
+    ],
+    "minLength": 200
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Eval",
+    "question": "ทำไมต้องมี eval set หลายเคส แทนการลองครั้งเดียว?",
+    "options": [
+      { "text": "เพราะการลองครั้งเดียวไม่บอกคุณภาพจริง ต้องวัดหลายเคสว่าผ่านกี่ %", "correct": true },
+      { "text": "เพราะ eval ทำให้โค้ดสั้นลง" },
+      { "text": "เพราะต้องเรียก API ให้บ่อยที่สุด" }
+    ],
+    "correctFeedback": "ถูกต้อง eval set ทำให้รู้คุณภาพจริงและเห็นว่าการแก้ทำให้ดีขึ้นหรือไม่",
+    "incorrectFeedback": "eval ไม่เกี่ยวกับความยาวโค้ดหรือการเรียกบ่อย แต่เกี่ยวกับการวัดคุณภาพอย่างเป็นระบบ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Error handling",
+    "question": "ทำไม integration ต้องมี error handling และ retry?",
+    "options": [
+      { "text": "เพราะ API อาจช้า ติด rate limit หรือคืนผลผิดรูป ฟีเจอร์ต้องไม่พังทั้งหมด", "correct": true },
+      { "text": "เพราะ error handling ทำให้โมเดลฉลาดขึ้น" },
+      { "text": "เพราะจะได้ไม่ต้องทดสอบ" }
+    ],
+    "correctFeedback": "ถูกต้อง การจัดการ error ทำให้ระบบทนต่อความล้มเหลวที่เกิดขึ้นจริง",
+    "incorrectFeedback": "error handling ไม่เกี่ยวกับความฉลาดของโมเดลและไม่แทนการทดสอบ แต่ทำให้ระบบเสถียร"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Cost",
+    "question": "นอกจากความถูกต้อง ควรสังเกตอะไรเวลาเรียก LLM?",
+    "options": [
+      { "text": "cost และ latency ต่อการเรียก เพราะกระทบการใช้งานจริง", "correct": true },
+      { "text": "จำนวนบรรทัดของโค้ด" },
+      { "text": "สีของ editor" }
+    ],
+    "correctFeedback": "ถูกต้อง ฟีเจอร์ที่ถูกต้องแต่แพงหรือช้าเกินไปก็ใช้จริงไม่ได้",
+    "incorrectFeedback": "จำนวนบรรทัดหรือสี editor ไม่เกี่ยว สิ่งที่กระทบการใช้จริงคือ cost และ latency"
+  },
+  { "type": "done" }
+]

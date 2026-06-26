@@ -298,7 +298,6 @@ export default async function HomePage() {
                 <Link className="tool-mini tool-all" href="/docs">
                   <span className="tool-all-plus"><Plus size={25} /></span>
                   <b>{t("Browse all tools")}</b>
-                  <small>{t("50+ tools")}</small>
                 </Link>
               </div>
             </div>
@@ -453,7 +452,8 @@ export default async function HomePage() {
                     <li><span className="ck ok">✓</span> {t("All career paths")}</li>
                     <li><span className="ck ok">✓</span> {t("Full documentation library")}</li>
                     <li><span className="ck ok">✓</span> {t("Unlimited hearts")}</li>
-                    <li><span className="ck ok">✓</span> {t("Streak freeze & Pro badges")}</li>
+                    <li><span className="ck ok">✓</span> {t("Prompt templates & downloadable playbooks")}</li>
+                    <li><span className="ck ok">✓</span> {t("Project feedback & portfolio artifacts")}</li>
                   </ul>
                   <Link className="btn btn--sun lg" style={{ width: "100%" }} href="/login"><Crown size={18} /> {t("Go Pro")}</Link>
                 </div>
@@ -469,7 +469,7 @@ export default async function HomePage() {
             <div>
               <span className="eyebrow">{t("Ready when you are")}</span>
               <h2 className="display" style={{ marginTop: 12 }}>{t("Start learning AI today")}</h2>
-              <p>{t("Join 120,000+ learners. Your first lab takes 15 minutes — Riri will guide you the whole way.")}</p>
+              <p>{t("Each lesson is short — finish in 15 minutes")}</p>
               <Link className="btn btn--violet lg" href="/login" data-confetti>{t("Create your free account")} <Rocket size={18} /></Link>
             </div>
             <Image className="final-mascot" src={`${M}/mascot-fly.png`} alt="Riri" width={280} height={280} />

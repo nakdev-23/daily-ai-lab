@@ -52,7 +52,9 @@
       {
         "text": "ปรับไม่ได้เลย"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ environment ของ Codex ปรับ setup script, dependencies และ env variables ได้  💡 ใช้ต่อ: ตั้ง setup script ครั้งเดียวให้ตรงโปรเจกต์ ทุก task จะ build/test ได้เหมือนเครื่องจริง",
+    "incorrectFeedback": "ไม่ใช่สีหน้าจอ และไม่ใช่ปรับไม่ได้ — ปรับ setup script, dependencies, env variables ได้  💡 ใช้ต่อ: environment ที่ตั้งดี = task รันเทสต์ได้ตั้งแต่ครั้งแรก"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "รายชื่อพนักงาน"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง AGENTS.md บอกกติกาและ convention ของโปรเจกต์ให้ AI ทำตาม  💡 ใช้ต่อ: ใส่ 'รันเทสต์ยังไง / ห้าม any / commit เป็นอังกฤษ' ไว้ AI จะทำตามทุก task",
+    "incorrectFeedback": "AGENTS.md ไม่ใช่ที่เก็บรหัสผ่านหรือรายชื่อพนักงาน — มันคือคู่มือกติกาให้ AI  💡 ใช้ต่อ: เขียน AGENTS.md ดี ๆ ครั้งเดียว ลดการสั่งกติกาซ้ำทุกครั้ง"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "บังคับโดย GitHub"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ setup script ทำให้ทุก task เริ่มพร้อม dependencies เหมือนเครื่องจริง  💡 ใช้ต่อ: ใส่คำสั่งติดตั้งและ generate ที่จำเป็น เช่น 'npm install && npx prisma generate'",
+    "incorrectFeedback": "ไม่ใช่เพื่อความสวยงามหรือถูกบังคับโดย GitHub — setup script ทำให้ environment พร้อม dependencies จริง  💡 ใช้ต่อ: ไม่มี setup ที่ถูก เทสต์ใน task อาจพังเพราะของไม่ครบ"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "เป็นคู่มือและกติกาให้ AI ทำงานในโปรเจกต์ถูกต้อง",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง AGENTS.md เป็นคู่มือและกติกาให้ AI ทำงานในโปรเจกต์ถูกต้อง  💡 ใช้ต่อ: ระบุโครงสร้างโค้ดและ convention ที่ห้ามละเมิดไว้ในนั้น",
+    "incorrectFeedback": "ไม่ใช่ที่เก็บรหัสผ่านหรือไฟล์ขยะ — AGENTS.md คือคู่มือกติกาของโปรเจกต์สำหรับ AI  💡 ใช้ต่อ: คิดว่ามันคือ onboarding doc ให้เพื่อนร่วมทีมที่เป็น AI"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "ทำให้ช้าลง"
       }
+    ],
+    "correctFeedback": "ใช่ Environment Config ที่ดีช่วยให้ AI ทำงานเข้ากับเครื่องมือและโครงสร้างโปรเจกต์  💡 ใช้ต่อ: ตั้ง environment + AGENTS.md ให้ครบ จะลดงานอธิบายซ้ำทุก task",
+    "incorrectFeedback": "Environment Config ไม่ได้ทำให้ช้าลงหรือไร้ผล — มันช่วยให้ AI เข้ากับเครื่องมือและโครงสร้างโปรเจกต์  💡 ใช้ต่อ: ลงทุนตั้งค่าครั้งเดียว คุ้มทุก task หลังจากนั้น"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · ตั้ง AGENTS.md",
+    "title": "สร้างไฟล์ AGENTS.md ให้ repo จริง",
+    "instruction": "ลองสร้างไฟล์ AGENTS.md ใน repo เพื่อบอกกติกาโปรเจกต์ให้ Codex อ่านและทำตามอัตโนมัติทุก task",
+    "example": "รันเทสต์ด้วย npm test / ใช้ TypeScript strict ห้ามใช้ any / commit message เป็นภาษาอังกฤษ / โค้ดใหม่ทุกชิ้นต้องมีเทสต์",
+    "checks": [
+      "สร้างไฟล์ชื่อ AGENTS.md ไว้ที่ root ของ repo",
+      "เขียนกติกาจากช่อง example (ปรับให้ตรงโปรเจกต์คุณ) ลงไป",
+      "commit ไฟล์นี้เข้า repo",
+      "สั่ง task ใหม่หนึ่งงานใน Codex แล้วสังเกตว่ามันทำตามกติกาใน AGENTS.md (เช่น เพิ่มเทสต์ให้เอง)"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · เขียนคู่มือให้ AI",
+    "title": "ร่าง AGENTS.md สำหรับโปรเจกต์ของคุณ",
+    "instruction": "บทนี้สอนว่า AGENTS.md คือคู่มือบอกกติกาโปรเจกต์ให้ AI (รันเทสต์ยังไง, โครงสร้างโค้ด, convention ที่ห้ามละเมิด) ลองร่าง AGENTS.md จริงสำหรับโปรเจกต์ของคุณ",
+    "payoff": "ได้ไฟล์ที่ทำให้ Codex ทำงานเข้ากับโปรเจกต์ทุก task โดยไม่ต้องพิมพ์กติกาเดิมซ้ำ และยังประหยัดโควต้า",
+    "examples": {
+      "bad": "AGENTS.md: ทำโค้ดให้ดี ๆ นะ",
+      "badNote": "กว้างและวัดไม่ได้ AI ไม่รู้ว่า 'ดี' ในโปรเจกต์นี้แปลว่าอะไร",
+      "good": "AGENTS.md: รันเทสต์ด้วย `pnpm test` / ใช้ TypeScript strict ห้าม any / โค้ดใหม่ต้องมี unit test / โครงสร้าง: business logic อยู่ใน lib/ ห้ามใส่ใน components / commit message ภาษาอังกฤษแบบ conventional commits",
+      "goodNote": "บอกคำสั่งเทสต์จริง + convention ที่วัดได้ + โครงสร้างโฟลเดอร์ → AI ทำตามได้ทุก task โดยไม่ต้องสั่งซ้ำ"
+    },
+    "starterPrompt": "AGENTS.md: รันเทสต์ด้วย ___ / convention: ___ / โครงสร้าง: ___ / commit: ___",
+    "requirements": [
+      "ระบุคำสั่งรันเทสต์และ build จริงของโปรเจกต์",
+      "เขียน convention ที่ห้ามละเมิด (เช่น ห้าม any, ต้องมีเทสต์)",
+      "อธิบายโครงสร้างโฟลเดอร์ว่าโค้ดแต่ละแบบอยู่ที่ไหน"
     ]
   },
   {

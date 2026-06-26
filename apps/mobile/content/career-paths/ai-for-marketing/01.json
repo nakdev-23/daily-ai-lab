@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 1 · ภาพรวม",
+    "title": "นักการตลาดที่ใช้ AI เก่ง ไม่ได้เริ่มจากเขียนโฆษณา",
+    "body": [
+      { "text": "งานการตลาดจริงเริ่มจากเข้าใจตลาด ลูกค้า ปัญหา คู่แข่ง และเป้าหมายธุรกิจ แล้วค่อยเปลี่ยน insight เป็น positioning, campaign brief, copy, experiment และรายงานผล AI ช่วยให้ทำงานเร็วขึ้น แต่ถ้าโจทย์ต้นทางไม่ชัด AI จะผลิตแค่ข้อความสวย ๆ ที่วัดผลไม่ได้" }
+    ],
+    "example": "โจทย์กว้าง: ช่วยเขียนโฆษณาคอร์สภาษาอังกฤษ\nโจทย์แบบนักการตลาด: ช่วยวิเคราะห์กลุ่มวัยทำงานอายุ 25-35 ที่อยากพูดอังกฤษในที่ประชุมแต่กลัวผิด แล้วเสนอ campaign angle สำหรับคอร์ส speaking 4 สัปดาห์ พร้อม metric ว่าจะวัดความสนใจอย่างไร",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 1 · Workflow",
+    "title": "Workflow จริง: Research → Insight → Brief → Copy → Test",
+    "body": [
+      { "text": "คอร์สนี้จะให้คุณเลือกสินค้าหรือบริการหนึ่งอย่าง แล้วลากโจทย์เดิมไปจนจบ คุณจะทำ research brief, customer insight, campaign brief, message matrix, ad/email/landing copy, A/B test plan และ marketing playbook ที่ใช้เป็น portfolio ได้" }
+    ],
+    "example": "สินค้าหนึ่งชิ้น → หา audience → ระบุ pain point → เลือก promise → เขียน message 3 แบบ → ทำ copy หลายช่องทาง → ตั้ง metric → สรุปว่าจะปรับอะไร",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · เลือกโจทย์การตลาด",
+    "title": "เลือกสินค้าหรือแคมเปญที่จะทำตลอดคอร์ส",
+    "instruction": "เลือกสินค้าจริงหรือสมมติหนึ่งรายการที่คุณเข้าใจพอสมควร อย่าเลือกกว้างแบบ “ขายของออนไลน์” ให้เลือกเป็น product/service ที่ระบุ audience, ช่องทาง และเป้าหมายได้",
+    "payoff": "Marketing Work Brief ที่จะใช้ต่อใน research, campaign brief, copy และ final project",
+    "starterPrompt": "Marketing Work Brief\n\nสินค้า/บริการที่จะทำการตลาด:\n\nขายหรือแก้ปัญหาอะไร:\n\nกลุ่มลูกค้าหลักคือใคร:\n\nเป้าหมายแคมเปญใน 30 วันนี้:\nตัวอย่าง: เพิ่ม lead / เพิ่ม trial / เพิ่มยอดจอง / ให้คนเข้าใจสินค้า\n\nช่องทางหลักที่จะใช้:\n\nคู่แข่งหรือทางเลือกที่ลูกค้าอาจเปรียบเทียบ:\n\nข้อจำกัด/ข้อห้ามของแบรนด์:\n\nตัวเลขหรือข้อมูลจริงที่มีตอนนี้:\n",
+    "requirements": [
+      "ระบุสินค้า/บริการและปัญหาที่แก้ได้ชัด",
+      "ระบุ audience และเป้าหมายแคมเปญ",
+      "มีช่องทาง คู่แข่ง/ทางเลือก และข้อจำกัดของแบรนด์"
+    ],
+    "checks": [
+      { "filledAfterAll": ["สินค้า/บริการที่จะทำการตลาด", "ขายหรือแก้ปัญหาอะไร"], "minChars": 12 },
+      { "filledAfterAll": ["กลุ่มลูกค้าหลักคือใคร", "เป้าหมายแคมเปญใน 30 วันนี้"], "minChars": 12 },
+      { "filledAfterAll": ["ช่องทางหลักที่จะใช้", "คู่แข่งหรือทางเลือกที่ลูกค้าอาจเปรียบเทียบ", "ข้อจำกัด/ข้อห้ามของแบรนด์"], "minChars": 10 }
+    ],
+    "minLength": 160
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Workflow",
+    "question": "ทำไมคอร์สนี้ไม่เริ่มจากการเขียน ad copy ทันที?",
+    "options": [
+      { "text": "เพราะ copy ที่ดีต้องมาจาก audience, insight, promise และ metric ที่ชัดก่อน", "correct": true },
+      { "text": "เพราะ ad copy ไม่ใช่งานการตลาด" },
+      { "text": "เพราะ AI เขียน ad copy ไม่ได้" }
+    ],
+    "correctFeedback": "ถูกต้อง copy เป็นปลายทางของ insight ถ้าไม่รู้ว่าพูดกับใครและวัดอะไร ข้อความจะดูดีแต่ไม่ช่วยธุรกิจ",
+    "incorrectFeedback": "Ad copy เป็นงานการตลาดแน่นอน แต่ควรเกิดหลังจากเข้าใจลูกค้าและเป้าหมาย ไม่ใช่เริ่มจากคำสวย ๆ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Brief",
+    "question": "โจทย์ไหนเหมาะที่สุดสำหรับเริ่มทำ Marketing Work Brief?",
+    "options": [
+      { "text": "ช่วยทำการตลาดให้ปัง" },
+      { "text": "ทำแคมเปญเพิ่ม trial สำหรับ SaaS จัดการร้านอาหาร โดยเจาะเจ้าของร้านเล็กที่ยังใช้ Excel", "correct": true },
+      { "text": "ช่วยคิดโพสต์อะไรก็ได้" }
+    ],
+    "correctFeedback": "ใช่ เพราะมี product, goal, audience และ pain point เบื้องต้นพอให้ต่อยอด research ได้",
+    "incorrectFeedback": "คำว่า “ปัง” หรือ “อะไรก็ได้” ยังไม่มีขอบเขต ต้องบอกสินค้า เป้าหมาย audience และบริบท"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · บทบาทคน",
+    "question": "AI ควรทำหน้าที่อะไรใน workflow การตลาด?",
+    "options": [
+      { "text": "ช่วย research, draft, แตกมุม และจัดโครง แต่คนต้องตรวจ insight, claim และการตัดสินใจ", "correct": true },
+      { "text": "ตัดสินใจ budget และ publish แทนคนทั้งหมด" },
+      { "text": "ใช้เฉพาะเขียน caption เท่านั้น" }
+    ],
+    "correctFeedback": "ถูกต้อง AI เป็น co-pilot แต่ claim, brand risk, customer truth และ business decision ต้องมีคนรับผิดชอบ",
+    "incorrectFeedback": "AI ช่วยได้มากกว่า caption แต่ไม่ควรตัดสินใจเชิงธุรกิจและเผยแพร่โดยไม่มี human review"
+  },
+  { "type": "done" }
+]

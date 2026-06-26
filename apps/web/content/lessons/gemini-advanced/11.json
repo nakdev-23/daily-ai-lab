@@ -52,7 +52,9 @@
       {
         "text": "สตูดิโอถ่ายรูป"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ Google AI Studio คือ playground ฟรีไว้ทดลอง prompt และโมเดลก่อนเขียนโค้ด  💡 ใช้ต่อ: ลองปรับ system instruction/temperature กับไฟล์จริงในนั้นจนแม่นก่อน",
+    "incorrectFeedback": "AI Studio ไม่ใช่โปรแกรมตัดต่อหรือสตูดิโอถ่ายรูป มันคือ playground ทดลอง prompt  💡 ใช้ต่อ: ใช้ทดสอบไอเดียก่อนลงโค้ด"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ซื้อ credits"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง ปุ่ม Get code แปลงการตั้งค่าที่ทดลองเป็นโค้ดพร้อมใช้  💡 ใช้ต่อ: ทดลองจนพอใจใน Studio แล้วกด Get code ก๊อปไปใส่แอปได้เลย",
+    "incorrectFeedback": "Get code ไม่ได้ดาวน์โหลดโมเดลหรือซื้อ credits มันแปลงการตั้งค่าเป็นโค้ด  💡 ใช้ต่อ: ใช้ปิดช่องว่างระหว่างทดลองกับเขียนจริง"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "ไม่มีเหตุผล"
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ! ทดลอง prompt ใน Studio ไวกว่าแก้โค้ดวนหลายรอบ  💡 ใช้ต่อ: ลองหลายเวอร์ชัน prompt ใน Studio (กดไม่กี่ครั้ง) แทนการแก้โค้ด+รันใหม่ทุกที",
+    "incorrectFeedback": "ไม่ใช่เพราะเขียนโค้ดไม่ได้ แต่เพราะปรับ prompt ใน Studio เร็วกว่ามาก  💡 ใช้ต่อ: จูน prompt ให้เสร็จก่อน แล้วค่อย export โค้ดรอบเดียว"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
       {
         "text": "Gmail"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ อยาก prototype prompt และทดสอบโมเดลเร็ว ๆ ใช้ Google AI Studio  💡 ใช้ต่อ: เวิร์กโฟลว์—ทดลองใน Studio → export → เขียนโค้ดรอบเดียวจบ",
+    "incorrectFeedback": "Excel หรือ Gmail ไม่ใช่ที่ทดลอง prompt ใช้ Google AI Studio  💡 ใช้ต่อ: เก็บ Studio ไว้เป็นที่ลองก่อนลงโค้ด"
   },
   {
     "type": "quiz",
@@ -120,6 +128,27 @@
       {
         "text": "เล่นเกม"
       }
+    ],
+    "correctFeedback": "ถูกต้อง AI Studio ช่วยทดลอง prompt/พารามิเตอร์ก่อนนำไปต่อ API  💡 ใช้ต่อ: ปรับ temperature และ system prompt ให้ลงตัวก่อน จะลดการแก้โค้ดทีหลัง",
+    "incorrectFeedback": "ไม่ใช่ตัดต่อวิดีโอหรือเล่นเกม AI Studio ไว้ทดลอง prompt และพารามิเตอร์  💡 ใช้ต่อ: ใช้เป็นสนามซ้อมก่อนต่อ API จริง"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · prototype ใน AI Studio",
+    "title": "ร่าง system prompt + แผนทดลองใน AI Studio",
+    "instruction": "บทนี้สอนเวิร์กโฟลว์: ทดลองใน AI Studio (ปรับ system instruction/temperature) จนแม่นก่อน แล้วค่อย export โค้ด เลือกงานที่อยากทำเป็นระบบ (เช่น ผู้ช่วยตอบ FAQ, ตัวสรุปรีวิว) แล้วร่าง (1) system prompt ตั้งต้น และ (2) ลิสต์สิ่งที่จะลองปรับเทียบใน Studio (เช่น temperature 2 ค่า, system prompt 2 เวอร์ชัน)",
+    "payoff": "ได้แผนทดลองที่เอาไปกดทำใน AI Studio ได้ทันที จูน prompt ให้ลงตัวก่อน แล้วค่อย export โค้ดรอบเดียวจบ",
+    "examples": {
+      "bad": "ลองพิมพ์ prompt ใน Studio ไปเรื่อย ๆ จนกว่าจะได้",
+      "badNote": "ไม่มีแผนเทียบ ทำให้ไม่รู้ว่าอะไรทำให้ดีขึ้น เสียเวลาสุ่มลอง",
+      "good": "System prompt: \"คุณเป็นผู้ช่วยตอบ FAQ ร้าน ตอบสั้น สุภาพ อิงเฉพาะข้อมูลที่ให้\" | จะลองเทียบ: temperature 0.2 vs 0.7, และ system prompt เวอร์ชันที่เพิ่ม \"ถ้าไม่มีข้อมูลให้บอกว่าไม่ทราบ\" | วัดผลจาก: ตอบตรง+ไม่มั่ว",
+      "goodNote": "มี system prompt ตั้งต้น + แผนเทียบที่ชัด (เปลี่ยนทีละตัว) + เกณฑ์วัด → ทดลองใน Studio อย่างมีระบบ ไม่ใช่สุ่ม"
+    },
+    "starterPrompt": "System prompt: ... | จะลองเทียบ: ...",
+    "requirements": [
+      "System prompt ตั้งต้น: บอกบทบาท โทน และกรอบการตอบ",
+      "แผนเทียบ: จะปรับอะไรเทียบกัน (เช่น temperature, เวอร์ชัน prompt)",
+      "เกณฑ์วัดผล: ดูจากอะไรว่าเวอร์ชันไหนดีกว่า"
     ]
   },
   {

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Home, Crown, CheckCircle2, RefreshCw } from "lucide-react"
+import { Crown, CheckCircle2, RefreshCw, Rocket } from "lucide-react"
 import { makeT, type Lang } from "@/lib/i18n-core"
 import "./out-of-hearts.css"
 
@@ -64,8 +64,8 @@ export default function DailyLimitReached({ limit, nextReset, lang = "th" }: { l
                 : <span className="ooh-clock">{pad(hh)}<i>:</i>{pad(mm)}<i>:</i>{pad(ss)}</span>}
             </div>
             <div className="ooh-actions">
-              <Link className="ooh-btn pro" href="/upgrade"><Crown size={18} /> {t("Unlimited lessons with Pro")}</Link>
-              <Link className="ooh-btn primary" href="/daily-learn"><Home size={18} /> {t("Back to home")}</Link>
+              <Link className="ooh-btn pro" href="/upgrade?reason=daily_limit"><Crown size={18} /> {t("Keep learning now with Pro")}</Link>
+              <Link className="ooh-btn primary" href="/paths"><Rocket size={18} /> {t("See unlocked Career Paths")}</Link>
             </div>
             <p className="ooh-note">
               {t("Meanwhile you can still replay any finished lesson — replays don't count against the quota.")}

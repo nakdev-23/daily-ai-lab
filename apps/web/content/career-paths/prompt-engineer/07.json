@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "Prompt Engineer · บทที่ 7 · Real Tool Mission",
+    "title": "Prompt Engineer ต้องดู output จริง ไม่ใช่ดูแค่ prompt สวย",
+    "body": [
+      { "text": "Prompt ที่หน้าตาดีอาจให้ผลลัพธ์แย่ และ prompt ที่ดูธรรมดาอาจทำงานได้ดี งาน Prompt Engineer จึงต้องพิสูจน์ด้วย output จริง: เอา prompt ไปรันในเครื่องมือจริง เก็บคำตอบกลับมา เทียบก่อน/หลัง แล้วตัดสินด้วยเกณฑ์เดียวกัน" }
+    ],
+    "example": "Prompt v1: ช่วยเขียนโพสต์ขายคอร์ส AI\nPrompt v2: มีบทบาท, audience, offer, tone, ข้อห้าม, format และ fact-check rule\nผลที่ต้องดู: v2 ตรง audience กว่าไหม ลดคำขายเกินจริงไหม มี CTA ชัดไหม และมีจุดที่ยังต้องตรวจเองไหม",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Prompt Engineer · บทที่ 7 · Before/After",
+    "title": "เทียบแบบยุติธรรม: input เดียวกัน เกณฑ์เดียวกัน",
+    "body": [
+      { "text": "ถ้าจะพิสูจน์ว่า prompt ดีขึ้น ให้คุมตัวแปรหลักให้เหมือนกัน: ใช้โจทย์เดียวกัน input เดียวกัน และ rubric เดียวกัน จากนั้นรัน Prompt v1 กับ Prompt v2 ในโมเดลเดียวกัน หรือรัน Prompt v2 ใน 2 โมเดลเพื่อดูความต่าง เช่น ChatGPT กับ Claude" }
+    ],
+    "example": "คะแนน 1-4: ตรงโจทย์, ครบถ้วน, รูปแบบถูก, ไม่เดาข้อมูล, ใช้ต่อได้จริง\nถ้า v1 ได้ 9/20 และ v2 ได้ 16/20 พร้อมตัวอย่าง output ก่อน/หลัง นี่คือหลักฐานว่า prompt ดีขึ้นจริง",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · รันจริง",
+    "title": "รัน Prompt v1/v2 จริง แล้วเอา output กลับมาเทียบ",
+    "instruction": "เลือก prompt จากบทก่อนหน้า แล้วคัดลอกไปรันใน ChatGPT, Claude หรือ Gemini อย่างน้อย 2 รอบ: รอบแรกใช้ Prompt v1 หรือ prompt เดิม, รอบสองใช้ Prompt v2 ที่ปรับแล้ว ถ้ามีเวลาให้ลอง Prompt v2 ในอีกโมเดลหนึ่งด้วย จากนั้นวาง output จริงกลับมาในฟอร์มนี้",
+    "payoff": "Before/After Output Evidence ที่ใช้ต่อใน Evaluation Sheet และ Portfolio",
+    "examples": {
+      "bad": "v1 กับ v2 รันแล้ว v2 ดีกว่า สรุปเอาเองว่า v2 ผ่าน",
+      "badNote": "ไม่ได้วาง output จริง ไม่ให้คะแนนด้วย rubric เดียวกัน ตรวจสอบไม่ได้",
+      "good": "งาน: แคปชันขายคอร์ส / โมเดล: ChatGPT / v1 “เขียนแคปชันขายคอร์ส” → [วาง output จริง: ยาว ไม่มี CTA] / v2 (มีบริบท+ข้อห้าม+few-shot) → [วาง output จริง: 3 แคปชันมี CTA] / คะแนน 1-4: ตรงโจทย์ 2→4, รูปแบบ 1→4, ไม่เดาข้อมูล 2→4 / before/after: v2 เกาะข้อมูลจริงและมี CTA / หลักฐาน: screenshot+ลิงก์แชต 21 มิ.ย.",
+      "goodNote": "วาง output จริงทั้งสองรุ่น ให้คะแนน rubric เดียวกัน มี insight ก่อน/หลังและหลักฐานรันจริง"
+    },
+    "starterPrompt": "Real Tool Mission: Prompt Output Test\n\nงานที่ต้องการให้ AI ทำ:\n\nเครื่องมือ/โมเดลที่ใช้:\nเช่น ChatGPT / Claude / Gemini\n\nPrompt v1 หรือ prompt เดิม:\n\nOutput จริงจาก Prompt v1:\nวางคำตอบที่ได้จริง ห้ามสรุปเอง\n\nPrompt v2 ที่ปรับแล้ว:\n\nOutput จริงจาก Prompt v2:\nวางคำตอบที่ได้จริง ห้ามสรุปเอง\n\nถ้าลองโมเดลที่ 2:\nเครื่องมือ/โมเดลที่ 2:\nOutput จริงจากโมเดลที่ 2:\n\nตารางให้คะแนน 1-4\n- ตรงโจทย์:\n- ครบถ้วน:\n- รูปแบบถูกต้อง:\n- ไม่เดาข้อมูลเอง:\n- เอาไปใช้ต่อได้จริง:\n\nBefore/After ต่างกันอย่างไร:\n\nจุดที่ยังต้องแก้ prompt ต่อ:\n\nหลักฐานที่เก็บไว้:\nเช่น screenshot / link / ชื่อแชต / วันที่รัน\n",
+    "requirements": [
+      "มี prompt v1/v2 และ output จริงจากเครื่องมือ AI",
+      "มีการให้คะแนนด้วย rubric เดียวกัน",
+      "มี before/after insight และหลักฐานการรันจริง"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Prompt v1 หรือ prompt เดิม", "Output จริงจาก Prompt v1", "Prompt v2 ที่ปรับแล้ว", "Output จริงจาก Prompt v2"], "minChars": 30 },
+      { "filledAfterAll": ["ตรงโจทย์", "ครบถ้วน", "รูปแบบถูกต้อง", "ไม่เดาข้อมูลเอง", "เอาไปใช้ต่อได้จริง"], "minChars": 2 },
+      { "filledAfterAll": ["Before/After ต่างกันอย่างไร", "จุดที่ยังต้องแก้ prompt ต่อ", "หลักฐานที่เก็บไว้"], "minChars": 18 }
+    ],
+    "minLength": 520
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Output",
+    "question": "ทำไมต้องดู output จริง ไม่ใช่ดูแค่ prompt?",
+    "options": [
+      { "text": "เพราะ prompt ที่ดูดีอาจยังให้ผลลัพธ์ผิด หลุดโจทย์ หรือใช้งานจริงไม่ได้", "correct": true },
+      { "text": "เพราะ output ยาวกว่าจะดูน่าเชื่อกว่าเสมอ" },
+      { "text": "เพราะ rubric ไม่จำเป็นถ้า prompt เขียนสวย" }
+    ],
+    "correctFeedback": "ถูกต้อง คุณค่าของ prompt อยู่ที่ผลลัพธ์ที่ได้จริง ไม่ใช่หน้าตาของ prompt",
+    "incorrectFeedback": "ความยาวหรือความสวยของ prompt ไม่ได้พิสูจน์คุณภาพ ต้องดู output กับเกณฑ์ที่ตั้งไว้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Fair test",
+    "question": "ถ้าจะเทียบ Prompt v1 กับ Prompt v2 อย่างยุติธรรม ควรทำอย่างไร?",
+    "options": [
+      { "text": "ใช้ input เดียวกันและ rubric เดียวกัน แล้วเทียบ output ก่อน/หลัง", "correct": true },
+      { "text": "ใช้โจทย์คนละแบบเพื่อให้หลากหลาย" },
+      { "text": "เลือกเวอร์ชันที่ตอบยาวกว่า" }
+    ],
+    "correctFeedback": "ใช่ การคุม input และ rubric ให้เหมือนกันทำให้เห็นว่าคุณภาพต่างกันเพราะ prompt จริง ๆ",
+    "incorrectFeedback": "ถ้าโจทย์หรือเกณฑ์ต่างกัน จะบอกยากว่า prompt เวอร์ชันไหนดีกว่าจริง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Evidence",
+    "question": "หลักฐานแบบไหนช่วยให้ Portfolio ของ Prompt Engineer น่าเชื่อขึ้น?",
+    "options": [
+      { "text": "prompt v1/v2, output จริง, คะแนน rubric และคำอธิบายว่าปรับแล้วดีขึ้นตรงไหน", "correct": true },
+      { "text": "prompt สวย ๆ อย่างเดียว" },
+      { "text": "บอกว่า AI ตอบดีมากโดยไม่แสดง output" }
+    ],
+    "correctFeedback": "ถูกต้อง หลักฐานก่อน/หลังทำให้คนเห็นกระบวนการและผลลัพธ์ ไม่ใช่แค่คำกล่าวอ้าง",
+    "incorrectFeedback": "Portfolio ที่น่าเชื่อต้องมี output และ reasoning ไม่ใช่แค่ prompt หรือคำชม"
+  },
+  { "type": "done" }
+]

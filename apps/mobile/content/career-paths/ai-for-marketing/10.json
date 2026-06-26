@@ -1,0 +1,80 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 10 · Real run",
+    "title": "การตลาดจะใกล้งานจริงเมื่อเอา campaign ไปชนคนจริง",
+    "body": [
+      { "text": "แผนที่ดีและ copy ที่ดีเป็นแค่ครึ่งแรกของงานการตลาด ครึ่งหลังคือเอาไปทดสอบกับคนจริงในขนาดเล็ก เก็บตัวเลขหรือ feedback แล้วปรับต่อ บทนี้จึงไม่ให้หยุดที่ “ผลจำลอง” แต่ให้ทำ " },
+      { "text": "Real Campaign Run", "bold": true },
+      { "text": " แบบปลอดภัย ต้นทุนต่ำ และวัดผลได้" }
+    ],
+    "example": "ตัวเลือกที่ไม่ต้องใช้งบ: โพสต์ organic 1 ชิ้น, ส่ง DM/email ให้ 5-10 คนที่ยินยอม, ลงในกลุ่มที่อนุญาต, ทำ Google Form รับ feedback, หรือส่ง landing/waitlist ให้คนลองอ่านแล้วตอบว่าเข้าใจ/สนใจไหม",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 10 · Metrics",
+    "title": "ผลจริงไม่จำเป็นต้องใหญ่ แต่ต้องอ่านได้",
+    "body": [
+      { "text": "คุณไม่จำเป็นต้องยิงแอดเงินจริงหรือได้ยอดขายทันที สิ่งที่ต้องมีคือ signal จริง เช่น reach, impression, click, reply, signup, comment, poll result, survey answer หรือ feedback จากคนที่อยู่ใกล้ audience จริง แล้วแยกให้ชัดว่าอะไรคือ observation, interpretation และ next action" }
+    ],
+    "example": "โพสต์ LinkedIn ได้ 482 impressions, 18 clicks, 3 DM → Observation: angle “เริ่มง่ายในวันเดียว” ดึงคนคลิกได้พอสมควร แต่ DM ถามเรื่องราคา → Interpretation: proof เรื่องราคา/แพ็กเกจยังไม่ชัด → Action: เพิ่ม pricing objection ใน landing copy",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Real run log",
+    "title": "วางแผนรันแคมเปญเล็ก ๆ และเก็บผลจริง",
+    "instruction": "เลือก campaign/copy/test plan ของคุณ แล้ววาง Real Run แบบเล็กที่สุดที่ปลอดภัยและทำได้จริงภายใน 1-3 วัน ถ้ายังเผยแพร่ public ไม่ได้ ให้ทำ smoke test กับคนจริง 5-10 คนแทน แต่ต้องมีผลหรือ feedback จริง ไม่ใช่แต่งตัวเลขเอง",
+    "payoff": "Real Campaign Run Log ที่จะใช้ใน Optimization Report และ Final Playbook",
+    "starterPrompt": "Real Campaign Run Plan\n\nCampaign / Copy ที่จะรันจริง:\n\nช่องทางที่จะใช้:\nตัวอย่าง: Facebook post / LinkedIn post / Instagram story / Email / LINE / Google Form / Landing page / กลุ่ม community ที่อนุญาต\n\nกลุ่มคนที่จะเห็นหรือให้ feedback:\n\nสิ่งที่จะเผยแพร่หรือส่งให้ดู:\n\nMetric หรือ feedback ที่จะเก็บ:\n- Reach / Impression:\n- Click / Reply / Signup:\n- Comment / DM:\n- Survey answer / Feedback:\n\nระยะเวลารัน:\n\nงบประมาณ:\nใส่ 0 บาทได้ ถ้าเป็น organic/smoke test\n\nหลักฐานที่จะเก็บ:\nเช่น link, screenshot, export, จำนวน response, summary feedback\n\nข้อควรระวัง:\n- ขออนุญาตก่อนส่ง DM/email:\n- ไม่ spam:\n- ไม่ใช้ claim ที่ยังตรวจไม่ได้:\n- ไม่ใช้ข้อมูลส่วนตัวโดยไม่ยินยอม:\n\nผลจริงที่ได้หลังรัน:\n- ตัวเลข:\n- Feedback:\n- สิ่งที่แปลกใจ:\n\nObservation:\n\nInterpretation:\n\nAction ที่จะปรับต่อ:\n\nPrompt ให้ AI ช่วยวิเคราะห์ผลโดยไม่มั่ว:\n",
+    "requirements": [
+      "มีช่องทางจริง กลุ่มคนจริง และสิ่งที่จะเผยแพร่หรือส่งให้ดู",
+      "ระบุ metric/feedback หลักฐาน และข้อควรระวังด้าน consent/spam/claim",
+      "บันทึกผลจริงพร้อม observation, interpretation และ action"
+    ],
+    "checks": [
+      { "filledAfterAll": ["ช่องทางที่จะใช้", "กลุ่มคนที่จะเห็นหรือให้ feedback", "สิ่งที่จะเผยแพร่หรือส่งให้ดู"], "minChars": 12 },
+      { "filledAfterAll": ["Metric หรือ feedback ที่จะเก็บ", "หลักฐานที่จะเก็บ", "ข้อควรระวัง"], "minChars": 18 },
+      { "filledAfterAll": ["ผลจริงที่ได้หลังรัน", "Observation", "Interpretation", "Action ที่จะปรับต่อ"], "minChars": 18 }
+    ],
+    "minLength": 360
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Real run",
+    "question": "ถ้ายังไม่มีงบยิงแอด ควรทำอย่างไรให้ยังได้ผลจริง?",
+    "options": [
+      { "text": "ทำ organic post หรือ smoke test กับคนจริง 5-10 คน แล้วเก็บ click/reply/feedback", "correct": true },
+      { "text": "แต่งตัวเลขผลลัพธ์ให้ดูสมจริง" },
+      { "text": "หยุดที่ campaign brief ก็พอ" }
+    ],
+    "correctFeedback": "ถูกต้อง งานจริงไม่จำเป็นต้องใช้งบใหญ่ แต่ต้องมี signal จากคนจริงและบันทึกวิธีเก็บผล",
+    "incorrectFeedback": "ห้ามแต่งตัวเลข และ brief อย่างเดียวไม่พอสำหรับ job-ready ต้องมีผลหรือ feedback จริงอย่างน้อยหนึ่งรอบ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Ethics",
+    "question": "ข้อใดสำคัญที่สุดก่อนส่ง campaign ไปให้คนจริงดู?",
+    "options": [
+      { "text": "ขออนุญาต/ไม่ spam/ไม่ใช้ claim ที่ยังตรวจไม่ได้/ไม่เก็บข้อมูลส่วนตัวโดยไม่ยินยอม", "correct": true },
+      { "text": "ส่งให้มากที่สุดโดยไม่ต้องบอกบริบท" },
+      { "text": "ใช้คำแรงที่สุดเพื่อให้คนตอบกลับ" }
+    ],
+    "correctFeedback": "ใช่ การตลาดที่ใช้ได้จริงต้องรักษาความน่าเชื่อถือและความยินยอม ไม่ใช่แค่ได้ตัวเลข",
+    "incorrectFeedback": "การ spam หรือใช้ claim แรงเกินจริงอาจทำให้ตัวเลขดูดีระยะสั้น แต่เสี่ยงต่อแบรนด์และผู้ใช้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Analysis",
+    "question": "Observation ต่างจาก Interpretation อย่างไร?",
+    "options": [
+      { "text": "Observation คือสิ่งที่เห็นจากข้อมูล ส่วน interpretation คือเหตุผลที่คิดว่าเกิดขึ้น", "correct": true },
+      { "text": "เหมือนกันทุกอย่าง" },
+      { "text": "Observation คือความเห็นส่วนตัวล้วน ๆ" }
+    ],
+    "correctFeedback": "ถูกต้อง การแยกสองอย่างนี้ทำให้รายงานผลจริงไม่มั่วและตรวจย้อนกลับได้",
+    "incorrectFeedback": "Observation ต้องยึดผลจริง เช่น click/reply/feedback ส่วน interpretation เป็นข้อสันนิษฐานที่ต้องทดสอบต่อ"
+  },
+  { "type": "done" }
+]

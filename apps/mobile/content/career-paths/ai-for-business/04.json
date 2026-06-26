@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 4 · Decision memo",
+    "title": "Decision Memo คือเอกสารที่ทำให้ทีมเลือกทางได้อย่างมีเหตุผล",
+    "body": [
+      { "text": "เมื่อต้องเลือก 2-3 ทางเลือก อย่าให้ AI ตอบว่า “ทางนี้ดีที่สุด” เฉย ๆ ให้บังคับให้วิเคราะห์ด้วย criteria, trade-off, cost, risk, reversibility และสิ่งที่ต้องตรวจเพิ่ม Decision memo ที่ดีไม่ได้ทำให้คำตอบถูกเสมอ แต่ทำให้เหตุผลตรวจได้" }
+    ],
+    "example": "ตัดสินใจเลือก CRM: Criteria = ราคา, adoption, integration, reporting, data migration, support\nไม่ใช่แค่ถามว่า CRM ตัวไหนดี",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 4 · Risk",
+    "title": "แยกความเสี่ยงออกจากข้อเสียทั่วไป",
+    "body": [
+      { "text": "ข้อเสียคือสิ่งที่เราไม่ชอบ ความเสี่ยงคือสิ่งที่อาจกระทบผลลัพธ์จริง เช่น data loss, downtime, compliance, team adoption, customer impact หรือ cost overrun ให้ AI ช่วย list ได้ แต่คนต้องตรวจว่าความเสี่ยงไหนจริงและรุนแรงแค่ไหน" }
+    ],
+    "example": "ข้อเสีย: UI ไม่สวย\nRisk: ทีม sales ไม่กรอกข้อมูล ทำให้ pipeline report ใช้ตัดสินใจไม่ได้",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Decision memo",
+    "title": "ทำ Decision Memo สำหรับ 3 ทางเลือก",
+    "instruction": "ใช้เรื่องจาก Executive Brief แล้วสร้าง decision memo ที่มี 3 ทางเลือก เกณฑ์ตัดสิน และ trade-off ชัดเจน ถ้ายังไม่มีตัวเลขจริง ให้ใส่ assumption และ need check",
+    "payoff": "Decision Memo สำหรับใช้ใน checkpoint/project",
+    "starterPrompt": "Decision Memo\n\nDecision ที่ต้องทำ:\n\nOption A:\n\nOption B:\n\nOption C:\n\nCriteria ที่ใช้ตัดสิน:\n1.\n2.\n3.\n4.\n5.\n\nDecision Matrix\n| Criteria | Weight | Option A | Option B | Option C | Note / Evidence |\n|---|---:|---:|---:|---:|---|\n\nTrade-offs:\n\nRisks:\n\nRecommendation:\n\nWhy now / why not later:\n\nReversibility: ถ้าตัดสินใจผิด แก้กลับยากแค่ไหน:\n\nNeed check ก่อนอนุมัติ:\n\nPrompt ที่ใช้ให้ AI ช่วยวิเคราะห์:\n",
+    "requirements": [
+      "มี 3 options และ criteria ชัด",
+      "มี decision matrix พร้อม evidence/note",
+      "มี trade-off, risk, recommendation และ need check"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Option A", "Option B", "Option C", "Criteria ที่ใช้ตัดสิน"], "minChars": 12 },
+      { "filledAfter": ["Decision Matrix"], "minChars": 40 },
+      { "filledAfterAll": ["Trade-offs", "Risks", "Recommendation", "Need check ก่อนอนุมัติ"], "minChars": 18 }
+    ],
+    "minLength": 360
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Decision",
+    "question": "ทำไม decision memo ต้องมี criteria?",
+    "options": [
+      { "text": "เพื่อให้การเลือกทางเลือกตรวจเหตุผลได้ ไม่ใช่เลือกจากความรู้สึก", "correct": true },
+      { "text": "เพื่อทำให้เอกสารยาวขึ้น" },
+      { "text": "เพื่อให้ AI เลือกแทนทั้งหมด" }
+    ],
+    "correctFeedback": "ถูกต้อง criteria ทำให้การตัดสินใจโปร่งใสและคุยกันได้",
+    "incorrectFeedback": "Criteria ไม่ได้มีไว้เพิ่มความยาวหรือให้ AI ตัดสินใจแทน แต่ช่วยให้คนตัดสินใจดีขึ้น"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Risk",
+    "question": "ข้อใดเป็น risk มากกว่าข้อเสียทั่วไป?",
+    "options": [
+      { "text": "ระบบใหม่อาจทำให้ข้อมูลลูกค้าหายถ้า migration ไม่ถูกต้อง", "correct": true },
+      { "text": "สีปุ่มไม่ถูกใจบางคน" },
+      { "text": "ชื่อเครื่องมือจำยาก" }
+    ],
+    "correctFeedback": "ใช่ data loss กระทบธุรกิจจริงและต้องมีแผนป้องกัน",
+    "incorrectFeedback": "ข้อเสียเล็ก ๆ อาจควรแก้ แต่ risk คือสิ่งที่กระทบผลลัพธ์ คน หรือข้อมูลจริง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Reversibility",
+    "question": "ทำไมต้องคิดเรื่อง reversibility?",
+    "options": [
+      { "text": "เพื่อรู้ว่าถ้าตัดสินใจผิด จะแก้กลับยากและแพงแค่ไหน", "correct": true },
+      { "text": "เพื่อไม่ต้องเลือกทางใดเลย" },
+      { "text": "เพื่อให้เอกสารดู technical" }
+    ],
+    "correctFeedback": "ถูกต้อง ทางเลือกที่แก้กลับยากควรตรวจหนักขึ้นก่อนอนุมัติ",
+    "incorrectFeedback": "Reversibility ช่วยกำหนดระดับความระวัง ไม่ใช่ทำให้หยุดตัดสินใจ"
+  },
+  { "type": "done" }
+]

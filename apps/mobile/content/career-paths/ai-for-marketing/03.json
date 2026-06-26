@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 3 · Insight",
+    "title": "Insight ไม่ใช่ demographic แต่คือเหตุผลที่คนลงมือ",
+    "body": [
+      { "text": "คำว่า “ผู้หญิง 25-35” ยังไม่ใช่ insight ที่เอาไปเขียน campaign ได้ Insight ที่ใช้ได้ต้องบอก pain, desire, barrier และ trigger เช่น เขาอยากได้อะไร กลัวอะไร ทำไมยังไม่ซื้อ และอะไรทำให้เขาพร้อมลอง" }
+    ],
+    "example": "Demographic: เจ้าของร้านอาหารอายุ 30-45\nInsight: เขาไม่ได้กลัวเทคโนโลยี แต่กลัวว่าระบบใหม่จะทำให้พนักงานสับสนช่วงร้านยุ่ง",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 3 · Persona",
+    "title": "Persona ที่ดีต้องช่วยตัดสินใจเรื่อง message",
+    "body": [
+      { "text": "Persona ไม่ควรเป็นนิยายยาว ๆ แต่ควรตอบว่าเราควรพูดประเด็นไหน เลี่ยงประเด็นไหน ใช้หลักฐานแบบไหน และ CTA แบบไหนที่สมเหตุสมผลกับลูกค้าคนนั้น" }
+    ],
+    "example": "Persona ที่ใช้ได้: “เจ้าของร้านเล็กที่ยังใช้ Excel เพราะกลัวระบบ POS ยุ่งยาก” → message ควรเน้นเริ่มง่าย ไม่รื้อระบบเดิม และมี onboarding",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Insight map",
+    "title": "สร้าง Customer Insight Map จากโจทย์ของคุณ",
+    "instruction": "ใช้ Research Plan จากบท 2 แล้วสร้าง insight map ที่เอาไปเขียน campaign ได้จริง ไม่ต้องรู้ทุกอย่าง แต่ต้องแยกสิ่งที่รู้ สิ่งที่เดา และสิ่งที่ต้องตรวจ",
+    "payoff": "Customer Insight Map สำหรับใช้ทำ campaign brief",
+    "starterPrompt": "Customer Insight Map\n\nAudience หลัก:\n\nPain: เขาเจอปัญหาอะไร:\n\nDesire: เขาอยากได้ผลลัพธ์อะไร:\n\nBarrier: อะไรทำให้เขายังไม่ซื้อ/ไม่ลอง:\n\nTrigger: อะไรทำให้เขาพร้อมสนใจตอนนี้:\n\nAlternative: เขาใช้ทางเลือกอะไรแทนเราอยู่:\n\nEvidence / Source ที่มี:\n\nAssumption ที่ต้องตรวจเพิ่ม:\n\nMarketing angle ที่น่าจะใช้ได้ 3 แบบ:\n1.\n2.\n3.\n",
+    "requirements": [
+      "มี pain, desire, barrier และ trigger",
+      "แยก evidence/source ออกจาก assumption",
+      "เสนอ marketing angle อย่างน้อย 3 แบบ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Pain", "Desire", "Barrier", "Trigger"], "minChars": 12 },
+      { "filledAfterAll": ["Evidence / Source ที่มี", "Assumption ที่ต้องตรวจเพิ่ม"], "minChars": 12 },
+      { "filledAfter": ["Marketing angle ที่น่าจะใช้ได้ 3 แบบ"], "minChars": 30 }
+    ],
+    "minLength": 220
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Insight",
+    "question": "ข้อไหนเป็น insight ที่ใช้ทำ campaign ได้ดีที่สุด?",
+    "options": [
+      { "text": "ลูกค้าอายุ 25-35" },
+      { "text": "ลูกค้าอยากเริ่มใช้ AI แต่กลัวเสียเวลาลองผิดลองถูกและไม่รู้ว่างานจะดีพอไหม", "correct": true },
+      { "text": "ลูกค้าใช้มือถือ" }
+    ],
+    "correctFeedback": "ถูกต้อง เพราะมี desire, barrier และความกังวลที่เปลี่ยนเป็น message ได้",
+    "incorrectFeedback": "ข้อมูลประชากรหรือพฤติกรรมกว้าง ๆ ยังไม่พอ ต้องเห็นแรงจูงใจและอุปสรรค"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Assumption",
+    "question": "ถ้าคุณยังไม่มีหลักฐานว่า barrier สำคัญจริง ควรเขียนอย่างไร?",
+    "options": [
+      { "text": "เขียนว่าเป็น assumption และวางวิธีตรวจ เช่น survey/interview/test copy", "correct": true },
+      { "text": "เขียนเป็น fact ไปก่อนเพื่อให้ brief ดูมั่นใจ" },
+      { "text": "ไม่ต้องใส่ในงานเลย" }
+    ],
+    "correctFeedback": "ใช่ นักการตลาดที่ดีไม่ต้องรู้ทุกอย่าง แต่ต้องรู้ว่าอะไรยังเป็นสมมติฐาน",
+    "incorrectFeedback": "การทำ assumption ให้ดูเหมือน fact เสี่ยงมาก แต่การตัดทิ้งก็ทำให้ไม่เห็นสิ่งที่ต้องทดสอบ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Angle",
+    "question": "Marketing angle ควรเชื่อมกับอะไร?",
+    "options": [
+      { "text": "pain/desire/barrier ของลูกค้าและ promise ของสินค้า", "correct": true },
+      { "text": "คำที่กำลังฮิตเท่านั้น" },
+      { "text": "ความยาว caption" }
+    ],
+    "correctFeedback": "ถูกต้อง angle ที่ดีคือสะพานระหว่างสิ่งที่ลูกค้ารู้สึกกับคุณค่าของสินค้า",
+    "incorrectFeedback": "คำฮิตช่วยดึงสายตาได้ แต่ถ้าไม่เชื่อมกับ pain และ promise ก็ไม่เกิด conversion"
+  },
+  { "type": "done" }
+]

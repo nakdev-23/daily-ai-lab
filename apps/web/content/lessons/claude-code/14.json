@@ -52,7 +52,9 @@
       {
         "text": "ปลั๊กอินเสริมความฉลาด"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ Hooks คือคำสั่งที่รันอัตโนมัติเมื่อเกิดเหตุการณ์ที่กำหนด  💡 ใช้ต่อ: ตั้ง hook ใน settings.json ให้รัน formatter หลังแก้ไฟล์",
+    "incorrectFeedback": "Hooks ไม่ใช่ตะขอแขวนของหรือปลั๊กอินเพิ่มความฉลาด — มันคือคำสั่งที่รันอัตโนมัติตามเหตุการณ์  💡 ใช้ต่อ: ใช้ทำกติกาให้เป็นอัตโนมัติ"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ทำไม่ได้"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง อยาก format โค้ดหลังแก้ไฟล์ ใช้ PostToolUse กับ matcher Write|Edit  💡 ใช้ต่อ: ตั้งให้รัน prettier --write หลังทุกการ Edit",
+    "incorrectFeedback": "SessionStart รันตอนเริ่ม ไม่ใช่หลังแก้ไฟล์ และไม่ใช่ทำไม่ได้ — ใช้ PostToolUse  💡 ใช้ต่อ: PostToolUse = หลังเครื่องมือทำงานเสร็จ"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "ไม่มีข้อดี"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ข้อดีของ hooks คือเป็นระบบอัตโนมัติ ไม่พึ่งความจำของ AI  💡 ใช้ต่อ: กติกาที่ต้องทำทุกครั้งให้เป็น hook ไม่ใช่กำชับใน prompt",
+    "incorrectFeedback": "ไม่เกี่ยวกับประหยัดไฟ และมีข้อดีจริง — มันทำให้กติกาเป็นอัตโนมัติ  💡 ใช้ต่อ: hook รับประกันว่าทำทุกครั้ง ต่างจาก prompt ที่อาจลืม"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "สั่งให้ทำงานอัตโนมัติเมื่อเกิดเหตุการณ์ เช่น หลังแก้ไฟล์",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ Hooks สั่งให้ทำงานอัตโนมัติเมื่อเกิดเหตุการณ์ เช่น หลังแก้ไฟล์  💡 ใช้ต่อ: ลองตั้ง hook auto-format เป็นตัวแรก",
+    "incorrectFeedback": "ไม่ใช่เปลี่ยนสีพื้นหลังหรือเล่นเพลง — มันสั่งงานอัตโนมัติตามเหตุการณ์  💡 ใช้ต่อ: ใช้ hook ทำสิ่งที่ต้องทำซ้ำทุกครั้งให้อัตโนมัติ"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "ปิดคอมพิวเตอร์"
       }
+    ],
+    "correctFeedback": "ใช่ Hook ที่ทีมใช้จริงคือรัน formatter หรือ test อัตโนมัติหลังแก้โค้ด  💡 ใช้ต่อ: เพิ่ม PreToolUse บล็อกคำสั่งอันตรายอย่าง rm -rf ด้วย",
+    "incorrectFeedback": "ไม่ใช่ส่งอีเมลขยะหรือปิดคอม — ตัวที่ใช้จริงคือ auto-format/test และบล็อกคำสั่งเสี่ยง  💡 ใช้ต่อ: ใช้ hook ทั้งช่วยงานและเพิ่มความปลอดภัย"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · ตั้ง hook auto-format",
+    "title": "เพิ่ม PostToolUse hook ให้ format โค้ดหลังแก้ไฟล์",
+    "instruction": "ลองตั้ง hook ตัวแรกใน settings.json ให้รัน formatter อัตโนมัติหลังทุกการ Edit/Write เพื่อให้โค้ด AI ออกมา format ตรงทีมเสมอ",
+    "example": "// .claude/settings.json — hooks: PostToolUse, matcher \"Write|Edit\", command: \"prettier --write\"",
+    "checks": [
+      "เปิดไฟล์ .claude/settings.json ในโปรเจกต์ (สร้างใหม่ถ้ายังไม่มี) — จะให้ Claude ช่วยร่างก็ได้",
+      "เพิ่ม hook ชนิด PostToolUse โดยตั้ง matcher เป็น Write|Edit",
+      "ตั้ง command ให้รัน formatter ของโปรเจกต์ เช่น prettier --write หรือ eslint --fix",
+      "ลองให้ Claude แก้ไฟล์หนึ่งจุด แล้วดูว่า formatter ทำงานอัตโนมัติหลังแก้"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · ออกแบบ hook ที่คุ้มค่า",
+    "title": "ออกแบบ hook 1 ตัวที่ทำกติกาทีมให้อัตโนมัติ",
+    "instruction": "บทนี้สอนว่า hook ทำให้กติกาเป็นระบบอัตโนมัติโดยไม่พึ่งความจำ ลองออกแบบ hook หนึ่งตัวสำหรับโปรเจกต์ของคุณ ระบุเหตุการณ์ (เช่น PostToolUse), matcher และคำสั่งที่จะรัน",
+    "payoff": "ได้แบบ hook ที่นำไปใส่ settings.json ได้ ทำให้กติกาสำคัญทำงานทุกครั้งโดยอัตโนมัติ",
+    "examples": {
+      "bad": "ขอให้ Claude อย่าลืม format โค้ดทุกครั้งนะ",
+      "badNote": "พึ่งความจำของ AI ในแต่ละ prompt ซึ่งอาจลืมได้ ไม่การันตีว่าจะทำทุกครั้ง",
+      "good": "เหตุการณ์: PostToolUse\nmatcher: Write|Edit\ncommand: prettier --write ไฟล์ที่เพิ่งแก้\n→ ทุกครั้งที่ AI แก้ไฟล์ โค้ดจะถูก format อัตโนมัติ",
+      "goodNote": "กำหนดเหตุการณ์ + matcher + command ชัด → กติกาทำงานอัตโนมัติทุกครั้ง ไม่ต้องกำชับ"
+    },
+    "starterPrompt": "เหตุการณ์: ____\nmatcher: ____\ncommand: ____",
+    "requirements": [
+      "เลือกกติกาที่ทำซ้ำทุกครั้ง (format, lint, log, บล็อกคำสั่งเสี่ยง)",
+      "ระบุเหตุการณ์ (PostToolUse/PreToolUse) และ matcher",
+      "ระบุคำสั่งที่จะรันอัตโนมัติเมื่อเกิดเหตุการณ์"
     ]
   },
   {

@@ -1,0 +1,125 @@
+[
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 2 · ตอนที่ 1",
+    "title": "พิมพ์ /imagine แล้วตามด้วย prompt",
+    "body": [
+      {
+        "text": "เริ่มสร้างภาพด้วยคำสั่ง "
+      },
+      {
+        "text": "/imagine",
+        "bold": true
+      },
+      {
+        "text": " แล้วพิมพ์ prompt ต่อท้าย Midjourney จะให้ภาพมา 4 แบบ จากนั้นเลือก "
+      },
+      {
+        "text": "U",
+        "bold": true
+      },
+      {
+        "text": " (Upscale ขยาย) หรือ "
+      },
+      {
+        "text": "V",
+        "bold": true
+      },
+      {
+        "text": " (Variation สร้างแบบใกล้เคียง) อันที่ชอบ"
+      }
+    ],
+    "example": "/imagine a futuristic city at night, neon lights, rain, cinematic, highly detailed",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Midjourney · บทที่ 2 · ตอนที่ 2",
+    "title": "ลองแล้ววนปรับ",
+    "body": [
+      {
+        "text": "ภาพแรกมักไม่เป๊ะ การทำงานจริงคือ "
+      },
+      {
+        "text": "ลอง → ดูผล → ปรับ prompt → ลองใหม่",
+        "bold": true
+      },
+      {
+        "text": " เก็บคำที่เวิร์ก ตัดคำที่ทำให้เพี้ยน ทีละนิด ไม่ต้องเขียน prompt สมบูรณ์แบบตั้งแต่ครั้งแรก"
+      }
+    ],
+    "example": "ภาพมืดไป → เพิ่ม 'bright daylight, soft lighting' แล้ว /imagine ใหม่",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 4",
+    "question": "คำสั่งเริ่มสร้างภาพคืออะไร?",
+    "options": [
+      {
+        "text": "/imagine",
+        "correct": true
+      },
+      {
+        "text": "/create-video"
+      },
+      {
+        "text": "/sing"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 4",
+    "question": "Midjourney ให้ภาพมากี่แบบต่อครั้ง?",
+    "options": [
+      {
+        "text": "4 แบบ",
+        "correct": true
+      },
+      {
+        "text": "1 แบบ"
+      },
+      {
+        "text": "20 แบบ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 4",
+    "question": "ปุ่ม U ใช้ทำอะไร?",
+    "options": [
+      {
+        "text": "ขยายภาพ (Upscale) ที่เลือก",
+        "correct": true
+      },
+      {
+        "text": "ลบภาพ"
+      },
+      {
+        "text": "เพิ่มเสียง"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 4",
+    "question": "วิธีทำงานจริงกับ Midjourney คือ?",
+    "options": [
+      {
+        "text": "ลอง ดูผล ปรับ prompt แล้วลองใหม่ทีละนิด",
+        "correct": true
+      },
+      {
+        "text": "เขียน prompt ให้สมบูรณ์แบบครั้งเดียวจบ"
+      },
+      {
+        "text": "กดสุ่มไปเรื่อยๆ โดยไม่อ่านผล"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

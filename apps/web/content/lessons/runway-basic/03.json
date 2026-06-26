@@ -45,7 +45,9 @@
       {
         "text": "'--music on'"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง 'aerial drone shot', 'pan left' คือศัพท์กล้องที่คุมการเคลื่อนไหว  💡 ใช้ต่อ: เติมคำสั่งกล้องทุกช็อต คลิปจะดูตั้งใจกำกับ ไม่ใช่ภาพนิ่งขยับนิด ๆ",
+    "incorrectFeedback": "'ภาพสวย ๆ' กว้างไป และ '--music on' ไม่ใช่ศัพท์กล้อง  💡 ใช้ต่อ: ใช้คำเฉพาะ เช่น zoom in, tracking shot, aerial drone shot"
   },
   {
     "type": "quiz",
@@ -62,7 +64,9 @@
       {
         "text": "เพื่อให้ไฟล์ใหญ่ขึ้น"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ระบุความเร็วเพื่อให้ได้จังหวะที่ต้องการ ไม่กระตุกหรือเร็วไป  💡 ใช้ต่อ: ใส่ 'slow motion' หรือ 'time-lapse' ให้ชัดทุกครั้งที่จังหวะสำคัญ",
+    "incorrectFeedback": "ไม่ใช่เพราะระบบบังคับหรือทำไฟล์ใหญ่ขึ้น  💡 ใช้ต่อ: ถ้าไม่ระบุความเร็ว การเคลื่อนไหวอาจเพี้ยน — บอกไปเลยว่าช้าหรือเร็ว"
   },
   {
     "type": "quiz",
@@ -79,7 +83,9 @@
       {
         "text": "เพิ่มเสียงพากย์"
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ 'slow motion' ทำให้ภาพเคลื่อนช้าลง ดูดรามาติก  💡 ใช้ต่อ: ใช้สโลว์โมชันกับโมเมนต์ที่อยากเน้นอารมณ์ เช่น หยดน้ำ ผมปลิว",
+    "incorrectFeedback": "slow motion ไม่ได้หมุน 360 องศาหรือเพิ่มเสียงพากย์  💡 ใช้ต่อ: มันแค่ทำให้ช้าลง เพิ่มความดราม่าให้ช็อต"
   },
   {
     "type": "quiz",
@@ -96,6 +102,41 @@
       {
         "text": "เปลี่ยนภาษาของคลิป"
       }
+    ],
+    "correctFeedback": "ใช่ ศัพท์กล้องทำให้คลิปดูตั้งใจกำกับ มีการเคลื่อนกล้องชัดเจน  💡 ใช้ต่อ: เลือกการเคลื่อนกล้องให้เข้ากับอารมณ์ช็อต เช่น aerial เปิดฉากใหญ่",
+    "incorrectFeedback": "ศัพท์กล้องไม่ได้ลดเวลาเรนเดอร์หรือเปลี่ยนภาษา  💡 ใช้ต่อ: มันยกระดับคลิปให้ดูโปร ด้วยการกำกับการเคลื่อนกล้อง"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · ใส่ศัพท์กล้อง",
+    "title": "คุมการเคลื่อนกล้องและความเร็ว",
+    "instruction": "เติมคำสั่งกล้อง (เช่น aerial drone shot, slow motion) เข้าไปใน prompt แล้วดูว่าคลิปดูตั้งใจกำกับขึ้น",
+    "example": "Aerial drone shot flying over snowy mountains at sunrise, slowly moving forward, cinematic",
+    "checks": [
+      "เปิด Runway โหมด Text to Video",
+      "วาง prompt ด้านบน สังเกตคำกล้อง 'aerial drone shot' และ 'slowly moving forward'",
+      "กด Generate แล้วดูการเคลื่อนกล้อง",
+      "ลองเปลี่ยนเป็น 'time-lapse of clouds moving fast' แล้วเทียบจังหวะ",
+      "เก็บคำกล้องที่ชอบไว้ใช้กับช็อตอื่น"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · กำกับกล้อง",
+    "title": "เติมศัพท์กล้องและความเร็ว",
+    "instruction": "บทนี้สอนศัพท์กล้อง (zoom in, pan left, aerial drone shot, slow motion) เอา prompt ช็อตที่มีอยู่มาเติมคำสั่งกล้องและความเร็ว ให้คลิปดูตั้งใจกำกับ",
+    "payoff": "ได้ช็อตที่มีการเคลื่อนกล้องชัดเจน ดูโปร ไม่ใช่ภาพนิ่งขยับนิด ๆ",
+    "examples": {
+      "bad": "a mountain landscape, beautiful",
+      "badNote": "ไม่มีคำกล้อง ไม่บอกความเร็ว กล้องอาจนิ่งหรือเคลื่อนมั่ว",
+      "good": "Aerial drone shot flying slowly over a misty mountain valley at sunrise, cinematic, smooth forward motion",
+      "goodNote": "ระบุมุมกล้อง (aerial drone) + ความเร็ว/ทิศทาง (slowly, forward) → คลิปดูกำกับมา"
+    },
+    "starterPrompt": "[ช็อตของคุณ], [คำสั่งกล้อง: aerial/pan/zoom...], [ความเร็ว: slow motion/time-lapse]",
+    "requirements": [
+      "ใส่คำสั่งกล้องอย่างน้อย 1 คำ (zoom in / pan left / aerial drone shot / tracking shot)",
+      "ระบุความเร็วหรือทิศทางการเคลื่อน (slow motion, moving forward ฯลฯ)",
+      "ให้ช็อตยังเป็นการกระทำเดียว ไม่ยัดหลายเหตุการณ์"
     ]
   },
   {

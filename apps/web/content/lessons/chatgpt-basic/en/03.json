@@ -2,20 +2,15 @@
   {
     "type": "theory",
     "tag": "ChatGPT Basics · Chapter 1 · Part 5",
-    "title": "GPT-3.5 vs GPT-4o — what's the difference?",
+    "title": "GPT-5.5 vs GPT-5.5 mini — what's the difference?",
     "body": [
-      {
-        "text": "ChatGPT offers several models. "
-      },
-      {
-        "text": "GPT-4o",
-        "bold": true
-      },
-      {
-        "text": " is the newer one — smarter, better at complex context, and it can read images too. GPT-3.5 is fast and free, but less capable."
-      }
+      { "text": "ChatGPT offers several models. " },
+      { "text": "GPT-5.5", "bold": true },
+      { "text": " is the full, smartest one — great at complex context and working with images and files. " },
+      { "text": "GPT-5.5 mini", "bold": true },
+      { "text": " is the lighter, faster one, ideal for simple tasks." }
     ],
-    "example": "\"Analyze this image and tell me what it shows.\" (using GPT-4o)",
+    "example": "\"Analyze this image and tell me what it shows.\" (best with GPT-5.5)",
     "mascot": "mascot-think"
   },
   {
@@ -23,103 +18,61 @@
     "tag": "ChatGPT Basics · Chapter 1 · Part 6",
     "title": "Which model should you pick?",
     "body": [
-      {
-        "text": "Use "
-      },
-      {
-        "text": "GPT-3.5 for simple tasks",
-        "bold": true
-      },
-      {
-        "text": " like everyday Q&A or short summaries, and choose GPT-4o when you need higher quality — writing code, analyzing complex data, or working with images."
-      }
+      { "text": "Use the " },
+      { "text": "mini model for simple tasks", "bold": true },
+      { "text": " like everyday Q&A or short summaries — it's fast. Reach for full GPT-5.5 when you need higher quality: writing code, analyzing complex data, or working with images." }
     ],
-    "example": "\"Write Python code to pull data from an API and plot it as a chart.\" (best with GPT-4o)",
+    "example": "\"Write Python code to pull data from an API and plot it as a chart.\" (best with GPT-5.5)",
     "mascot": "mascot-point"
   },
   {
     "type": "quiz",
     "tag": "Question 1 of 5",
-    "question": "What can GPT-4o do that GPT-3.5 can't?",
+    "question": "What does full GPT-5.5 do better than the mini model?",
     "options": [
-      {
-        "text": "Respond faster than GPT-3.5"
-      },
-      {
-        "text": "Analyze images",
-        "correct": true
-      },
-      {
-        "text": "Be used for free with no limits"
-      }
+      { "text": "Respond faster than mini" },
+      { "text": "Handle complex tasks and work with images more deeply", "correct": true },
+      { "text": "Run free with no limits" }
     ]
   },
   {
     "type": "quiz",
     "tag": "Question 2 of 5",
-    "question": "When should you use GPT-3.5?",
+    "question": "When should you use the mini model?",
     "options": [
-      {
-        "text": "When you need to analyze an image"
-      },
-      {
-        "text": "For simple, non-complex tasks where speed matters",
-        "correct": true
-      },
-      {
-        "text": "When writing complex code"
-      }
+      { "text": "When you need detailed image analysis" },
+      { "text": "When it's a simple task and you want speed", "correct": true },
+      { "text": "When you need to write complex code" }
     ]
   },
   {
     "type": "quiz",
     "tag": "Question 3 of 5",
-    "question": "What does GPT-4o stand for?",
+    "question": "You want a quick answer to a short, easy question. Which model?",
     "options": [
-      {
-        "text": "GPT-4 Online"
-      },
-      {
-        "text": "GPT-4 Optimized"
-      },
-      {
-        "text": "GPT-4 Omni",
-        "correct": true
-      }
+      { "text": "GPT-5.5 mini — it's faster and lighter", "correct": true },
+      { "text": "Full GPT-5.5 every time, no matter the task" },
+      { "text": "You must switch between both every time" }
     ]
   },
   {
     "type": "quiz",
     "tag": "Question 4 of 5",
-    "question": "You want help reading the numbers off a photo of a receipt. Which model should you use?",
+    "question": "You need it to read the numbers off a photo of a receipt. Which model?",
     "options": [
-      {
-        "text": "GPT-3.5"
-      },
-      {
-        "text": "GPT-4o, because it can analyze images",
-        "correct": true
-      },
-      {
-        "text": "Any model — the result is the same"
-      }
+      { "text": "GPT-5.5 mini" },
+      { "text": "GPT-5.5, because it works with images better", "correct": true },
+      { "text": "Any model — same result" }
     ]
   },
   {
     "type": "quiz",
     "tag": "Question 5 of 5",
-    "question": "What kind of task is GPT-3.5 good enough for?",
+    "question": "What kind of task is the mini model good enough for?",
     "options": [
-      {
-        "text": "Analyzing photos"
-      },
-      {
-        "text": "Asking for a short definition or summarizing simple text",
-        "correct": true
-      },
-      {
-        "text": "Writing complex code across many files"
-      }
+      { "text": "Detailed photo analysis" },
+      { "text": "Asking for a short definition or summarizing simple text", "correct": true },
+      { "text": "Writing complex multi-file code" }
     ]
   },
   {

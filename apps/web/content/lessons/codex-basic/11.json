@@ -52,7 +52,9 @@
       {
         "text": "เปลี่ยนเจ้าของ repo"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ เมื่อ task เสร็จ Codex เปิด Pull Request พร้อมคำอธิบายให้อัตโนมัติ  💡 ใช้ต่อ: ทีมรีวิว PR บน GitHub ตามปกติได้เลย ไม่ต้องเปลี่ยน workflow",
+    "incorrectFeedback": "Codex ไม่ลบ repo หรือเปลี่ยนเจ้าของ — มันเปิด PR พร้อมคำอธิบายการเปลี่ยนแปลง  💡 ใช้ต่อ: คำอธิบายใน PR ช่วยให้รีวิวเข้าใจว่าแก้อะไรเพราะอะไร"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ต้องรีวิวผ่านอีเมลเท่านั้น"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง ไม่ต้องเปลี่ยน workflow — รีวิว PR บน GitHub ตามปกติได้เลย  💡 ใช้ต่อ: Codex เสียบเข้ากระบวนการเดิมของทีม ไม่ต้องเรียนเครื่องมือใหม่",
+    "incorrectFeedback": "ไม่ต้องเลิกใช้ GitHub หรือรีวิวผ่านอีเมล — workflow เดิมใช้ได้เลย  💡 ใช้ต่อ: มอง PR ของ Codex เหมือน PR ของเพื่อนร่วมทีมคนหนึ่ง"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "แก้ไม่ได้เลย"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ สั่ง Codex แก้ตาม comment แล้ว push ขึ้น PR เดิมได้เลย  💡 ใช้ต่อ: พิมพ์ 'แก้ตาม comment ของ reviewer แล้ว push ขึ้น PR เดิม' ไม่ต้องดึงโค้ดมาแก้เอง",
+    "incorrectFeedback": "ไม่ต้องปิด PR เริ่มใหม่ และไม่ใช่แก้ไม่ได้ — สั่ง Codex แก้ต่อแล้ว push ขึ้น PR เดิมได้  💡 ใช้ต่อ: วน comment → แก้ → push ได้จนกว่ารีวิวจะผ่าน"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "ช่วยตรวจและเสนอปรับปรุงใน Pull Request",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง ในขั้น code review Codex ช่วยตรวจและเสนอปรับปรุงใน PR ได้  💡 ใช้ต่อ: ให้ Codex เป็น reviewer คนแรก ตรวจเบื้องต้นก่อนถึงมือคนจริง",
+    "incorrectFeedback": "Codex ไม่ลบ repo หรือปิด GitHub — มันช่วยตรวจและเสนอปรับปรุงใน PR  💡 ใช้ต่อ: ใช้มันกรองปัญหาง่าย ๆ ออกก่อน คนจะได้โฟกัสจุดสำคัญ"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "ให้ AI merge เองทุกครั้ง"
       }
+    ],
+    "correctFeedback": "ใช่ ใช้ GitHub Integration ให้ดีคือให้ AI ช่วยรีวิว แต่คนยังตัดสินใจ merge  💡 ใช้ต่อ: ตั้งกติกาให้ทุก PR ต้องมีคนกด approve อย่างน้อย 1 คนเสมอ",
+    "incorrectFeedback": "ไม่รีวิวเลย หรือให้ AI merge เองทุกครั้ง ล้วนเสี่ยง — ให้ AI ช่วยรีวิวแต่คนตัดสินใจ merge  💡 ใช้ต่อ: AI เป็นผู้ช่วย คนยังเป็นคนกดปุ่มสุดท้าย"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · ดู PR ที่ Codex เปิด",
+    "title": "ปล่อยให้ Codex เปิด PR แล้วสั่งแก้ตาม comment",
+    "instruction": "ลองสั่ง task หนึ่งงานให้จบเป็น PR บน GitHub แล้วลองใส่ comment ขอแก้จุดหนึ่ง จากนั้นสั่ง Codex แก้ตามแล้ว push ขึ้น PR เดิม",
+    "example": "แก้ตาม comment ของ reviewer (ตรงนี้ควร handle null ด้วย) แล้ว push ขึ้น PR เดิม",
+    "checks": [
+      "สั่ง task ใน Codex แล้วรอจนมันเปิด Pull Request บน GitHub",
+      "เปิด PR นั้นบน GitHub อ่าน description ที่ Codex เขียนว่าแก้อะไร",
+      "ใส่ comment ขอแก้จุดหนึ่งใน PR (เช่น 'ตรงนี้ควร handle null')",
+      "กลับมาที่ Codex สั่งแก้ตาม comment แล้ว push ขึ้น PR เดิม แล้วดูว่า commit ใหม่เด้งใน PR"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · ทำงานต่อใน PR",
+    "title": "เขียนคำสั่งให้ Codex แก้ตามรีวิวแล้ว push PR เดิม",
+    "instruction": "บทนี้สอนว่า Codex ตอบ comment ใน PR และแก้ตามรีวิวได้โดยเราไม่ต้องดึงโค้ดมาแก้เอง ลองเขียนคำสั่งสั่งแก้ตาม comment ของ reviewer แล้ว push ขึ้น PR เดิม",
+    "payoff": "ได้วิธีปิดรอบรีวิวเร็วขึ้น — reviewer comment, Codex แก้, push กลับ PR เดิม วนจนผ่าน โดยไม่ต้องสลับมาแก้ในเครื่อง",
+    "examples": {
+      "bad": "แก้ตามที่ reviewer บอก",
+      "badNote": "ไม่ได้ยกมาว่า reviewer ขออะไร และไม่บอกให้ push ที่ไหน — Codex อาจแก้ไม่ตรงหรือเปิด PR ใหม่",
+      "good": "reviewer comment ในไฟล์ checkout.ts ว่า 'ตรง getUser ควร handle กรณี user เป็น null ด้วย' ช่วยแก้ตาม comment นี้ แล้ว push ขึ้น PR เดิม (#142) ไม่ต้องเปิด PR ใหม่",
+      "goodNote": "ยกข้อความ reviewer มาชัด + ระบุไฟล์ + สั่ง push ขึ้น PR เดิม → แก้ตรงจุดและอยู่ใน PR เดียว"
+    },
+    "starterPrompt": "reviewer comment ว่า '___' ในไฟล์ ___ ช่วยแก้ตามนี้แล้ว push ขึ้น PR เดิม (#___)",
+    "requirements": [
+      "ยกข้อความ comment ของ reviewer มาให้ชัด",
+      "ระบุไฟล์หรือจุดที่ต้องแก้",
+      "สั่งให้ push ขึ้น PR เดิม ไม่เปิดใหม่"
     ]
   },
   {

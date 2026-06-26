@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 10 · Stakeholder review",
+    "title": "เอกสารธุรกิจดีขึ้นเมื่อมีคนใช้งานจริงให้ feedback",
+    "body": [
+      { "text": "ถ้า brief, memo หรือ SOP อยู่แค่ในกล่องข้อความ เราไม่รู้ว่าคนในทีมอ่านแล้วตัดสินใจได้จริงไหม บทนี้ให้คุณนำเอกสารหนึ่งชิ้นไปให้ stakeholder หรือคนที่เข้าใจงานนั้น review แล้วเก็บ feedback กลับมา" }
+    ],
+    "example": "ส่ง executive brief ให้หัวหน้าทีมดู 10 นาที แล้วถาม 4 ข้อ: เข้าใจ decision ไหม, ข้อมูลพอไหม, risk ครบไหม, next step ชัดไหม",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 10 · Meeting notes",
+    "title": "Feedback ต้องกลายเป็น action item",
+    "body": [
+      { "text": "การ review ที่ดีไม่จบที่ “โอเค/ไม่โอเค” ต้องสรุปเป็น action item: ใครต้องแก้ส่วนไหน ภายในเมื่อไร ต้องตรวจข้อมูลอะไร และ decision ต่อไปคืออะไร" }
+    ],
+    "example": "Feedback: metric ยังไม่ชัด → Action: เพิ่ม baseline และ target ภายในวันศุกร์ → Owner: Ops Lead → Decision: review proposal อีกครั้งวันจันทร์",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Stakeholder feedback",
+    "title": "นำเอกสารไปให้คนจริง review แล้วเก็บ action items",
+    "instruction": "เลือก executive brief, decision memo, proposal หรือ SOP หนึ่งชิ้น แล้วให้ stakeholder หรือคนที่เข้าใจงานนั้น review ถ้าเป็นงานสมมติ ให้เลือกเพื่อนร่วมงาน/เพื่อนที่เข้าใจบริบทธุรกิจและบอกว่าเป็น mock case ห้ามแต่ง feedback เอง",
+    "payoff": "Stakeholder Feedback & Action Log สำหรับ final playbook",
+    "examples": {
+      "bad": "เอกสาร: SOP / ผู้ review: หัวหน้า / feedback: บอกว่าดีแล้ว ใช้ได้เลย",
+      "badNote": "feedback ดูแต่งเอง ไม่มีสิ่งที่ต้องแก้ และไม่มี action item หรือหลักฐาน",
+      "good": "เอกสาร: SOP onboarding / review: หัวหน้าฝ่ายขาย (mock case) คุย 10 นาที / feedback จริง: ขั้น 3 “ฟัง 5 สาย” น้อยไป ควร 10, ไม่มีจุดวัดว่าผ่าน / ต้องแก้: เพิ่มเกณฑ์ผ่านปลายสัปดาห์ / actions: [เพิ่มเกณฑ์วัดผล | ฉัน | ศุกร์นี้], [ขอตัวอย่างสคริปต์ | หัวหน้า | จันทร์] / หลักฐาน: meeting note 21 มิ.ย.",
+      "goodNote": "มีผู้ review จริง feedback ที่นำไปแก้ได้ และ action items พร้อม owner/deadline+หลักฐาน"
+    },
+    "starterPrompt": "Stakeholder Review Log\n\nเอกสารที่นำไป review:\n\nผู้ review / บทบาท:\n\nวิธี review:\nเช่น นัดคุย 10 นาที / ส่งเอกสารให้ comment / call / chat\n\nคำถามที่ใช้ถาม:\n1. Decision หรือ next step ชัดไหม:\n2. ข้อมูลพอไหม:\n3. Risk หรือข้อจำกัดขาดอะไร:\n4. เอกสารนี้ใช้ตัดสินใจหรือทำงานต่อได้ไหม:\n\nFeedback จริงที่ได้รับ:\n\nสิ่งที่ต้องแก้:\n\nAction items\n| Action | Owner | Deadline | Evidence needed |\n|---|---|---|---|\n\nสิ่งที่ AI ช่วยปรับต่อได้:\n\nสิ่งที่ต้องให้คนตัดสินใจเอง:\n\nหลักฐานการ review:\nเช่น screenshot comment / meeting note / summary chat / วันที่ review\n",
+    "requirements": [
+      "มีผู้ review จริงหรือคนที่เข้าใจบริบท",
+      "มี feedback จริงและสิ่งที่ต้องแก้",
+      "มี action items พร้อม owner/deadline และหลักฐาน review"
+    ],
+    "checks": [
+      { "filledAfterAll": ["เอกสารที่นำไป review", "ผู้ review / บทบาท", "วิธี review"], "minChars": 12 },
+      { "filledAfterAll": ["Feedback จริงที่ได้รับ", "สิ่งที่ต้องแก้"], "minChars": 20 },
+      { "filledAfterAll": ["Action items", "หลักฐานการ review"], "minChars": 20 }
+    ],
+    "minLength": 320
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Feedback",
+    "question": "ทำไมต้องให้คนจริง review เอกสารธุรกิจ?",
+    "options": [
+      { "text": "เพื่อดูว่าเอกสารอ่านแล้วใช้ตัดสินใจหรือทำงานต่อได้จริงไหม", "correct": true },
+      { "text": "เพื่อให้เอกสารยาวขึ้น" },
+      { "text": "เพื่อให้ไม่ต้องตรวจข้อมูล" }
+    ],
+    "correctFeedback": "ถูกต้อง feedback จากคนใช้จริงช่วยจับช่องว่างที่ AI และเราอาจมองไม่เห็น",
+    "incorrectFeedback": "Review ไม่ได้มีไว้เพิ่มความยาว แต่มีไว้ทดสอบความชัดและการใช้งานจริง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Action item",
+    "question": "Action item ที่ดีควรมีอะไร?",
+    "options": [
+      { "text": "งานที่ต้องทำ owner deadline และหลักฐานหรือข้อมูลที่ต้องใช้", "correct": true },
+      { "text": "คำว่าเดี๋ยวแก้" },
+      { "text": "ความเห็นกว้าง ๆ โดยไม่มีคนรับผิดชอบ" }
+    ],
+    "correctFeedback": "ใช่ action item ต้องทำต่อได้ ไม่ใช่แค่ feedback ลอย ๆ",
+    "incorrectFeedback": "ถ้าไม่มี owner และ deadline มักไม่เกิดการแก้จริง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · AI vs Human",
+    "question": "หลังได้ feedback อะไรควรให้ AI ช่วย และอะไรต้องให้คนตัดสินใจ?",
+    "options": [
+      { "text": "AI ช่วยจัดโครง/ร่างใหม่ได้ แต่ decision, risk acceptance และ approval ต้องให้คนรับผิดชอบ", "correct": true },
+      { "text": "ให้ AI ตัดสินใจแทนทุกอย่าง" },
+      { "text": "ไม่ควรใช้ AI ต่อเลย" }
+    ],
+    "correctFeedback": "ถูกต้อง AI ช่วยปรับเอกสารได้ แต่การตัดสินใจและความรับผิดชอบยังเป็นของคน",
+    "incorrectFeedback": "AI ยังช่วยปรับงานได้ แต่ไม่ควรแทนคนในจุดอนุมัติหรือยอมรับความเสี่ยง"
+  },
+  { "type": "done" }
+]

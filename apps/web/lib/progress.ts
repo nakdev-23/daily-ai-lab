@@ -17,7 +17,7 @@ export async function getLessonsDone(courseId: string): Promise<number> {
 export type CompleteLessonResult = {
   ok: boolean
   xp: number
-  reason: "ok" | "replay" | "sequential" | "daily-limit" | "invalid" | "not-signed-in" | "error"
+  reason: "ok" | "replay" | "sequential" | "daily-limit" | "preview-locked" | "invalid" | "not-signed-in" | "error"
 }
 
 /**

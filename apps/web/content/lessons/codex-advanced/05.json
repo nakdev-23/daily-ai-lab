@@ -52,7 +52,9 @@
       {
         "text": "ลบ pipeline ทิ้งอย่างเดียว"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ Codex เขียน pipeline ได้ และวิเคราะห์ CI ที่พังจาก log ให้  💡 ใช้ต่อ: เวลา CI แดง แปะ error log ทั้งก้อนให้มันหาต้นตอ เร็วกว่าหาเอง",
+    "incorrectFeedback": "Codex ไม่ได้แค่ดูเฉย ๆ และไม่ใช่มีไว้ลบ pipeline — มันเขียน pipeline และซ่อม CI จาก log ได้  💡 ใช้ต่อ: ใช้มันทั้งสร้างและซ่อม CI/CD"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "โค้ดถูกแฮ็ก"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง CI แดงแต่ local ผ่าน มักเพราะ environment ต่างกัน เช่นเวอร์ชัน dependency  💡 ใช้ต่อ: บอก AI ว่า local ใช้ Node เวอร์ชันอะไร CI ใช้อะไร มันจะชี้จุดต่างได้",
+    "incorrectFeedback": "ไม่ใช่ 'GitHub เกลียดเรา' หรือถูกแฮ็ก — สาเหตุยอดฮิตคือ environment/เวอร์ชันต่างกัน  💡 ใช้ต่อ: เทียบเวอร์ชัน Node/dependency ระหว่าง local กับ CI ก่อนเสมอ"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "จำนวน star ของ repo"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ข้อมูลสำคัญสุดเมื่อให้ AI ซ่อม CI คือ error log จาก pipeline  💡 ใช้ต่อ: ก๊อป log จาก step ที่แดงทั้งหมด อย่าตัดแค่บรรทัดสุดท้าย",
+    "incorrectFeedback": "ชื่อโปรเจกต์หรือจำนวน star ไม่ช่วยซ่อม CI — สิ่งที่ AI ต้องการคือ error log จาก pipeline  💡 ใช้ต่อ: log ยิ่งครบ AI ยิ่งวินิจฉัยตรง"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "ให้ช่วยอ่าน log หาสาเหตุ แล้วตรวจสอบการแก้ก่อน merge",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง ใช้ AI ช่วยซ่อม CI ที่ดีคือให้อ่าน log หาสาเหตุ แล้วตรวจการแก้ก่อน merge  💡 ใช้ต่อ: อย่าเชื่อ fix ทันที — รันให้ CI เขียวจริงก่อนค่อย merge",
+    "incorrectFeedback": "ปิด CI ทิ้งหรือ merge ทั้งที่ยังแดง อันตรายมาก — ให้ AI อ่าน log หาสาเหตุแล้วเราตรวจก่อน merge  💡 ใช้ต่อ: CI แดงคือสัญญาณเตือน ไม่ใช่สิ่งที่ควรปิดเสียง"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "ทำให้ deploy ช้าเสมอ"
       }
+    ],
+    "correctFeedback": "ใช่ CI/CD Integration ช่วยทดสอบและส่งงานอัตโนมัติอย่างสม่ำเสมอ  💡 ใช้ต่อ: ตั้ง pipeline ให้รัน lint + test ทุก PR จะจับปัญหาก่อนถึง main",
+    "incorrectFeedback": "CI/CD ไม่ได้ทำให้ deploy ช้าหรือไร้ผล — มันทำให้ทดสอบและส่งงานอัตโนมัติสม่ำเสมอ  💡 ใช้ต่อ: pipeline ที่ดีคือกันชนอัตโนมัติก่อนโค้ดถึงผู้ใช้"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · ซ่อม CI ที่แดง",
+    "title": "แปะ error log ของ CI ให้ Codex หาต้นตอ",
+    "instruction": "ลองหยิบ CI run ที่แดง แล้วก๊อป error log ทั้งก้อนให้ Codex วิเคราะห์หาสาเหตุและเสนอวิธีแก้",
+    "example": "CI fail ที่ step 'npm test' บน Node 20 แต่ local (Node 18) ผ่าน นี่คือ error log: [วาง log] — หาสาเหตุและแก้ พร้อมบอกว่าทำไม local ถึงไม่เจอ",
+    "checks": [
+      "เปิด GitHub Actions เลือก run ที่แดง แล้วก๊อป log ของ step ที่ fail",
+      "เปิด Codex แล้ววางคำสั่งจากช่อง example พร้อม log ที่ก๊อปมา",
+      "ดูว่ามันชี้ต้นตอ (เช่น เวอร์ชัน dependency ต่างกัน) ได้ตรงไหม",
+      "ให้มันเสนอ fix แล้วรัน CI ใหม่ ตรวจว่าเขียวก่อน merge"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · CI/CD กับ AI",
+    "title": "เขียนคำสั่งให้ Codex ซ่อม CI ที่พัง",
+    "instruction": "บทนี้สอนว่า CI แดงคือ task ชั้นดี — ข้อมูลสำคัญสุดคือ error log จาก pipeline และปัญหายอดฮิตคือ environment ต่างกัน ลองเขียนคำสั่งซ่อม CI ที่แนบ log และบริบทเวอร์ชันให้ครบ",
+    "payoff": "ได้วิธีเปลี่ยน CI สีแดงที่น่าหงุดหงิดเป็น task ที่ AI วินิจฉัยให้ได้เร็ว และก๊อปไปใช้ได้จริง",
+    "examples": {
+      "bad": "CI พัง ช่วยแก้ที",
+      "badNote": "ไม่มี log ไม่บอกว่า step ไหนพัง ไม่บอกความต่างของ environment — AI เดาไม่ออกว่าพังเพราะอะไร",
+      "good": "CI fail ที่ step 'build' บน ubuntu-latest แต่ local (macOS) ผ่าน นี่คือ log: [วาง log] สงสัยเรื่อง path แบบ case-sensitive หรือเวอร์ชัน Node ช่วยหาต้นตอ แก้ และอธิบายว่าทำไม local ไม่เจอ",
+      "goodNote": "ระบุ step ที่พัง + แนบ log + บอกความต่าง local vs CI → AI วินิจฉัยต้นตอได้ตรง"
+    },
+    "starterPrompt": "CI fail ที่ step ___ บน ___ แต่ local (___) ผ่าน log: ___ ช่วยหาต้นตอและแก้",
+    "requirements": [
+      "ระบุ step ของ pipeline ที่พัง",
+      "แนบ error log จาก CI ให้ครบ (อย่าตัดแค่บรรทัดท้าย)",
+      "บอกความต่างระหว่าง local กับ CI (เช่น OS, เวอร์ชัน Node)"
     ]
   },
   {

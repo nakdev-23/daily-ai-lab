@@ -53,7 +53,7 @@ ChatGPT Search lets ChatGPT find information from the internet in real time (cur
 - **Free**: rolling out gradually to groups
 
 ### Worth knowing
-A search query uses the same GPT-4o quota (the allotted amount of usage); if the quota runs out, you can't search.
+A search query uses the same GPT-5.5 quota (the allotted amount of usage); if the quota runs out, you can't search.
 
 ---
 
@@ -213,9 +213,9 @@ Change the voice at **Settings → Voice** or from the menu in voice mode.
 
 | Plan | Voice limit |
 |---|---|
-| **Free** | GPT-4o mini, up to 2 hours/day |
-| **Plus** | GPT-4o nearly unlimited (with fallback — switching to mini when the quota runs out) |
-| **Pro** | GPT-4o unlimited |
+| **Free** | GPT-5.5 mini, up to 2 hours/day |
+| **Plus** | GPT-5.5 nearly unlimited (with fallback — switching to mini when the quota runs out) |
+| **Pro** | GPT-5.5 unlimited |
 | **Enterprise (Flexible)** | Unlimited (counts credits — credit units used instead of money) |
 
 ### Background Conversations

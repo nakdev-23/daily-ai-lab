@@ -74,7 +74,7 @@ ChatGPT has a mobile app on both **iOS** (May 2023) and **Android** (July 2023) 
 
 #### Camera & Image Input
 - Take a photo or pick from your Photo Library to send for analysis
-- **Live Camera Mode (GPT-4o)**: point the camera at an object or document and just ask
+- **Live Camera Mode (GPT-5.5)**: point the camera at an object or document and just ask
 - Use it to: analyze food, read foreign-language signs, solve a math problem from a photo
 
 #### Home Screen Widget (iOS)

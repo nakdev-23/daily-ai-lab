@@ -1,0 +1,88 @@
+[
+  {
+    "type": "setup",
+    "tag": "AI for Marketing · บทที่ 2 · Setup",
+    "title": "ตั้ง Marketing Workspace ก่อนเริ่ม research",
+    "instruction": "เตรียมพื้นที่ทำงานหนึ่งที่สำหรับเก็บ brief, source, competitor note, prompt, copy draft และผลทดสอบ จะใช้ Notion, Google Docs, Sheets หรือโฟลเดอร์ธรรมดาก็ได้ ถ้ามีอยู่แล้วกดข้ามได้",
+    "steps": [
+      "สร้างโฟลเดอร์หรือเอกสารชื่อ Marketing AI Workspace",
+      "สร้างหน้า/ไฟล์ย่อย 5 ส่วน: Brief, Research Sources, Competitor Notes, Copy Drafts, Test Plan",
+      "เตรียมลิงก์สินค้าของตัวเอง คู่แข่ง 2-3 ราย และข้อมูลจริงที่ใช้ได้",
+      "ถ้าจะใช้ Gemini หรือเว็บค้นหา ให้จดแหล่งที่มาเสมอ ไม่คัดลอก claim โดยไม่ตรวจ"
+    ],
+    "href": "https://docs.google.com",
+    "hrefLabel": "เปิด Google Docs"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 2 · Research safety",
+    "title": "Research ที่ดีต้องแยก Fact, Assumption และ Guess",
+    "body": [
+      { "text": "AI อาจช่วยสรุปตลาดและคู่แข่งได้เร็ว แต่ข้อมูลการตลาดมีความเสี่ยงสูง: ตัวเลขเก่า, claim เกินจริง, source ไม่น่าเชื่อถือ หรือ insight ที่ฟังดูดีแต่ไม่มีหลักฐาน ทุกครั้งให้แยกสิ่งที่เป็น fact, assumption และสิ่งที่ต้องตรวจเพิ่ม" }
+    ],
+    "example": "Fact: คู่แข่ง A มีแพ็กเกจเริ่มต้น 499 บาท/เดือนจากหน้า pricing\nAssumption: ลูกค้าร้านเล็กน่าจะสนใจเพราะราคาต่ำกว่า POS เต็มระบบ\nNeed check: จำนวนร้านอาหารที่ยังใช้ Excel ในไทย",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Research plan",
+    "title": "เขียน Research Plan ที่ AI ช่วยค้นและสรุปได้",
+    "instruction": "ใช้โจทย์จากบท 1 แล้วเขียนแผน research ว่าต้องรู้อะไรก่อนทำ campaign อย่าให้ AI สรุปตลาดลอย ๆ ให้กำหนดคำถาม แหล่งข้อมูล และวิธีตรวจ",
+    "payoff": "Research Plan สำหรับใช้ต่อในบท insight และ campaign brief",
+    "examples": {
+      "bad": "คำถาม: ตลาดร้านกาแฟเป็นยังไง / แหล่ง: ถาม AI เอา / Prompt: “ช่วยสรุปตลาดคอร์สบัญชีให้หน่อย”",
+      "badNote": "คำถามกว้าง ไม่มีแหล่ง AI เดาตัวเลขมั่ว — เอาไปวาง campaign ไม่ได้",
+      "good": "Q1: เจ้าของร้านกาแฟเปิดใหม่กลัวอะไรเรื่องต้นทุนที่สุด / Q2: เขาเทียบกับดู YouTube ฟรีหรือจ้างบัญชี / Q3: คู่แข่ง promise อะไร / แหล่ง: กลุ่ม Facebook ร้านกาแฟ, รีวิวคอร์สคู่แข่ง, สัมภาษณ์ 3 ราย / ห้ามเดา: ราคาตลาด, จำนวนร้าน / Prompt: “สรุปเฉพาะจากข้อความที่แปะให้ แยก fact กับ assumption อย่าเติมตัวเลขเอง”",
+      "goodNote": "คำถามเจาะ + แหล่งจริง + กรอบห้ามเดา → research ที่เชื่อถือและใช้ต่อได้"
+    },
+    "starterPrompt": "Marketing Research Plan\n\nสินค้า/บริการ:\n\nคำถามวิจัย 1: ลูกค้าคือใครและเจ็บปัญหาอะไร:\n\nคำถามวิจัย 2: เขาเปรียบเทียบทางเลือกอะไรบ้าง:\n\nคำถามวิจัย 3: คู่แข่งพูด promise อะไร:\n\nแหล่งข้อมูลที่ควรใช้:\n1.\n2.\n3.\n\nข้อมูลที่ห้ามให้ AI เดาเอง:\n\nวิธีแยก Fact / Assumption / Need check:\n\nPrompt ที่จะใช้ให้ AI ช่วย research:\n",
+    "requirements": [
+      "มีคำถามวิจัยอย่างน้อย 3 ข้อ",
+      "ระบุแหล่งข้อมูลและสิ่งที่ห้ามเดา",
+      "มี prompt สำหรับให้ AI ช่วย research อย่างมีกรอบ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["คำถามวิจัย 1", "คำถามวิจัย 2", "คำถามวิจัย 3"], "minChars": 16 },
+      { "filledAfterAll": ["แหล่งข้อมูลที่ควรใช้", "ข้อมูลที่ห้ามให้ AI เดาเอง"], "minChars": 12 },
+      { "filledAfter": ["Prompt ที่จะใช้ให้ AI ช่วย research"], "minChars": 40 }
+    ],
+    "minLength": 220
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Research",
+    "question": "ข้อใดคือ research prompt ที่ปลอดภัยที่สุด?",
+    "options": [
+      { "text": "บอกตลาดนี้มาให้หมด" },
+      { "text": "วิเคราะห์ลูกค้า คู่แข่ง และ source โดยแยก fact, assumption, need check พร้อมบอกแหล่งที่มา", "correct": true },
+      { "text": "เดา insight ที่น่าจะขายดีให้หน่อย" }
+    ],
+    "correctFeedback": "ถูกต้อง เพราะกำหนดกรอบการตรวจและไม่ให้ insight ปนกับข้อเท็จจริง",
+    "incorrectFeedback": "Research prompt ที่กว้างหรือให้เดาจะทำให้ได้คำตอบน่าเชื่อแต่ตรวจยาก ต้องบังคับแหล่งที่มาและสถานะข้อมูล"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Fact",
+    "question": "ถ้า AI บอกว่า “ตลาดนี้โตเร็วมาก” คุณควรทำอะไรต่อ?",
+    "options": [
+      { "text": "ใช้เป็น headline ได้ทันที" },
+      { "text": "ถามหาแหล่งข้อมูล ตัวเลข ช่วงเวลา และตรวจจาก source จริงก่อนใช้", "correct": true },
+      { "text": "ตัดคำว่าเร็วออกก็พอ" }
+    ],
+    "correctFeedback": "ใช่ ข้อความเชิงตัวเลข/การเติบโตต้องมี source และช่วงเวลา ไม่งั้นเสี่ยง claim เกินจริง",
+    "incorrectFeedback": "คำว่าโตเร็วเป็น claim ทางการตลาด ต้องตรวจ source ก่อนใช้ ไม่ใช่แก้คำเล็กน้อยแล้วเผยแพร่"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Source",
+    "question": "แหล่งข้อมูลแบบไหนควรระวังที่สุด?",
+    "options": [
+      { "text": "หน้า pricing ของคู่แข่งที่ระบุราคาเอง" },
+      { "text": "บทความไม่ระบุวันที่และไม่มี source แต่อ้างตัวเลขใหญ่", "correct": true },
+      { "text": "รีวิวลูกค้าจริงที่ระบุปัญหาการใช้งาน" }
+    ],
+    "correctFeedback": "ถูกต้อง ตัวเลขที่ไม่มีวันที่และ source เสี่ยงมาก โดยเฉพาะถ้าจะเอาไปใช้ใน campaign",
+    "incorrectFeedback": "แหล่งข้อมูลทุกแบบต้องใช้วิจารณญาณ แต่ตัวเลขใหญ่ที่ไม่มีวันที่/source คือธงแดงชัดที่สุด"
+  },
+  { "type": "done" }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 5 · Message Matrix",
+    "title": "Message Matrix ช่วยให้ copy หลายชิ้นไม่หลุดทิศ",
+    "body": [
+      { "text": "ก่อนเขียนโฆษณาหลายช่องทาง ให้สร้าง message matrix ที่จับคู่ audience segment กับ pain, promise, proof, objection และ CTA วิธีนี้ทำให้ AI ช่วยเขียนหลายเวอร์ชันได้โดยไม่หลุด insight" }
+    ],
+    "example": "Segment: เจ้าของร้านเล็ก\nPain: กลัวพนักงานใช้ระบบไม่เป็น\nPromise: เริ่มได้ในวันเดียว\nProof: onboarding checklist\nObjection: ไม่มีเวลา setup\nCTA: นัด demo 15 นาที",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 5 · Copy",
+    "title": "Copy ที่ดีต้องมี Hook, Value, Proof, CTA",
+    "body": [
+      { "text": "ไม่ว่าจะเป็น ad, email หรือ landing page copy โครงสร้างพื้นฐานยังคล้ายกัน: ดึงความสนใจด้วย hook, บอก value ที่เกี่ยวกับ pain/desire, ให้ proof ที่ตรวจได้ และปิดด้วย CTA ที่บอกให้ทำอะไรต่อ" }
+    ],
+    "example": "Hook: ร้านยุ่งแต่ยังจดออเดอร์ใน Excel?\nValue: เปลี่ยนเป็นระบบที่พนักงานใช้ได้ในวันเดียว\nProof: มี template เมนูและ onboarding checklist\nCTA: นัดดู demo 15 นาที",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Message matrix",
+    "title": "สร้าง Message Matrix และ Copy ชุดแรก",
+    "instruction": "ใช้ campaign brief จากบท 4 แล้วทำ message matrix อย่างน้อย 3 message angle จากนั้นเขียน copy อย่างน้อย 2 ช่องทาง เช่น Facebook ad + email หรือ Google ad + landing hero",
+    "payoff": "Message Matrix และ Copy Draft ชุดแรก",
+    "examples": {
+      "bad": "Angle 1: คอร์สดี ราคาถูก ซื้อเลย / Copy: “คอร์สบัญชีดีที่สุด สมัครด่วน!” / CTA: สมัคร",
+      "badNote": "angle เดียวซ้ำ ไม่มี proof/objection ทุกช่องเหมือนกัน — ทดสอบอะไรไม่ได้",
+      "good": "Angle1 Pain: ไม่รู้กำไรจริง / Promise: รู้ใน 10 นาที / Proof: เทมเพลตจริง / Objection: “บัญชียาก” → ตอบ กรอกแค่ 3 ช่อง / CTA: ลองฟรี 7 วัน. Angle2: กลัวขาดทุนเงียบ. Angle3: ไม่อยากจ้างบัญชีแพง. Copy FB: “สิ้นเดือนนี้ร้านคุณกำไรหรือขาดทุน? รู้ใน 10 นาที — ลองฟรี 7 วัน”. Copy Email subject: “เลิกเดากำไรร้านกาแฟ”",
+      "goodNote": "3 angle ต่างกันจริง มี proof/objection + copy 2 ช่องทาง → เอาไปทดสอบ A/B ได้เลย"
+    },
+    "starterPrompt": "Message Matrix\n\nCampaign brief ที่ใช้:\n\nSegment / Audience:\n\nAngle 1:\nPain:\nPromise:\nProof:\nObjection:\nCTA:\n\nAngle 2:\nPain:\nPromise:\nProof:\nObjection:\nCTA:\n\nAngle 3:\nPain:\nPromise:\nProof:\nObjection:\nCTA:\n\nCopy channel 1:\nChannel:\nHook:\nCopy:\nCTA:\n\nCopy channel 2:\nChannel:\nHook:\nCopy:\nCTA:\n\nข้อห้าม / Claims ที่ต้องตรวจ:\n",
+    "requirements": [
+      "มี message angle อย่างน้อย 3 แบบ",
+      "แต่ละ angle มี pain, promise, proof, objection และ CTA",
+      "มี copy อย่างน้อย 2 ช่องทางและระบุ claims ที่ต้องตรวจ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Angle 1", "Angle 2", "Angle 3"], "minChars": 30 },
+      { "filledAfterAll": ["Pain", "Promise", "Proof", "Objection", "CTA"], "minChars": 8 },
+      { "filledAfterAll": ["Copy channel 1", "Copy channel 2", "ข้อห้าม / Claims ที่ต้องตรวจ"], "minChars": 18 }
+    ],
+    "minLength": 320
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Matrix",
+    "question": "Message matrix ช่วยอะไร?",
+    "options": [
+      { "text": "ช่วยให้ copy หลายเวอร์ชันยังยึดกับ audience, pain, proof และ CTA เดียวกัน", "correct": true },
+      { "text": "ทำให้ไม่ต้องตรวจ claim" },
+      { "text": "ทำให้ทุกช่องทางใช้ข้อความเหมือนกันเป๊ะ" }
+    ],
+    "correctFeedback": "ถูกต้อง matrix ให้แกน message ชัด แต่ยังปรับ format ตามช่องทางได้",
+    "incorrectFeedback": "Matrix ไม่ได้แทนการตรวจ claim และไม่ได้แปลว่าทุกช่องทางต้อง copy-paste เหมือนกัน"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Proof",
+    "question": "Proof แบบไหนแข็งแรงที่สุด?",
+    "options": [
+      { "text": "ดีที่สุดในโลก" },
+      { "text": "ลูกค้า 82% ตั้งค่าระบบเสร็จในวันแรก จากข้อมูล onboarding เดือนพฤษภาคม", "correct": true },
+      { "text": "หลายคนชอบมาก" }
+    ],
+    "correctFeedback": "ใช่ เพราะมีตัวเลข เงื่อนไข และที่มาของข้อมูลให้ตรวจได้",
+    "incorrectFeedback": "คำกว้างอย่างดีที่สุดหรือหลายคนชอบ ฟังดีแต่ตรวจยากและเสี่ยงเกินจริง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · CTA",
+    "question": "CTA ที่ดีควรเป็นอย่างไร?",
+    "options": [
+      { "text": "บอกการกระทำถัดไปที่ชัดและสอดคล้องกับ stage ของลูกค้า", "correct": true },
+      { "text": "ใช้คำว่า คลิก!!! เยอะ ๆ" },
+      { "text": "ไม่ต้องมีถ้า copy ดี" }
+    ],
+    "correctFeedback": "ถูกต้อง CTA ช่วยให้คนรู้ว่าควรทำอะไรต่อ เช่น นัด demo, ดาวน์โหลด checklist, สมัคร trial",
+    "incorrectFeedback": "CTA ไม่ใช่แค่เร่งเร้า แต่เป็นทางเดินถัดไปของลูกค้า"
+  },
+  { "type": "done" }
+]

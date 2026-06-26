@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 12 · ตอนที่ 1",
+    "title": "VS Code Integration",
+    "body": [
+      {
+        "text": "Claude Code มี "
+      },
+      {
+        "text": "extension สำหรับ VS Code และ JetBrains",
+        "bold": true
+      },
+      {
+        "text": " — เห็น diff ในหน้า editor โดยตรง, แชร์ selection ที่ไฮไลต์เป็นบริบท และใช้ keyboard shortcut เรียกได้ทันที"
+      }
+    ],
+    "example": "\"ไฮไลต์ฟังก์ชันใน editor แล้วถาม 'ฟังก์ชันนี้มี bug อะไรไหม' — Claude เห็นโค้ดที่เลือกทันที\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 12 · ตอนที่ 2",
+    "title": "Terminal หรือ IDE — เลือกยังไง",
+    "body": [
+      {
+        "text": "ไม่ต้องเลือกขาด: "
+      },
+      {
+        "text": "IDE เหมาะกับงานที่ดู diff เยอะ · terminal เหมาะกับ automation และ SSH ไปเครื่อง server",
+        "bold": true
+      },
+      {
+        "text": " — ทั้งสองโหมดคือ Claude Code ตัวเดียวกัน ความสามารถเท่ากัน"
+      }
+    ],
+    "example": "\"นั่งทำฟีเจอร์ → ใช้ใน VS Code / รันสคริปต์แก้ config บน server ผ่าน SSH → ใช้ CLI\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Claude Code ใช้ใน IDE อะไรได้?",
+    "options": [
+      {
+        "text": "VS Code และ JetBrains",
+        "correct": true
+      },
+      {
+        "text": "ใช้ได้แค่ Notepad"
+      },
+      {
+        "text": "ไม่มี IDE integration"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ข้อดีของ extension ใน IDE คืออะไร?",
+    "options": [
+      {
+        "text": "เห็น diff ใน editor และแชร์ selection เป็นบริบทได้",
+        "correct": true
+      },
+      {
+        "text": "โมเดลฉลาดขึ้น"
+      },
+      {
+        "text": "ฟรีกว่าแบบ CLI"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "สถานการณ์ไหนเหมาะกับ CLI มากกว่า IDE?",
+    "options": [
+      {
+        "text": "SSH เข้าไปทำงานบนเครื่อง server",
+        "correct": true
+      },
+      {
+        "text": "อยากเห็น diff สวยๆ"
+      },
+      {
+        "text": "ไม่มีสถานการณ์ไหนเลย"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "เลือกใช้ Terminal หรือ IDE Integration อย่างไร?",
+    "options": [
+      {
+        "text": "ใช้ได้แค่ Terminal เท่านั้น"
+      },
+      {
+        "text": "ห้ามใช้ IDE"
+      },
+      {
+        "text": "เลือกตามงานและความถนัด ทั้งคู่ทำงานร่วมกันได้",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "VS Code Integration ช่วยอะไร?",
+    "options": [
+      {
+        "text": "ลบไฟล์อัตโนมัติ"
+      },
+      {
+        "text": "ทำงานกับ Claude Code ในเอดิเตอร์ได้สะดวก",
+        "correct": true
+      },
+      {
+        "text": "เปลี่ยนธีมเท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

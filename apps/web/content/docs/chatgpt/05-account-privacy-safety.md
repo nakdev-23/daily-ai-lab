@@ -261,7 +261,7 @@ OpenAI **ไม่นำข้อมูล API** (ข้อมูลที่ส
 **ChatGPT ตอบช้า**
 อ้างอิง: [Why is my ChatGPT taking so long to respond?](https://help.openai.com/en/articles/7965556)
 - ช่วง Peak (ชั่วโมงเร่งด่วน — ช่วงที่มีผู้ใช้จำนวนมากพร้อมกัน) ผู้ใช้จำนวนมาก เซิร์ฟเวอร์อาจช้า
-- เปลี่ยนไปใช้โมเดลที่เร็วกว่า เช่น GPT-4o mini
+- เปลี่ยนไปใช้โมเดลที่เร็วกว่า เช่น GPT-5.5 mini
 - ตรวจสอบ Status (สถานะระบบ): [status.openai.com](https://status.openai.com)
 
 **CAPTCHA (แบบทดสอบยืนยันความเป็นมนุษย์) ขึ้นบ่อย**

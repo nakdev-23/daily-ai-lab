@@ -3,11 +3,13 @@
 import { useState, useEffect, useRef, useTransition } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight, Infinity as InfinityIcon } from "lucide-react"
+import { X, Heart, BookOpen, Zap, Check, CheckCircle2, ChevronRight, Infinity as InfinityIcon, PencilLine, RotateCcw, Sparkles, Terminal, ExternalLink, Copy, CircleCheck, FastForward, Play } from "lucide-react"
 import type { LessonStep } from "@/lib/lesson-types"
-import { completeLessonAction, loseHeartAction } from "@/app/(lesson)/daily-learn/actions"
+import { completeLessonAction, loseHeartAction, reviewPracticeAction, runPromptAction, type ReviewPracticeResult, type RunPromptResult } from "@/app/(lesson)/daily-learn/actions"
 import type { CompleteLessonResult } from "@/lib/progress"
 import OutOfHearts from "@/components/out-of-hearts"
+import LessonFeedback from "@/components/lesson-feedback"
+import PromptExamples from "@/components/prompt-examples"
 import { makeT, type Lang } from "@/lib/i18n-core"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -90,6 +92,8 @@ export default function LessonPlayer({
   initialHearts?: number
   heartsMax?: number
   unlimitedHearts?: boolean
+  /** Pro users get AI review of their practice prompt; Free users see an upsell. */
+  isPro?: boolean
   nextRefill?: string | null
   lang?: Lang
   /** Where the X / back buttons return to (e.g. a career path page). */
@@ -106,6 +110,23 @@ export default function LessonPlayer({
   const HEART_MAX = Math.max(heartsMax, initialHearts, 1)
   const [selected, setSelected] = useState<number | null>(null)
   const [checked, setChecked] = useState(false)
+  const [practiceDraft, setPracticeDraft] = useState(() =>
+    STEPS[0]?.type === "practice" ? STEPS[0].starterPrompt : ""
+  )
+  // Enable the foot button as soon as the learner engages with the box (focus or
+  // any edit) — AI does the real checking, so there's no strict gate.
+  const [practiceTouched, setPracticeTouched] = useState(false)
+  const [tryChecks, setTryChecks] = useState<boolean[]>([])
+  // AI review (Pro) of the current practice draft; cleared whenever it changes.
+  const [aiReview, setAiReview] = useState<ReviewPracticeResult | null>(null)
+  const [aiPending, setAiPending] = useState(false)
+  // Live run of the learner's prompt — shows what their wording actually produces.
+  const [aiRun, setAiRun] = useState<RunPromptResult | null>(null)
+  const [runPending, setRunPending] = useState(false)
+  // Which AI popup is open: "review" (critique of the prompt) or "run" (real
+  // output + critique). null = closed. Both open with a loading spinner first so
+  // tapping a button always shows something happening.
+  const [aiModal, setAiModal] = useState<"review" | "run" | null>(null)
   // Wrong answers this run — a clean run earns the perfect-quiz XP bonus.
   const mistakesRef = useRef(0)
   // What the server actually awarded (null = still saving).
@@ -120,6 +141,11 @@ export default function LessonPlayer({
   const curOptions = cur.type === "quiz" ? cur.options : []
   const isCorrect = cur.type === "quiz" && selected !== null && curOptions[selected]?.correct
   const footState = !checked ? "" : isCorrect ? "ok" : "no"
+  // Let AI do the real check now — the button enables the moment the learner
+  // focuses or edits the box (touched) and there's something to review.
+  const practiceReady = cur.type === "practice"
+    && practiceTouched
+    && practiceDraft.trim().length > 0
 
   // Save progress when reaching the done screen (ref guards double-fire in StrictMode)
   useEffect(() => {
@@ -134,13 +160,63 @@ export default function LessonPlayer({
   }, [cur.type, courseId, lessonNum, startTransition])
 
   function next() {
+    const nextIndex = Math.min(step + 1, STEPS.length - 1)
+    const nextStep = STEPS[nextIndex]
     setSelected(null)
     setChecked(false)
-    setStep((s) => Math.min(s + 1, STEPS.length - 1))
+    setPracticeDraft(nextStep.type === "practice" ? nextStep.starterPrompt : "")
+    setPracticeTouched(false)
+    setTryChecks(nextStep.type === "try" ? nextStep.checks.map(() => false) : [])
+    setAiReview(null)
+    setAiRun(null)
+    setStep(nextIndex)
+  }
+
+  function runAiReview() {
+    if (cur.type !== "practice" || aiPending) return
+    const step = cur
+    setAiReview(null)
+    setAiPending(true)
+    setAiModal("review") // open the popup immediately so the spinner is visible
+    startTransition(async () => {
+      const r = await reviewPracticeAction({
+        draft: practiceDraft,
+        requirements: step.requirements,
+        scenario: step.instruction,
+      })
+      setAiReview(r)
+      setAiPending(false)
+    })
+  }
+
+  function runPrompt() {
+    if (cur.type !== "practice" || runPending) return
+    setAiRun(null)
+    setRunPending(true)
+    setAiModal("run") // open the popup immediately so the spinner is visible
+    startTransition(async () => {
+      const r = await runPromptAction({ draft: practiceDraft })
+      setAiRun(r)
+      setRunPending(false)
+    })
   }
 
   async function onCheck() {
     if (cur.type === "theory") { next(); return }
+    if (cur.type === "practice") {
+      if (!practiceReady) return
+      // Everyone (Free + Pro): let AI check the prompt once (verdict + suggested
+      // example) before advancing. Second click (review already shown) proceeds.
+      // No-key / failed review also falls through to next() on the next click.
+      if (!aiReview && !aiPending) { runAiReview(); return }
+      next()
+      return
+    }
+    if (cur.type === "setup") { next(); return }
+    if (cur.type === "try") {
+      if (tryChecks.some(Boolean)) next()
+      return
+    }
     if (cur.type === "quiz") {
       if (selected === null) return
       if (!checked) {
@@ -162,8 +238,18 @@ export default function LessonPlayer({
     }
   }
 
-  const footLabel = cur.type === "theory" ? t("Next") : !checked ? t("Check") : t("Next")
-  const footDisabled = cur.type === "quiz" && selected === null
+  const footLabel = cur.type === "theory"
+    ? t("Next")
+    : cur.type === "practice"
+      ? (aiPending ? t("AI is checking…") : practiceReady && !aiReview ? t("Check with AI") : t("Use this prompt"))
+      : cur.type === "setup"
+        ? t("Continue lesson")
+        : cur.type === "try"
+          ? t("Continue lesson")
+      : !checked ? t("Check") : t("Next")
+  const footDisabled = (cur.type === "quiz" && selected === null)
+    || (cur.type === "practice" && (!practiceReady || aiPending))
+    || (cur.type === "try" && !tryChecks.some(Boolean))
 
   const backHref = backHrefProp ?? (courseId ? `/daily-learn/${courseId}` : "/daily-learn")
   const nextHref = nextHrefProp !== undefined
@@ -228,6 +314,137 @@ export default function LessonPlayer({
                   )
                 })}
               </div>
+              {checked && (
+                <div className={`quiz-explanation ${isCorrect ? "correct" : "wrong"}`} aria-live="polite">
+                  <strong>{isCorrect ? t("Why this works") : t("What to notice")}</strong>
+                  <p>{isCorrect ? cur.correctFeedback : cur.incorrectFeedback}</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {cur.type === "practice" && (
+            <div className="lstep practice-step">
+              <div className="qtag"><PencilLine size={13} /> {cur.tag}</div>
+              <h2 className="display">{cur.title}</h2>
+              <p className="practice-instruction">{cur.instruction}</p>
+              {cur.payoff && (
+                <div className="practice-payoff">
+                  <Sparkles size={15} /> <span><strong>{t("You'll walk away with:")}</strong> {cur.payoff}</span>
+                </div>
+              )}
+              {cur.examples && <PromptExamples examples={cur.examples} lang={lang} />}
+              <div className="practice-workspace">
+                <div className="practice-toolbar">
+                  <span>{t("Edit the prompt below")}</span>
+                  <button type="button" onClick={() => { setPracticeDraft(cur.starterPrompt); setAiReview(null); setAiRun(null) }}>
+                    <RotateCcw size={14} /> {t("Reset")}
+                  </button>
+                </div>
+                <textarea
+                  value={practiceDraft}
+                  onFocus={() => setPracticeTouched(true)}
+                  onChange={(event) => { setPracticeTouched(true); setPracticeDraft(event.target.value); setAiReview(null); setAiRun(null) }}
+                  aria-label={t("Your improved prompt")}
+                  rows={9}
+                />
+              </div>
+
+              <div className="ai-actions">
+                <button
+                  type="button"
+                  className="ai-run-btn"
+                  onClick={runPrompt}
+                  disabled={runPending || practiceDraft.trim().length < 10}
+                >
+                  <Play size={15} /> {runPending ? t("AI is running…") : t("Run & see result")}
+                </button>
+                <span className="ai-actions-hint">{t("Tap the bottom button to have AI check your prompt")}</span>
+              </div>
+            </div>
+          )}
+
+          {cur.type === "setup" && (
+            <div className="lstep setup-step">
+              <div className="qtag"><Terminal size={13} /> {cur.tag}</div>
+              <h2 className="display">{cur.title}</h2>
+              <p className="practice-instruction">{cur.instruction}</p>
+
+              <div className="setup-panel">
+                <ol>
+                  {cur.steps.map((item) => <li key={item}>{item}</li>)}
+                </ol>
+
+                {cur.command && (
+                  <div className="setup-command">
+                    <code>{cur.command}</code>
+                    <button type="button" onClick={() => navigator.clipboard?.writeText(cur.command ?? "")}>
+                      <Copy size={14} /> {t("Copy")}
+                    </button>
+                  </div>
+                )}
+
+                {cur.href && (
+                  <a className="setup-link" href={cur.href} target="_blank" rel="noreferrer">
+                    <ExternalLink size={15} /> {cur.hrefLabel}
+                  </a>
+                )}
+
+                <div className="setup-choices">
+                  <button
+                    type="button"
+                    className="ready"
+                    onClick={next}
+                  >
+                    <CircleCheck size={18} />
+                    <span><b>{t("Ready to use")}</b><small>{t("I installed it or can already open the tool.")}</small></span>
+                  </button>
+                  <button
+                    type="button"
+                    className="skipped"
+                    onClick={next}
+                  >
+                    <FastForward size={18} />
+                    <span><b>{t("Skip setup for now")}</b><small>{t("I haven't installed it yet. Let me continue learning.")}</small></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {cur.type === "try" && (
+            <div className="lstep try-step">
+              <div className="qtag"><Play size={13} /> {cur.tag}</div>
+              <h2 className="display">{cur.title}</h2>
+              <p className="practice-instruction">{cur.instruction}</p>
+
+              <div className="try-panel">
+                <div className="try-example">
+                  <span>{t("Example to try")}</span>
+                  <p>{cur.example}</p>
+                  <button type="button" onClick={() => navigator.clipboard?.writeText(cur.example)}>
+                    <Copy size={14} /> {t("Copy example")}
+                  </button>
+                </div>
+                <div className="try-checklist">
+                  {cur.checks.map((item, index) => (
+                    <button
+                      type="button"
+                      className={tryChecks[index] ? "checked" : ""}
+                      onClick={() => setTryChecks((current) => {
+                        const nextChecks = current.length === cur.checks.length
+                          ? [...current]
+                          : cur.checks.map(() => false)
+                        nextChecks[index] = !nextChecks[index]
+                        return nextChecks
+                      })}
+                      key={item}
+                    >
+                      <span>{tryChecks[index] && <Check size={14} />}</span>{item}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
 
@@ -252,6 +469,9 @@ export default function LessonPlayer({
               {award && !award.ok && (award.reason === "sequential" || award.reason === "invalid" || award.reason === "error" || award.reason === "not-signed-in") && (
                 <div className="xp-note">{t("Couldn't save your progress — go back to the lesson list and try again")}</div>
               )}
+              {courseId && lessonNum && (
+                <LessonFeedback courseId={courseId} lessonNum={lessonNum} lang={lang} />
+              )}
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
                 {nextHref && (
                   <Link className="btn btn--sun lg" href={nextHref}>
@@ -266,7 +486,7 @@ export default function LessonPlayer({
           )}
         </div>
 
-        {cur.type !== "done" && (
+        {cur.type !== "done" && cur.type !== "setup" && (
           <div className={`lesson-foot ${footState}`}>
             <button className="btn-check" onClick={onCheck} disabled={footDisabled || lockedRefill !== null}>
               {footLabel}
@@ -274,6 +494,111 @@ export default function LessonPlayer({
           </div>
         )}
       </div>
+
+      {aiModal && (
+        <div className="ai-modal-backdrop" onClick={() => setAiModal(null)}>
+          <div className="ai-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <button type="button" className="ai-modal-x" onClick={() => setAiModal(null)} aria-label={t("Close")}>
+              <X size={18} />
+            </button>
+
+            {aiModal === "review" ? (
+              <>
+                <div className="ai-modal-head"><Sparkles size={17} /> {t("AI review of your prompt")}</div>
+                {aiPending ? (
+                  <div className="ai-modal-loading">
+                    <span className="ai-spinner" />
+                    <p>{t("AI is checking your prompt…")}</p>
+                  </div>
+                ) : aiReview?.ok ? (
+                  <div className="ai-modal-body">
+                    <div className={`ai-result ${aiReview.overall}`}>
+                      <p className={`ai-verdict ${aiReview.overall}`}>
+                        {aiReview.overall === "strong"
+                          ? t("Looks strong — ready to use")
+                          : aiReview.overall === "weak"
+                            ? t("Needs work")
+                            : t("Good — can be sharper")}
+                      </p>
+                      <p className="ai-summary">{aiReview.summary}</p>
+                      <ul className="ai-criteria">
+                        {aiReview.criteria.map((c, i) => (
+                          <li key={i} className={c.met ? "met" : "miss"}>
+                            <span className="ai-mark">{c.met ? <Check size={13} /> : <X size={13} />}</span>
+                            <span><strong>{c.label}</strong>{c.note ? ` — ${c.note}` : ""}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      {aiReview.improved && (
+                        <div className="ai-improved">
+                          <div className="ai-improved-head">
+                            <Sparkles size={13} /> {t("Suggested prompt")}
+                            <button type="button" onClick={() => navigator.clipboard?.writeText(aiReview.improved)}>{t("Copy")}</button>
+                          </div>
+                          <p>{aiReview.improved}</p>
+                        </div>
+                      )}
+                    </div>
+                    <button type="button" className="btn btn--violet lg ai-modal-cta" onClick={() => { setAiModal(null); next() }}>
+                      {t("Use this prompt")} <ChevronRight size={18} />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="ai-modal-body">
+                    <p className="ai-note">
+                      {aiReview && !aiReview.ok && aiReview.reason === "rate-limited"
+                        ? t("You've used a lot of AI reviews — take a short break and try again.")
+                        : aiReview && !aiReview.ok && aiReview.reason === "invalid"
+                          ? t("Write a bit more first, then ask AI to review it.")
+                          : t("AI review isn't available right now — your checklist above still works.")}
+                    </p>
+                    <button type="button" className="btn btn--violet lg ai-modal-cta" onClick={() => { setAiModal(null); next() }}>
+                      {t("Use this prompt")} <ChevronRight size={18} />
+                    </button>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <div className="ai-modal-head"><Play size={16} /> {t("What this prompt produces")}</div>
+                {runPending ? (
+                  <div className="ai-modal-loading">
+                    <span className="ai-spinner" />
+                    <p>{t("AI is running your prompt…")}</p>
+                  </div>
+                ) : aiRun?.ok ? (
+                  <div className="ai-modal-body">
+                    <div className="ai-run-output">
+                      <pre>{aiRun.output}</pre>
+                    </div>
+                    {aiRun.comment && (
+                      <div className="ai-run-comment">
+                        <Sparkles size={13} /> <span>{aiRun.comment}</span>
+                      </div>
+                    )}
+                    <button type="button" className="btn btn--ghost lg ai-modal-cta" onClick={() => setAiModal(null)}>
+                      {t("Close")}
+                    </button>
+                  </div>
+                ) : (
+                  <div className="ai-modal-body">
+                    <p className="ai-note">
+                      {aiRun && !aiRun.ok && aiRun.reason === "rate-limited"
+                        ? t("You've run a lot of prompts — take a short break and try again.")
+                        : aiRun && !aiRun.ok && aiRun.reason === "invalid"
+                          ? t("Write a bit more first, then run it.")
+                          : t("Running isn't available right now — try again later.")}
+                    </p>
+                    <button type="button" className="btn btn--ghost lg ai-modal-cta" onClick={() => setAiModal(null)}>
+                      {t("Close")}
+                    </button>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       {lockedRefill !== null && <OutOfHearts nextRefill={lockedRefill || null} max={HEART_MAX} lang={lang} />}
     </div>

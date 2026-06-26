@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 3 · Executive brief",
+    "title": "Executive Brief ต้องทำให้คนตัดสินใจเร็วขึ้น",
+    "body": [
+      { "text": "Executive brief ไม่ใช่การย่อทุกอย่างให้สั้น แต่คือการคัดสิ่งที่ผู้ตัดสินใจต้องรู้: สถานการณ์, ประเด็นสำคัญ, ตัวเลือก, ความเสี่ยง, สิ่งที่ต้องตัดสินใจ และ next action ถ้ามีแค่สรุปยาว ๆ แต่ไม่บอก decision point ยังไม่ใช่ brief ที่ดี" }
+    ],
+    "example": "หัวข้อที่ควรมี: Context, Key facts, Options, Risks, Recommendation, Decision needed, Next steps",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 3 · Fact vs assumption",
+    "title": "แยก Fact, Assumption และ Need Check ให้ผู้บริหารเห็น",
+    "body": [
+      { "text": "AI มักเขียนสรุปให้ดูมั่นใจเกินจริง งานธุรกิจต้องแยกข้อมูลที่ตรวจแล้วออกจากสมมติฐานและจุดที่ยังต้องตรวจ เพื่อให้คนตัดสินใจไม่เข้าใจผิดว่าทุกอย่างเป็นข้อเท็จจริง" }
+    ],
+    "example": "Fact: ค่า subscription ปัจจุบัน 18,000 บาท/เดือน\nAssumption: ทีม sales จะใช้ CRM ใหม่ทุกวันถ้า UI ง่ายขึ้น\nNeed check: เวลา migration ข้อมูลจริงและข้อจำกัดจาก IT",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Executive brief",
+    "title": "ทำ Executive Brief 1 หน้า",
+    "instruction": "ใช้ workflow จากบท 1 แล้วเขียน executive brief ที่ผู้จัดการหรือหัวหน้าทีมอ่านภายใน 3 นาทีแล้วรู้ว่าต้องตัดสินใจอะไร ถ้ายังไม่มีข้อมูลจริง ให้ใช้ข้อมูลสมมติแต่ต้องเขียนว่าเป็น assumption",
+    "payoff": "Executive Brief 1 หน้า สำหรับ project pack",
+    "examples": {
+      "bad": "เรื่อง: onboarding ช้า / เราควรทำ SOP / น่าจะดีขึ้น ขออนุมัติ",
+      "badNote": "ไม่แยก fact/assumption ไม่มี option หรือ risk และไม่บอก decision ที่ต้องการ",
+      "good": "ตัดสินใจ: อนุมัติทำ SOP onboarding ฝ่ายขายหรือไม่ / context: คนใหม่ใช้ 3 สัปดาห์กว่าจะขายเป็น / facts: เข้าใหม่ 4 คน/ไตรมาส, ลาออกใน 2 เดือน 30% / assumptions: (สมมติ) SOP ลดเวลาได้ ~40% / options: 1.ทำ SOP เอง 2.จ้างเทรนเนอร์ 3.ไม่ทำ / risks: SOP ไม่อัปเดต / แนะนำ: option 1 / decision: อนุมัติ 5 วันทำ SOP? / ต้องตรวจเพิ่ม: ตัวเลข turnover จริงจาก HR",
+      "goodNote": "อ่าน 3 นาทีรู้ว่าต้องตัดสินอะไร แยก fact/assumption มี options+risks และ next step ชัด"
+    },
+    "starterPrompt": "Executive Brief\n\nเรื่องที่ต้องตัดสินใจ:\n\nContext / สถานการณ์:\n\nKey facts:\n1.\n2.\n3.\n\nAssumptions:\n1.\n2.\n\nOptions:\n1.\n2.\n3.\n\nRisks:\n1.\n2.\n\nRecommendation:\n\nDecision needed:\n\nNext steps:\n\nสิ่งที่ต้องให้คนตรวจเพิ่ม:\n\nPrompt ที่ใช้ให้ AI ช่วยร่าง brief:\n",
+    "requirements": [
+      "มี context, key facts และ assumptions แยกกัน",
+      "มี options, risks และ recommendation",
+      "มี decision needed, next steps และสิ่งที่ต้องตรวจเพิ่ม"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Context / สถานการณ์", "Key facts", "Assumptions"], "minChars": 18 },
+      { "filledAfterAll": ["Options", "Risks", "Recommendation"], "minChars": 18 },
+      { "filledAfterAll": ["Decision needed", "Next steps", "สิ่งที่ต้องให้คนตรวจเพิ่ม"], "minChars": 12 }
+    ],
+    "minLength": 280
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Brief",
+    "question": "Executive brief ที่ดีควรช่วยอะไร?",
+    "options": [
+      { "text": "ช่วยให้ผู้ตัดสินใจเห็นประเด็นสำคัญ ทางเลือก ความเสี่ยง และสิ่งที่ต้องตัดสินใจ", "correct": true },
+      { "text": "ทำให้เอกสารดูยาวและเป็นทางการ" },
+      { "text": "ซ่อน assumption ให้ดูมั่นใจขึ้น" }
+    ],
+    "correctFeedback": "ถูกต้อง brief ที่ดีลดเวลาตัดสินใจและลดความคลุมเครือ",
+    "incorrectFeedback": "Brief ไม่ได้มีไว้ให้ยาวหรือดูมั่นใจเกินจริง ต้องแยกสิ่งที่รู้กับสิ่งที่เดา"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Assumption",
+    "question": "ถ้าข้อมูลบางอย่างยังไม่ตรวจ ควรเขียนอย่างไร?",
+    "options": [
+      { "text": "ใส่ใน Assumptions หรือ Need check พร้อมวิธีตรวจ", "correct": true },
+      { "text": "เขียนเป็น fact เพื่อให้ดูแน่น" },
+      { "text": "ลบทิ้งทั้งหมดแม้มีผลต่อการตัดสินใจ" }
+    ],
+    "correctFeedback": "ใช่ ความไม่แน่ใจไม่ใช่ปัญหา ถ้าเรา label และวางแผนตรวจชัด",
+    "incorrectFeedback": "การทำ assumption ให้ดูเป็น fact เสี่ยงต่อการตัดสินใจผิด"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Recommendation",
+    "question": "Recommendation ควรมีอะไรคู่กัน?",
+    "options": [
+      { "text": "เหตุผล ความเสี่ยง และ next step ที่ทำต่อได้", "correct": true },
+      { "text": "ความเห็นสั้น ๆ โดยไม่มีหลักฐาน" },
+      { "text": "คำว่าแนะนำให้ทำแบบนี้เพราะดูดี" }
+    ],
+    "correctFeedback": "ถูกต้อง recommendation ต้องมีเหตุผลและทางเดินถัดไป",
+    "incorrectFeedback": "ความเห็นอย่างเดียวไม่พอสำหรับงานธุรกิจ ต้องมีหลักฐานและความเสี่ยงประกอบ"
+  },
+  { "type": "done" }
+]

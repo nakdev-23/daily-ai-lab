@@ -1,0 +1,86 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 5 · Recipe",
+    "title": "Automation Recipe คือสูตรที่คนอื่นหยิบไปใช้ต่อได้",
+    "body": [
+      { "text": "ถ้า automation ใช้ได้แค่คุณคนเดียว มันช่วยทีมไม่ได้ Recipe ที่ดีต้องบอกว่า " },
+      { "text": "ใช้เมื่อไร ต้องกรอกอะไร prompt คืออะไร output หน้าตาแบบไหน และตรวจอย่างไรก่อนใช้", "bold": true },
+      { "text": " ส่วนที่เปลี่ยนตามงานให้ทำเป็นช่อง [ตัวแปร] ส่วนที่เหมือนเดิม เช่น โครงและกฎตรวจ ให้คงไว้" }
+    ],
+    "example": "Recipe: สรุปอีเมลยาวเป็น action items\nVariable: [อีเมล], [ผู้รับผิดชอบเริ่มต้น]\nคงที่: ให้ตอบเป็นตาราง action/owner/deadline และถ้าไม่มี deadline ให้เขียนว่า ไม่ระบุ",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 5 · ตรวจ output",
+    "title": "ทุก recipe ต้องมีวิธีตรวจ output ก่อนนำไปใช้",
+    "body": [
+      { "text": "automation ไม่ได้แปลว่าไม่ต้องตรวจ แต่แปลว่าตรวจให้เป็นระบบ ใส่ checklist สั้น ๆ ท้าย recipe ว่าก่อนเอา output ไปใช้ ต้องเช็คอะไร เช่น รูปแบบถูกไหม มีข้อมูลที่ AI เดาเองไหม มีจุดที่กระทบคน/ลูกค้าที่ต้องให้คนยืนยันไหม" }
+    ],
+    "example": "Checklist: 1) ตารางครบคอลัมน์ไหม 2) มีตัวเลข/ชื่อที่ไม่ได้อยู่ใน input ไหม 3) มี action ที่กระทบลูกค้าที่ต้องให้หัวหน้าอนุมัติไหม",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · ทำ recipe",
+    "title": "สร้าง Automation Recipe ที่ทีมใช้ต่อได้",
+    "instruction": "เอา flow และ prompt จากบท 4 มาทำเป็น recipe เต็ม: ใส่ช่อง [ตัวแปร], อธิบายว่าแต่ละช่องกรอกอะไร, ใส่ prompt, ตัวอย่างการใช้ 1 ครั้ง และ checklist ตรวจ output",
+    "payoff": "Automation Recipe ชิ้นแรกสำหรับ checkpoint และ playbook",
+    "examples": {
+      "bad": "recipe: สรุปอีเมล / ช่อง: [อีเมล] / prompt: สรุปให้หน่อย / ตรวจ: ดูว่าโอเค",
+      "badNote": "มีตัวแปรเดียว ไม่มีคำอธิบาย ไม่มีตัวอย่างใช้ คนอื่นเอาไปใช้ต่อไม่ได้",
+      "good": "recipe: คัดแยกอีเมลสมัครงาน / ใช้เมื่อ: มีอีเมลสมัครใหม่ / ช่อง: [ตำแหน่งที่เปิดรับ]=ลิสต์ตำแหน่งปัจจุบัน, [เนื้อความอีเมล]=วาง raw อีเมล / prompt: คืน JSON {position,summary,label} จาก [เนื้อความอีเมล] เทียบกับ [ตำแหน่งที่เปิดรับ] / ตัวอย่าง: วางอีเมลจริง→{position:\"นักบัญชี\",…} / checklist: label ตรงตำแหน่งจริง?, summary ไม่เกิน 2 บรรทัด?, ไม่มี PII หลุด?",
+      "goodNote": "มี 2 ตัวแปรพร้อมคำอธิบาย prompt ชัด ตัวอย่างใช้จริง และ checklist ตรวจก่อนส่ง"
+    },
+    "starterPrompt": "Automation Recipe\n\nชื่อ recipe:\nใช้เมื่อ:\n\nช่องที่ต้องกรอกก่อนใช้:\n- [ตัวแปร 1]: กรอกอะไร\n- [ตัวแปร 2]: กรอกอะไร\n\nPrompt:\nเขียน prompt ที่ใช้ [ตัวแปร] และบังคับรูปแบบ output\n\nรูปแบบ output ที่ควรได้:\n\nตัวอย่างการใช้ 1 ครั้ง:\nกรอกตัวแปรจริงแล้วแสดงผลที่คาดว่าจะได้\n\nChecklist ตรวจ output ก่อนใช้:\n- \n- \n- \n",
+    "requirements": [
+      "มีช่อง [ตัวแปร] อย่างน้อย 2 ช่องพร้อมคำอธิบาย",
+      "มี prompt และรูปแบบ output ที่ชัด",
+      "มีตัวอย่างการใช้และ checklist ตรวจ output"
+    ],
+    "checks": [
+      { "filledAfterAll": ["ช่องที่ต้องกรอกก่อนใช้", "Prompt", "รูปแบบ output ที่ควรได้"], "minChars": 18 },
+      { "filledAfter": ["ตัวอย่างการใช้ 1 ครั้ง"], "minChars": 24 },
+      { "filledAfter": ["Checklist ตรวจ output ก่อนใช้"], "minChars": 18 }
+    ],
+    "minLength": 240
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Recipe",
+    "question": "Recipe ที่ทีมใช้ซ้ำได้ควรมีอะไรนอกจาก prompt?",
+    "options": [
+      { "text": "ช่องตัวแปร คำอธิบายวิธีกรอก ตัวอย่าง และ checklist ตรวจ output", "correct": true },
+      { "text": "เฉพาะ prompt ยาว ๆ ก้อนเดียว" },
+      { "text": "เฉพาะชื่อ recipe" }
+    ],
+    "correctFeedback": "ถูกต้อง คนอื่นต้องรู้ว่ากรอกอะไรและตรวจอย่างไร ถึงจะใช้ recipe ต่อได้จริง",
+    "incorrectFeedback": "prompt อย่างเดียวมักไม่พอ ต้องมีวิธีใช้ ตัวอย่าง และ checklist ตรวจ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Variable",
+    "question": "ส่วนไหนของ recipe ควรทำเป็น [ตัวแปร]?",
+    "options": [
+      { "text": "ส่วนที่เปลี่ยนตามงาน เช่น ข้อมูล input หรือชื่อผู้รับผิดชอบ", "correct": true },
+      { "text": "ทุกคำใน recipe โดยไม่มีโครงคงที่" },
+      { "text": "ไม่มีอะไรควรเปลี่ยนเลย" }
+    ],
+    "correctFeedback": "ถูกต้อง ตัวแปรคือส่วนที่เปลี่ยนตามงาน ส่วนโครงและกฎตรวจควรคงไว้",
+    "incorrectFeedback": "ไม่ควรทำทุกคำเป็นตัวแปร และไม่ควรล็อกทั้งหมด ต้องแยกส่วนคงที่กับส่วนที่กรอกใหม่"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · ตรวจ output",
+    "question": "Checklist ตรวจ output ใน recipe มีไว้เพื่ออะไร?",
+    "options": [
+      { "text": "ให้คนตรวจจุดเสี่ยงเป็นระบบก่อนเอา output ไปใช้จริง", "correct": true },
+      { "text": "แทนการรัน automation" },
+      { "text": "ทำให้ recipe ดูยาวขึ้น" }
+    ],
+    "correctFeedback": "ถูกต้อง automation ที่ดีไม่ได้ตัดคนออก แต่ทำให้การตรวจเป็นระบบและรวดเร็ว",
+    "incorrectFeedback": "Checklist ไม่ได้แทนการรันหรือเพิ่มความยาว แต่ช่วยให้ output ปลอดภัยก่อนใช้"
+  },
+  { "type": "done" }
+]

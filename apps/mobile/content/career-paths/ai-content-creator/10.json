@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 10 · Platform fit",
+    "title": "คอนเทนต์จริงต้องเข้ากับ platform ไม่ใช่แค่เขียนดี",
+    "body": [
+      { "text": "Creator ที่ทำงานจริงต้องรู้ว่าแต่ละช่องทางต้องการ format ต่างกัน: TikTok/Reels ต้อง hook เร็วใน 1-3 วินาที, Instagram feed ต้องหยุดสายตาและอ่านง่าย, carousel ต้องเล่าเป็นลำดับ, LinkedIn ต้องมี insight หรือประสบการณ์, email ต้องมี subject และ CTA ชัด" }
+    ],
+    "example": "Core message เดียวกัน: ใช้ AI ลดเวลางานซ้ำ\nReel: เปิดด้วยปัญหา 2 วินาที + demo\nCarousel: 5 ขั้นตอนพร้อมภาพ\nLinkedIn: เล่า before/after workflow\nEmail: subject + pain + prompt ให้ลอง",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 10 · Metrics",
+    "title": "โพสต์จริงแล้วต้องอ่านผลจริง",
+    "body": [
+      { "text": "ถ้ายังไม่พร้อมโพสต์ public ให้ทำ smoke test กับคนจริง 5-10 คน เช่น ส่ง draft ให้กลุ่มเป้าหมายหรือคนใกล้เคียง แล้วถามว่าเข้าใจไหม น่าสนใจไหม อยากคลิก/เซฟ/ถามต่อไหม ถ้าโพสต์จริงให้เก็บ reach, view, click, save, share, comment, reply หรือ DM เป็น evidence" }
+    ],
+    "example": "ผลจริงขนาดเล็กก็ใช้ได้: Instagram story มี 63 views, 7 taps link, 3 replies หรือ feedback 8 คนบอกว่า hook เข้าใจ 6 คน แต่ CTA ยังไม่ชัด 4 คน",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Publish metrics",
+    "title": "ปล่อยคอนเทนต์จริงหรือทำ smoke test แล้วเก็บผล",
+    "instruction": "เลือกหนึ่งชิ้นจาก campaign ของคุณ แล้วปรับให้เหมาะกับ platform จริง 1 ช่องทาง จากนั้นโพสต์จริงถ้าปลอดภัย หรือทำ smoke test กับคนจริง 5-10 คน ถ้าเป็นแบรนด์สมมติให้บอกชัดว่าเป็น mock campaign และขอ feedback แทนยอดจริง ห้ามแต่งตัวเลข",
+    "payoff": "Published Content Evidence หรือ Audience Feedback Log สำหรับ final portfolio",
+    "starterPrompt": "Content Publish / Smoke Test Log\n\nCore message:\n\nPlatform ที่เลือก:\nเช่น TikTok / Reels / Instagram feed / Carousel / LinkedIn / Email / Blog\n\nPlatform spec:\n- ขนาด/สัดส่วน:\n- ความยาวที่เหมาะสม:\n- hook ภายในกี่วินาทีหรือกี่บรรทัดแรก:\n- CTA ที่เหมาะกับ platform:\n\nContent ที่จะปล่อยหรือส่งให้ดู:\n- Copy/script:\n- Visual asset link/screenshot:\n\nวิธีทดสอบกับคนจริง:\n- โพสต์ public:\n- ส่งให้กลุ่มเล็กที่ยินยอม:\n- แบบฟอร์ม feedback:\n\nMetric หรือ feedback ที่จะเก็บ:\n- Reach/View:\n- Click/Reply/DM:\n- Like/Comment/Share/Save:\n- Feedback จากคนจริง:\n\nผลจริงที่ได้:\n- ตัวเลข:\n- Feedback:\n- Screenshot/link/evidence:\n\nสิ่งที่เวิร์ก:\n\nสิ่งที่ต้องปรับ:\n\nโพสต์เวอร์ชันถัดไปจะเปลี่ยนอะไร:\n\nข้อควรระวัง:\n- ไม่ spam:\n- ขออนุญาตก่อนส่ง DM/email:\n- ไม่ใช้ claim ที่ยังตรวจไม่ได้:\n- ไม่เก็บข้อมูลส่วนตัวโดยไม่ยินยอม:\n",
+    "requirements": [
+      "มี platform spec และ content ที่พร้อมปล่อยหรือส่งให้ดู",
+      "มีวิธีทดสอบกับคนจริงและ metric/feedback ที่จะเก็บ",
+      "มีผลจริงหรือ feedback จริงพร้อมสิ่งที่จะปรับต่อ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Platform ที่เลือก", "Platform spec", "Content ที่จะปล่อยหรือส่งให้ดู"], "minChars": 18 },
+      { "filledAfterAll": ["วิธีทดสอบกับคนจริง", "Metric หรือ feedback ที่จะเก็บ"], "minChars": 18 },
+      { "filledAfterAll": ["ผลจริงที่ได้", "สิ่งที่เวิร์ก", "สิ่งที่ต้องปรับ", "โพสต์เวอร์ชันถัดไปจะเปลี่ยนอะไร"], "minChars": 18 }
+    ],
+    "minLength": 420
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Platform",
+    "question": "ทำไมต้องปรับคอนเทนต์ตาม platform?",
+    "options": [
+      { "text": "เพราะพฤติกรรมผู้ชม format hook และ CTA ของแต่ละช่องทางต่างกัน", "correct": true },
+      { "text": "เพื่อให้ทุกช่องทางยาวเท่ากัน" },
+      { "text": "เพื่อไม่ต้องวัดผล" }
+    ],
+    "correctFeedback": "ถูกต้อง message หลักคงได้ แต่รูปแบบต้องเข้ากับพฤติกรรมของช่องทาง",
+    "incorrectFeedback": "การปรับ platform ไม่ใช่ทำให้ยาวเท่ากัน แต่ทำให้คนในช่องทางนั้นเข้าใจและตอบสนองได้ง่ายขึ้น"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Metrics",
+    "question": "ถ้ายังไม่พร้อมโพสต์ public ควรทำอย่างไร?",
+    "options": [
+      { "text": "ทำ smoke test กับคนจริง 5-10 คนและเก็บ feedback อย่างมีโครง", "correct": true },
+      { "text": "แต่งตัวเลข engagement เอง" },
+      { "text": "ข้ามการวัดผลไปเลย" }
+    ],
+    "correctFeedback": "ใช่ feedback จากคนจริงยังดีกว่าไม่มีหลักฐาน และเหมาะกับงานที่ยังไม่พร้อมเผยแพร่",
+    "incorrectFeedback": "ห้ามแต่งตัวเลข และการไม่วัดผลทำให้ portfolio ยังเป็นแค่แบบฝึก"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Evidence",
+    "question": "หลักฐานแบบไหนทำให้ portfolio ของ creator น่าเชื่อขึ้น?",
+    "options": [
+      { "text": "โพสต์หรือ asset จริง พร้อม screenshot/link, metric หรือ feedback และสิ่งที่ปรับต่อ", "correct": true },
+      { "text": "แผนคอนเทนต์อย่างเดียว" },
+      { "text": "บอกว่าน่าจะเวิร์กโดยไม่มีผลลัพธ์" }
+    ],
+    "correctFeedback": "ถูกต้อง งานจริงและผลจริงทำให้เห็นว่าคุณไม่ได้แค่คิด แต่ผลิตและเรียนรู้จากตลาดได้",
+    "incorrectFeedback": "แผนช่วยเริ่มงาน แต่ portfolio ที่แข็งต้องมี output และ evidence"
+  },
+  { "type": "done" }
+]

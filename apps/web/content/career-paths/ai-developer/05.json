@@ -1,0 +1,88 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Developer · บทที่ 5 · Structured output",
+    "title": "ให้โมเดลคืน JSON ที่ parse ได้ ไม่ใช่ข้อความอิสระ",
+    "body": [
+      { "text": "ใน production โค้ดต้องเอาผลไปใช้ต่อ ถ้าโมเดลตอบเป็นข้อความอิสระ คุณจะต้องมานั่ง scrape ซึ่งเปราะมาก ทางที่ดีคือใช้ " },
+      { "text": "structured output ให้โมเดลคืน JSON ตาม schema ที่กำหนด แล้วโค้ด parse ไปใช้ตรง ๆ", "bold": true },
+      { "text": " กำหนดฟิลด์และชนิดให้ชัด เช่น category เป็น string, confidence เป็นตัวเลข เพื่อให้ผลเข้ากับโค้ดที่รออยู่" }
+    ],
+    "example": "schema: { category: string, reason: string }\nผลที่ได้: {\"category\": \"ร้องเรียน\", \"reason\": \"ลูกค้าไม่พอใจการจัดส่ง\"} -> โค้ด parse แล้วใช้ได้เลย",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Developer · บทที่ 5 · Validation",
+    "title": "LLM ไม่แน่นอน ต้อง validate ก่อนใช้และมี fallback",
+    "body": [
+      { "text": "โมเดลอาจให้ผลต่างกันในแต่ละครั้ง หรือบางครั้งผลไม่ตรง schema ดังนั้นอย่าเชื่อ output ดิบ ให้ " },
+      { "text": "validate ว่าผลตรง schema และอยู่ในช่วงที่ยอมรับได้ก่อนนำไปใช้ ถ้าไม่ผ่านให้ retry หรือ fallback", "bold": true },
+      { "text": " สำหรับงานที่ต้องการความแน่นอน ให้ตั้งค่าความสุ่มต่ำ และทดสอบกับ input แปลก ๆ ด้วย ไม่ใช่แค่เคสสวย ๆ" }
+    ],
+    "example": "ถ้า category ที่ได้ไม่อยู่ในรายการที่กำหนด -> ไม่รับผลนั้น แล้ว retry หนึ่งครั้ง ถ้ายังไม่ได้ ส่งให้คนตรวจ",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Schema + Validation",
+    "title": "ออกแบบ schema และวิธี validate ผล",
+    "instruction": "ใช้ฟีเจอร์และ prompt จากบทก่อน แล้วออกแบบ JSON schema ที่อยากให้โมเดลคืน ระบุวิธี parse และใช้ผล วิธี validate ว่าผลใช้ได้ สิ่งที่ทำเมื่อผลไม่ผ่าน และ edge cases ที่ต้องเทสต์",
+    "payoff": "Schema + validation plan ที่จะใช้ตอนเขียน integration จริง",
+    "examples": {
+      "bad": "schema: คืนเป็น text สรุป / validate: อ่านดูว่าใช้ได้ไหม / ถ้าพังก็รันใหม่",
+      "badNote": "ไม่มี schema จริง parse ไม่ได้แน่นอน และ retry แบบไม่มีเงื่อนไขจะวนไม่จบ",
+      "good": "schema: {summary:string[] (1-3), sentiment:enum[pos,neu,neg]} / parse: JSON.parse แล้วเช็คด้วย zod / validate: summary มี 1-3 ข้อ, sentiment อยู่ใน enum / ถ้าไม่ผ่าน: retry 1 ครั้งพร้อมแนบ error, ถ้ายังพังคืน fallback {summary:[],sentiment:\"neu\"} / edge: รีวิวว่าง, ยาวเกิน 50 ชิ้น, มี emoji ล้วน",
+      "goodNote": "schema + zod ทำให้ validate ได้จริง มี retry/fallback มีขอบเขต และครอบ edge cases"
+    },
+    "starterPrompt": "Structured Output + Validation\n\nฟีเจอร์:\n\nJSON schema ที่ให้โมเดลคืน (ฟิลด์ + ชนิด):\n\nจะ parse และใช้ผลอย่างไร:\n\nวิธี validate ว่าผลใช้ได้ (ตรง schema/ช่วงที่ยอมรับ):\n\nถ้าผลไม่ผ่าน validation จะทำอย่างไร (retry/fallback):\n\ninput แปลก ๆ ที่ต้องเทสต์ (edge cases):\n",
+    "requirements": [
+      "มี JSON schema ที่ระบุฟิลด์และชนิด และวิธี parse",
+      "มีวิธี validate และสิ่งที่ทำเมื่อผลไม่ผ่าน",
+      "ระบุ edge cases ที่ต้องเทสต์"
+    ],
+    "checks": [
+      { "filledAfterAll": ["JSON schema ที่ให้โมเดลคืน (ฟิลด์ + ชนิด)", "จะ parse และใช้ผลอย่างไร"], "minChars": 8 },
+      { "filledAfterAll": ["วิธี validate ว่าผลใช้ได้ (ตรง schema/ช่วงที่ยอมรับ)", "ถ้าผลไม่ผ่าน validation จะทำอย่างไร (retry/fallback)"], "minChars": 8 },
+      { "filledAfter": ["input แปลก ๆ ที่ต้องเทสต์ (edge cases)"], "minChars": 6 }
+    ],
+    "minLength": 180
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Structured output",
+    "question": "ทำไม production ควรใช้ structured output (JSON schema)?",
+    "options": [
+      { "text": "เพราะโค้ด parse ไปใช้ต่อได้ตรง ๆ ไม่ต้อง scrape ข้อความที่เปราะ", "correct": true },
+      { "text": "เพราะ JSON ทำให้โมเดลฉลาดขึ้น" },
+      { "text": "เพราะข้อความอิสระ parse ง่ายกว่า" }
+    ],
+    "correctFeedback": "ถูกต้อง ผลที่เป็นโครงสร้างทำให้โค้ดนำไปใช้ต่อได้อย่างเชื่อถือได้",
+    "incorrectFeedback": "JSON ไม่ได้ทำให้โมเดลฉลาดขึ้น และข้อความอิสระต่างหากที่ parse ยากและเปราะ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Validation",
+    "question": "ทำไมต้อง validate ผลจาก LLM ก่อนใช้?",
+    "options": [
+      { "text": "เพราะ LLM ไม่แน่นอน ผลอาจไม่ตรง schema หรืออยู่นอกช่วงที่ยอมรับ", "correct": true },
+      { "text": "เพราะ LLM ตอบช้า" },
+      { "text": "เพราะต้องทำให้ผลยาวขึ้น" }
+    ],
+    "correctFeedback": "ถูกต้อง การ validate ป้องกันไม่ให้ผลที่ผิดรูปหลุดเข้าไปในระบบ",
+    "incorrectFeedback": "ประเด็นไม่ใช่ความเร็วหรือความยาว แต่คือความถูกต้องและรูปแบบของผล"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · ผลไม่ผ่าน",
+    "question": "ถ้าผลจากโมเดลไม่ผ่าน validation ควรทำอย่างไร?",
+    "options": [
+      { "text": "retry หรือใช้ fallback เช่น ส่งให้คนตรวจ ไม่ใช้ผลที่ผิดรูปทันที", "correct": true },
+      { "text": "ใช้ผลนั้นไปเลยเพราะโมเดลตอบมาแล้ว" },
+      { "text": "ทำให้ระบบ crash ทั้งหมด" }
+    ],
+    "correctFeedback": "ถูกต้อง retry หรือ fallback ทำให้ระบบทนต่อผลที่ไม่ดีโดยไม่ส่งของเสียต่อ",
+    "incorrectFeedback": "การใช้ผลที่ผิดรูปหรือปล่อยให้ crash ไม่ใช่การจัดการที่ดี ควรมีแผนสำรอง"
+  },
+  { "type": "done" }
+]

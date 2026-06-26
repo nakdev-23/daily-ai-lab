@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini พื้นฐาน · บทที่ 5 · ตอนที่ 3",
+    "title": "Gemini บน Mobile App",
+    "body": [
+      {
+        "text": "Gemini มีแอปสำหรับ Android และ iOS ที่ "
+      },
+      {
+        "text": "ให้ประสบการณ์เหมือนมีผู้ช่วย AI อยู่ในมือตลอดเวลา",
+        "bold": true
+      },
+      {
+        "text": " สามารถพูดคุย ถ่ายรูปแล้วถาม หรือแม้แต่ใช้เป็น Google Assistant แทนได้บนอุปกรณ์ Android"
+      }
+    ],
+    "example": "\"[บน Mobile] ถ่ายรูปป้ายภาษาต่างประเทศแล้วกด 'Ask about this image' เพื่อแปลทันที\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini พื้นฐาน · บทที่ 5 · ตอนที่ 4",
+    "title": "ฟีเจอร์เด่นใน Gemini Mobile",
+    "body": [
+      {
+        "text": "แอป Gemini บนมือถือมีฟีเจอร์พิเศษเช่น "
+      },
+      {
+        "text": "Live Camera Mode ที่วิเคราะห์สิ่งที่กล้องเห็นแบบ Real-time",
+        "bold": true
+      },
+      {
+        "text": " และการแจ้งเตือนที่ช่วยให้คุณใช้ Gemini ได้รวดเร็วยิ่งขึ้นจากหน้าจอหลัก"
+      }
+    ],
+    "example": "\"[เปิด Camera Mode] ชี้กล้องไปที่เมนูอาหาร แล้วถามว่า 'เมนูนี้มีแคลอรีประมาณเท่าไร?'\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Gemini Mobile App รองรับระบบปฏิบัติการใดบ้าง?",
+    "options": [
+      {
+        "text": "เฉพาะ Android เท่านั้น"
+      },
+      {
+        "text": "Android และ iOS",
+        "correct": true
+      },
+      {
+        "text": "เฉพาะ iPhone รุ่นใหม่เท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "Live Camera Mode ใน Gemini Mobile ทำอะไร?",
+    "options": [
+      {
+        "text": "ถ่ายวิดีโอและอัปโหลดไปยัง YouTube"
+      },
+      {
+        "text": "วิเคราะห์สิ่งที่กล้องเห็นแบบ Real-time",
+        "correct": true
+      },
+      {
+        "text": "กรองรูปถ่ายในอัลบั้ม"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "บน Android สามารถใช้ Gemini ทำอะไรแทนของเดิมได้?",
+    "options": [
+      {
+        "text": "แทน Chrome Browser"
+      },
+      {
+        "text": "แทน Google Assistant",
+        "correct": true
+      },
+      {
+        "text": "แทน Google Maps"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยู่นอกบ้าน อยากถ่ายรูปถามทันที ควรใช้อะไร?",
+    "options": [
+      {
+        "text": "Gemini บน Mobile App",
+        "correct": true
+      },
+      {
+        "text": "รอกลับบ้านก่อน"
+      },
+      {
+        "text": "ส่งแฟกซ์"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ฟีเจอร์เด่นของ Gemini Mobile ที่ใช้ได้สะดวกคือ?",
+    "options": [
+      {
+        "text": "ถ่ายรูป/พูดเพื่อถามได้ทันที",
+        "correct": true
+      },
+      {
+        "text": "พิมพ์ได้อย่างเดียว"
+      },
+      {
+        "text": "ใช้ได้เฉพาะตอนชาร์จไฟ"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

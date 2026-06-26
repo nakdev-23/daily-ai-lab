@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 5 · Proposal",
+    "title": "Proposal ที่ดีไม่ขายฝัน แต่บอกผลลัพธ์ ข้อจำกัด และแผนตรวจ",
+    "body": [
+      { "text": "Proposal สำหรับงานธุรกิจต้องตอบว่าเราจะทำอะไร ทำไมควรทำ ใช้ทรัพยากรอะไร วัดผลอย่างไร ความเสี่ยงคืออะไร และต้องขออนุมัติอะไร AI ช่วยร่างได้เร็ว แต่ต้องบังคับให้เปิดเผยข้อจำกัดและ assumption" }
+    ],
+    "example": "Proposal: ทดลองใช้ CRM 30 วันกับทีม sales 5 คน\nSuccess metric: 80% ของ lead ใหม่ถูกกรอกในระบบภายใน 24 ชม.\nRisk: adoption ต่ำ, data migration, duplicate data",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 5 · Alignment",
+    "title": "Proposal ต้องผูกกับ objective และ owner",
+    "body": [
+      { "text": "ถ้า proposal ไม่มี owner, timeline, metric และ review date มักกลายเป็นเอกสารที่อ่านแล้วไม่เกิด action ให้กำหนดว่าใครทำอะไร ภายในเมื่อไร และจะกลับมาตัดสินใจต่อเมื่อไร" }
+    ],
+    "example": "Owner: Sales Ops\nTimeline: 30 วัน\nReview date: 30 July\nDecision after pilot: continue / extend / stop",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Proposal",
+    "title": "เขียน Proposal พร้อมข้อจำกัดและแผนตรวจผล",
+    "instruction": "นำ recommendation จาก decision memo มาเขียนเป็น proposal ที่ส่งให้หัวหน้าหรือทีมอ่านได้ ให้เน้น clarity และ accountability ไม่ใช่ภาษาสวย",
+    "payoff": "Business Proposal Draft สำหรับ project pack",
+    "starterPrompt": "Business Proposal\n\nTitle:\n\nProblem / Opportunity:\n\nProposed solution:\n\nExpected outcome:\n\nScope:\n- In scope:\n- Out of scope:\n\nOwner / Team:\n\nTimeline:\n\nResources needed:\n\nSuccess metrics:\n\nRisks and mitigation:\n1.\n2.\n3.\n\nAssumptions:\n\nHuman review / approval needed:\n\nNext decision date:\n\nPrompt ที่ใช้ให้ AI ช่วยร่าง proposal:\n",
+    "requirements": [
+      "มี problem, solution, outcome และ scope ชัด",
+      "มี owner, timeline, resources และ metrics",
+      "มี risks, assumptions และ approval/review"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Problem / Opportunity", "Proposed solution", "Expected outcome", "Scope"], "minChars": 18 },
+      { "filledAfterAll": ["Owner / Team", "Timeline", "Resources needed", "Success metrics"], "minChars": 12 },
+      { "filledAfterAll": ["Risks and mitigation", "Assumptions", "Human review / approval needed", "Next decision date"], "minChars": 12 }
+    ],
+    "minLength": 320
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Proposal",
+    "question": "Proposal ที่ใช้งานจริงควรมีอะไรนอกจาก solution?",
+    "options": [
+      { "text": "scope, owner, timeline, metric, risk, assumption และ approval", "correct": true },
+      { "text": "คำโฆษณาให้ดูน่าตื่นเต้น" },
+      { "text": "เฉพาะข้อดีของทางเลือกเดียว" }
+    ],
+    "correctFeedback": "ถูกต้อง proposal ต้องทำให้เกิด action และตรวจผลได้",
+    "incorrectFeedback": "Proposal ที่มีแต่ข้อดีหรือคำสวย เสี่ยงทำให้ทีมตัดสินใจจากข้อมูลไม่ครบ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Scope",
+    "question": "ทำไมต้องระบุ out of scope?",
+    "options": [
+      { "text": "เพื่อกันความคาดหวังบานปลายและทำให้รู้ว่างานนี้ไม่ครอบคลุมอะไร", "correct": true },
+      { "text": "เพื่อทำให้ proposal ดูน้อยลง" },
+      { "text": "เพื่อหลีกเลี่ยงการวัดผล" }
+    ],
+    "correctFeedback": "ใช่ out of scope ช่วยคุมขอบเขตและลดความเข้าใจผิด",
+    "incorrectFeedback": "Out of scope ไม่ได้ทำให้งานอ่อนลง แต่ทำให้งานชัดและบริหารได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Metric",
+    "question": "Metric ใน proposal ควรเป็นแบบไหน?",
+    "options": [
+      { "text": "วัดได้และเชื่อมกับผลลัพธ์ที่ต้องการ", "correct": true },
+      { "text": "ดูดีแต่ไม่ต้องวัดจริง" },
+      { "text": "ใส่คำว่า improve โดยไม่บอกตัวชี้วัด" }
+    ],
+    "correctFeedback": "ถูกต้อง metric ต้องช่วยบอกว่าข้อเสนอนี้สำเร็จหรือไม่",
+    "incorrectFeedback": "คำว่า improve ไม่พอ ต้องบอกว่าจะวัดอะไรและเกณฑ์สำเร็จคืออะไร"
+  },
+  { "type": "done" }
+]

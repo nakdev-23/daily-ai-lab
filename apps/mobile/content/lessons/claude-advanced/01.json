@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 1 · ตอนที่ 1",
+    "title": "Extended Thinking คืออะไร",
+    "body": [
+      {
+        "text": "Extended Thinking คือโหมดที่ให้ Claude "
+      },
+      {
+        "text": "ใช้เวลาคิดลึกก่อนตอบ เหมือนนักคิดที่ใคร่ครวญก่อนพูด",
+        "bold": true
+      },
+      {
+        "text": " — ดีมากสำหรับปัญหาซับซ้อน การวิเคราะห์หลายด้าน หรือโจทย์ที่ต้องการความแม่นยำสูง"
+      }
+    ],
+    "example": "\"วิเคราะห์ข้อดีข้อเสียของการลงทุนใน index fund vs real estate ในไทย ในระยะ 10 ปี\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Advance · บทที่ 1 · ตอนที่ 2",
+    "title": "เมื่อไหร่ควรเปิด Extended Thinking",
+    "body": [
+      {
+        "text": "ใช้ Extended Thinking เมื่อต้องการ "
+      },
+      {
+        "text": "คำตอบที่ถูกต้องมากกว่าคำตอบที่รวดเร็ว",
+        "bold": true
+      },
+      {
+        "text": " — เช่น วางแผนธุรกิจ วิเคราะห์ข้อมูล หรือตัดสินใจสำคัญ ไม่ใช่สำหรับคำถามง่ายๆ ทั่วไป"
+      }
+    ],
+    "example": "\"ออกแบบระบบ database สำหรับแอปจองห้องพัก รองรับ 100,000 users พร้อม trade-off แต่ละแบบ\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Extended Thinking ใน Claude คืออะไร?",
+    "options": [
+      {
+        "text": "Claude ตอบยาวขึ้น"
+      },
+      {
+        "text": "Claude ใช้เวลาคิดลึกก่อนตอบ เพื่อความแม่นยำสูงขึ้น",
+        "correct": true
+      },
+      {
+        "text": "Claude ค้นหาข้อมูลจากอินเทอร์เน็ต"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "งานแบบใดเหมาะกับ Extended Thinking มากที่สุด?",
+    "options": [
+      {
+        "text": "\"แปลประโยคนี้เป็นภาษาอังกฤษ\""
+      },
+      {
+        "text": "วิเคราะห์แผนธุรกิจที่ซับซ้อน",
+        "correct": true
+      },
+      {
+        "text": "\"สวัสดีตอบยังไง\""
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ข้อเสียของ Extended Thinking คืออะไร?",
+    "options": [
+      {
+        "text": "ตอบผิดบ่อยขึ้น"
+      },
+      {
+        "text": "ใช้เวลานานกว่าและใช้ token มากกว่า",
+        "correct": true
+      },
+      {
+        "text": "ไม่รองรับภาษาไทย"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "โจทย์ซับซ้อนที่ต้องใช้เหตุผลลึก ควรทำอย่างไรกับ Claude?",
+    "options": [
+      {
+        "text": "เปิด Extended Thinking",
+        "correct": true
+      },
+      {
+        "text": "ขอให้ตอบสั้นที่สุด"
+      },
+      {
+        "text": "ถามซ้ำ ๆ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "Extended Thinking ช่วยอะไร?",
+    "options": [
+      {
+        "text": "ให้ Claude คิดเป็นขั้นก่อนตอบ เพิ่มความแม่นในงานยาก",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ตอบเร็วขึ้นเสมอ"
+      },
+      {
+        "text": "เปลี่ยนภาษา"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -52,7 +52,9 @@
       {
         "text": "รหัสผ่านฐานข้อมูล"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ งานฐานข้อมูลควรแนบ schema ปัจจุบันและสิ่งที่ต้องการเปลี่ยน  💡 ใช้ต่อ: แปะ schema เดิม + บอกเป้าหมาย AI จะเขียน migration ที่ปลอดภัยให้",
+    "incorrectFeedback": "อย่าแนบข้อมูลลูกค้าหรือรหัสผ่าน DB เด็ดขาด — แนบแค่ schema และสิ่งที่จะเปลี่ยน  💡 ใช้ต่อ: AI ต้องการ 'โครงสร้าง' ไม่ใช่ 'ข้อมูลจริง' หรือ secret"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "ลบข้อมูลเก่าทิ้งเสมอ"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง migration ที่ดีต้องย้อนกลับได้ (rollback) และไม่ทำข้อมูลเดิมพัง  💡 ใช้ต่อ: ขอ down migration คู่กับ up เสมอ เผื่อต้องถอยกลับ",
+    "incorrectFeedback": "รันเร็วไม่สนผลกระทบ หรือลบข้อมูลเก่าทิ้ง ไม่ใช่ migration ที่ดี — ต้องย้อนกลับได้และไม่ทำข้อมูลพัง  💡 ใช้ต่อ: ไม่มี rollback = ถ้าพลาดแล้วถอยไม่ได้"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "ลบ backup ทิ้งให้เครื่องว่าง"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ก่อนรัน migration บน production ต้องทดสอบกับสำเนาข้อมูลจริงก่อน  💡 ใช้ต่อ: รันบน staging ที่ copy ข้อมูลมา ดูว่าผ่านและข้อมูลไม่เพี้ยน ก่อนแตะ production",
+    "incorrectFeedback": "อย่ารันตอนคนใช้เยอะ และอย่าลบ backup — ต้องทดสอบกับสำเนาข้อมูลจริงก่อน  💡 ใช้ต่อ: production migration ที่ไม่เคยซ้อม คือการเดิมพันด้วยข้อมูลจริง"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "สำรองข้อมูลและทดสอบบน environment ที่ไม่ใช่ production ก่อน",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง migration ที่ปลอดภัยคือสำรองข้อมูลและทดสอบบน environment ที่ไม่ใช่ production ก่อน  💡 ใช้ต่อ: backup ก่อน + ซ้อมบน staging + มี rollback = ครบสูตรปลอดภัย",
+    "incorrectFeedback": "รันบน production ทันทีหรือไม่สำรองข้อมูล เสี่ยงสุด ๆ — ต้อง backup และทดสอบนอก production ก่อน  💡 ใช้ต่อ: ข้อมูลที่หายจาก migration พลาด มักกู้คืนไม่ได้"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "ไม่มีความเสี่ยง"
       }
+    ],
+    "correctFeedback": "ใช่ ความเสี่ยงหลักคือข้อมูลเสียหายหากผิดพลาด จึงต้องระวัง  💡 ใช้ต่อ: ทุก migration ให้คิดเสมอว่า 'ถ้าพังกลางคันจะกู้ยังไง'",
+    "incorrectFeedback": "migration ไม่ได้ทำให้เร็วขึ้นเสมอ และมีความเสี่ยงแน่นอน — ความเสี่ยงหลักคือข้อมูลเสียหาย  💡 ใช้ต่อ: ความเร็วไม่สำคัญเท่าข้อมูลไม่หาย"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · เขียน migration ปลอดภัย",
+    "title": "ให้ Codex เขียน migration พร้อม down + แผนทดสอบ",
+    "instruction": "ลองสั่ง Codex เขียน migration โดยแนบ schema ปัจจุบัน และขอ down migration คู่กับ up พร้อมแผนทดสอบก่อน production",
+    "example": "นี่คือ schema ตาราง products ปัจจุบัน: [วาง schema] เขียน migration เปลี่ยนคอลัมน์ price จาก int เป็น decimal(10,2) พร้อม down migration และบอกแผนทดสอบกับสำเนาข้อมูลก่อนรัน production",
+    "checks": [
+      "เปิด Codex แล้วก๊อป schema ปัจจุบันของตารางที่จะแก้ลงไป (อย่าใส่ข้อมูลจริงหรือ secret)",
+      "วางคำสั่งจากช่อง example ที่ขอทั้ง up และ down migration",
+      "ตรวจ diff ว่ามี down migration ที่ย้อนกลับได้จริง",
+      "อ่านแผนทดสอบที่มันเสนอ แล้วลองรันบน staging ก่อนแตะ production"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · migration ที่ย้อนกลับได้",
+    "title": "เขียนคำสั่ง migration ที่ปลอดภัยและถอยได้",
+    "instruction": "บทนี้ให้กฎเหล็ก: migration ต้องย้อนกลับได้ (rollback) และไม่ทำข้อมูลเดิมพัง ต้องขอ down คู่ up และทดสอบกับสำเนาข้อมูลก่อน production ลองเขียนคำสั่ง migration ในโปรเจกต์คุณให้ครบ",
+    "payoff": "ได้คำสั่ง migration ที่ถอยกลับได้ถ้าพลาด และมีแผนซ้อมก่อนแตะ production จริง — กันข้อมูลเสียหายแบบกู้ไม่ได้",
+    "examples": {
+      "bad": "ลบคอลัมน์ที่ไม่ใช้แล้วในตาราง users",
+      "badNote": "ไม่มี down migration ถ้าพบทีหลังว่ายังมีโค้ดใช้คอลัมน์นั้น จะถอยกลับไม่ได้และข้อมูลหาย",
+      "good": "เขียน migration เพิ่มคอลัมน์ phone_verified (boolean, default false) ในตาราง users พร้อม down migration ที่ลบคอลัมน์นี้ ทำแบบ non-destructive (ไม่แตะข้อมูลเดิม) และบอกแผนทดสอบบน staging ที่ copy ข้อมูล production มาก่อน",
+      "goodNote": "มี down คู่ up + non-destructive + แผนซ้อมบน staging → ปลอดภัยและย้อนกลับได้"
+    },
+    "starterPrompt": "เขียน migration ___ ในตาราง ___ พร้อม down migration ทำแบบ non-destructive และบอกแผนทดสอบบน staging",
+    "requirements": [
+      "แนบ schema ปัจจุบันและระบุสิ่งที่ต้องการเปลี่ยน (ไม่ใส่ข้อมูลจริง/secret)",
+      "ขอ down migration ที่ย้อนกลับได้คู่กับ up เสมอ",
+      "ระบุแผนทดสอบกับสำเนาข้อมูลก่อนรันบน production"
     ]
   },
   {

@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 4 · ออกแบบ",
+    "title": "Automation คือ Trigger → Steps → Output ที่ทำซ้ำได้",
+    "body": [
+      { "text": "การออกแบบ automation คือเปลี่ยน process map ให้เป็นชุดคำสั่งที่ทำซ้ำได้เหมือนเดิมทุกครั้ง สิ่งสำคัญคือกำหนดให้ชัดว่า: เริ่มเมื่อไร, รับ input อะไร, ทำทีละขั้นอย่างไร, ต้องได้ output รูปแบบไหน และมีจุดให้คนตรวจตรงไหน ยิ่ง output คงรูป (เช่น ตารางหรือหัวข้อเดิม) ยิ่งเอาไปต่อระบบอื่นได้ง่าย" }
+    ],
+    "example": "Trigger: วางข้อความรีวิวลงช่อง input\nStep: คัดเป็น 3 หมวด แล้วสรุปหมวดละไม่เกิน 2 บรรทัด\nOutput: ตาราง 3 คอลัมน์ (หมวด, จำนวน, ตัวอย่าง)\nHuman check: ตรวจว่าตัวอย่างไม่บิดความหมาย",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 4 · Prompt คงรูป",
+    "title": "Prompt automation ต้องบังคับรูปแบบ output ให้คงที่",
+    "body": [
+      { "text": "prompt ที่ใช้ครั้งเดียวกับ prompt ที่ใช้ใน automation ต่างกัน: automation prompt ต้องสั่งให้ output เป็นรูปแบบเดิมทุกครั้ง เช่น “ตอบเป็นตารางคอลัมน์เดิม” หรือ “ถ้าข้อมูลไม่พอ ให้เขียนว่า ต้องตรวจเพิ่ม อย่าเดา” เพื่อให้ระบบถัดไปอ่านผลได้และไม่สะดุดเมื่อเจอเคสแปลก" }
+    ],
+    "example": "เพิ่มท้าย prompt: ตอบเป็น JSON ที่มี key เดิมเสมอ ถ้าฟิลด์ไหนไม่มีข้อมูลให้ใส่ค่าว่างและเพิ่มหมายเหตุ ห้ามแต่งข้อมูลที่ไม่มีใน input",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · ออกแบบ flow",
+    "title": "ร่าง Automation Flow และ prompt แรก",
+    "instruction": "ใช้ process map จากบท 3 แล้วร่างเป็น automation flow: trigger, ขั้นตอนที่ AI ทำ, รูปแบบ output ที่ต้องคงที่ และ prompt รุ่นแรก อย่าลืมใส่กฎว่าให้ทำอย่างไรถ้าข้อมูลไม่พอ",
+    "payoff": "Automation Flow + Prompt v1 สำหรับทำ recipe เต็มในบทถัดไป",
+    "examples": {
+      "bad": "trigger: อีเมลมา / AI: สรุปให้ / output: ข้อความสรุป / prompt: สรุปอีเมลนี้",
+      "badNote": "รูปแบบ output ไม่คงที่ ไม่มีกฎเมื่อข้อมูลไม่พอ เอาไปต่อ Sheet ไม่ได้",
+      "good": "trigger: อีเมลใหม่ / AI: ดึงตำแหน่ง+สรุป / output คงที่: JSON {position, summary, label} / ถ้าข้อมูลไม่พอ: position=\"unknown\" และตั้ง flag ให้คนดู / คนตรวจ: HR ดู unknown ทุกฉบับ / prompt v1: “อ่านอีเมลนี้ คืน JSON {position,summary,label} เท่านั้น ใช้เฉพาะข้อความในอีเมล ถ้าไม่พบตำแหน่งให้ position=‘unknown’”",
+      "goodNote": "output เป็น JSON คงที่ มีกฎเมื่อข้อมูลไม่พอ และ prompt บังคับรูปแบบ ต่อระบบได้จริง"
+    },
+    "starterPrompt": "Automation Flow Draft\n\nงาน:\n\nTrigger:\n\nขั้นที่ AI ทำ:\n\nรูปแบบ output ที่ต้องคงที่:\nเช่น ตาราง 3 คอลัมน์ / bullet / JSON\n\nถ้าข้อมูลไม่พอ ให้ AI ทำอะไร:\n\nจุดที่คนต้องตรวจ:\n\nPrompt v1:\nเขียน prompt ที่บังคับรูปแบบ output และกฎเมื่อข้อมูลไม่พอ\n",
+    "requirements": [
+      "มี trigger, ขั้นที่ AI ทำ และรูปแบบ output ที่คงที่",
+      "มีกฎเมื่อข้อมูลไม่พอ และจุดที่คนต้องตรวจ",
+      "มี prompt v1 ที่บังคับรูปแบบ output"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Trigger", "ขั้นที่ AI ทำ", "รูปแบบ output ที่ต้องคงที่"], "minChars": 12 },
+      { "filledAfterAll": ["ถ้าข้อมูลไม่พอ ให้ AI ทำอะไร", "จุดที่คนต้องตรวจ"], "minChars": 10 },
+      { "filledAfter": ["Prompt v1"], "minChars": 40 }
+    ],
+    "minLength": 220
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Output",
+    "question": "ทำไม automation prompt ต้องบังคับรูปแบบ output ให้คงที่?",
+    "options": [
+      { "text": "เพื่อให้ระบบหรือคนถัดไปอ่านผลได้ทุกครั้งโดยไม่สะดุด", "correct": true },
+      { "text": "เพื่อให้คำตอบยาวขึ้น" },
+      { "text": "เพื่อให้ดูเป็นทางการ" }
+    ],
+    "correctFeedback": "ถูกต้อง output ที่คงรูปทำให้ต่อระบบและตรวจผลได้ง่าย ลดงานแก้ภายหลัง",
+    "incorrectFeedback": "รูปแบบคงที่ไม่ได้มีไว้ให้ยาวหรือดูทางการ แต่ช่วยให้ automation ทำงานต่อเนื่องได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · ข้อมูลไม่พอ",
+    "question": "ถ้า input บางรอบข้อมูลไม่ครบ automation prompt ควรสั่งให้ AI ทำอะไร?",
+    "options": [
+      { "text": "ใส่ค่าว่างหรือเขียนว่าต้องตรวจเพิ่ม และห้ามเดาข้อมูล", "correct": true },
+      { "text": "เดาข้อมูลที่น่าจะถูกใส่ไปก่อน" },
+      { "text": "หยุดทำงานทั้งระบบทันที" }
+    ],
+    "correctFeedback": "ใช่ การ flag ว่าข้อมูลไม่พอปลอดภัยกว่าการเดา และยังทำงานต่อได้ไม่ล่ม",
+    "incorrectFeedback": "การเดาข้อมูลเสี่ยงสุด ส่วนการหยุดทั้งระบบก็เกินจำเป็น ควร flag แล้วไปต่อ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Repeatable",
+    "question": "Automation prompt ต่างจาก prompt ใช้ครั้งเดียวอย่างไร?",
+    "options": [
+      { "text": "ต้องให้ผลแบบเดิมทุกครั้ง แม้ input เปลี่ยน และจัดการเคสแปลกได้", "correct": true },
+      { "text": "ต้องยาวกว่าเสมอ" },
+      { "text": "ไม่ต้องสนใจรูปแบบ output" }
+    ],
+    "correctFeedback": "ถูกต้อง automation prompt เน้นความสม่ำเสมอและทนเคสแปลก ไม่ใช่แค่ตอบดีครั้งเดียว",
+    "incorrectFeedback": "ความยาวไม่ใช่ประเด็น และรูปแบบ output สำคัญมากสำหรับงานที่ทำซ้ำ"
+  },
+  { "type": "done" }
+]

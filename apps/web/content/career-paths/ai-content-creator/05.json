@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 5 · หลาย format",
+    "title": "ไอเดียเดียวควรแตกเป็นหลายรูปแบบได้",
+    "body": [
+      { "text": "Content Creator ที่ทำงานเป็นระบบจะไม่ทิ้งไอเดียดี ๆ หลังโพสต์เดียว ไอเดียหนึ่งเรื่องสามารถกลายเป็นโพสต์สั้น บทความ อีเมล carousel หรือ script วิดีโอได้ แต่แต่ละ format ต้องปรับวิธีเล่า ไม่ใช่ copy paste ตรง ๆ" }
+    ],
+    "example": "ไอเดียหลัก: ใช้ AI ลดเวลาสรุปประชุม\nโพสต์สั้น: 3 bullet prompt\nอีเมล: เล่า pain point และเสนอ workflow\nวิดีโอสั้น: เปิดด้วยสถานการณ์ประชุมยาวแล้วโชว์ก่อน/หลัง",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 5 · คุม voice",
+    "title": "หลาย format ได้ แต่ message ต้องไม่หลุด",
+    "body": [
+      { "text": "เวลานำไอเดียไปหลายช่องทาง สิ่งที่ควรคงไว้คือ core message และ brand voice ส่วนที่ควรเปลี่ยนคือความยาว โครงสร้าง hook และ CTA เช่น TikTok ต้องเร็วและเห็นภาพ ส่วน email อธิบายได้มากกว่า" }
+    ],
+    "example": "Core message: AI ช่วยเริ่มงานซ้ำได้เร็วขึ้น\nInstagram: hook สั้นและภาพชัด\nEmail: เล่า pain point + วิธีลอง\nLinkedIn: เน้น workflow และบทเรียนจากงานจริง",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · แตก format",
+    "title": "แตกไอเดียเดียวเป็น 3 format",
+    "instruction": "เลือก pillar หนึ่งข้อ แล้วแตกเป็น 3 format โดยคง core message เดิม แต่ปรับการเล่าให้เหมาะกับช่องทาง",
+    "payoff": "Draft คอนเทนต์หลายรูปแบบที่ต่อยอดเป็น repurpose pack ได้",
+    "examples": {
+      "bad": "Format 1: โพสต์ / Format 2: อีเมล / Format 3: คลิป — ใช้เนื้อหาเดียวกันก๊อปวางทุกที่",
+      "badNote": "แค่ก๊อปข้ามช่องทางโดยไม่ปรับการเล่า — แต่ละที่เลยไม่เวิร์ก",
+      "good": "Core: “กาแฟเย็นไม่ทำให้ล้าบ่าย” / Short post: hook 1 บรรทัด + รูป / Email: เล่าเรื่องคนทำงานง่วงบ่าย + ลิงก์เมนู / Reel: 3 วิแรกโชว์อาการง่วงแล้วเฉลยเมนู — คง core เดิม ปรับวิธีเล่าตามช่องทาง",
+      "goodNote": "คง core message + ปรับการเล่าให้เข้ากับแต่ละ platform → ได้ผลทุกช่องทาง ไม่ใช่ก๊อปวาง"
+    },
+    "starterPrompt": "Core idea:\n\nAudience:\n\nBrand voice:\n\nFormat 1: Short social post\nHook:\nCopy:\nCTA:\n\nFormat 2: Email หรือ long post\nSubject/Hook:\nBody outline:\nCTA:\n\nFormat 3: Reel/TikTok script หรือ carousel\nOpening:\nKey points:\nEnding CTA:\n\nสิ่งที่ต้องคงไว้ทุก format:\n\nสิ่งที่ต้องปรับตามช่องทาง:\n",
+    "requirements": [
+      "มี core idea และ audience",
+      "แตกเป็น 3 format ที่ต่างกัน",
+      "บอกสิ่งที่คงไว้และสิ่งที่ปรับตามช่องทาง"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Core idea", "Audience", "Brand voice"], "minChars": 12 },
+      { "filledAfterAll": ["Format 1", "Format 2", "Format 3"], "minChars": 18 },
+      { "filledAfterAll": ["สิ่งที่ต้องคงไว้ทุก format", "สิ่งที่ต้องปรับตามช่องทาง"], "minChars": 12 }
+    ],
+    "minLength": 220
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Repurpose",
+    "question": "Repurpose ที่ดีควรคงอะไรไว้?",
+    "options": [
+      { "text": "Core message และ brand voice", "correct": true },
+      { "text": "จำนวนคำเท่าเดิมทุกช่องทาง" },
+      { "text": "รูปประโยคเดิมทั้งหมด" }
+    ],
+    "correctFeedback": "ถูกต้อง สิ่งที่คงไว้คือสารหลักและน้ำเสียง ส่วน format ต้องปรับตามช่องทาง",
+    "incorrectFeedback": "Repurpose ไม่ใช่ copy paste ต้องปรับความยาว โครงสร้าง และวิธีเล่า"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Format",
+    "question": "ทำไม email กับ TikTok script ไม่ควรใช้ copy เดียวกันตรง ๆ?",
+    "options": [
+      { "text": "เพราะพฤติกรรมการอ่านและรูปแบบการเสพต่างกัน", "correct": true },
+      { "text": "เพราะ AI ไม่ชอบ email" },
+      { "text": "เพราะทุกช่องทางต้องพูดคนละเรื่อง" }
+    ],
+    "correctFeedback": "ถูกต้อง ช่องทางต่างกันต้องปรับจังหวะ ความยาว และ hook",
+    "incorrectFeedback": "ไม่ใช่เพราะ AI หรือเพราะต้องเปลี่ยนเรื่อง แต่เพราะรูปแบบการเสพต่างกัน"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Copy",
+    "question": "ถ้า copy หลาย format เริ่มเสียงไม่เหมือนแบรนด์ ควรเช็กอะไร?",
+    "options": [
+      { "text": "Brand voice guide และตัวอย่างประโยคที่ตั้งไว้", "correct": true },
+      { "text": "จำนวน emoji อย่างเดียว" },
+      { "text": "เปลี่ยน core message ทุกโพสต์" }
+    ],
+    "correctFeedback": "ถูกต้อง voice guide คือหลักเทียบเวลางานหลายชิ้นเริ่มเสียงหลุด",
+    "incorrectFeedback": "Emoji ไม่ใช่ตัวชี้วัดหลักของ voice และไม่ควรเปลี่ยน message เพื่อแก้เสียงแบรนด์"
+  },
+  { "type": "done" }
+]

@@ -71,7 +71,6 @@ export default async function AboutPage() {
         <div className="wrap">
           <div className="band">
             <div className="band-grid">
-              <div className="s"><b>120K+</b><span>{t("learners worldwide")}</span></div>
               <div className="s"><b>7</b><span>{t("AI tools")}</span></div>
               <div className="s"><b>400+</b><span>{t("lessons")}</span></div>
               <div className="s"><b>4.9★</b><span>{t("average rating")}</span></div>

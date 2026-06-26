@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 7 · SOP",
+    "title": "SOP ที่ดีทำให้คนทำงานซ้ำได้โดยไม่ต้องถามทุกครั้ง",
+    "body": [
+      { "text": "SOP ไม่ใช่เอกสารยาว ๆ แต่คือคู่มือทำงานซ้ำที่มี trigger, input, steps, owner, exception และ quality check ชัด AI ช่วยร่างได้ดีถ้าเราบอกกระบวนการจริงและกรณีผิดปกติ" }
+    ],
+    "example": "SOP: รับ lead จากงาน event → ตรวจข้อมูล → ใส่ CRM → assign owner → follow-up ภายใน 24 ชม. → ถ้าข้อมูลไม่ครบให้ส่ง template ขอข้อมูลเพิ่ม",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Business · บทที่ 7 · Exception",
+    "title": "SOP ต้องมี exception ไม่ใช่มีแต่กรณีปกติ",
+    "body": [
+      { "text": "งานจริงมักพังตรงกรณีพิเศษ เช่น ข้อมูลไม่ครบ ลูกค้าซ้ำ ระบบล่ม อนุมัติไม่ทัน หรือคนรับผิดชอบไม่อยู่ ให้ใส่ exception path และ human escalation ทุกครั้ง" }
+    ],
+    "example": "ถ้า lead ไม่มีเบอร์โทร: ส่งอีเมลขอข้อมูลเพิ่ม\nถ้า lead ซ้ำ: merge record และแจ้ง owner เดิม\nถ้าดีลใหญ่กว่า 500,000 บาท: escalate ให้ manager review",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · SOP",
+    "title": "แปลงงานซ้ำเป็น SOP ที่ทีมใช้ได้",
+    "instruction": "เลือกงานซ้ำหนึ่งงานใน workflow ของคุณ แล้วเขียน SOP ที่คนในทีมสามารถทำตามได้จริง ให้มี exception, owner, quality check และ human review",
+    "payoff": "SOP Draft สำหรับ Team AI Playbook",
+    "starterPrompt": "SOP Draft\n\nชื่อ SOP:\n\nใช้เมื่อ / Trigger:\n\nเป้าหมายของ SOP:\n\nInput ที่ต้องมี:\n\nOutput ที่ต้องส่งมอบ:\n\nOwner / ผู้รับผิดชอบ:\n\nขั้นตอนปกติ:\n1.\n2.\n3.\n4.\n5.\n\nException / กรณีพิเศษ:\n1.\n2.\n3.\n\nQuality check ก่อนจบงาน:\n1.\n2.\n3.\n\nจุดที่ต้องให้คนอนุมัติหรือ review:\n\nข้อมูลที่ห้ามใส่ AI ระหว่างทำ SOP นี้:\n\nPrompt ที่ให้ AI ช่วยทำงานใน SOP นี้:\n",
+    "requirements": [
+      "มี trigger, input, output และ owner",
+      "มีขั้นตอนปกติและ exception",
+      "มี quality check, human review และ data rule"
+    ],
+    "checks": [
+      { "filledAfterAll": ["ใช้เมื่อ / Trigger", "Input ที่ต้องมี", "Output ที่ต้องส่งมอบ", "Owner / ผู้รับผิดชอบ"], "minChars": 12 },
+      { "filledAfterAll": ["ขั้นตอนปกติ", "Exception / กรณีพิเศษ"], "minChars": 30 },
+      { "filledAfterAll": ["Quality check ก่อนจบงาน", "จุดที่ต้องให้คนอนุมัติหรือ review", "ข้อมูลที่ห้ามใส่ AI ระหว่างทำ SOP นี้"], "minChars": 12 }
+    ],
+    "minLength": 360
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · SOP",
+    "question": "SOP ที่ดีควรมีอะไร?",
+    "options": [
+      { "text": "trigger, input, steps, owner, exception, quality check และ review point", "correct": true },
+      { "text": "เฉพาะคำอธิบายกว้าง ๆ ว่างานนี้สำคัญ" },
+      { "text": "ขั้นตอนปกติอย่างเดียว ไม่ต้องมีกรณีพิเศษ" }
+    ],
+    "correctFeedback": "ถูกต้อง SOP ต้องทำให้คนทำตามได้จริง ทั้งกรณีปกติและกรณีพิเศษ",
+    "incorrectFeedback": "SOP ที่ไม่มี exception หรือ owner มักใช้จริงยากเมื่อเจอเหตุการณ์นอกแผน"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Exception",
+    "question": "ทำไมต้องมี exception path?",
+    "options": [
+      { "text": "เพราะงานจริงมักมีข้อมูลไม่ครบ ระบบผิดพลาด หรือเคสที่ต้อง escalate", "correct": true },
+      { "text": "เพื่อให้ SOP ยาวขึ้น" },
+      { "text": "เพื่อให้ไม่ต้องมี owner" }
+    ],
+    "correctFeedback": "ใช่ exception path ทำให้ SOP ไม่พังทันทีเมื่อเจอเคสไม่ปกติ",
+    "incorrectFeedback": "Exception ไม่ใช่ส่วนเกิน แต่คือสิ่งที่ทำให้ SOP ใช้ในโลกจริงได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Quality",
+    "question": "Quality check ใน SOP มีไว้เพื่ออะไร?",
+    "options": [
+      { "text": "ยืนยันว่า output พร้อมใช้และไม่มีจุดเสี่ยงก่อนส่งต่อ", "correct": true },
+      { "text": "แทนการทำงานทั้งหมด" },
+      { "text": "ทำให้ AI ไม่ต้องใช้ข้อมูล" }
+    ],
+    "correctFeedback": "ถูกต้อง quality check คือประตูสุดท้ายก่อนงานออกจากมือ",
+    "incorrectFeedback": "Quality check ไม่ได้แทนงาน แต่ช่วยให้ส่งงานได้สม่ำเสมอและปลอดภัยขึ้น"
+  },
+  { "type": "done" }
+]

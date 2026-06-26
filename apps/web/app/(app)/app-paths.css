@@ -16,6 +16,9 @@
 .dlab-app .path-big h3 { font-size: 24px; margin: 0 0 8px; }
 .dlab-app .path-big .pd { font-size: 15.5px; color: var(--text-muted); line-height: 1.55; margin: 0 0 16px; }
 .dlab-app .path-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.dlab-app .path-ratio { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: -4px 0 16px; }
+.dlab-app .path-ratio span { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: var(--mint-100); color: var(--mint-600); font-size: 12px; font-weight: 800; }
+.dlab-app .path-ratio span + span { background: var(--sky-100); color: #1E6FC0; }
 .dlab-app .ptool { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px; background: #fff; border: 1px solid var(--edge); font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--cloud-700); }
 .dlab-app .ptool .sw { width: 18px; height: 18px; border-radius: 6px; color: #fff; display: grid; place-items: center; font-size: 10px; font-weight: 800; }
 .dlab-app .path-foot { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }

@@ -107,6 +107,367 @@
 .dlab-lesson .opt .ok { flex: none; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--mint-500); color: #fff; animation: lessonCorrectPop .42s var(--ease-bounce); }
 .dlab-lesson .opt .ok:empty { display: none; }
 
+/* practice workspace */
+.dlab-lesson .practice-instruction {
+  max-width: 65ch;
+  margin: -10px 0 14px;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.dlab-lesson .practice-payoff {
+  display: flex; align-items: flex-start; gap: 9px;
+  max-width: 65ch; margin: 0 0 18px; padding: 12px 15px;
+  border-radius: var(--radius-md);
+  background: var(--sun-100, #FFF3C9); color: #8A5A00;
+  border: 1px solid rgba(245,158,11,.28);
+  font-size: 14.5px; line-height: 1.55;
+}
+.dlab-lesson .practice-payoff svg { flex: none; margin-top: 2px; color: #E0960A; }
+.dlab-lesson .practice-payoff strong { color: #6B4400; }
+
+/* Good-vs-bad prompt reference shown above the editor */
+.dlab-lesson .prompt-examples { max-width: 65ch; margin: 0 0 18px; display: grid; gap: 10px; }
+.dlab-lesson .pex-head { font-family: var(--font-display); font-weight: 800; font-size: 13px;
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.dlab-lesson .pex { padding: 12px 15px; border-radius: var(--radius-md); border: 1px solid; }
+.dlab-lesson .pex.bad { background: var(--berry-100, #FDE7EC); border-color: rgba(225,29,72,.22); }
+.dlab-lesson .pex.good { background: var(--mint-100); border-color: var(--mint-500); }
+.dlab-lesson .pex-tag { display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-display); font-weight: 800; font-size: 12.5px; margin-bottom: 6px; }
+.dlab-lesson .pex.bad .pex-tag { color: var(--berry-600, #BE123C); }
+.dlab-lesson .pex.good .pex-tag { color: var(--mint-600); }
+.dlab-lesson .pex-text { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-strong);
+  font-family: var(--font-mono); }
+.dlab-lesson .pex-note { margin: 7px 0 0; font-size: 13px; line-height: 1.5; color: var(--text-body); }
+.dlab-lesson .practice-workspace {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 5px 0 var(--cloud-200);
+}
+.dlab-lesson .practice-toolbar {
+  min-height: 48px;
+  padding: 10px 14px 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--hero-50);
+  color: var(--hero-700);
+  font-weight: 800;
+  font-size: 13px;
+}
+.dlab-lesson .practice-toolbar button {
+  min-height: 34px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--hero-700);
+  font: 800 12px var(--font-sans);
+  cursor: pointer;
+}
+.dlab-lesson .practice-workspace textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 20px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  background: #fff;
+  color: var(--text-strong);
+  font: 500 14px/1.7 var(--font-mono);
+}
+.dlab-lesson .practice-workspace textarea:focus {
+  box-shadow: inset 0 0 0 3px rgba(108,60,245,.22);
+}
+.dlab-lesson .practice-checks {
+  padding: 12px 18px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid var(--cloud-100);
+}
+.dlab-lesson .practice-checks span {
+  padding: 7px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--radius-pill);
+  background: var(--cloud-100);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+/* ── AI review (Pro) of a practice prompt ─────────────────── */
+.dlab-lesson .ai-review { margin-top: 16px; }
+.dlab-lesson .ai-review-btn { display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 11px 18px; border-radius: var(--radius-pill); border: 0;
+  font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: #fff;
+  background: linear-gradient(135deg,#9D7BFB,#6C3CF5); box-shadow: 0 4px 0 #481FB8, inset 0 2px 0 rgba(255,255,255,.3);
+  transition: transform .12s var(--ease-out), filter .2s; }
+.dlab-lesson .ai-review-btn:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.06); }
+.dlab-lesson .ai-review-btn:disabled { opacity: .55; cursor: default; }
+.dlab-lesson .ai-actions { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.dlab-lesson .ai-actions-hint { font-size: 12.5px; font-weight: 700; color: var(--text-muted); }
+.dlab-lesson .ai-run-btn { display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+  padding: 11px 18px; border-radius: var(--radius-pill);
+  font-family: var(--font-display); font-weight: 800; font-size: 14.5px; color: var(--mint-600);
+  background: #fff; border: 2px solid var(--mint-500); transition: transform .12s var(--ease-out), filter .2s; }
+.dlab-lesson .ai-run-btn:hover:not(:disabled) { transform: translateY(-2px); background: var(--mint-100); }
+.dlab-lesson .ai-run-btn:disabled { opacity: .5; cursor: default; }
+.dlab-lesson .ai-run-output { margin-top: 14px; padding: 14px 16px; border-radius: var(--radius-lg);
+  border: 1px solid var(--mint-500); background: var(--mint-100); animation: lessonStepIn .3s var(--ease-out) both; }
+.dlab-lesson .ai-run-head { display: flex; align-items: center; gap: 6px; font-family: var(--font-display);
+  font-weight: 800; font-size: 13px; color: var(--mint-600); margin-bottom: 8px; }
+.dlab-lesson .ai-run-output pre { margin: 0; font-family: var(--font-mono); font-size: 13.5px; line-height: 1.6;
+  color: var(--text-strong); white-space: pre-wrap; word-break: break-word; }
+.dlab-lesson .ai-pro-tag { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 800;
+  padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,.22); }
+.dlab-lesson .ai-result { margin-top: 14px; padding: 16px 18px; border-radius: var(--radius-lg);
+  border: 1px solid rgba(145,115,250,.2); background: rgba(145,115,250,.06); animation: lessonStepIn .3s var(--ease-out) both; }
+.dlab-lesson .ai-result.strong { border-color: var(--mint-500); background: var(--mint-100); }
+.dlab-lesson .ai-result.weak { border-color: rgba(245,158,11,.4); background: var(--sun-100, #FFF3C9); }
+.dlab-lesson .ai-verdict { margin: 0 0 8px; display: inline-block; padding: 3px 11px; border-radius: 999px; font-family: var(--font-display); font-weight: 800; font-size: 12.5px; background: #fff; }
+.dlab-lesson .ai-verdict.strong { color: var(--mint-600); }
+.dlab-lesson .ai-verdict.ok { color: var(--hero-600); }
+.dlab-lesson .ai-verdict.weak { color: #B45309; }
+.dlab-lesson .ai-summary { margin: 0 0 12px; font-weight: 700; color: var(--text-strong); font-size: 15px; line-height: 1.55; }
+.dlab-lesson .ai-criteria { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.dlab-lesson .ai-criteria li { display: flex; gap: 9px; align-items: flex-start; font-size: 14px; line-height: 1.5; color: var(--text-body); }
+.dlab-lesson .ai-criteria .ai-mark { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; color: #fff; margin-top: 1px; }
+.dlab-lesson .ai-criteria li.met .ai-mark { background: var(--mint-500); }
+.dlab-lesson .ai-criteria li.miss .ai-mark { background: var(--berry-500); }
+.dlab-lesson .ai-improved { margin-top: 14px; padding: 12px 14px; border-radius: 14px; background: #fff; border: 1px solid var(--border-subtle); }
+.dlab-lesson .ai-improved-head { display: flex; align-items: center; gap: 7px; font-family: var(--font-display); font-weight: 800; font-size: 13px; color: var(--hero-600); margin-bottom: 6px; }
+.dlab-lesson .ai-improved-head button { margin-left: auto; border: 0; background: var(--hero-100); color: var(--hero-600); font-weight: 800; font-size: 12px; padding: 4px 11px; border-radius: 999px; cursor: pointer; }
+.dlab-lesson .ai-improved p { margin: 0; font-family: var(--font-mono); font-size: 13px; line-height: 1.55; color: var(--text-body); white-space: pre-wrap; }
+.dlab-lesson .ai-result.upsell { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.dlab-lesson .ai-result.upsell p { margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-strong); }
+.dlab-lesson .ai-note { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--text-muted); }
+@media (prefers-reduced-motion: reduce) { .dlab-lesson .ai-result { animation: none; } }
+
+/* AI popup (review / run) — loading spinner first, then the result */
+.dlab-lesson .ai-modal-backdrop { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center;
+  padding: 18px; background: rgba(24,16,52,.5); backdrop-filter: blur(3px);
+  animation: aiFade .18s var(--ease-out) both; }
+.dlab-lesson .ai-modal { position: relative; width: min(560px, 100%); max-height: 86vh; overflow-y: auto;
+  background: var(--surface, #fff); border-radius: 22px; padding: 22px 22px 24px;
+  box-shadow: 0 30px 70px -20px rgba(24,16,52,.55); animation: aiPop .22s var(--ease-out) both; }
+.dlab-lesson .ai-modal-x { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border: 0;
+  border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--text-muted);
+  background: var(--hero-100, #f1ecff); transition: filter .15s; }
+.dlab-lesson .ai-modal-x:hover { filter: brightness(.95); }
+.dlab-lesson .ai-modal-head { display: flex; align-items: center; gap: 9px; font-family: var(--font-display);
+  font-weight: 800; font-size: 17px; color: var(--text-strong); padding-right: 40px; margin-bottom: 16px; }
+.dlab-lesson .ai-modal-head svg { color: var(--hero-600); }
+.dlab-lesson .ai-modal-loading { display: flex; flex-direction: column; align-items: center; gap: 16px;
+  padding: 38px 0 40px; text-align: center; }
+.dlab-lesson .ai-modal-loading p { margin: 0; font-weight: 700; font-size: 14.5px; color: var(--text-muted); }
+.dlab-lesson .ai-spinner { width: 42px; height: 42px; border-radius: 50%;
+  border: 4px solid var(--hero-100, #ece4ff); border-top-color: var(--hero-600, #6C3CF5);
+  animation: aiSpin .8s linear infinite; }
+.dlab-lesson .ai-modal-body .ai-result,
+.dlab-lesson .ai-modal-body .ai-run-output { margin-top: 0; animation: none; }
+.dlab-lesson .ai-modal-cta { width: 100%; margin-top: 16px; justify-content: center; }
+.dlab-lesson .ai-run-comment { margin-top: 12px; padding: 12px 14px; border-radius: 14px;
+  display: flex; gap: 9px; align-items: flex-start; font-size: 14px; line-height: 1.55; font-weight: 600;
+  color: var(--text-body); background: var(--hero-100, #f3efff); border: 1px solid rgba(145,115,250,.22); }
+.dlab-lesson .ai-run-comment svg { flex: none; margin-top: 2px; color: var(--hero-600); }
+@keyframes aiSpin { to { transform: rotate(360deg); } }
+@keyframes aiFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes aiPop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .dlab-lesson .ai-modal-backdrop, .dlab-lesson .ai-modal { animation: none; }
+  .dlab-lesson .ai-spinner { animation-duration: 1.4s; }
+}
+
+.dlab-lesson .practice-checks span.done {
+  background: var(--mint-100);
+  color: var(--mint-600);
+}
+
+/* answer teaching, shown for both correct and incorrect choices */
+.dlab-lesson .quiz-explanation {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  animation: lessonStepIn .22s var(--ease-out) both;
+}
+.dlab-lesson .quiz-explanation.correct {
+  background: var(--mint-100);
+  color: var(--mint-600);
+}
+.dlab-lesson .quiz-explanation.wrong {
+  background: var(--berry-100);
+  color: var(--berry-600);
+}
+.dlab-lesson .quiz-explanation strong {
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+.dlab-lesson .quiz-explanation p {
+  margin: 5px 0 0;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* lesson-aware setup activity */
+.dlab-lesson .setup-panel,
+.dlab-lesson .try-panel {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 5px 0 var(--cloud-200);
+}
+.dlab-lesson .setup-panel { padding: 22px; }
+.dlab-lesson .setup-panel ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: setup-step;
+  display: grid;
+  gap: 12px;
+}
+.dlab-lesson .setup-panel li {
+  counter-increment: setup-step;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-body);
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlab-lesson .setup-panel li::before {
+  content: counter(setup-step);
+  width: 30px;
+  height: 30px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--hero-100);
+  color: var(--hero-700);
+  font-weight: 800;
+}
+.dlab-lesson .setup-command {
+  margin-top: 18px;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: var(--radius-md);
+  background: var(--cloud-900);
+  color: #fff;
+}
+.dlab-lesson .setup-command code {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font: 500 13px/1.55 var(--font-mono);
+}
+.dlab-lesson .setup-command button,
+.dlab-lesson .try-example button {
+  min-height: 34px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--hero-700);
+  font: 800 12px var(--font-sans);
+  cursor: pointer;
+}
+.dlab-lesson .setup-link {
+  width: fit-content;
+  margin-top: 14px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--hero-100);
+  color: var(--hero-700);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.dlab-lesson .setup-choices {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.dlab-lesson .setup-choices > button {
+  min-height: 76px;
+  padding: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 2px solid var(--cloud-200);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--text-body);
+  text-align: left;
+  cursor: pointer;
+}
+.dlab-lesson .setup-choices > button > svg { flex: none; margin-top: 2px; color: var(--hero-500); }
+.dlab-lesson .setup-choices span { display: grid; gap: 3px; }
+.dlab-lesson .setup-choices b { color: var(--text-strong); font-size: 14px; }
+.dlab-lesson .setup-choices small { color: var(--text-muted); font-size: 12px; line-height: 1.5; }
+.dlab-lesson .setup-choices button.ready:hover,
+.dlab-lesson .setup-choices button.ready:focus-visible {
+  border-color: var(--mint-500);
+  background: var(--mint-100);
+}
+.dlab-lesson .setup-choices button.skipped:hover,
+.dlab-lesson .setup-choices button.skipped:focus-visible {
+  border-color: var(--hero-400);
+  background: var(--hero-50);
+}
+
+/* lesson-aware real-tool activity */
+.dlab-lesson .try-example { padding: 20px; background: var(--hero-50); }
+.dlab-lesson .try-example > span { color: var(--hero-700); font-size: 12px; font-weight: 800; }
+.dlab-lesson .try-example p {
+  margin: 8px 0 14px;
+  color: var(--text-strong);
+  white-space: pre-wrap;
+  font: 500 14px/1.7 var(--font-mono);
+}
+.dlab-lesson .try-checklist { padding: 14px 18px 18px; display: grid; gap: 8px; }
+.dlab-lesson .try-checklist button {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text-body);
+  font: 700 13px var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+.dlab-lesson .try-checklist button > span {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--cloud-300, #C9C2DB);
+  border-radius: 8px;
+  color: #fff;
+}
+.dlab-lesson .try-checklist button.checked { color: var(--mint-600); }
+.dlab-lesson .try-checklist button.checked > span { border-color: var(--mint-500); background: var(--mint-500); }
+
 /* ── footer check / next button ───────────────────────────── */
 .dlab-lesson .lesson-foot { padding: 16px 32px max(16px, env(safe-area-inset-bottom)); }
 .dlab-lesson .btn-check {
@@ -137,9 +498,187 @@
 .dlab-lesson .xp-note { margin: -8px 0 22px; max-width: 420px; padding: 10px 18px; border-radius: 14px; font-size: 14px; font-weight: 600; line-height: 1.5;
   color: #5A4F9A; background: rgba(145,115,250,.1); border: 1px solid rgba(145,115,250,.18); }
 @media (prefers-reduced-motion: reduce) { .dlab-lesson .xp-award { animation: none; } }
+
+/* ── lesson feedback (rate this lesson) ───────────────────── */
+.dlab-lesson .lfeedback { width: 100%; max-width: 440px; margin: 0 auto 24px; display: flex; flex-direction: column; align-items: center;
+  gap: 12px; padding: 20px; border-radius: var(--radius-lg, 20px);
+  background: rgba(145,115,250,.07); border: 1px solid rgba(145,115,250,.16); animation: lessonStepIn .3s var(--ease-out) both; }
+.dlab-lesson .lfeedback-q { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--text-strong); }
+.dlab-lesson .lfeedback-stars { display: flex; gap: 6px; }
+.dlab-lesson .lfeedback-star { border: 0; background: none; cursor: pointer; padding: 4px; line-height: 0; color: #D7D0F0;
+  transition: transform .12s var(--ease-out), color .12s; }
+.dlab-lesson .lfeedback-star:hover { transform: scale(1.18); }
+.dlab-lesson .lfeedback-star.on { color: #FFC93C; }
+.dlab-lesson .lfeedback-comment { width: 100%; resize: vertical; min-height: 52px; padding: 12px 14px; border-radius: 14px;
+  border: 1px solid rgba(145,115,250,.28); background: #fff; font: inherit; font-size: 15px; color: var(--text-strong); }
+.dlab-lesson .lfeedback-comment:focus { outline: none; border-color: var(--violet-500, #6C3CF5); box-shadow: 0 0 0 3px rgba(108,60,245,.15); }
+.dlab-lesson .lfeedback-send { border: 0; border-radius: var(--radius-pill, 999px); cursor: pointer; padding: 11px 26px;
+  font-family: var(--font-display); font-weight: 800; font-size: 15px; color: #fff;
+  background: linear-gradient(180deg,#9173FA,#6C3CF5); box-shadow: 0 4px 0 #481FB8, inset 0 2px 0 rgba(255,255,255,.35);
+  transition: transform .12s var(--ease-out), filter .2s; }
+.dlab-lesson .lfeedback-send:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.05); }
+.dlab-lesson .lfeedback-send:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 2px 0 #481FB8, inset 0 2px 0 rgba(255,255,255,.35); }
+.dlab-lesson .lfeedback-send:disabled { opacity: .55; cursor: default; }
+.dlab-lesson .lfeedback-err { margin: 0; font-size: 13px; font-weight: 600; color: var(--berry-600, #E11D48); }
+.dlab-lesson .lfeedback.done { flex-direction: row; justify-content: center; gap: 9px; font-family: var(--font-display); font-weight: 800;
+  font-size: 15px; color: var(--mint-600, #14A871); background: var(--mint-100, #E6FAF2); border-color: var(--mint-500, #14A871); }
+.dlab-lesson .lfeedback-tick { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: var(--mint-500, #14A871); }
+@media (prefers-reduced-motion: reduce) { .dlab-lesson .lfeedback { animation: none; } .dlab-lesson .lfeedback-star { transition: none; } }
+
 .dlab-lesson .btn--sun { background: linear-gradient(180deg,#FFC93C,#F59E0B); color: #5A3A00; box-shadow: 0 5px 0 #B45309, 0 14px 22px rgba(180,83,9,.34), inset 0 2px 0 rgba(255,255,255,.45); }
 .dlab-lesson .btn--sun:hover { transform: translateY(-2px); filter: brightness(1.05); }
 .dlab-lesson .btn--sun:active { transform: translateY(3px); box-shadow: 0 2px 0 #B45309, 0 6px 12px rgba(180,83,9,.34); }
+
+/* career-path checkpoint and portfolio project */
+.path-activity { padding-bottom: 64px; }
+.path-activity .activity-top {
+  width: min(920px, calc(100% - 32px));
+  min-height: 74px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.path-activity .activity-top > a {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #fff;
+  color: var(--text-muted);
+  text-decoration: none;
+  box-shadow: var(--shadow-xs);
+}
+.path-activity .activity-top > span { color: var(--text-muted); font-size: 13px; font-weight: 800; }
+.path-activity .activity-shell { width: min(920px, calc(100% - 32px)); margin: 24px auto 0; }
+.path-activity .activity-intro { max-width: 760px; margin-bottom: 28px; }
+.path-activity .activity-kind {
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: var(--radius-pill);
+  color: var(--hero-700);
+  background: var(--hero-100);
+  font-size: 12px;
+  font-weight: 800;
+}
+.path-activity .activity-kind.project { color: #7A4A00; background: #FFF0B5; }
+.path-activity .activity-intro h1 {
+  margin: 16px 0 8px;
+  color: var(--text-strong);
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.2;
+}
+.path-activity .activity-intro > p { max-width: 68ch; margin: 0; font-size: 16px; line-height: 1.7; }
+.path-activity .deliverable {
+  margin-top: 18px;
+  padding: 15px 17px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: var(--radius-md);
+  background: var(--mint-100);
+  color: var(--mint-600);
+}
+.path-activity .deliverable span { display: grid; gap: 3px; font-size: 14px; line-height: 1.55; }
+.path-activity .playbook-button {
+  min-height: 42px;
+  margin-top: 14px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--hero-100);
+  color: var(--hero-700);
+  font: 800 13px var(--font-sans);
+  cursor: pointer;
+}
+.path-activity .activity-editor,
+.path-activity .rubric-panel {
+  margin-top: 18px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 5px 0 var(--cloud-200);
+}
+.path-activity .activity-editor label { display: grid; gap: 8px; margin-bottom: 18px; }
+.path-activity .activity-editor label > span { color: var(--text-strong); font-size: 13px; font-weight: 800; }
+.path-activity .activity-editor input,
+.path-activity .activity-editor textarea {
+  width: 100%;
+  border: 2px solid var(--cloud-200);
+  border-radius: var(--radius-md);
+  background: #fff;
+  color: var(--text-strong);
+  font: inherit;
+}
+.path-activity .activity-editor input { height: 48px; padding: 0 14px; }
+.path-activity .activity-editor textarea { min-height: 360px; padding: 16px; resize: vertical; font: 500 14px/1.7 var(--font-mono); }
+.path-activity .activity-editor input:focus,
+.path-activity .activity-editor textarea:focus { outline: 3px solid rgba(108,60,245,.2); border-color: var(--hero-500); }
+.path-activity .activity-editor small { color: var(--text-muted); font-weight: 700; }
+.path-activity .rubric-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; color: var(--hero-600); }
+.path-activity .rubric-heading h2 { margin: 0; color: var(--text-strong); font: 800 21px/1.25 var(--font-display); }
+.path-activity .rubric-heading p { margin: 3px 0 0; color: var(--text-muted); font-size: 13px; }
+.path-activity .rubric-row { padding: 17px 0; display: flex; align-items: center; gap: 20px; border-bottom: 1px solid var(--cloud-100); }
+.path-activity .rubric-row:last-child { border-bottom: 0; }
+.path-activity .rubric-row > div:first-child { flex: 1; }
+.path-activity .rubric-row b { color: var(--text-strong); }
+.path-activity .rubric-row p { margin: 3px 0 0; font-size: 13px; line-height: 1.55; }
+.path-activity .rubric-scale { display: flex; gap: 7px; }
+.path-activity .rubric-scale button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 10px;
+  background: var(--cloud-100);
+  color: var(--text-muted);
+  font: 800 13px var(--font-sans);
+  cursor: pointer;
+}
+.path-activity .rubric-scale button.selected { background: var(--hero-500); color: #fff; box-shadow: 0 3px 0 var(--hero-700); }
+.path-activity .project-feedback {
+  margin-top: 22px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--mint-100);
+  color: var(--mint-600);
+}
+.path-activity .project-feedback img { width: 92px; flex: none; }
+.path-activity .project-feedback span { font-size: 12px; font-weight: 800; }
+.path-activity .project-feedback h2 { margin: 3px 0 7px; color: var(--text-strong); font: 800 21px/1.25 var(--font-display); }
+.path-activity .project-feedback p { margin: 5px 0; line-height: 1.6; }
+.path-activity .project-feedback ul { margin: 8px 0; padding-left: 20px; }
+.path-activity .project-feedback a { display: inline-block; margin-top: 8px; color: var(--hero-700); font-weight: 800; }
+.path-activity .ai-review { margin-top: 14px; padding: 14px 16px; border-radius: var(--radius-md); background: #fff; border-left: 4px solid var(--hero-700); }
+.path-activity .ai-review--strong { border-left-color: var(--mint-600); }
+.path-activity .ai-review--weak { border-left-color: var(--berry-600); }
+.path-activity .ai-review-head { display: flex; align-items: center; gap: 6px; color: var(--hero-700); }
+.path-activity .ai-review-criteria { list-style: none; margin: 8px 0; padding: 0; }
+.path-activity .ai-review-criteria li { display: flex; align-items: flex-start; gap: 7px; margin: 6px 0; line-height: 1.55; }
+.path-activity .ai-review-criteria li.met svg { color: var(--mint-600); flex: none; margin-top: 3px; }
+.path-activity .ai-review-criteria li.unmet svg { color: var(--berry-600); flex: none; margin-top: 3px; }
+.path-activity .ai-review-fix { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line, #e3e3e3); }
+.path-activity .ai-review-example { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line, #e3e3e3); }
+.path-activity .ai-review-example pre { margin: 8px 0 0; padding: 12px 14px; border-radius: var(--radius-md); background: var(--hero-100); color: var(--text-strong); font: 500 13.5px/1.6 ui-monospace, "SF Mono", Menlo, monospace; white-space: pre-wrap; word-break: break-word; }
+.path-activity .grade-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: var(--radius-pill); font-size: 12.5px; font-weight: 800; }
+.path-activity .grade-badge.pass { background: var(--mint-100); color: var(--mint-600); }
+.path-activity .grade-badge.fail { background: #FFF1E6; color: #B45309; }
+.path-activity .grade-badge svg { flex: none; }
+.path-activity .activity-hint { margin-top: 16px; text-align: center; color: var(--text-muted); font-weight: 600; line-height: 1.55; }
+.path-activity .activity-award { width: fit-content; margin-top: 12px; padding: 7px 12px; display: flex; align-items: center; gap: 6px; border-radius: var(--radius-pill); background: #fff; color: #9A6500; font-weight: 800; }
+.path-activity .activity-error { color: var(--berry-600); font-weight: 700; text-align: center; }
+.path-activity .activity-actions { margin-top: 24px; display: flex; justify-content: center; }
 
 @media (max-width: 600px) {
   .dlab-lesson .lesson-top { padding: 16px; gap: 10px; }
@@ -149,6 +688,17 @@
   .dlab-lesson .theory img { width: 88px; }
   .dlab-lesson .lesson-foot { padding: 13px 16px max(13px, env(safe-area-inset-bottom)); }
   .dlab-lesson .lstep.done h2 { font-size: 28px; }
+  .dlab-lesson .practice-workspace textarea { min-height: 190px; padding: 16px; }
+  .dlab-lesson .setup-choices { grid-template-columns: 1fr; }
+  .dlab-lesson .setup-command { align-items: flex-start; flex-direction: column; }
+  .path-activity .activity-intro h1 { font-size: 28px; }
+  .path-activity .activity-editor,
+  .path-activity .rubric-panel { padding: 18px; }
+  .path-activity .rubric-row { align-items: flex-start; flex-direction: column; }
+  .path-activity .rubric-scale { width: 100%; }
+  .path-activity .rubric-scale button { flex: 1; }
+  .path-activity .project-feedback { flex-direction: column; }
+  .path-activity .project-feedback img { width: 72px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .dlab-lesson .complete img, .dlab-lesson .complete .reward, .dlab-lesson .lprog > i::after, .dlab-lesson .lopt.correct .k, .dlab-lesson .lesson-foot.ok::before, .dlab-lesson .lstep { animation: none; }

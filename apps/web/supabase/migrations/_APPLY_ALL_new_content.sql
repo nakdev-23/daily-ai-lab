@@ -2,6 +2,10 @@
 -- APPLY ALL: new courses + career paths (migrations 017–021 combined)
 -- Paste this whole file into Supabase SQL Editor and Run ONCE.
 -- Statements run in order; each is idempotent (safe to re-run).
+-- NOTE: This legacy bundle does not include career-path v3 migrations 023+.
+-- After this file, run the standalone migrations 023 through 036 in order
+-- when deploying certificates, feedback, portfolio projects, and rebuilt
+-- career-path curricula.
 -- ════════════════════════════════════════════════════════════════════
 
 -- ╔══ 017_course_visibility ══╗
@@ -550,6 +554,4 @@ from path_modules m join career_paths cp on cp.id = m.path_id, (values
   (3, 'Onboarding Copy', 'checkpoint', 'claude-design', 6, 20, 6)
 ) as v(mord, title, kind, course_slug, lesson_num, xp, ord)
 where cp.slug = 'ai-for-image' and m.order_index = v.mord;
-
-
 

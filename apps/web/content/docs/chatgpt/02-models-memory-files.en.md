@@ -28,38 +28,38 @@ The Model Selector (a menu for choosing which version of the AI to use in a conv
 
 | Model | Description | Good for |
 |---|---|---|
-| **GPT-4o** | The main, smartest and fastest model for general users | General work, writing, analysis, answering questions |
-| **GPT-4o mini** | A lighter version, faster, using fewer tokens (a token is a small unit of text the AI processes — like splitting words into small pieces, e.g. "hello" might be 2–3 pieces) | Simple tasks, short answers, saving quota |
+| **GPT-5.5** | The main, smartest and fastest model for general users | General work, writing, analysis, answering questions |
+| **GPT-5.5 mini** | A lighter version, faster, using fewer tokens (a token is a small unit of text the AI processes — like splitting words into small pieces, e.g. "hello" might be 2–3 pieces) | Simple tasks, short answers, saving quota |
 | **o1** | A deep-thinking model, takes longer but more accurate | Math, complex programming, research |
 | **o3** | A further development of o1, smarter | Advanced analytical work |
 | **o4-mini** | A lighter version of o4, faster and using less quota (the allotted amount of usage in a given period) | Work needing reasoning (logical analytical thinking) but not too complex |
 | **o1 Pro Mode** | A special version of o1 for the Pro plan only, thinks the deepest | High-level research, very hard problems |
 
 ### Worth knowing
-- **Free** plan: mostly GPT-4o mini
-- **Plus** plan: GPT-4o plus o1/o3/o4-mini
+- **Free** plan: mostly GPT-5.5 mini
+- **Plus** plan: GPT-5.5 plus o1/o3/o4-mini
 - **Pro** plan: all models including o1 Pro
 - Each model has a different usage limit (the maximum number of uses per day or per month); when it runs out, it switches to a lower model automatically
 - **Canvas does not support** the Pro-series models (o1 Pro)
 
 ---
 
-## GPT-4o
-Reference: [How can I access GPT-4o?](https://help.openai.com/en/articles/8992571-how-can-i-access-gpt-4o)
+## GPT-5.5
+Reference: [OpenAI Help Center — ChatGPT](https://help.openai.com/en/collections/3742473-chatgpt)
 
 ### What this topic is
-GPT-4o (the "o" stands for "omni" — meaning all-around) is ChatGPT's main model, designed to handle multiple formats in a single model.
+GPT-5.5 is ChatGPT's latest main model, designed to handle multiple formats in a single model — text, images, and audio.
 
 ### Abilities
 - Takes input (what you send the AI) as **text, images, and audio**
-- Responds faster than the older GPT-4
+- Responds faster and smarter than previous models
 - Can do Vision (image analysis — letting the AI "see" and describe the content of an image)
 - Used as the main model in Voice Mode
 
 ### How to access
 - **Plus/Pro**: available immediately, no special setup
-- **Free**: available with a limit, after which it switches to GPT-4o mini automatically
-- **API** (a connection channel for developers): call it via the model ID `gpt-4o`
+- **Free**: available with a limit, after which it switches to GPT-5.5 mini automatically
+- **API** (a connection channel for developers): call it via the model ID `gpt-5.5`
 
 ---
 
@@ -67,11 +67,11 @@ GPT-4o (the "o" stands for "omni" — meaning all-around) is ChatGPT's main mode
 Reference: [OpenAI o-series models](https://help.openai.com/en/articles/9824965)
 
 ### What this topic is
-The o-series models (o1, o3, o4) are designed to **"think"** before answering, using a Chain-of-Thought technique (the AI works through the steps one at a time before the final answer) inside the model, making them more accurate than GPT-4o on complex work.
+The o-series models (o1, o3, o4) are designed to **"think"** before answering, using a Chain-of-Thought technique (the AI works through the steps one at a time before the final answer) inside the model, making them more accurate than GPT-5.5 on complex work.
 
-### How they differ from GPT-4o
+### How they differ from GPT-5.5
 
-| Aspect | GPT-4o | o1 / o3 / o4 |
+| Aspect | GPT-5.5 | o1 / o3 / o4 |
 |---|---|---|
 | Speed | Fast | Slower (takes time to think) |
 | Accuracy on complex work | Good | Much better |

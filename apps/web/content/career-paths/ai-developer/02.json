@@ -1,0 +1,91 @@
+[
+  {
+    "type": "setup",
+    "tag": "AI Developer · บทที่ 2 · Setup",
+    "title": "ตั้งสภาพแวดล้อมและจัดการ API key อย่างปลอดภัย",
+    "instruction": "เตรียมสภาพแวดล้อมสำหรับเรียก LLM: สมัคร API (เช่น Anthropic Console มักมีเครดิตเริ่มต้นให้ทดลอง) เก็บ API key ใน environment variable ไม่ hardcode และลองเรียก API ง่าย ๆ หนึ่งครั้งให้สำเร็จ จากนั้นเตรียมที่เก็บงาน",
+    "steps": [
+      "สมัคร API และสร้าง key (เริ่มจากเครดิตทดลองได้)",
+      "เก็บ key ใน .env หรือ environment variable และเพิ่ม .env ใน .gitignore",
+      "ลองเรียก API หนึ่งครั้งให้ได้ผลตอบกลับ เพื่อยืนยันว่าตั้งค่าถูก",
+      "สร้างที่เก็บงาน (repo) มีหมวด: spec, prompts, code, eval",
+      "ตั้งกฎ: ไม่ commit key, ไม่ส่งข้อมูลลับผู้ใช้โดยไม่จำเป็น, จำกัด max_tokens เพื่อคุม cost"
+    ],
+    "href": "https://console.anthropic.com",
+    "hrefLabel": "เปิด Anthropic Console"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Developer · บทที่ 2 · ความปลอดภัย",
+    "title": "API key รั่วครั้งเดียว เสียหายได้มาก",
+    "body": [
+      { "text": "API key คือความลับ ห้าม hardcode ในโค้ด ห้าม commit ขึ้น repo และห้ามใส่ในฝั่ง client ที่ผู้ใช้เห็นได้ ให้เก็บใน " },
+      { "text": "environment variable และเรียกผ่านฝั่ง server เท่านั้น", "bold": true },
+      { "text": " นอกจากนี้ระวังข้อมูลผู้ใช้ (PII) อย่าส่งสิ่งที่ไม่จำเป็นเข้าโมเดล และตั้งเพดาน cost เช่น จำกัด max_tokens และกัน loop ที่เรียกซ้ำไม่สิ้นสุด" }
+    ],
+    "example": "ดี: const key = process.env.ANTHROPIC_API_KEY เรียกจาก backend\nไม่ดี: ใส่ key ตรง ๆ ในโค้ดหรือใน frontend ที่ใครก็เปิดดูได้",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Env + ความปลอดภัย",
+    "title": "ตั้งสภาพแวดล้อมและกฎความปลอดภัยของคุณ",
+    "instruction": "เขียนว่าจะเข้าถึงโมเดลอย่างไร เก็บ key อย่างไร เก็บงานที่ไหน และตั้งกฎเรื่องข้อมูลผู้ใช้และ cost เพื่อใช้เป็นมาตรฐานตลอดคอร์ส",
+    "payoff": "Dev environment + กฎความปลอดภัยที่จะใช้คุมงานทั้งคอร์ส",
+    "examples": {
+      "bad": "ใช้ OpenAI key, เก็บไว้ในโค้ด, งานอยู่ในเครื่อง, ระวังเรื่องข้อมูลเอา",
+      "badNote": "เก็บ key ในโค้ดเสี่ยงหลุด ไม่มีกฎ PII และไม่มีวิธีคุม cost จริง",
+      "good": "เข้าถึงโมเดลผ่าน OpenAI SDK / เก็บ key ใน .env (ใส่ .gitignore) อ่านผ่าน process.env / เก็บงานใน repo โฟลเดอร์ /spec /prompts /evals / กฎ PII: mask email+เบอร์ก่อนส่งโมเดล / คุม cost: max_tokens=500, timeout 20s, กัน retry เกิน 2 ครั้ง",
+      "goodNote": "key ปลอดภัย มีที่เก็บงานเป็นระบบ และมีกฎ PII + เพดาน cost ที่บังคับได้จริง"
+    },
+    "starterPrompt": "Dev Environment + กฎความปลอดภัย\n\nวิธีเข้าถึงโมเดล (API/เครื่องมือ) และแพ็กเกจ:\n\nเก็บ API key ที่ไหนและอย่างไร (env var/ไม่ commit):\n\nที่เก็บงาน (spec, prompt, code, eval):\n\nกฎจัดการข้อมูลผู้ใช้/PII:\n\nวิธีคุม cost (เช่น จำกัด max_tokens, กัน loop):\n",
+    "requirements": [
+      "ระบุวิธีเข้าถึงโมเดลและวิธีเก็บ key อย่างปลอดภัย",
+      "มีที่เก็บงาน",
+      "มีกฎจัดการ PII และวิธีคุม cost"
+    ],
+    "checks": [
+      { "filledAfterAll": ["วิธีเข้าถึงโมเดล (API/เครื่องมือ) และแพ็กเกจ", "เก็บ API key ที่ไหนและอย่างไร (env var/ไม่ commit)"], "minChars": 6 },
+      { "filledAfter": ["ที่เก็บงาน (spec, prompt, code, eval)"], "minChars": 4 },
+      { "filledAfterAll": ["กฎจัดการข้อมูลผู้ใช้/PII", "วิธีคุม cost (เช่น จำกัด max_tokens, กัน loop)"], "minChars": 6 }
+    ],
+    "minLength": 140
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · API key",
+    "question": "ควรเก็บ API key อย่างไร?",
+    "options": [
+      { "text": "ใน environment variable เรียกผ่าน server ไม่ hardcode และไม่ commit", "correct": true },
+      { "text": "ใส่ตรง ๆ ในโค้ดเพื่อความสะดวก" },
+      { "text": "ใส่ใน frontend เพื่อให้เรียกง่าย" }
+    ],
+    "correctFeedback": "ถูกต้อง key ต้องอยู่ฝั่ง server ใน env var ไม่ให้ใครเห็นหรือดึงไปใช้ได้",
+    "incorrectFeedback": "การ hardcode หรือใส่ใน frontend ทำให้ key รั่วและถูกนำไปใช้จ่ายแทนเราได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · PII",
+    "question": "ควรทำอย่างไรกับข้อมูลผู้ใช้เมื่อเรียก LLM?",
+    "options": [
+      { "text": "ส่งเฉพาะที่จำเป็น ไม่ส่งข้อมูลลับหรือ PII โดยไม่จำเป็น", "correct": true },
+      { "text": "ส่งข้อมูลผู้ใช้ทั้งหมดเสมอเพื่อให้โมเดลเข้าใจครบ" },
+      { "text": "ไม่ต้องสนใจ เพราะโมเดลลืมเอง" }
+    ],
+    "correctFeedback": "ถูกต้อง ส่งเท่าที่จำเป็นช่วยลดความเสี่ยงเรื่องความเป็นส่วนตัว",
+    "incorrectFeedback": "การส่งข้อมูลทั้งหมดเสี่ยง และเราไม่ควรเชื่อว่าเครื่องมือจะลบข้อมูลให้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Cost",
+    "question": "วิธีใดช่วยคุม cost ของการเรียก LLM?",
+    "options": [
+      { "text": "จำกัด max_tokens และกัน loop ที่เรียกซ้ำไม่สิ้นสุด", "correct": true },
+      { "text": "เรียกโมเดลให้บ่อยที่สุดเท่าที่ทำได้" },
+      { "text": "ใช้ output ยาวที่สุดเสมอ" }
+    ],
+    "correctFeedback": "ถูกต้อง การจำกัด token และกัน loop ป้องกันค่าใช้จ่ายบานปลาย",
+    "incorrectFeedback": "การเรียกบ่อยหรือ output ยาวโดยไม่จำเป็นทำให้ cost สูงขึ้นเปล่า ๆ"
+  },
+  { "type": "done" }
+]

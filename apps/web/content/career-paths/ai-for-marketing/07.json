@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 7 · Testing",
+    "title": "A/B Test ไม่ใช่แค่ลอง 2 ข้อความแล้วดูอันที่ชอบ",
+    "body": [
+      { "text": "A/B test ที่ใช้ได้ต้องมี hypothesis, variable ที่เปลี่ยนเพียงเรื่องสำคัญ, metric, sample/timeframe และ decision rule ก่อนเริ่ม ไม่งั้นผลลัพธ์จะกลายเป็นความรู้สึกส่วนตัว" }
+    ],
+    "example": "Hypothesis: message ที่เน้น “เริ่มได้ในวันเดียว” จะได้ trial signup สูงกว่า message ที่เน้น “ฟีเจอร์ครบ” เพราะ audience กลัว setup ยุ่งยาก",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 7 · Quality",
+    "title": "ก่อนทดสอบ ต้องตรวจ copy ให้ปลอดภัยก่อน",
+    "body": [
+      { "text": "อย่าเอา copy ที่ claim เกินจริงหรือผิด brand voice ไป test เพราะถึงตัวเลขดี ก็อาจสร้างความเสี่ยงให้แบรนด์ ให้ตรวจ 5 จุด: ตรง audience, promise มี proof, CTA ชัด, claim ตรวจได้, format เหมาะกับช่องทาง" }
+    ],
+    "example": "คำว่า “ลดต้นทุน 50% แน่นอน” ต้องมีหลักฐานที่หนักมาก ถ้าไม่มีให้เปลี่ยนเป็น “ช่วยเห็นต้นทุนชัดขึ้นและลดงาน manual”",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Test plan",
+    "title": "ออกแบบ A/B Test Plan สำหรับ copy ของคุณ",
+    "instruction": "เลือก copy หรือ message angle จากบท 5 แล้วออกแบบการทดสอบแบบง่าย ๆ ให้รู้ว่าจะตัดสินจากอะไร ไม่ต้องรันเงินจริงตอนนี้ แต่ต้องพร้อมเอาไปใช้กับ ads/email/landing page ได้",
+    "payoff": "A/B Test Plan พร้อม decision rule",
+    "examples": {
+      "bad": "ทดสอบ: copy / A: แบบเก่า / B: แบบใหม่ / Metric: ดูว่าอันไหนดีกว่า",
+      "badNote": "เปลี่ยนหลายอย่างพร้อมกัน ไม่มี decision rule — รู้ผลก็สรุปไม่ได้ว่าอะไรชนะ",
+      "good": "ทดสอบ: hook ของ FB ad / Hypothesis: hook ที่ถามตรง ๆ จะได้ CTR สูงกว่า / A: “สิ้นเดือนนี้ร้านคุณกำไรหรือขาดทุน?” / B: “คอร์สบัญชีร้านกาแฟ ลองฟรี 7 วัน” / ตัวแปรเดียว: เปลี่ยนแค่ hook / Primary: CTR / Secondary: cost/trial / Sample: รออย่างน้อย 100 คลิก/เวอร์ชัน / Decision: ถ้า A CTR สูงกว่า B เกิน 20% เลือก A / Risk: ห้ามใส่คำการันตีกำไร",
+      "goodNote": "เปลี่ยนตัวแปรเดียว + decision rule ชัด → รันจริงแล้วตัดสินได้ทันทีไม่ต้องเถียงกัน"
+    },
+    "starterPrompt": "A/B Test Plan\n\nสิ่งที่จะทดสอบ:\n\nHypothesis:\n\nVersion A:\nMessage/Hook:\nCTA:\n\nVersion B:\nMessage/Hook:\nCTA:\n\nVariable ที่เปลี่ยนเพียงเรื่องเดียว:\n\nPrimary metric:\n\nSecondary metric:\n\nระยะเวลา / จำนวน sample ขั้นต่ำ:\n\nDecision rule: ถ้าเกิดอะไร จะเลือกเวอร์ชันไหน:\n\nRisk / Claim ที่ต้องตรวจก่อนรัน:\n\nPrompt ให้ AI ช่วย review test plan:\n",
+    "requirements": [
+      "มี hypothesis และ version A/B ชัด",
+      "ระบุ variable, metric และ decision rule",
+      "มี risk/claim ที่ต้องตรวจก่อนรัน"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Hypothesis", "Version A", "Version B"], "minChars": 18 },
+      { "filledAfterAll": ["Variable ที่เปลี่ยนเพียงเรื่องเดียว", "Primary metric", "Decision rule"], "minChars": 12 },
+      { "filledAfterAll": ["Risk / Claim ที่ต้องตรวจก่อนรัน", "Prompt ให้ AI ช่วย review test plan"], "minChars": 20 }
+    ],
+    "minLength": 260
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · A/B Test",
+    "question": "A/B test ที่ดีควรเปลี่ยนอะไร?",
+    "options": [
+      { "text": "เปลี่ยนทุกอย่างพร้อมกันเพื่อให้ต่างชัด" },
+      { "text": "เปลี่ยน variable สำคัญทีละเรื่อง เพื่อรู้ว่าอะไรส่งผล", "correct": true },
+      { "text": "เปลี่ยนสีตามความชอบ" }
+    ],
+    "correctFeedback": "ถูกต้อง ถ้าเปลี่ยนหลายอย่างพร้อมกันจะไม่รู้ว่าอะไรทำให้ผลต่าง",
+    "incorrectFeedback": "ความต่างต้องควบคุมได้ ไม่ใช่เปลี่ยนหลายเรื่องจนอ่านผลไม่ได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Metric",
+    "question": "ถ้าเป้าหมายคือ lead คุณควรดู metric ใดเป็นหลัก?",
+    "options": [
+      { "text": "จำนวน lead หรือ conversion rate จาก landing/form", "correct": true },
+      { "text": "จำนวน emoji ใน copy" },
+      { "text": "ความรู้สึกว่า copy สวย" }
+    ],
+    "correctFeedback": "ใช่ metric หลักต้องใกล้เป้าหมาย ไม่ใช่ความสวยของ output",
+    "incorrectFeedback": "ความสวยช่วยได้แต่ไม่ใช่ตัวตัดสินหลัก ถ้าเป้าหมายคือ lead ต้องดู lead/conversion"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Decision",
+    "question": "ทำไมต้องมี decision rule ก่อนรัน test?",
+    "options": [
+      { "text": "เพื่อลดการเลือกผลลัพธ์ตามความรู้สึกหลังเห็นตัวเลข", "correct": true },
+      { "text": "เพื่อให้ test ใช้เวลานานขึ้น" },
+      { "text": "เพื่อไม่ต้องดู metric" }
+    ],
+    "correctFeedback": "ถูกต้อง decision rule ทำให้การตัดสินใจมีวินัยและย้อนกลับมาตรวจได้",
+    "incorrectFeedback": "Decision rule ไม่ได้ทำให้ช้าลง แต่ทำให้ผลทดสอบใช้ตัดสินใจได้จริง"
+  },
+  { "type": "done" }
+]

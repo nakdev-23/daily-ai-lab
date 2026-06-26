@@ -1,0 +1,89 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 2 · Setup",
+    "title": "ก่อนทำคอนเทนต์ ให้เตรียม brand workspace",
+    "body": [
+      { "text": "AI จะช่วยคุณได้ดีขึ้นมากถ้าคุณมีพื้นที่เก็บข้อมูลแบรนด์ ไม่ใช่เริ่มแชทใหม่แบบไม่มี context ทุกครั้ง อย่างน้อยควรมี brand brief, audience, voice, reference post, visual reference และ content calendar งานนี้ไม่ต้องซับซ้อน ใช้ Notion, Google Docs, Drive หรือโฟลเดอร์ธรรมดาก็ได้" }
+    ],
+    "example": "โฟลเดอร์แนะนำ: 01 Brand Brief, 02 Audience, 03 Voice Examples, 04 Visual References, 05 Drafts, 06 Final Posts",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "setup",
+    "tag": "เตรียมเครื่องมือ",
+    "title": "สร้างพื้นที่เก็บแบรนด์และ reference",
+    "instruction": "ถ้าคุณมี workspace อยู่แล้วให้กดพร้อมใช้งาน ถ้ายังไม่มี ให้สร้างแบบง่ายที่สุดก่อน บทนี้ไม่บังคับใช้เครื่องมือเฉพาะ",
+    "steps": [
+      "สร้างโฟลเดอร์หรือเอกสารชื่อ Content Creator Workspace",
+      "เพิ่มหัวข้อ Brand Brief, Audience, Voice, Visual, Drafts, Calendar",
+      "เก็บตัวอย่างโพสต์ 3-5 ชิ้นที่อยากใช้เป็น reference",
+      "จดว่า reference แต่ละชิ้นชอบอะไร เช่น hook, น้ำเสียง, ภาพ, CTA",
+      "ตั้งกติกา: ห้ามใช้ภาพ/ข้อความที่ละเมิดลิขสิทธิ์ และต้องตรวจ claim ก่อนโพสต์"
+    ],
+    "href": "https://docs.google.com",
+    "hrefLabel": "เปิด Google Docs"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Reference board",
+    "title": "ทำ reference board แบบสั้น",
+    "instruction": "เขียน reference board สำหรับแบรนด์ของคุณ ไม่ต้องแนบภาพจริงในช่องนี้ก็ได้ ให้จดเป็นคำอธิบายว่าอยากได้ mood แบบไหน และไม่อยากได้แบบไหน",
+    "payoff": "Reference board ที่ช่วยให้ AI เขียนและออกแบบไปทางเดียวกัน",
+    "examples": {
+      "bad": "Mood ที่อยากได้: สวย ๆ ดูดี / น้ำเสียง: ดูดีมีระดับ",
+      "badNote": "นามธรรมเกินไป เอาไปสั่งงานหรือทำภาพต่อไม่ได้ ใครตีความก็ได้คนละแบบ",
+      "good": "Mood ที่อยากได้: อบอุ่น โทนไม้+ครีม แสงธรรมชาติ สบายตา / Mood ที่ไม่อยากได้: สีฉูดฉาด ดูเป็นโฆษณาลดราคา / น้ำเสียง: เป็นกันเองเหมือนเพื่อนแนะนำ ไม่ขายของแข็ง ๆ",
+      "goodNote": "บอก mood ที่เอาและไม่เอาเป็นรูปธรรม → ใช้เป็นเกณฑ์ตัดสินงานภาพและคอปปี้ได้จริง"
+    },
+    "starterPrompt": "Reference board ของแบรนด์ฉัน\n\nแบรนด์/โปรเจกต์:\n\nตัวอย่างคอนเทนต์ที่ชอบ 3 แบบ:\n1) ชอบเพราะ:\n2) ชอบเพราะ:\n3) ชอบเพราะ:\n\nMood ที่อยากได้:\n\nMood ที่ไม่อยากได้:\n\nคำ/น้ำเสียงที่ใช้ได้:\n\nคำ/น้ำเสียงที่ควรเลี่ยง:\n\nVisual style ที่อยากได้:\n\nVisual style ที่ไม่อยากได้:\n",
+    "requirements": [
+      "มี reference อย่างน้อย 3 แบบหรือ 3 คำอธิบาย",
+      "บอก mood ที่อยากได้และไม่อยากได้",
+      "บอกคำ/น้ำเสียงหรือ visual style ที่ควรใช้และควรเลี่ยง"
+    ],
+    "checks": [
+      { "filledAfter": ["ตัวอย่างคอนเทนต์ที่ชอบ 3 แบบ"], "minChars": 24 },
+      { "filledAfterAll": ["Mood ที่อยากได้", "Mood ที่ไม่อยากได้"], "minChars": 10 },
+      { "filledAfterAll": ["คำ/น้ำเสียงที่ใช้ได้", "Visual style ที่อยากได้"], "minChars": 12 }
+    ],
+    "minLength": 150
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Workspace",
+    "question": "Reference board ช่วย AI ตรงไหน?",
+    "options": [
+      { "text": "ช่วยให้ AI เข้าใจ mood น้ำเสียง และภาพรวมของแบรนด์ได้สม่ำเสมอขึ้น", "correct": true },
+      { "text": "ทำให้ไม่ต้องตรวจคอนเทนต์ก่อนโพสต์" },
+      { "text": "ทำให้ทุกโพสต์ต้องเหมือน reference ทุกคำ" }
+    ],
+    "correctFeedback": "ถูกต้อง reference board เป็นเข็มทิศ ไม่ใช่กฎให้ลอกทุกอย่าง",
+    "incorrectFeedback": "Reference ไม่ได้แทนการตรวจงาน และไม่ควรใช้เพื่อลอก แต่ใช้เพื่อคุมทิศทาง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · ความปลอดภัย",
+    "question": "ข้อใดควรเป็นกติกาก่อนใช้ AI สร้างคอนเทนต์?",
+    "options": [
+      { "text": "ตรวจ claim สำคัญ และไม่ใช้ภาพ/ข้อความที่เสี่ยงละเมิดลิขสิทธิ์", "correct": true },
+      { "text": "โพสต์ทันทีถ้า AI เขียนดูดี" },
+      { "text": "ให้ AI แต่งรีวิวลูกค้าเองเพื่อให้น่าเชื่อถือ" }
+    ],
+    "correctFeedback": "ถูกต้อง คอนเทนต์พร้อมใช้ต้องตรวจ claim, สิทธิ์, ความเหมาะสม และความจริงก่อนเผยแพร่",
+    "incorrectFeedback": "คอนเทนต์ที่ดูดีอาจยังเสี่ยงผิดข้อมูลหรือละเมิดสิทธิ์ อย่าให้ AI แต่งรีวิวหรือหลักฐานเอง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · เครื่องมือ",
+    "question": "ถ้ายังไม่มี Canva หรือ image tool ใช้เรียนต่อได้ไหม?",
+    "options": [
+      { "text": "ได้ ทำ visual direction เป็นข้อความก่อน แล้วค่อยใช้เครื่องมือจริงภายหลัง", "correct": true },
+      { "text": "ไม่ได้ ต้องมีทุกเครื่องมือก่อน" },
+      { "text": "ได้ แต่ไม่ต้องทำ visual direction" }
+    ],
+    "correctFeedback": "ถูกต้อง ทิศทางภาพเริ่มจาก brief และ reference ได้ แม้ยังไม่สร้างภาพจริง",
+    "incorrectFeedback": "ไม่ต้องรอเครื่องมือครบ แต่ยังควรฝึก visual direction เพราะเป็นส่วนสำคัญของงานคอนเทนต์"
+  },
+  { "type": "done" }
+]

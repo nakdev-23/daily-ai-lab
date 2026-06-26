@@ -1,0 +1,80 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 7 · No-code tools",
+    "title": "ทำให้ recipe ทำงานเองด้วยเครื่องมือ no-code",
+    "body": [
+      { "text": "recipe ที่ก๊อปไปรันเองทุกครั้งยังไม่ใช่ automation เต็มตัว ขั้นต่อไปคือต่อมันเข้ากับเครื่องมือ no-code ที่ทำงานเองได้ เช่น " },
+      { "text": "Zapier, Make หรือ n8n", "bold": true },
+      { "text": " เครื่องมือพวกนี้ฟรี เปิดบนเบราว์เซอร์ ไม่ต้องเขียนโค้ด ทำงานเป็น Trigger → Step → Step โดย AI เป็นแค่หนึ่ง step ในนั้น" }
+    ],
+    "example": "ตัวอย่าง Make/Zapier:\nTrigger: มีอีเมลใหม่เข้า\nStep 1 (AI): สรุปอีเมลเป็น action items ด้วย prompt ของเรา\nStep 2: เพิ่มแถวลง Google Sheet\nStep 3: แจ้งใน Slack ถ้าเป็นงานด่วน",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Automation · บทที่ 7 · Connect & test",
+    "title": "ต่อ AI step เข้า workflow แล้วทดสอบก่อนเปิดจริง",
+    "body": [
+      { "text": "ในเครื่องมือ no-code คุณจะวาง AI step (โมดูล OpenAI/Claude/Gemini) แล้วใส่ prompt จาก recipe โดยอ้างถึง input จาก step ก่อนหน้า สิ่งสำคัญคือ ทดสอบทีละ step ก่อนเปิด auto-run จริง: กด run แบบ manual ดูว่า output ถูกรูปไหม แล้วค่อยเปิดให้ทำงานเอง อย่าเปิดเต็มทันทีเพราะถ้าผิดมันจะรันผิดซ้ำเร็ว" }
+    ],
+    "example": "ขั้นตอนปลอดภัย: 1) สร้าง automation แต่ยังปิดอยู่ 2) กด Run once กับข้อมูลทดสอบ 3) ดู output ทุก step 4) แก้ prompt/การเชื่อมถ้าเพี้ยน 5) ค่อยเปิด auto",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · สร้างในเครื่องมือจริง",
+    "title": "สร้าง automation จริงในเครื่องมือ no-code",
+    "instruction": "เลือก Zapier, Make หรือ n8n (สมัครฟรีได้) แล้วสร้าง automation จากงานที่คุณเลือก โดยมี trigger, AI step ที่ใช้ recipe ของคุณ และ output ถ้ายังไม่รู้จะเลือกอะไร ให้เริ่มจาก Zapier เพราะตั้งค่าง่ายที่สุดสำหรับมือใหม่ ถ้ายังต่อไม่เสร็จในตอนนี้ ให้เขียน build plan ละเอียดว่าจะวาง trigger/step อะไรบ้าง แล้วกลับมาเติม link ทีหลัง",
+    "payoff": "Automation จริงในเครื่องมือ (หรือ build plan) พร้อม link/screenshot สำหรับ project",
+    "starterPrompt": "Real-Tool Automation Build\n\nเครื่องมือที่เลือก:\nเช่น Zapier / Make / n8n\nถ้าเป็นมือใหม่และยังไม่รู้จะเลือกอะไร ให้เริ่มจาก Zapier\n\nWorkflow แนะนำสำหรับเริ่มต้น:\nGoogle Form หรือ Email ใหม่ -> AI สรุป/จัดหมวด -> Google Sheet หรือ Email แจ้งผล\n\nTrigger (อะไรเป็นตัวเริ่ม):\n\nModules หรือ steps ในเครื่องมือ:\n1.\n2.\n3.\n\nAI step ใช้ recipe หรือ prompt อะไร:\n\nการเชื่อมต่อ (input มาจากไหน output ไปไหน):\n\nผลการทดสอบ run once:\n- Input ที่ใส่:\n- Output ที่ได้:\n\nLink หรือ screenshot ของ automation:\n",
+    "requirements": [
+      "เลือกเครื่องมือ ระบุ trigger และ steps ในเครื่องมือ",
+      "บอก AI step ที่ใช้ recipe และการเชื่อม input/output",
+      "มีผลทดสอบ run once และ link หรือ screenshot"
+    ],
+    "checks": [
+      { "filledAfterAll": ["เครื่องมือที่เลือก", "Trigger (อะไรเป็นตัวเริ่ม)", "Modules หรือ steps ในเครื่องมือ"], "minChars": 8 },
+      { "filledAfterAll": ["AI step ใช้ recipe หรือ prompt อะไร", "การเชื่อมต่อ (input มาจากไหน output ไปไหน)"], "minChars": 12 },
+      { "filledAfterAll": ["ผลการทดสอบ run once", "Link หรือ screenshot ของ automation"], "minChars": 8 }
+    ],
+    "minLength": 200
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · No-code",
+    "question": "เครื่องมือ no-code อย่าง Zapier/Make/n8n ช่วยอะไรในงาน automation?",
+    "options": [
+      { "text": "ทำให้ workflow ทำงานเองได้ (trigger → step → step) โดยไม่ต้องเขียนโค้ด", "correct": true },
+      { "text": "ทำให้ AI ฉลาดขึ้น" },
+      { "text": "แทนการตรวจงานทั้งหมด" }
+    ],
+    "correctFeedback": "ถูกต้อง เครื่องมือพวกนี้ทำให้ recipe ทำงานเองตาม trigger โดย AI เป็นหนึ่ง step",
+    "incorrectFeedback": "มันไม่ได้ทำให้ AI ฉลาดขึ้นหรือแทนคนตรวจ แต่ทำให้ขั้นตอนทำงานต่อกันเองได้"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · AI step",
+    "question": "AI ควรอยู่ตรงไหนใน workflow ของเครื่องมือ no-code?",
+    "options": [
+      { "text": "เป็นหนึ่ง step ที่รับ input จาก step ก่อนหน้าและส่ง output ให้ step ถัดไป", "correct": true },
+      { "text": "เป็นทุก step และตัดสินใจทุกอย่างเอง" },
+      { "text": "อยู่นอก workflow ไม่ต้องเชื่อมกับอะไร" }
+    ],
+    "correctFeedback": "ถูกต้อง AI เป็น step ประมวลผลหนึ่งจุด ส่วน trigger และ action อื่นจัดการการไหลของข้อมูล",
+    "incorrectFeedback": "AI ไม่ควรเป็นทุก step หรือลอยอยู่นอก workflow ต้องเชื่อม input/output กับ step อื่น"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Test first",
+    "question": "ก่อนเปิด automation ให้ทำงานเองเต็มที่ ควรทำอะไร?",
+    "options": [
+      { "text": "กด run once กับข้อมูลทดสอบ ดู output ทุก step แล้วค่อยเปิด auto", "correct": true },
+      { "text": "เปิด auto ทันทีเพื่อประหยัดเวลา" },
+      { "text": "ลบ step ตรวจออกเพื่อให้เร็วขึ้น" }
+    ],
+    "correctFeedback": "ถูกต้อง ทดสอบทีละ step ก่อนช่วยจับจุดพังก่อนที่มันจะรันผิดซ้ำ",
+    "incorrectFeedback": "การเปิด auto ทันทีหรือลบ step ตรวจเสี่ยงมาก เพราะ automation ขยายความผิดได้เร็ว"
+  },
+  { "type": "done" }
+]

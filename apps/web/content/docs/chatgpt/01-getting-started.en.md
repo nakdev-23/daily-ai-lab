@@ -110,8 +110,8 @@ Reference: [Using ChatGPT's Free Tier - FAQ](https://help.openai.com/en/articles
 The free plan lets beginners try ChatGPT at no cost.
 
 #### Details
-- Access to the **GPT-4o mini** model mainly (a lighter version of GPT-4o — faster but less capable)
-- Can use GPT-4o but with usage limits
+- Access to the **GPT-5.5 mini** model mainly (a lighter version of GPT-5.5 — faster but less capable)
+- Can use GPT-5.5 but with usage limits
 - Supports Voice Mode with a limit of up to 2 hours per day
 - Limited file uploads (up to 3 files per day)
 - Partial use of GPTs
@@ -129,10 +129,10 @@ Reference: [What is ChatGPT Plus?](https://help.openai.com/en/articles/7232945-w
 ChatGPT Plus is a monthly subscription priced at **$20/month** for general users who want more features.
 
 #### What you get
-- Full access to **GPT-4o** (much higher limits than the free plan)
+- Full access to **GPT-5.5** (much higher limits than the free plan)
 - Access to **o1, o3, o4-mini** (models designed to "think" before answering — good for complex work)
 - Use of **Memory** (ChatGPT remembers your info across conversations, so you don't repeat yourself)
-- **Voice Mode** with GPT-4o, nearly unlimited
+- **Voice Mode** with GPT-5.5, nearly unlimited
 - Upload up to **20 files per Project**
 - Use **DALL·E** (an AI model that creates images from descriptions) to generate images
 - Full **Canvas**
@@ -159,7 +159,7 @@ ChatGPT Pro is the top-tier plan for heavy users, priced at **$200/month**.
 #### What you get
 - Everything in Plus **plus**:
 - Use of **o1 Pro Mode**, which thinks more deeply and accurately than regular o1 (a special mode that takes longer to think for more accurate results)
-- **Unlimited** GPT-4o Voice Mode (no fallback — switching to a backup model when quota runs out — to mini)
+- **Unlimited** GPT-5.5 Voice Mode (no fallback — switching to a backup model when quota runs out — to mini)
 - More Deep Research than Plus
 - The highest limits for every model and feature
 - Suitable for researchers, developers, or anyone who uses AI intensively
@@ -225,7 +225,7 @@ ChatGPT Edu is a special plan for universities and educational institutions, des
 
 | Feature | Free | Plus | Pro | Team | Enterprise |
 |---|---|---|---|---|---|
-| GPT-4o | Limited | ✅ | ✅ | ✅ | ✅ |
+| GPT-5.5 | Limited | ✅ | ✅ | ✅ | ✅ |
 | o1 / o3 | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Memory (cross-conversation) | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Voice Mode | Limited (mini) | Nearly unlimited | Unlimited | ✅ | ✅ |

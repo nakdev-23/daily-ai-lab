@@ -3,6 +3,14 @@ import { locField, type Lang } from "./i18n-core"
 
 export type StepKind = "lesson" | "quiz" | "checkpoint" | "project"
 
+export type RubricCriterion = {
+  key: "clarity" | "context" | "format" | "fact_check" | string
+  label: string
+  label_en?: string
+  guidance: string
+  guidance_en?: string
+}
+
 export type PathStep = {
   id: string
   title: string
@@ -11,6 +19,11 @@ export type PathStep = {
   lessonNum: number
   xp: number
   orderIndex: number
+  brief: string
+  deliverable: string
+  starterTemplate: string
+  rubric: RubricCriterion[]
+  isPortfolio: boolean
 }
 
 export type PathModule = {
@@ -29,6 +42,10 @@ export type CareerPath = {
   tone: string
   tools: string[]
   weeks: number
+  outcomes: string[]
+  deliverables: string[]
+  practicalRatio: number
+  curriculumVersion: number
   isPro: boolean
   isPublished: boolean
   orderIndex: number
@@ -49,6 +66,10 @@ function rowToPath(p: Record<string, unknown>, lang: Lang = "th"): CareerPathRow
     tone:        p.tone as string,
     tools:       (p.tools as string[]) ?? [],
     weeks:       p.weeks as number,
+    outcomes:    (p.outcomes as string[]) ?? [],
+    deliverables: (p.deliverables as string[]) ?? [],
+    practicalRatio: (p.practical_ratio as number) ?? 0,
+    curriculumVersion: (p.curriculum_version as number) ?? 1,
     isPro:       p.is_pro as boolean,
     isPublished: p.is_published as boolean,
     orderIndex:  p.order_index as number,
@@ -91,6 +112,15 @@ async function loadModulesAndSteps(
       lessonNum:  s.lesson_num as number,
       xp:         s.xp as number,
       orderIndex: s.order_index as number,
+      brief:      locField(s as Record<string, unknown>, "brief", lang),
+      deliverable: locField(s as Record<string, unknown>, "deliverable", lang),
+      starterTemplate: locField(s as Record<string, unknown>, "starter_template", lang),
+      rubric:     ((s.rubric as RubricCriterion[] | null) ?? []).map((criterion) => ({
+        ...criterion,
+        label: lang === "en" ? (criterion.label_en ?? criterion.label) : criterion.label,
+        guidance: lang === "en" ? (criterion.guidance_en ?? criterion.guidance) : criterion.guidance,
+      })),
+      isPortfolio: s.is_portfolio as boolean ?? false,
     })
   }
 

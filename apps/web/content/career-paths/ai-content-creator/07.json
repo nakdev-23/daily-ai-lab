@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 7 · Produce visual",
+    "title": "Visual prompt ต้องจบที่ asset จริง ไม่ใช่แค่ prompt สวย",
+    "body": [
+      { "text": "งานคอนเทนต์ที่ใช้ส่งลูกค้าหรือใส่ portfolio ต้องมีชิ้นงานให้เห็นจริง บทนี้จึงให้คุณเอา visual direction ไปสร้างภาพจริงอย่างน้อย 1 ชิ้น ด้วย Canva, Midjourney หรือ AI image tool ที่คุณใช้ได้ แล้วบันทึก prompt, ภาพที่ได้, สิ่งที่ดี, สิ่งที่ต้องแก้ และความเสี่ยงก่อนใช้" }
+    ],
+    "example": "Output ที่ต้องมี: image prompt, ภาพจริงหรือ screenshot/link, ขนาดภาพ, ช่องทางที่จะใช้, checklist เรื่อง brand voice, readability, logo/text error, rights และสิ่งที่ต้องแก้ก่อน publish",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 7 · Platform specs",
+    "title": "ภาพเดียวกันใช้ไม่ได้ดีทุกช่องทาง",
+    "body": [
+      { "text": "ก่อนสร้างภาพให้เลือกช่องทางก่อน เพราะสัดส่วนและพฤติกรรมผู้ชมต่างกัน: Instagram feed มักใช้ 4:5, Story/Reels/TikTok ใช้ 9:16, YouTube thumbnail ใช้ 16:9, carousel ต้องอ่านง่ายทีละสไลด์ ถ้าใช้ Midjourney ให้ใส่ /imagine prompt: และพารามิเตอร์เช่น --ar 4:5 หรือ --ar 16:9 ให้ตรงงาน" }
+    ],
+    "example": "Midjourney example: /imagine prompt: warm morning workspace, matcha latte beside a notebook, calm cozy mood, minimal realistic photography, no text, no logo, no people --ar 4:5 --style raw",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · สร้างภาพจริง",
+    "title": "สร้าง Visual Asset จริง 1 ชิ้นจาก prompt ของคุณ",
+    "instruction": "เลือก pillar หรือโพสต์หนึ่งชิ้น แล้วเขียน visual prompt จากนั้นนำ prompt ไปสร้างภาพจริงใน Canva, Midjourney หรือเครื่องมือภาพที่ใช้ได้ ถ้ายังสร้างภาพไม่ได้ ให้ทำ mockup ใน Canva หรือวาง reference board พร้อม screenshot แต่ต้องมี asset/link/screenshot จริง ไม่ใช่แค่ prompt",
+    "payoff": "Visual Asset Evidence สำหรับใช้ใน campaign portfolio",
+    "examples": {
+      "bad": "Image prompt: รูปกาแฟสวย ๆ",
+      "badNote": "ไม่บอกขนาด สไตล์ สี หรือข้อห้าม — ได้ภาพมั่ว เอาไปลงจริงไม่ได้",
+      "good": "Channel: IG feed 4:5 / Message: กาแฟเย็นสดชื่นช่วงบ่าย / prompt: แก้วกาแฟเย็นบนโต๊ะไม้ แสงธรรมชาติ โทนครีม-น้ำตาล สไตล์มินิมอล เว้นที่ว่างด้านบนใส่ข้อความ / ห้ามมี: คนจริง, โลโก้แบรนด์อื่น",
+      "goodNote": "ระบุ channel/สเปก + message + สไตล์/สี + ข้อห้าม → ได้ภาพที่พร้อมลงจริง"
+    },
+    "starterPrompt": "Visual Asset Mission\n\nคอนเทนต์ที่จะทำภาพ:\n\nChannel และขนาดที่ต้องใช้:\nตัวอย่าง: Instagram feed 4:5 / Story 9:16 / YouTube thumbnail 16:9 / Carousel 4:5\n\nMessage ที่ภาพต้องช่วยสื่อ:\n\nMood:\n\nสีหลัก:\n\nSubject หรือสิ่งที่ต้องเห็นในภาพ:\n\nStyle:\n\nสิ่งที่ห้ามมี:\n\nImage prompt ที่ใช้จริง:\n\nMidjourney version ถ้าใช้ Midjourney:\n/imagine prompt: ... --ar 4:5 --style raw\n\nเครื่องมือที่ใช้สร้างภาพ:\nเช่น Canva / Midjourney / DALL·E / Imagen / อื่น ๆ\n\nผลลัพธ์จริง:\n- Link หรือ screenshot:\n- ชื่อไฟล์:\n- วันที่สร้าง:\n\nสิ่งที่ภาพทำได้ดี:\n\nสิ่งที่ต้องแก้ก่อน publish:\n\nChecklist ก่อนใช้ภาพ:\n- ตรง brand voice ไหม:\n- อ่านง่ายบนช่องทางที่จะลงไหม:\n- มี text/logo ผิดหรือมั่วไหม:\n- มีความเสี่ยงเรื่องสิทธิ์ คนจริง หรือ trademark ไหม:\n",
+    "requirements": [
+      "มี channel/spec และ image prompt ที่ใช้จริง",
+      "มีผลลัพธ์จริงเป็น link, screenshot หรือชื่อไฟล์",
+      "มี checklist ตรวจคุณภาพและความเสี่ยงก่อน publish"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Channel และขนาดที่ต้องใช้", "Image prompt ที่ใช้จริง", "เครื่องมือที่ใช้สร้างภาพ"], "minChars": 12 },
+      { "filledAfterAll": ["ผลลัพธ์จริง", "Link หรือ screenshot", "ชื่อไฟล์"], "minChars": 8 },
+      { "filledAfterAll": ["สิ่งที่ภาพทำได้ดี", "สิ่งที่ต้องแก้ก่อน publish", "Checklist ก่อนใช้ภาพ"], "minChars": 18 }
+    ],
+    "minLength": 360
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Asset",
+    "question": "ทำไม visual prompt อย่างเดียวจึงยังไม่พอสำหรับ portfolio?",
+    "options": [
+      { "text": "เพราะต้องเห็น asset จริงและตรวจได้ว่าภาพใช้กับช่องทางจริงได้ไหม", "correct": true },
+      { "text": "เพราะ prompt ไม่มีประโยชน์เลย" },
+      { "text": "เพราะภาพไม่ต้องมี brand voice" }
+    ],
+    "correctFeedback": "ถูกต้อง portfolio ของ creator ต้องมีชิ้นงานให้ดู ไม่ใช่แค่แผนหรือ prompt",
+    "incorrectFeedback": "Prompt ยังสำคัญ แต่ต้องตามด้วย asset จริงและการตรวจคุณภาพ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Spec",
+    "question": "ถ้าจะทำ Instagram Story หรือ TikTok ควรเลือกสัดส่วนใดเป็นหลัก?",
+    "options": [
+      { "text": "9:16", "correct": true },
+      { "text": "16:9" },
+      { "text": "1:1 เสมอเท่านั้น" }
+    ],
+    "correctFeedback": "ใช่ Story, Reels และ TikTok ใช้แนวตั้ง 9:16 เป็นหลัก",
+    "incorrectFeedback": "16:9 เหมาะกับวิดีโอแนวนอนหรือ thumbnail บางประเภท ส่วน Story/TikTok ต้องคิดแนวตั้ง"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Risk",
+    "question": "ก่อนใช้ภาพ AI ในงานแบรนด์ ควรตรวจอะไร?",
+    "options": [
+      { "text": "ความเหมาะสมกับแบรนด์, text/logo error, สิทธิ์, คนจริง, trademark และความชัดบนช่องทางนั้น", "correct": true },
+      { "text": "ดูแค่ว่าสวยไหม" },
+      { "text": "ถ้า AI สร้างให้ แปลว่าใช้ได้ทันที" }
+    ],
+    "correctFeedback": "ถูกต้อง ภาพสวยอย่างเดียวไม่พอ ต้องปลอดภัยและใช้กับช่องทางจริงได้",
+    "incorrectFeedback": "AI image อาจมี text/logo ผิดหรือเสี่ยงสิทธิ์ ต้องตรวจก่อน publish"
+  },
+  { "type": "done" }
+]

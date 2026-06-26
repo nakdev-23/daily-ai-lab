@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advance · บทที่ 12 · ตอนที่ 1",
+    "title": "ChatGPT Team & Enterprise",
+    "body": [
+      {
+        "text": "แผนสำหรับองค์กรให้ "
+      },
+      {
+        "text": "workspace ร่วมของทีม แชร์ Custom GPT ภายใน และข้อมูลไม่ถูกใช้เทรนโมเดล",
+        "bold": true
+      },
+      {
+        "text": " — Enterprise เพิ่มความจุ context, SSO, การควบคุมสิทธิ์แอดมิน และมาตรฐานความปลอดภัยระดับองค์กร"
+      }
+    ],
+    "example": "\"ทีมการตลาดแชร์ GPT 'Brand Voice Checker' ให้ทุกคนใช้ตรวจงานเขียนตามแบรนด์เดียวกัน\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "ChatGPT Advance · บทที่ 12 · ตอนที่ 2",
+    "title": "เลือกแผนให้เหมาะกับงาน",
+    "body": [
+      {
+        "text": "หลักคิด: "
+      },
+      {
+        "text": "ใช้คนเดียว → Plus · ทีมเล็กต้องการ workspace ร่วม → Team · องค์กรใหญ่ต้องการ SSO และ compliance → Enterprise",
+        "bold": true
+      },
+      {
+        "text": " — จุดร่วมของ Team/Enterprise คือข้อมูลธุรกิจไม่ถูกนำไปเทรน"
+      }
+    ],
+    "example": "\"ทีม 8 คนทำงานเอกสารร่วมกันทุกวัน → Team แผนเหมาะสุด ได้ทั้ง GPT ร่วมและ admin console\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "จุดเด่นของแผน Team/Enterprise ด้านข้อมูลคืออะไร?",
+    "options": [
+      {
+        "text": "ข้อมูลธุรกิจไม่ถูกนำไปเทรนโมเดล",
+        "correct": true
+      },
+      {
+        "text": "ข้อมูลถูกแชร์สาธารณะอัตโนมัติ"
+      },
+      {
+        "text": "ไม่มีความแตกต่างจากแผนฟรี"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ฟีเจอร์ไหนเป็นของ Enterprise โดยเฉพาะ?",
+    "options": [
+      {
+        "text": "การสนทนากับ AI"
+      },
+      {
+        "text": "SSO และการควบคุมสิทธิ์ระดับองค์กร",
+        "correct": true
+      },
+      {
+        "text": "การสร้างภาพ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ทีม 5 คนอยากแชร์ Custom GPT ภายในทีม ควรใช้แผนไหน?",
+    "options": [
+      {
+        "text": "Free"
+      },
+      {
+        "text": "Team",
+        "correct": true
+      },
+      {
+        "text": "ไม่มีแผนไหนทำได้"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "องค์กรอยากใช้ ChatGPT ร่วมกันอย่างปลอดภัยและจัดการได้ ควรเลือกแผนใด?",
+    "options": [
+      {
+        "text": "Team หรือ Enterprise",
+        "correct": true
+      },
+      {
+        "text": "Free"
+      },
+      {
+        "text": "ไม่ต้องมีแผน"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "แผน Team/Enterprise เด่นเรื่องใด?",
+    "options": [
+      {
+        "text": "การจัดการผู้ใช้และความเป็นส่วนตัวของข้อมูลองค์กร",
+        "correct": true
+      },
+      {
+        "text": "เล่นเกมได้"
+      },
+      {
+        "text": "ไม่มีข้อดี"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

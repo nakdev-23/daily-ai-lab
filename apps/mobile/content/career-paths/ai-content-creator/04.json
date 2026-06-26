@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 4 · Pillar",
+    "title": "Content pillar คือหัวข้อหลักที่ทำให้เพจไม่สะเปะสะปะ",
+    "body": [
+      { "text": "ถ้าไม่มี pillar คุณจะคิดโพสต์แบบวันต่อวันและเสียงแบรนด์จะไม่นิ่ง Content pillar คือหมวดหัวข้อหลักที่ผูกกับเป้าหมายแบรนด์และความสนใจของผู้ชม เช่น สอน, แก้ความเข้าใจผิด, เบื้องหลัง, case study, โปรโมชัน หรือ community" }
+    ],
+    "example": "แบรนด์คอร์ส AI อาจมี pillar: 1) AI tips ใช้ได้ทันที 2) ก่อน/หลัง workflow 3) ความเข้าใจผิดเรื่อง AI 4) ตัวอย่างงานจริงจากผู้เรียน",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI Content Creator · บทที่ 4 · Hook & CTA",
+    "title": "Hook ดึงให้หยุดอ่าน ส่วน CTA บอกให้ทำอะไรต่อ",
+    "body": [
+      { "text": "Hook คือประโยคเปิดที่ทำให้คนรู้สึกว่า “นี่เกี่ยวกับฉัน” ส่วน CTA คือประโยคท้ายที่บอก action ต่อไป เช่น เซฟโพสต์ ทักแชท สมัครทดลอง หรืออ่านต่อในคอมเมนต์ AI ช่วยแตก hook ได้ดี แต่คุณต้องคุมไม่ให้เว่อร์หรือคลิกเบตเกินจริง" }
+    ],
+    "example": "Hook อ่อน: วันนี้มาคุยเรื่อง AI\nHook ดีขึ้น: ถ้าคุณใช้เวลา 30 นาทีเขียนอีเมลเดิม ๆ ทุกวัน ลองใช้ prompt นี้ก่อนเริ่มงานพรุ่งนี้",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Pillar map",
+    "title": "สร้าง pillar, hook และ CTA ชุดแรก",
+    "instruction": "ใช้ persona และ brand voice ของคุณ แล้วออกแบบ 4 pillars พร้อมตัวอย่าง hook และ CTA อย่างละ 1 ชุด",
+    "payoff": "Content Pillar Map ที่ใช้แตกแผน 30 วันต่อได้",
+    "starterPrompt": "Content Pillar Map\n\nแบรนด์/โปรเจกต์:\nAudience:\nเป้าหมายคอนเทนต์:\n\nPillar 1:\nทำไม pillar นี้สำคัญกับ audience:\nตัวอย่าง hook:\nCTA:\n\nPillar 2:\nทำไม pillar นี้สำคัญกับ audience:\nตัวอย่าง hook:\nCTA:\n\nPillar 3:\nทำไม pillar นี้สำคัญกับ audience:\nตัวอย่าง hook:\nCTA:\n\nPillar 4:\nทำไม pillar นี้สำคัญกับ audience:\nตัวอย่าง hook:\nCTA:\n",
+    "requirements": [
+      "มี 4 content pillars",
+      "แต่ละ pillar บอกเหตุผลว่าทำไม audience ควรสนใจ",
+      "แต่ละ pillar มี hook และ CTA"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Pillar 1", "Pillar 2", "Pillar 3", "Pillar 4"], "minChars": 12 },
+      { "filledAfter": ["ทำไม pillar นี้สำคัญกับ audience"], "minChars": 12 },
+      { "filledAfterAll": ["ตัวอย่าง hook", "CTA"], "minChars": 12 }
+    ],
+    "minLength": 200
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Pillar",
+    "question": "Content pillar ช่วยอะไร?",
+    "options": [
+      { "text": "ช่วยให้คอนเทนต์มีทิศทางและไม่คิดหัวข้อแบบสะเปะสะปะ", "correct": true },
+      { "text": "ทำให้ทุกโพสต์ต้องขายของอย่างเดียว" },
+      { "text": "ทำให้ไม่ต้องรู้จัก audience" }
+    ],
+    "correctFeedback": "ถูกต้อง pillar ทำให้ไอเดียเป็นระบบและผูกกับเป้าหมายของแบรนด์",
+    "incorrectFeedback": "Pillar ไม่ได้แปลว่าขายของทุกโพสต์ และยังต้องอิง audience เสมอ"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Hook",
+    "question": "Hook ที่ดีควรทำอะไร?",
+    "options": [
+      { "text": "ทำให้คนรู้สึกว่าเรื่องนี้เกี่ยวกับเขาและควรอ่านต่อ", "correct": true },
+      { "text": "ยาวที่สุดเท่าที่เป็นไปได้" },
+      { "text": "ใช้คำเกินจริงทุกครั้ง" }
+    ],
+    "correctFeedback": "ถูกต้อง hook ไม่ต้องเว่อร์ แต่ต้องจับ pain point หรือความสนใจของคนอ่านให้ได้",
+    "incorrectFeedback": "Hook ที่ดีไม่จำเป็นต้องยาวหรือเกินจริง ควรเฉพาะเจาะจงและตรงคนอ่าน"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · CTA",
+    "question": "CTA ที่ชัดที่สุดคือข้อใด?",
+    "options": [
+      { "text": "ฝากไว้ด้วยนะ" },
+      { "text": "เซฟโพสต์นี้ไว้ แล้วลองใช้ prompt ข้อ 2 กับงานอีเมลพรุ่งนี้", "correct": true },
+      { "text": "ดีไหมครับ" }
+    ],
+    "correctFeedback": "ถูกต้อง CTA นี้บอก action ชัดและผูกกับประโยชน์ที่คนอ่านจะได้",
+    "incorrectFeedback": "CTA กว้าง ๆ ทำให้คนไม่รู้ว่าต้องทำอะไรต่อ ควรมี action เฉพาะ"
+  },
+  { "type": "done" }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 3 · ตอนที่ 1",
+    "title": "Environment Config",
+    "body": [
+      {
+        "text": "Environment ของ Codex ปรับแต่งได้: "
+      },
+      {
+        "text": "setup script, dependencies, env variables และ internet access",
+        "bold": true
+      },
+      {
+        "text": " — ตั้งครั้งเดียวให้ตรงกับโปรเจกต์ แล้วทุก task จะรันเทสต์และ build ได้เหมือนเครื่องจริง"
+      }
+    ],
+    "example": "\"Setup script: npm install && npx prisma generate — ทุก task เริ่มต้นพร้อม dependencies ครบ\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 3 · ตอนที่ 2",
+    "title": "AGENTS.md — คู่มือของ AI",
+    "body": [
+      {
+        "text": "วางไฟล์ "
+      },
+      {
+        "text": "AGENTS.md ไว้ใน repo เพื่อบอกกติกาโปรเจกต์",
+        "bold": true
+      },
+      {
+        "text": " — รันเทสต์ยังไง โครงสร้างโค้ดเป็นแบบไหน convention อะไรห้ามละเมิด Codex จะอ่านและทำตามอัตโนมัติ"
+      }
+    ],
+    "example": "\"AGENTS.md: 'รันเทสต์ด้วย npm test / ใช้ TypeScript strict / ห้าม any / commit message เป็นภาษาอังกฤษ'\"",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Environment ของ Codex ปรับแต่งอะไรได้?",
+    "options": [
+      {
+        "text": "setup script, dependencies และ env variables",
+        "correct": true
+      },
+      {
+        "text": "สีของหน้าจอ"
+      },
+      {
+        "text": "ปรับไม่ได้เลย"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "AGENTS.md มีไว้ทำอะไร?",
+    "options": [
+      {
+        "text": "บอกกติกาและ convention ของโปรเจกต์ให้ AI ทำตาม",
+        "correct": true
+      },
+      {
+        "text": "เก็บรหัสผ่าน"
+      },
+      {
+        "text": "รายชื่อพนักงาน"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ทำไมต้องตั้ง setup script ให้ environment?",
+    "options": [
+      {
+        "text": "ให้ทุก task เริ่มพร้อม dependencies เหมือนเครื่องจริง",
+        "correct": true
+      },
+      {
+        "text": "เพื่อความสวยงาม"
+      },
+      {
+        "text": "บังคับโดย GitHub"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "AGENTS.md มีไว้ทำอะไร?",
+    "options": [
+      {
+        "text": "เก็บรหัสผ่าน"
+      },
+      {
+        "text": "ไฟล์ขยะ"
+      },
+      {
+        "text": "เป็นคู่มือและกติกาให้ AI ทำงานในโปรเจกต์ถูกต้อง",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "Environment Config ที่ดีช่วยอะไร?",
+    "options": [
+      {
+        "text": "ไม่มีผล"
+      },
+      {
+        "text": "AI ทำงานเข้ากับเครื่องมือและโครงสร้างโปรเจกต์",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ช้าลง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

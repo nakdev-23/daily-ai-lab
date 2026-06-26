@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 2 · ตอนที่ 1",
+    "title": "ติดตั้งและตั้งค่า",
+    "body": [
+      {
+        "text": "ติดตั้งง่ายมาก: "
+      },
+      {
+        "text": "npm install -g @anthropic-ai/claude-code แล้วพิมพ์ claude ใน terminal",
+        "bold": true
+      },
+      {
+        "text": " — ครั้งแรกจะให้ล็อกอินด้วยบัญชี Claude (Pro/Max) หรือ API key แล้วพร้อมใช้ทันที"
+      }
+    ],
+    "example": "\"$ npm install -g @anthropic-ai/claude-code\\n$ cd my-project\\n$ claude\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 2 · ตอนที่ 2",
+    "title": "เริ่มที่โฟลเดอร์โปรเจกต์เสมอ",
+    "body": [
+      {
+        "text": "Claude Code ทำงานกับ "
+      },
+      {
+        "text": "โฟลเดอร์ที่เราเปิดมันขึ้นมา (working directory)",
+        "bold": true
+      },
+      {
+        "text": " — มันมองเห็นไฟล์ในโปรเจกต์นั้น อ่านโครงสร้าง และแก้ไขได้ ดังนั้น cd เข้าโปรเจกต์ก่อนเรียก claude เสมอ"
+      }
+    ],
+    "example": "\"เปิดที่ ~/my-shop แล้วถาม 'โปรเจกต์นี้ใช้ framework อะไร' — Claude อ่าน package.json แล้วตอบได้เลย\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "ติดตั้ง Claude Code อย่างไร?",
+    "options": [
+      {
+        "text": "npm install -g @anthropic-ai/claude-code",
+        "correct": true
+      },
+      {
+        "text": "ดาวน์โหลด .exe จากเว็บสุ่ม"
+      },
+      {
+        "text": "ติดตั้งไม่ได้ ใช้ผ่านเว็บเท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ก่อนเรียกใช้ claude ควรทำอะไร?",
+    "options": [
+      {
+        "text": "cd เข้าโฟลเดอร์โปรเจกต์ก่อน",
+        "correct": true
+      },
+      {
+        "text": "ปิดอินเทอร์เน็ต"
+      },
+      {
+        "text": "ลบ node_modules"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "Claude Code ล็อกอินด้วยอะไรได้?",
+    "options": [
+      {
+        "text": "บัญชี Claude หรือ API key",
+        "correct": true
+      },
+      {
+        "text": "บัญชี social media"
+      },
+      {
+        "text": "ไม่ต้องล็อกอิน"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "เริ่มใช้ Claude Code ควรเริ่มที่ใด?",
+    "options": [
+      {
+        "text": "เปิดที่ไหนก็ได้ไม่สำคัญ"
+      },
+      {
+        "text": "เปิดที่โฟลเดอร์ระบบ"
+      },
+      {
+        "text": "เปิดที่โฟลเดอร์โปรเจกต์ที่ต้องการทำงานเสมอ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ทำไมต้องเริ่มที่โฟลเดอร์โปรเจกต์?",
+    "options": [
+      {
+        "text": "ไม่มีเหตุผล"
+      },
+      {
+        "text": "Claude Code จะเข้าใจบริบทไฟล์/โครงสร้างของโปรเจกต์",
+        "correct": true
+      },
+      {
+        "text": "เพื่อความสวยงาม"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

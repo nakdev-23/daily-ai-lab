@@ -1050,7 +1050,7 @@ html.js .dlab-home .tools-lab.in .tools-bottom-cta { animation-delay: .46s; }
 /* ===================== STATS BAND ===================== */
 .dlab-home .band { background: var(--g-violet); border-radius: var(--radius-2xl); padding: 54px 44px; position: relative; overflow: hidden; box-shadow: 0 34px 70px -22px rgba(72,31,184,.6); }
 .dlab-home .band::before { content: ""; position: absolute; inset: 0; background: radial-gradient(680px 320px at 12% -10%, rgba(255,255,255,.22), transparent 60%), radial-gradient(560px 300px at 92% 110%, rgba(255,212,58,.26), transparent 60%); }
-.dlab-home .band-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.dlab-home .band-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 22px; }
 .dlab-home .band-grid .s { text-align: center; }
 .dlab-home .band-grid .s b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 48px; color: #fff; line-height: 1; }
 .dlab-home .band-grid .s span { font-size: 14px; font-weight: 700; color: var(--hero-100); }

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 18 · ตอนที่ 1",
+    "title": "Best Practices",
+    "body": [
+      {
+        "text": "สูตรสำเร็จที่ทีมเก่งใช้: "
+      },
+      {
+        "text": "CLAUDE.md ครบ · งานใหญ่เริ่มที่ Plan Mode · commit บ่อย · เทสต์เป็นตาข่าย · รีวิวทุก diff",
+        "bold": true
+      },
+      {
+        "text": " — AI ทำให้เร็วขึ้นหลายเท่า แต่วินัยพื้นฐานของวิศวกรยังสำคัญเท่าเดิม"
+      }
+    ],
+    "example": "\"เริ่มเช้า: claude → /review งานเมื่อวาน → Plan Mode วางงานวันนี้ → ปล่อยงานย่อยระหว่างประชุม\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 18 · ตอนที่ 2",
+    "title": "จบคอร์ส Claude Code",
+    "body": [
+      {
+        "text": "ครบเครื่องแล้ว: "
+      },
+      {
+        "text": "เครื่องมือหลัก, agentic workflow, MCP, hooks, permissions, multi-agent และ slash commands",
+        "bold": true
+      },
+      {
+        "text": " — ก้าวต่อไปคือลงมือกับโปรเจกต์จริง เริ่มเล็ก สร้างความเชื่อใจ แล้วขยายขอบเขตทีละขั้น"
+      }
+    ],
+    "example": "\"ภารกิจปิดคอร์ส: ตั้ง CLAUDE.md + permissions ใน repo จริง แล้วให้ Claude Code แก้ issue จริง 1 ตัวจนเปิด PR\"",
+    "mascot": "mascot-celebrate"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "ข้อไหนคือ best practice ของ Claude Code?",
+    "options": [
+      {
+        "text": "งานใหญ่เริ่มที่ Plan Mode และรีวิวทุก diff",
+        "correct": true
+      },
+      {
+        "text": "ปล่อยทุกงานโดยไม่ดูเลย"
+      },
+      {
+        "text": "ไม่ commit จนกว่าจะจบสัปดาห์"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ทำไมต้อง commit บ่อยเมื่อทำงานกับ AI?",
+    "options": [
+      {
+        "text": "ย้อนกลับได้ทันทีถ้าผลลัพธ์ไม่ดี",
+        "correct": true
+      },
+      {
+        "text": "ให้กราฟ GitHub เขียว"
+      },
+      {
+        "text": "ไม่มีเหตุผล"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "วิธีเริ่มใช้ Claude Code กับทีมที่ดีที่สุดคืออะไร?",
+    "options": [
+      {
+        "text": "เริ่มงานเล็ก สร้างความเชื่อใจ แล้วขยายทีละขั้น",
+        "correct": true
+      },
+      {
+        "text": "ให้ AI ทำทุกอย่างตั้งแต่วันแรก"
+      },
+      {
+        "text": "ห้ามทีมใช้จนกว่าจะสมบูรณ์แบบ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "Best Practice สำคัญของ Claude Code คือ?",
+    "options": [
+      {
+        "text": "รับทุกการแก้โดยไม่ตรวจ"
+      },
+      {
+        "text": "ข้ามการทดสอบ"
+      },
+      {
+        "text": "ให้บริบทชัด รีวิว diff และทดสอบก่อนใช้จริง",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "บทสรุปการใช้ Claude Code อย่างปลอดภัยคือ?",
+    "options": [
+      {
+        "text": "ไม่ตั้งค่าอะไรเลย"
+      },
+      {
+        "text": "วางแผน คุมสิทธิ์ และตรวจสอบผลงานเสมอ",
+        "correct": true
+      },
+      {
+        "text": "ปล่อยให้ทำทุกอย่างโดยไม่ดู"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

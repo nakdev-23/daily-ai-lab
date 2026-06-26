@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 17 · ตอนที่ 1",
+    "title": "Custom Slash Commands",
+    "body": [
+      {
+        "text": "สร้างคำสั่งลัดของตัวเองด้วย "
+      },
+      {
+        "text": "ไฟล์ markdown ใน .claude/commands/",
+        "bold": true
+      },
+      {
+        "text": " — เช่น ไฟล์ review.md กลายเป็นคำสั่ง /review ใช้ $ARGUMENTS รับค่าจากผู้ใช้ได้ ทีมแชร์ผ่าน git ได้เลย"
+      }
+    ],
+    "example": "\".claude/commands/review.md: 'รีวิวโค้ดใน $ARGUMENTS หา bug, security และ performance' → ใช้: /review src/auth\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude Code · บทที่ 17 · ตอนที่ 2",
+    "title": "คำสั่งที่ทีมควรมี",
+    "body": [
+      {
+        "text": "ตัวที่ใช้บ่อยที่สุดในทีมจริง: "
+      },
+      {
+        "text": "/review (รีวิวโค้ด) · /test (เขียนเทสต์ตามมาตรฐานทีม) · /pr (เตรียม commit + PR description)",
+        "bold": true
+      },
+      {
+        "text": " — เขียน workflow ที่ทำซ้ำบ่อยเป็นคำสั่งครั้งเดียว ทุกคนในทีมได้ใช้มาตรฐานเดียวกัน"
+      }
+    ],
+    "example": "\"/pr → ตรวจ git diff, เขียน commit message ตาม convention ทีม, สร้าง PR description ครบ template\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "สร้าง custom slash command อย่างไร?",
+    "options": [
+      {
+        "text": "สร้างไฟล์ .md ใน .claude/commands/",
+        "correct": true
+      },
+      {
+        "text": "ต้องเขียน extension ใหม่"
+      },
+      {
+        "text": "ทำไม่ได้"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "$ARGUMENTS ในไฟล์คำสั่งคืออะไร?",
+    "options": [
+      {
+        "text": "ค่าที่ผู้ใช้พิมพ์ต่อท้ายคำสั่ง",
+        "correct": true
+      },
+      {
+        "text": "ชื่อไฟล์"
+      },
+      {
+        "text": "รหัสผ่าน"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ทีมแชร์ slash commands กันอย่างไร?",
+    "options": [
+      {
+        "text": "commit โฟลเดอร์ .claude/commands ลง git",
+        "correct": true
+      },
+      {
+        "text": "ส่งไฟล์ทางอีเมลทุกครั้ง"
+      },
+      {
+        "text": "แชร์ไม่ได้"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "Custom Slash Commands มีประโยชน์อย่างไร?",
+    "options": [
+      {
+        "text": "เปลี่ยนภาษาเว็บ"
+      },
+      {
+        "text": "ลบโปรเจกต์"
+      },
+      {
+        "text": "สร้างคำสั่งลัดสำหรับงานที่ทำซ้ำบ่อย",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "คำสั่งที่ทีมควรมีคือแบบใด?",
+    "options": [
+      {
+        "text": "สุ่มคำสั่ง"
+      },
+      {
+        "text": "งานประจำที่ทำซ้ำ เช่น รีวิว/ทดสอบ/ปล่อยงาน",
+        "correct": true
+      },
+      {
+        "text": "คำสั่งที่ไม่มีใครใช้"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 5 · ตอนที่ 1",
+    "title": "CI/CD Integration",
+    "body": [
+      {
+        "text": "Codex เขียนและแก้ "
+      },
+      {
+        "text": "pipeline ได้: GitHub Actions, เทสต์อัตโนมัติ, build และ deploy",
+        "bold": true
+      },
+      {
+        "text": " — และเมื่อ CI แดง ส่ง log ให้มันวิเคราะห์หาสาเหตุแล้วแก้ให้เขียวได้"
+      }
+    ],
+    "example": "\"สร้าง GitHub Actions: รัน lint + test ทุก PR, build เมื่อ merge เข้า main, deploy ไป staging อัตโนมัติ\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Codex Advance · บทที่ 5 · ตอนที่ 2",
+    "title": "ซ่อม CI ที่พังด้วย AI",
+    "body": [
+      {
+        "text": "CI แดงคือ task ชั้นดี: "
+      },
+      {
+        "text": "แปะ error log จาก pipeline แล้วให้หาต้นตอ",
+        "bold": true
+      },
+      {
+        "text": " — บ่อยครั้งปัญหาคือ dependency เวอร์ชันไม่ตรง, เทสต์ flaky หรือ env ต่างกัน ซึ่ง AI วินิจฉัยจาก log ได้เร็วมาก"
+      }
+    ],
+    "example": "\"CI fail ที่ step 'npm test' บน Node 20 แต่ local ผ่าน นี่คือ log: ... หาสาเหตุและแก้\"",
+    "mascot": "mascot-think"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Codex ช่วยอะไรกับ CI/CD ได้?",
+    "options": [
+      {
+        "text": "เขียน pipeline และวิเคราะห์ CI ที่พังจาก log",
+        "correct": true
+      },
+      {
+        "text": "แค่ดู ทำอะไรไม่ได้"
+      },
+      {
+        "text": "ลบ pipeline ทิ้งอย่างเดียว"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "CI แดงแต่ local ผ่าน มักเกิดจากอะไร?",
+    "options": [
+      {
+        "text": "environment ต่างกัน เช่น เวอร์ชัน dependency",
+        "correct": true
+      },
+      {
+        "text": "GitHub เกลียดเรา"
+      },
+      {
+        "text": "โค้ดถูกแฮ็ก"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "ข้อมูลสำคัญที่สุดเมื่อให้ AI ซ่อม CI คืออะไร?",
+    "options": [
+      {
+        "text": "error log จาก pipeline",
+        "correct": true
+      },
+      {
+        "text": "ชื่อโปรเจกต์"
+      },
+      {
+        "text": "จำนวน star ของ repo"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "ใช้ AI ช่วยซ่อม CI ที่พังควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "ปิด CI ทิ้ง"
+      },
+      {
+        "text": "merge ทั้งที่ยังแดง"
+      },
+      {
+        "text": "ให้ช่วยอ่าน log หาสาเหตุ แล้วตรวจสอบการแก้ก่อน merge",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "CI/CD Integration ช่วยอะไร?",
+    "options": [
+      {
+        "text": "ไม่มีผล"
+      },
+      {
+        "text": "ทดสอบและส่งงานอัตโนมัติอย่างสม่ำเสมอ",
+        "correct": true
+      },
+      {
+        "text": "ทำให้ deploy ช้าเสมอ"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

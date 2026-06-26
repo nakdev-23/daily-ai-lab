@@ -1,0 +1,78 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 4 · Campaign Brief",
+    "title": "Campaign Brief คือสะพานจาก insight ไปสู่ execution",
+    "body": [
+      { "text": "Campaign brief ที่ดีทำให้ทุกคนรู้ว่าเราพูดกับใคร เสนอ promise อะไร เชื่อด้วยหลักฐานไหน ใช้ช่องทางอะไร และวัดผลด้วย metric อะไร ถ้า brief ไม่ชัด copy จะกระจัดกระจายและแก้ยาก" }
+    ],
+    "example": "Objective: เพิ่ม trial 100 คนใน 30 วัน\nAudience: เจ้าของร้านที่ยังใช้ Excel\nPromise: เริ่มจัดการร้านง่ายขึ้นโดยไม่รื้อระบบเดิม\nProof: setup ใน 1 วัน, template นำเข้าเมนู, support onboarding\nMetric: trial signup, cost per lead, activation rate",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Marketing · บทที่ 4 · Positioning",
+    "title": "Positioning ต้องเลือกว่าจะชนะด้วยอะไร",
+    "body": [
+      { "text": "อย่าพยายามบอกว่าสินค้าดีทุกอย่าง ให้เลือกแกนเดียวที่ชัด เช่น ง่ายที่สุด เร็วที่สุด ปลอดภัยที่สุด ประหยัดที่สุด หรือเหมาะกับมือใหม่ที่สุด แล้วให้ copy, offer และ proof เดินไปทางเดียวกัน" }
+    ],
+    "example": "Positioning ที่ชัด: “ระบบจองโต๊ะสำหรับร้านเล็กที่เริ่มใช้ได้ในวันเดียว” ไม่ใช่ “ระบบดีครบทุกอย่างสำหรับทุกธุรกิจ”",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Campaign brief",
+    "title": "เขียน Campaign Brief จาก insight ของคุณ",
+    "instruction": "นำ Customer Insight Map จากบท 3 มาเปลี่ยนเป็น campaign brief ที่ทีม copy/design/ads ใช้ต่อได้จริง ให้เขียนสั้น ชัด และวัดผลได้",
+    "payoff": "Campaign Brief ที่จะใช้เขียน message matrix และ copy",
+    "starterPrompt": "Campaign Brief\n\nCampaign name:\n\nObjective / เป้าหมายที่วัดได้:\n\nAudience:\n\nMain insight:\n\nPositioning / เราจะชนะด้วยอะไร:\n\nKey promise:\n\nProof / เหตุผลที่ควรเชื่อ:\n\nOffer / สิ่งที่ชวนให้ลองหรือซื้อ:\n\nChannels:\n\nSuccess metrics:\n\nRisks / Claims ที่ต้องตรวจ:\n\nPrompt ให้ AI ช่วยตรวจ brief:\n",
+    "requirements": [
+      "มี objective, audience และ insight ชัด",
+      "มี positioning, promise, proof และ offer ที่ไปทางเดียวกัน",
+      "มี success metrics และ risk/claim ที่ต้องตรวจ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["Objective / เป้าหมายที่วัดได้", "Audience", "Main insight"], "minChars": 12 },
+      { "filledAfterAll": ["Positioning / เราจะชนะด้วยอะไร", "Key promise", "Proof / เหตุผลที่ควรเชื่อ", "Offer / สิ่งที่ชวนให้ลองหรือซื้อ"], "minChars": 12 },
+      { "filledAfterAll": ["Success metrics", "Risks / Claims ที่ต้องตรวจ"], "minChars": 10 }
+    ],
+    "minLength": 240
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Brief",
+    "question": "Campaign brief ที่ดีควรมีอะไร?",
+    "options": [
+      { "text": "Objective, audience, insight, promise, proof, channel และ metric", "correct": true },
+      { "text": "คำสวย ๆ จำนวนมาก" },
+      { "text": "แค่ตัวอย่างโฆษณาที่ชอบ" }
+    ],
+    "correctFeedback": "ถูกต้อง brief ต้องทำให้ทีมผลิตงานและวัดผลได้ ไม่ใช่แค่ดูสร้างสรรค์",
+    "incorrectFeedback": "ตัวอย่างและคำสวยช่วยได้ แต่ brief ต้องมีทิศทางและ metric ที่ชัด"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Positioning",
+    "question": "Positioning แบบไหนคมที่สุด?",
+    "options": [
+      { "text": "ดี ครบ ถูก เร็ว เหมาะกับทุกคน" },
+      { "text": "เครื่องมือทำบัญชีสำหรับฟรีแลนซ์ที่อยากออกใบแจ้งหนี้ได้ใน 3 นาที", "correct": true },
+      { "text": "แพลตฟอร์มที่ทันสมัยมาก" }
+    ],
+    "correctFeedback": "ใช่ เพราะเจาะกลุ่ม ใช้สถานการณ์จริง และมี promise ที่เห็นภาพ",
+    "incorrectFeedback": "Positioning ที่กว้างเกินไปไม่ช่วยตัดสินใจเรื่อง message และ creative"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Metric",
+    "question": "Metric ที่เหมาะกับแคมเปญเพิ่ม trial คือข้อใด?",
+    "options": [
+      { "text": "จำนวน trial signup และ activation หลังสมัคร", "correct": true },
+      { "text": "จำนวนคำในโพสต์" },
+      { "text": "สีของภาพโฆษณา" }
+    ],
+    "correctFeedback": "ถูกต้อง เพราะวัดการกระทำที่ใกล้เป้าหมายธุรกิจ ไม่ใช่แค่ output ของทีม",
+    "incorrectFeedback": "จำนวนคำหรือสีเป็นรายละเอียด execution ไม่ใช่ metric หลักของแคมเปญ"
+  },
+  { "type": "done" }
+]

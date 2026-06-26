@@ -52,7 +52,9 @@
       {
         "text": "โมเดลรุ่นเล็ก"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ Vertex AI คือแพลตฟอร์ม AI ระดับองค์กรบน Google Cloud  💡 ใช้ต่อ: เลือกใช้เมื่อต้องการความปลอดภัย/compliance ระดับองค์กร ไม่ใช่แค่ทดลองเล่น",
+    "incorrectFeedback": "Vertex AI ไม่ใช่เกมหรือโมเดลรุ่นเล็ก มันคือแพลตฟอร์ม AI องค์กรบน Google Cloud  💡 ใช้ต่อ: นึกถึงมันตอนระบบโตเป็น production จริง"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "มีสติกเกอร์"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง จุดเด่น Vertex AI คือความปลอดภัยองค์กร MLOps และ SLA  💡 ใช้ต่อ: ถ้าธุรกิจต้อง data residency/audit logs/SLA นี่คือเหตุผลที่ย้ายมา Vertex",
+    "incorrectFeedback": "Vertex ไม่ได้เด่นเรื่องฟรีหรือสติกเกอร์ แต่เด่นเรื่อง security/MLOps/SLA  💡 ใช้ต่อ: เลือกเมื่อต้องการฟีเจอร์ระดับองค์กร"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "ไม่ต้องย้ายเลย"
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ! ย้ายไป Vertex AI เมื่อระบบเข้าสู่ production ระดับองค์กร  💡 ใช้ต่อ: เส้นทางปกติคือเริ่มที่ AI Studio แล้วโตไป Vertex เมื่อจริงจังขึ้น",
+    "incorrectFeedback": "ไม่ต้องย้ายตั้งแต่วันแรก และไม่ใช่ว่าไม่ต้องย้ายเลย จังหวะคือเมื่อขึ้น production องค์กร  💡 ใช้ต่อ: prototype ที่ Studio ก่อน คุ้มกว่า"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
       {
         "text": "ไม่มีทางเลือก"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ งานองค์กรที่ต้องการ scale และจัดการความปลอดภัย เลือก Vertex AI  💡 ใช้ต่อ: โค้ดย้ายจาก AI Studio มา Vertex ไม่ยาก เริ่มเล็กแล้วโตได้",
+    "incorrectFeedback": "AI Studio อย่างเดียวไม่พอสำหรับงานองค์กรที่ต้อง scale+security ต้องใช้ Vertex  💡 ใช้ต่อ: เลือก Vertex เมื่อระบบจริงจัง"
   },
   {
     "type": "quiz",
@@ -120,6 +128,27 @@
       {
         "text": "Vertex ใช้ทดลองเล่น"
       }
+    ],
+    "correctFeedback": "ถูกต้อง AI Studio เน้นทดลองเร็ว ส่วน Vertex เน้น production องค์กร  💡 ใช้ต่อ: จำเส้นแบ่ง—prototype=Studio, ระบบองค์กรจริง=Vertex",
+    "incorrectFeedback": "สองตัวนี้ไม่เหมือนกัน และ Vertex ไม่ใช่ไว้เล่น—มันคือ production องค์กร  💡 ใช้ต่อ: Studio ลองเล่น, Vertex ใช้จริงระดับองค์กร"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · เลือก AI Studio หรือ Vertex",
+    "title": "ตัดสินใจ AI Studio vs Vertex สำหรับโปรเจกต์จริง",
+    "instruction": "บทนี้ให้เส้นแบ่ง: prototype → AI Studio, production องค์กร → Vertex AI สมมติโปรเจกต์ที่คุณอยากทำ (เช่น แชตบอตในเว็บ, ผู้ช่วยภายในบริษัท) แล้วเขียน (1) ตอนนี้อยู่เฟสไหน ควรใช้อะไร (2) เงื่อนไขอะไรที่จะทำให้ต้องย้ายไป Vertex (เช่น ต้อง audit logs, data residency, SLA)",
+    "payoff": "ได้คำตอบชัดว่าเริ่มที่ไหนและจะย้ายเมื่อไหร่ ไม่ over-engineer ตั้งแต่วันแรก และไม่ติดกับดักตอนต้องขึ้น production",
+    "examples": {
+      "bad": "ใช้ Vertex AI ตั้งแต่แรกเพราะดูโปร",
+      "badNote": "ยังเป็นแค่ MVP/prototype การไป Vertex ตั้งแต่แรกเพิ่มความซับซ้อนและต้นทุนโดยไม่จำเป็น",
+      "good": "เฟส: MVP แชตบอตหน้าเว็บ → ใช้ AI Studio (ฟรี ทดลองเร็ว) | จะย้ายไป Vertex เมื่อ: ได้ลูกค้าองค์กรที่ขอ audit logs + data residency + SLA",
+      "goodNote": "เลือกตามเฟสจริง (prototype=Studio) และระบุ \"ทริกเกอร์\" ที่ชัดเจนว่าเมื่อไหร่ต้องย้าย—ตรงเส้นแบ่งของบทนี้"
+    },
+    "starterPrompt": "เฟสตอนนี้: ... → ใช้ ... | จะย้ายไป Vertex เมื่อ: ...",
+    "requirements": [
+      "เฟสปัจจุบัน: prototype หรือ production แล้วเลือกเครื่องมือ",
+      "เหตุผล: ทำไมเครื่องมือนั้นเหมาะกับเฟสนี้",
+      "ทริกเกอร์ย้าย: เงื่อนไขที่จะทำให้ต้องไป Vertex (security/compliance/SLA)"
     ]
   },
   {

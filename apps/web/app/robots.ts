@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         // Signed-in app, lesson player, admin and API are not for crawlers.
-        disallow: ["/admin", "/api/", "/daily-learn", "/learn", "/leaderboard", "/missions", "/profile", "/settings", "/upgrade", "/dashboard", "/auth/"],
+        disallow: ["/admin", "/api/", "/daily-learn", "/learn", "/leaderboard", "/missions", "/profile", "/portfolio", "/settings", "/upgrade", "/dashboard", "/certificates", "/certificate/", "/auth/"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

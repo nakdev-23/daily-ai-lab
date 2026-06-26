@@ -1,0 +1,84 @@
+[
+  {
+    "type": "theory",
+    "tag": "AI for Music · บทที่ 7 · Real tool",
+    "title": "สร้างหลายเวอร์ชัน แล้วเลือกด้วยเกณฑ์ ไม่ใช่เลือกจากอารมณ์แรก",
+    "body": [
+      { "text": "ให้เอา lyrics และ style prompt ไป generate ใน Suno หรือเครื่องมือที่ใช้จริงอย่างน้อย 2-3 เวอร์ชัน จากนั้นฟังเทียบกับเกณฑ์ใน brief เช่น hook จำง่ายไหม, mood ตรงไหม, มีท่อนเพี้ยนหรือคำแปลกไหม, ใช้กับ use case ได้ไหม" }
+    ],
+    "example": "Version A: mood ตรง แต่ hook ยังไม่จำ\nVersion B: hook ดี แต่เสียงร้องชัดน้อย\nVersion C: balance ดีสุด เลือกไป polish ต่อ",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "AI for Music · บทที่ 7 · Curation",
+    "title": "ทักษะสำคัญคือการคัดเลือกและแก้ direction",
+    "body": [
+      { "text": "งาน AI Music ไม่จบที่การกดสร้าง เพลงแรกอาจยังไม่ใช่ คุณต้องฟังแบบโปรดิวเซอร์: ท่อนเปิดดึงไหม, chorus จำไหม, เสียงร้องชัดไหม, โครงเพลงยาวไปไหม แล้วเขียนสิ่งที่จะปรับใน prompt หรือ lyrics รอบถัดไป" }
+    ],
+    "example": "ถ้าเพลงยาวและเสีย hook: ลด length, ขอ chorus earlier, simplify lyrics\nถ้า mood ไม่ตรง: ปรับ instrumentation และ energy\nถ้าเสียงร้องไม่ชัด: ขอ clear vocal, less reverb, slower delivery",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · Generate",
+    "title": "Generate เพลงจริงและทำ Curation Sheet",
+    "instruction": "นำ lyrics และ style prompt ไปสร้างเพลงจริงอย่างน้อย 2 เวอร์ชัน ถ้ายังใช้ Suno ไม่ได้ ให้เขียนแผน generate แต่ต้องกลับมาเติม link ก่อนส่ง project สำคัญคือฟังเทียบด้วยเกณฑ์ ไม่ใช่เลือกเพลงที่ชอบเฉย ๆ",
+    "payoff": "First Track + Curation Evidence",
+    "examples": {
+      "bad": "gen มา 2 เพลง อันนี้เพราะกว่า เอาอันนี้",
+      "badNote": "เลือกด้วยความชอบล้วน ไม่เทียบเกณฑ์ ไม่มีลิงก์ — พิสูจน์ไม่ได้ว่าตรง brief",
+      "good": "เครื่องมือ: Suno / gen 2 เวอร์ชัน (ลิงก์) ให้คะแนนตามเกณฑ์ brief: #1 ติดหู 4/5 อารมณ์ตรง 5/5 เสียงร้องชัด 3/5; #2 ติดหู 5/5 แต่ tempo เร็วไป / เลือก #1: ตรง mood สุด / จะปรับ: ดัน hook ให้เด่นขึ้น แก้ vocal mix",
+      "goodNote": "ให้คะแนนตามเกณฑ์ brief + ลิงก์ + จุดที่จะปรับ → เลือกด้วยเหตุผล ไม่ใช่อารมณ์"
+    },
+    "starterPrompt": "AI Music Curation Sheet\n\nเครื่องมือที่ใช้:\n\nLyrics version ที่ใช้:\n\nStyle prompt ที่ใช้:\n\nเวอร์ชันที่ generate:\n1. Link/ชื่อ:\nคะแนนตามเกณฑ์:\nจุดดี:\nจุดที่ต้องแก้:\n\n2. Link/ชื่อ:\nคะแนนตามเกณฑ์:\nจุดดี:\nจุดที่ต้องแก้:\n\nเวอร์ชันที่เลือก:\n\nเหตุผลที่เลือก:\n\nสิ่งที่จะปรับต่อใน lyrics หรือ style prompt:\n",
+    "requirements": [
+      "มีอย่างน้อย 2 เวอร์ชันหรือแผน generate ที่ละเอียด",
+      "มีคะแนน/เหตุผลเทียบกับเกณฑ์ใน brief",
+      "เลือกเวอร์ชันและบอกสิ่งที่จะปรับต่อ"
+    ],
+    "checks": [
+      { "filledAfterAll": ["เครื่องมือที่ใช้", "Lyrics version ที่ใช้", "Style prompt ที่ใช้"], "minChars": 8 },
+      { "filledAfterAll": ["เวอร์ชันที่ generate", "คะแนนตามเกณฑ์", "จุดดี", "จุดที่ต้องแก้"], "minChars": 10 },
+      { "filledAfterAll": ["เวอร์ชันที่เลือก", "เหตุผลที่เลือก", "สิ่งที่จะปรับต่อใน lyrics หรือ style prompt"], "minChars": 10 }
+    ],
+    "minLength": 240
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Generate",
+    "question": "หลัง generate เพลงหลายเวอร์ชัน ควรเลือกอย่างไร?",
+    "options": [
+      { "text": "ฟังเทียบกับเกณฑ์ใน brief แล้วเลือกเวอร์ชันที่ตรง use case ที่สุด", "correct": true },
+      { "text": "เลือกเวอร์ชันแรกเสมอเพื่อประหยัดเวลา" },
+      { "text": "เลือกเวอร์ชันที่เสียงดังที่สุด" }
+    ],
+    "correctFeedback": "ถูกต้อง การคัดเลือกต้องผูกกับ brief และ use case จริง",
+    "incorrectFeedback": "เวอร์ชันแรกหรือเสียงดังไม่ได้แปลว่าตรงโจทย์ ต้องเทียบกับเกณฑ์"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Iteration",
+    "question": "ถ้า chorus ยังไม่จำง่าย ควรปรับอะไร?",
+    "options": [
+      { "text": "ปรับ lyrics/hook และ style prompt ให้ chorus มาเร็วขึ้น เรียบขึ้น หรือจำง่ายขึ้น", "correct": true },
+      { "text": "เพิ่มคำสวย ๆ ให้เยอะขึ้นโดยไม่ดู melody" },
+      { "text": "ลบท่อน chorus ออก" }
+    ],
+    "correctFeedback": "ถูกต้อง ต้องแก้ทั้งเนื้อและ direction เพื่อให้ hook ทำงานดีขึ้น",
+    "incorrectFeedback": "การเพิ่มคำหรือถอด chorus ไม่ได้แก้ปัญหา hook เสมอไป ต้องดูโครงและความจำง่าย"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถาม · Evidence",
+    "question": "หลักฐานแบบไหนทำให้ project เพลง AI น่าเชื่อขึ้น?",
+    "options": [
+      { "text": "link เวอร์ชันที่ generate, คะแนนตามเกณฑ์, เหตุผลการเลือก และสิ่งที่ปรับต่อ", "correct": true },
+      { "text": "บอกว่าเพลงนี้ดีที่สุดโดยไม่มีเหตุผล" },
+      { "text": "มี prompt แต่ไม่มีเพลงให้ฟัง" }
+    ],
+    "correctFeedback": "ถูกต้อง หลักฐานทำให้เห็นทั้งผลงานจริงและการตัดสินใจของคุณ",
+    "incorrectFeedback": "คำกล่าวลอย ๆ หรือ prompt อย่างเดียวไม่พอ ต้องมีเพลงจริงและเหตุผล"
+  },
+  { "type": "done" }
+]

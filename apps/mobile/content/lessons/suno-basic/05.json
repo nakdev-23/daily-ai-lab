@@ -1,0 +1,111 @@
+[
+  {
+    "type": "theory",
+    "tag": "Suno · บทที่ 5 · ตอนที่ 1",
+    "title": "แยกช่อง Style กับ Lyrics",
+    "body": [
+      {
+        "text": "Custom Mode มี 2 ช่องหลัก: "
+      },
+      {
+        "text": "Style of Music",
+        "bold": true
+      },
+      {
+        "text": " (ใส่เฉพาะสไตล์/แนว) และ "
+      },
+      {
+        "text": "Lyrics",
+        "bold": true
+      },
+      {
+        "text": " (ใส่เนื้อเพลง+แท็กโครงสร้าง) การแยกกันทำให้คุมได้แม่นกว่า Simple Mode มาก เหมาะเมื่อมีภาพเพลงในหัวชัดแล้ว"
+      }
+    ],
+    "example": "Style: เพลงป็อปอะคูสติก อบอุ่น ภาษาไทย เสียงผู้หญิง\nLyrics: [Verse] ... [Chorus] ...",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "theory",
+    "tag": "Suno · บทที่ 5 · ตอนที่ 2",
+    "title": "ตั้งชื่อเพลงและความยาว",
+    "body": [
+      {
+        "text": "ตั้งชื่อเพลงในช่อง Title ได้ และคุมความยาวคร่าวๆ ได้ด้วยจำนวนท่อน ยิ่งเนื้อยาว เพลงยิ่งยาว ถ้าอยากได้เพลงสั้น (เช่น jingle) ให้ใส่แค่ 1 Verse + 1 Chorus สั้นๆ"
+      }
+    ],
+    "example": "Style: jingle สดใส 20 วินาที\nLyrics: [Chorus] กาแฟหอมๆ เริ่มต้นวันใหม่",
+    "mascot": "mascot-read"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 4",
+    "question": "Custom Mode แยกช่องหลักเป็นอะไรบ้าง?",
+    "options": [
+      {
+        "text": "Style of Music กับ Lyrics",
+        "correct": true
+      },
+      {
+        "text": "Title กับ Volume"
+      },
+      {
+        "text": "Tempo กับ Key เท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 4",
+    "question": "อยากได้เพลงสั้นแบบ jingle ควรทำอย่างไร?",
+    "options": [
+      {
+        "text": "ใส่เนื้อสั้นๆ แค่ 1 ท่อน",
+        "correct": true
+      },
+      {
+        "text": "ใส่ [Verse] ซ้ำ 10 รอบ"
+      },
+      {
+        "text": "เขียนเนื้อให้ยาวที่สุด"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 4",
+    "question": "ข้อดีของการแยกช่อง Style กับ Lyrics คืออะไร?",
+    "options": [
+      {
+        "text": "คุมสไตล์และเนื้อได้แม่นยำกว่า Simple Mode",
+        "correct": true
+      },
+      {
+        "text": "ทำให้เพลงเสร็จเร็วกว่าเดิม 10 เท่า"
+      },
+      {
+        "text": "ไม่ต้องใส่อะไรเลยก็ได้เพลง"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 4",
+    "question": "อะไรมีผลต่อความยาวเพลงมากที่สุด?",
+    "options": [
+      {
+        "text": "ชื่อเพลง"
+      },
+      {
+        "text": "จำนวนท่อน/ความยาวของเนื้อเพลง",
+        "correct": true
+      },
+      {
+        "text": "สีของปก"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

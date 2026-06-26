@@ -261,7 +261,7 @@ Reference: [ChatGPT Error Messages](https://help.openai.com/en/articles/6897133-
 **ChatGPT responds slowly**
 Reference: [Why is my ChatGPT taking so long to respond?](https://help.openai.com/en/articles/7965556)
 - During peak hours (when many users are on at once), the server may be slow
-- Switch to a faster model, e.g. GPT-4o mini
+- Switch to a faster model, e.g. GPT-5.5 mini
 - Check the system status: [status.openai.com](https://status.openai.com)
 
 **CAPTCHA (a test to verify you're human) appears often**

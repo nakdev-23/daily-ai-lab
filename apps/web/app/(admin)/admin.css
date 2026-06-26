@@ -139,6 +139,19 @@
   box-shadow: 0 16px 34px -10px rgba(0,0,0,.4); animation: admToastIn .25s var(--ease-bounce); }
 @keyframes admToastIn { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
+/* lesson feedback (admin review) */
+.dlab-app .fb-stars { display: inline-flex; align-items: center; gap: 2px; line-height: 0; }
+.dlab-app .fb-stars .on { color: #F5A623; }
+.dlab-app .fb-stars .off { color: var(--cloud-300, #D8D3E8); }
+.dlab-app .fb-num { font-family: var(--font-display); font-weight: 800; font-size: 14px; }
+.dlab-app .fb-num.ok, .dlab-app .fb-pill.ok { color: var(--mint-600); }
+.dlab-app .fb-num.warn, .dlab-app .fb-pill.warn { color: #9A6B00; }
+.dlab-app .fb-num.bad, .dlab-app .fb-pill.bad { color: var(--berry-600); }
+.dlab-app .fb-pill { font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
+.dlab-app .fb-pill.ok { background: var(--mint-100); }
+.dlab-app .fb-pill.warn { background: var(--amber-100, #FEF0CD); }
+.dlab-app .fb-pill.bad { background: var(--berry-100); }
+
 /* system settings form */
 .dlab-app .formpage { max-width: 720px; }
 .dlab-app .form-sec { padding: 22px; margin-bottom: 18px; }

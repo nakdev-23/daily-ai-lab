@@ -1,0 +1,128 @@
+[
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 10 · ตอนที่ 1",
+    "title": "Gemini API",
+    "body": [
+      {
+        "text": "นักพัฒนาเรียกใช้ Gemini ในแอปผ่าน "
+      },
+      {
+        "text": "Gemini API: รองรับข้อความ ภาพ เสียง วิดีโอ และ function calling",
+        "bold": true
+      },
+      {
+        "text": " — มี free tier ให้ทดลอง และ SDK หลายภาษา (Python, JS, Go)"
+      }
+    ],
+    "example": "\"แอปร้านอาหารส่งรูปใบเสร็จเข้า Gemini API ให้ดึงรายการอาหารและราคาออกมาเป็น JSON อัตโนมัติ\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Gemini Advance · บทที่ 10 · ตอนที่ 2",
+    "title": "โครงสร้างการเรียกใช้",
+    "body": [
+      {
+        "text": "หัวใจของการใช้ API: "
+      },
+      {
+        "text": "เลือกโมเดล → ส่ง contents (ข้อความ/ไฟล์) → กำหนด config (temperature, max tokens, response format)",
+        "bold": true
+      },
+      {
+        "text": " — ตั้ง response เป็น JSON schema ได้ ทำให้เอาผลไปใช้ในโค้ดต่อได้ทันที"
+      }
+    ],
+    "example": "\"config: { responseMimeType: 'application/json', responseSchema: {...} } — ได้ JSON ตรง schema เสมอ ไม่ต้อง parse ข้อความ\"",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Gemini API รองรับ input อะไรบ้าง?",
+    "options": [
+      {
+        "text": "ข้อความ ภาพ เสียง และวิดีโอ",
+        "correct": true
+      },
+      {
+        "text": "เฉพาะข้อความ"
+      },
+      {
+        "text": "เฉพาะรูปภาพ"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "ตั้ง response เป็น JSON schema มีประโยชน์อะไร?",
+    "options": [
+      {
+        "text": "เอาผลไปใช้ในโค้ดต่อได้ทันทีไม่ต้อง parse เอง",
+        "correct": true
+      },
+      {
+        "text": "ตอบเร็วขึ้น"
+      },
+      {
+        "text": "ฟรีตลอด"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "อยากเริ่มทดลอง Gemini API ต้องจ่ายเงินก่อนไหม?",
+    "options": [
+      {
+        "text": "ไม่ มี free tier ให้ทดลอง",
+        "correct": true
+      },
+      {
+        "text": "ต้องจ่ายรายปีก่อน"
+      },
+      {
+        "text": "ต้องเป็นบริษัทเท่านั้น"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้แอปของเราเรียกใช้ความสามารถ Gemini ควรใช้อะไร?",
+    "options": [
+      {
+        "text": "Gemini API",
+        "correct": true
+      },
+      {
+        "text": "ก็อปคำตอบมือ"
+      },
+      {
+        "text": "Voice Mode"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "ควรเก็บ API key อย่างไรให้ปลอดภัย?",
+    "options": [
+      {
+        "text": "เก็บฝั่งเซิร์ฟเวอร์/ตัวแปรลับ ไม่ฝังในโค้ดสาธารณะ",
+        "correct": true
+      },
+      {
+        "text": "ใส่ในโค้ดหน้าเว็บให้ทุกคนเห็น"
+      },
+      {
+        "text": "โพสต์ลงโซเชียล"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

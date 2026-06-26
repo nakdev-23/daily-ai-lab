@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server"
 import { rateLimit } from "@/lib/rate-limit"
 
 // Routes that require a signed-in user.
-const PROTECTED = ["/daily-learn", "/dashboard", "/learn", "/docs", "/paths", "/leaderboard", "/profile", "/settings", "/missions", "/upgrade", "/admin"]
+const PROTECTED = ["/daily-learn", "/dashboard", "/learn", "/docs", "/paths", "/portfolio", "/certificates", "/leaderboard", "/profile", "/settings", "/missions", "/upgrade", "/admin"]
 // Auth pages — bounce signed-in users away from these.
 const AUTH_PAGES = ["/login", "/register"]
 

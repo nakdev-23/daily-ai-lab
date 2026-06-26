@@ -54,7 +54,7 @@ export default function AuthScreen({ mode, lang = "th" }: { mode: "login" | "sig
           <div className="ab-mid">
             <Image className={`ab-mascot${isSignup ? "" : " ab-mascot--lap"}`} src={`${M}/${isSignup ? "mascot-read" : "mascot-laptop"}.png`} alt="Riri" width={240} height={240} />
             <h1 className="display">{t("Learn AI the")}<br />{t("fun way.")} <Sparkles size={32} className="text-amber-300" /></h1>
-            <p>{t("Join 120,000+ learners mastering ChatGPT, Claude, Midjourney & more — 15 minutes a day, one lab at a time.")}</p>
+            <p>{t("Learn 15 minutes a day")}</p>
             <div className="auth-marquee">
               <div className="auth-marquee-track">
                 {[...AUTH_TOOLS, ...AUTH_TOOLS].map(([bg, name], i) => (

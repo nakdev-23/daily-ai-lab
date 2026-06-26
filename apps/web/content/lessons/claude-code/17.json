@@ -52,7 +52,9 @@
       {
         "text": "ทำไม่ได้"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ สร้าง custom slash command ด้วยไฟล์ .md ใน .claude/commands/  💡 ใช้ต่อ: ไฟล์ review.md จะกลายเป็นคำสั่ง /review ทันที",
+    "incorrectFeedback": "ไม่ต้องเขียน extension ใหม่และไม่ใช่ทำไม่ได้ — แค่สร้างไฟล์ .md ใน .claude/commands/  💡 ใช้ต่อ: เริ่มจากคัดลอก prompt ที่ใช้บ่อยมาเป็นไฟล์คำสั่ง"
   },
   {
     "type": "quiz",
@@ -69,7 +71,9 @@
       {
         "text": "รหัสผ่าน"
       }
-    ]
+    ],
+    "correctFeedback": "ถูกต้อง $ARGUMENTS คือค่าที่ผู้ใช้พิมพ์ต่อท้ายคำสั่ง  💡 ใช้ต่อ: เช่น /review src/auth จะแทน $ARGUMENTS ด้วย src/auth",
+    "incorrectFeedback": "$ARGUMENTS ไม่ใช่ชื่อไฟล์หรือรหัสผ่าน — มันคือค่าที่พิมพ์ต่อท้ายคำสั่ง  💡 ใช้ต่อ: ใช้ $ARGUMENTS รับ input ให้คำสั่งยืดหยุ่น"
   },
   {
     "type": "quiz",
@@ -86,7 +90,9 @@
       {
         "text": "แชร์ไม่ได้"
       }
-    ]
+    ],
+    "correctFeedback": "ใช่ ทีมแชร์ slash commands ด้วยการ commit โฟลเดอร์ .claude/commands ลง git  💡 ใช้ต่อ: เพื่อนใหม่ pull โค้ดมาก็ได้คำสั่งทีมครบทันที",
+    "incorrectFeedback": "ไม่ต้องส่งอีเมลทุกครั้งและแชร์ได้ — commit .claude/commands ลง git  💡 ใช้ต่อ: เก็บคำสั่งใน repo ให้ทั้งทีมใช้ร่วมกัน"
   },
   {
     "type": "quiz",
@@ -103,7 +109,9 @@
         "text": "สร้างคำสั่งลัดสำหรับงานที่ทำซ้ำบ่อย",
         "correct": true
       }
-    ]
+    ],
+    "correctFeedback": "เป๊ะ Custom Slash Commands ใช้สร้างคำสั่งลัดสำหรับงานที่ทำซ้ำบ่อย  💡 ใช้ต่อ: ทำ /review /test /pr ไว้ ทีมจะทำงานมาตรฐานเดียวกัน",
+    "incorrectFeedback": "ไม่ใช่เปลี่ยนภาษาเว็บหรือลบโปรเจกต์ — มันสร้างคำสั่งลัดสำหรับงานซ้ำ  💡 ใช้ต่อ: เปลี่ยน workflow ซ้ำ ๆ เป็นคำสั่งเดียว"
   },
   {
     "type": "quiz",
@@ -120,6 +128,40 @@
       {
         "text": "คำสั่งที่ไม่มีใครใช้"
       }
+    ],
+    "correctFeedback": "ใช่ คำสั่งที่ทีมควรมีคืองานประจำที่ทำซ้ำ เช่น รีวิว/ทดสอบ/ปล่อยงาน  💡 ใช้ต่อ: เริ่มจาก /pr ที่เตรียม commit + PR description ให้ครบ",
+    "incorrectFeedback": "ไม่ใช่สุ่มคำสั่งหรือคำสั่งที่ไม่มีใครใช้ — ทำคำสั่งสำหรับงานประจำที่ทำซ้ำ  💡 ใช้ต่อ: เลือกงานที่ทีมทำทุกวันมาทำเป็นคำสั่ง"
+  },
+  {
+    "type": "try",
+    "tag": "ลองใช้จริง · สร้าง slash command",
+    "title": "สร้างคำสั่ง /review ของตัวเองใน .claude/commands/",
+    "instruction": "ลองสร้าง custom slash command ตัวแรก โดยทำไฟล์ review.md แล้วเรียกใช้ /review พร้อมส่ง path ผ่าน $ARGUMENTS",
+    "example": "// .claude/commands/review.md:\nรีวิวโค้ดใน $ARGUMENTS หา bug, ปัญหา security และ performance\n\n// ใช้: /review src/auth",
+    "checks": [
+      "สร้างโฟลเดอร์ .claude/commands/ ในโปรเจกต์ถ้ายังไม่มี",
+      "สร้างไฟล์ review.md แล้วเขียน prompt ที่ใช้ $ARGUMENTS รับ path",
+      "กลับไปที่ claude แล้วพิมพ์ /review src/auth (หรือ path ที่คุณมี)",
+      "ดูว่ามันรันตาม prompt ในไฟล์ และ commit โฟลเดอร์ .claude/commands ลง git เพื่อแชร์ทีม"
+    ]
+  },
+  {
+    "type": "practice",
+    "tag": "ลงมือฝึก · ออกแบบ slash command ของทีม",
+    "title": "เขียนเนื้อหาไฟล์ slash command ที่ใช้ $ARGUMENTS",
+    "instruction": "บทนี้สอนว่า slash command เปลี่ยน workflow ซ้ำ ๆ เป็นคำสั่งเดียวและแชร์ทีมได้ ลองเขียนเนื้อหาไฟล์คำสั่งหนึ่งตัว (เช่น /review หรือ /pr) ที่รับค่าจากผู้ใช้ผ่าน $ARGUMENTS",
+    "payoff": "ได้เนื้อหาไฟล์ที่ใส่ใน .claude/commands/ ได้เลย ทำให้ทั้งทีมใช้ workflow มาตรฐานเดียวกัน",
+    "examples": {
+      "bad": "review.md: ช่วยรีวิวโค้ดหน่อย",
+      "badNote": "ไม่ใช้ $ARGUMENTS เลย เลยเจาะจงไฟล์ไม่ได้ และไม่บอกว่ารีวิวหาอะไร ผลแต่ละครั้งจะต่างกัน",
+      "good": "// .claude/commands/review.md\nรีวิวโค้ดใน $ARGUMENTS หา bug, ปัญหา security และ performance สรุปเป็นรายการพร้อมระดับความรุนแรง\n// ใช้: /review src/auth",
+      "goodNote": "ใช้ $ARGUMENTS รับ path + ระบุสิ่งที่รีวิว + รูปแบบผลลัพธ์ → คำสั่งเดียวได้มาตรฐานเดียวกัน"
+    },
+    "starterPrompt": "// .claude/commands/____.md\n____ ใน $ARGUMENTS โดย ____\n// ใช้: /____ ____",
+    "requirements": [
+      "เลือกงานประจำที่ทำซ้ำ เช่น รีวิว/ทดสอบ/เตรียม PR",
+      "ใช้ $ARGUMENTS รับค่าจากผู้ใช้ (เช่น path หรือชื่อไฟล์)",
+      "ระบุผลลัพธ์ที่ต้องการให้ชัด เพื่อให้ผลคงที่ทุกครั้งและทั้งทีม"
     ]
   },
   {

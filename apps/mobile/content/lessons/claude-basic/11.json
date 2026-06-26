@@ -1,0 +1,139 @@
+[
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 4 · ตอนที่ 3",
+    "title": "Code Artifacts",
+    "body": [
+      {
+        "text": "Code Artifacts คือหนึ่งในฟีเจอร์ที่ทรงพลังที่สุดของ Claude เมื่อ Claude เขียน Code ให้ จะแสดงใน Artifact Pane พร้อม Syntax Highlighting และที่น่าตื่นเต้นกว่านั้นคือ Claude สามารถ "
+      },
+      {
+        "text": "รัน HTML, CSS และ JavaScript ใน Sandbox ได้ทันที",
+        "bold": true
+      },
+      {
+        "text": " โดยไม่ต้องออกจาก Claude.ai เลย คุณเห็นผลลัพธ์จริงๆ ได้ในทันที สำหรับ Code ภาษาอื่น Claude จะแสดง "
+      },
+      {
+        "text": "ผลลัพธ์ที่คาดหวังและอธิบายวิธีรันต่อ",
+        "bold": true
+      }
+    ],
+    "example": "\"ช่วยสร้าง Interactive To-Do List ด้วย HTML, CSS และ JavaScript เพิ่มลบรายการได้ และ Save ข้อมูลไว้ใน LocalStorage\"",
+    "mascot": "mascot-laptop"
+  },
+  {
+    "type": "theory",
+    "tag": "Claude พื้นฐาน · บทที่ 4 · ตอนที่ 4",
+    "title": "Iterate Code กับ Claude",
+    "body": [
+      {
+        "text": "หนึ่งใน Workflow ที่ดีที่สุดคือการ Iterate Code ร่วมกับ Claude ในบทสนทนาเดียว เริ่มจากขอ Code เบื้องต้นก่อน จากนั้นบอก Bug ที่พบหรือ Feature ที่ต้องการเพิ่ม Claude จะ "
+      },
+      {
+        "text": "แก้ไขและอัปเดต Code Artifact โดยตรง",
+        "bold": true
+      },
+      {
+        "text": " ทำให้เห็น History การเปลี่ยนแปลง สไตล์นี้เหมาะกับ "
+      },
+      {
+        "text": "การสร้าง Prototype หรือ MVP อย่างรวดเร็ว",
+        "bold": true
+      },
+      {
+        "text": " แม้จะไม่ใช่ Developer ก็สามารถสร้าง Web App เล็กๆ ได้เอง"
+      }
+    ],
+    "example": "\"Code ที่เขียนไว้มี Bug: เมื่อกด Delete แล้ว List ไม่ Refresh ช่วยแก้ให้หน่อย แล้วเพิ่มฟีเจอร์ Mark as Done ด้วย\"",
+    "mascot": "mascot-thumbsup"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 5",
+    "question": "Claude สามารถรัน Code ประเภทใดใน Sandbox ของ Claude.ai ได้โดยตรง?",
+    "options": [
+      {
+        "text": "Python และ Java"
+      },
+      {
+        "text": "HTML, CSS และ JavaScript",
+        "correct": true
+      },
+      {
+        "text": "C++ และ Rust"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 5",
+    "question": "การ Iterate Code กับ Claude หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "text": "ให้ Claude รัน Code ในเซิร์ฟเวอร์จริง"
+      },
+      {
+        "text": "การปรับปรุง Code ทีละขั้นในบทสนทนาเดียวโดย Claude อัปเดต Artifact ให้",
+        "correct": true
+      },
+      {
+        "text": "การคัดลอก Code จาก Stack Overflow"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 3 จาก 5",
+    "question": "Code Artifacts เหมาะสำหรับใครมากที่สุด?",
+    "options": [
+      {
+        "text": "เฉพาะ Developer มืออาชีพเท่านั้น"
+      },
+      {
+        "text": "ทุกคนรวมถึงผู้ที่ไม่ใช่ Developer ที่ต้องการสร้าง Prototype เร็วๆ",
+        "correct": true
+      },
+      {
+        "text": "เฉพาะผู้ใช้แผน Team ขึ้นไป"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 4 จาก 5",
+    "question": "อยากให้ Claude ช่วยทำหน้าเว็บง่าย ๆ แล้วเห็นผลทันที ควรใช้อะไร?",
+    "options": [
+      {
+        "text": "Code Artifact ที่ดูตัวอย่างผลได้",
+        "correct": true
+      },
+      {
+        "text": "Memory"
+      },
+      {
+        "text": "Voice input"
+      }
+    ]
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 5 จาก 5",
+    "question": "การ Iterate Code กับ Claude หมายความว่าอย่างไร?",
+    "options": [
+      {
+        "text": "ค่อย ๆ บอกแก้/เพิ่มฟีเจอร์จนโค้ดได้ตามต้องการ",
+        "correct": true
+      },
+      {
+        "text": "เขียนครั้งเดียวห้ามแก้"
+      },
+      {
+        "text": "ลบโค้ดทิ้ง"
+      }
+    ]
+  },
+  {
+    "type": "done"
+  }
+]

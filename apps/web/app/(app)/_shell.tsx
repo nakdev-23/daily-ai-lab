@@ -9,7 +9,7 @@ import { makeT, type Lang } from "@/lib/i18n-core"
 import { createClient } from "@/lib/supabase/client"
 import {
   GraduationCap, Rocket, BookOpen, Trophy, Award, BriefcaseBusiness, User, Settings, Shield,
-  Crown, Flame, Zap, Heart, Menu, PanelLeftClose, PanelLeftOpen, LogOut,
+  Crown, Flame, Zap, Heart, Menu, PanelLeftClose, PanelLeftOpen, LogOut, LifeBuoy,
   Infinity as InfinityIcon,
 } from "lucide-react"
 
@@ -35,6 +35,7 @@ const TITLES: Record<string, string> = {
   "/profile": "Profile",
   "/settings": "Settings",
   "/admin": "Admin",
+  "/support": "Feedback & Support",
   "/upgrade": "Go Pro",
   "/missions": "Quests",
   "/learn": "Lesson",
@@ -135,6 +136,11 @@ export default function AppShell({ children, displayName, role, pro = false, ava
               </Link>
             )}
           </nav>
+
+          {/* Pinned at the bottom (side-nav above has flex:1) */}
+          <Link href="/support" data-label={t("Feedback & Support")} className={`side-link side-support${isActive("/support") ? " active" : ""}`} onClick={() => setOpen(false)}>
+            <span className="si"><LifeBuoy size={18} strokeWidth={2.2} /></span> <span className="side-txt">{t("Feedback & Support")}</span>
+          </Link>
 
           {/* Pro members never see the upsell card */}
           {!pro && (

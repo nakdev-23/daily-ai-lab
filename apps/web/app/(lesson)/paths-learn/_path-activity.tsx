@@ -3,12 +3,12 @@
 import { useState, useTransition, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Check, ChevronRight, ClipboardCheck, Download, FileText, Flag, Sparkles, Wrench, X, Zap } from "lucide-react"
+import { Check, ChevronRight, ClipboardCheck, Download, FileText, Flag, Play, Sparkles, Wrench, X, Zap } from "lucide-react"
 import type { PathStep } from "@/lib/career-paths"
 import type { PathSubmission, ProjectFeedback } from "@/lib/path-projects"
 import type { Lang } from "@/lib/i18n-core"
 import { makeT } from "@/lib/i18n-core"
-import { completeLessonAction } from "@/app/(lesson)/daily-learn/actions"
+import { completeLessonAction, runPromptAction, type RunPromptResult } from "@/app/(lesson)/daily-learn/actions"
 import { submitPathWorkAction } from "./actions"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -46,6 +46,11 @@ export default function PathActivity({
   // Shows a loading popup while the AI grades the submission, so tapping "Have
   // AI check it" visibly does something instead of silently working.
   const [checking, setChecking] = useState(false)
+  // Lets the learner run their work as a prompt and see the real output before/
+  // after submitting (useful for prompt-style projects). Shown in a popup.
+  const [aiRun, setAiRun] = useState<RunPromptResult | null>(null)
+  const [runPending, setRunPending] = useState(false)
+  const [runOpen, setRunOpen] = useState(false)
   const feedbackRef = useRef<HTMLElement | null>(null)
   const [pending, startTransition] = useTransition()
 
@@ -103,6 +108,18 @@ export default function PathActivity({
     })
   }
 
+  function runWork() {
+    if (runPending) return
+    setAiRun(null)
+    setRunOpen(true)
+    setRunPending(true)
+    startTransition(async () => {
+      const r = await runPromptAction({ draft: content })
+      setAiRun(r)
+      setRunPending(false)
+    })
+  }
+
   function completeSavedWork() {
     setError("")
     startTransition(async () => {
@@ -139,6 +156,10 @@ export default function PathActivity({
         </header>
 
         <section className="activity-editor" aria-label={t("Project workspace")}>
+          <p className="activity-howto">
+            <Sparkles size={15} />
+            <span>{t("The box below has a ready-made template — fill in your info after each heading (the “:”). You can rewrite it too. When you're ready, tap “Have AI check it”, or “Run & see result” first to preview what your work produces.")}</span>
+          </p>
           <label>
             <span>{t("Artifact title")}</span>
             <input value={title} onChange={(event) => { setTitle(event.target.value); setFeedback(null) }} maxLength={120} />
@@ -147,7 +168,17 @@ export default function PathActivity({
             <span>{t("Your work")}</span>
             <textarea value={content} onChange={(event) => { setContent(event.target.value); setFeedback(null) }} rows={18} />
           </label>
-          <small>{content.trim().length}/80+ {t("characters")}</small>
+          <div className="activity-editor-foot">
+            <small>{content.trim().length}/80+ {t("characters")}</small>
+            <button
+              type="button"
+              className="ai-run-btn"
+              onClick={runWork}
+              disabled={runPending || content.trim().length < 10}
+            >
+              <Play size={15} /> {runPending ? t("AI is running…") : t("Run & see result")}
+            </button>
+          </div>
         </section>
 
         <section className="rubric-panel">
@@ -197,7 +228,7 @@ export default function PathActivity({
                   )}
                   {feedback.aiReview.improvedExample && (
                     <div className="ai-review-example">
-                      <p className="ai-review-head"><Sparkles size={14} /> <b>{t("Example of a strong version")}</b></p>
+                      <p className="ai-review-head"><Sparkles size={14} /> <b>{t("A strong example to compare yours with")}</b></p>
                       <pre>{feedback.aiReview.improvedExample}</pre>
                     </div>
                   )}
@@ -247,6 +278,46 @@ export default function PathActivity({
               <span className="ai-spinner" />
               <p>{t("AI is checking your work…")}</p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {runOpen && (
+        <div className="ai-modal-backdrop" onClick={() => setRunOpen(false)}>
+          <div className="ai-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <button type="button" className="ai-modal-x" onClick={() => setRunOpen(false)} aria-label={t("Close")}>
+              <X size={18} />
+            </button>
+            <div className="ai-modal-head"><Play size={16} /> {t("What your work produces")}</div>
+            {runPending ? (
+              <div className="ai-modal-loading">
+                <span className="ai-spinner" />
+                <p>{t("AI is running your work…")}</p>
+              </div>
+            ) : aiRun?.ok ? (
+              <div className="ai-modal-body">
+                <div className="ai-run-output"><pre>{aiRun.output}</pre></div>
+                {aiRun.comment && (
+                  <div className="ai-run-comment"><Sparkles size={13} /> <span>{aiRun.comment}</span></div>
+                )}
+                <button type="button" className="btn btn--ghost lg ai-modal-cta" onClick={() => setRunOpen(false)}>
+                  {t("Close")}
+                </button>
+              </div>
+            ) : (
+              <div className="ai-modal-body">
+                <p className="ai-note">
+                  {aiRun && !aiRun.ok && aiRun.reason === "rate-limited"
+                    ? t("You've run a lot of prompts — take a short break and try again.")
+                    : content.trim().length > 2000
+                      ? t("This work is long — running works best for short prompts. For longer work, see the AI feedback and the strong example after you submit.")
+                      : t("Write a bit more first, then run it.")}
+                </p>
+                <button type="button" className="btn btn--ghost lg ai-modal-cta" onClick={() => setRunOpen(false)}>
+                  {t("Close")}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}

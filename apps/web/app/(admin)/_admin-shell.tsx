@@ -6,7 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   LayoutDashboard, Users, GraduationCap, FileText, Trophy, Settings,
-  Search, Menu, X, CornerDownLeft, Rocket, Star,
+  Search, Menu, X, CornerDownLeft, Rocket, Star, LifeBuoy,
 } from "lucide-react"
 
 const M = "/assets/daily-ai-lab/mascot-ds"
@@ -16,6 +16,7 @@ const NAV = [
   { href: "/admin/users", label: "ผู้ใช้", icon: Users },
   { href: "/admin/courses", label: "คอร์ส & บทเรียน", icon: GraduationCap },
   { href: "/admin/feedback", label: "รีวิวบทเรียน", icon: Star },
+  { href: "/admin/support", label: "ฟีดแบ็ก & Support", icon: LifeBuoy },
   { href: "/admin/paths", label: "เส้นทางอาชีพ", icon: Rocket },
   { href: "/admin/docs", label: "เอกสาร", icon: FileText },
   { href: "/admin/leagues", label: "ลีก & รางวัล", icon: Trophy },
@@ -27,6 +28,7 @@ const TITLES: Record<string, string> = {
   "/admin/users": "ผู้ใช้",
   "/admin/courses": "คอร์ส & บทเรียน",
   "/admin/feedback": "รีวิวบทเรียน",
+  "/admin/support": "ฟีดแบ็ก & Support",
   "/admin/paths": "เส้นทางอาชีพ",
   "/admin/docs": "เอกสาร",
   "/admin/leagues": "ลีก & รางวัล",

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Baloo_2, Anuphan, JetBrains_Mono } from "next/font/google"
 import Script from "next/script"
 import NavProgress from "@/components/nav-progress"
+import FacebookPixel from "@/components/facebook-pixel"
 import "./globals.css"
 
 // All brand fonts are self-hosted via next/font (no render-blocking
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className="min-h-full flex flex-col bg-[#f0efff] text-gray-900">
+        <FacebookPixel />
         <NavProgress />
         {children}
         <ServiceWorkerRegister />

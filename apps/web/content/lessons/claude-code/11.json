@@ -15,7 +15,7 @@
         "text": " — หรือกำหนดในไฟล์ .mcp.json ของโปรเจกต์เพื่อให้ทั้งทีมได้ server ชุดเดียวกันอัตโนมัติ"
       }
     ],
-    "example": "\"$ claude mcp add github -- npx -y @modelcontextprotocol/server-github\"",
+    "example": "claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer <GITHUB_PAT>\"",
     "mascot": "mascot-laptop"
   },
   {
@@ -53,7 +53,7 @@
         "text": "ส่งอีเมลขอ Anthropic"
       }
     ],
-    "correctFeedback": "ใช่ เพิ่ม MCP server ด้วย claude mcp add หรือไฟล์ .mcp.json  💡 ใช้ต่อ: ตัวอย่าง: claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+    "correctFeedback": "ใช่ เพิ่ม MCP server ด้วย claude mcp add หรือไฟล์ .mcp.json  💡 ใช้ต่อ: ตัวอย่าง: claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer <GITHUB_PAT>\"",
     "incorrectFeedback": "ไม่ใช่ติดตั้งไม่ได้หรือต้องส่งอีเมลขอ — ใช้ claude mcp add ได้เลย  💡 ใช้ต่อ: จำคำสั่ง claude mcp add <ชื่อ> -- <คำสั่งรัน>"
   },
   {
@@ -137,10 +137,10 @@
     "tag": "ลองใช้จริง · เพิ่ม MCP server",
     "title": "เพิ่ม MCP server ด้วย claude mcp add",
     "instruction": "ลองเพิ่ม MCP server หนึ่งตัว (เช่น GitHub) ด้วยคำสั่งเดียว แล้วตรวจว่าเพิ่มสำเร็จ จำไว้ว่าให้ token สิทธิ์ต่ำสุด",
-    "example": "claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+    "example": "claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer <GITHUB_PAT>\"",
     "checks": [
       "เปิด terminal ในโปรเจกต์ของคุณ",
-      "รันคำสั่ง claude mcp add github -- npx -y @modelcontextprotocol/server-github",
+      "รันคำสั่ง claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer <GITHUB_PAT>\"",
       "เมื่อต้องใส่ token ให้เลือก scope แบบ read-only ถ้างานแค่อ่าน และเก็บ token ใน env",
       "พิมพ์ claude mcp list เพื่อยืนยันว่า server ใหม่ปรากฏในรายการ"
     ]
@@ -154,7 +154,7 @@
     "examples": {
       "bad": "claude mcp add github (ใช้ token full admin ฝังในไฟล์ที่ commit)",
       "badNote": "ให้สิทธิ์เกินจำเป็นและฝัง token ในไฟล์ที่ commit ลง git — token รั่วได้และเสี่ยงทั้งระบบ",
-      "good": "claude mcp add github -- npx -y @modelcontextprotocol/server-github\n(งานคือรีวิวโค้ด → ใช้ token scope repo:read เท่านั้น เก็บใน env ไม่ commit)",
+      "good": "claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer <GITHUB_PAT>\"\n(งานคือรีวิวโค้ด → ใช้ token scope repo:read เท่านั้น เก็บใน env ไม่ commit)",
       "goodNote": "เพิ่มด้วยคำสั่งเดียว + ให้สิทธิ์ต่ำสุดที่พอใช้ (read) + เก็บ token ใน env → ปลอดภัย"
     },
     "starterPrompt": "claude mcp add ____ -- ____\n(สิทธิ์ที่ให้: ____ เก็บ token ที่: ____)",

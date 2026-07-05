@@ -80,7 +80,7 @@ export async function reviewPromptWithAI(input: {
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 700,
+        max_tokens: 1500,
         system,
         messages: [{ role: "user", content: user }],
         output_config: { format: { type: "json_schema", schema: SCHEMA } },
@@ -164,7 +164,7 @@ export async function runPromptDemo(prompt: string): Promise<AiRunResult> {
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 900,
+        max_tokens: 1400,
         system,
         messages: [{ role: "user", content: `prompt ของผู้เรียน:\n"""${text}"""` }],
         output_config: { format: { type: "json_schema", schema: RUN_SCHEMA } },
@@ -269,7 +269,7 @@ export async function reviewProjectWithAI(input: {
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 900,
+        max_tokens: 1800,
         system,
         messages: [{ role: "user", content: user }],
         output_config: { format: { type: "json_schema", schema: PROJECT_SCHEMA } },

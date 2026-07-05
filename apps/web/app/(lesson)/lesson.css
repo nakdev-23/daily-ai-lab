@@ -622,6 +622,11 @@
 .path-activity .activity-editor input:focus,
 .path-activity .activity-editor textarea:focus { outline: 3px solid rgba(108,60,245,.2); border-color: var(--hero-500); }
 .path-activity .activity-editor small { color: var(--text-muted); font-weight: 700; }
+.path-activity .activity-howto { display: flex; gap: 9px; align-items: flex-start; margin: 0 0 16px;
+  padding: 12px 15px; border-radius: var(--radius-md); background: var(--hero-100, #f3efff);
+  border: 1px solid rgba(145,115,250,.22); font-size: 14px; line-height: 1.6; color: var(--text-body); }
+.path-activity .activity-howto svg { flex: none; margin-top: 2px; color: var(--hero-600); }
+.path-activity .activity-editor-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .path-activity .rubric-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; color: var(--hero-600); }
 .path-activity .rubric-heading h2 { margin: 0; color: var(--text-strong); font: 800 21px/1.25 var(--font-display); }
 .path-activity .rubric-heading p { margin: 3px 0 0; color: var(--text-muted); font-size: 13px; }

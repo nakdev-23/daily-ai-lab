@@ -1,0 +1,93 @@
+[
+  {
+    "type": "theory",
+    "tag": "เลือก AI ให้ถูกงาน · ตอนที่ 1",
+    "title": "AI แต่ละตัว เก่งคนละอย่าง",
+    "body": [
+      {
+        "text": "ไม่มี AI ตัวไหน \"เก่งทุกอย่าง\" — แต่ละตัวถนัดคนละงาน ถ้าเลือกถูกตัว งานจะง่ายและผลออกมาดีกว่ามาก หัวใจของคอร์สนี้คือ "
+      },
+      {
+        "text": "งานแบบนี้ → ใช้ตัวไหนดี",
+        "bold": true
+      },
+      {
+        "text": " เริ่มจากจำ cheat sheet สั้น ๆ นี้ไว้ก่อน แล้วบทต่อ ๆ ไปจะลงรายละเอียดทีละงาน"
+      }
+    ],
+    "example": "งานที่คุณทำบ่อยที่สุดคืออะไร? เขียนข้อความ ทำรูป ค้นข้อมูล หรือทำคลิป — จำไว้ เดี๋ยวเราจับคู่ให้",
+    "mascot": "mascot-hello"
+  },
+  {
+    "type": "theory",
+    "tag": "เลือก AI ให้ถูกงาน · ตอนที่ 2",
+    "title": "Cheat sheet: งานนี้ → ใช้ตัวไหน",
+    "body": [
+      {
+        "text": "จำตารางลัดนี้ไว้พอ: "
+      },
+      {
+        "text": "🟢 เขียน/ร่างข้อความ → ChatGPT หรือ Claude",
+        "bold": true
+      },
+      {
+        "text": " · 🎨 ทำรูป → ChatGPT, Gemini, Midjourney · 🔎 ค้นข้อมูล/สรุปเว็บ → Perplexity หรือ Gemini · 🎬 ทำวิดีโอ → Google Veo, Runway · 🎵 ทำเพลง → Suno · 💻 ช่วยเขียนโค้ด → Claude, ChatGPT, GitHub Copilot — เลือกตัวให้ตรงงาน แล้วผลจะดีขึ้นเอง"
+      }
+    ],
+    "example": "อยากได้รูปมีตัวอักษรในภาพ → ChatGPT · อยากได้รูปเหมือนจริงและมีฟรี → Gemini · อยากได้รูปสวยแบบงานศิลป์ → Midjourney",
+    "mascot": "mascot-point"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 1 จาก 2",
+    "question": "อยากได้ \"เพลง\" พร้อมเสียงร้อง ควรใช้ตัวไหน?",
+    "options": [
+      {
+        "text": "Suno",
+        "correct": true
+      },
+      {
+        "text": "Perplexity"
+      },
+      {
+        "text": "Midjourney"
+      }
+    ],
+    "correctFeedback": "ถูกต้อง งานเพลงให้ใช้ Suno  💡 ใช้ต่อ: จำคู่ไว้ — เพลง=Suno, รูป=ChatGPT/Gemini/Midjourney, วิดีโอ=Veo/Runway",
+    "incorrectFeedback": "Perplexity ไว้ค้นข้อมูล Midjourney ไว้ทำรูป — งานเพลงต้องใช้ Suno  💡 ใช้ต่อ: เพลง=Suno จำไว้เลย"
+  },
+  {
+    "type": "quiz",
+    "tag": "คำถามที่ 2 จาก 2",
+    "question": "อยากค้นข้อมูลล่าสุดจากเว็บพร้อมแหล่งอ้างอิง ควรเริ่มที่ตัวไหน?",
+    "options": [
+      {
+        "text": "Perplexity (หรือ Gemini)",
+        "correct": true
+      },
+      {
+        "text": "Midjourney"
+      },
+      {
+        "text": "Suno"
+      }
+    ],
+    "correctFeedback": "ใช่เลย งานค้นข้อมูล/สรุปเว็บ เริ่มที่ Perplexity หรือ Gemini จะได้คำตอบพร้อมลิงก์อ้างอิง  💡 ใช้ต่อ: ค้นข้อมูล=Perplexity/Gemini, เขียนงาน=ChatGPT/Claude",
+    "incorrectFeedback": "Midjourney ทำรูป Suno ทำเพลง — งานค้นข้อมูลให้ใช้ Perplexity หรือ Gemini  💡 ใช้ต่อ: ค้นข้อมูลพร้อมแหล่งอ้างอิง = Perplexity"
+  },
+  {
+    "type": "try",
+    "tag": "ลองเทียบเอง · จับคู่งานกับ AI",
+    "title": "ลองยิงคำถามเดียวกันใส่ 2 ตัว",
+    "instruction": "เอาคำถามเดียวกันไปถามทั้ง ChatGPT และ Gemini แล้วดูว่าใครตอบแบบไหน จะได้เห็นว่าแต่ละตัวให้ผลต่างกันยังไง",
+    "example": "ช่วยแนะนำของขวัญวันเกิดให้เพื่อนผู้หญิงอายุ 25 งบ 500 บาท 5 ไอเดีย พร้อมเหตุผลสั้น ๆ",
+    "checks": [
+      "เปิด ChatGPT วาง prompt แล้วดูผล",
+      "เปิด Gemini วาง prompt เดียวกัน",
+      "เทียบ: ตัวไหนให้ผลที่คุณชอบกว่าสำหรับงานนี้"
+    ]
+  },
+  {
+    "type": "done"
+  }
+]
